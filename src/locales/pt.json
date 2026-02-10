@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Início",
+        "about": "Sobre o Projeto",
+        "results": "Resultados",
+        "partners": "Parceiros",
+        "news": "Notícias e Eventos",
+        "resources": "Recursos",
+        "impact": "Disseminação e Impacto",
+        "contact": "Contacto"
+    },
+    "home": {
+        "hero_title": "Sistemas integrados de aprendizagem no local de trabalho para a requalificação industrial",
+        "hero_subtitle": "[Portuguese translation pending]",
+        "cta": "Saiba mais"
+    }
+}

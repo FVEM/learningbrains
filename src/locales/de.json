@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "about": "Über das Projekt",
+        "results": "Ergebnisse",
+        "partners": "Partner",
+        "news": "Neuigkeiten & Veranstaltungen",
+        "resources": "Ressourcen",
+        "impact": "Verbreitung & Wirkung",
+        "contact": "Kontakt"
+    },
+    "home": {
+        "hero_title": "Integrierte On-the-job-Lernsysteme für die industrielle Umschulung",
+        "hero_subtitle": "[German translation pending]",
+        "cta": "Mehr erfahren"
+    }
+}

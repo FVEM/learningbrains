@@ -1,0 +1,20 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre el Proyecto",
+        "results": "Resultados",
+        "partners": "Socios",
+        "news": "Noticias y Eventos",
+        "resources": "Recursos",
+        "impact": "Difusión e Impacto",
+        "contact": "Contacto"
+    },
+    "home": {
+        "hero_title": "Sistemas Integrados de Aprendizaje en el Trabajo para el Reciclaje Industrial",
+        "hero_subtitle": "Empoderando a la fuerza laboral a través de educación y formación profesional innovadora.",
+        "cta": "Saber Más"
+    },
+    "footer": {
+        "disclaimer": "Cofinanciado por el programa Erasmus+ de la Unión Europea. El presente proyecto ha sido financiado con el apoyo de la Comisión Europea. Esta publicación [comunicación] es responsabilidad exclusiva de su autor. La Comisión no es responsable del uso que pueda hacerse de la información aquí difundida."
+    }
+}

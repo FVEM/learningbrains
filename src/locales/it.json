@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "Informazioni sul Progetto",
+        "results": "Risultati",
+        "partners": "Partner",
+        "news": "Notizie ed Eventi",
+        "resources": "Risorse",
+        "impact": "Disseminazione e Impatto",
+        "contact": "Contatto"
+    },
+    "home": {
+        "hero_title": "Sistemi integrati di apprendimento sul lavoro per la riqualificazione industriale",
+        "hero_subtitle": "[Italian translation pending]",
+        "cta": "Scopri di più"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Domov",
+        "about": "O projekte",
+        "results": "Výsledky",
+        "partners": "Partneri",
+        "news": "Novinky a podujatia",
+        "resources": "Zdroje",
+        "impact": "Šírenie a vplyv",
+        "contact": "Kontakt"
+    },
+    "home": {
+        "hero_title": "Integrované systémy vzdelávania na pracovisku pre priemyselnú rekvalifikáciu",
+        "hero_subtitle": "[Slovak translation pending]",
+        "cta": "Uč sa viac"
+    }
+}
