@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { BookOpen, Target, Lightbulb, Users } from 'lucide-react';
 
 const About = () => {
-    const { t } = useTranslation();
+    useTranslation();
 
     const objectives = [
         "Develop innovative on-the-job learning methodologies tailored for industrial reskilling",

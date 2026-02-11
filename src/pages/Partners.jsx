@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Users, Globe, ExternalLink, ChevronRight } from 'lucide-react';
 
 const Partners = () => {
-    const { t } = useTranslation();
+    useTranslation();
 
     const partners = [
         {

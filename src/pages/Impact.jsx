@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Share2, TrendingUp, Target, Info } from 'lucide-react';
 
 const Impact = () => {
-    const { t } = useTranslation();
+    useTranslation();
 
     const targetAudiences = [
         "Industrial Workers",
@@ -58,8 +58,15 @@ const Impact = () => {
                             <h2 className="text-2xl font-bold uppercase tracking-tight">Expected Impact</h2>
                         </div>
                         <p className="text-slate-500 text-[17px] leading-relaxed mb-8">
-                            The Learning Brains project expects to contribute to the modernization of VET systems by providing validated tools for industrial reskilling.
+                            The Learning Brains project expects to contribute to the modernization of VET systems by providing validated tools for industrial reskilling. The impact will be observed in the improved adaptability of industrial workers to technological changes and the increased efficiency of on-the-job training methodologies.
                         </p>
+
+                        <div className="flex items-start gap-4 p-5 bg-teal-50/50 rounded-2xl border border-teal-100 italic">
+                            <Info className="w-5 h-5 text-brand-secondary flex-shrink-0 mt-0.5" />
+                            <p className="text-sm text-slate-600 leading-relaxed">
+                                Note: Project impacts are currently described non-quantitatively as the implementation is in its early stages.
+                            </p>
+                        </div>
                     </section>
                 </div>
             </div>
