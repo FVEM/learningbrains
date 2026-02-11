@@ -69,8 +69,7 @@ const Home = () => {
                         <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Confindustria Veneto SIAV website" className="hover:scale-110 transition-transform">
                             <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="Confindustria Veneto SIAV" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
-                        <div className="text-sm font-bold text-slate-400 tracking-widest hidden md:block">Federación Vizcaína de Empresas del Metal</div>
-                        <div className="text-sm font-bold text-slate-400 tracking-widest hidden md:block">Media Creativa 2020</div>
+                        {/* Placeholder for WKO Austria logo - to be added */}
                     </div>
                 </div>
             </section>
