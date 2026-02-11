@@ -1,16 +1,51 @@
-# React + Vite
+# Learning Brains
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official repository for the **Learning Brains** project website, an Erasmus+ funded initiative focused on industrial reskilling.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `src/`: Source code for the React application
+- `public/`: Static assets (logos, images, etc.)
+- `src/locales/`: Internationalization files (en, es, sk, it, de, pt)
+- `src/pages/`: Page components (Home, About, Results, Partners, News, Resources, Impact, Contact)
+- `src/components/`: Reusable components (Header, Footer, Layout)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌍 **Multi-language support**: English, Spanish, Slovak, Italian, German, Portuguese
+- 📱 **Responsive design**: Mobile-first approach with Tailwind CSS
+- ⚡ **Fast performance**: Built with Vite and React
+- 🎨 **Modern UI**: Clean, professional design following Erasmus+ guidelines
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run the project locally:
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Build
+
+To build the project for production:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The project is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the main branch.
+
+## Project Information
+
+- **Programme**: Erasmus+ KA220-VET
+- **Duration**: 36 Months
+- **Coordinator**: FVEM (Spain)
+- **Partners**: 6 organizations across Europe
