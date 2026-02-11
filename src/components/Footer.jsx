@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
 import euEmblem from '../assets/images/eu-emblem.png';
-import logo from '../assets/images/logo.jpg';
+import logo from '../assets/images/logo-transparent.png';
 
 const Footer = () => {
     const { t } = useTranslation();

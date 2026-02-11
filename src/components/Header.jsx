@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
-import logo from '../assets/images/logo.jpg';
+import logo from '../assets/images/logo-transparent.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
