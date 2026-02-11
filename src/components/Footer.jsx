@@ -12,7 +12,6 @@ const Footer = () => {
             title: "Project",
             links: [
                 { name: t('nav.about'), path: '/about' },
-                { name: t('nav.wp'), path: '/work-packages' },
                 { name: t('nav.results'), path: '/results' },
             ]
         },
