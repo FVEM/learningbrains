@@ -1,32 +1,40 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 @theme {
-  --color-brand-primary: #0f172a;
-  --color-brand-secondary: #0ea5e9;
-}
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+  --color-brand-primary: #124e4b;
+  /* Dark teal for titles */
+  --color-brand-secondary: #00897b;
+  /* Medium teal for icons */
+  --color-brand-light: #f8fafc;
+  /* Very light background */
+  --color-brand-border: #e2e8f0;
+  --font-sans: "Outfit", "Inter", "system-ui", "sans-serif";
 }
 
 @layer base {
+
+  html,
+  body,
+  #root {
+    @apply m-0 p-0 w-full min-h-screen overflow-x-hidden;
+  }
+
+  body {
+    @apply text-slate-900 antialiased bg-slate-50;
+  }
+}
+
+@layer components {
   .container-custom {
-    @apply max-w-7xl mx-auto px-6 md:px-12;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-brand-primary text-white px-6 py-3 rounded-xl hover:bg-brand-secondary transition-all duration-300 shadow-lg shadow-teal-900/10 hover:-translate-y-0.5;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20;
   }
 }

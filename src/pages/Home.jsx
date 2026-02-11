@@ -47,24 +47,26 @@ const Home = () => {
             </section>
 
             {/* Partner Logos Strip */}
-            <section className="py-8 border-y border-slate-100 bg-white">
+            <section className="py-8 border-y border-slate-100 bg-white overflow-hidden">
                 <div className="container-custom">
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0">
                         <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" aria-label="Visit FVEM website" className="hover:scale-110 transition-transform">
-                            <img src="/FVEM-EN.jpg" alt="FVEM" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}FVEM-EN.jpg`} alt="FVEM" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
                         <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" aria-label="Visit Media Creativa website" className="hover:scale-110 transition-transform">
-                            <img src="/Media Creativa 2020.jpg" alt="Media Creativa" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}Media Creativa 2020.jpg`} alt="Media Creativa" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
                         <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" aria-label="Visit Slovak Business Agency website" className="hover:scale-110 transition-transform">
-                            <img src="/sba.jpg" alt="Slovak Business Agency" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}sba.jpg`} alt="Slovak Business Agency" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
                         <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sparkling Intuition website" className="hover:scale-110 transition-transform">
-                            <img src="/SPIN logo large.png" alt="Sparkling Intuition" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}SPIN logo large.png`} alt="Sparkling Intuition" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
                         <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Confindustria Veneto SIAV website" className="hover:scale-110 transition-transform">
-                            <img src="/Conf.Veneto SIAV logo.png" alt="Confindustria Veneto SIAV" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="Confindustria Veneto SIAV" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
+                        <div className="text-sm font-bold text-slate-400 tracking-widest hidden md:block">Federación Vizcaína de Empresas del Metal</div>
+                        <div className="text-sm font-bold text-slate-400 tracking-widest hidden md:block">Media Creativa 2020</div>
                     </div>
                 </div>
             </section>
@@ -105,6 +107,7 @@ const Home = () => {
                             </div>
                             <div className="flex-1 w-full aspect-square bg-slate-100 rounded-3xl overflow-hidden relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent"></div>
+                                {/* Placeholder for project image */}
                                 <div className="absolute inset-0 flex items-center justify-center text-slate-300">
                                     <Cpu className="w-20 h-20" />
                                 </div>
@@ -150,6 +153,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </a>
+                        {/* More news could go here */}
                     </div>
                 </div>
             </section>
