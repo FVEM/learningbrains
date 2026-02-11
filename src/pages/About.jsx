@@ -34,6 +34,7 @@ const About = () => {
                 </h1>
 
                 <div className="space-y-20">
+                    {/* Background & Context */}
                     <section>
                         <div className="flex items-center gap-3 mb-6">
                             <BookOpen className="w-6 h-6 text-brand-secondary" />
@@ -44,6 +45,7 @@ const About = () => {
                         </p>
                     </section>
 
+                    {/* Project Objectives */}
                     <section>
                         <div className="flex items-center gap-3 mb-8">
                             <Target className="w-6 h-6 text-brand-secondary" />
@@ -56,6 +58,36 @@ const About = () => {
                                         {idx + 1}
                                     </div>
                                     <p className="text-slate-600 text-sm md:text-base">{obj}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Focus Areas */}
+                    <section>
+                        <div className="flex items-center gap-3 mb-8">
+                            <Lightbulb className="w-6 h-6 text-brand-secondary" />
+                            <h2 className="text-xl md:text-2xl font-bold text-brand-primary">Focus Areas</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {focusAreas.map((area, idx) => (
+                                <div key={idx} className="p-5 border border-slate-100 rounded-xl shadow-sm text-slate-600 text-[15px] font-medium bg-white">
+                                    {area}
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Target Groups */}
+                    <section>
+                        <div className="flex items-center gap-3 mb-8">
+                            <Users className="w-6 h-6 text-brand-secondary" />
+                            <h2 className="text-xl md:text-2xl font-bold text-brand-primary">Target Groups</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {targetGroups.map((group, idx) => (
+                                <div key={idx} className="p-5 border border-slate-100 rounded-xl shadow-sm text-slate-600 text-[15px] font-medium bg-white">
+                                    {group}
                                 </div>
                             ))}
                         </div>
