@@ -62,8 +62,9 @@ const Home = () => {
                         <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sparkling Intuition website" className="hover:scale-110 transition-transform">
                             <img src="/SPIN logo large.png" alt="Sparkling Intuition" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
-                        <div className="text-sm font-bold text-slate-400 tracking-widest">Federación Vizcaína de Empresas del Metal</div>
-                        <div className="text-sm font-bold text-slate-400 tracking-widest">Media Creativa 2020</div>
+                        <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Confindustria Veneto SIAV website" className="hover:scale-110 transition-transform">
+                            <img src="/Conf.Veneto SIAV logo.png" alt="Confindustria Veneto SIAV" className="h-8 md:h-12 w-auto object-contain" />
+                        </a>
                     </div>
                 </div>
             </section>
@@ -104,7 +105,6 @@ const Home = () => {
                             </div>
                             <div className="flex-1 w-full aspect-square bg-slate-100 rounded-3xl overflow-hidden relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent"></div>
-                                {/* Placeholder for project image */}
                                 <div className="absolute inset-0 flex items-center justify-center text-slate-300">
                                     <Cpu className="w-20 h-20" />
                                 </div>
@@ -150,7 +150,6 @@ const Home = () => {
                                 </div>
                             </div>
                         </a>
-                        {/* More news could go here */}
                     </div>
                 </div>
             </section>
