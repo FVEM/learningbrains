@@ -9,21 +9,21 @@ import de from './locales/de.json';
 import pt from './locales/pt.json';
 
 i18n
-    .use(initReactI18next)
-    .init({
-        resources: {
-            en: { translation: en },
-            es: { translation: es },
-            sk: { translation: sk },
-            it: { translation: it },
-            de: { translation: de },
-            pt: { translation: pt },
-        },
-        lng: 'en',
-        fallbackLng: 'en',
-        interpolation: {
-            escapeValue: false,
-        },
-    });
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: { translation: en },
+      es: { translation: es },
+      sk: { translation: sk },
+      it: { translation: it },
+      de: { translation: de },
+      pt: { translation: pt }
+    },
+    lng: 'en',
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
 export default i18n;
