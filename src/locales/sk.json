@@ -6,12 +6,12 @@
         "partners": "Partneri",
         "news": "Novinky a podujatia",
         "resources": "Zdroje",
-        "impact": "Šírenie a vplyv",
+        "impact": "Šírenie a dopad",
         "contact": "Kontakt"
     },
     "home": {
-        "hero_title": "Integrované systémy vzdelávania na pracovisku pre priemyselnú rekvalifikáciu",
+        "hero_title": "Integrované systémy on-the-job vzdelávania pre priemyselnú rekvalifikáciu",
         "hero_subtitle": "[Slovak translation pending]",
-        "cta": "Uč sa viac"
+        "cta": "Dozvedieť sa viac"
     }
 }
