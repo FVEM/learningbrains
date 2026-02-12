@@ -46,6 +46,6 @@ The project is automatically deployed to GitHub Pages via GitHub Actions when ch
 ## Project Information
 
 - **Programme**: Erasmus+ KA220-VET
-- **Duration**: 36 Months
+- **Duration**: 24 Months
 - **Coordinator**: FVEM (Spain)
 - **Partners**: 6 organizations across Europe

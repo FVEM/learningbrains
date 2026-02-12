@@ -8,7 +8,7 @@ const Home = () => {
 
     const stats = [
         { label: "Programme", value: "Erasmus+ KA220-VET", icon: BookOpen },
-        { label: "Duration", value: "36 Months", icon: Target },
+        { label: "Duration", value: "24 Months", icon: Target },
         { label: "Focus", value: "Industrial Reskilling", icon: Cpu }
     ];
 
