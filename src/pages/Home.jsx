@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, BookOpen, Users, Cpu, Target, Rocket, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/logo-transparent.png';
+
+const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
 
 const Home = () => {
     const { t } = useTranslation();
@@ -19,7 +20,7 @@ const Home = () => {
                 <div className="container-custom relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="mb-8 animate-in fade-in slide-in-from-bottom-3 duration-1000">
-                            <img src={logo} alt="Learning Brains" className="h-20 md:h-24 mx-auto mb-6" />
+                            <img src={logo} alt="Learning Brains" className="h-32 md:h-40 mx-auto mb-6 object-contain" />
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-xs font-bold uppercase tracking-wider">
                                 <Rocket className="w-3 h-3" />
                                 Erasmus+ Cooperation Partnership
@@ -112,7 +113,7 @@ const Home = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent"></div>
                                 {/* Placeholder for project image */}
                                 <div className="absolute inset-0 flex items-center justify-center p-12">
-                                    <img src={logo} alt="Project Logo" className="w-full h-full object-contain opacity-20" />
+                                    <img src={logo} alt="Project Logo" className="w-full h-full object-contain opacity-10 scale-150" />
                                 </div>
                             </div>
                         </div>
