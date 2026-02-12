@@ -39,9 +39,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
                     {/* Brand */}
                     <div className="lg:col-span-4">
-                        <Link to="/" className="flex items-center gap-3 mb-6">
-                            <img src={logo} alt="Learning Brains" className="h-10 w-auto" />
-                            <span className="font-bold text-slate-800 text-lg tracking-tight">Learning Brains</span>
+                        <Link to="/" className="flex items-center mb-6">
+                            <img src={logo} alt="Learning Brains" className="h-12 w-auto" />
                         </Link>
                         <p className="text-slate-500 text-[15px] leading-relaxed mb-8 max-w-sm">
                             Integrated On-the-job Learning Systems for Industrial Reskilling.
