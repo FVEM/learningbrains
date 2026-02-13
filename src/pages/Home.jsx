@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <section className="relative overflow-hidden pt-20 pb-24 md:pt-32 md:pb-40">
+            <section className="relative overflow-hidden pt-16 pb-16 md:pt-24 md:pb-24">
                 <div className="container-custom relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="mb-8 animate-in fade-in slide-in-from-bottom-3 duration-1000">
@@ -43,7 +43,7 @@ const Home = () => {
                         </div>
 
                         {/* Integrated Stats */}
-                        <div className="mt-16 pt-12 border-t border-slate-100/60 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+                        <div className="mt-8 pt-8 border-t border-slate-100/60 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
                             {stats.map((stat, i) => (
                                 <div key={i} className="flex items-center md:justify-start gap-4 text-left group">
                                     <div className="w-10 h-10 bg-slate-50 text-brand-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
@@ -94,7 +94,7 @@ const Home = () => {
 
 
             {/* Introduction Preview */}
-            <section className="py-24">
+            <section className="py-16">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto">
                         <div className="flex flex-col md:flex-row gap-12 items-center">
@@ -123,7 +123,7 @@ const Home = () => {
             </section>
 
             {/* News Preview */}
-            <section className="py-24 bg-brand-primary text-white">
+            <section className="py-16 bg-brand-primary text-white">
                 <div className="container-custom">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
                         <div className="text-center md:text-left">
