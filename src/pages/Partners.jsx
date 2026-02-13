@@ -53,7 +53,7 @@ const Partners = () => {
             logo: "SBA",
             logoSrc: "/sba.jpg",
             website: "https://www.sbagency.sk/",
-            linkedin: "https://www.linkedin.com/company/sbagency/"
+            linkedin: "https://www.linkedin.com/company/slovakbusinessagency/"
         },
         {
             name: "Sparkling Intuition",
