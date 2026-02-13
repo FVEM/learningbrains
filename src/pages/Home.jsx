@@ -70,7 +70,9 @@ const Home = () => {
                         <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Confindustria Veneto SIAV website" className="hover:scale-110 transition-transform">
                             <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="Confindustria Veneto SIAV" className="h-8 md:h-12 w-auto object-contain" />
                         </a>
-                        {/* Placeholder for WKO Austria logo - to be added */}
+                        <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" aria-label="Visit WKO Austria website" className="hover:scale-110 transition-transform">
+                            <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="WKO Austria" className="h-8 md:h-12 w-auto object-contain" />
+                        </a>
                     </div>
                 </div>
             </section>

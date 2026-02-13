@@ -29,6 +29,7 @@ const Partners = () => {
             country: "Austria",
             description: "Representing the interests of the Styrian business community and providing extensive educational and training support services.",
             logo: "WKO",
+            logoSrc: "/room-466-logo-blau-transparent-300dpi.png",
             website: "https://www.wko.at/"
         },
         {
