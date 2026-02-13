@@ -41,6 +41,21 @@ const Home = () => {
                                 Meet our Partners
                             </Link>
                         </div>
+
+                        {/* Integrated Stats */}
+                        <div className="mt-16 pt-12 border-t border-slate-100/60 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+                            {stats.map((stat, i) => (
+                                <div key={i} className="flex items-center md:justify-start gap-4 text-left group">
+                                    <div className="w-10 h-10 bg-slate-50 text-brand-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                                        <stat.icon className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-1">{stat.label}</div>
+                                        <div className="text-[15px] font-bold text-brand-primary">{stat.value}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -77,22 +92,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Key Facts */}
-            <section className="py-24 bg-slate-50/50">
-                <div className="container-custom">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {stats.map((stat, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow group">
-                                <div className="w-12 h-12 bg-teal-50 text-brand-secondary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <stat.icon className="w-6 h-6" />
-                                </div>
-                                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">{stat.label}</div>
-                                <div className="text-xl font-bold text-brand-primary">{stat.value}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Introduction Preview */}
             <section className="py-24">
