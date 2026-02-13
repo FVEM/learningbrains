@@ -23,7 +23,7 @@ const Partners = () => {
             logo: "SIAV",
             logoSrc: "/Conf.Veneto SIAV logo.png",
             website: "https://www.siav.net/wp/",
-            linkedin: "https://www.linkedin.com/company/confindustria-veneto-siav-srl/"
+            linkedin: "https://www.linkedin.com/company/confindustriavenetosiav/"
         },
         {
             name: "Wirtschaftskammer Steiermark (WKO)",
