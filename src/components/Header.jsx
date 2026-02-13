@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
-const logo = `${import.meta.env.BASE_URL}learning-brains-favicon-512.png`;
+const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
