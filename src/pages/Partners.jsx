@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Users, Globe, ExternalLink, ChevronRight } from 'lucide-react';
+import { Users, Globe, ExternalLink, ChevronRight, Linkedin } from 'lucide-react';
 
 const Partners = () => {
     useTranslation();
@@ -12,7 +12,8 @@ const Partners = () => {
             description: "A leading industrial federation representing more than 800 companies in the metal sector, committed to innovation and training.",
             logo: "FVEM",
             logoSrc: "/FVEM-EN.jpg",
-            website: "https://www.fvem.es"
+            website: "https://www.fvem.es",
+            linkedin: "https://www.linkedin.com/company/fvem/"
         },
         {
             name: "Confindustria Veneto SIAV S.r.l",
@@ -21,7 +22,8 @@ const Partners = () => {
             description: "The service company of Confindustria Veneto, specialized in training, innovation, and organizational development for regional companies.",
             logo: "SIAV",
             logoSrc: "/Conf.Veneto SIAV logo.png",
-            website: "https://www.siav.net/wp/"
+            website: "https://www.siav.net/wp/",
+            linkedin: "https://www.linkedin.com/company/confindustria-veneto-siav-srl/"
         },
         {
             name: "Wirtschaftskammer Steiermark (WKO)",
@@ -30,7 +32,8 @@ const Partners = () => {
             description: "Representing the interests of the Styrian business community and providing extensive educational and training support services.",
             logo: "WKO",
             logoSrc: "/room-466-logo-blau-transparent-300dpi.png",
-            website: "https://www.wko.at/"
+            website: "https://www.wko.at/",
+            linkedin: "https://www.linkedin.com/company/wirtschaftskammer-steiermark/"
         },
         {
             name: "Media Creativa 2020, S.L.",
@@ -39,7 +42,8 @@ const Partners = () => {
             description: "Experts in the design and implementation of innovative pedagogical methodologies and digital learning environments.",
             logo: "Media Creativa",
             logoSrc: "/Media Creativa 2020.jpg",
-            website: "https://mediacreativa.eu/"
+            website: "https://mediacreativa.eu/",
+            linkedin: "https://www.linkedin.com/company/media-creativa/"
         },
         {
             name: "Slovak Business Agency (SBA)",
@@ -48,7 +52,8 @@ const Partners = () => {
             description: "The primary agency for the support of small and medium-sized enterprises in Slovakia, fostering entrepreneurship and skills development.",
             logo: "SBA",
             logoSrc: "/sba.jpg",
-            website: "https://www.sbagency.sk/"
+            website: "https://www.sbagency.sk/",
+            linkedin: "https://www.linkedin.com/company/sbagency/"
         },
         {
             name: "Sparkling Intuition",
@@ -57,7 +62,8 @@ const Partners = () => {
             description: "Dedicated to human resources development and innovative training solutions for the modern labor market.",
             logo: "Sparkling Intuition",
             logoSrc: "/SPIN logo large.png",
-            website: "https://sparkling-intuition.eu/"
+            website: "https://sparkling-intuition.eu/",
+            linkedin: "https://www.linkedin.com/company/sparkling-intuition/"
         }
     ];
 
@@ -110,19 +116,30 @@ const Partners = () => {
                                 </p>
                             </div>
 
-                            <a
-                                href={partner.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`Visit official website of ${partner.name}`}
-                                className="mt-auto pt-6 border-t border-slate-50 text-[13px] font-bold text-slate-400 hover:text-brand-secondary flex items-center justify-between group/link transition-all"
-                            >
-                                <span className="flex items-center gap-2">
+                            <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
+                                <a
+                                    href={partner.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Visit official website of ${partner.name}`}
+                                    className="text-[13px] font-bold text-slate-400 hover:text-brand-secondary flex items-center gap-2 group/link transition-all"
+                                >
                                     View Organization
                                     <ExternalLink className="w-3 h-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                                </span>
-                                <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
-                            </a>
+                                </a>
+
+                                {partner.linkedin && (
+                                    <a
+                                        href={partner.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`Visit LinkedIn profile of ${partner.name}`}
+                                        className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-teal-600 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                    >
+                                        <Linkedin className="w-4 h-4" />
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     ))}
                 </div>
