@@ -33,7 +33,7 @@ const Partners = () => {
             logo: "WKO",
             logoSrc: "/room-466-logo-blau-transparent-300dpi.png",
             website: "https://www.wko.at/",
-            linkedin: "https://www.linkedin.com/company/wirtschaftskammer-steiermark/"
+            linkedin: "https://www.linkedin.com/company/room466/"
         },
         {
             name: "Media Creativa 2020, S.L.",
@@ -43,7 +43,7 @@ const Partners = () => {
             logo: "Media Creativa",
             logoSrc: "/Media Creativa 2020.jpg",
             website: "https://mediacreativa.eu/",
-            linkedin: "https://www.linkedin.com/company/media-creativa/"
+            linkedin: "https://www.linkedin.com/company/mediacreativa/"
         },
         {
             name: "Slovak Business Agency (SBA)",
