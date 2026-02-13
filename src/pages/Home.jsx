@@ -43,7 +43,7 @@ const Home = () => {
                         </div>
 
                         {/* Integrated Stats */}
-                        <div className="mt-8 pt-8 border-t border-slate-100/60 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+                        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
                             {stats.map((stat, i) => (
                                 <div key={i} className="flex items-center md:justify-start gap-4 text-left group">
                                     <div className="w-10 h-10 bg-slate-50 text-brand-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
