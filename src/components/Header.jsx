@@ -48,7 +48,7 @@ const Header = () => {
     ];
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-lg shadow-sm py-3' : 'bg-transparent py-5'}`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-body ${isScrolled ? 'nav-glass py-3' : 'bg-white shadow-sm py-5'}`}>
             <nav className="container-custom flex items-center justify-between">
                 <Link to="/" className="flex items-center transition-transform hover:scale-[1.02] group">
                     <img src={logo} alt="Learning Brains" className="h-10 md:h-12 w-auto group-hover:scale-105 transition-transform" />

@@ -8,139 +8,205 @@ const Home = () => {
     const { t } = useTranslation();
 
     const stats = [
-        { label: "Programme", value: "Erasmus+ KA220-VET", icon: BookOpen },
-        { label: "Duration", value: "24 Months", icon: Target },
-        { label: "Focus", value: "Industrial Reskilling", icon: Cpu }
+        { label: "Programme", value: "Erasmus+ KA220-VET" },
+        { label: "Duration", value: "24 Months" },
+        { label: "Focus", value: "Industrial Reskilling" }
+    ];
+
+    const partners = [
+        { name: "FVEM", img: "FVEM-EN.jpg", url: "https://www.fvem.es" },
+        { name: "Media Creativa", img: "Media Creativa 2020.jpg", url: "https://mediacreativa.eu/" },
+        { name: "Slovak Business Agency", img: "sba.jpg", url: "https://www.sbagency.sk/" },
+        { name: "Sparkling Intuition", img: "SPIN logo large.png", url: "https://sparkling-intuition.eu/" },
+        { name: "Confindustria Veneto SIAV", img: "Conf.Veneto SIAV logo.png", url: "https://www.siav.net/wp/" },
+        { name: "WKO Austria", img: "room-466-logo-blau-transparent-300dpi.png", url: "https://www.wko.at/" }
     ];
 
     return (
-        <div className="bg-white">
+        <div className="bg-white font-body text-slate-600">
             {/* Hero Section */}
-            <section className="relative overflow-hidden pt-16 pb-8 md:pt-24 md:pb-12">
-                <div className="container-custom relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <div className="mb-8 animate-in fade-in slide-in-from-bottom-3 duration-1000">
-                            <img src={logo} alt="Learning Brains" className="h-32 md:h-40 mx-auto mb-6 object-contain" />
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-xs font-bold uppercase tracking-wider">
-                                <Rocket className="w-3 h-3" />
-                                Erasmus+ Cooperation Partnership
-                            </div>
+            <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden isolating">
+                <div className="absolute inset-0 z-0">
+                    {/* Background Image Layer */}
+                    <div
+                        className="absolute inset-0 w-full h-full transition-opacity duration-700 bg-cover bg-center bg-no-repeat"
+                        style={{
+                            backgroundImage: `url('${import.meta.env.BASE_URL}hero-background.png')`,
+                            opacity: 0.6
+                        }}
+                    />
+                    {/* Gradient Overlay removed for maximum visibility */}
+                </div>
+
+                <div className="max-w-7xl mx-auto px-8 w-full relative z-20">
+                    <div className="max-w-3xl">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-100 text-[10px] font-bold uppercase tracking-widest mb-8 animate-in fade-in slide-in-from-bottom-3 duration-700">
+                            <span className="flex h-2 w-2 rounded-full bg-primary-green"></span>
+                            Erasmus+ Cooperation Partnership
                         </div>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-brand-primary leading-[1.1] mb-8 tracking-tight">
+
+                        <div className="text-3xl md:text-4xl font-bold font-heading text-[#224075] mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-75">
+                            Learning Brains
+                        </div>
+
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-8 leading-[1.1] font-heading text-primary-green animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-100">
                             {t('home.hero_title')}
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+
+                        <p className="text-lg md:text-xl text-slate-500 mb-10 leading-relaxed font-normal max-w-2xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
                             {t('home.hero_subtitle')}
                         </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <Link to="/about" className="px-8 py-4 bg-brand-primary text-white font-bold rounded-xl shadow-lg shadow-teal-900/20 hover:bg-brand-secondary transition-all hover:-translate-y-1 flex items-center">
+
+                        <div className="flex flex-col sm:flex-row items-center gap-5 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
+                            <Link
+                                to="/about"
+                                className="w-full sm:w-auto px-10 py-4 bg-primary-green text-white font-bold rounded-xl hover:shadow-xl hover:shadow-green-900/20 transition-all flex items-center justify-center gap-2 group"
+                            >
                                 {t('home.cta')}
-                                <ArrowRight className="ml-2 w-5 h-5" />
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link to="/partners" className="px-8 py-4 bg-white text-slate-600 font-bold rounded-xl border border-slate-200 hover:bg-slate-50 transition-all">
+                            <Link
+                                to="/partners"
+                                className="w-full sm:w-auto px-10 py-4 bg-white border border-slate-200 text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
+                            >
+                                <Users className="w-5 h-5 text-primary-green" />
                                 Meet our Partners
                             </Link>
                         </div>
 
-                        {/* Integrated Stats */}
-                        <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+                        {/* Stats Row */}
+                        <div className="mt-20 flex flex-wrap items-center gap-8 md:gap-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                             {stats.map((stat, i) => (
-                                <div key={i} className="flex items-center md:justify-start gap-4 text-left group">
-                                    <div className="w-10 h-10 bg-slate-50 text-brand-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
-                                        <stat.icon className="w-5 h-5" />
+                                <div key={i} className="flex items-center">
+                                    <div className="flex flex-col">
+                                        <span className="text-xl md:text-2xl font-bold text-primary-green font-heading">{stat.value}</span>
+                                        <span className="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-wider">{stat.label}</span>
                                     </div>
-                                    <div>
-                                        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-1">{stat.label}</div>
-                                        <div className="text-[15px] font-bold text-brand-primary">{stat.value}</div>
-                                    </div>
+                                    {i < stats.length - 1 && (
+                                        <div className="w-px h-10 bg-slate-200 ml-8 md:ml-12 hidden sm:block"></div>
+                                    )}
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
-
-                {/* Decorative Elements */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-0 pointer-events-none opacity-20">
-                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-teal-200 blur-[120px] rounded-full"></div>
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-100 blur-[120px] rounded-full"></div>
-                </div>
             </section>
 
-            {/* Partner Logos Strip */}
-            <section className="py-8 border-y border-slate-100 bg-white overflow-hidden">
-                <div className="container-custom">
-                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0">
-                        <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" aria-label="Visit FVEM website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}FVEM-EN.jpg`} alt="FVEM" className="h-12 md:h-16 w-auto object-contain" />
-                        </a>
-                        <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" aria-label="Visit Media Creativa website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}Media Creativa 2020.jpg`} alt="Media Creativa" className="h-12 md:h-16 w-auto object-contain" />
-                        </a>
-                        <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" aria-label="Visit Slovak Business Agency website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}sba.jpg`} alt="Slovak Business Agency" className="h-12 md:h-16 w-auto object-contain" />
-                        </a>
-                        <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sparkling Intuition website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}SPIN logo large.png`} alt="Sparkling Intuition" className="h-12 md:h-16 w-auto object-contain" />
-                        </a>
-                        <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Confindustria Veneto SIAV website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="Confindustria Veneto SIAV" className="h-12 md:h-16 w-auto object-contain" />
-                        </a>
-                        <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" aria-label="Visit WKO Austria website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="WKO Austria" className="h-12 md:h-16 w-auto object-contain" />
-                        </a>
+            {/* Partners Section */}
+            <section className="py-24 bg-white border-y border-slate-50">
+                <div className="max-w-7xl mx-auto px-8">
+                    <p className="text-center text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] mb-16 font-heading">
+                        Project Consortium
+                    </p>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
+                        {partners.map((partner, index) => (
+                            <a
+                                key={index}
+                                href={partner.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110"
+                            >
+                                <img
+                                    src={`${import.meta.env.BASE_URL}${partner.img}`}
+                                    alt={partner.name}
+                                    className="h-12 md:h-16 object-contain"
+                                />
+                            </a>
+                        ))}
                     </div>
                 </div>
             </section>
 
-
-
-
-            {/* News Preview */}
-            <section className="py-16 bg-brand-primary text-white">
-                <div className="container-custom">
-                    <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
-                        <div className="text-center md:text-left">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest Updates</h2>
-                            <p className="text-teal-100/70">Follow our journey and project milestones.</p>
+            {/* Updates / Insights Section */}
+            <section className="py-32 bg-slate-50/30">
+                <div className="max-w-7xl mx-auto px-8">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                        <div className="max-w-xl">
+                            <h2 className="text-4xl font-bold mb-4 tracking-tight font-heading text-slate-900">Latest Updates</h2>
+                            <p className="text-slate-500">Milestones, events, and results from the Learning Brains project.</p>
                         </div>
-                        <Link to="/news" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-colors font-bold">
+                        <Link
+                            to="/news"
+                            className="flex items-center gap-2 text-primary-green font-bold group border-b-2 border-primary-green/10 pb-1 hover:border-primary-green transition-all font-heading"
+                        >
                             View All News
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        {/* News Card 1 */}
                         <a
                             href="https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all hover:-translate-y-1 block overflow-hidden"
+                            className="news-card rounded-2xl overflow-hidden group block"
                         >
-                            <div className="h-48 overflow-hidden relative">
+                            <div className="aspect-[16/10] relative overflow-hidden">
                                 <img
                                     src={`${import.meta.env.BASE_URL}News/kickoff-meeting-ai.png`}
-                                    alt="Kick-off Meeting"
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Kick-off"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute top-4 right-4 bg-brand-primary/90 p-1.5 rounded-lg">
-                                    <Linkedin className="w-4 h-4 text-white" />
+                                <div className="absolute top-4 left-4">
+                                    <span className="px-3 py-1 bg-white/95 backdrop-blur shadow-sm text-primary-green text-[10px] font-extrabold uppercase rounded-full font-heading">
+                                        Meeting
+                                    </span>
                                 </div>
                             </div>
                             <div className="p-8">
-                                <div className="text-teal-300 text-[10px] font-bold uppercase tracking-widest mb-3">Kick-off Meeting</div>
-                                <h4 className="text-xl font-bold mb-4 group-hover:text-teal-300 transition-colors">Launching Learning Brains in Bilbao</h4>
-                                <p className="text-teal-100/60 text-sm mb-6 leading-relaxed">
-                                    The project officially started with all European partners gathering at the FVEM headquarters.
+                                <div className="flex items-center gap-4 text-[11px] font-bold text-slate-400 mb-4 uppercase tracking-wider">
+                                    <span className="flex items-center gap-1.5">Feb 2026</span>
+                                    <span className="flex items-center gap-1.5">Bilbao, Spain</span>
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-heading text-slate-800">
+                                    Project Kick-off Meeting
+                                </h3>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-2">
+                                    The partners met for the first time at the FVEM headquarters to discuss the project timeline.
                                 </p>
-                                <div className="flex items-center justify-between">
-                                    <div className="text-xs text-white/40">February 2026</div>
-                                    <div className="text-xs font-bold text-teal-300 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-                                        View on LinkedIn
-                                        <ArrowRight className="w-3 h-3" />
-                                    </div>
+                                <div className="inline-flex items-center gap-2 text-sm font-bold text-primary-green group/link font-heading">
+                                    Read on LinkedIn
+                                    <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
                                 </div>
                             </div>
                         </a>
-                        {/* More news could go here */}
+                        {/* Placeholder Card 2 */}
+                        <div className="news-card rounded-2xl overflow-hidden group opacity-60 pointer-events-none grayscale">
+                            <div className="aspect-[16/10] bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                                <Rocket className="w-12 h-12 text-slate-300" />
+                            </div>
+                            <div className="p-8">
+                                <div className="flex items-center gap-4 text-[11px] font-bold text-slate-300 mb-4 uppercase tracking-wider">
+                                    <span>Coming Soon</span>
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 leading-snug font-heading text-slate-400">
+                                    Consortium Methodology
+                                </h3>
+                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Developing the core framework for industrial reskilling and on-the-job learning.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Placeholder Card 3 */}
+                        <div className="news-card rounded-2xl overflow-hidden group opacity-60 pointer-events-none grayscale">
+                            <div className="aspect-[16/10] bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                                <Cpu className="w-12 h-12 text-slate-300" />
+                            </div>
+                            <div className="p-8">
+                                <div className="flex items-center gap-4 text-[11px] font-bold text-slate-300 mb-4 uppercase tracking-wider">
+                                    <span>Coming Soon</span>
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 leading-snug font-heading text-slate-400">
+                                    AI Tools Research
+                                </h3>
+                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Analyzing state-of-the-art AI applications for vocational training environments.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

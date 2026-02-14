@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About the Project",
+    "about": "The Project",
     "results": "Results",
     "partners": "Partners",
     "news": "News & Events",
@@ -10,8 +10,8 @@
     "contact": "Contact"
   },
   "home": {
-    "hero_title": "Integrated On-the-job Learning Systems for Industrial Reskilling",
-    "hero_subtitle": "Empowering the workforce through innovative vocational education and training.",
+    "hero_title": "Real Skills for Real Industry",
+    "hero_subtitle": "Integrated On-the-job Learning Systems for Industrial Reskilling",
     "cta": "Learn More"
   },
   "footer": {

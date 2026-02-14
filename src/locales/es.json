@@ -1,7 +1,7 @@
 {
     "nav": {
         "home": "Inicio",
-        "about": "Sobre el Proyecto",
+        "about": "El Proyecto",
         "results": "Resultados",
         "partners": "Socios",
         "news": "Noticias y Eventos",
@@ -10,8 +10,8 @@
         "contact": "Contacto"
     },
     "home": {
-        "hero_title": "Sistemas Integrados de Aprendizaje en el Trabajo para el Reciclaje Industrial",
-        "hero_subtitle": "Empoderando a la fuerza laboral a través de educación y formación profesional innovadora.",
+        "hero_title": "Habilidades Reales para una Industria Real",
+        "hero_subtitle": "Sistemas Integrados de Aprendizaje en el Trabajo para el Reciclaje Industrial",
         "cta": "Saber Más"
     },
     "footer": {
