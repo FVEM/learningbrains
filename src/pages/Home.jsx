@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <section className="relative overflow-hidden pt-16 pb-16 md:pt-24 md:pb-24">
+            <section className="relative overflow-hidden pt-16 pb-8 md:pt-24 md:pb-12">
                 <div className="container-custom relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="mb-8 animate-in fade-in slide-in-from-bottom-3 duration-1000">
@@ -43,7 +43,7 @@ const Home = () => {
                         </div>
 
                         {/* Integrated Stats */}
-                        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+                        <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
                             {stats.map((stat, i) => (
                                 <div key={i} className="flex items-center md:justify-start gap-4 text-left group">
                                     <div className="w-10 h-10 bg-slate-50 text-brand-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
