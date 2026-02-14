@@ -107,7 +107,7 @@ const Home = () => {
                     <div className="absolute inset-0 w-full h-full overflow-hidden bg-white">
                         <canvas
                             ref={canvasRef}
-                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-60' : 'opacity-0'}`}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-70' : 'opacity-0'}`}
                         />
                         {/* Hidden Source Video */}
                         <video
