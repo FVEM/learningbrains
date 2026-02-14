@@ -9,9 +9,12 @@ import Resources from './pages/Resources';
 import Impact from './pages/Impact';
 import Contact from './pages/Contact';
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
     <Router basename="/learningbrains">
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
