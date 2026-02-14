@@ -117,7 +117,7 @@ const Home = () => {
                         >
                             <div className="h-48 overflow-hidden relative">
                                 <img
-                                    src={`${import.meta.env.BASE_URL}kickoff-meeting-ai.png`}
+                                    src={`${import.meta.env.BASE_URL}News/kickoff-meeting-ai.png`}
                                     alt="Kick-off Meeting"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />

@@ -12,7 +12,7 @@ const News = () => {
             category: "Meeting",
             description: "The partners met for the first time at the FVEM headquarters to discuss the project timeline, management protocols, and initial research activities for WP2.",
             link: "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-            image: "kickoff-meeting-ai.png"
+            image: "News/kickoff-meeting-ai.png"
         },
         {
             title: "Consortium Finalizes WP2 Methodology",
