@@ -1,11 +1,87 @@
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, BookOpen, Users, Cpu, Target, Rocket, Linkedin } from 'lucide-react';
+import { useRef, useEffect, useState } from 'react';
+import { ArrowRight, Users, Cpu, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
 
 const Home = () => {
     const { t } = useTranslation();
+    const videoRef = useRef(null);
+    const canvasRef = useRef(null);
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        const canvas = canvasRef.current;
+        if (!video || !canvas) return;
+
+        const ctx = canvas.getContext('2d', { alpha: false }); // Optimize for no transparency
+        let frames = [];
+        let animationFrameId;
+        let isCollecting = true;
+        let frameIndex = 0;
+        let direction = 1; // 1 = forward, -1 = backward
+
+        const processFrame = async () => {
+            if (isCollecting) {
+                // Collection Phase: Store frames while video plays normally
+                if (!video.paused && !video.ended) {
+                    try {
+                        const bitmap = await createImageBitmap(video);
+                        // Optional: Resize bitmap here if memory is an issue, e.g. { resizeWidth: 1280 }
+                        frames.push(bitmap);
+                    } catch (e) {
+                        console.error("Frame capture error:", e);
+                    }
+                }
+
+                // Draw current video frame to canvas during collection
+                if (frames.length > 0) {
+                    ctx.drawImage(frames[frames.length - 1], 0, 0, canvas.width, canvas.height);
+                }
+
+                if (video.ended) {
+                    isCollecting = false;
+                    frameIndex = frames.length - 1;
+                    direction = -1; // Start reversing immediately
+                }
+            } else {
+                // Playback Phase: Use cached frames
+                if (frames.length > 0) {
+                    ctx.drawImage(frames[frameIndex], 0, 0, canvas.width, canvas.height);
+
+                    frameIndex += direction;
+
+                    // Ping-Pong Logic
+                    if (frameIndex >= frames.length) {
+                        frameIndex = frames.length - 2;
+                        direction = -1;
+                    } else if (frameIndex < 0) {
+                        frameIndex = 1;
+                        direction = 1;
+                    }
+                }
+            }
+
+            animationFrameId = requestAnimationFrame(processFrame);
+        };
+
+        const handleLoadedMetadata = () => {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            setIsVideoLoaded(true);
+            video.play().catch(e => console.error("Autoplay failed:", e));
+            animationFrameId = requestAnimationFrame(processFrame);
+        };
+
+        video.addEventListener('loadedmetadata', handleLoadedMetadata);
+
+        return () => {
+            video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+            cancelAnimationFrame(animationFrameId);
+            // Cleanup bitmaps to free memory
+            frames.forEach(frame => frame.close());
+        };
+    }, []);
 
     const stats = [
         { label: "Programme", value: "Erasmus+ KA220-VET" },
@@ -27,15 +103,26 @@ const Home = () => {
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden isolating">
                 <div className="absolute inset-0 z-0">
-                    {/* Background Image Layer */}
-                    <div
-                        className="absolute inset-0 w-full h-full transition-opacity duration-700 bg-cover bg-center bg-no-repeat"
-                        style={{
-                            backgroundImage: `url('${import.meta.env.BASE_URL}hero-background.png')`,
-                            opacity: 0.6
-                        }}
-                    />
-                    {/* Gradient Overlay removed for maximum visibility */}
+                    {/* Background Canvas Layer */}
+                    <div className="absolute inset-0 w-full h-full overflow-hidden bg-white">
+                        <canvas
+                            ref={canvasRef}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-60' : 'opacity-0'}`}
+                        />
+                        {/* Hidden Source Video */}
+                        <video
+                            ref={videoRef}
+                            muted
+                            playsInline
+                            className="hidden"
+                            crossOrigin="anonymous"
+                        >
+                            <source src={`${import.meta.env.BASE_URL}grok-video-62201ec6-f2cd-4ba2-8091-1878cb5ffc72.mp4`} type="video/mp4" />
+                        </video>
+                    </div>
+
+                    {/* Gradient Overlay for Text Readability */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent z-10"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-8 w-full relative z-20">
