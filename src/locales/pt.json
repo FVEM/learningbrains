@@ -11,7 +11,29 @@
     },
     "home": {
         "hero_title": "Sistemas integrados de aprendizagem no local de trabalho para a requalificação industrial",
-        "hero_subtitle": "[Portuguese translation pending]",
+        "hero_subtitle": "Sistemas integrados de aprendizagem no local de trabalho para a requalificação industrial",
         "cta": "Saiba mais"
+    },
+    "contact": {
+        "connect_us": "Conecte-se conosco",
+        "title": "Entre em Contato",
+        "description": "Tem alguma dúvida sobre o projeto Learning Brains? Entre em contato com o consórcio através deste formulário ou siga-nos em nossos canais sociais.",
+        "email_inquiry": "Consulta por E-mail",
+        "official_channels": "Canais Oficiais",
+        "social_pending": "LinkedIn e Twitter ativados no meio do projeto",
+        "disclaimer": "Este projeto segue rigorosos mandatos de visibilidade Erasmus+. Todas as informações recebidas são tratadas confidencialmente e usadas apenas para fins de disseminação.",
+        "form": {
+            "full_name": "Nome Completo",
+            "email": "Endereço de E-mail",
+            "message": "Sua Mensagem",
+            "send": "Enviar Mensagem",
+            "security": "Integração pronta • Comunicação segura",
+            "placeholder_name": "João Silva",
+            "placeholder_email": "joao@exemplo.com",
+            "placeholder_message": "Conte-nos sobre seu interesse no projeto..."
+        }
+    },
+    "footer": {
+        "disclaimer": "Cofinanciado pelo Programa Erasmus+ da União Europeia. Este projeto foi financiado com o apoio da Comissão Europeia. Esta publicação [comunicação] reflete apenas as opiniões do autor, e a Comissão não pode ser responsabilizada por qualquer uso que possa ser feito das informações nela contidas."
     }
 }

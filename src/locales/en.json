@@ -14,6 +14,25 @@
     "hero_subtitle": "Integrated On-the-job Learning Systems for Industrial Reskilling",
     "cta": "Learn More"
   },
+  "contact": {
+    "connect_us": "Connect with us",
+    "title": "Get in Touch",
+    "description": "Do you have any questions about the Learning Brains project? Get in touch with the consortium through this form or follow us on our social channels.",
+    "email_inquiry": "Email Inquiry",
+    "official_channels": "Official Channels",
+    "social_pending": "Linked & Twitter activated mid-project",
+    "disclaimer": "This project follows strict Erasmus+ visibility mandates. All information received is treated confidentially and used solely for dissemination purposes.",
+    "form": {
+      "full_name": "Full Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "send": "Send Message",
+      "security": "Integration ready • Secure communication",
+      "placeholder_name": "John Doe",
+      "placeholder_email": "john@example.com",
+      "placeholder_message": "Tell us about your interest in the project..."
+    }
+  },
   "footer": {
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   }

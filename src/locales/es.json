@@ -14,6 +14,25 @@
         "hero_subtitle": "Sistemas Integrados de Aprendizaje en el Trabajo para el Reciclaje Industrial",
         "cta": "Saber Más"
     },
+    "contact": {
+        "connect_us": "Conecta con nosotros",
+        "title": "Contacta con nosotros",
+        "description": "¿Tienes alguna pregunta sobre el proyecto Learning Brains? Ponte en contacto con el consorcio a través de este formulario o síguenos en nuestras redes sociales.",
+        "email_inquiry": "Consulta por Email",
+        "official_channels": "Canales Oficiales",
+        "social_pending": "LinkedIn y Twitter activados a mitad del proyecto",
+        "disclaimer": "Este proyecto sigue estrictos mandatos de visibilidad Erasmus+. Toda la información recibida se trata de forma confidencial y se utiliza únicamente con fines de difusión.",
+        "form": {
+            "full_name": "Nombre Completo",
+            "email": "Dirección de Email",
+            "message": "Tu Mensaje",
+            "send": "Enviar Mensaje",
+            "security": "Integración lista • Comunicación segura",
+            "placeholder_name": "Juan Pérez",
+            "placeholder_email": "juan@ejemplo.com",
+            "placeholder_message": "Cuéntanos tu interés en el proyecto..."
+        }
+    },
     "footer": {
         "disclaimer": "Cofinanciado por el programa Erasmus+ de la Unión Europea. El presente proyecto ha sido financiado con el apoyo de la Comisión Europea. Esta publicación [comunicación] es responsabilidad exclusiva de su autor. La Comisión no es responsable del uso que pueda hacerse de la información aquí difundida."
     }

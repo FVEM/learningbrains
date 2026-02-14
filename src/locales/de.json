@@ -10,8 +10,30 @@
         "contact": "Kontakt"
     },
     "home": {
-        "hero_title": "Integrierte On-the-job-Lernsysteme für die industrielle Umschulung",
-        "hero_subtitle": "[German translation pending]",
+        "hero_title": "Integrierte On-the-Job-Lernsysteme für die industrielle Umschulung",
+        "hero_subtitle": "Integrierte On-the-job-Lernsysteme für die industrielle Umschulung",
         "cta": "Mehr erfahren"
+    },
+    "contact": {
+        "connect_us": "Verbinden Sie sich mit uns",
+        "title": "Kontaktieren Sie uns",
+        "description": "Haben Sie Fragen zum Projekt Learning Brains? Kontaktieren Sie das Konsortium über dieses Formular oder folgen Sie uns auf unseren sozialen Kanälen.",
+        "email_inquiry": "E-Mail-Anfrage",
+        "official_channels": "Offizielle Kanäle",
+        "social_pending": "LinkedIn & Twitter werden zur Mitte des Projekts aktiviert",
+        "disclaimer": "Dieses Projekt folgt strengen Erasmus+ Sichtbarkeitsvorgaben. Alle erhaltenen Informationen werden vertraulich behandelt und ausschließlich zu Verbreitungszwecken verwendet.",
+        "form": {
+            "full_name": "Vollständiger Name",
+            "email": "E-Mail-Adresse",
+            "message": "Ihre Nachricht",
+            "send": "Nachricht senden",
+            "security": "Integration bereit • Sichere Kommunikation",
+            "placeholder_name": "Max Mustermann",
+            "placeholder_email": "max@beispiel.de",
+            "placeholder_message": "Erzählen Sie uns von Ihrem Interesse am Projekt..."
+        }
+    },
+    "footer": {
+        "disclaimer": "Kofinanziert durch das Programm Erasmus+ der Europäischen Union. Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Die Verantwortung für den Inhalt dieser Veröffentlichung [Mitteilung] trägt allein der Verfasser; die Kommission haftet nicht für die weitere Verwendung der darin enthaltenen Angaben."
     }
 }

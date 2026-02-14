@@ -11,7 +11,29 @@
     },
     "home": {
         "hero_title": "Integrované systémy vzdelávania na pracovisku pre priemyselnú rekvalifikáciu",
-        "hero_subtitle": "[Slovak translation pending]",
+        "hero_subtitle": "Integrované systémy vzdelávania na pracovisku pre priemyselnú rekvalifikáciu",
         "cta": "Uč sa viac"
+    },
+    "contact": {
+        "connect_us": "Spojte sa s nami",
+        "title": "Kontaktujte nás",
+        "description": "Máte otázky o projekte Learning Brains? Kontaktujte konzorcium prostredníctvom tohto formulára alebo nás sledujte na našich sociálnych kanáloch.",
+        "email_inquiry": "Emailová otázka",
+        "official_channels": "Oficiálne kanály",
+        "social_pending": "LinkedIn a Twitter aktivované v polovici projektu",
+        "disclaimer": "Tento projekt dodržiava prísne mandáty viditeľnosti Erasmus+. So všetkými prijatými informáciami sa zaobchádza dôverne a používajú sa výlučne na účely šírenia.",
+        "form": {
+            "full_name": "Celé meno",
+            "email": "Emailová adresa",
+            "message": "Vaša správa",
+            "send": "Odoslať správu",
+            "security": "Integrácia pripravená • Bezpečná komunikácia",
+            "placeholder_name": "Ján Novák",
+            "placeholder_email": "jan@priklad.sk",
+            "placeholder_message": "Povedzte nám o svojom záujme o projekt..."
+        }
+    },
+    "footer": {
+        "disclaimer": "Spolufinancované z programu Európskej únie Erasmus+. Tento projekt bol financovaný s podporou Európskej komisie. Táto publikácia [oznámenie] odráža iba názory autora a Komisia nemôže byť zodpovedná za akékoľvek použitie informácií, ktoré sú v nej obsiahnuté."
     }
 }
