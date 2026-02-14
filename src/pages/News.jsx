@@ -11,7 +11,8 @@ const News = () => {
             location: "Bilbao, Spain",
             category: "Meeting",
             description: "The partners met for the first time at the FVEM headquarters to discuss the project timeline, management protocols, and initial research activities for WP2.",
-            link: "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
+            link: "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
+            image: "kickoff-meeting-ai.png"
         },
         {
             title: "Consortium Finalizes WP2 Methodology",
@@ -24,7 +25,7 @@ const News = () => {
 
     return (
         <div className="py-20 bg-white">
-            <div className="max-w-4xl mx-auto px-6">
+            <div className="max-w-5xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
                         <Newspaper className="w-3 h-3" />
@@ -40,7 +41,7 @@ const News = () => {
                     {newsItems.map((item, idx) => (
                         <div key={idx} className="group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
                             <div className="flex flex-col md:flex-row">
-                                <div className="md:w-64 bg-slate-50 p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100">
+                                <div className="md:w-64 bg-slate-50 p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 shrink-0">
                                     <span className="inline-block px-2.5 py-1 bg-white text-brand-secondary text-[11px] font-bold rounded-lg border border-slate-100 mb-4 self-start">
                                         {item.category}
                                     </span>
@@ -55,7 +56,7 @@ const News = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-8 flex-grow">
+                                <div className="p-8 flex-grow flex flex-col justify-center">
                                     <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-4 group-hover:text-brand-primary transition-colors">
                                         {item.title}
                                     </h3>
@@ -86,6 +87,15 @@ const News = () => {
                                         </span>
                                     )}
                                 </div>
+                                {item.image && (
+                                    <div className="md:w-72 h-48 md:h-auto relative shrink-0 border-t md:border-t-0 md:border-l border-slate-100">
+                                        <img
+                                            src={`${import.meta.env.BASE_URL}${item.image}`}
+                                            alt={item.title}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

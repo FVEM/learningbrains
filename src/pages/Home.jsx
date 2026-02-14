@@ -71,56 +71,29 @@ const Home = () => {
                 <div className="container-custom">
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0">
                         <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" aria-label="Visit FVEM website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}FVEM-EN.jpg`} alt="FVEM" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}FVEM-EN.jpg`} alt="FVEM" className="h-12 md:h-16 w-auto object-contain" />
                         </a>
                         <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" aria-label="Visit Media Creativa website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}Media Creativa 2020.jpg`} alt="Media Creativa" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}Media Creativa 2020.jpg`} alt="Media Creativa" className="h-12 md:h-16 w-auto object-contain" />
                         </a>
                         <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" aria-label="Visit Slovak Business Agency website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}sba.jpg`} alt="Slovak Business Agency" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}sba.jpg`} alt="Slovak Business Agency" className="h-12 md:h-16 w-auto object-contain" />
                         </a>
                         <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sparkling Intuition website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}SPIN logo large.png`} alt="Sparkling Intuition" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}SPIN logo large.png`} alt="Sparkling Intuition" className="h-12 md:h-16 w-auto object-contain" />
                         </a>
                         <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Confindustria Veneto SIAV website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="Confindustria Veneto SIAV" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="Confindustria Veneto SIAV" className="h-12 md:h-16 w-auto object-contain" />
                         </a>
                         <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" aria-label="Visit WKO Austria website" className="hover:scale-110 transition-transform">
-                            <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="WKO Austria" className="h-8 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="WKO Austria" className="h-12 md:h-16 w-auto object-contain" />
                         </a>
                     </div>
                 </div>
             </section>
 
 
-            {/* Introduction Preview */}
-            <section className="py-16">
-                <div className="container-custom">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="flex flex-col md:flex-row gap-12 items-center">
-                            <div className="flex-1">
-                                <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-6 leading-tight">
-                                    Empowering the industrial workforce through AI and on-the-job training.
-                                </h2>
-                                <p className="text-slate-500 text-lg mb-8 leading-relaxed">
-                                    Learning Brains is dedicated to bridging the gap between traditional vocational education and the rapidly evolving industrial landscape. By integrating advanced learning systems directly into the workplace, we ensure a sustainable future for European manufacturing.
-                                </p>
-                                <Link to="/about" className="text-brand-secondary font-bold inline-flex items-center group">
-                                    Learn more about our mission
-                                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                </Link>
-                            </div>
-                            <div className="flex-1 w-full aspect-square bg-slate-100 rounded-3xl overflow-hidden relative">
-                                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent"></div>
-                                {/* Placeholder for project image */}
-                                <div className="absolute inset-0 flex items-center justify-center p-12">
-                                    <img src={logo} alt="Project Logo" className="w-full h-full object-contain opacity-10 scale-150" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             {/* News Preview */}
             <section className="py-16 bg-brand-primary text-white">
@@ -140,21 +113,30 @@ const Home = () => {
                             href="https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all hover:-translate-y-1 block"
+                            className="group bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all hover:-translate-y-1 block overflow-hidden"
                         >
-                            <div className="flex justify-between items-start mb-4">
-                                <div className="text-teal-300 text-[10px] font-bold uppercase tracking-widest">Kick-off Meeting</div>
-                                <Linkedin className="w-4 h-4 text-teal-300/50 group-hover:text-teal-300 transition-colors" />
+                            <div className="h-48 overflow-hidden relative">
+                                <img
+                                    src={`${import.meta.env.BASE_URL}kickoff-meeting-ai.png`}
+                                    alt="Kick-off Meeting"
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute top-4 right-4 bg-brand-primary/90 p-1.5 rounded-lg">
+                                    <Linkedin className="w-4 h-4 text-white" />
+                                </div>
                             </div>
-                            <h4 className="text-xl font-bold mb-4 group-hover:text-teal-300 transition-colors">Launching Learning Brains in Bilbao</h4>
-                            <p className="text-teal-100/60 text-sm mb-6 leading-relaxed">
-                                The project officially started with all European partners gathering at the FVEM headquarters.
-                            </p>
-                            <div className="flex items-center justify-between">
-                                <div className="text-xs text-white/40">February 2026</div>
-                                <div className="text-xs font-bold text-teal-300 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-                                    View on LinkedIn
-                                    <ArrowRight className="w-3 h-3" />
+                            <div className="p-8">
+                                <div className="text-teal-300 text-[10px] font-bold uppercase tracking-widest mb-3">Kick-off Meeting</div>
+                                <h4 className="text-xl font-bold mb-4 group-hover:text-teal-300 transition-colors">Launching Learning Brains in Bilbao</h4>
+                                <p className="text-teal-100/60 text-sm mb-6 leading-relaxed">
+                                    The project officially started with all European partners gathering at the FVEM headquarters.
+                                </p>
+                                <div className="flex items-center justify-between">
+                                    <div className="text-xs text-white/40">February 2026</div>
+                                    <div className="text-xs font-bold text-teal-300 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                                        View on LinkedIn
+                                        <ArrowRight className="w-3 h-3" />
+                                    </div>
                                 </div>
                             </div>
                         </a>
