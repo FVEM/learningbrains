@@ -119,7 +119,7 @@ const Home = () => {
             </section>
 
             {/* Updates / Insights Section */}
-            <section className="py-32 bg-slate-50/30">
+            <section className="py-32 bg-slate-100">
                 <div className="max-w-7xl mx-auto px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div className="max-w-xl">
