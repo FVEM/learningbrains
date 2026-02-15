@@ -17,64 +17,73 @@ const Home = () => {
 
         const ctx = canvas.getContext('2d', { alpha: false });
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        // High-quality canvas setup
+        const updateCanvasSize = () => {
+            canvas.width = video.videoWidth || window.innerWidth;
+            canvas.height = video.videoHeight || window.innerHeight;
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        };
+        updateCanvasSize();
 
         let frames = [];
         let animationFrameId;
         let isCollecting = true;
-        let frameIndex = 0;
-        let direction = 1;
-        let lastTimestamp = 0;
-        const targetFPS = 30; // Reduced FPS for smoother slow motion
-        const frameInterval = 1000 / targetFPS;
+        let lastCapturedTime = -1;
+
+        // Playback state for smooth loop
+        let playbackStartTime = 0;
+        const speedFactor = 0.5; // 0.5x speed
 
         const processFrame = async (timestamp) => {
-            // Control playback/capture speed based on target FPS
-            if (timestamp - lastTimestamp < frameInterval) {
-                animationFrameId = requestAnimationFrame(processFrame);
-                return;
-            }
-            lastTimestamp = timestamp;
-
             if (isCollecting) {
+                // Capture phase: Only capture unique frames from the video
                 if (!video.paused && !video.ended) {
-                    try {
-                        const bitmap = await createImageBitmap(video);
-                        frames.push(bitmap);
-                    } catch (e) {
-                        console.error("Frame capture error:", e);
+                    // Check if the video has actually progressed to a new frame
+                    if (video.currentTime !== lastCapturedTime) {
+                        try {
+                            const bitmap = await createImageBitmap(video);
+                            frames.push(bitmap);
+                            lastCapturedTime = video.currentTime;
+                        } catch (e) {
+                            console.error("Frame capture error:", e);
+                        }
                     }
                 }
 
+                // Show progress during capture
                 if (frames.length > 0) {
-                    ctx.fillStyle = '#ffffff';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
                     ctx.drawImage(frames[frames.length - 1], 0, 0, canvas.width, canvas.height);
                 }
 
                 if (video.ended) {
                     isCollecting = false;
-                    frameIndex = frames.length - 1;
-                    direction = -1;
+                    playbackStartTime = timestamp;
+                    // Release video resources
+                    video.pause();
                 }
             } else {
-                if (frames.length > 0) {
-                    ctx.fillStyle = '#ffffff';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-                    ctx.drawImage(frames[frameIndex], 0, 0, canvas.width, canvas.height);
+                if (frames.length > 1) {
+                    // Calculate frame index based on time for perfect smoothness
+                    // Total cycle duration (forward + backward)
+                    const frameDuration = 1000 / (30 * speedFactor); // Approx duration per frame at current speed
+                    const totalDuration = frames.length * frameDuration;
+                    const elapsed = (timestamp - playbackStartTime) % (totalDuration * 2);
 
-                    frameIndex += direction;
-
-                    if (frameIndex >= frames.length) {
-                        frameIndex = frames.length - 2;
-                        direction = -1;
-                    } else if (frameIndex < 0) {
-                        frameIndex = 1;
-                        direction = 1;
+                    let frameIndex;
+                    if (elapsed < totalDuration) {
+                        // Forward pass
+                        frameIndex = Math.floor((elapsed / totalDuration) * frames.length);
+                    } else {
+                        // Backward pass
+                        const backElapsed = elapsed - totalDuration;
+                        frameIndex = Math.floor((1 - (backElapsed / totalDuration)) * (frames.length - 1));
                     }
+
+                    // Safety bounds
+                    frameIndex = Math.max(0, Math.min(frames.length - 1, frameIndex));
+
+                    ctx.drawImage(frames[frameIndex], 0, 0, canvas.width, canvas.height);
                 }
             }
 
@@ -82,25 +91,21 @@ const Home = () => {
         };
 
         const handleLoadedMetadata = () => {
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            ctx.fillStyle = '#ffffff';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            updateCanvasSize();
             setIsVideoLoaded(true);
-
-            // Set slower playback rate (0.5 = half speed)
-            video.playbackRate = 0.5;
-
+            // Play at normal speed for clean capture
+            video.playbackRate = 1.0;
             video.play().catch(e => console.error("Autoplay failed:", e));
             animationFrameId = requestAnimationFrame(processFrame);
         };
 
         video.addEventListener('loadedmetadata', handleLoadedMetadata);
+        window.addEventListener('resize', updateCanvasSize);
 
         return () => {
             video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+            window.removeEventListener('resize', updateCanvasSize);
             cancelAnimationFrame(animationFrameId);
-            // Cleanup bitmaps to free memory
             frames.forEach(frame => frame.close());
         };
     }, []);
