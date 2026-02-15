@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 @theme {
-  --color-brand-primary: #124e4b;
-  /* Dark teal for titles */
+  --color-brand-primary: #104239;
+  /* Deep Forest Green for Headings/Buttons */
   --color-brand-secondary: #00897b;
-  /* Medium teal for icons */
+  /* Medium Teal for Accents */
+  --color-brand-navy: #0f172a;
+  /* Navy for Text */
   --color-brand-light: #f8fafc;
-  /* Very light background */
   --color-brand-border: #e2e8f0;
   --font-sans: "Outfit", "Inter", "system-ui", "sans-serif";
 }

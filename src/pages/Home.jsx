@@ -113,64 +113,73 @@ const Home = () => {
                 {/* Canvas for Ping-Pong Loop */}
                 <canvas
                     ref={canvasRef}
-                    className="absolute inset-0 w-full h-full object-cover z-0 opacity-60"
+                    className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
                 />
 
-                {/* Light Overlay to ensure text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent z-10" />
+                {/* Heavy Light Overlay to ensure text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/70 z-10" />
 
                 <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div className="max-w-3xl space-y-8">
-                        {/* Badge */}
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
-                            <span className="w-2 h-2 rounded-full bg-brand-secondary"></span>
+                    <div className="max-w-3xl space-y-6">
+                        {/* Validation Badge */}
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
+                            <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
                             ERASMUS+ COOPERATION PARTNERSHIP
                         </div>
 
-                        {/* Title */}
-                        <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-brand-primary leading-[1.1] animate-fade-in-up delay-100">
-                            Learning Brains <br />
-                            <span className="text-brand-secondary">Real Skills for Real Industry</span>
-                        </h1>
+                        {/* Typography Block */}
+                        <div className="animate-fade-in-up delay-100">
+                            {/* Top Title - Navy */}
+                            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-2">
+                                Learning Brains
+                            </h2>
+                            {/* Main Headline - Green */}
+                            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-brand-primary leading-[1.1]">
+                                Real Skills for Real <br className="hidden md:block" />
+                                Industry
+                            </h1>
+                        </div>
 
                         {/* Subtitle */}
-                        <p className="text-xl text-slate-500 leading-relaxed max-w-xl animate-fade-in-up delay-200">
+                        <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-xl animate-fade-in-up delay-200">
                             Integrated On-the-job Learning Systems for Industrial Reskilling
                         </p>
 
                         {/* CTAs */}
-                        <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                        <div className="flex flex-wrap gap-4 pt-4 animate-fade-in-up delay-300">
                             <Link
                                 to={`/${i18n.language}/about`}
-                                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-secondary rounded-lg hover:bg-brand-secondary/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-secondary"
+                                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-200 bg-brand-primary rounded-lg hover:bg-brand-secondary hover:shadow-lg hover:shadow-teal-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
                             >
                                 {t('home.cta_primary')}
-                                <ArrowRight className="w-5 h-5 ml-2" />
+                                <ArrowRight className="w-4 h-4 ml-2" />
                             </Link>
                             <Link
                                 to={`/${i18n.language}/partners`}
-                                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 transition-all duration-200 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200"
+                                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-brand-navy transition-all duration-200 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm"
                             >
-                                <Users className="w-5 h-5 mr-2" />
+                                <Users className="w-4 h-4 mr-2" />
                                 {t('home.cta_secondary')}
                             </Link>
                         </div>
                     </div>
 
-                    {/* Bottom Stats (Integrated into Hero) */}
+                    {/* Bottom Stats - Grid with Dividers */}
                     <div className="absolute bottom-12 left-0 w-full px-4 sm:px-6 lg:px-8">
-                        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-12 border-t border-slate-200 pt-8 animate-fade-in-up delay-500">
-                            <div>
-                                <div className="text-lg font-bold text-brand-secondary">Erasmus+ KA220-VET</div>
-                                <div className="text-xs text-slate-400 uppercase tracking-widest">PROGRAMME</div>
-                            </div>
-                            <div>
-                                <div className="text-lg font-bold text-brand-secondary">24 Months</div>
-                                <div className="text-xs text-slate-400 uppercase tracking-widest">DURATION</div>
-                            </div>
-                            <div>
-                                <div className="text-lg font-bold text-brand-secondary">Industrial Reskilling</div>
-                                <div className="text-xs text-slate-400 uppercase tracking-widest">FOCUS</div>
+                        <div className="max-w-7xl mx-auto animate-fade-in-up delay-500">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 border-t border-slate-200/60 pt-8">
+                                <div className="pl-4 border-l-4 border-slate-100">
+                                    <div className="text-xl font-bold text-brand-navy">Erasmus+ KA220-VET</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">PROGRAMME</div>
+                                </div>
+                                <div className="pl-4 border-l-4 border-slate-100">
+                                    <div className="text-xl font-bold text-brand-navy">24 Months</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">DURATION</div>
+                                </div>
+                                <div className="pl-4 border-l-4 border-slate-100">
+                                    <div className="text-xl font-bold text-brand-navy">Industrial Reskilling</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">FOCUS</div>
+                                </div>
                             </div>
                         </div>
                     </div>
