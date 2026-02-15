@@ -67,6 +67,7 @@
         "chart_label_3": "Lerngeschwindigkeit",
         "hero_stats": {
             "programme": "PROGRAMM",
+            "programme_name": "Erasmus+ KA220-VET",
             "duration_value": "24 Monate",
             "duration_label": "DAUER",
             "focus_value": "Industrielle Umschulung",
@@ -253,6 +254,9 @@
         "section_project": "Projekt",
         "section_community": "Gemeinschaft",
         "section_legal": "Rechtliches",
+        "privacy": "Datenschutz",
+        "cookies": "Cookies",
+        "transparency": "Transparenz",
         "disclaimer": "Kofinanziert durch das Programm Erasmus+ der Europäischen Union. Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Diese Veröffentlichung [Mitteilung] spiegelt nur die Ansichten des Autors wider, und die Kommission kann nicht für eine Nutzung verantwortlich gemacht werden, die aus den darin enthaltenen Informationen gemacht werden könnte."
     }
 }

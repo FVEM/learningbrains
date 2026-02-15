@@ -67,6 +67,7 @@
         "chart_label_3": "Rýchlosť Učenia",
         "hero_stats": {
             "programme": "PROGRAM",
+            "programme_name": "Erasmus+ KA220-VET",
             "duration_value": "24 Mesiacov",
             "duration_label": "TRVANIE",
             "focus_value": "Priemyselná Rekvalifikácia",
@@ -253,6 +254,9 @@
         "section_project": "Projekt",
         "section_community": "Komunita",
         "section_legal": "Právne informácie",
+        "privacy": "Zásady ochrany osobných údajov",
+        "cookies": "Zásady používania súborov cookies",
+        "transparency": "Transparentnosť",
         "disclaimer": "Spolufinancované z programu Európskej únie Erasmus+. Tento projekt bol financovaný s podporou Európskej komisie. Táto publikácia [oznámenie] odráža iba názory autora a Komisia nemôže byť zodpovedná za akékoľvek použitie informácií v nej obsiahlitých."
     }
 }

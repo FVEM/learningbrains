@@ -14,7 +14,7 @@
     "seo_description": "Revolutionizing vocational education and training in the industrial sector through on-the-job learning and AI.",
     "hero_badge": "ERASMUS+ COOPERATION PARTNERSHIP",
     "hero_name": "Learning Brains",
-    "hero_title": "Real Skills for Real Industry",
+    "hero_title": "Real Skills for Real\nIndustry",
     "hero_subtitle": "Integrated On-the-job Learning Systems for Industrial Reskilling",
     "cta_primary": "Learn More",
     "cta_secondary": "Our Partners",
@@ -67,6 +67,7 @@
     "chart_label_3": "Skill Acquisition Speed",
     "hero_stats": {
       "programme": "PROGRAMME",
+      "programme_name": "Erasmus+ KA220-VET",
       "duration_value": "24 Months",
       "duration_label": "DURATION",
       "focus_value": "Industrial Reskilling",
@@ -253,6 +254,9 @@
     "section_project": "Project",
     "section_community": "Community",
     "section_legal": "Legal",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies Policy",
+    "transparency": "Transparency",
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   }
 }

@@ -67,6 +67,7 @@
         "chart_label_3": "Velocità di Apprendimento",
         "hero_stats": {
             "programme": "PROGRAMMA",
+            "programme_name": "Erasmus+ KA220-VET",
             "duration_value": "24 Mesi",
             "duration_label": "DURATA",
             "focus_value": "Riqualificazione Industriale",
@@ -253,6 +254,9 @@
         "section_project": "Progetto",
         "section_community": "Comunità",
         "section_legal": "Legale",
+        "privacy": "Informativa sulla Privacy",
+        "cookies": "Politica sui Cookie",
+        "transparency": "Trasparenza",
         "disclaimer": "Cofinanziato dal programma Erasmus+ dell'Unione Europea. Questo progetto è stato finanziato con il sostegno della Commissione Europea. Questa pubblicazione [comunicazione] riflette solo le opinioni dell'autore, e la Commissione non può essere ritenuta responsabile per qualsiasi uso che possa essere fatto delle informazioni ivi contenute."
     }
 }

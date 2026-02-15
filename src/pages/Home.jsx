@@ -130,8 +130,8 @@ const Home = () => {
                 {/* Light Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/40 to-transparent z-10" />
 
-                {/* Main Content Container - Positioned higher on page */}
-                <div className="relative z-20 flex-grow flex flex-col justify-start pt-12 md:pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
+                {/* Main Content Container - Positioned higher on page with fluid padding */}
+                <div className="relative z-20 flex-grow flex flex-col justify-start py-fluid-hero max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
                         {/* Validation Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
@@ -141,18 +141,18 @@ const Home = () => {
 
                         {/* Typography Block */}
                         <div className="mt-8 animate-fade-in-up delay-100">
-                            {/* Top Title - Navy Blue */}
-                            <h2 className="text-3xl md:text-4xl font-bold font-sans text-brand-title-blue mb-4">
+                            {/* Top Title - Navy Blue Fluid */}
+                            <h2 className="text-fluid-h2 font-bold font-sans text-brand-title-blue mb-4">
                                 {t('home.hero_name')}
                             </h2>
-                            {/* Main Headline - Green */}
-                            <h1 className="text-4xl md:text-6xl font-extrabold font-sans tracking-tight text-brand-primary leading-[1.1]">
+                            {/* Main Headline - Green Fluid */}
+                            <h1 className="text-fluid-h1 font-extrabold font-sans tracking-tight text-brand-primary whitespace-pre-line">
                                 {t('home.hero_title')}
                             </h1>
                         </div>
 
-                        {/* Subtitle */}
-                        <p className="mt-10 text-xl text-slate-500 font-medium leading-relaxed max-w-xl animate-fade-in-up delay-200">
+                        {/* Subtitle Fluid */}
+                        <p className="mt-10 text-fluid-p text-slate-500 font-medium max-w-xl animate-fade-in-up delay-200">
                             {t('home.hero_subtitle')}
                         </p>
 
@@ -173,117 +173,59 @@ const Home = () => {
                                 {t('home.cta_secondary')}
                             </Link>
                         </div>
-                    </div>
-                </div>
 
-                {/* Bottom Stats - Natural Flow (Not Absolute) */}
-                <div className="relative z-20 w-full bg-white/50 backdrop-blur-sm border-t border-slate-200/60">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in-up delay-500">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div className="pl-4 border-l-4 border-brand-primary/20">
-                                <div className="text-xl font-bold text-brand-navy">Erasmus+ KA220-VET</div>
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.programme')}</div>
-                            </div>
-                            <div className="pl-4 border-l-4 border-brand-primary/20">
-                                <div className="text-xl font-bold text-brand-navy">{t('home.hero_stats.duration_value')}</div>
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.duration_label')}</div>
-                            </div>
-                            <div className="pl-4 border-l-4 border-brand-primary/20">
-                                <div className="text-xl font-bold text-brand-navy">{t('home.hero_stats.focus_value')}</div>
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.focus_label')}</div>
+                        {/* Stats - Tighter spacing below CTAs */}
+                        <div className="mt-12 animate-fade-in-up delay-400">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div className="pl-4 border-l-2 border-brand-primary/20">
+                                    <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.programme_name')}</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.programme')}</div>
+                                </div>
+                                <div className="pl-4 border-l-2 border-brand-primary/20">
+                                    <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.duration_value')}</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.duration_label')}</div>
+                                </div>
+                                <div className="pl-4 border-l-2 border-brand-primary/20">
+                                    <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.focus_value')}</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.focus_label')}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* Project Consortium Logos */}
-            <section className="bg-white py-12 border-b border-slate-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-8">
-                        <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
-                            {t('home.consortium_title')}
-                        </h3>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-                        {/* FVEM */}
-                        <a
-                            href="https://www.fvem.es"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
-                        >
-                            <img
-                                src="/FVEM-EN.jpg"
-                                alt="FVEM"
-                                className="max-h-16 w-auto object-contain"
-                            />
-                        </a>
-                        {/* Media Creativa (Sociocreativo) */}
-                        <a
-                            href="https://mediacreativa.eu/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
-                        >
-                            <img
-                                src="/Media Creativa 2020.jpg"
-                                alt="Media Creativa"
-                                className="max-h-16 w-auto object-contain"
-                            />
-                        </a>
-                        {/* SBA */}
-                        <a
-                            href="https://www.sbagency.sk/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
-                        >
-                            <img
-                                src="/sba.jpg"
-                                alt="SBA"
-                                className="max-h-16 w-auto object-contain"
-                            />
-                        </a>
-                        {/* SPIN */}
-                        <a
-                            href="https://sparkling-intuition.eu/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
-                        >
-                            <img
-                                src="/SPIN logo large.png"
-                                alt="SPIN"
-                                className="max-h-16 w-auto object-contain"
-                            />
-                        </a>
-                        {/* Confindustria Veneto SIAV */}
-                        <a
-                            href="https://www.siav.net/wp/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
-                        >
-                            <img
-                                src="/Conf.Veneto SIAV logo.png"
-                                alt="Confindustria Veneto SIAV"
-                                className="max-h-16 w-auto object-contain"
-                            />
-                        </a>
-                        {/* Room 466 */}
-                        <a
-                            href="https://www.wko.at/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
-                        >
-                            <img
-                                src="/room-466-logo-blau-transparent-300dpi.png"
-                                alt="Room 466"
-                                className="max-h-16 w-auto object-contain"
-                            />
-                        </a>
+                        {/* Consortium Logos - Tighter spacing below Stats */}
+                        <div className="mt-12 animate-fade-in-up delay-500">
+                            <div className="text-left mb-5">
+                                <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
+                                    {t('home.consortium_title')}
+                                </h3>
+                            </div>
+                            <div className="flex flex-wrap gap-x-10 gap-y-6 items-center justify-start opacity-70">
+                                {/* FVEM */}
+                                <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" className="h-10 grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                    <img src="/FVEM-EN.jpg" alt="FVEM" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* Media Creativa */}
+                                <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" className="h-10 grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                    <img src="/Media Creativa 2020.jpg" alt="Media Creativa" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* SBA */}
+                                <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" className="h-10 grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                    <img src="/sba.jpg" alt="SBA" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* SPIN */}
+                                <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" className="h-10 grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                    <img src="/SPIN logo large.png" alt="SPIN" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* SIAV */}
+                                <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" className="h-10 grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                    <img src="/Conf.Veneto SIAV logo.png" alt="SIAV" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* Room 466 */}
+                                <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" className="h-10 grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                    <img src="/room-466-logo-blau-transparent-300dpi.png" alt="Room 466" className="h-full w-auto object-contain" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
