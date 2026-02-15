@@ -96,7 +96,7 @@ const Home = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative h-screen flex flex-col justify-center overflow-hidden bg-white">
+            <section className="relative min-h-screen flex flex-col overflow-hidden bg-white">
                 {/* Background Video (Hidden) */}
                 <video
                     ref={videoRef}
@@ -116,11 +116,12 @@ const Home = () => {
                     className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
                 />
 
-                {/* Heavy Light Overlay to ensure text contrast */}
+                {/* Light Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/70 z-10" />
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div className="max-w-3xl space-y-6">
+                {/* Main Content Container - Grows to fill space and centers content */}
+                <div className="relative z-20 flex-grow flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20 lg:py-32">
+                    <div className="max-w-3xl space-y-8">
                         {/* Validation Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
@@ -146,7 +147,7 @@ const Home = () => {
                         </p>
 
                         {/* CTAs */}
-                        <div className="flex flex-wrap gap-4 pt-4 animate-fade-in-up delay-300">
+                        <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
                             <Link
                                 to={`/${i18n.language}/about`}
                                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-200 bg-brand-primary rounded-lg hover:bg-brand-secondary hover:shadow-lg hover:shadow-teal-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
@@ -163,23 +164,23 @@ const Home = () => {
                             </Link>
                         </div>
                     </div>
+                </div>
 
-                    {/* Bottom Stats - Grid with Dividers */}
-                    <div className="absolute bottom-12 left-0 w-full px-4 sm:px-6 lg:px-8">
-                        <div className="max-w-7xl mx-auto animate-fade-in-up delay-500">
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 border-t border-slate-200/60 pt-8">
-                                <div className="pl-4 border-l-4 border-slate-100">
-                                    <div className="text-xl font-bold text-brand-navy">Erasmus+ KA220-VET</div>
-                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">PROGRAMME</div>
-                                </div>
-                                <div className="pl-4 border-l-4 border-slate-100">
-                                    <div className="text-xl font-bold text-brand-navy">24 Months</div>
-                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">DURATION</div>
-                                </div>
-                                <div className="pl-4 border-l-4 border-slate-100">
-                                    <div className="text-xl font-bold text-brand-navy">Industrial Reskilling</div>
-                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">FOCUS</div>
-                                </div>
+                {/* Bottom Stats - Natural Flow (Not Absolute) */}
+                <div className="relative z-20 w-full bg-white/50 backdrop-blur-sm border-t border-slate-200/60">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in-up delay-500">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="pl-4 border-l-4 border-brand-primary/20">
+                                <div className="text-xl font-bold text-brand-navy">Erasmus+ KA220-VET</div>
+                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">PROGRAMME</div>
+                            </div>
+                            <div className="pl-4 border-l-4 border-brand-primary/20">
+                                <div className="text-xl font-bold text-brand-navy">24 Months</div>
+                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">DURATION</div>
+                            </div>
+                            <div className="pl-4 border-l-4 border-brand-primary/20">
+                                <div className="text-xl font-bold text-brand-navy">Industrial Reskilling</div>
+                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">FOCUS</div>
                             </div>
                         </div>
                     </div>
