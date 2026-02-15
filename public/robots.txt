@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://learningbrains.vercel.app/sitemap.xml

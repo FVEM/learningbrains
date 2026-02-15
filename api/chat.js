@@ -1,17 +1,29 @@
-export default async function handler(request, response) {
-    if (request.method !== 'POST') {
-        return response.status(405).json({ error: 'Method Not Allowed' });
+
+export const config = {
+    runtime: 'edge',
+};
+
+export default async function handler(req) {
+    if (req.method !== 'POST') {
+        return new Response(JSON.stringify({ error: 'Method Not Allowed' }), {
+            status: 405,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 
     const apiKey = process.env.VITE_OPENAI_API_KEY;
 
     if (!apiKey) {
-        return response.status(500).json({ error: 'API Key missing on server' });
+        return new Response(JSON.stringify({ error: 'API Key missing on server' }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 
     try {
-        const { messages } = request.body;
+        const { messages } = await req.json();
 
+        // Forward request to OpenAI with streaming enabled
         const apiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -22,20 +34,32 @@ export default async function handler(request, response) {
                 model: 'gpt-4o-mini',
                 messages,
                 temperature: 0.7,
-                max_tokens: 150,
+                stream: true, // Enable streaming
             }),
         });
 
         if (!apiResponse.ok) {
-            const errorData = await apiResponse.json();
-            throw new Error(errorData.error?.message || 'API Error');
+            const errorText = await apiResponse.text();
+            return new Response(JSON.stringify({ error: `OpenAI API Error: ${errorText}` }), {
+                status: apiResponse.status,
+                headers: { 'Content-Type': 'application/json' }
+            });
         }
 
-        const data = await apiResponse.json();
-        return response.status(200).json(data);
+        // Return the stream directly
+        return new Response(apiResponse.body, {
+            headers: {
+                'Content-Type': 'text/event-stream',
+                'Cache-Control': 'no-cache',
+                'Connection': 'keep-alive',
+            },
+        });
 
     } catch (error) {
-        console.error('OpenAI API Error:', error);
-        return response.status(500).json({ error: 'Failed to fetch from OpenAI' });
+        console.error('API Error:', error);
+        return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 }

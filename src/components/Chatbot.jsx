@@ -54,21 +54,27 @@ Your goal is to help users understand the project, its partners, and the potenti
         if (!input.trim() || isLoading) return;
 
         const userMessage = { role: 'user', content: input };
-        const newMessages = [...messages, userMessage];
-        setMessages(newMessages);
+        // Use functional state update to ensure we have the latest messages
+        setMessages(prev => [...prev, userMessage]);
         setInput('');
         setIsLoading(true);
 
         try {
             const isDev = import.meta.env.DEV;
-            let aiContent = "";
+            let response;
+
+            const conversationHistory = [
+                { role: "system", content: SYSTEM_PROMPT },
+                ...messages.map(m => ({ role: m.role, content: m.content })),
+                userMessage
+            ];
 
             if (isDev) {
                 // Development Mode: Direct Call (Use Local .env)
                 const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
                 if (!apiKey) throw new Error("API Key missing");
 
-                const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                response = await fetch('https://api.openai.com/v1/chat/completions', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -76,55 +82,96 @@ Your goal is to help users understand the project, its partners, and the potenti
                     },
                     body: JSON.stringify({
                         model: "gpt-4o-mini",
-                        messages: [
-                            { role: "system", content: SYSTEM_PROMPT },
-                            ...newMessages.map(m => ({ role: m.role, content: m.content }))
-                        ],
+                        messages: conversationHistory,
                         temperature: 0.7,
-                        max_tokens: 150
+                        max_tokens: 300,
+                        stream: true // Enable direct streaming
                     })
                 });
-
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.error?.message || 'API Error');
-                }
-                const data = await response.json();
-                aiContent = data.choices[0].message.content;
-
             } else {
-                // Production Mode: Secure Proxy Call (No API Key Exposed)
-                const response = await fetch('/api/chat', {
+                // Production Mode: Secure Proxy Call
+                // The /api/chat endpoint is configured to return a stream
+                response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        messages: [
-                            { role: "system", content: SYSTEM_PROMPT },
-                            ...newMessages.map(m => ({ role: m.role, content: m.content }))
-                        ]
+                        messages: conversationHistory
                     })
                 });
-
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.error?.message || 'API Error');
-                }
-                const data = await response.json();
-                aiContent = data.choices[0].message.content;
             }
 
-            setMessages(prev => [...prev, { role: 'assistant', content: aiContent }]);
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error?.message || 'API Error');
+            }
+
+            // Stop loading spinner and start streaming
+            setIsLoading(false);
+
+            // Add initial empty assistant message
+            setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
+
+            // Stream processing
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder("utf-8");
+            let buffer = '';
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                // Decode chunk and add to buffer
+                buffer += decoder.decode(value, { stream: true });
+
+                // Process complete lines
+                const lines = buffer.split('\n');
+                // Keep the last line in buffer if it's incomplete
+                buffer = lines.pop() || '';
+
+                for (const line of lines) {
+                    const trimmedLine = line.trim();
+                    if (!trimmedLine || trimmedLine === 'data: [DONE]') continue;
+
+                    if (trimmedLine.startsWith('data: ')) {
+                        try {
+                            const data = JSON.parse(trimmedLine.slice(6));
+                            const content = data.choices[0]?.delta?.content || '';
+
+                            if (content) {
+                                setMessages(prev => {
+                                    const newMsgs = [...prev];
+                                    const lastMsg = newMsgs[newMsgs.length - 1];
+                                    // Update the last message content
+                                    return [
+                                        ...newMsgs.slice(0, -1),
+                                        { ...lastMsg, content: lastMsg.content + content }
+                                    ];
+                                });
+                            }
+                        } catch (e) {
+                            console.error("Error parsing stream chunk", e);
+                        }
+                    }
+                }
+            }
+
         } catch (error) {
             console.error("Error calling AI agent:", error);
-            let errorMessage = "Sorry, I encountered an error connectig to the AI.";
+            setIsLoading(false);
 
+            let errorMessage = "Sorry, I encountered an error connecting to the AI.";
             if (error.message === "API Key missing") {
                 errorMessage = "⚠️ OpenAI API Key is missing. Please add VITE_OPENAI_API_KEY to your .env file.";
             }
 
-            setMessages(prev => [...prev, { role: 'assistant', content: errorMessage }]);
-        } finally {
-            setIsLoading(false);
+            // If we already added an empty assistant message, update it. Otherwise add new one.
+            setMessages(prev => {
+                const lastMsg = prev[prev.length - 1];
+                if (lastMsg.role === 'assistant' && lastMsg.content === '') {
+                    return [...prev.slice(0, -1), { role: 'assistant', content: errorMessage }];
+                }
+                return [...prev, { role: 'assistant', content: errorMessage }];
+            });
         }
     };
 
