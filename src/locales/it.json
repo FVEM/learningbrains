@@ -12,11 +12,10 @@
     "home": {
         "seo_title": "Learning Brains - IA per la formazione professionale",
         "seo_description": "Rivoluzionare l'istruzione e la formazione professionale nel settore industriale attraverso l'apprendimento sul lavoro e l'IA.",
-        "hero_badge": "Progetto Erasmus+",
-        "hero_title_1": "Riqualificare la",
-        "hero_title_highlight": "Forza Lavoro Industriale",
-        "hero_title_2": "con IA e OJL",
-        "hero_subtitle": "Potenziare i fornitori di formazione professionale e le PMI manifatturiere con metodologie innovative di apprendimento sul lavoro supportate dall'Intelligenza Artificiale.",
+        "hero_badge": "PARTNERSHIP DI COOPERAZIONE ERASMUS+",
+        "hero_name": "Learning Brains",
+        "hero_title": "Competenze Reali per l'Industria Reale",
+        "hero_subtitle": "Sistemi Integrati di Apprendimento sul Lavoro per la Riqualificazione Industriale",
         "cta_primary": "Scopri di più",
         "cta_secondary": "I Nostri Partner",
         "partners_count": "6 Partner Strategici",
@@ -65,7 +64,36 @@
         "impact_point_3": "Legami Industria-Istruzione Più Forti",
         "chart_label_1": "Adattabilità",
         "chart_label_2": "Efficienza Formativa",
-        "chart_label_3": "Velocità di Apprendimento"
+        "chart_label_3": "Velocità di Apprendimento",
+        "hero_stats": {
+            "programme": "PROGRAMMA",
+            "duration_value": "24 Mesi",
+            "duration_label": "DURATA",
+            "focus_value": "Riqualificazione Industriale",
+            "focus_label": "FOCUS"
+        },
+        "consortium_title": "Consorzio del Progetto",
+        "latest_updates": {
+            "title": "Ultimi Aggiornamenti",
+            "description": "Pietre miliari, eventi e risultati del progetto Learning Brains.",
+            "view_all": "Vedi tutte le notizie",
+            "coming_soon": "Prossimamente",
+            "news_1": {
+                "badge": "Incontro",
+                "date": "Feb 2026 · Bilbao, Spagna",
+                "title": "Incontro di Avvio del Progetto",
+                "description": "I partner si sono riuniti per la prima volta presso la sede di FVEM per discutere la tabella di marcia del progetto.",
+                "link": "Leggi su LinkedIn"
+            },
+            "news_2": {
+                "title": "Metodologia del Consorzio",
+                "description": "Sviluppo del quadro centrale per la riqualificazione industriale e l'apprendimento sul lavoro."
+            },
+            "news_3": {
+                "title": "Ricerca Strumenti IA",
+                "description": "Analisi delle applicazioni IA all'avanguardia per gli ambienti di formazione professionale."
+            }
+        }
     },
     "about": {
         "seo_title": "Informazioni sul Progetto",
@@ -221,6 +249,10 @@
         }
     },
     "footer": {
+        "description": "Sistemi integrati di apprendimento sul lavoro per la riqualificazione industriale. Colmare il divario tra teoria e pratica industriale.",
+        "section_project": "Progetto",
+        "section_community": "Comunità",
+        "section_legal": "Legale",
         "disclaimer": "Cofinanziato dal programma Erasmus+ dell'Unione Europea. Questo progetto è stato finanziato con il sostegno della Commissione Europea. Questa pubblicazione [comunicazione] riflette solo le opinioni dell'autore, e la Commissione non può essere ritenuta responsabile per qualsiasi uso che possa essere fatto delle informazioni ivi contenute."
     }
 }

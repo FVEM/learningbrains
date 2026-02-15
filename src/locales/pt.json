@@ -12,11 +12,10 @@
     "home": {
         "seo_title": "Learning Brains - IA para EFP",
         "seo_description": "Revolucionando o ensino e a formação profissional no setor industrial através da aprendizagem no local de trabalho e IA.",
-        "hero_badge": "Projeto Erasmus+",
-        "hero_title_1": "Requalificar a",
-        "hero_title_highlight": "Força de Trabalho Industrial",
-        "hero_title_2": "com IA e OJL",
-        "hero_subtitle": "Capacitar prestadores de EFP e PME industriais com metodologias inovadoras de aprendizagem no local de trabalho apoiadas por Inteligência Artificial.",
+        "hero_badge": "PARCERIA DE COOPERAÇÃO ERASMUS+",
+        "hero_name": "Learning Brains",
+        "hero_title": "Competências Reais para a Indústria Real",
+        "hero_subtitle": "Sistemas Integrados de Aprendizagem no Local de Trabalho para a Requalificação Industrial",
         "cta_primary": "Saber Mais",
         "cta_secondary": "Nossos Parceiros",
         "partners_count": "6 Parceiros Estratégicos",
@@ -65,7 +64,36 @@
         "impact_point_3": "Ligações Indústria-Educação Mais Fortes",
         "chart_label_1": "Adaptabilidade",
         "chart_label_2": "Eficiência da Formação",
-        "chart_label_3": "Velocidade de Aprendizagem"
+        "chart_label_3": "Velocidade de Aprendizagem",
+        "hero_stats": {
+            "programme": "PROGRAMA",
+            "duration_value": "24 Meses",
+            "duration_label": "DURAÇÃO",
+            "focus_value": "Requalificação Industrial",
+            "focus_label": "FOCO"
+        },
+        "consortium_title": "Consórcio do Projeto",
+        "latest_updates": {
+            "title": "Últimas Atualizações",
+            "description": "Marcos, eventos e resultados do projeto Learning Brains.",
+            "view_all": "Ver todas as notícias",
+            "coming_soon": "Em breve",
+            "news_1": {
+                "badge": "Reunião",
+                "date": "Fev 2026 · Bilbau, Espanha",
+                "title": "Reunião de Lançamento do Projeto",
+                "description": "Os parceiros reuniram-se pela primeira vez na sede da FVEM para discutir o cronograma do projeto.",
+                "link": "Ler no LinkedIn"
+            },
+            "news_2": {
+                "title": "Metodologia do Consórcio",
+                "description": "Desenvolvimento da estrutura central para a requalificação industrial e aprendizagem no local de trabalho."
+            },
+            "news_3": {
+                "title": "Investigação de Ferramentas de IA",
+                "description": "Análise de aplicações de IA de última geração para ambientes de formação profissional."
+            }
+        }
     },
     "about": {
         "seo_title": "Sobre o Projeto",
@@ -221,6 +249,10 @@
         }
     },
     "footer": {
+        "description": "Sistemas integrados de aprendizagem no local de trabalho para a requalificação industrial. Colmatar a lacuna entre a teoria e a prática industrial.",
+        "section_project": "Projeto",
+        "section_community": "Comunidade",
+        "section_legal": "Legal",
         "disclaimer": "Cofinanciado pelo Programa Erasmus+ da União Europeia. Este projeto foi financiado com o apoio da Comissão Europeia. Esta publicação [comunicação] reflete apenas as opiniões do autor, e a Comissão não pode ser responsabilizada por qualquer uso que possa ser feito das informações nela contidas."
     }
 }

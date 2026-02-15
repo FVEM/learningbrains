@@ -12,11 +12,10 @@
   "home": {
     "seo_title": "Learning Brains - AI for VET",
     "seo_description": "Revolutionizing vocational education and training in the industrial sector through on-the-job learning and AI.",
-    "hero_badge": "Erasmus+ Project",
-    "hero_title_1": "Reskilling the",
-    "hero_title_highlight": "Industrial Workforce",
-    "hero_title_2": "with AI & OJL",
-    "hero_subtitle": "Empowering VET providers and manufacturing SMEs with innovative on-the-job learning methodologies supported by Artificial Intelligence.",
+    "hero_badge": "ERASMUS+ COOPERATION PARTNERSHIP",
+    "hero_name": "Learning Brains",
+    "hero_title": "Real Skills for Real Industry",
+    "hero_subtitle": "Integrated On-the-job Learning Systems for Industrial Reskilling",
     "cta_primary": "Learn More",
     "cta_secondary": "Our Partners",
     "partners_count": "6 Strategic Partners",
@@ -65,7 +64,36 @@
     "impact_point_3": "Stronger Industry-Education Linkages",
     "chart_label_1": "Workforce Adaptability",
     "chart_label_2": "Training Efficiency",
-    "chart_label_3": "Skill Acquisition Speed"
+    "chart_label_3": "Skill Acquisition Speed",
+    "hero_stats": {
+      "programme": "PROGRAMME",
+      "duration_value": "24 Months",
+      "duration_label": "DURATION",
+      "focus_value": "Industrial Reskilling",
+      "focus_label": "FOCUS"
+    },
+    "consortium_title": "Project Consortium",
+    "latest_updates": {
+      "title": "Latest Updates",
+      "description": "Milestones, events, and results from the Learning Brains project.",
+      "view_all": "View All News",
+      "coming_soon": "Coming Soon",
+      "news_1": {
+        "badge": "Meeting",
+        "date": "Feb 2026 · Bilbao, Spain",
+        "title": "Project Kick-off Meeting",
+        "description": "The partners met for the first time at the FVEM headquarters to discuss the project timeline.",
+        "link": "Read on LinkedIn"
+      },
+      "news_2": {
+        "title": "Consortium Methodology",
+        "description": "Developing the core framework for industrial reskilling and on-the-job learning."
+      },
+      "news_3": {
+        "title": "AI Tools Research",
+        "description": "Analyzing state-of-the-art AI applications for vocational training environments."
+      }
+    }
   },
   "about": {
     "seo_title": "About the Project",
@@ -221,6 +249,10 @@
     }
   },
   "footer": {
+    "description": "Integrated On-the-job Learning Systems for Industrial Reskilling. Bridging the gap between theory and industrial practice.",
+    "section_project": "Project",
+    "section_community": "Community",
+    "section_legal": "Legal",
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   }
 }

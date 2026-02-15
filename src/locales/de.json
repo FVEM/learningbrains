@@ -12,11 +12,10 @@
     "home": {
         "seo_title": "Learning Brains - KI für die Berufsbildung",
         "seo_description": "Revolutionierung der beruflichen Bildung im Industriesektor durch Lernen am Arbeitsplatz und KI.",
-        "hero_badge": "Erasmus+ Projekt",
-        "hero_title_1": "Umschulung der",
-        "hero_title_highlight": "Industriellen Belegschaft",
-        "hero_title_2": "mit KI & OJL",
-        "hero_subtitle": "Stärkung von Berufsbildungsanbietern und KMUs im Fertigungsbereich durch innovative Methoden des Lernens am Arbeitsplatz, unterstützt durch künstliche Intelligenz.",
+        "hero_badge": "ERASMUS+ KOOPERATIONSPARTNERSCHAFT",
+        "hero_name": "Learning Brains",
+        "hero_title": "Echte Fähigkeiten für die echte Industrie",
+        "hero_subtitle": "Integrierte Systeme für das Lernen am Arbeitsplatz zur industriellen Umschulung",
         "cta_primary": "Mehr erfahren",
         "cta_secondary": "Unsere Partner",
         "partners_count": "6 Strategische Partner",
@@ -65,7 +64,36 @@
         "impact_point_3": "Stärkere Verbindungen zwischen Industrie und Bildung",
         "chart_label_1": "Anpassungsfähigkeit",
         "chart_label_2": "Ausbildungseffizienz",
-        "chart_label_3": "Lerngeschwindigkeit"
+        "chart_label_3": "Lerngeschwindigkeit",
+        "hero_stats": {
+            "programme": "PROGRAMM",
+            "duration_value": "24 Monate",
+            "duration_label": "DAUER",
+            "focus_value": "Industrielle Umschulung",
+            "focus_label": "FOKUS"
+        },
+        "consortium_title": "Projektkonsortium",
+        "latest_updates": {
+            "title": "Aktuelle Updates",
+            "description": "Meilensteine, Veranstaltungen und Ergebnisse des Projekts Learning Brains.",
+            "view_all": "Alle Nachrichten anzeigen",
+            "coming_soon": "In Kürze",
+            "news_1": {
+                "badge": "Treffen",
+                "date": "Feb 2026 · Bilbao, Spanien",
+                "title": "Projekt-Auftaktreffen",
+                "description": "Die Partner trafen sich zum ersten Mal in der FVEM-Zentrale, um den Zeitplan des Projekts zu besprechen.",
+                "link": "Auf LinkedIn lesen"
+            },
+            "news_2": {
+                "title": "Konsortialmethodik",
+                "description": "Entwicklung des Kernrahmens für industrielle Umschulung und Lernen am Arbeitsplatz."
+            },
+            "news_3": {
+                "title": "KI-Tools Forschung",
+                "description": "Analyse modernster KI-Anwendungen für berufliche Bildungsumgebungen."
+            }
+        }
     },
     "about": {
         "seo_title": "Über das Projekt",
@@ -221,6 +249,10 @@
         }
     },
     "footer": {
+        "description": "Integrierte Systeme für das Lernen am Arbeitsplatz zur industriellen Umschulung. Überbrückung der Kluft zwischen Theorie und industrieller Praxis.",
+        "section_project": "Projekt",
+        "section_community": "Gemeinschaft",
+        "section_legal": "Rechtliches",
         "disclaimer": "Kofinanziert durch das Programm Erasmus+ der Europäischen Union. Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Diese Veröffentlichung [Mitteilung] spiegelt nur die Ansichten des Autors wider, und die Kommission kann nicht für eine Nutzung verantwortlich gemacht werden, die aus den darin enthaltenen Informationen gemacht werden könnte."
     }
 }

@@ -9,14 +9,14 @@ const Footer = () => {
 
     const sections = [
         {
-            title: "Project",
+            title: t('footer.section_project'),
             links: [
                 { name: t('nav.about'), path: '/about' },
                 { name: t('nav.results'), path: '/results' },
             ]
         },
         {
-            title: "Community",
+            title: t('footer.section_community'),
             links: [
                 { name: t('nav.partners'), path: '/partners' },
                 { name: t('nav.news'), path: '/news' },
@@ -24,7 +24,7 @@ const Footer = () => {
             ]
         },
         {
-            title: "Legal",
+            title: t('footer.section_legal'),
             links: [
                 { name: "Privacy Policy", path: '#' },
                 { name: "Cookies", path: '#' },
@@ -43,8 +43,7 @@ const Footer = () => {
                             <img src={logo} alt="Learning Brains" className="h-12 w-auto" />
                         </Link>
                         <p className="text-slate-500 text-[15px] leading-relaxed mb-8 max-w-sm font-normal">
-                            Integrated On-the-job Learning Systems for Industrial Reskilling.
-                            Bridging the gap between theory and industrial practice.
+                            {t('footer.description')}
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-primary-green hover:bg-teal-50 transition-all">

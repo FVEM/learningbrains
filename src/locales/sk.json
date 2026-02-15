@@ -12,11 +12,10 @@
     "home": {
         "seo_title": "Learning Brains - UI pre OVP",
         "seo_description": "Revolúcia v odbornom vzdelávaní a príprave v priemyselnom sektore prostredníctvom učenia sa na pracovisku a UI.",
-        "hero_badge": "Projekt Erasmus+",
-        "hero_title_1": "Rekvalifikácia",
-        "hero_title_highlight": "Priemyselnej Pracovnej Sily",
-        "hero_title_2": "s UI a OJL",
-        "hero_subtitle": "Posilnenie poskytovateľov OVP a výrobných MSP inovatívnymi metodikami učenia sa na pracovisku podporovanými umelou inteligenciou.",
+        "hero_badge": "PARTNERSTVO ERASMUS+ V OBLASTI SPOLUPRÁCE",
+        "hero_name": "Learning Brains",
+        "hero_title": "Skutočné Zručnosti pre Skutočný Priemysel",
+        "hero_subtitle": "Integrované systémy učenia sa na pracovisku pre priemyselnú rekvalifikáciu",
         "cta_primary": "Zistiť viac",
         "cta_secondary": "Naši Partneri",
         "partners_count": "6 Strategických Partnerov",
@@ -65,7 +64,36 @@
         "impact_point_3": "Silnejšie Prepojenie Priemyslu a Vzdelávania",
         "chart_label_1": "Adaptabilita",
         "chart_label_2": "Efektivita Školenia",
-        "chart_label_3": "Rýchlosť Učenia"
+        "chart_label_3": "Rýchlosť Učenia",
+        "hero_stats": {
+            "programme": "PROGRAM",
+            "duration_value": "24 Mesiacov",
+            "duration_label": "TRVANIE",
+            "focus_value": "Priemyselná Rekvalifikácia",
+            "focus_label": "ZAMERANIE"
+        },
+        "consortium_title": "Konzorcium Projektu",
+        "latest_updates": {
+            "title": "Najnovšie Aktuality",
+            "description": "Míľniky, udalosti a výsledky projektu Learning Brains.",
+            "view_all": "Zobraziť všetky novinky",
+            "coming_soon": "Už čoskoro",
+            "news_1": {
+                "badge": "Stretnutie",
+                "date": "Feb 2026 · Bilbao, Španielsko",
+                "title": "Úvodné Stretnutie Projektu",
+                "description": "Partneri sa prvýkrát stretli v sídle FVEM, aby diskutovali o časovom harmonograme projektu.",
+                "link": "Čítať na LinkedIn"
+            },
+            "news_2": {
+                "title": "Metodika Konzorcia",
+                "description": "Vývoj hlavného rámca pre priemyselnú rekvalifikáciu a učenie sa na pracovisku."
+            },
+            "news_3": {
+                "title": "Výskum UI Nástrojov",
+                "description": "Analýza najmodernejších aplikácií UI pre prostredia odborného vzdelávania."
+            }
+        }
     },
     "about": {
         "seo_title": "O Projekte",
@@ -221,6 +249,10 @@
         }
     },
     "footer": {
-        "disclaimer": "Spolufinancované z programu Európskej únie Erasmus+. Tento projekt bol financovaný s podporou Európskej komisie. Táto publikácia [oznámenie] odráža iba názory autora a Komisia nemôže byť zodpovedná za akékoľvek použitie informácií v nej obsiahnutých."
+        "description": "Integrované systémy učenia sa na pracovisku pre priemyselnú rekvalifikáciu. Premostenie priepasti medzi teóriou a priemyselnou praxou.",
+        "section_project": "Projekt",
+        "section_community": "Komunita",
+        "section_legal": "Právne informácie",
+        "disclaimer": "Spolufinancované z programu Európskej únie Erasmus+. Tento projekt bol financovaný s podporou Európskej komisie. Táto publikácia [oznámenie] odráža iba názory autora a Komisia nemôže byť zodpovedná za akékoľvek použitie informácií v nej obsiahlitých."
     }
 }

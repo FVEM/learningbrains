@@ -136,25 +136,24 @@ const Home = () => {
                         {/* Validation Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-                            ERASMUS+ COOPERATION PARTNERSHIP
+                            {t('home.hero_badge')}
                         </div>
 
                         {/* Typography Block */}
                         <div className="mt-8 animate-fade-in-up delay-100">
                             {/* Top Title - Navy Blue */}
                             <h2 className="text-3xl md:text-4xl font-bold font-sans text-brand-title-blue mb-4">
-                                Learning Brains
+                                {t('home.hero_name')}
                             </h2>
                             {/* Main Headline - Green */}
                             <h1 className="text-4xl md:text-6xl font-extrabold font-sans tracking-tight text-brand-primary leading-[1.1]">
-                                Real Skills for Real <br className="hidden md:block" />
-                                Industry
+                                {t('home.hero_title')}
                             </h1>
                         </div>
 
                         {/* Subtitle */}
                         <p className="mt-10 text-xl text-slate-500 font-medium leading-relaxed max-w-xl animate-fade-in-up delay-200">
-                            Integrated On-the-job Learning Systems for Industrial Reskilling
+                            {t('home.hero_subtitle')}
                         </p>
 
                         {/* CTAs */}
@@ -183,15 +182,15 @@ const Home = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="pl-4 border-l-4 border-brand-primary/20">
                                 <div className="text-xl font-bold text-brand-navy">Erasmus+ KA220-VET</div>
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">PROGRAMME</div>
+                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.programme')}</div>
                             </div>
                             <div className="pl-4 border-l-4 border-brand-primary/20">
-                                <div className="text-xl font-bold text-brand-navy">24 Months</div>
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">DURATION</div>
+                                <div className="text-xl font-bold text-brand-navy">{t('home.hero_stats.duration_value')}</div>
+                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.duration_label')}</div>
                             </div>
                             <div className="pl-4 border-l-4 border-brand-primary/20">
-                                <div className="text-xl font-bold text-brand-navy">Industrial Reskilling</div>
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">FOCUS</div>
+                                <div className="text-xl font-bold text-brand-navy">{t('home.hero_stats.focus_value')}</div>
+                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.focus_label')}</div>
                             </div>
                         </div>
                     </div>
@@ -203,7 +202,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-8">
                         <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
-                            Project Consortium
+                            {t('home.consortium_title')}
                         </h3>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
@@ -294,14 +293,14 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-end mb-12">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Latest Updates</h2>
-                            <p className="text-slate-500">Milestones, events, and results from the Learning Brains project.</p>
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{t('home.latest_updates.title')}</h2>
+                            <p className="text-slate-500">{t('home.latest_updates.description')}</p>
                         </div>
                         <Link
                             to={`/${i18n.language}/news`}
                             className="hidden md:inline-flex items-center text-slate-900 font-semibold hover:text-brand-primary transition-colors"
                         >
-                            View All News
+                            {t('home.latest_updates.view_all')}
                             <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>
                     </div>
@@ -312,26 +311,26 @@ const Home = () => {
                             <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
                                 <img
                                     src="/News/kickoff-meeting-ai.png"
-                                    alt="Project Kick-off Meeting"
+                                    alt={t('home.latest_updates.news_1.title')}
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-slate-700 uppercase tracking-wider">
-                                    Meeting
+                                    {t('home.latest_updates.news_1.badge')}
                                 </div>
                             </div>
                             <div className="p-6">
-                                <div className="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-3">Feb 2026 · Bilbao, Spain</div>
+                                <div className="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-3">{t('home.latest_updates.news_1.date')}</div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                                    Project Kick-off Meeting
+                                    {t('home.latest_updates.news_1.title')}
                                 </h3>
                                 <p className="text-slate-500 text-sm leading-relaxed mb-4">
-                                    The partners met for the first time at the FVEM headquarters to discuss the project timeline.
+                                    {t('home.latest_updates.news_1.description')}
                                 </p>
                                 <a
                                     href="#"
                                     className="inline-flex items-center text-slate-900 font-semibold text-sm hover:text-brand-primary transition-colors"
                                 >
-                                    Read on LinkedIn
+                                    {t('home.latest_updates.news_1.link')}
                                     <ArrowRight className="w-3 h-3 ml-2" />
                                 </a>
                             </div>
@@ -345,12 +344,12 @@ const Home = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                     </svg>
                                 </div>
-                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">Coming Soon</div>
+                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">{t('home.latest_updates.coming_soon')}</div>
                                 <h3 className="text-xl font-bold text-slate-300 mb-3">
-                                    Consortium Methodology
+                                    {t('home.latest_updates.news_2.title')}
                                 </h3>
                                 <p className="text-slate-300 text-sm leading-relaxed">
-                                    Developing the core framework for industrial reskilling and on-the-job learning.
+                                    {t('home.latest_updates.news_2.description')}
                                 </p>
                             </div>
                         </div>
@@ -363,12 +362,12 @@ const Home = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
                                 </div>
-                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">Coming Soon</div>
+                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">{t('home.latest_updates.coming_soon')}</div>
                                 <h3 className="text-xl font-bold text-slate-300 mb-3">
-                                    AI Tools Research
+                                    {t('home.latest_updates.news_3.title')}
                                 </h3>
                                 <p className="text-slate-300 text-sm leading-relaxed">
-                                    Analyzing state-of-the-art AI applications for vocational training environments.
+                                    {t('home.latest_updates.news_3.description')}
                                 </p>
                             </div>
                         </div>
