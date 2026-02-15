@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useRef, useEffect, useState } from 'react';
-import { ArrowRight, Users, Cpu, Rocket, BrainCircuit, TrendingUp, Zap, Lightbulb, Target, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
@@ -97,9 +97,6 @@ const Home = () => {
             frames.forEach(frame => frame.close());
         };
     }, []);
-
-    const stats = t('home.stats', { returnObjects: true });
-    const features = t('home.features', { returnObjects: true });
 
     return (
         <div className="bg-white font-body text-slate-600">
@@ -288,96 +285,6 @@ const Home = () => {
                                 className="max-h-16 w-auto object-contain"
                             />
                         </a>
-                    </div>
-                </div>
-            </section>
-
-            {/* Features / Pillars */}
-            <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-20">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
-                            <Lightbulb className="w-3 h-3" />
-                            {t('home.pillars_badge')}
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{t('home.pillars_title')}</h2>
-                        <p className="text-slate-500 text-lg leading-relaxed">
-                            {t('home.pillars_subtitle')}
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {features.map((feature, idx) => {
-                            const icons = [BrainCircuit, Target, Users];
-                            const Icon = icons[idx] || Lightbulb;
-                            return (
-                                <div key={idx} className="group p-8 rounded-3xl bg-slate-50 hover:bg-white border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
-                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                        <Icon className="w-7 h-7 text-brand-primary" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
-                                    <p className="text-slate-500 leading-relaxed">
-                                        {feature.desc}
-                                    </p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            {/* Impact Preview */}
-            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-secondary/20 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
-                                <TrendingUp className="w-3 h-3" />
-                                {t('home.impact_badge')}
-                            </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('home.impact_title')}</h2>
-                            <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                                {t('home.impact_text')}
-                            </p>
-                            <ul className="space-y-4 mb-10">
-                                {[1, 2, 3].map((item) => (
-                                    <li key={item} className="flex items-center gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-brand-secondary flex-shrink-0" />
-                                        <span className="text-slate-300">{t(`home.impact_point_${item}`)}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                            <Link
-                                to={`/${i18n.language}/impact`}
-                                className="inline-flex items-center text-white font-bold hover:text-brand-secondary transition-colors"
-                            >
-                                {t('home.impact_cta')}
-                                <ArrowRight className="w-5 h-5 ml-2" />
-                            </Link>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/20 to-brand-primary/20 blur-3xl rounded-full"></div>
-                            <div className="relative bg-slate-800 border border-slate-700 rounded-3xl p-8 shadow-2xl">
-                                {/* Simplified Graph/Chart Visualization */}
-                                <div className="space-y-6">
-                                    {[1, 2, 3].map((val, i) => (
-                                        <div key={i} className="space-y-2">
-                                            <div className="flex justify-between text-sm font-medium text-slate-400">
-                                                <span>{t(`home.chart_label_${val}`)}</span>
-                                                <span className="text-white">{85 + (i * 5)}%</span>
-                                            </div>
-                                            <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                                <div
-                                                    className="h-full bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"
-                                                    style={{ width: `${85 + (i * 5)}%` }}
-                                                ></div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
