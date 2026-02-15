@@ -187,6 +187,67 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Project Consortium Logos */}
+            <section className="bg-gradient-to-b from-slate-50 to-white py-12 border-b border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-8">
+                        <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
+                            Project Consortium
+                        </h3>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                        {/* FVEM */}
+                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <img
+                                src="/FVEM-EN.jpg"
+                                alt="FVEM"
+                                className="max-h-12 w-auto object-contain"
+                            />
+                        </div>
+                        {/* Media Creativa (Sociocreativo) */}
+                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <img
+                                src="/Media Creativa 2020.jpg"
+                                alt="Media Creativa"
+                                className="max-h-12 w-auto object-contain"
+                            />
+                        </div>
+                        {/* SBA */}
+                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <img
+                                src="/sba.jpg"
+                                alt="SBA"
+                                className="max-h-12 w-auto object-contain"
+                            />
+                        </div>
+                        {/* SPIN */}
+                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <img
+                                src="/SPIN logo large.png"
+                                alt="SPIN"
+                                className="max-h-12 w-auto object-contain"
+                            />
+                        </div>
+                        {/* Confindustria Veneto SIAV */}
+                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <img
+                                src="/Conf.Veneto SIAV logo.png"
+                                alt="Confindustria Veneto SIAV"
+                                className="max-h-12 w-auto object-contain"
+                            />
+                        </div>
+                        {/* Room 466 */}
+                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <img
+                                src="/room-466-logo-blau-transparent-300dpi.png"
+                                alt="Room 466"
+                                className="max-h-12 w-auto object-contain"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Stats Section */}
             <section className="bg-white py-12 border-b border-slate-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
