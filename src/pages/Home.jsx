@@ -188,7 +188,7 @@ const Home = () => {
             </section>
 
             {/* Project Consortium Logos */}
-            <section className="bg-gradient-to-b from-slate-50 to-white py-12 border-b border-slate-100">
+            <section className="bg-white py-12 border-b border-slate-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-8">
                         <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
