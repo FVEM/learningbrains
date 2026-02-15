@@ -4,24 +4,207 @@
         "about": "Das Projekt",
         "results": "Ergebnisse",
         "partners": "Partner",
-        "news": "Neuigkeiten & Veranstaltungen",
+        "news": "Aktuelles & Events",
         "resources": "Ressourcen",
-        "impact": "Verbreitung & Wirkung",
+        "impact": "Verbreitung & Auswirkungen",
         "contact": "Kontakt"
     },
     "home": {
-        "hero_title": "Echte Fähigkeiten für eine echte Industrie",
-        "hero_subtitle": "Integrierte On-the-job-Lernsysteme für die industrielle Umschulung",
-        "cta": "Mehr erfahren"
+        "seo_title": "Learning Brains - KI für die Berufsbildung",
+        "seo_description": "Revolutionierung der beruflichen Bildung im Industriesektor durch Lernen am Arbeitsplatz und KI.",
+        "hero_badge": "Erasmus+ Projekt",
+        "hero_title_1": "Umschulung der",
+        "hero_title_highlight": "Industriellen Belegschaft",
+        "hero_title_2": "mit KI & OJL",
+        "hero_subtitle": "Stärkung von Berufsbildungsanbietern und KMUs im Fertigungsbereich durch innovative Methoden des Lernens am Arbeitsplatz, unterstützt durch künstliche Intelligenz.",
+        "cta_primary": "Mehr erfahren",
+        "cta_secondary": "Unsere Partner",
+        "partners_count": "6 Strategische Partner",
+        "partners_text": "In 5 Europäischen Ländern",
+        "stats": [
+            {
+                "value": "6",
+                "label": "Partner"
+            },
+            {
+                "value": "5",
+                "label": "Länder"
+            },
+            {
+                "value": "24",
+                "label": "Monate"
+            },
+            {
+                "value": "3",
+                "label": "Ergebnisse"
+            }
+        ],
+        "pillars_badge": "Kernpfeiler",
+        "pillars_title": "Innovation von Berufsbildungssystemen",
+        "pillars_subtitle": "Learning Brains führt ein neues Paradigma für die industrielle Ausbildung ein, indem es drei Schlüsselelemente in einem einheitlichen Rahmen kombiniert.",
+        "features": [
+            {
+                "title": "Industrieller Fokus",
+                "desc": "Maßgeschneiderte Methoden für den Fertigungssektor, die spezifische Qualifikationslücken und technologische Bedürfnisse adressieren."
+            },
+            {
+                "title": "Lernen am Arbeitsplatz",
+                "desc": "Integration von Bildung direkt in den Arbeitsablauf, um Unterbrechungen zu minimieren und die praktische Anwendung zu maximieren."
+            },
+            {
+                "title": "KI-gestützte Tools",
+                "desc": "Nutzung künstlicher Intelligenz zur Personalisierung von Lernpfaden und Optimierung des Kompetenzerwerbs."
+            }
+        ],
+        "impact_badge": "Projektwirkung",
+        "impact_title": "Echten Wandel vorantreiben",
+        "impact_text": "Wir wollen die Lücke zwischen beruflicher Bildung und realen industriellen Anforderungen durch praktische, messbare Interventionen schließen.",
+        "impact_cta": "Vollständige Wirkung anzeigen",
+        "impact_point_1": "Verbesserte Anpassungsfähigkeit der Belegschaft",
+        "impact_point_2": "Modernisierte Lehrpläne der Berufsbildung",
+        "impact_point_3": "Stärkere Verbindungen zwischen Industrie und Bildung",
+        "chart_label_1": "Anpassungsfähigkeit",
+        "chart_label_2": "Ausbildungseffizienz",
+        "chart_label_3": "Lerngeschwindigkeit"
+    },
+    "about": {
+        "seo_title": "Über das Projekt",
+        "seo_description": "Erfahren Sie mehr über die Ziele und Aufgaben des Learning Brains Projekts.",
+        "title": "Über das Projekt",
+        "background_title": "Hintergrund & Kontext",
+        "background_text": "Die rasante Entwicklung industrieller Prozesse, angetrieben durch Digitalisierung und Automatisierung, schafft einen wachsenden Bedarf an Umschulung der Belegschaft in ganz Europa. Traditionelle Ausbildungsansätze scheitern oft daran, die spezifischen, kontextuellen Lernbedürfnisse von Arbeitnehmern zu adressieren, die sich an neue Technologien und Prozesse anpassen müssen, während sie produktiv bleiben. Learning Brains begegnet dieser Herausforderung durch die Entwicklung integrierter Systeme für das Lernen am Arbeitsplatz, die praktische Arbeitspraxis mit strukturierten Bildungsansätzen kombinieren.",
+        "objectives_title": "Projektziele",
+        "objectives_list": [
+            "Entwicklung innovativer Methoden für das Lernen am Arbeitsplatz, zugeschnitten auf die industrielle Umschulung",
+            "Erstellung von KI-basierten Tools zur Unterstützung personalisierter Lernpfade in Arbeitsumgebungen",
+            "Förderung der Zusammenarbeit zwischen Berufsbildungsanbietern und Industriepartnern in ganz Europa",
+            "Erstellung offener Bildungsressourcen für die industrielle Umschulung, die einem breiten Publikum zugänglich sind",
+            "Beitrag zum europäischen politischen Dialog über die Modernisierung der beruflichen Bildung"
+        ],
+        "focus_title": "Schwerpunktthemen",
+        "focus_list": [
+            "Berufliche Bildung (VET)",
+            "Methoden des Lernens am Arbeitsplatz",
+            "Industrielle Umschulung und Weiterbildung",
+            "KI-basierte Lernunterstützungstools"
+        ],
+        "target_title": "Zielgruppen",
+        "target_list": [
+            "Industriearbeiter in Umschulungsprozessen",
+            "Berufsbildungsanbieter und Ausbilder in Industriesektoren",
+            "Personalmanager und Ausbildungskoordinatoren in der Industrie",
+            "Politische Entscheidungsträger in Berufsbildung und Beschäftigung"
+        ]
+    },
+    "partners": {
+        "seo_title": "Unsere Partner",
+        "seo_description": "Lernen Sie die Konsortialpartner des Learning Brains Projekts kennen.",
+        "label": "Transnationale Zusammenarbeit",
+        "title": "Unsere Partner",
+        "subtitle": "Learning Brains ist eine transnationale Partnerschaft, die Industrieverbände, Wirtschaftsförderungsagenturen und Bildungsexperten aus ganz Europa zusammenbringt.",
+        "view_org": "Organisation anzeigen",
+        "roles": {
+            "Coordinator": "Koordinator",
+            "Partner": "Partner"
+        },
+        "countries": {
+            "Spain": "Spanien",
+            "Italy": "Italien",
+            "Austria": "Österreich",
+            "Slovakia": "Slowakei",
+            "Portugal": "Portugal"
+        },
+        "descriptions": [
+            "Ein führender Industrieverband, der mehr als 800 Unternehmen im Metallsektor vertritt und sich für Innovation und Ausbildung engagiert.",
+            "Das Dienstleistungsunternehmen der Confindustria Veneto, spezialisiert auf Ausbildung, Innovation und Organisationsentwicklung für regionale Unternehmen.",
+            "Vertritt die Interessen der steirischen Wirtschaft und bietet umfangreiche Bildungs- und Ausbildungsunterstützungsdienste an.",
+            "Experten für das Design und die Implementierung innovativer pädagogischer Methoden und digitaler Lernumgebungen.",
+            "Die wichtigste Agentur zur Unterstützung kleiner und mittlerer Unternehmen in der Slowakei, die Unternehmertum und Kompetenzentwicklung fördert.",
+            "Engagiert für die Entwicklung von Humanressourcen und innovative Ausbildungslösungen für den modernen Arbeitsmarkt."
+        ]
+    },
+    "news": {
+        "seo_title": "Aktuelles & Events",
+        "seo_description": "Neueste Updates und Veranstaltungen von Learning Brains.",
+        "label": "Projekt-Updates",
+        "title": "Aktuelles & Events",
+        "subtitle": "Verfolgen Sie den Fortschritt des Learning Brains Projekts durch unsere neuesten Nachrichten, Treffen und Verbreitungsaktivitäten.",
+        "items_list": [
+            {
+                "title": "Projekt-Auftaktreffen in Bilbao",
+                "category": "Treffen",
+                "description": "Das Learning Brains Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu industriellen Umschulungsbedürfnissen."
+            },
+            {
+                "title": "Kommender Workshop: KI in der Berufsbildung",
+                "category": "Workshop",
+                "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial künstlicher Intelligenz in der beruflichen Bildung untersucht. Wir begrüßen Experten aus ganz Europa, um Einblicke und Best Practices auszutauschen."
+            },
+            {
+                "title": "Erstes transnationales Projekttreffen",
+                "category": "Projekt",
+                "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Auf der Tagesordnung stehen die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilotphase."
+            }
+        ],
+        "read_more": "Weiterlesen",
+        "details_soon": "Weitere Details folgen in Kürze"
+    },
+    "resources": {
+        "seo_title": "Ressourcen",
+        "seo_description": "Öffentliches Repository der Learning Brains Dokumente.",
+        "label": "Öffentliches Repository",
+        "title": "Ressourcen",
+        "subtitle": "Greifen Sie auf die öffentlichen Dokumente, Leitfäden und technischen Vorlagen des Projekts zu, sobald diese im Laufe des Projektlebenszyklus veröffentlicht werden.",
+        "repo_title": "Dokumenten-Repository",
+        "repo_desc": "Das öffentliche Repository enthält PDF-Downloads von Projektbroschüren, Berichten und Methodenhandbüchern. Derzeit stehen keine Dateien zum öffentlichen Download bereit.",
+        "btn_brochure": "Projektbroschüre",
+        "btn_guide": "Implementierungsleitfaden"
+    },
+    "results": {
+        "seo_title": "Projektergebnisse",
+        "seo_description": "Ergebnisse und Resultate des Learning Brains Projekts.",
+        "title": "Projektergebnisse",
+        "subtitle": "Zugang zu den greifbaren Ergebnissen und intellektuellen Beiträgen des Learning Brains Projekts.",
+        "status_note": "Das Learning Brains Projekt befindet sich derzeit in der Implementierungsphase. Ergebnisse und Leistungen werden schrittweise veröffentlicht, sobald sie verfügbar sind und von der Europäischen Kommission genehmigt wurden.",
+        "available_title": "Verfügbare Ergebnisse",
+        "no_results": "Bisher wurden keine Ergebnisse veröffentlicht. Bitte schauen Sie später wieder vorbei.",
+        "planned_title": "Geplante Ergebnisse",
+        "planned_list": [
+            "Europäischer Rahmen für industrielle Umschulung",
+            "Handbuch für Mentoring am Arbeitsplatz",
+            "KI-gestützter Lernpfad-Generator",
+            "Transnationale Politikempfehlungen"
+        ]
+    },
+    "impact": {
+        "seo_title": "Einfluss & Wirkung",
+        "seo_description": "Verstehen, wie Learning Brains zur beruflichen Bildung und industriellen Umschulung beiträgt.",
+        "label": "Verbreitung & Auswirkungen",
+        "title": "Projekteinfluss",
+        "subtitle": "Verständnis dafür, wie Learning Brains zur Modernisierung der europäischen Berufsbildung und zur industriellen Umschulung beiträgt.",
+        "strategy_title": "Verbreitungsstrategie",
+        "strategy_text": "Unsere Strategie konzentriert sich darauf, wichtige Interessengruppen in ganz Europa zu erreichen, um sicherzustellen, dass die Projektergebnisse weithin bekannt sind und genutzt werden. Wir nutzen einen Multi-Channel-Ansatz, einschließlich dieses digitalen Hubs, branchenspezifischer sozialer Medien, regionaler Industrieveranstaltungen und transnationaler Workshops.",
+        "audience_title": "Zielgruppen",
+        "audience_list": [
+            "Industriearbeiter",
+            "Berufsbildungszentren",
+            "Fertigungs-KMU",
+            "Politische Entscheidungsträger",
+            "Sozialpartner",
+            "Forschungsgemeinschaft"
+        ],
+        "impact_title": "Erwartete Auswirkungen",
+        "impact_text": "Das Learning Brains Projekt erwartet, zur Modernisierung der Berufsbildungssysteme beizutragen, indem validierte Tools für die industrielle Umschulung bereitgestellt werden. Die Auswirkungen werden in der verbesserten Anpassungsfähigkeit von Industriearbeitern an technologische Veränderungen und der gesteigerten Effizienz von Methoden für das Lernen am Arbeitsplatz beobachtet.",
+        "note": "Hinweis: Die Auswirkungen des Projekts werden derzeit nicht quantitativ beschrieben, da sich die Implementierung in einem frühen Stadium befindet."
     },
     "contact": {
         "connect_us": "Verbinden Sie sich mit uns",
-        "title": "Kontaktieren Sie uns",
-        "description": "Haben Sie Fragen zum Projekt Learning Brains? Kontaktieren Sie das Konsortium über dieses Formular oder folgen Sie uns auf unseren sozialen Kanälen.",
+        "title": "Kontakt aufnehmen",
+        "description": "Haben Sie Fragen zum Learning Brains Projekt? Nehmen Sie über dieses Formular Kontakt mit dem Konsortium auf oder folgen Sie uns auf unseren sozialen Kanälen.",
         "email_inquiry": "E-Mail-Anfrage",
         "official_channels": "Offizielle Kanäle",
-        "social_pending": "LinkedIn & Twitter werden zur Mitte des Projekts aktiviert",
-        "disclaimer": "Dieses Projekt folgt strengen Erasmus+ Sichtbarkeitsvorgaben. Alle erhaltenen Informationen werden vertraulich behandelt und ausschließlich zu Verbreitungszwecken verwendet.",
+        "social_pending": "LinkedIn und Twitter werden in der Projektmitte aktiviert",
+        "disclaimer": "Dieses Projekt folgt strengen Sichtbarkeitsvorschriften von Erasmus+. Alle erhaltenen Informationen werden vertraulich behandelt und ausschließlich für Verbreitungszwecke verwendet.",
         "form": {
             "full_name": "Vollständiger Name",
             "email": "E-Mail-Adresse",
@@ -30,10 +213,14 @@
             "security": "Integration bereit • Sichere Kommunikation",
             "placeholder_name": "Max Mustermann",
             "placeholder_email": "max@beispiel.de",
-            "placeholder_message": "Erzählen Sie uns von Ihrem Interesse am Projekt..."
+            "placeholder_message": "Erzählen Sie uns von Ihrem Interesse am Projekt...",
+            "status_success_title": "Nachricht gesendet!",
+            "status_success_desc": "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
+            "status_sending": "Senden...",
+            "status_error": "Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal."
         }
     },
     "footer": {
-        "disclaimer": "Kofinanziert durch das Programm Erasmus+ der Europäischen Union. Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Die Verantwortung für den Inhalt dieser Veröffentlichung [Mitteilung] trägt allein der Verfasser; die Kommission haftet nicht für die weitere Verwendung der darin enthaltenen Angaben."
+        "disclaimer": "Kofinanziert durch das Programm Erasmus+ der Europäischen Union. Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Diese Veröffentlichung [Mitteilung] spiegelt nur die Ansichten des Autors wider, und die Kommission kann nicht für eine Nutzung verantwortlich gemacht werden, die aus den darin enthaltenen Informationen gemacht werden könnte."
     }
 }

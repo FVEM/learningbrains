@@ -84,220 +84,210 @@ const Home = () => {
         };
     }, []);
 
-    const stats = [
-        { label: "Programme", value: "Erasmus+ KA220-VET" },
-        { label: "Duration", value: "24 Months" },
-        { label: "Focus", value: "Industrial Reskilling" }
-    ];
-
-    const partners = [
-        { name: "FVEM", img: "FVEM-EN.jpg", url: "https://www.fvem.es" },
-        { name: "Media Creativa", img: "Media Creativa 2020.jpg", url: "https://mediacreativa.eu/" },
-        { name: "Slovak Business Agency", img: "sba.jpg", url: "https://www.sbagency.sk/" },
-        { name: "Sparkling Intuition", img: "SPIN logo large.png", url: "https://sparkling-intuition.eu/" },
-        { name: "Confindustria Veneto SIAV", img: "Conf.Veneto SIAV logo.png", url: "https://www.siav.net/wp/" },
-        { name: "WKO Austria", img: "room-466-logo-blau-transparent-300dpi.png", url: "https://www.wko.at/" }
-    ];
+    const stats = t('home.stats', { returnObjects: true });
+    const features = t('home.features', { returnObjects: true });
 
     return (
         <div className="bg-white font-body text-slate-600">
             <SEOHead
-                title={t('home.hero_title')}
-                description={t('home.hero_subtitle')}
-                path=""
+                title={t('home.seo_title')}
+                description={t('home.seo_description')}
+                path="/"
             />
+
             {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden isolating">
-                <div className="absolute inset-0 z-0">
-                    {/* Background Canvas Layer */}
-                    <div className="absolute inset-0 w-full h-full overflow-hidden bg-white">
-                        <canvas
-                            ref={canvasRef}
-                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-90' : 'opacity-0'}`}
-                        />
-                        {/* Hidden Source Video */}
-                        <video
-                            ref={videoRef}
-                            muted
-                            playsInline
-                            className="hidden"
-                            crossOrigin="anonymous"
-                        >
-                            <source src={`${import.meta.env.BASE_URL}grok-video-62201ec6-f2cd-4ba2-8091-1878cb5ffc72.mp4`} type="video/mp4" />
-                        </video>
-                    </div>
+            <section className="relative overflow-hidden bg-slate-50 border-b border-slate-100">
+                <div className="absolute inset-0 bg-grid-slate-200 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
 
-                    {/* Gradient Overlay for Text Readability */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent z-10"></div>
-                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 lg:pt-32 lg:pb-40">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-10 relative z-10">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-secondary text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-secondary opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-secondary"></span>
+                                </span>
+                                {t('home.hero_badge')}
+                            </div>
 
-                <div className="max-w-7xl mx-auto px-8 w-full relative z-20">
-                    <div className="max-w-3xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-100 text-[10px] font-bold uppercase tracking-widest mb-8 animate-in fade-in slide-in-from-bottom-3 duration-700">
-                            <span className="flex h-2 w-2 rounded-full bg-primary-green"></span>
-                            Erasmus+ Cooperation Partnership
-                        </div>
+                            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] animate-fade-in-up delay-100">
+                                {t('home.hero_title_1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">{t('home.hero_title_highlight')}</span>
+                                <br /> {t('home.hero_title_2')}
+                            </h1>
 
-                        <div className="text-3xl md:text-4xl font-bold font-heading text-[#224075] mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-75">
-                            Learning Brains
-                        </div>
+                            <p className="text-xl text-slate-500 leading-relaxed max-w-lg animate-fade-in-up delay-200">
+                                {t('home.hero_subtitle')}
+                            </p>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-8 leading-[1.1] font-heading text-primary-green animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-100">
-                            {t('home.hero_title')}
-                        </h1>
+                            <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                                <Link
+                                    to={`/${i18n.language}/about`}
+                                    className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-primary rounded-full hover:bg-brand-primary/90 hover:shadow-lg hover:shadow-brand-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
+                                >
+                                    {t('home.cta_primary')}
+                                    <ArrowRight className="w-5 h-5 ml-2" />
+                                </Link>
+                                <Link
+                                    to={`/${i18n.language}/partners`}
+                                    className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 transition-all duration-200 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200"
+                                >
+                                    {t('home.cta_secondary')}
+                                </Link>
+                            </div>
 
-                        <p className="text-lg md:text-xl text-slate-500 mb-10 leading-relaxed font-normal max-w-2xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
-                            {t('home.hero_subtitle')}
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row items-center gap-5 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
-                            <Link
-                                to={`/${i18n.language}/about`}
-                                className="w-full sm:w-auto px-10 py-4 bg-primary-green text-white font-bold rounded-xl hover:shadow-xl hover:shadow-green-900/20 transition-all flex items-center justify-center gap-2 group"
-                            >
-                                {t('home.cta')}
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Link>
-                            <Link
-                                to={`/${i18n.language}/partners`}
-                                className="w-full sm:w-auto px-10 py-4 bg-white border border-slate-200 text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
-                            >
-                                <Users className="w-5 h-5 text-primary-green" />
-                                Meet our Partners
-                            </Link>
-                        </div>
-
-                        {/* Stats Row */}
-                        <div className="mt-20 flex flex-wrap items-center gap-8 md:gap-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
-                            {stats.map((stat, i) => (
-                                <div key={i} className="flex items-center">
-                                    <div className="flex flex-col">
-                                        <span className="text-xl md:text-2xl font-bold text-primary-green font-heading">{stat.value}</span>
-                                        <span className="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-wider">{stat.label}</span>
-                                    </div>
-                                    {i < stats.length - 1 && (
-                                        <div className="w-px h-10 bg-slate-200 ml-8 md:ml-12 hidden sm:block"></div>
-                                    )}
+                            <div className="flex items-center gap-8 pt-8 animate-fade-in-up delay-400">
+                                <div className="flex -space-x-4">
+                                    {[...Array(4)].map((_, i) => (
+                                        <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-500">
+                                            {String.fromCharCode(65 + i)}
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                                <div className="text-sm text-slate-500">
+                                    <strong className="text-slate-900 block">{t('home.partners_count')}</strong>
+                                    {t('home.partners_text')}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="relative lg:h-[600px] w-full flex items-center justify-center animate-fade-in-left delay-200">
+                            {/* Abstract Visualization */}
+                            <div className="relative w-full max-w-lg aspect-square">
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 to-brand-secondary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+                                <div className="relative z-10 bg-white/50 backdrop-blur-xl border border-white/60 rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                                            <BrainCircuit className="w-10 h-10 text-brand-primary mb-4" />
+                                            <div className="h-2 w-16 bg-slate-100 rounded-full mb-2"></div>
+                                            <div className="h-2 w-24 bg-slate-100 rounded-full"></div>
+                                        </div>
+                                        <div className="bg-brand-primary/5 p-6 rounded-2xl border border-brand-primary/10">
+                                            <Cpu className="w-10 h-10 text-brand-secondary mb-4" />
+                                            <div className="h-2 w-20 bg-brand-primary/10 rounded-full mb-2"></div>
+                                            <div className="h-2 w-12 bg-brand-primary/10 rounded-full"></div>
+                                        </div>
+                                        <div className="col-span-2 bg-gradient-to-r from-slate-900 to-slate-800 p-6 rounded-2xl text-white">
+                                            <div className="flex items-center justify-between mb-4">
+                                                <TrendingUp className="w-8 h-8 text-brand-secondary" />
+                                                <span className="text-xs font-bold bg-white/10 px-2 py-1 rounded-full">+24%</span>
+                                            </div>
+                                            <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                                <div className="h-full w-3/4 bg-brand-secondary rounded-full"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Floating Elements */}
+                                <div className="absolute -top-12 -right-12 bg-white p-4 rounded-2xl shadow-xl animate-float">
+                                    <Zap className="w-8 h-8 text-yellow-400 fill-yellow-400" />
+                                </div>
+                                <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-2xl shadow-xl animate-float delay-1000">
+                                    <Users className="w-8 h-8 text-brand-primary" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Partners Section */}
-            <section className="py-24 bg-white border-y border-slate-50">
-                <div className="max-w-7xl mx-auto px-8">
-                    <p className="text-center text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] mb-16 font-heading">
-                        Project Consortium
-                    </p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
-                        {partners.map((partner, index) => (
-                            <a
-                                key={index}
-                                href={partner.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110"
-                            >
-                                <img
-                                    src={`${import.meta.env.BASE_URL}${partner.img}`}
-                                    alt={partner.name}
-                                    className="h-12 md:h-16 object-contain"
-                                />
-                            </a>
+            {/* Stats Section */}
+            <section className="bg-white py-12 border-b border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        {stats.map((stat, idx) => (
+                            <div key={idx} className="text-center">
+                                <div className="text-3xl md:text-4xl font-bold text-brand-primary mb-2">{stat.value}</div>
+                                <div className="text-sm text-slate-500 uppercase tracking-wide font-medium">{stat.label}</div>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Updates / Insights Section */}
-            <section className="py-32 bg-slate-100">
-                <div className="max-w-7xl mx-auto px-8">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                        <div className="max-w-xl">
-                            <h2 className="text-4xl font-bold mb-4 tracking-tight font-heading text-slate-900">Latest Updates</h2>
-                            <p className="text-slate-500">Milestones, events, and results from the Learning Brains project.</p>
+            {/* Features / Pillars */}
+            <section className="py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center max-w-3xl mx-auto mb-20">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
+                            <Lightbulb className="w-3 h-3" />
+                            {t('home.pillars_badge')}
                         </div>
-                        <Link
-                            to={`/${i18n.language}/news`}
-                            className="flex items-center gap-2 text-primary-green font-bold group border-b-2 border-primary-green/10 pb-1 hover:border-primary-green transition-all font-heading"
-                        >
-                            View All News
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{t('home.pillars_title')}</h2>
+                        <p className="text-slate-500 text-lg leading-relaxed">
+                            {t('home.pillars_subtitle')}
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                        {/* News Card 1 */}
-                        <a
-                            href="https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="news-card rounded-2xl overflow-hidden group block"
-                        >
-                            <div className="aspect-[16/10] relative overflow-hidden">
-                                <img
-                                    src={`${import.meta.env.BASE_URL}News/kickoff-meeting-ai.png`}
-                                    alt="Kick-off"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                />
-                                <div className="absolute top-4 left-4">
-                                    <span className="px-3 py-1 bg-white/95 backdrop-blur shadow-sm text-primary-green text-[10px] font-extrabold uppercase rounded-full font-heading">
-                                        Meeting
-                                    </span>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {features.map((feature, idx) => {
+                            const icons = [BrainCircuit, Target, Users];
+                            const Icon = icons[idx] || Lightbulb;
+                            return (
+                                <div key={idx} className="group p-8 rounded-3xl bg-slate-50 hover:bg-white border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
+                                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                        <Icon className="w-7 h-7 text-brand-primary" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
+                                    <p className="text-slate-500 leading-relaxed">
+                                        {feature.desc}
+                                    </p>
                                 </div>
-                            </div>
-                            <div className="p-8">
-                                <div className="flex items-center gap-4 text-[11px] font-bold text-slate-400 mb-4 uppercase tracking-wider">
-                                    <span className="flex items-center gap-1.5">Feb 2026</span>
-                                    <span className="flex items-center gap-1.5">Bilbao, Spain</span>
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-heading text-slate-800">
-                                    Project Kick-off Meeting
-                                </h3>
-                                <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-2">
-                                    The partners met for the first time at the FVEM headquarters to discuss the project timeline.
-                                </p>
-                                <div className="inline-flex items-center gap-2 text-sm font-bold text-primary-green group/link font-heading">
-                                    Read on LinkedIn
-                                    <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
-                                </div>
-                            </div>
-                        </a>
-                        {/* Placeholder Card 2 */}
-                        <div className="news-card rounded-2xl overflow-hidden group opacity-60 pointer-events-none grayscale">
-                            <div className="aspect-[16/10] bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                                <Rocket className="w-12 h-12 text-slate-300" />
-                            </div>
-                            <div className="p-8">
-                                <div className="flex items-center gap-4 text-[11px] font-bold text-slate-300 mb-4 uppercase tracking-wider">
-                                    <span>Coming Soon</span>
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 leading-snug font-heading text-slate-400">
-                                    Consortium Methodology
-                                </h3>
-                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                                    Developing the core framework for industrial reskilling and on-the-job learning.
-                                </p>
-                            </div>
-                        </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </section>
 
-                        {/* Placeholder Card 3 */}
-                        <div className="news-card rounded-2xl overflow-hidden group opacity-60 pointer-events-none grayscale">
-                            <div className="aspect-[16/10] bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                                <Cpu className="w-12 h-12 text-slate-300" />
+            {/* Impact Preview */}
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-secondary/20 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
+                                <TrendingUp className="w-3 h-3" />
+                                {t('home.impact_badge')}
                             </div>
-                            <div className="p-8">
-                                <div className="flex items-center gap-4 text-[11px] font-bold text-slate-300 mb-4 uppercase tracking-wider">
-                                    <span>Coming Soon</span>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('home.impact_title')}</h2>
+                            <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                                {t('home.impact_text')}
+                            </p>
+                            <ul className="space-y-4 mb-10">
+                                {[1, 2, 3].map((item) => (
+                                    <li key={item} className="flex items-center gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-brand-secondary flex-shrink-0" />
+                                        <span className="text-slate-300">{t(`home.impact_point_${item}`)}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <Link
+                                to={`/${i18n.language}/impact`}
+                                className="inline-flex items-center text-white font-bold hover:text-brand-secondary transition-colors"
+                            >
+                                {t('home.impact_cta')}
+                                <ArrowRight className="w-5 h-5 ml-2" />
+                            </Link>
+                        </div>
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/20 to-brand-primary/20 blur-3xl rounded-full"></div>
+                            <div className="relative bg-slate-800 border border-slate-700 rounded-3xl p-8 shadow-2xl">
+                                {/* Simplified Graph/Chart Visualization */}
+                                <div className="space-y-6">
+                                    {[1, 2, 3].map((val, i) => (
+                                        <div key={i} className="space-y-2">
+                                            <div className="flex justify-between text-sm font-medium text-slate-400">
+                                                <span>{t(`home.chart_label_${val}`)}</span>
+                                                <span className="text-white">{85 + (i * 5)}%</span>
+                                            </div>
+                                            <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                                <div
+                                                    className="h-full bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"
+                                                    style={{ width: `${85 + (i * 5)}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                                <h3 className="text-xl font-bold mb-3 leading-snug font-heading text-slate-400">
-                                    AI Tools Research
-                                </h3>
-                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                                    Analyzing state-of-the-art AI applications for vocational training environments.
-                                </p>
                             </div>
                         </div>
                     </div>

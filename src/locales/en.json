@@ -10,9 +10,192 @@
     "contact": "Contact"
   },
   "home": {
-    "hero_title": "Real Skills for Real Industry",
-    "hero_subtitle": "Integrated On-the-job Learning Systems for Industrial Reskilling",
-    "cta": "Learn More"
+    "seo_title": "Learning Brains - AI for VET",
+    "seo_description": "Revolutionizing vocational education and training in the industrial sector through on-the-job learning and AI.",
+    "hero_badge": "Erasmus+ Project",
+    "hero_title_1": "Reskilling the",
+    "hero_title_highlight": "Industrial Workforce",
+    "hero_title_2": "with AI & OJL",
+    "hero_subtitle": "Empowering VET providers and manufacturing SMEs with innovative on-the-job learning methodologies supported by Artificial Intelligence.",
+    "cta_primary": "Learn More",
+    "cta_secondary": "Our Partners",
+    "partners_count": "6 Strategic Partners",
+    "partners_text": "Across 5 European Countries",
+    "stats": [
+      {
+        "value": "6",
+        "label": "Partners"
+      },
+      {
+        "value": "5",
+        "label": "Countries"
+      },
+      {
+        "value": "24",
+        "label": "Months"
+      },
+      {
+        "value": "3",
+        "label": "Results"
+      }
+    ],
+    "pillars_badge": "Core Pillars",
+    "pillars_title": "Innovating VET Systems",
+    "pillars_subtitle": "Learning Brains introduces a new paradigm for industrial training by combining three key elements into a unified framework.",
+    "features": [
+      {
+        "title": "Industrial Focus",
+        "desc": "Tailored methodologies for the manufacturing sector, addressing specific skills gaps and technological needs."
+      },
+      {
+        "title": "On-the-Job Learning",
+        "desc": "Integrating education directly into the workflow to minimize disruption and maximize practical application."
+      },
+      {
+        "title": "AI-Enhanced Tools",
+        "desc": "Leveraging artificial intelligence to personalize learning pathways and optimize skill acquisition."
+      }
+    ],
+    "impact_badge": "Project Impact",
+    "impact_title": "Driving Real Change",
+    "impact_text": "We aim to bridge the gap between vocational education and real-world industrial needs through practical, measurable interventions.",
+    "impact_cta": "View Full Impact",
+    "impact_point_1": "Enhanced Workforce Adaptability",
+    "impact_point_2": "Modernized VET Curricula",
+    "impact_point_3": "Stronger Industry-Education Linkages",
+    "chart_label_1": "Workforce Adaptability",
+    "chart_label_2": "Training Efficiency",
+    "chart_label_3": "Skill Acquisition Speed"
+  },
+  "about": {
+    "seo_title": "About the Project",
+    "seo_description": "Learn about the Learning Brains project goals and objectives.",
+    "title": "About the Project",
+    "background_title": "Background & Context",
+    "background_text": "The rapid evolution of industrial processes, driven by digitalisation and automation, is creating a growing need for workforce reskilling across Europe. Traditional training approaches often fail to address the specific, contextual learning needs of workers who must adapt to new technologies and processes while remaining productive. Learning Brains addresses this challenge by developing integrated on-the-job learning systems that combine practical workplace experience with structured educational approaches.",
+    "objectives_title": "Project Objectives",
+    "objectives_list": [
+      "Develop innovative on-the-job learning methodologies tailored for industrial reskilling",
+      "Create AI-based tools to support personalised learning pathways in workplace environments",
+      "Foster cooperation between VET providers and industrial partners across Europe",
+      "Produce open educational resources for industrial reskilling accessible to a wide audience",
+      "Contribute to European policy dialogue on vocational education and training modernisation"
+    ],
+    "focus_title": "Focus Areas",
+    "focus_list": [
+      "Vocational Education and Training (VET)",
+      "On-the-job learning methodologies",
+      "Industrial reskilling and upskilling",
+      "AI-based learning support tools"
+    ],
+    "target_title": "Target Groups",
+    "target_list": [
+      "Industrial workers undergoing reskilling processes",
+      "VET providers and trainers in industrial sectors",
+      "HR managers and training coordinators in industry",
+      "Policy makers in vocational education and employment"
+    ]
+  },
+  "partners": {
+    "seo_title": "Our Partners",
+    "seo_description": "Meet the consortium partners of Learning Brains project.",
+    "label": "Transnational Collaboration",
+    "title": "Our Partners",
+    "subtitle": "Learning Brains is a transnational partnership bringing together industrial associations, business support agencies, and training experts from across Europe.",
+    "view_org": "View Organization",
+    "roles": {
+      "Coordinator": "Coordinator",
+      "Partner": "Partner"
+    },
+    "countries": {
+      "Spain": "Spain",
+      "Italy": "Italy",
+      "Austria": "Austria",
+      "Slovakia": "Slovakia",
+      "Portugal": "Portugal"
+    },
+    "descriptions": [
+      "A leading industrial federation representing more than 800 companies in the metal sector, committed to innovation and training.",
+      "The service company of Confindustria Veneto, specialized in training, innovation, and organizational development for regional companies.",
+      "Representing the interests of the Styrian business community and providing extensive educational and training support services.",
+      "Experts in the design and implementation of innovative pedagogical methodologies and digital learning environments.",
+      "The primary agency for the support of small and medium-sized enterprises in Slovakia, fostering entrepreneurship and skills development.",
+      "Dedicated to human resources development and innovative training solutions for the modern labor market."
+    ]
+  },
+  "news": {
+    "seo_title": "News & Events",
+    "seo_description": "Latest updates and events from Learning Brains.",
+    "label": "Project Updates",
+    "title": "News & Events",
+    "subtitle": "Follow the progress of the Learning Brains project through our latest news, meetings, and dissemination activities.",
+    "items_list": [
+      {
+        "title": "Project Kick-off Meeting in Bilbao",
+        "category": "Meeting",
+        "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs."
+      },
+      {
+        "title": "Upcoming Workshop: AI in VET",
+        "category": "Workshop",
+        "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices."
+      },
+      {
+        "title": "First Transnational Project Meeting",
+        "category": "Project",
+        "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase."
+      }
+    ],
+    "read_more": "Read More",
+    "details_soon": "More details coming soon"
+  },
+  "resources": {
+    "seo_title": "Resources",
+    "seo_description": "Public repository of Learning Brains documents.",
+    "label": "Public Repository",
+    "title": "Resources",
+    "repo_title": "Document Repository",
+    "repo_desc": "The public repository will contain PDF downloads of project brochures, reports, and methodology handbooks. Currently, no files are available for public download.",
+    "subtitle": "Access the project's public documents, guides, and technical templates as they are released throughout the project lifecycle.",
+    "btn_brochure": "Project Brochure",
+    "btn_guide": "Implementation Guide"
+  },
+  "results": {
+    "seo_title": "Project Results",
+    "seo_description": "Results and outputs of the Learning Brains project.",
+    "title": "Project Results",
+    "subtitle": "Access the tangible outputs and intellectual contributions of the Learning Brains project.",
+    "status_note": "The Learning Brains project is currently in its implementation phase. Results and deliverables will be published progressively as they become available and are approved by the European Commission.",
+    "available_title": "Available Results",
+    "no_results": "No results have been published yet. Please check back later.",
+    "planned_title": "Planned Results",
+    "planned_list": [
+      "European Industrial Reskilling Framework",
+      "Handbook for On-the-job Mentoring",
+      "AI-Powered Learning Path Generator",
+      "Transnational Policy Recommendations"
+    ]
+  },
+  "impact": {
+    "seo_title": "Project Influence & Impact",
+    "seo_description": "Understanding how Learning Brains contributes to vocational education and industrial reskilling.",
+    "label": "Dissemination & Impact",
+    "title": "Project Influence",
+    "subtitle": "Understanding how Learning Brains contributes to the modernization of European vocational education and industrial reskilling.",
+    "strategy_title": "Dissemination Strategy",
+    "strategy_text": "Our strategy is focused on reaching key stakeholders across Europe to ensure the project results are widely known and utilized. We use a multi-channel approach including this digital hub, sectoral social media, regional industrial events, and transnational workshops.",
+    "audience_title": "Target Audiences",
+    "audience_list": [
+      "Industrial Workers",
+      "VET Training Centers",
+      "Manufacturing SMEs",
+      "Policymakers",
+      "Social Partners",
+      "Research Community"
+    ],
+    "impact_title": "Expected Impact",
+    "impact_text": "The Learning Brains project expects to contribute to the modernization of VET systems by providing validated tools for industrial reskilling. The impact will be observed in the improved adaptability of industrial workers to technological changes and the increased efficiency of on-the-job training methodologies.",
+    "note": "Note: Project impacts are currently described non-quantitatively as the implementation is in its early stages."
   },
   "contact": {
     "connect_us": "Connect with us",
@@ -30,7 +213,11 @@
       "security": "Integration ready • Secure communication",
       "placeholder_name": "John Doe",
       "placeholder_email": "john@example.com",
-      "placeholder_message": "Tell us about your interest in the project..."
+      "placeholder_message": "Tell us about your interest in the project...",
+      "status_success_title": "Message Sent!",
+      "status_success_desc": "Thank you for contacting us. We will get back to you shortly.",
+      "status_sending": "Sending...",
+      "status_error": "Something went wrong. Please try again later."
     }
   },
   "footer": {

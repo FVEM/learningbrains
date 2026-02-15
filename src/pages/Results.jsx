@@ -1,23 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import { Info, Clock, CheckCircle2, ChevronRight, FileText } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Results = () => {
-    useTranslation();
+    const { t } = useTranslation();
 
-    const plannedResults = [
-        "European Industrial Reskilling Framework",
-        "Handbook for On-the-job Mentoring",
-        "AI-Powered Learning Path Generator",
-        "Transnational Policy Recommendations"
-    ];
+    const plannedResults = t('results.planned_list', { returnObjects: true });
 
     return (
         <div className="py-20 bg-white">
+            <SEOHead
+                title={t('results.seo_title')}
+                description={t('results.seo_description')}
+                path="/results"
+            />
             <div className="max-w-4xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">Project Results</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">{t('results.title')}</h1>
                     <p className="text-slate-500 text-lg leading-relaxed">
-                        Access the tangible outputs and intellectual contributions of the Learning Brains project.
+                        {t('results.subtitle')}
                     </p>
                 </div>
 
@@ -26,7 +27,7 @@ const Results = () => {
                         <Info className="w-5 h-5 text-brand-secondary" />
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed">
-                        The Learning Brains project is currently in its implementation phase. Results and deliverables will be published progressively as they become available and are approved by the European Commission.
+                        {t('results.status_note')}
                     </p>
                 </div>
 
@@ -35,13 +36,13 @@ const Results = () => {
                     <section>
                         <div className="flex items-center gap-3 mb-8">
                             <CheckCircle2 className="w-6 h-6 text-brand-secondary" />
-                            <h2 className="text-2xl font-bold text-brand-primary uppercase tracking-tight">Available Results</h2>
+                            <h2 className="text-2xl font-bold text-brand-primary uppercase tracking-tight">{t('results.available_title')}</h2>
                         </div>
                         <div className="bg-slate-50 border border-dashed border-slate-200 rounded-2xl p-16 text-center">
                             <div className="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center mx-auto mb-6">
                                 <FileText className="w-6 h-6 text-slate-300" />
                             </div>
-                            <p className="text-slate-400 font-medium italic">No results have been published yet. Please check back later.</p>
+                            <p className="text-slate-400 font-medium italic">{t('results.no_results')}</p>
                         </div>
                     </section>
 
@@ -49,7 +50,7 @@ const Results = () => {
                     <section>
                         <div className="flex items-center gap-3 mb-8">
                             <Clock className="w-6 h-6 text-brand-secondary" />
-                            <h2 className="text-2xl font-bold text-brand-primary uppercase tracking-tight">Planned Results</h2>
+                            <h2 className="text-2xl font-bold text-brand-primary uppercase tracking-tight">{t('results.planned_title')}</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {plannedResults.map((item, idx) => (

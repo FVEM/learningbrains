@@ -1,39 +1,226 @@
 {
     "nav": {
         "home": "Domov",
-        "about": "Projekt",
+        "about": "O Projekte",
         "results": "Výsledky",
         "partners": "Partneri",
-        "news": "Novinky a podujatia",
+        "news": "Novinky a Udalosti",
         "resources": "Zdroje",
-        "impact": "Šírenie a vplyv",
+        "impact": "Šírenie a Dopad",
         "contact": "Kontakt"
     },
     "home": {
-        "hero_title": "Skutočné zručnosti pre skutočný priemysel",
-        "hero_subtitle": "Integrované systémy vzdelávania na pracovisku pre priemyselnú rekvalifikáciu",
-        "cta": "Uč sa viac"
+        "seo_title": "Learning Brains - UI pre OVP",
+        "seo_description": "Revolúcia v odbornom vzdelávaní a príprave v priemyselnom sektore prostredníctvom učenia sa na pracovisku a UI.",
+        "hero_badge": "Projekt Erasmus+",
+        "hero_title_1": "Rekvalifikácia",
+        "hero_title_highlight": "Priemyselnej Pracovnej Sily",
+        "hero_title_2": "s UI a OJL",
+        "hero_subtitle": "Posilnenie poskytovateľov OVP a výrobných MSP inovatívnymi metodikami učenia sa na pracovisku podporovanými umelou inteligenciou.",
+        "cta_primary": "Zistiť viac",
+        "cta_secondary": "Naši Partneri",
+        "partners_count": "6 Strategických Partnerov",
+        "partners_text": "V 5 Európskych Krajinách",
+        "stats": [
+            {
+                "value": "6",
+                "label": "Partneri"
+            },
+            {
+                "value": "5",
+                "label": "Krajiny"
+            },
+            {
+                "value": "24",
+                "label": "Mesiace"
+            },
+            {
+                "value": "3",
+                "label": "Výsledky"
+            }
+        ],
+        "pillars_badge": "Hlavné Piliere",
+        "pillars_title": "Inovácia Systémov OVP",
+        "pillars_subtitle": "Learning Brains zavádza novú paradigmu pre priemyselné vzdelávanie kombináciou troch kľúčových prvkov do jednotného rámca.",
+        "features": [
+            {
+                "title": "Priemyselné Zameranie",
+                "desc": "Metodiky na mieru pre výrobný sektor, riešiace špecifické medzery v zručnostiach a technologické potreby."
+            },
+            {
+                "title": "Učenie na Pracovisku",
+                "desc": "Integrácia vzdelávania priamo do pracovného toku na minimalizáciu prerušení a maximalizáciu praktického uplatnenia."
+            },
+            {
+                "title": "Nástroje Podporené UI",
+                "desc": "Využitie umelej inteligencie na personalizáciu vzdelávacích ciest a optimalizáciu získavania zručností."
+            }
+        ],
+        "impact_badge": "Dopad Projektu",
+        "impact_title": "Podpora Skutočnej Zmeny",
+        "impact_text": "Naším cieľom je preklenúť priepasť medzi odborným vzdelávaním a reálnymi priemyselnými potrebami prostredníctvom praktických, merateľných intervencií.",
+        "impact_cta": "Zobraziť Celý Dopad",
+        "impact_point_1": "Zvýšená Adaptabilita Pracovnej Sily",
+        "impact_point_2": "Modernizované Učebné Osnovy OVP",
+        "impact_point_3": "Silnejšie Prepojenie Priemyslu a Vzdelávania",
+        "chart_label_1": "Adaptabilita",
+        "chart_label_2": "Efektivita Školenia",
+        "chart_label_3": "Rýchlosť Učenia"
+    },
+    "about": {
+        "seo_title": "O Projekte",
+        "seo_description": "Zistite viac o cieľoch a zámeroch projektu Learning Brains.",
+        "title": "O Projekte",
+        "background_title": "Pozadie a Kontext",
+        "background_text": "Rýchly vývoj priemyselných procesov, poháňaný digitalizáciou a automatizáciou, vytvára rastúcu potrebu rekvalifikácie pracovnej sily v celej Európe. Tradičné vzdelávacie prístupy často nedokážu riešiť špecifické, kontextové potreby vzdelávania pracovníkov, ktorí sa musia prispôsobiť novým technológiám a procesom a zároveň zostať produktívni. Learning Brains rieši túto výzvu vývojom integrovaných systémov učenia sa na pracovisku, ktoré kombinujú praktické skúsenosti na pracovisku so štruktúrovanými vzdelávacími prístupmi.",
+        "objectives_title": "Ciele Projektu",
+        "objectives_list": [
+            "Vyvinúť inovatívne metodiky učenia sa na pracovisku prispôsobené pre priemyselnú rekvalifikáciu",
+            "Vytvoriť nástroje založené na UI na podporu personalizovaných vzdelávacích ciest v pracovnom prostredí",
+            "Podporiť spoluprácu medzi poskytovateľmi OVP a priemyselnými partnermi v celej Európe",
+            "Vytvoriť otvorené vzdelávacie zdroje pre priemyselnú rekvalifikáciu prístupné širokému publiku",
+            "Prispieť k európskemu politickému dialógu o modernizácii odborného vzdelávania a prípravy"
+        ],
+        "focus_title": "Oblasti Zamerania",
+        "focus_list": [
+            "Odborné vzdelávanie a príprava (OVP)",
+            "Metodiky učenia sa na pracovisku",
+            "Priemyselná rekvalifikácia a zvyšovanie kvalifikácie",
+            "Nástroje na podporu učenia založené na UI"
+        ],
+        "target_title": "Cieľové Skupiny",
+        "target_list": [
+            "Priemyselní pracovníci v procese rekvalifikácie",
+            "Poskytovatelia OVP a školitelia v priemyselných sektoroch",
+            "HR manažéri a koordinátori školení v priemysle",
+            "Tvorcovia politík v oblasti odborného vzdelávania a zamestnanosti"
+        ]
+    },
+    "partners": {
+        "seo_title": "Naši Partneri",
+        "seo_description": "Spoznajte partnerov konzorcia projektu Learning Brains.",
+        "label": "Nadnárodná Spolupráca",
+        "title": "Naši Partneri",
+        "subtitle": "Learning Brains je nadnárodné partnerstvo združujúce priemyselné asociácie, agentúry na podporu podnikania a odborníkov na vzdelávanie z celej Európy.",
+        "view_org": "Zobraziť Organizáciu",
+        "roles": {
+            "Coordinator": "Koordinátor",
+            "Partner": "Partner"
+        },
+        "countries": {
+            "Spain": "Španielsko",
+            "Italy": "Taliansko",
+            "Austria": "Rakúsko",
+            "Slovakia": "Slovensko",
+            "Portugal": "Portugalsko"
+        },
+        "descriptions": [
+            "Popredná priemyselná federácia zastupujúca viac ako 800 spoločností v kovospracujúcom sektore, zaviazaná k inováciám a vzdelávaniu.",
+            "Servisná spoločnosť Confindustria Veneto, špecializujúca sa na školenia, inovácie a organizačný rozvoj pre regionálne spoločnosti.",
+            "Zastupovanie záujmov štajerskej podnikateľskej komunity a poskytovanie rozsiahlych vzdelávacích a školiacich podporných služieb.",
+            "Odborníci na dizajn a implementáciu inovatívnych pedagogických metodík a digitálnych vzdelávacích prostredí.",
+            "Hlavná agentúra na podporu malých a stredných podnikov na Slovensku, podporujúca podnikanie a rozvoj zručností.",
+            "Venované rozvoju ľudských zdrojov a inovatívnym školiacim riešeniam pre moderný trh práce."
+        ]
+    },
+    "news": {
+        "seo_title": "Novinky a Udalosti",
+        "seo_description": "Najnovšie aktualizácie a udalosti z Learning Brains.",
+        "label": "Aktualizácie Projektu",
+        "title": "Novinky a Udalosti",
+        "subtitle": "Sledujte postup projektu Learning Brains prostredníctvom našich najnovších správ, stretnutí a diseminačných aktivít.",
+        "items_list": [
+            {
+                "title": "Úvodné Stretnutie Projektu v Bilbau",
+                "category": "Stretnutie",
+                "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie projektových aktivít. Partneri diskutovali o pláne na prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselnej rekvalifikácie."
+            },
+            {
+                "title": "Nadchádzajúci Workshop: UI v OVP",
+                "category": "Workshop",
+                "description": "Pridajte sa k nám na online workshop skúmajúci potenciál umelej inteligencie v odbornom vzdelávaní a príprave. Privítame odborníkov z celej Európy, aby sa podelili o poznatky a osvedčené postupy."
+            },
+            {
+                "title": "Prvé Nadnárodné Stretnutie Projektu",
+                "category": "Projekt",
+                "description": "Druhé stretnutie partnerov budú hostiť naši talianski partneri. Program zahŕňa preskúmanie prvého návrhu rámca rekvalifikácie a plánovanie pilotnej fázy."
+            }
+        ],
+        "read_more": "Čítať Viac",
+        "details_soon": "Viac podrobností čoskoro"
+    },
+    "resources": {
+        "seo_title": "Zdroje",
+        "seo_description": "Verejný repozitár dokumentov Learning Brains.",
+        "label": "Verejný Repozitár",
+        "title": "Zdroje",
+        "subtitle": "Získajte prístup k verejným dokumentom projektu, príručkám a technickým šablónam, ako budú zverejňované počas celého životného cyklu projektu.",
+        "repo_title": "Repozitár Dokumentov",
+        "repo_desc": "Verejný repozitár bude obsahovať PDF na stiahnutie brožúr projektu, správ a metodických príručiek. Momentálne nie sú k dispozícii žiadne súbory na verejné stiahnutie.",
+        "btn_brochure": "Brožúra Projektu",
+        "btn_guide": "Implementačná Príručka"
+    },
+    "results": {
+        "seo_title": "Výsledky Projektu",
+        "seo_description": "Výsledky a výstupy projektu Learning Brains.",
+        "title": "Výsledky Projektu",
+        "subtitle": "Prístup k hmatateľným výstupom a intelektuálnym príspevkom projektu Learning Brains.",
+        "status_note": "Projekt Learning Brains je v súčasnosti vo fáze implementácie. Výsledky a výstupy budú zverejňované postupne, ako budú k dispozícii a schválené Európskou komisiou.",
+        "available_title": "Dostupné Výsledky",
+        "no_results": "Zatiaľ neboli zverejnené žiadne výsledky. Skúste to prosím neskôr.",
+        "planned_title": "Plánované Výsledky",
+        "planned_list": [
+            "Európsky Rámec Priemyselnej Rekvalifikácie",
+            "Príručka pre Mentoring na Pracovisku",
+            "Generátor Vzdelávacích Ciest Poháňaný UI",
+            "Nadnárodné Politické Odporúčania"
+        ]
+    },
+    "impact": {
+        "seo_title": "Vplyv a Dopad",
+        "seo_description": "Pochopenie toho, ako Learning Brains prispieva k odbornému vzdelávaniu a priemyselnej rekvalifikácii.",
+        "label": "Šírenie a Dopad",
+        "title": "Vplyv Projektu",
+        "subtitle": "Pochopenie toho, ako Learning Brains prispieva k modernizácii európskeho odborného vzdelávania a priemyselnej rekvalifikácie.",
+        "strategy_title": "Stratégia Šírenia",
+        "strategy_text": "Naša stratégia sa zameriava na oslovenie kľúčových zainteresovaných strán v celej Európe, aby sa zabezpečilo, že výsledky projektu budú široko známe a využívané. Používame viackanálový prístup zahŕňajúci tento digitálny hub, sektorové sociálne médiá, regionálne priemyselné podujatia a nadnárodné workshopy.",
+        "audience_title": "Cieľové Publikum",
+        "audience_list": [
+            "Priemyselní Pracovníci",
+            "Centrá Odborného Vzdelávania",
+            "Výrobné MSP",
+            "Tvorcovia Politík",
+            "Sociálni Partneri",
+            "Výskumná Komunita"
+        ],
+        "impact_title": "Očakávaný Dopad",
+        "impact_text": "Projekt Learning Brains očakáva príspevok k modernizácii systémov OVP poskytnutím overených nástrojov pre priemyselnú rekvalifikáciu. Dopad bude pozorovaný v zlepšenej adaptabilite priemyselných pracovníkov na technologické zmeny a zvýšenej efektivite metodík školenia na pracovisku.",
+        "note": "Poznámka: Dopady projektu sú v súčasnosti popísané nekvantitatívne, keďže implementácia je v počiatočných fázach."
     },
     "contact": {
         "connect_us": "Spojte sa s nami",
-        "title": "Kontaktujte nás",
-        "description": "Máte otázky o projekte Learning Brains? Kontaktujte konzorcium prostredníctvom tohto formulára alebo nás sledujte na našich sociálnych kanáloch.",
-        "email_inquiry": "Emailová otázka",
-        "official_channels": "Oficiálne kanály",
+        "title": "Ozvite sa Nám",
+        "description": "Máte nejaké otázky o projekte Learning Brains? Ozvite sa konzorciu prostredníctvom tohto formulára alebo nás sledujte na našich sociálnych kanáloch.",
+        "email_inquiry": "E-mailová Dozvedy",
+        "official_channels": "Oficiálne Kanály",
         "social_pending": "LinkedIn a Twitter aktivované v polovici projektu",
-        "disclaimer": "Tento projekt dodržiava prísne mandáty viditeľnosti Erasmus+. So všetkými prijatými informáciami sa zaobchádza dôverne a používajú sa výlučne na účely šírenia.",
+        "disclaimer": "Tento projekt dodržiava prísne mandáty viditeľnosti Erasmus+. Všetky prijaté informácie sú považované za dôverné a použité výlučne na účely šírenia.",
         "form": {
-            "full_name": "Celé meno",
-            "email": "Emailová adresa",
-            "message": "Vaša správa",
-            "send": "Odoslať správu",
+            "full_name": "Celé Meno",
+            "email": "E-mailová Adresa",
+            "message": "Vaša Správa",
+            "send": "Odoslať Správu",
             "security": "Integrácia pripravená • Bezpečná komunikácia",
             "placeholder_name": "Ján Novák",
             "placeholder_email": "jan@priklad.sk",
-            "placeholder_message": "Povedzte nám o svojom záujme o projekt..."
+            "placeholder_message": "Povedzte nám o svojom záujme o projekt...",
+            "status_success_title": "Správa Odoslaná!",
+            "status_success_desc": "Ďakujeme, že ste nás kontaktovali. Čoskoro sa vám ozveme.",
+            "status_sending": "Posielam...",
+            "status_error": "Niečo sa pokazilo. Skúste to prosím neskôr."
         }
     },
     "footer": {
-        "disclaimer": "Spolufinancované z programu Európskej únie Erasmus+. Tento projekt bol financovaný s podporou Európskej komisie. Táto publikácia [oznámenie] odráža iba názory autora a Komisia nemôže byť zodpovedná za akékoľvek použitie informácií, ktoré sú v nej obsiahnuté."
+        "disclaimer": "Spolufinancované z programu Európskej únie Erasmus+. Tento projekt bol financovaný s podporou Európskej komisie. Táto publikácia [oznámenie] odráža iba názory autora a Komisia nemôže byť zodpovedná za akékoľvek použitie informácií v nej obsiahnutých."
     }
 }

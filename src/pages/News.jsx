@@ -1,104 +1,116 @@
 import { useTranslation } from 'react-i18next';
-import { Calendar, MapPin, Newspaper, ArrowRight, Linkedin } from 'lucide-react';
+import { Calendar, MapPin, Newspaper, ArrowRight, Users } from 'lucide-react';
+import SEOHead from '../components/SEOHead'; // Assuming SEOHead is in this path
 
 const News = () => {
-    useTranslation();
+    const { t } = useTranslation();
 
     const newsItems = [
         {
-            title: "Project Kick-off Meeting in Bilbao",
             date: "February 2026",
             location: "Bilbao, Spain",
-            category: "Meeting",
-            description: "The partners met for the first time at the FVEM headquarters to discuss the project timeline, management protocols, and initial research activities for WP2.",
-            link: "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
             image: "News/kickoff-meeting-ai.png"
         },
         {
-            title: "Consortium Finalizes WP2 Methodology",
-            date: "March 2026",
+            date: "April 2026",
             location: "Online",
-            category: "Innovation",
-            description: "The technical committee has approved the framework for the industrial skills gap analysis, marking the completion of the first major technical milestone."
+            image: "",
+            icon: Calendar
+        },
+        {
+            date: "June 2026",
+            location: "Venice, Italy",
+            image: "",
+            icon: Users
         }
     ];
 
+    const translatedNewsItems = t('news.items_list', { returnObjects: true });
+
     return (
         <div className="py-20 bg-white">
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="text-center mb-16">
+            <SEOHead
+                title={t('news.seo_title')}
+                description={t('news.seo_description')}
+                path="/news"
+            />
+            <div className="max-w-6xl mx-auto px-6">
+                <div className="text-center mb-20">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
                         <Newspaper className="w-3 h-3" />
-                        Project Updates
+                        {t('news.label')}
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">News & Events</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">{t('news.title')}</h1>
                     <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Follow the progress of the Learning Brains project through our latest news, meetings, and dissemination activities.
+                        {t('news.subtitle')}
                     </p>
                 </div>
 
-                <div className="space-y-8">
-                    {newsItems.map((item, idx) => (
-                        <div key={idx} className="group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
-                            <div className="flex flex-col md:flex-row">
-                                <div className="md:w-64 bg-slate-50 p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 shrink-0">
-                                    <span className="inline-block px-2.5 py-1 bg-white text-brand-secondary text-[11px] font-bold rounded-lg border border-slate-100 mb-4 self-start">
-                                        {item.category}
-                                    </span>
-                                    <div className="space-y-3">
-                                        <div className="flex items-center text-slate-400">
-                                            <Calendar className="w-4 h-4 mr-2" />
-                                            <span className="text-xs font-medium">{item.date}</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {translatedNewsItems.map((item, idx) => {
+                        const staticData = newsItems[idx] || {};
+                        const NewsIcon = staticData.icon || Newspaper;
+
+                        return (
+                            <article key={idx} className="bg-white border border-slate-100 rounded-2xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
+                                {/* Image or Placeholder */}
+                                <div className="h-56 bg-slate-50 relative overflow-hidden">
+                                    {staticData.image ? (
+                                        <img
+                                            src={staticData.image.startsWith('http') ? staticData.image : `${import.meta.env.BASE_URL}${staticData.image.replace(/^\//, '')}`}
+                                            alt={item.title}
+                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                    ) : (
+                                        <div className="absolute inset-0 flex items-center justify-center bg-slate-100 group-hover:bg-teal-50/50 transition-colors">
+                                            <NewsIcon className="w-12 h-12 text-slate-300 group-hover:text-brand-secondary/50 transition-colors" />
                                         </div>
-                                        <div className="flex items-center text-slate-400">
-                                            <MapPin className="w-4 h-4 mr-2" />
-                                            <span className="text-xs font-medium">{item.location}</span>
-                                        </div>
+                                    )}
+                                    <div className="absolute top-4 left-4">
+                                        <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-primary border border-slate-100 shadow-sm">
+                                            {item.category}
+                                        </span>
                                     </div>
                                 </div>
-                                <div className="p-8 flex-grow flex flex-col justify-center">
-                                    <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-4 group-hover:text-brand-primary transition-colors">
+
+                                <div className="p-8 flex flex-col flex-grow">
+                                    <div className="flex items-center gap-4 text-xs text-slate-400 font-medium uppercase tracking-wider mb-4">
+                                        <div className="flex items-center gap-1.5">
+                                            <Calendar className="w-3.5 h-3.5" />
+                                            {staticData.date}
+                                        </div>
+                                        <div className="flex items-center gap-1.5">
+                                            <MapPin className="w-3.5 h-3.5" />
+                                            {staticData.location}
+                                        </div>
+                                    </div>
+
+                                    <h3 className="text-xl font-bold text-slate-800 mb-3 leading-snug group-hover:text-brand-primary transition-colors">
                                         {item.title}
                                     </h3>
-                                    <p className="text-slate-500 text-[15px] leading-relaxed mb-6">
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
                                         {item.description}
                                     </p>
+
                                     {item.link ? (
                                         <a
                                             href={item.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-brand-secondary font-bold text-sm inline-flex items-center group/btn hover:text-brand-primary transition-colors"
+                                            className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
                                         >
-                                            {item.link.includes('linkedin.com') ? (
-                                                <>
-                                                    <Linkedin className="w-4 h-4 mr-2" />
-                                                    View on LinkedIn
-                                                </>
-                                            ) : (
-                                                'Read Selection'
-                                            )}
-                                            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                                            {t('news.read_more')}
+                                            <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover/link:translate-x-1" />
                                         </a>
                                     ) : (
-                                        <span className="text-slate-400 font-bold text-sm inline-flex items-center opacity-50 cursor-not-allowed">
-                                            Read Selection
-                                            <ArrowRight className="ml-2 w-4 h-4" />
-                                        </span>
+                                        <div className="mt-auto pt-4 border-t border-slate-50">
+                                            <span className="text-xs text-slate-400 italic">
+                                                {t('news.details_soon')}
+                                            </span>
+                                        </div>
                                     )}
                                 </div>
-                                {item.image && (
-                                    <div className="md:w-72 h-48 md:h-auto relative shrink-0 border-t md:border-t-0 md:border-l border-slate-100">
-                                        <img
-                                            src={`${import.meta.env.BASE_URL}${item.image}`}
-                                            alt={item.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    ))}
+                            </article>
+                        );
+                    })}
                 </div>
             </div>
         </div>

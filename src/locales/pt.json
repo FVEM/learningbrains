@@ -10,27 +10,214 @@
         "contact": "Contacto"
     },
     "home": {
-        "hero_title": "Habilidades reais para uma indústria real",
-        "hero_subtitle": "Sistemas integrados de aprendizagem no local de trabalho para a requalificação industrial",
-        "cta": "Saiba mais"
+        "seo_title": "Learning Brains - IA para EFP",
+        "seo_description": "Revolucionando o ensino e a formação profissional no setor industrial através da aprendizagem no local de trabalho e IA.",
+        "hero_badge": "Projeto Erasmus+",
+        "hero_title_1": "Requalificar a",
+        "hero_title_highlight": "Força de Trabalho Industrial",
+        "hero_title_2": "com IA e OJL",
+        "hero_subtitle": "Capacitar prestadores de EFP e PME industriais com metodologias inovadoras de aprendizagem no local de trabalho apoiadas por Inteligência Artificial.",
+        "cta_primary": "Saber Mais",
+        "cta_secondary": "Nossos Parceiros",
+        "partners_count": "6 Parceiros Estratégicos",
+        "partners_text": "Em 5 Países Europeus",
+        "stats": [
+            {
+                "value": "6",
+                "label": "Parceiros"
+            },
+            {
+                "value": "5",
+                "label": "Países"
+            },
+            {
+                "value": "24",
+                "label": "Meses"
+            },
+            {
+                "value": "3",
+                "label": "Resultados"
+            }
+        ],
+        "pillars_badge": "Pilares Centrais",
+        "pillars_title": "Inovar os Sistemas de EFP",
+        "pillars_subtitle": "Learning Brains introduz um novo paradigma para a formação industrial combinando três elementos-chave numa estrutura unificada.",
+        "features": [
+            {
+                "title": "Foco Industrial",
+                "desc": "Metodologias adaptadas para o setor manufatureiro, abordando lacunas de competências específicas e necessidades tecnológicas."
+            },
+            {
+                "title": "Aprendizagem no Local de Trabalho",
+                "desc": "Integrar a educação diretamente no fluxo de trabalho para minimizar interrupções e maximizar a aplicação prática."
+            },
+            {
+                "title": "Ferramentas Aprimoradas por IA",
+                "desc": "Aproveitar a inteligência artificial para personalizar percursos de aprendizagem e otimizar a aquisição de competências."
+            }
+        ],
+        "impact_badge": "Impacto do Projeto",
+        "impact_title": "Impulsionar Mudança Real",
+        "impact_text": "Visamos colmatar a lacuna entre o ensino profissional e as necessidades industriais reais através de intervenções práticas e mensuráveis.",
+        "impact_cta": "Ver Impacto Completo",
+        "impact_point_1": "Maior Adaptabilidade da Força de Trabalho",
+        "impact_point_2": "Currículos de EFP Modernizados",
+        "impact_point_3": "Ligações Indústria-Educação Mais Fortes",
+        "chart_label_1": "Adaptabilidade",
+        "chart_label_2": "Eficiência da Formação",
+        "chart_label_3": "Velocidade de Aprendizagem"
+    },
+    "about": {
+        "seo_title": "Sobre o Projeto",
+        "seo_description": "Saiba sobre os objetivos e metas do projeto Learning Brains.",
+        "title": "Sobre o Projeto",
+        "background_title": "Antecedentes e Contexto",
+        "background_text": "A rápida evolução dos processos industriais, impulsionada pela digitalização e automação, está a criar uma necessidade crescente de requalificação da força de trabalho em toda a Europa. Abordagens de formação tradicionais muitas vezes falham em atender às necessidades de aprendizagem específicas e contextuais dos trabalhadores que devem adaptar-se a novas tecnologias e processos, mantendo-se produtivos. Learning Brains aborda este desafio desenvolvendo sistemas integrados de aprendizagem no local de trabalho que combinam experiência prática no local de trabalho com abordagens educacionais estruturadas.",
+        "objectives_title": "Objetivos do Projeto",
+        "objectives_list": [
+            "Desenvolver metodologias inovadoras de aprendizagem no local de trabalho adaptadas para a requalificação industrial",
+            "Criar ferramentas baseadas em IA para apoiar percursos de aprendizagem personalizados em ambientes de trabalho",
+            "Fomentar a cooperação entre prestadores de EFP e parceiros industriais em toda a Europa",
+            "Produzir recursos educacionais abertos para a requalificação industrial acessíveis a um vasto público",
+            "Contribuir para o diálogo político europeu sobre a modernização do ensino e formação profissional"
+        ],
+        "focus_title": "Áreas de Foco",
+        "focus_list": [
+            "Ensino e Formação Profissional (EFP)",
+            "Metodologias de aprendizagem no local de trabalho",
+            "Requalificação e upskilling industrial",
+            "Ferramentas de apoio à aprendizagem baseadas em IA"
+        ],
+        "target_title": "Grupos-Alvo",
+        "target_list": [
+            "Trabalhadores industriais em processos de requalificação",
+            "Prestadores de EFP e formadores em setores industriais",
+            "Gestores de RH e coordenadores de formação na indústria",
+            "Decisores políticos em educação profissional e emprego"
+        ]
+    },
+    "partners": {
+        "seo_title": "Nossos Parceiros",
+        "seo_description": "Conheça os parceiros do consórcio do projeto Learning Brains.",
+        "label": "Colaboração Transnacional",
+        "title": "Nossos Parceiros",
+        "subtitle": "Learning Brains é uma parceria transnacional que reúne associações industriais, agências de apoio empresarial e especialistas em formação de toda a Europa.",
+        "view_org": "Ver Organização",
+        "roles": {
+            "Coordinator": "Coordenador",
+            "Partner": "Parceiro"
+        },
+        "countries": {
+            "Spain": "Espanha",
+            "Italy": "Itália",
+            "Austria": "Áustria",
+            "Slovakia": "Eslováquia",
+            "Portugal": "Portugal"
+        },
+        "descriptions": [
+            "Uma federação industrial líder que representa mais de 800 empresas no setor metalúrgico, comprometida com a inovação e formação.",
+            "A empresa de serviços da Confindustria Veneto, especializada em formação, inovação e desenvolvimento organizacional para empresas regionais.",
+            "Representando os interesses da comunidade empresarial da Estíria e fornecendo amplos serviços de apoio educacional e formativo.",
+            "Especialistas no design e implementação de metodologias pedagógicas inovadoras e ambientes de aprendizagem digital.",
+            "A principal agência de apoio a pequenas e médias empresas na Eslováquia, promovendo o empreendedorismo e o desenvolvimento de competências.",
+            "Dedicado ao desenvolvimento de recursos humanos e soluções de formação inovadoras para o mercado de trabalho moderno."
+        ]
+    },
+    "news": {
+        "seo_title": "Notícias e Eventos",
+        "seo_description": "Últimas atualizações e eventos de Learning Brains.",
+        "label": "Atualizações do Projeto",
+        "title": "Notícias e Eventos",
+        "subtitle": "Acompanhe o progresso do projeto Learning Brains através das nossas últimas notícias, reuniões e atividades de disseminação.",
+        "items_list": [
+            {
+                "title": "Reunião de Lançamento do Projeto em Bilbau",
+                "category": "Reunião",
+                "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre necessidades de requalificação industrial."
+            },
+            {
+                "title": "Próximo Workshop: IA no EFP",
+                "category": "Workshop",
+                "description": "Junte-se a nós para um workshop online explorando o potencial da Inteligência Artificial no Ensino e Formação Profissional. Receberemos especialistas de toda a Europa para partilhar insights e melhores práticas."
+            },
+            {
+                "title": "Primeira Reunião Transnacional do Projeto",
+                "category": "Projeto",
+                "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro esboço do quadro de requalificação e o planeamento da fase piloto."
+            }
+        ],
+        "read_more": "Ler Mais",
+        "details_soon": "Mais detalhes em breve"
+    },
+    "resources": {
+        "seo_title": "Recursos",
+        "seo_description": "Repositório público de documentos do Learning Brains.",
+        "label": "Repositório Público",
+        "title": "Recursos",
+        "subtitle": "Aceda aos documentos públicos, guias e modelos técnicos do projeto à medida que são lançados ao longo do ciclo de vida do projeto.",
+        "repo_title": "Repositório de Documentos",
+        "repo_desc": "O repositório público conterá downloads em PDF de brochuras do projeto, relatórios e manuais metodológicos. Atualmente, nenhum ficheiro está disponível para download público.",
+        "btn_brochure": "Brochura do Projeto",
+        "btn_guide": "Guia de Implementação"
+    },
+    "results": {
+        "seo_title": "Resultados do Projeto",
+        "seo_description": "Resultados e outputs do projeto Learning Brains.",
+        "title": "Resultados do Projeto",
+        "subtitle": "Aceda aos outputs tangíveis e contribuições intelectuais do projeto Learning Brains.",
+        "status_note": "O projeto Learning Brains está atualmente na sua fase de implementação. Resultados e entregáveis serão publicados progressivamente à medida que estiverem disponíveis e forem aprovados pela Comissão Europeia.",
+        "available_title": "Resultados Disponíveis",
+        "no_results": "Nenhum resultado foi publicado ainda. Por favor, verifique mais tarde.",
+        "planned_title": "Resultados Planeados",
+        "planned_list": [
+            "Quadro Europeu para Requalificação Industrial",
+            "Manual para Mentoria no Local de Trabalho",
+            "Gerador de Percursos de Aprendizagem Impulsionado por IA",
+            "Recomendações Políticas Transnacionais"
+        ]
+    },
+    "impact": {
+        "seo_title": "Influência e Impacto",
+        "seo_description": "Compreender como o Learning Brains contribui para a formação profissional e requalificação industrial.",
+        "label": "Disseminação e Impacto",
+        "title": "Influência do Projeto",
+        "subtitle": "Compreender como o Learning Brains contribui para a modernização do ensino profissional europeu e a requalificação industrial.",
+        "strategy_title": "Estratégia de Disseminação",
+        "strategy_text": "A nossa estratégia foca-se em alcançar os principais interessados em toda a Europa para garantir que os resultados do projeto sejam amplamente conhecidos e utilizados. Utilizamos uma abordagem multicanal incluindo este hub digital, redes sociais setoriais, eventos industriais regionais e workshops transnacionais.",
+        "audience_title": "Públicos-Alvo",
+        "audience_list": [
+            "Trabalhadores Industriais",
+            "Centros de Formação Profissional",
+            "PME Industriais",
+            "Decisores Políticos",
+            "Parceiros Sociais",
+            "Comunidade de Investigação"
+        ],
+        "impact_title": "Impacto Esperado",
+        "impact_text": "O projeto Learning Brains espera contribuir para a modernização dos sistemas de EFP fornecendo ferramentas validadas para a requalificação industrial. O impacto será observado na melhor adaptabilidade dos trabalhadores industriais às mudanças tecnológicas e no aumento da eficiência das metodologias de formação no local de trabalho.",
+        "note": "Nota: Os impactos do projeto são atualmente descritos de forma não quantitativa, uma vez que a implementação está nas suas fases iniciais."
     },
     "contact": {
         "connect_us": "Conecte-se conosco",
-        "title": "Entre em Contato",
-        "description": "Tem alguma dúvida sobre o projeto Learning Brains? Entre em contato com o consórcio através deste formulário ou siga-nos em nossos canais sociais.",
-        "email_inquiry": "Consulta por E-mail",
+        "title": "Entre em Contacto",
+        "description": "Tem alguma dúvida sobre o projeto Learning Brains? Entre em contacto com o consórcio através deste formulário ou siga-nos nos nossos canais sociais.",
+        "email_inquiry": "Consulta por Email",
         "official_channels": "Canais Oficiais",
-        "social_pending": "LinkedIn e Twitter ativados no meio do projeto",
-        "disclaimer": "Este projeto segue rigorosos mandatos de visibilidade Erasmus+. Todas as informações recebidas são tratadas confidencialmente e usadas apenas para fins de disseminação.",
+        "social_pending": "LinkedIn e Twitter ativados a meio do projeto",
+        "disclaimer": "Este projeto segue rigorosos mandatos de visibilidade do Erasmus+. Todas as informações recebidas são tratadas confidencialmente e utilizadas apenas para fins de disseminação.",
         "form": {
             "full_name": "Nome Completo",
-            "email": "Endereço de E-mail",
-            "message": "Sua Mensagem",
+            "email": "Endereço de Email",
+            "message": "A Sua Mensagem",
             "send": "Enviar Mensagem",
             "security": "Integração pronta • Comunicação segura",
             "placeholder_name": "João Silva",
-            "placeholder_email": "joao@exemplo.com",
-            "placeholder_message": "Conte-nos sobre seu interesse no projeto..."
+            "placeholder_email": "joao@exemplo.pt",
+            "placeholder_message": "Conte-nos sobre o seu interesse no projeto...",
+            "status_success_title": "Mensagem Enviada!",
+            "status_success_desc": "Obrigado por nos contactar. Responderemos em breve.",
+            "status_sending": "A enviar...",
+            "status_error": "Algo correu mal. Por favor, tente novamente mais tarde."
         }
     },
     "footer": {

@@ -3,14 +3,13 @@ import { Users, Globe, ExternalLink, ChevronRight, Linkedin } from 'lucide-react
 import SEOHead from '../components/SEOHead';
 
 const Partners = () => {
-    useTranslation();
+    const { t } = useTranslation();
 
     const partners = [
         {
             name: "Federación Vizcaína de Empresas del Metal (FVEM)",
             role: "Coordinator",
             country: "Spain",
-            description: "A leading industrial federation representing more than 800 companies in the metal sector, committed to innovation and training.",
             logo: "FVEM",
             logoSrc: "/FVEM-EN.jpg",
             website: "https://www.fvem.es",
@@ -20,7 +19,6 @@ const Partners = () => {
             name: "Confindustria Veneto SIAV S.r.l",
             role: "Partner",
             country: "Italy",
-            description: "The service company of Confindustria Veneto, specialized in training, innovation, and organizational development for regional companies.",
             logo: "SIAV",
             logoSrc: "/Conf.Veneto SIAV logo.png",
             website: "https://www.siav.net/wp/",
@@ -30,7 +28,6 @@ const Partners = () => {
             name: "Wirtschaftskammer Steiermark (WKO)",
             role: "Partner",
             country: "Austria",
-            description: "Representing the interests of the Styrian business community and providing extensive educational and training support services.",
             logo: "WKO",
             logoSrc: "/room-466-logo-blau-transparent-300dpi.png",
             website: "https://www.wko.at/",
@@ -40,7 +37,6 @@ const Partners = () => {
             name: "Media Creativa 2020, S.L.",
             role: "Partner",
             country: "Spain",
-            description: "Experts in the design and implementation of innovative pedagogical methodologies and digital learning environments.",
             logo: "Media Creativa",
             logoSrc: "/Media Creativa 2020.jpg",
             website: "https://mediacreativa.eu/",
@@ -50,7 +46,6 @@ const Partners = () => {
             name: "Slovak Business Agency (SBA)",
             role: "Partner",
             country: "Slovakia",
-            description: "The primary agency for the support of small and medium-sized enterprises in Slovakia, fostering entrepreneurship and skills development.",
             logo: "SBA",
             logoSrc: "/sba.jpg",
             website: "https://www.sbagency.sk/",
@@ -60,7 +55,6 @@ const Partners = () => {
             name: "Sparkling Intuition",
             role: "Partner",
             country: "Portugal",
-            description: "Dedicated to human resources development and innovative training solutions for the modern labor market.",
             logo: "Sparkling Intuition",
             logoSrc: "/SPIN logo large.png",
             website: "https://sparkling-intuition.eu/",
@@ -68,22 +62,24 @@ const Partners = () => {
         }
     ];
 
+    const partnerDescriptions = t('partners.descriptions', { returnObjects: true });
+
     return (
         <div className="py-20 bg-white">
             <SEOHead
-                title="Our Partners"
-                description="Meet the consortium partners of Learning Brains project."
+                title={t('partners.seo_title')}
+                description={t('partners.seo_description')}
                 path="/partners"
             />
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-20">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
                         <Users className="w-3 h-3" />
-                        Transnational Collaboration
+                        {t('partners.label')}
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">Our Partners</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">{t('partners.title')}</h1>
                     <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Learning Brains is a transnational partnership bringing together industrial associations, business support agencies, and training experts from across Europe.
+                        {t('partners.subtitle')}
                     </p>
                 </div>
 
@@ -107,18 +103,18 @@ const Partners = () => {
                             <div className="flex-grow">
                                 <div className="flex items-center gap-2 mb-4">
                                     <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md ${partner.role === 'Coordinator' ? 'bg-brand-primary text-white' : 'bg-slate-100 text-slate-500'}`}>
-                                        {partner.role}
+                                        {t(`partners.roles.${partner.role}`, partner.role)}
                                     </span>
                                     <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md bg-teal-50 text-brand-secondary flex items-center gap-1">
                                         <Globe className="w-3 h-3" />
-                                        {partner.country}
+                                        {t(`partners.countries.${partner.country}`, partner.country)}
                                     </span>
                                 </div>
                                 <h3 className="text-lg font-bold text-slate-800 mb-4 leading-snug group-hover:text-brand-primary transition-colors">
                                     {partner.name}
                                 </h3>
                                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                                    {partner.description}
+                                    {partnerDescriptions[idx]}
                                 </p>
                             </div>
 
@@ -130,7 +126,7 @@ const Partners = () => {
                                     aria-label={`Visit official website of ${partner.name}`}
                                     className="text-[13px] font-bold text-slate-400 hover:text-brand-secondary flex items-center gap-2 group/link transition-all"
                                 >
-                                    View Organization
+                                    {t('partners.view_org')}
                                     <ExternalLink className="w-3 h-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                                 </a>
 

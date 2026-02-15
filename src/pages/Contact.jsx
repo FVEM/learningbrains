@@ -104,8 +104,8 @@ const Contact = () => {
                                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
                                     <CheckCircle className="w-8 h-8" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-800 mb-2">Message Sent!</h3>
-                                <p className="text-slate-500">Thank you for contacting us. We will get back to you shortly.</p>
+                                <h3 className="text-2xl font-bold text-slate-800 mb-2">{t('contact.form.status_success_title')}</h3>
+                                <p className="text-slate-500">{t('contact.form.status_success_desc')}</p>
                             </div>
                         )}
 
@@ -162,7 +162,7 @@ const Contact = () => {
                                 {status === 'sending' ? (
                                     <>
                                         <Loader2 className="w-5 h-5 animate-spin" />
-                                        Sending...
+                                        {t('contact.form.status_sending')}
                                     </>
                                 ) : (
                                     <>
@@ -175,7 +175,7 @@ const Contact = () => {
                             {status === 'error' && (
                                 <div className="flex items-center gap-2 p-4 bg-red-50 text-red-600 rounded-xl text-sm justify-center">
                                     <AlertCircle className="w-4 h-4" />
-                                    <span>Something went wrong. Please try again later.</span>
+                                    <span>{t('contact.form.status_error')}</span>
                                 </div>
                             )}
 
