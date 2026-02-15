@@ -96,7 +96,7 @@ const Home = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+            <section className="relative h-screen flex flex-col justify-center overflow-hidden bg-white">
                 {/* Background Video (Hidden) */}
                 <video
                     ref={videoRef}
@@ -106,65 +106,71 @@ const Home = () => {
                     playsInline
                     loop={false}
                     onEnded={() => {
-                        // handled in useEffect to switch to canvas
+                        // handled in useEffect
                     }}
                 />
 
                 {/* Canvas for Ping-Pong Loop */}
                 <canvas
                     ref={canvasRef}
-                    className="absolute inset-0 w-full h-full object-cover z-0"
+                    className="absolute inset-0 w-full h-full object-cover z-0 opacity-60"
                 />
 
-                {/* Overlay for Readability */}
-                <div className="absolute inset-0 bg-black/60 z-10" />
+                {/* Light Overlay to ensure text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent z-10" />
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 lg:pt-32 lg:pb-40 text-center">
-                    <div className="space-y-10 max-w-4xl mx-auto">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-brand-secondary text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-secondary opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-secondary"></span>
-                            </span>
-                            {t('home.hero_badge')}
+                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div className="max-w-3xl space-y-8">
+                        {/* Badge */}
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
+                            <span className="w-2 h-2 rounded-full bg-brand-secondary"></span>
+                            ERASMUS+ COOPERATION PARTNERSHIP
                         </div>
 
-                        <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] animate-fade-in-up delay-100">
-                            {t('home.hero_title_1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-teal-300">{t('home.hero_title_highlight')}</span>
-                            <br /> {t('home.hero_title_2')}
+                        {/* Title */}
+                        <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-brand-primary leading-[1.1] animate-fade-in-up delay-100">
+                            Learning Brains <br />
+                            <span className="text-brand-secondary">Real Skills for Real Industry</span>
                         </h1>
 
-                        <p className="text-xl text-slate-200 leading-relaxed max-w-2xl mx-auto animate-fade-in-up delay-200">
-                            {t('home.hero_subtitle')}
+                        {/* Subtitle */}
+                        <p className="text-xl text-slate-500 leading-relaxed max-w-xl animate-fade-in-up delay-200">
+                            Integrated On-the-job Learning Systems for Industrial Reskilling
                         </p>
 
-                        <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-300">
+                        {/* CTAs */}
+                        <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
                             <Link
                                 to={`/${i18n.language}/about`}
-                                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-primary rounded-full hover:bg-brand-primary/90 hover:shadow-lg hover:shadow-brand-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
+                                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-secondary rounded-lg hover:bg-brand-secondary/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-secondary"
                             >
                                 {t('home.cta_primary')}
                                 <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                             <Link
                                 to={`/${i18n.language}/partners`}
-                                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-white/10 border border-white/20 backdrop-blur-md rounded-full hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/50"
+                                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 transition-all duration-200 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200"
                             >
+                                <Users className="w-5 h-5 mr-2" />
                                 {t('home.cta_secondary')}
                             </Link>
                         </div>
+                    </div>
 
-                        <div className="flex items-center justify-center gap-8 pt-8 animate-fade-in-up delay-400">
-                            <div className="flex -space-x-4">
-                                {[...Array(4)].map((_, i) => (
-                                    <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-700 flex items-center justify-center text-xs font-bold text-slate-300">
-                                        {String.fromCharCode(65 + i)}
-                                    </div>
-                                ))}
+                    {/* Bottom Stats (Integrated into Hero) */}
+                    <div className="absolute bottom-12 left-0 w-full px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-12 border-t border-slate-200 pt-8 animate-fade-in-up delay-500">
+                            <div>
+                                <div className="text-lg font-bold text-brand-secondary">Erasmus+ KA220-VET</div>
+                                <div className="text-xs text-slate-400 uppercase tracking-widest">PROGRAMME</div>
                             </div>
-                            <div className="text-sm text-slate-400 text-left">
-                                <strong className="text-white block">{t('home.partners_count')}</strong>
-                                {t('home.partners_text')}
+                            <div>
+                                <div className="text-lg font-bold text-brand-secondary">24 Months</div>
+                                <div className="text-xs text-slate-400 uppercase tracking-widest">DURATION</div>
+                            </div>
+                            <div>
+                                <div className="text-lg font-bold text-brand-secondary">Industrial Reskilling</div>
+                                <div className="text-xs text-slate-400 uppercase tracking-widest">FOCUS</div>
                             </div>
                         </div>
                     </div>
