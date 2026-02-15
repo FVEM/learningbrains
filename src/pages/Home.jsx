@@ -130,11 +130,11 @@ const Home = () => {
                         {/* Typography Block */}
                         <div className="animate-fade-in-up delay-100">
                             {/* Top Title - Navy */}
-                            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-2">
+                            <h2 className="text-3xl md:text-4xl font-bold font-sans text-brand-navy mb-2">
                                 Learning Brains
                             </h2>
                             {/* Main Headline - Green */}
-                            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-brand-primary leading-[1.1]">
+                            <h1 className="text-5xl md:text-7xl font-extrabold font-sans tracking-tight text-brand-primary leading-[1.1]">
                                 Real Skills for Real <br className="hidden md:block" />
                                 Industry
                             </h1>

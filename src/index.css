@@ -39,13 +39,13 @@
     @apply py-12 md:py-20;
   }
 
-  /* Industrial Design Theme */
+  /* Industrial Design Theme - Standardized on Outfit */
   .font-heading {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Outfit", "Inter", "system-ui", "sans-serif";
   }
 
   .font-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: "Outfit", "Inter", "system-ui", "sans-serif";
   }
 
   .text-primary-green {
