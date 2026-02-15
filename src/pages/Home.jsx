@@ -191,46 +191,42 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Consortium Row - Integrated below Stats */}
+                        <div className="mt-10 animate-fade-in-up delay-500">
+                            <h3 className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6">
+                                {t('home.consortium_title')}
+                            </h3>
+                            <div className="flex flex-wrap items-center gap-x-8 gap-y-6">
+                                {/* FVEM */}
+                                <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" title="FVEM" className="h-6 md:h-7 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                                    <img src={`${import.meta.env.BASE_URL}FVEM-EN.jpg`} alt="FVEM" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* Media Creativa */}
+                                <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" title="Media Creativa" className="h-6 md:h-7 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                                    <img src={`${import.meta.env.BASE_URL}Media Creativa 2020.jpg`} alt="Media Creativa" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* SBA */}
+                                <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" title="SBA" className="h-6 md:h-7 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                                    <img src={`${import.meta.env.BASE_URL}sba.jpg`} alt="SBA" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* SPIN */}
+                                <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" title="Sparkling Intuition" className="h-6 md:h-7 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                                    <img src={`${import.meta.env.BASE_URL}SPIN logo large.png`} alt="SPIN" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* SIAV */}
+                                <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" title="SIAV" className="h-6 md:h-7 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                                    <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="SIAV" className="h-full w-auto object-contain" />
+                                </a>
+                                {/* Room 466 */}
+                                <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" title="Room 466 (WKO)" className="h-6 md:h-7 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                                    <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="Room 466" className="h-full w-auto object-contain" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-
-            {/* Consortium Band - Edge-to-edge white band following the Hero */}
-            <div className="w-full bg-white border-y border-slate-100 py-10 relative z-30 animate-fade-in">
-                <div className="text-center mb-8">
-                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">
-                        {t('home.consortium_title')}
-                    </h3>
-                </div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-wrap justify-between items-center gap-x-12 gap-y-8">
-                        {/* FVEM */}
-                        <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" title="FVEM" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
-                            <img src="/FVEM-EN.jpg" alt="FVEM" className="h-full w-auto object-contain" />
-                        </a>
-                        {/* Media Creativa */}
-                        <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" title="Media Creativa" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
-                            <img src="/Media Creativa 2020.jpg" alt="Media Creativa" className="h-full w-auto object-contain" />
-                        </a>
-                        {/* SBA */}
-                        <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" title="SBA" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
-                            <img src="/sba.jpg" alt="SBA" className="h-full w-auto object-contain" />
-                        </a>
-                        {/* SPIN */}
-                        <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" title="Sparkling Intuition" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
-                            <img src="/SPIN logo large.png" alt="SPIN" className="h-full w-auto object-contain" />
-                        </a>
-                        {/* SIAV */}
-                        <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" title="SIAV" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
-                            <img src="/Conf.Veneto SIAV logo.png" alt="SIAV" className="h-full w-auto object-contain" />
-                        </a>
-                        {/* Room 466 */}
-                        <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" title="Room 466 (WKO)" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
-                            <img src="/room-466-logo-blau-transparent-300dpi.png" alt="Room 466" className="h-full w-auto object-contain" />
-                        </a>
-                    </div>
-                </div>
-            </div>
 
             {/* Latest Updates */}
             <section className="py-20 bg-slate-50">
