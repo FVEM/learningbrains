@@ -129,9 +129,9 @@ const Home = () => {
                         </div>
 
                         {/* Typography Block */}
-                        <div className="mt-10 animate-fade-in-up delay-100">
+                        <div className="mt-8 animate-fade-in-up delay-100">
                             {/* Top Title - Navy Blue */}
-                            <h2 className="text-3xl md:text-4xl font-bold font-sans text-brand-title-blue mb-3">
+                            <h2 className="text-3xl md:text-4xl font-bold font-sans text-brand-title-blue mb-4">
                                 Learning Brains
                             </h2>
                             {/* Main Headline - Green */}
@@ -142,12 +142,12 @@ const Home = () => {
                         </div>
 
                         {/* Subtitle */}
-                        <p className="mt-8 text-xl text-slate-500 font-medium leading-relaxed max-w-xl animate-fade-in-up delay-200">
+                        <p className="mt-10 text-xl text-slate-500 font-medium leading-relaxed max-w-xl animate-fade-in-up delay-200">
                             Integrated On-the-job Learning Systems for Industrial Reskilling
                         </p>
 
                         {/* CTAs */}
-                        <div className="mt-8 flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                        <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up delay-300">
                             <Link
                                 to={`/${i18n.language}/about`}
                                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-200 bg-brand-primary rounded-lg hover:bg-brand-secondary hover:shadow-lg hover:shadow-teal-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
