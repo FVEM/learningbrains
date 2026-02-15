@@ -132,15 +132,15 @@ const Home = () => {
 
                 {/* Main Content Container - Positioned higher on page with fluid padding */}
                 <div className="relative z-20 flex-grow flex flex-col justify-start py-fluid-hero max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div className="max-w-4xl">
+                    <div className="max-w-3xl">
                         {/* Validation Badge */}
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
-                            <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse"></span>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
+                            <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
                             {t('home.hero_badge')}
                         </div>
 
                         {/* Typography Block */}
-                        <div className="mt-6 md:mt-8 animate-fade-in-up delay-100">
+                        <div className="mt-8 animate-fade-in-up delay-100">
                             {/* Top Title - Navy Blue Fluid */}
                             <h2 className="text-fluid-h2 font-bold font-sans text-brand-title-blue mb-4">
                                 {t('home.hero_name')}
@@ -152,81 +152,42 @@ const Home = () => {
                         </div>
 
                         {/* Subtitle Fluid */}
-                        <p className="mt-8 md:mt-10 text-fluid-p text-slate-500 font-medium animate-fade-in-up delay-200">
+                        <p className="mt-10 text-fluid-p text-slate-500 font-medium max-w-xl animate-fade-in-up delay-200">
                             {t('home.hero_subtitle')}
                         </p>
 
                         {/* CTAs */}
-                        <div className="mt-8 md:mt-10 flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                        <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up delay-300">
                             <Link
                                 to={`/${i18n.language}/about`}
-                                className="inline-flex items-center justify-center px-6 md:px-8 py-3.5 md:py-4 text-sm font-bold text-white transition-all duration-300 bg-brand-primary rounded-xl hover:bg-brand-secondary hover:shadow-xl hover:shadow-teal-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
+                                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-200 bg-brand-primary rounded-lg hover:bg-brand-secondary hover:shadow-lg hover:shadow-teal-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
                             >
                                 {t('home.cta_primary')}
                                 <ArrowRight className="w-4 h-4 ml-2" />
                             </Link>
                             <Link
                                 to={`/${i18n.language}/partners`}
-                                className="inline-flex items-center justify-center px-6 md:px-8 py-3.5 md:py-4 text-sm font-bold text-brand-navy transition-all duration-300 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm"
+                                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-brand-navy transition-all duration-200 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm"
                             >
                                 <Users className="w-4 h-4 mr-2" />
                                 {t('home.cta_secondary')}
                             </Link>
                         </div>
 
-                        {/* Consortium Row - Integrated below CTAs */}
-                        <div className="mt-10 md:mt-12 animate-fade-in-up delay-400">
-                            <h3 className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6">
-                                {t('home.consortium_title')}
-                            </h3>
-                            <div className="flex flex-wrap items-center gap-x-8 gap-y-6 opacity-60 hover:opacity-100 transition-opacity duration-500">
-                                <a href="https://fvem.es/" target="_blank" rel="noopener noreferrer">
-                                    <img src={`${import.meta.env.BASE_URL}Logos/FVEM.png`} alt="FVEM" className="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-                                </a>
-                                <a href="https://www.siav.net/" target="_blank" rel="noopener noreferrer">
-                                    <img src={`${import.meta.env.BASE_URL}Logos/Siav.png`} alt="SIAV" className="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-                                </a>
-                                <a href="https://www.vt-wko.at/" target="_blank" rel="noopener noreferrer">
-                                    <img src={`${import.meta.env.BASE_URL}Logos/Wkowiwi.png`} alt="WKO" className="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-                                </a>
-                                <a href="https://www.editpando.pt/" target="_blank" rel="noopener noreferrer">
-                                    <img src={`${import.meta.env.BASE_URL}Logos/Edit.png`} alt="EDIT" className="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-                                </a>
-                                <a href="https://www.sba.sk/" target="_blank" rel="noopener noreferrer">
-                                    <img src={`${import.meta.env.BASE_URL}Logos/SBA.png`} alt="SBA" className="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-                                </a>
-                                <a href="https://www.mentortools.com/" target="_blank" rel="noopener noreferrer">
-                                    <img src={`${import.meta.env.BASE_URL}Logos/Mentortools.png`} alt="Mentortools" className="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-                                </a>
-                            </div>
-                        </div>
-
-                        {/* Stats - Tighter spacing below Logos */}
-                        <div className="mt-10 md:mt-14 animate-fade-in-up delay-500">
-                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                        {/* Stats - Tighter spacing below CTAs */}
+                        <div className="mt-12 animate-fade-in-up delay-400">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="pl-4 border-l-2 border-brand-primary/20">
-                                    <div className="text-2xl md:text-3xl font-extrabold text-brand-primary">1 / 5</div>
-                                    <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
-                                        {t('home.hero_stats.focus_value')}
-                                    </div>
+                                    <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.programme_name')}</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.programme')}</div>
                                 </div>
                                 <div className="pl-4 border-l-2 border-brand-primary/20">
-                                    <div className="text-2xl md:text-3xl font-extrabold text-brand-primary">24h</div>
-                                    <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
-                                        {t('home.hero_stats.duration_value')}
-                                    </div>
+                                    <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.duration_value')}</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.duration_label')}</div>
                                 </div>
-                                <div className="hidden lg:block pl-4 border-l-2 border-brand-primary/20">
-                                    <div className="text-2xl md:text-3xl font-extrabold text-brand-primary">6</div>
-                                    <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
-                                        {t('home.partners_count')}
-                                    </div>
-                                </div>
-                                <div className="hidden lg:block pl-4 border-l-2 border-brand-primary/20">
-                                    <div className="text-2xl md:text-3xl font-extrabold text-brand-primary">5</div>
-                                    <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
-                                        {t('home.partners_text')}
-                                    </div>
+                                <div className="pl-4 border-l-2 border-brand-primary/20">
+                                    <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.focus_value')}</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.focus_label')}</div>
                                 </div>
                             </div>
                         </div>
@@ -234,20 +195,57 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Latest Updates - Dynamic Grid with Fluid Padding */}
-            <section className="bg-slate-50 section-padding-fluid">
+            {/* Consortium Band - Edge-to-edge white band following the Hero */}
+            <div className="w-full bg-white border-y border-slate-100 py-10 relative z-30 animate-fade-in">
+                <div className="text-center mb-8">
+                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">
+                        {t('home.consortium_title')}
+                    </h3>
+                </div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
-                        <div className="max-w-2xl">
-                            <h2 className="text-fluid-h2 font-bold text-slate-900 mb-3">{t('home.latest_updates.title')}</h2>
-                            <p className="text-slate-500 text-sm md:text-base leading-relaxed">{t('home.latest_updates.description')}</p>
+                    <div className="flex flex-wrap justify-between items-center gap-x-12 gap-y-8">
+                        {/* FVEM */}
+                        <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" title="FVEM" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
+                            <img src="/FVEM-EN.jpg" alt="FVEM" className="h-full w-auto object-contain" />
+                        </a>
+                        {/* Media Creativa */}
+                        <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" title="Media Creativa" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
+                            <img src="/Media Creativa 2020.jpg" alt="Media Creativa" className="h-full w-auto object-contain" />
+                        </a>
+                        {/* SBA */}
+                        <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" title="SBA" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
+                            <img src="/sba.jpg" alt="SBA" className="h-full w-auto object-contain" />
+                        </a>
+                        {/* SPIN */}
+                        <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" title="Sparkling Intuition" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
+                            <img src="/SPIN logo large.png" alt="SPIN" className="h-full w-auto object-contain" />
+                        </a>
+                        {/* SIAV */}
+                        <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" title="SIAV" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
+                            <img src="/Conf.Veneto SIAV logo.png" alt="SIAV" className="h-full w-auto object-contain" />
+                        </a>
+                        {/* Room 466 */}
+                        <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" title="Room 466 (WKO)" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-default">
+                            <img src="/room-466-logo-blau-transparent-300dpi.png" alt="Room 466" className="h-full w-auto object-contain" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Latest Updates */}
+            <section className="py-20 bg-slate-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-end mb-12">
+                        <div>
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{t('home.latest_updates.title')}</h2>
+                            <p className="text-slate-500">{t('home.latest_updates.description')}</p>
                         </div>
                         <Link
                             to={`/${i18n.language}/news`}
-                            className="inline-flex items-center text-brand-primary font-bold hover:text-brand-secondary transition-colors group"
+                            className="hidden md:inline-flex items-center text-slate-900 font-semibold hover:text-brand-primary transition-colors"
                         >
                             {t('home.latest_updates.view_all')}
-                            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                            <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>
                     </div>
 
