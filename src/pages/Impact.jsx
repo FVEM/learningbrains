@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Share2, TrendingUp, Target, Info } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Impact = () => {
     useTranslation();
@@ -15,6 +16,11 @@ const Impact = () => {
 
     return (
         <div className="py-20 bg-white">
+            <SEOHead
+                title="Project Influence & Impact"
+                description="Understanding how Learning Brains contributes to vocational education and industrial reskilling."
+                path="/impact"
+            />
             <div className="max-w-4xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">

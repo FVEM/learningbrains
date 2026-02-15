@@ -2,9 +2,10 @@ import { useTranslation } from 'react-i18next';
 import { useRef, useEffect, useState } from 'react';
 import { ArrowRight, Users, Cpu, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 
 const Home = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -100,6 +101,11 @@ const Home = () => {
 
     return (
         <div className="bg-white font-body text-slate-600">
+            <SEOHead
+                title={t('home.hero_title')}
+                description={t('home.hero_subtitle')}
+                path=""
+            />
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden isolating">
                 <div className="absolute inset-0 z-0">
@@ -146,14 +152,14 @@ const Home = () => {
 
                         <div className="flex flex-col sm:flex-row items-center gap-5 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
                             <Link
-                                to="/about"
+                                to={`/${i18n.language}/about`}
                                 className="w-full sm:w-auto px-10 py-4 bg-primary-green text-white font-bold rounded-xl hover:shadow-xl hover:shadow-green-900/20 transition-all flex items-center justify-center gap-2 group"
                             >
                                 {t('home.cta')}
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link
-                                to="/partners"
+                                to={`/${i18n.language}/partners`}
                                 className="w-full sm:w-auto px-10 py-4 bg-white border border-slate-200 text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
                             >
                                 <Users className="w-5 h-5 text-primary-green" />
@@ -214,7 +220,7 @@ const Home = () => {
                             <p className="text-slate-500">Milestones, events, and results from the Learning Brains project.</p>
                         </div>
                         <Link
-                            to="/news"
+                            to={`/${i18n.language}/news`}
                             className="flex items-center gap-2 text-primary-green font-bold group border-b-2 border-primary-green/10 pb-1 hover:border-primary-green transition-all font-heading"
                         >
                             View All News

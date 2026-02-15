@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
@@ -9,7 +9,9 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [langOpen, setLangOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     const { t, i18n } = useTranslation();
+    const currentLang = i18n.language; // Or use useParams if passed down, but i18n is synced
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,24 +35,26 @@ const Header = () => {
     ];
 
     const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
+        // Replace the first path segment (language) with the new language
+        const newPath = location.pathname.replace(/^\/[a-z]{2}/, `/${lng}`);
+        navigate(newPath);
         setLangOpen(false);
     };
 
     const navItems = [
-        { name: t('nav.home'), path: '/' },
-        { name: t('nav.about'), path: '/about' },
-        { name: t('nav.results'), path: '/results' },
-        { name: t('nav.partners'), path: '/partners' },
-        { name: t('nav.news'), path: '/news' },
-        { name: t('nav.resources'), path: '/resources' },
-        { name: t('nav.contact'), path: '/contact' },
+        { name: t('nav.home'), path: '' }, // Empty path relative to lang root
+        { name: t('nav.about'), path: 'about' },
+        { name: t('nav.results'), path: 'results' },
+        { name: t('nav.partners'), path: 'partners' },
+        { name: t('nav.news'), path: 'news' },
+        { name: t('nav.resources'), path: 'resources' },
+        { name: t('nav.contact'), path: 'contact' },
     ];
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-body ${isScrolled ? 'nav-glass py-3' : 'bg-white shadow-sm py-5'}`}>
             <nav className="container-custom flex items-center justify-between">
-                <Link to="/" className="flex items-center transition-transform hover:scale-[1.02] group">
+                <Link to={`/${currentLang}`} className="flex items-center transition-transform hover:scale-[1.02] group">
                     <img src={logo} alt="Learning Brains" className="h-10 md:h-12 w-auto group-hover:scale-105 transition-transform" />
                 </Link>
 
@@ -59,8 +63,8 @@ const Header = () => {
                     {navItems.map((item) => (
                         <Link
                             key={item.path}
-                            to={item.path}
-                            className={`text-sm font-semibold tracking-wide hover:text-brand-secondary transition-colors ${location.pathname === item.path ? 'text-brand-primary' : 'text-slate-600'}`}
+                            to={`/${currentLang}/${item.path}`.replace(/\/$/, '')} // Handle trailing slash if path is empty
+                            className={`text-sm font-semibold tracking-wide hover:text-brand-secondary transition-colors ${location.pathname === `/${currentLang}/${item.path}`.replace(/\/$/, '') || (item.path === '' && location.pathname === `/${currentLang}`) ? 'text-brand-primary' : 'text-slate-600'}`}
                         >
                             {item.name}
                         </Link>
@@ -72,7 +76,7 @@ const Header = () => {
                             className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 text-slate-600 hover:bg-teal-50 hover:text-brand-secondary transition-all border border-slate-100"
                         >
                             <Globe className="w-4 h-4" />
-                            <span className="text-xs font-bold uppercase">{i18n.language}</span>
+                            <span className="text-xs font-bold uppercase">{currentLang}</span>
                             <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
                         </button>
 
@@ -82,7 +86,7 @@ const Header = () => {
                                     <button
                                         key={lang.code}
                                         onClick={() => changeLanguage(lang.code)}
-                                        className={`w-full text-left px-4 py-2 text-xs font-medium rounded-lg hover:bg-slate-50 transition-colors ${i18n.language === lang.code ? 'text-brand-primary bg-teal-50' : 'text-slate-600'}`}
+                                        className={`w-full text-left px-4 py-2 text-xs font-medium rounded-lg hover:bg-slate-50 transition-colors ${currentLang === lang.code ? 'text-brand-primary bg-teal-50' : 'text-slate-600'}`}
                                     >
                                         {lang.name}
                                     </button>
@@ -112,8 +116,8 @@ const Header = () => {
                     {navItems.map((item) => (
                         <Link
                             key={item.path}
-                            to={item.path}
-                            className={`text-lg font-bold ${location.pathname === item.path ? 'text-brand-primary' : 'text-slate-600'}`}
+                            to={`/${currentLang}/${item.path}`.replace(/\/$/, '')}
+                            className={`text-lg font-bold ${location.pathname === `/${currentLang}/${item.path}`.replace(/\/$/, '') || (item.path === '' && location.pathname === `/${currentLang}`) ? 'text-brand-primary' : 'text-slate-600'}`}
                         >
                             {item.name}
                         </Link>
@@ -128,7 +132,7 @@ const Header = () => {
                         <button
                             key={lang.code}
                             onClick={() => changeLanguage(lang.code)}
-                            className={`w-full text-left px-5 py-3 text-sm font-semibold rounded-xl ${i18n.language === lang.code ? 'text-brand-primary bg-teal-50' : 'text-slate-600'}`}
+                            className={`w-full text-left px-5 py-3 text-sm font-semibold rounded-xl ${currentLang === lang.code ? 'text-brand-primary bg-teal-50' : 'text-slate-600'}`}
                         >
                             {lang.name}
                         </button>

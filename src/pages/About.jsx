@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { BookOpen, Target, Lightbulb, Users } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const About = () => {
     useTranslation();
@@ -28,6 +29,11 @@ const About = () => {
 
     return (
         <div className="py-16 md:py-24 bg-white">
+            <SEOHead
+                title="About the Project"
+                description="Learn about the Learning Brains project goals and objectives."
+                path="/about"
+            />
             <div className="max-w-4xl mx-auto px-6">
                 <h1 className="text-4xl md:text-5xl font-bold text-brand-primary text-center mb-16 tracking-tight">
                     About the Project

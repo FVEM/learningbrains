@@ -23,29 +23,107 @@ const Chatbot = () => {
         scrollToBottom();
     }, [messages, isOpen]);
 
+    const SYSTEM_PROMPT = `
+You are the AI Assistant for "Learning Brains", an Erasmus+ project focused on Industrial Reskilling and AI in the workplace.
+Your goal is to help users understand the project, its partners, and the potential of AI in vocational training.
+
+**Project Context:**
+- **Name:** Learning Brains (Erasmus+ KA220-VET).
+- **Goal:** Develop innovative on-the-job learning methodologies for industrial reskilling using AI.
+- **Duration:** 24 Months.
+- **Key Concepts:** Industrial Reskilling, Vocational Education and Training (VET), AI-based learning pathways, On-the-job learning.
+
+**Consortium Partners:**
+1. **FVEM (Spain):** Coordinator. Industrial federation of metal companies in Biscay.
+2. **Confindustria Veneto SIAV (Italy):** Training and innovation for regional companies.
+3. **WKO Steiermark (Austria):** Represents Styrian business community.
+4. **Media Creativa (Spain):** Experts in pedagogical methodologies.
+5. **Slovak Business Agency (Slovakia):** Support for SMEs.
+6. **Sparkling Intuition (Portugal):** HR development and training.
+
+**Guidelines:**
+- Be helpful, professional, and concise.
+- Answer questions about the project goals, partners, and AI in industry.
+- If asked about technical details you don't know, suggest contacting the partners via the Contact page.
+- Maintain a tone that is encouraging and forward-looking regarding AI adoption.
+- Keep responses under 3-4 sentences unless asked for more detail.
+`;
+
     const handleSendMessage = async (e) => {
         e.preventDefault();
         if (!input.trim() || isLoading) return;
 
         const userMessage = { role: 'user', content: input };
-        setMessages(prev => [...prev, userMessage]);
+        const newMessages = [...messages, userMessage];
+        setMessages(newMessages);
         setInput('');
         setIsLoading(true);
 
         try {
-            // Placeholder for OpenAI API Call
-            // const response = await fetchOpenAI(userMessage.content);
+            const isDev = import.meta.env.DEV;
+            let aiContent = "";
 
-            // Simulating network delay
-            setTimeout(() => {
-                const aiResponse = { role: 'assistant', content: "I'm currently in demo mode. Please provide an OpenAI API Key to enable real responses." }; // Replace with real API call result
-                setMessages(prev => [...prev, aiResponse]);
-                setIsLoading(false);
-            }, 1000);
+            if (isDev) {
+                // Development Mode: Direct Call (Use Local .env)
+                const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+                if (!apiKey) throw new Error("API Key missing");
 
+                const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify({
+                        model: "gpt-4o-mini",
+                        messages: [
+                            { role: "system", content: SYSTEM_PROMPT },
+                            ...newMessages.map(m => ({ role: m.role, content: m.content }))
+                        ],
+                        temperature: 0.7,
+                        max_tokens: 150
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error?.message || 'API Error');
+                }
+                const data = await response.json();
+                aiContent = data.choices[0].message.content;
+
+            } else {
+                // Production Mode: Secure Proxy Call (No API Key Exposed)
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        messages: [
+                            { role: "system", content: SYSTEM_PROMPT },
+                            ...newMessages.map(m => ({ role: m.role, content: m.content }))
+                        ]
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error?.message || 'API Error');
+                }
+                const data = await response.json();
+                aiContent = data.choices[0].message.content;
+            }
+
+            setMessages(prev => [...prev, { role: 'assistant', content: aiContent }]);
         } catch (error) {
             console.error("Error calling AI agent:", error);
-            setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, I encountered an error. Please try again later." }]);
+            let errorMessage = "Sorry, I encountered an error connectig to the AI.";
+
+            if (error.message === "API Key missing") {
+                errorMessage = "⚠️ OpenAI API Key is missing. Please add VITE_OPENAI_API_KEY to your .env file.";
+            }
+
+            setMessages(prev => [...prev, { role: 'assistant', content: errorMessage }]);
+        } finally {
             setIsLoading(false);
         }
     };

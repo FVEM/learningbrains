@@ -39,7 +39,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
                     {/* Brand */}
                     <div className="lg:col-span-4">
-                        <Link to="/" className="flex items-center mb-6">
+                        <Link to={`/${i18n.language}`} className="flex items-center mb-6">
                             <img src={logo} alt="Learning Brains" className="h-12 w-auto" />
                         </Link>
                         <p className="text-slate-500 text-[15px] leading-relaxed mb-8 max-w-sm font-normal">
@@ -53,9 +53,9 @@ const Footer = () => {
                             <a href="#" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-primary-green hover:bg-teal-50 transition-all">
                                 <Twitter className="w-5 h-5" />
                             </a>
-                            <a href="/contact" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-primary-green hover:bg-teal-50 transition-all">
+                            <Link to={`/${i18n.language}/contact`} className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-primary-green hover:bg-teal-50 transition-all">
                                 <Mail className="w-5 h-5" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -67,7 +67,10 @@ const Footer = () => {
                                 <ul className="space-y-4">
                                     {section.links.map((link, lIdx) => (
                                         <li key={lIdx}>
-                                            <Link to={link.path} className="text-[14px] text-slate-500 hover:text-primary-green transition-colors flex items-center group font-medium">
+                                            <Link
+                                                to={link.path.startsWith('/') ? `/${i18n.language}${link.path}` : link.path}
+                                                className="text-[14px] text-slate-500 hover:text-primary-green transition-colors flex items-center group font-medium"
+                                            >
                                                 {link.name}
                                                 {link.path === '#' && <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-50" />}
                                             </Link>

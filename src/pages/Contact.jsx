@@ -2,6 +2,7 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
 import { Mail, MessageSquare, Send, Globe, Phone, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
     const { t } = useTranslation();
@@ -49,6 +50,11 @@ const Contact = () => {
 
     return (
         <div className="py-20 bg-white">
+            <SEOHead
+                title={t('contact.title')}
+                description={t('contact.description')}
+                path="/contact"
+            />
             <div className="container-custom">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Left Column */}

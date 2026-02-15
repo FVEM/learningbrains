@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Users, Globe, ExternalLink, ChevronRight, Linkedin } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Partners = () => {
     useTranslation();
@@ -69,6 +70,11 @@ const Partners = () => {
 
     return (
         <div className="py-20 bg-white">
+            <SEOHead
+                title="Our Partners"
+                description="Meet the consortium partners of Learning Brains project."
+                path="/partners"
+            />
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-20">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
