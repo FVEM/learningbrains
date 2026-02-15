@@ -53,34 +53,39 @@ const Home = () => {
             // The 'ended' check is now handled by the event listener to be robust
         };
 
+        let loopStartTime = null;
+
         const renderLoop = (timestamp) => {
-            if (!lastTime) lastTime = timestamp;
-            const elapsed = timestamp - lastTime;
+            if (frames.length > 0) {
+                if (!loopStartTime) loopStartTime = timestamp;
+                const runtime = timestamp - loopStartTime;
 
-            if (elapsed > fpsInterval) {
-                lastTime = timestamp - (elapsed % fpsInterval);
+                // Harmonic Oscillation (Cosine Wave)
+                // We use Cosine because cos(0) = 1, which maps to the END of the video.
+                // Since we start the loop right after the video ends, this ensures no jump.
+                // Cycle: End -> Start -> End
 
-                if (frames.length > 0) {
-                    if (frameIndex >= frames.length) frameIndex = frames.length - 1;
-                    if (frameIndex < 0) frameIndex = 0;
+                // Adjust speed: 80ms per frame equivalent for the full wave period
+                const cycleDuration = frames.length * 80;
 
-                    const frame = frames[frameIndex];
-                    if (frame) {
-                        ctx.fillStyle = '#ffffff';
-                        ctx.fillRect(0, 0, canvas.width, canvas.height);
-                        ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
-                    }
+                // Calculate phase (0 to 1, to 2...)
+                const phase = (runtime / cycleDuration) * 2 * Math.PI;
 
-                    frameIndex += direction;
+                // (Cos + 1) / 2 goes from: 1 -> 0 -> 1
+                const normalizedPos = (Math.cos(phase) + 1) / 2;
 
-                    // Ping-Pong Logic
-                    if (frameIndex >= frames.length) {
-                        frameIndex = frames.length - 2;
-                        direction = -1;
-                    } else if (frameIndex < 0) {
-                        frameIndex = 1;
-                        direction = 1;
-                    }
+                // Map to frame index
+                frameIndex = Math.floor(normalizedPos * (frames.length - 1));
+
+                // Clamp for safety
+                if (frameIndex >= frames.length) frameIndex = frames.length - 1;
+                if (frameIndex < 0) frameIndex = 0;
+
+                const frame = frames[frameIndex];
+                if (frame) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
                 }
             }
 
