@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useRef, useEffect, useState } from 'react';
-import { ArrowRight, Users, Cpu, Rocket } from 'lucide-react';
+import { ArrowRight, Users, Cpu, Rocket, BrainCircuit, TrendingUp, Zap, Lightbulb, Target, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
