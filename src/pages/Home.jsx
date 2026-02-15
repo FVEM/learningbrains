@@ -196,7 +196,7 @@ const Home = () => {
                 </div>
 
                 {/* Consortium Band - Edge-to-edge white band integrated within Hero flow */}
-                <div className="w-full bg-white/90 backdrop-blur-md border-y border-slate-100 py-8 md:py-10 mt-12 md:mt-20 relative z-30 animate-fade-in-up delay-500">
+                <div className="w-full bg-white/90 backdrop-blur-md border-y border-slate-100 py-6 md:py-8 mt-4 md:mt-8 relative z-30 animate-fade-in-up delay-500">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-6 md:mb-8">
                             <h3 className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.3em]">
