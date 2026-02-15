@@ -5,7 +5,7 @@ import euEmblem from '../assets/images/eu-emblem.png';
 const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
 
 const Footer = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const sections = [
         {
