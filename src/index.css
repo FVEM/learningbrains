@@ -76,25 +76,52 @@
     border-color: #10423922;
   }
 
-  /* Fluid Typography - Harmonious scaling for Zoom/Viewport */
+  /* Refined Fluid Typography - More balanced across laptop/desktop */
   .text-fluid-h1 {
-    font-size: clamp(2.25rem, 6vw + 0.5rem, 4.5rem);
+    /* Slightly less aggressive scaling (4vw instead of 5vw) */
+    font-size: clamp(2.25rem, 4vw + 0.75rem, 4.5rem);
     line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   .text-fluid-h2 {
-    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
-    line-height: 1.2;
+    font-size: clamp(1.25rem, 2vw + 0.5rem, 2rem);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
   }
 
   .text-fluid-p {
-    font-size: clamp(1.125rem, 1vw + 0.5rem, 1.35rem);
+    font-size: clamp(1rem, 0.5vw + 0.85rem, 1.2rem);
     line-height: 1.6;
+    max-width: 60ch;
   }
 
-  /* Fluid Spacing */
+  /* Optimized Fluid Spacing - Better fit for laptop viewports */
   .py-fluid-hero {
-    padding-top: clamp(3rem, 10vh, 6rem);
-    padding-bottom: clamp(3rem, 10vh, 6rem);
+    /* Reduced vertical padding to prevent vertical overflow on laptops */
+    padding-top: clamp(3rem, 8vh, 8rem);
+    padding-bottom: clamp(2rem, 5vh, 3rem);
+  }
+
+  .section-padding-fluid {
+    padding-top: clamp(4rem, 6vw, 8rem);
+    padding-bottom: clamp(4rem, 6vw, 8rem);
+  }
+
+  /* Smooth Entrance Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 }
