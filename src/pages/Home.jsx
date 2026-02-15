@@ -15,9 +15,8 @@ const Home = () => {
         const canvas = canvasRef.current;
         if (!video || !canvas) return;
 
-        const ctx = canvas.getContext('2d', { alpha: false }); // Optimize for no transparency
+        const ctx = canvas.getContext('2d', { alpha: false });
 
-        // IMMEDIATELY fill canvas with white before video loads
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         ctx.fillStyle = '#ffffff';
@@ -27,22 +26,29 @@ const Home = () => {
         let animationFrameId;
         let isCollecting = true;
         let frameIndex = 0;
-        let direction = 1; // 1 = forward, -1 = backward
+        let direction = 1;
+        let lastTimestamp = 0;
+        const targetFPS = 30; // Reduced FPS for smoother slow motion
+        const frameInterval = 1000 / targetFPS;
 
-        const processFrame = async () => {
+        const processFrame = async (timestamp) => {
+            // Control playback/capture speed based on target FPS
+            if (timestamp - lastTimestamp < frameInterval) {
+                animationFrameId = requestAnimationFrame(processFrame);
+                return;
+            }
+            lastTimestamp = timestamp;
+
             if (isCollecting) {
-                // Collection Phase: Store frames while video plays normally
                 if (!video.paused && !video.ended) {
                     try {
                         const bitmap = await createImageBitmap(video);
-                        // Optional: Resize bitmap here if memory is an issue, e.g. { resizeWidth: 1280 }
                         frames.push(bitmap);
                     } catch (e) {
                         console.error("Frame capture error:", e);
                     }
                 }
 
-                // Draw current video frame to canvas during collection
                 if (frames.length > 0) {
                     ctx.fillStyle = '#ffffff';
                     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -52,10 +58,9 @@ const Home = () => {
                 if (video.ended) {
                     isCollecting = false;
                     frameIndex = frames.length - 1;
-                    direction = -1; // Start reversing immediately
+                    direction = -1;
                 }
             } else {
-                // Playback Phase: Use cached frames
                 if (frames.length > 0) {
                     ctx.fillStyle = '#ffffff';
                     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -63,7 +68,6 @@ const Home = () => {
 
                     frameIndex += direction;
 
-                    // Ping-Pong Logic
                     if (frameIndex >= frames.length) {
                         frameIndex = frames.length - 2;
                         direction = -1;
@@ -80,10 +84,13 @@ const Home = () => {
         const handleLoadedMetadata = () => {
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
-            // Initialize canvas with white background
             ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             setIsVideoLoaded(true);
+
+            // Set slower playback rate (0.5 = half speed)
+            video.playbackRate = 0.5;
+
             video.play().catch(e => console.error("Autoplay failed:", e));
             animationFrameId = requestAnimationFrame(processFrame);
         };
