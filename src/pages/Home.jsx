@@ -135,7 +135,7 @@ const Home = () => {
                                 Learning Brains
                             </h2>
                             {/* Main Headline - Green */}
-                            <h1 className="text-5xl md:text-7xl font-extrabold font-sans tracking-tight text-brand-primary leading-[1.1]">
+                            <h1 className="text-4xl md:text-6xl font-extrabold font-sans tracking-tight text-brand-primary leading-[1.1]">
                                 Real Skills for Real <br className="hidden md:block" />
                                 Industry
                             </h1>
