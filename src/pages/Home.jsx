@@ -121,7 +121,7 @@ const Home = () => {
 
                 {/* Main Content Container - Grows to fill space and centers content */}
                 <div className="relative z-20 flex-grow flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20 lg:py-32">
-                    <div className="max-w-3xl space-y-4">
+                    <div className="max-w-3xl">
                         {/* Validation Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
@@ -129,9 +129,9 @@ const Home = () => {
                         </div>
 
                         {/* Typography Block */}
-                        <div className="animate-fade-in-up delay-100">
+                        <div className="mt-10 animate-fade-in-up delay-100">
                             {/* Top Title - Navy Blue */}
-                            <h2 className="text-3xl md:text-4xl font-bold font-sans text-brand-title-blue mb-2">
+                            <h2 className="text-3xl md:text-4xl font-bold font-sans text-brand-title-blue mb-3">
                                 Learning Brains
                             </h2>
                             {/* Main Headline - Green */}
@@ -142,12 +142,12 @@ const Home = () => {
                         </div>
 
                         {/* Subtitle */}
-                        <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-xl animate-fade-in-up delay-200">
+                        <p className="mt-8 text-xl text-slate-500 font-medium leading-relaxed max-w-xl animate-fade-in-up delay-200">
                             Integrated On-the-job Learning Systems for Industrial Reskilling
                         </p>
 
                         {/* CTAs */}
-                        <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+                        <div className="mt-8 flex flex-wrap gap-4 animate-fade-in-up delay-300">
                             <Link
                                 to={`/${i18n.language}/about`}
                                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-200 bg-brand-primary rounded-lg hover:bg-brand-secondary hover:shadow-lg hover:shadow-teal-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
