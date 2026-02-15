@@ -13,7 +13,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router basename="/learningbrains">
+    <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Layout>
         <Routes>
