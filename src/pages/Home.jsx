@@ -28,34 +28,39 @@ const Home = () => {
         let isCollecting = true;
         let frameIndex = 0;
         let direction = 1; // 1 = forward, -1 = backward
+        let lastTime = 0;
+        const fpsInterval = 1000 / 30; // Limit playback to 30fps for smoothness
 
-        const processFrame = async () => {
-            if (isCollecting) {
-                // Collection Phase: Store frames while video plays normally
-                if (!video.paused && !video.ended) {
-                    try {
-                        // Use resizeWidth to limit memory usage and ensure smooth capture
-                        const bitmap = await createImageBitmap(video, { resizeWidth: 1280 });
-                        frames.push(bitmap);
+        const captureFrame = async (now, metadata) => {
+            if (!video.paused && !video.ended && isCollecting) {
+                try {
+                    const bitmap = await createImageBitmap(video, { resizeWidth: 1280 });
+                    frames.push(bitmap);
 
-                        // Draw current captured frame
-                        ctx.fillStyle = '#ffffff';
-                        ctx.fillRect(0, 0, canvas.width, canvas.height);
-                        ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-                    } catch (e) {
-                        console.error("Frame capture error:", e);
-                    }
+                    // Draw capture feedback
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+                    // Continue capturing
+                    video.requestVideoFrameCallback(captureFrame);
+                } catch (e) {
+                    console.error("Frame capture error:", e);
+                    // Fallback or retry
+                    if (isCollecting) video.requestVideoFrameCallback(captureFrame);
                 }
+            }
+            // The 'ended' check is now handled by the event listener to be robust
+        };
 
-                if (video.ended) {
-                    isCollecting = false;
-                    frameIndex = frames.length - 2; // Start from second to last frame
-                    direction = -1; // Start reversing immediately
-                }
-            } else {
-                // Playback Phase: Use cached frames
+        const renderLoop = (timestamp) => {
+            if (!lastTime) lastTime = timestamp;
+            const elapsed = timestamp - lastTime;
+
+            if (elapsed > fpsInterval) {
+                lastTime = timestamp - (elapsed % fpsInterval);
+
                 if (frames.length > 0) {
-                    // Safe index calculation
                     if (frameIndex >= frames.length) frameIndex = frames.length - 1;
                     if (frameIndex < 0) frameIndex = 0;
 
@@ -68,7 +73,7 @@ const Home = () => {
 
                     frameIndex += direction;
 
-                    // Ping-Pong Logic - Smooth turnaround
+                    // Ping-Pong Logic
                     if (frameIndex >= frames.length) {
                         frameIndex = frames.length - 2;
                         direction = -1;
@@ -79,18 +84,47 @@ const Home = () => {
                 }
             }
 
-            animationFrameId = requestAnimationFrame(processFrame);
+            animationFrameId = requestAnimationFrame(renderLoop);
         };
 
         const handleLoadedMetadata = () => {
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
-            // Initialize canvas with white background
             ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             setIsVideoLoaded(true);
-            video.play().catch(e => console.error("Autoplay failed:", e));
-            animationFrameId = requestAnimationFrame(processFrame);
+
+            video.onended = () => {
+                isCollecting = false;
+                frameIndex = frames.length - 1;
+                direction = -1;
+                // Start playback loop
+                if (!animationFrameId) {
+                    animationFrameId = requestAnimationFrame(renderLoop);
+                }
+            };
+
+            video.play().then(() => {
+                if ('requestVideoFrameCallback' in video) {
+                    video.requestVideoFrameCallback(captureFrame);
+                } else {
+                    // Fallback for older browsers (unlikely given modern context, but safe)
+                    console.warn("requestVideoFrameCallback not supported, falling back to basic loop");
+                    const basicLoop = () => {
+                        if (isCollecting && !video.ended) {
+                            createImageBitmap(video, { resizeWidth: 1280 }).then(bm => {
+                                frames.push(bm);
+                                ctx.drawImage(bm, 0, 0, canvas.width, canvas.height);
+                            });
+                            requestAnimationFrame(basicLoop);
+                        } else {
+                            isCollecting = false;
+                            requestAnimationFrame(renderLoop);
+                        }
+                    };
+                    basicLoop();
+                }
+            }).catch(e => console.error("Autoplay failed:", e));
         };
 
         video.addEventListener('loadedmetadata', handleLoadedMetadata);
@@ -98,7 +132,6 @@ const Home = () => {
         return () => {
             video.removeEventListener('loadedmetadata', handleLoadedMetadata);
             cancelAnimationFrame(animationFrameId);
-            // Cleanup bitmaps to free memory
             frames.forEach(frame => frame.close());
         };
     }, []);
