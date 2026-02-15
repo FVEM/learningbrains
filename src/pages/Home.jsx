@@ -16,6 +16,13 @@ const Home = () => {
         if (!video || !canvas) return;
 
         const ctx = canvas.getContext('2d', { alpha: false }); // Optimize for no transparency
+
+        // IMMEDIATELY fill canvas with white before video loads
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
         let frames = [];
         let animationFrameId;
         let isCollecting = true;
@@ -37,6 +44,8 @@ const Home = () => {
 
                 // Draw current video frame to canvas during collection
                 if (frames.length > 0) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
                     ctx.drawImage(frames[frames.length - 1], 0, 0, canvas.width, canvas.height);
                 }
 
@@ -48,6 +57,8 @@ const Home = () => {
             } else {
                 // Playback Phase: Use cached frames
                 if (frames.length > 0) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
                     ctx.drawImage(frames[frameIndex], 0, 0, canvas.width, canvas.height);
 
                     frameIndex += direction;
@@ -69,6 +80,9 @@ const Home = () => {
         const handleLoadedMetadata = () => {
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
+            // Initialize canvas with white background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
             setIsVideoLoaded(true);
             video.play().catch(e => console.error("Autoplay failed:", e));
             animationFrameId = requestAnimationFrame(processFrame);
@@ -113,7 +127,7 @@ const Home = () => {
                 {/* Canvas for Ping-Pong Loop */}
                 <canvas
                     ref={canvasRef}
-                    className="absolute inset-0 w-full h-full object-cover z-0"
+                    className="absolute inset-0 w-full h-full object-cover z-0 bg-white"
                 />
 
                 {/* Light Overlay */}
@@ -206,7 +220,7 @@ const Home = () => {
                             <img
                                 src="/FVEM-EN.jpg"
                                 alt="FVEM"
-                                className="max-h-12 w-auto object-contain"
+                                className="max-h-16 w-auto object-contain"
                             />
                         </a>
                         {/* Media Creativa (Sociocreativo) */}
@@ -219,7 +233,7 @@ const Home = () => {
                             <img
                                 src="/Media Creativa 2020.jpg"
                                 alt="Media Creativa"
-                                className="max-h-12 w-auto object-contain"
+                                className="max-h-16 w-auto object-contain"
                             />
                         </a>
                         {/* SBA */}
@@ -232,7 +246,7 @@ const Home = () => {
                             <img
                                 src="/sba.jpg"
                                 alt="SBA"
-                                className="max-h-12 w-auto object-contain"
+                                className="max-h-16 w-auto object-contain"
                             />
                         </a>
                         {/* SPIN */}
@@ -245,7 +259,7 @@ const Home = () => {
                             <img
                                 src="/SPIN logo large.png"
                                 alt="SPIN"
-                                className="max-h-12 w-auto object-contain"
+                                className="max-h-16 w-auto object-contain"
                             />
                         </a>
                         {/* Confindustria Veneto SIAV */}
@@ -258,7 +272,7 @@ const Home = () => {
                             <img
                                 src="/Conf.Veneto SIAV logo.png"
                                 alt="Confindustria Veneto SIAV"
-                                className="max-h-12 w-auto object-contain"
+                                className="max-h-16 w-auto object-contain"
                             />
                         </a>
                         {/* Room 466 */}
@@ -271,7 +285,7 @@ const Home = () => {
                             <img
                                 src="/room-466-logo-blau-transparent-300dpi.png"
                                 alt="Room 466"
-                                className="max-h-12 w-auto object-contain"
+                                className="max-h-16 w-auto object-contain"
                             />
                         </a>
                     </div>
