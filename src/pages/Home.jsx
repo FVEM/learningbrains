@@ -128,7 +128,7 @@ const Home = () => {
                 />
 
                 {/* Light Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/10 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/40 to-transparent z-10" />
 
                 {/* Main Content Container - Positioned higher on page */}
                 <div className="relative z-20 flex-grow flex flex-col justify-start pt-12 md:pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
@@ -285,6 +285,93 @@ const Home = () => {
                                 className="max-h-16 w-auto object-contain"
                             />
                         </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Latest Updates */}
+            <section className="py-20 bg-slate-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-end mb-12">
+                        <div>
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Latest Updates</h2>
+                            <p className="text-slate-500">Milestones, events, and results from the Learning Brains project.</p>
+                        </div>
+                        <Link
+                            to={`/${i18n.language}/news`}
+                            className="hidden md:inline-flex items-center text-slate-900 font-semibold hover:text-brand-primary transition-colors"
+                        >
+                            View All News
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {/* News Card 1 - Project Kick-off Meeting */}
+                        <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                            <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
+                                <img
+                                    src="/News/kickoff-meeting-ai.png"
+                                    alt="Project Kick-off Meeting"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-slate-700 uppercase tracking-wider">
+                                    Meeting
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <div className="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-3">Feb 2026 · Bilbao, Spain</div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                                    Project Kick-off Meeting
+                                </h3>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                                    The partners met for the first time at the FVEM headquarters to discuss the project timeline.
+                                </p>
+                                <a
+                                    href="#"
+                                    className="inline-flex items-center text-slate-900 font-semibold text-sm hover:text-brand-primary transition-colors"
+                                >
+                                    Read on LinkedIn
+                                    <ArrowRight className="w-3 h-3 ml-2" />
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* News Card 2 - Coming Soon */}
+                        <div className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                            <div className="p-6 flex-grow flex flex-col items-center justify-center text-center py-12">
+                                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                                    <svg className="w-8 h-8 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">Coming Soon</div>
+                                <h3 className="text-xl font-bold text-slate-300 mb-3">
+                                    Consortium Methodology
+                                </h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">
+                                    Developing the core framework for industrial reskilling and on-the-job learning.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* News Card 3 - Coming Soon */}
+                        <div className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                            <div className="p-6 flex-grow flex flex-col items-center justify-center text-center py-12">
+                                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                                    <svg className="w-8 h-8 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">Coming Soon</div>
+                                <h3 className="text-xl font-bold text-slate-300 mb-3">
+                                    AI Tools Research
+                                </h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">
+                                    Analyzing state-of-the-art AI applications for vocational training environments.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
