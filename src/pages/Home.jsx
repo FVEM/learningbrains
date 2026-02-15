@@ -121,7 +121,7 @@ const Home = () => {
 
                 {/* Main Content Container - Grows to fill space and centers content */}
                 <div className="relative z-20 flex-grow flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20 lg:py-32">
-                    <div className="max-w-3xl space-y-8">
+                    <div className="max-w-3xl space-y-4">
                         {/* Validation Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
