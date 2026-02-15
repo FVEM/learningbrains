@@ -95,6 +95,8 @@ const News = () => {
                                     {item.link ? (
                                         <a
                                             href={item.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
                                         >
                                             {t('news.read_more')}
