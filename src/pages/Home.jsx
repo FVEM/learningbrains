@@ -197,53 +197,83 @@ const Home = () => {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
                         {/* FVEM */}
-                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                        <a
+                            href="https://www.fvem.es"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
+                        >
                             <img
                                 src="/FVEM-EN.jpg"
                                 alt="FVEM"
                                 className="max-h-12 w-auto object-contain"
                             />
-                        </div>
+                        </a>
                         {/* Media Creativa (Sociocreativo) */}
-                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                        <a
+                            href="https://mediacreativa.eu/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
+                        >
                             <img
                                 src="/Media Creativa 2020.jpg"
                                 alt="Media Creativa"
                                 className="max-h-12 w-auto object-contain"
                             />
-                        </div>
+                        </a>
                         {/* SBA */}
-                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                        <a
+                            href="https://www.sbagency.sk/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
+                        >
                             <img
                                 src="/sba.jpg"
                                 alt="SBA"
                                 className="max-h-12 w-auto object-contain"
                             />
-                        </div>
+                        </a>
                         {/* SPIN */}
-                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                        <a
+                            href="https://sparkling-intuition.eu/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
+                        >
                             <img
                                 src="/SPIN logo large.png"
                                 alt="SPIN"
                                 className="max-h-12 w-auto object-contain"
                             />
-                        </div>
+                        </a>
                         {/* Confindustria Veneto SIAV */}
-                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                        <a
+                            href="https://www.siav.net/wp/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
+                        >
                             <img
                                 src="/Conf.Veneto SIAV logo.png"
                                 alt="Confindustria Veneto SIAV"
                                 className="max-h-12 w-auto object-contain"
                             />
-                        </div>
+                        </a>
                         {/* Room 466 */}
-                        <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                        <a
+                            href="https://www.wko.at/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer"
+                        >
                             <img
                                 src="/room-466-logo-blau-transparent-300dpi.png"
                                 alt="Room 466"
                                 className="max-h-12 w-auto object-contain"
                             />
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
