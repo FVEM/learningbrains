@@ -311,13 +311,25 @@ const Home = () => {
                                         <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
                                             {item.description}
                                         </p>
-                                        <Link
-                                            to={`/${i18n.language}/news`}
-                                            className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
-                                        >
-                                            {t('news.read_more')}
-                                            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
-                                        </Link>
+                                        {item.link ? (
+                                            <a
+                                                href={item.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
+                                            >
+                                                {t('news.read_more')}
+                                                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
+                                            </a>
+                                        ) : (
+                                            <Link
+                                                to={`/${i18n.language}/news`}
+                                                className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
+                                            >
+                                                {t('news.read_more')}
+                                                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
+                                            </Link>
+                                        )}
                                     </div>
                                 </div>
                             );
