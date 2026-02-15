@@ -119,8 +119,8 @@ const Home = () => {
                 {/* Light Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/70 z-10" />
 
-                {/* Main Content Container - Grows to fill space and centers content */}
-                <div className="relative z-20 flex-grow flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20 lg:py-32">
+                {/* Main Content Container - Positioned higher on page */}
+                <div className="relative z-20 flex-grow flex flex-col justify-start pt-24 md:pt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
                     <div className="max-w-3xl">
                         {/* Validation Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-brand-navy text-[10px] font-bold uppercase tracking-wider animate-fade-in-up">
