@@ -34,36 +34,41 @@ const Home = () => {
                 // Collection Phase: Store frames while video plays normally
                 if (!video.paused && !video.ended) {
                     try {
-                        const bitmap = await createImageBitmap(video);
-                        // Optional: Resize bitmap here if memory is an issue, e.g. { resizeWidth: 1280 }
+                        // Use resizeWidth to limit memory usage and ensure smooth capture
+                        const bitmap = await createImageBitmap(video, { resizeWidth: 1280 });
                         frames.push(bitmap);
+
+                        // Draw current captured frame
+                        ctx.fillStyle = '#ffffff';
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
                     } catch (e) {
                         console.error("Frame capture error:", e);
                     }
                 }
 
-                // Draw current video frame to canvas during collection
-                if (frames.length > 0) {
-                    ctx.fillStyle = '#ffffff';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-                    ctx.drawImage(frames[frames.length - 1], 0, 0, canvas.width, canvas.height);
-                }
-
                 if (video.ended) {
                     isCollecting = false;
-                    frameIndex = frames.length - 1;
+                    frameIndex = frames.length - 2; // Start from second to last frame
                     direction = -1; // Start reversing immediately
                 }
             } else {
                 // Playback Phase: Use cached frames
                 if (frames.length > 0) {
-                    ctx.fillStyle = '#ffffff';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-                    ctx.drawImage(frames[frameIndex], 0, 0, canvas.width, canvas.height);
+                    // Safe index calculation
+                    if (frameIndex >= frames.length) frameIndex = frames.length - 1;
+                    if (frameIndex < 0) frameIndex = 0;
+
+                    const frame = frames[frameIndex];
+                    if (frame) {
+                        ctx.fillStyle = '#ffffff';
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
+                    }
 
                     frameIndex += direction;
 
-                    // Ping-Pong Logic
+                    // Ping-Pong Logic - Smooth turnaround
                     if (frameIndex >= frames.length) {
                         frameIndex = frames.length - 2;
                         direction = -1;
@@ -131,7 +136,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/40 to-transparent z-10" />
 
                 {/* Main Content Container - Positioned higher on page with fluid padding */}
-                <div className="relative z-20 flex flex-col justify-start py-fluid-hero w-full">
+                <div className="relative z-20 flex-grow flex flex-col justify-start py-fluid-hero w-full">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-12">
                         <div className="max-w-3xl">
                             {/* Validation Badge */}
@@ -194,36 +199,36 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    {/* Consortium Band - Glued to the content above */}
-                    <div className="w-full bg-white/95 backdrop-blur-md border-y border-slate-100 py-6 md:py-8 animate-fade-in-up delay-500">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="flex flex-wrap justify-between items-center gap-x-8 gap-y-6 md:gap-x-12">
-                                {/* FVEM */}
-                                <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" title="FVEM" className="h-7 md:h-9 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                    <img src={`${import.meta.env.BASE_URL}FVEM-EN.jpg`} alt="FVEM" className="h-full w-auto object-contain" />
-                                </a>
-                                {/* Media Creativa */}
-                                <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" title="Media Creativa" className="h-7 md:h-9 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                    <img src={`${import.meta.env.BASE_URL}Media Creativa 2020.jpg`} alt="Media Creativa" className="h-full w-auto object-contain" />
-                                </a>
-                                {/* SBA */}
-                                <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" title="SBA" className="h-7 md:h-9 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                    <img src={`${import.meta.env.BASE_URL}sba.jpg`} alt="SBA" className="h-full w-auto object-contain" />
-                                </a>
-                                {/* SPIN */}
-                                <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" title="Sparkling Intuition" className="h-7 md:h-9 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                    <img src={`${import.meta.env.BASE_URL}SPIN logo large.png`} alt="SPIN" className="h-full w-auto object-contain" />
-                                </a>
-                                {/* SIAV */}
-                                <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" title="SIAV" className="h-5 md:h-7 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                    <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="SIAV" className="h-full w-auto object-contain" />
-                                </a>
-                                {/* Room 466 */}
-                                <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" title="Room 466 (WKO)" className="h-7 md:h-9 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                    <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="Room 466" className="h-full w-auto object-contain" />
-                                </a>
-                            </div>
+                {/* Consortium Band - Glued to the bottom */}
+                <div className="relative z-30 w-full bg-white/95 backdrop-blur-md border-y border-slate-100 py-10 md:py-16 animate-fade-in-up delay-500">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex flex-wrap justify-between items-center gap-x-8 gap-y-6 md:gap-x-12">
+                            {/* FVEM */}
+                            <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" title="FVEM" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src={`${import.meta.env.BASE_URL}FVEM-EN.jpg`} alt="FVEM" className="h-full w-auto object-contain" />
+                            </a>
+                            {/* Media Creativa */}
+                            <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" title="Media Creativa" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src={`${import.meta.env.BASE_URL}Media Creativa 2020.jpg`} alt="Media Creativa" className="h-full w-auto object-contain" />
+                            </a>
+                            {/* SBA */}
+                            <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" title="SBA" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src={`${import.meta.env.BASE_URL}sba.jpg`} alt="SBA" className="h-full w-auto object-contain" />
+                            </a>
+                            {/* SPIN */}
+                            <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" title="Sparkling Intuition" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src={`${import.meta.env.BASE_URL}SPIN logo large.png`} alt="SPIN" className="h-full w-auto object-contain" />
+                            </a>
+                            {/* SIAV */}
+                            <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" title="SIAV" className="h-8 md:h-10 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="SIAV" className="h-full w-auto object-contain" />
+                            </a>
+                            {/* Room 466 */}
+                            <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" title="Room 466 (WKO)" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="Room 466" className="h-full w-auto object-contain" />
+                            </a>
                         </div>
                     </div>
                 </div>
