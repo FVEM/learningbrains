@@ -205,27 +205,27 @@ const Home = () => {
                     <div className="bg-white/80 backdrop-blur-md border-y border-slate-100 py-10 px-6 -mx-4 sm:-mx-6 lg:-mx-8">
                         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-x-12 gap-y-8">
                             {/* FVEM */}
-                            <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <a href="https://www.fvem.es" target="_blank" rel="noopener noreferrer" title="FVEM" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 transform hover:scale-110 cursor-pointer">
                                 <img src="/FVEM-EN.jpg" alt="FVEM" className="h-full w-auto object-contain" />
                             </a>
                             {/* Media Creativa */}
-                            <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <a href="https://mediacreativa.eu/" target="_blank" rel="noopener noreferrer" title="Media Creativa" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 transform hover:scale-110 cursor-pointer">
                                 <img src="/Media Creativa 2020.jpg" alt="Media Creativa" className="h-full w-auto object-contain" />
                             </a>
                             {/* SBA */}
-                            <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <a href="https://www.sbagency.sk/" target="_blank" rel="noopener noreferrer" title="SBA" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 transform hover:scale-110 cursor-pointer">
                                 <img src="/sba.jpg" alt="SBA" className="h-full w-auto object-contain" />
                             </a>
                             {/* SPIN */}
-                            <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <a href="https://sparkling-intuition.eu/" target="_blank" rel="noopener noreferrer" title="Sparkling Intuition" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 transform hover:scale-110 cursor-pointer">
                                 <img src="/SPIN logo large.png" alt="SPIN" className="h-full w-auto object-contain" />
                             </a>
                             {/* SIAV */}
-                            <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <a href="https://www.siav.net/wp/" target="_blank" rel="noopener noreferrer" title="SIAV" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 transform hover:scale-110 cursor-pointer">
                                 <img src="/Conf.Veneto SIAV logo.png" alt="SIAV" className="h-full w-auto object-contain" />
                             </a>
                             {/* Room 466 */}
-                            <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                            <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" title="Room 466 (WKO)" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 transform hover:scale-110 cursor-pointer">
                                 <img src="/room-466-logo-blau-transparent-300dpi.png" alt="Room 466" className="h-full w-auto object-contain" />
                             </a>
                         </div>
