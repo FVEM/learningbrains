@@ -113,11 +113,11 @@ const Home = () => {
                 {/* Canvas for Ping-Pong Loop */}
                 <canvas
                     ref={canvasRef}
-                    className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
+                    className="absolute inset-0 w-full h-full object-cover z-0"
                 />
 
                 {/* Light Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/30 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/10 to-transparent z-10" />
 
                 {/* Main Content Container - Positioned higher on page */}
                 <div className="relative z-20 flex-grow flex flex-col justify-start pt-12 md:pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
