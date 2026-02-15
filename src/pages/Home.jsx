@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useRef, useEffect, useState } from 'react';
-import { ArrowRight, Users } from 'lucide-react';
+import { ArrowRight, Users, Calendar, MapPin, Newspaper } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
@@ -250,71 +250,78 @@ const Home = () => {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        {/* News Card 1 - Project Kick-off Meeting */}
-                        <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                            <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
-                                <img
-                                    src="/News/kickoff-meeting-ai.png"
-                                    alt={t('home.latest_updates.news_1.title')}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-slate-700 uppercase tracking-wider">
-                                    {t('home.latest_updates.news_1.badge')}
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <div className="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-3">{t('home.latest_updates.news_1.date')}</div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                                    {t('home.latest_updates.news_1.title')}
-                                </h3>
-                                <p className="text-slate-500 text-sm leading-relaxed mb-4">
-                                    {t('home.latest_updates.news_1.description')}
-                                </p>
-                                <a
-                                    href="#"
-                                    className="inline-flex items-center text-slate-900 font-semibold text-sm hover:text-brand-primary transition-colors"
-                                >
-                                    {t('home.latest_updates.news_1.link')}
-                                    <ArrowRight className="w-3 h-3 ml-2" />
-                                </a>
-                            </div>
-                        </div>
+                        {t('news.items_list', { returnObjects: true }).slice(0, 3).map((item, idx) => {
+                            const newsData = [
+                                {
+                                    date: "Feb 2026",
+                                    location: "Bilbao, Spain",
+                                    image: "News/kickoff-meeting-ai.png"
+                                },
+                                {
+                                    date: "Apr 2026",
+                                    location: "Online",
+                                    image: "",
+                                    icon: Calendar
+                                },
+                                {
+                                    date: "Jun 2026",
+                                    location: "Venice, Italy",
+                                    image: "",
+                                    icon: Users
+                                }
+                            ];
 
-                        {/* News Card 2 - Coming Soon */}
-                        <div className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col">
-                            <div className="p-6 flex-grow flex flex-col items-center justify-center text-center py-12">
-                                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4">
-                                    <svg className="w-8 h-8 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                    </svg>
-                                </div>
-                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">{t('home.latest_updates.coming_soon')}</div>
-                                <h3 className="text-xl font-bold text-slate-300 mb-3">
-                                    {t('home.latest_updates.news_2.title')}
-                                </h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    {t('home.latest_updates.news_2.description')}
-                                </p>
-                            </div>
-                        </div>
+                            const staticData = newsData[idx] || {};
+                            const NewsIcon = staticData.icon || Newspaper;
 
-                        {/* News Card 3 - Coming Soon */}
-                        <div className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col">
-                            <div className="p-6 flex-grow flex flex-col items-center justify-center text-center py-12">
-                                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4">
-                                    <svg className="w-8 h-8 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                    </svg>
+                            return (
+                                <div key={idx} className="bg-white border border-slate-100 rounded-2xl overflow-hidden group hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col">
+                                    <div className="aspect-[16/10] bg-slate-50 relative overflow-hidden">
+                                        {staticData.image ? (
+                                            <img
+                                                src={`${import.meta.env.BASE_URL}${staticData.image}`}
+                                                alt={item.title}
+                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                            />
+                                        ) : (
+                                            <div className="absolute inset-0 flex items-center justify-center bg-slate-100 group-hover:bg-teal-50/50 transition-colors">
+                                                <NewsIcon className="w-12 h-12 text-slate-200 group-hover:text-brand-secondary/30 transition-colors" />
+                                            </div>
+                                        )}
+                                        <div className="absolute top-4 left-4">
+                                            <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-primary border border-slate-100">
+                                                {item.category}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="p-6 flex flex-col flex-grow">
+                                        <div className="flex items-center gap-4 text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-4">
+                                            <div className="flex items-center gap-1.5">
+                                                <Calendar className="w-3.5 h-3.5" />
+                                                {staticData.date}
+                                            </div>
+                                            <div className="flex items-center gap-1.5">
+                                                <MapPin className="w-3.5 h-3.5" />
+                                                {staticData.location}
+                                            </div>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-primary transition-colors">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                                            {item.description}
+                                        </p>
+                                        <Link
+                                            to={`/${i18n.language}/news`}
+                                            className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
+                                        >
+                                            {t('news.read_more')}
+                                            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
+                                        </Link>
+                                    </div>
                                 </div>
-                                <div className="text-[11px] font-medium text-slate-300 uppercase tracking-wider mb-6">{t('home.latest_updates.coming_soon')}</div>
-                                <h3 className="text-xl font-bold text-slate-300 mb-3">
-                                    {t('home.latest_updates.news_3.title')}
-                                </h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    {t('home.latest_updates.news_3.description')}
-                                </p>
-                            </div>
-                        </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section >
