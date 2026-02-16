@@ -24,7 +24,9 @@
   }
 
   body {
-    @apply text-slate-900 antialiased bg-white;
+    @apply text-slate-900 antialiased;
+    background-color: rgb(232, 238, 248);
+    /* #E8EEF8 - User requested blue-grey tint */
   }
 }
 
