@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
-import euEmblem from '../assets/images/eu-emblem.png';
+const euEmblem = `${import.meta.env.BASE_URL}eu-emblem.png`;
 const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
 
 const Footer = () => {

@@ -37,7 +37,7 @@ const Contact = () => {
 
         emailjs.send(serviceId, templateId, formData, publicKey)
             .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
+
                 setStatus('success');
                 setFormData({ user_name: '', user_email: '', message: '' });
                 setTimeout(() => setStatus('idle'), 5000);

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import Layout from './components/Layout'; // Keep for pure layout usage if needed, mostly used by LanguageLayout now
+
 import LanguageLayout from './components/LanguageLayout';
 import Home from './pages/Home';
 import About from './pages/About';
