@@ -8,7 +8,7 @@ const Results = () => {
     const plannedResults = t('results.planned_list', { returnObjects: true });
 
     return (
-        <div className="py-20 bg-white">
+        <div className="py-20">
             <SEOHead
                 title={t('results.seo_title')}
                 description={t('results.seo_description')}

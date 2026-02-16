@@ -10,7 +10,7 @@ const About = () => {
     const targetGroups = t('about.target_list', { returnObjects: true });
 
     return (
-        <div className="py-16 md:py-24 bg-white">
+        <div className="py-16 md:py-24">
             <SEOHead
                 title={t('about.seo_title')}
                 description={t('about.seo_description')}
