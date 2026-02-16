@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Users, Globe, ExternalLink, ChevronRight, Linkedin } from 'lucide-react';
+import { Users, Globe, ExternalLink, ChevronRight, Linkedin, Facebook, Youtube } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const Partners = () => {
@@ -49,7 +49,9 @@ const Partners = () => {
             logo: "SBA",
             logoSrc: "/sba.jpg",
             website: "https://www.sbagency.sk/",
-            linkedin: "https://www.linkedin.com/company/slovakbusinessagency/"
+            linkedin: "https://www.linkedin.com/company/slovakbusinessagency/",
+            facebook: "https://www.facebook.com/SlovakBusinessAgency",
+            youtube: "https://www.youtube.com/user/NarodnaAgentura"
         },
         {
             name: "Sparkling Intuition",
@@ -131,15 +133,39 @@ const Partners = () => {
                                 </a>
 
                                 {partner.linkedin && (
-                                    <a
-                                        href={partner.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label={`Visit LinkedIn profile of ${partner.name}`}
-                                        className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-teal-600 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-                                    >
-                                        <Linkedin className="w-4 h-4" />
-                                    </a>
+                                    <div className="flex gap-2">
+                                        <a
+                                            href={partner.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`Visit LinkedIn profile of ${partner.name}`}
+                                            className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                        >
+                                            <Linkedin className="w-4 h-4" />
+                                        </a>
+                                        {partner.facebook && (
+                                            <a
+                                                href={partner.facebook}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={`Visit Facebook profile of ${partner.name}`}
+                                                className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#1877F2] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                            >
+                                                <Facebook className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                        {partner.youtube && (
+                                            <a
+                                                href={partner.youtube}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={`Visit Youtube channel of ${partner.name}`}
+                                                className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#FF0000] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                            >
+                                                <Youtube className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                    </div>
                                 )}
                             </div>
                         </div>
