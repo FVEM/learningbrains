@@ -142,7 +142,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="bg-white font-body text-slate-600">
+        <div className="font-body text-slate-600">
             <SEOHead
                 title={t('home.seo_title')}
                 description={t('home.seo_description')}
@@ -150,7 +150,7 @@ const Home = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative min-h-[95vh] flex flex-col overflow-hidden bg-white">
+            <section className="relative min-h-[95vh] flex flex-col overflow-hidden">
                 {/* Background Video (Hidden) */}
                 <video
                     ref={videoRef}
@@ -273,7 +273,7 @@ const Home = () => {
             </section>
 
             {/* Latest Updates */}
-            <section className="py-20 bg-slate-50">
+            <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-end mb-12">
                         <div>

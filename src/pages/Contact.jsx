@@ -49,7 +49,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="py-20 bg-white">
+        <div className="py-20">
             <SEOHead
                 title={t('contact.title')}
                 description={t('contact.description')}

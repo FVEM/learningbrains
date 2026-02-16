@@ -67,7 +67,7 @@ const Partners = () => {
     const partnerDescriptions = t('partners.descriptions', { returnObjects: true });
 
     return (
-        <div className="py-20 bg-white">
+        <div className="py-20">
             <SEOHead
                 title={t('partners.seo_title')}
                 description={t('partners.seo_description')}

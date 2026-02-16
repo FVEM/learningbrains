@@ -28,7 +28,7 @@ const News = () => {
     const translatedNewsItems = t('news.items_list', { returnObjects: true });
 
     return (
-        <div className="py-20 bg-white">
+        <div className="py-20">
             <SEOHead
                 title={t('news.seo_title')}
                 description={t('news.seo_description')}

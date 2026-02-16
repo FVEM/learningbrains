@@ -6,7 +6,7 @@ const Resources = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="py-20 bg-white">
+        <div className="py-20">
             <SEOHead
                 title={t('resources.seo_title')}
                 description={t('resources.seo_description')}

@@ -8,7 +8,7 @@ const Impact = () => {
     const targetAudiences = t('impact.audience_list', { returnObjects: true });
 
     return (
-        <div className="py-20 bg-white">
+        <div className="py-20">
             <SEOHead
                 title={t('impact.seo_title')}
                 description={t('impact.seo_description')}
