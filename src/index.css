@@ -24,7 +24,10 @@
   }
 
   body {
-    @apply text-slate-900 antialiased bg-white;
+    @apply text-slate-900 antialiased;
+    /* Using a very subtle cool gray/slate background to make white cards pop */
+    background-color: #f8fafc;
+    /* Optional: You could also use a very faint tint of the brand green: #f4f7f6 */
   }
 }
 
