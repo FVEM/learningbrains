@@ -63,7 +63,7 @@ const Contact = () => {
                             <Mail className="w-3 h-3" />
                             {t('contact.connect_us')}
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-8 tracking-tight">{t('contact.title')}</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-8 tracking-tight">{t('contact.title')}</h1>
                         <p className="text-slate-500 text-lg mb-12 leading-relaxed max-w-lg">
                             {t('contact.description')}
                         </p>

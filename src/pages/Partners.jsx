@@ -79,7 +79,7 @@ const Partners = () => {
                         <Users className="w-3 h-3" />
                         {t('partners.label')}
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">{t('partners.title')}</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">{t('partners.title')}</h1>
                     <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
                         {t('partners.subtitle')}
                     </p>

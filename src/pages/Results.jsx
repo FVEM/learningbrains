@@ -16,7 +16,7 @@ const Results = () => {
             />
             <div className="max-w-4xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">{t('results.title')}</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">{t('results.title')}</h1>
                     <p className="text-slate-500 text-lg leading-relaxed">
                         {t('results.subtitle')}
                     </p>

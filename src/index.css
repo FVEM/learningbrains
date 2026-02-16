@@ -12,6 +12,7 @@
   /* Navy Blue for "Learning Brains" Title */
   --color-brand-light: #f8fafc;
   --color-brand-border: #e2e8f0;
+  --color-brand-headline: rgb(170, 195, 90);
   --font-sans: "Outfit", "Inter", "system-ui", "sans-serif";
 }
 

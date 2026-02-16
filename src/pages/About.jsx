@@ -17,7 +17,7 @@ const About = () => {
                 path="/about"
             />
             <div className="max-w-4xl mx-auto px-6">
-                <h1 className="text-4xl md:text-5xl font-bold text-brand-primary text-center mb-16 tracking-tight">
+                <h1 className="text-4xl md:text-5xl font-bold text-brand-headline text-center mb-16 tracking-tight">
                     {t('about.title')}
                 </h1>
 
