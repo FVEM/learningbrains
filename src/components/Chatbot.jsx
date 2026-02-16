@@ -48,49 +48,39 @@ You are the strict, technical AI Assistant for "Learning Brains" (Erasmus+ KA220
         setIsLoading(true);
 
         try {
-            const isDev = import.meta.env.DEV;
-            let response;
+            const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
 
+            // Construct conversation history with system prompt
             const conversationHistory = [
                 { role: "system", content: SYSTEM_PROMPT },
                 ...messages.map(m => ({ role: m.role, content: m.content })),
                 userMessage
             ];
 
-            if (isDev) {
-                // Development Mode: Direct Call (Use Local .env)
-                const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
-                if (!apiKey) throw new Error("API Key missing");
-
-                response = await fetch('https://api.openai.com/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
-                    },
-                    body: JSON.stringify({
-                        model: "gpt-4o-mini",
-                        messages: conversationHistory,
-                        temperature: 0.7,
-                        max_tokens: 300,
-                        stream: true // Enable direct streaming
-                    })
-                });
-            } else {
-                // Production Mode: Secure Proxy Call
-                // The /api/chat endpoint is configured to return a stream
-                response = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        messages: conversationHistory
-                    })
-                });
+            if (!apiKey) {
+                // Return a specific error object that we can catch and identify
+                throw new Error("API Key missing");
             }
+
+            // Direct Call to OpenAI (Client-Side)
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    model: "gpt-4o-mini",
+                    messages: conversationHistory,
+                    temperature: 0.7,
+                    max_tokens: 300,
+                    stream: true // Enable streaming
+                })
+            });
 
             if (!response.ok) {
                 const errorData = await response.json().catch(() => ({}));
-                throw new Error(errorData.error?.message || 'API Error');
+                throw new Error(errorData.error?.message || 'OpenAI API Error');
             }
 
             // Stop loading spinner and start streaming
