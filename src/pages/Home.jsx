@@ -150,7 +150,7 @@ const Home = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative min-h-screen flex flex-col overflow-hidden bg-white">
+            <section className="relative min-h-[95vh] flex flex-col overflow-hidden bg-white">
                 {/* Background Video (Hidden) */}
                 <video
                     ref={videoRef}
@@ -240,7 +240,7 @@ const Home = () => {
                 </div>
 
                 {/* Consortium Band - Glued to the bottom */}
-                <div className="relative z-30 w-full bg-white/95 backdrop-blur-md border-y border-slate-100 py-10 md:py-16 animate-fade-in-up delay-500">
+                <div className="relative z-30 w-full bg-white/95 backdrop-blur-md border-y border-slate-100 py-8 md:py-12 animate-fade-in-up delay-500">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-wrap justify-between items-center gap-x-8 gap-y-6 md:gap-x-12">
                             {/* FVEM */}

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { X, Send, Bot, User, Loader2 } from 'lucide-react';
+import { X, Send, User, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Chatbot = () => {
@@ -183,7 +183,7 @@ Your goal is to help users understand the project, its partners, and the potenti
                     {/* Header */}
                     <div className="bg-gradient-to-r from-emerald-500 to-green-600 p-4 flex items-center justify-between text-white">
                         <div className="flex items-center gap-2">
-                            <Bot className="w-6 h-6" />
+                            <img src={`${import.meta.env.BASE_URL}learning-brains-favicon-transparent.png`} alt="AI" className="w-8 h-8 bg-white rounded-full p-1 object-contain" />
                             <h3 className="font-semibold text-lg">AI Assistant</h3>
                         </div>
                         <button
@@ -201,8 +201,8 @@ Your goal is to help users understand the project, its partners, and the potenti
                                 key={index}
                                 className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
                             >
-                                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${msg.role === 'user' ? 'bg-blue-600 text-white' : 'bg-emerald-500 text-white'}`}>
-                                    {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
+                                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center overflow-hidden ${msg.role === 'user' ? 'bg-blue-600 text-white' : 'bg-white border border-slate-200'}`}>
+                                    {msg.role === 'user' ? <User size={16} /> : <img src={`${import.meta.env.BASE_URL}learning-brains-favicon-transparent.png`} alt="AI" className="w-full h-full object-cover p-1" />}
                                 </div>
                                 <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white text-slate-700 shadow-sm border border-slate-100 rounded-bl-none'}`}>
                                     {msg.content}
@@ -211,8 +211,8 @@ Your goal is to help users understand the project, its partners, and the potenti
                         ))}
                         {isLoading && (
                             <div className="flex gap-3">
-                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center">
-                                    <Bot size={16} />
+                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
+                                    <img src={`${import.meta.env.BASE_URL}learning-brains-favicon-transparent.png`} alt="AI" className="w-full h-full object-cover p-1" />
                                 </div>
                                 <div className="bg-white p-3 rounded-2xl rounded-bl-none shadow-sm border border-slate-100">
                                     <Loader2 className="w-5 h-5 animate-spin text-slate-400" />
