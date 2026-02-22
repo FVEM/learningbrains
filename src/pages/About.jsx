@@ -17,13 +17,13 @@ const About = () => {
                 path="/about"
             />
             <div className="max-w-4xl mx-auto px-6">
-                <h1 className="text-4xl md:text-5xl font-bold text-brand-headline text-center mb-16 tracking-tight">
+                <h1 className="text-4xl md:text-5xl font-bold text-brand-headline text-center mb-16 tracking-tight animate-fade-in-up">
                     {t('about.title')}
                 </h1>
 
                 <div className="space-y-20">
                     {/* Background & Context */}
-                    <section>
+                    <section className="animate-fade-in-up delay-100">
                         <div className="flex items-center gap-3 mb-6">
                             <BookOpen className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-xl md:text-2xl font-bold text-brand-primary">{t('about.background_title')}</h2>
@@ -34,7 +34,7 @@ const About = () => {
                     </section>
 
                     {/* Project Objectives */}
-                    <section>
+                    <section className="animate-fade-in-up delay-200">
                         <div className="flex items-center gap-3 mb-8">
                             <Target className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-xl md:text-2xl font-bold text-brand-primary">{t('about.objectives_title')}</h2>
@@ -52,7 +52,7 @@ const About = () => {
                     </section>
 
                     {/* Focus Areas */}
-                    <section>
+                    <section className="animate-fade-in-up delay-300">
                         <div className="flex items-center gap-3 mb-8">
                             <Lightbulb className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-xl md:text-2xl font-bold text-brand-primary">{t('about.focus_title')}</h2>
@@ -67,7 +67,7 @@ const About = () => {
                     </section>
 
                     {/* Target Groups */}
-                    <section>
+                    <section className="animate-fade-in-up delay-500">
                         <div className="flex items-center gap-3 mb-8">
                             <Users className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-xl md:text-2xl font-bold text-brand-primary">{t('about.target_title')}</h2>

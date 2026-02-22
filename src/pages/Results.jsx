@@ -15,14 +15,14 @@ const Results = () => {
                 path="/results"
             />
             <div className="max-w-4xl mx-auto px-6">
-                <div className="text-center mb-16">
+                <div className="text-center mb-16 animate-fade-in-up">
                     <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">{t('results.title')}</h1>
                     <p className="text-slate-500 text-lg leading-relaxed">
                         {t('results.subtitle')}
                     </p>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 bg-teal-50/50 rounded-2xl border border-teal-100 flex-col sm:flex-row mb-16">
+                <div className="flex items-start gap-4 p-5 bg-teal-50/50 rounded-2xl border border-teal-100 flex-col sm:flex-row mb-16 animate-fade-in-up delay-100">
                     <div className="p-2 bg-white rounded-lg shadow-sm">
                         <Info className="w-5 h-5 text-brand-secondary" />
                     </div>
@@ -33,7 +33,7 @@ const Results = () => {
 
                 <div className="space-y-16">
                     {/* Available Results */}
-                    <section>
+                    <section className="animate-fade-in-up delay-200">
                         <div className="flex items-center gap-3 mb-8">
                             <CheckCircle2 className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-2xl font-bold text-brand-primary uppercase tracking-tight">{t('results.available_title')}</h2>
@@ -47,7 +47,7 @@ const Results = () => {
                     </section>
 
                     {/* Planned Results */}
-                    <section>
+                    <section className="animate-fade-in-up delay-300">
                         <div className="flex items-center gap-3 mb-8">
                             <Clock className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-2xl font-bold text-brand-primary uppercase tracking-tight">{t('results.planned_title')}</h2>

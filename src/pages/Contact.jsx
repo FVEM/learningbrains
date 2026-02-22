@@ -58,7 +58,7 @@ const Contact = () => {
             <div className="container-custom">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Left Column */}
-                    <div>
+                    <div className="animate-fade-in-up">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
                             <Mail className="w-3 h-3" />
                             {t('contact.connect_us')}
@@ -98,7 +98,7 @@ const Contact = () => {
                     </div>
 
                     {/* Right Column (Form) */}
-                    <div className="bg-white p-1 md:p-10 rounded-3xl border border-slate-100 shadow-2xl shadow-teal-900/5 relative overflow-hidden">
+                    <div className="bg-white p-1 md:p-10 rounded-3xl border border-slate-100 shadow-2xl shadow-teal-900/5 relative overflow-hidden animate-fade-in-up delay-100">
                         {status === 'success' && (
                             <div className="absolute inset-0 bg-white/90 backdrop-blur-sm z-10 flex flex-col items-center justify-center p-8 text-center animate-in fade-in duration-300">
                                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">

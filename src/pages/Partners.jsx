@@ -74,7 +74,7 @@ const Partners = () => {
                 path="/partners"
             />
             <div className="max-w-6xl mx-auto px-6">
-                <div className="text-center mb-20">
+                <div className="text-center mb-20 animate-fade-in-up">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
                         <Users className="w-3 h-3" />
                         {t('partners.label')}
@@ -85,7 +85,7 @@ const Partners = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up delay-100">
                     {partners.map((partner, idx) => (
                         <div key={idx} className="group bg-white border border-slate-100 rounded-2xl p-8 flex flex-col h-full hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
                             <div className="h-24 flex items-center mb-8 grayscale group-hover:grayscale-0 transition-all">

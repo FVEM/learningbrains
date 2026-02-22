@@ -13,16 +13,18 @@ const Resources = () => {
                 path="/resources"
             />
             <div className="max-w-4xl mx-auto px-6 text-center">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
-                    <FileText className="w-3 h-3" />
-                    {t('resources.label')}
+                <div className="animate-fade-in-up">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
+                        <FileText className="w-3 h-3" />
+                        {t('resources.label')}
+                    </div>
+                    <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">{t('resources.title')}</h1>
+                    <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed mb-16">
+                        {t('resources.subtitle')}
+                    </p>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">{t('resources.title')}</h1>
-                <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed mb-16">
-                    {t('resources.subtitle')}
-                </p>
 
-                <div className="bg-slate-50 border border-slate-100 rounded-3xl p-12 md:p-20 relative overflow-hidden group">
+                <div className="bg-slate-50 border border-slate-100 rounded-3xl p-12 md:p-20 relative overflow-hidden group animate-fade-in-up delay-100">
                     <div className="absolute top-0 right-0 p-8">
                         <Lock className="w-6 h-6 text-slate-200" />
                     </div>

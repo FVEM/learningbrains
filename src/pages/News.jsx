@@ -35,7 +35,7 @@ const News = () => {
                 path="/news"
             />
             <div className="max-w-6xl mx-auto px-6">
-                <div className="text-center mb-20">
+                <div className="text-center mb-20 animate-fade-in-up">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
                         <Newspaper className="w-3 h-3" />
                         {t('news.label')}
@@ -46,7 +46,7 @@ const News = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up delay-100">
                     {translatedNewsItems.map((item, idx) => {
                         const staticData = newsItems[idx] || {};
                         const NewsIcon = staticData.icon || Newspaper;

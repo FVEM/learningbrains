@@ -15,7 +15,7 @@ const Impact = () => {
                 path="/impact"
             />
             <div className="max-w-4xl mx-auto px-6">
-                <div className="text-center mb-16">
+                <div className="text-center mb-16 animate-fade-in-up">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
                         <TrendingUp className="w-3 h-3" />
                         {t('impact.label')}
@@ -27,7 +27,7 @@ const Impact = () => {
                 </div>
 
                 <div className="space-y-20">
-                    <section>
+                    <section className="animate-fade-in-up delay-100">
                         <div className="flex items-center gap-3 mb-8 text-brand-primary">
                             <Share2 className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-2xl font-bold uppercase tracking-tight">{t('impact.strategy_title')}</h2>
@@ -37,7 +37,7 @@ const Impact = () => {
                         </p>
                     </section>
 
-                    <section>
+                    <section className="animate-fade-in-up delay-200">
                         <div className="flex items-center gap-3 mb-8 text-brand-primary">
                             <Target className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-2xl font-bold uppercase tracking-tight">{t('impact.audience_title')}</h2>
@@ -51,7 +51,7 @@ const Impact = () => {
                         </div>
                     </section>
 
-                    <section>
+                    <section className="animate-fade-in-up delay-300">
                         <div className="flex items-center gap-3 mb-8 text-brand-primary">
                             <TrendingUp className="w-6 h-6 text-brand-secondary" />
                             <h2 className="text-2xl font-bold uppercase tracking-tight">{t('impact.impact_title')}</h2>
