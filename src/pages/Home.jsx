@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import { ArrowRight, Users, Calendar, MapPin, Newspaper } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
+import { AnimatedCount } from '../hooks/AnimatedCount';
 
 const Home = () => {
     const { t, i18n } = useTranslation();
@@ -220,18 +221,28 @@ const Home = () => {
 
                             {/* Stats - Tighter spacing below CTAs */}
                             <div className="mt-12 animate-fade-in-up delay-400">
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                                     <div className="pl-4 border-l-2 border-brand-primary/20">
                                         <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.programme_name')}</div>
                                         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.programme')}</div>
                                     </div>
                                     <div className="pl-4 border-l-2 border-brand-primary/20">
-                                        <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.duration_value')}</div>
+                                        <div className="text-lg font-bold text-brand-navy">
+                                            <AnimatedCount end={24} duration={2000} /> {t('home.hero_stats.duration_label_text')}
+                                        </div>
                                         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.duration_label')}</div>
                                     </div>
                                     <div className="pl-4 border-l-2 border-brand-primary/20">
-                                        <div className="text-lg font-bold text-brand-navy">{t('home.hero_stats.focus_value')}</div>
-                                        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.focus_label')}</div>
+                                        <div className="text-lg font-bold text-brand-navy">
+                                            <AnimatedCount end={6} duration={1500} /> {t('home.hero_stats.partners_label_text')}
+                                        </div>
+                                        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.partners_label')}</div>
+                                    </div>
+                                    <div className="pl-4 border-l-2 border-brand-primary/20">
+                                        <div className="text-lg font-bold text-brand-navy">
+                                            <AnimatedCount end={5} duration={1000} /> {t('home.hero_stats.countries_label_text')}
+                                        </div>
+                                        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('home.hero_stats.countries_label')}</div>
                                     </div>
                                 </div>
                             </div>

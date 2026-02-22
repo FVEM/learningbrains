@@ -70,6 +70,11 @@
             "programme_name": "Erasmus+ KA220-VET",
             "duration_value": "24 Monate",
             "duration_label": "DAUER",
+            "duration_label_text": "Monate",
+            "partners_label": "PARTNER",
+            "partners_label_text": "Einrichtungen",
+            "countries_label": "LÄNDER",
+            "countries_label_text": "Teilnehmer",
             "focus_value": "Industrielle Umschulung",
             "focus_label": "FOKUS"
         },
