@@ -94,7 +94,8 @@
                 "title": "KI-Tools Forschung",
                 "description": "Analyse modernster KI-Anwendungen für berufliche Bildungsumgebungen."
             }
-        }
+        },
+        "chatbot_tooltip": "Fragen Sie unsere KI!"
     },
     "about": {
         "seo_title": "Über das Projekt",

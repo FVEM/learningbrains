@@ -94,7 +94,8 @@
                 "title": "Ricerca Strumenti IA",
                 "description": "Analisi delle applicazioni IA all'avanguardia per gli ambienti di formazione professionale."
             }
-        }
+        },
+        "chatbot_tooltip": "Chiedi alla nostra IA!"
     },
     "about": {
         "seo_title": "Informazioni sul Progetto",

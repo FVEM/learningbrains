@@ -94,7 +94,8 @@
                 "title": "Investigación de herramientas de IA",
                 "description": "Análisis de aplicaciones de IA de última generación para entornos de formación profesional."
             }
-        }
+        },
+        "chatbot_tooltip": "¡Pregúntale a nuestra IA!"
     },
     "about": {
         "seo_title": "Sobre el Proyecto",

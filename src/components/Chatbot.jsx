@@ -13,7 +13,30 @@ const Chatbot = () => {
     ]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [showTooltip, setShowTooltip] = useState(false);
     const messagesEndRef = useRef(null);
+
+    useEffect(() => {
+        // Show tooltip after 3 seconds
+        const timer = setTimeout(() => {
+            if (!isOpen) setShowTooltip(true);
+        }, 3000);
+
+        // Hide tooltip after 10 seconds of showing it
+        const hideTimer = setTimeout(() => {
+            setShowTooltip(false);
+        }, 13000);
+
+        return () => {
+            clearTimeout(timer);
+            clearTimeout(hideTimer);
+        };
+    }, [isOpen]);
+
+    // Close tooltip when chat is opened
+    useEffect(() => {
+        if (isOpen) setShowTooltip(false);
+    }, [isOpen]);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -232,21 +255,45 @@ You are the strict, technical AI Assistant for "Learning Brains" (Erasmus+ KA220
                 </div>
             )}
 
+            {/* Tooltip */}
+            {!isOpen && showTooltip && (
+                <div className="absolute bottom-20 right-0 mb-2 mr-2 bg-emerald-600 text-white text-sm px-4 py-2 rounded-2xl shadow-lg whitespace-nowrap animate-bounce flex items-center gap-2">
+                    <span>{t('home.chatbot_tooltip')}</span>
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setShowTooltip(false);
+                        }}
+                        className="p-0.5 hover:bg-emerald-700 rounded-full transition-colors ml-1"
+                    >
+                        <X className="w-3 h-3" />
+                    </button>
+                    {/* Tooltip triangle pointer */}
+                    <div className="absolute -bottom-2 right-6 w-4 h-4 bg-emerald-600 transform rotate-45"></div>
+                </div>
+            )}
+
             {/* Toggle Button */}
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="w-16 h-16 bg-white text-emerald-600 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center pointer-events-auto overflow-hidden border-2 border-emerald-500"
-            >
-                {isOpen ? (
-                    <X className="w-8 h-8" />
-                ) : (
-                    <img
-                        src={`${import.meta.env.BASE_URL}learning-brains-favicon-transparent.png`}
-                        alt="Chatbot"
-                        className="w-full h-full object-cover p-2"
-                    />
+            <div className="relative group">
+                {/* Pulse Effect */}
+                {!isOpen && (
+                    <div className="absolute inset-0 bg-emerald-400 rounded-full animate-ping opacity-75"></div>
                 )}
-            </button>
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="relative w-16 h-16 bg-white text-emerald-600 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center pointer-events-auto overflow-hidden border-2 border-emerald-500 z-10"
+                >
+                    {isOpen ? (
+                        <X className="w-8 h-8" />
+                    ) : (
+                        <img
+                            src={`${import.meta.env.BASE_URL}learning-brains-favicon-transparent.png`}
+                            alt="Chatbot"
+                            className="w-full h-full object-cover p-2"
+                        />
+                    )}
+                </button>
+            </div>
         </div>
     );
 };

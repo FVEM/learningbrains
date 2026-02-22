@@ -94,7 +94,8 @@
         "title": "AI Tools Research",
         "description": "Analyzing state-of-the-art AI applications for vocational training environments."
       }
-    }
+    },
+    "chatbot_tooltip": "Ask our AI!"
   },
   "about": {
     "seo_title": "About the Project",

@@ -94,7 +94,8 @@
                 "title": "Výskum UI Nástrojov",
                 "description": "Analýza najmodernejších aplikácií UI pre prostredia odborného vzdelávania."
             }
-        }
+        },
+        "chatbot_tooltip": "Opýtajte sa našej UI!"
     },
     "about": {
         "seo_title": "O Projekte",
