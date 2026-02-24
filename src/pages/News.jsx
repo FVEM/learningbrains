@@ -9,7 +9,7 @@ const News = () => {
         {
             date: "February 2026",
             location: "Bilbao, Spain",
-            image: "News/kickoff-meeting-ai.png"
+            image: "News/BilbaoKickoff.jpg"
         },
         {
             date: "April 2026",

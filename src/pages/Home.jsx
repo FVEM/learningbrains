@@ -306,7 +306,7 @@ const Home = () => {
                                 {
                                     date: "Feb 2026",
                                     location: "Bilbao, Spain",
-                                    image: "News/kickoff-meeting-ai.png"
+                                    image: "News/BilbaoKickoff.jpg"
                                 },
                                 {
                                     date: "Apr 2026",
