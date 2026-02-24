@@ -25,12 +25,12 @@ const Partners = () => {
             linkedin: "https://www.linkedin.com/company/confindustriavenetosiav/"
         },
         {
-            name: "Wirtschaftskammer Steiermark (WKO)",
+            name: "Room466 by WKO Steiermark",
             role: "Partner",
             country: "Austria",
-            logo: "WKO",
+            logo: "Room466",
             logoSrc: "/room-466-logo-blau-transparent-300dpi.png",
-            website: "https://www.wko.at/",
+            website: "https://room466.at/en/home-english/",
             linkedin: "https://www.linkedin.com/company/room466/"
         },
         {

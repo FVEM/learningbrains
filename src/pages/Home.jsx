@@ -275,8 +275,8 @@ const Home = () => {
                                 <img src={`${import.meta.env.BASE_URL}Conf.Veneto SIAV logo.png`} alt="SIAV" className="h-full w-auto object-contain" />
                             </a>
                             {/* Room 466 */}
-                            <a href="https://www.wko.at/" target="_blank" rel="noopener noreferrer" title="Room 466 (WKO)" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="Room 466" className="h-full w-auto object-contain" />
+                            <a href="https://room466.at/en/home-english/" target="_blank" rel="noopener noreferrer" title="Room466 by WKO Steiermark" className="h-10 md:h-12 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src={`${import.meta.env.BASE_URL}room-466-logo-blau-transparent-300dpi.png`} alt="Room466 by WKO Steiermark" className="h-full w-auto object-contain" />
                             </a>
                         </div>
                     </div>

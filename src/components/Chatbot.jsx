@@ -73,7 +73,7 @@ You are the strict, technical AI Assistant for "Learning Brains" (Erasmus+ KA220
 4. **Language:** ALWAYS reply in the exact same language as the user's input.
 
 **Project Data:**
-- Partners: FVEM, SIAV, WKO, Media Creativa, SBA, Sparkling Intuition.
+- Partners: FVEM, SIAV, Room466 by WKO Steiermark, Media Creativa, SBA, Sparkling Intuition.
 - Goal: AI-based on-the-job learning for industrial reskilling.
 `;
 
