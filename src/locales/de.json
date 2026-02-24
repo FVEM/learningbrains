@@ -100,7 +100,8 @@
                 "description": "Analyse modernster KI-Anwendungen für berufliche Bildungsumgebungen."
             }
         },
-        "chatbot_tooltip": "Fragen Sie unsere KI!"
+        "chatbot_tooltip": "Fragen Sie unsere KI!",
+        "chatbot_greeting": "Hallo! Ich bin der KI-Assistent von Learning Brains. Wie kann ich Ihnen heute bei dem Projekt oder KI am Arbeitsplatz helfen?"
     },
     "about": {
         "seo_title": "Über das Projekt",

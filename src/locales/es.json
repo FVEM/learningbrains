@@ -100,7 +100,8 @@
                 "description": "Análisis de aplicaciones de IA de última generación para entornos de formación profesional."
             }
         },
-        "chatbot_tooltip": "¡Pregúntale a nuestra IA!"
+        "chatbot_tooltip": "¡Pregúntale a nuestra IA!",
+        "chatbot_greeting": "¡Hola! Soy el asistente de IA de Learning Brains. ¿Cómo puedo ayudarte hoy con el proyecto o con la IA en el entorno laboral?"
     },
     "about": {
         "seo_title": "Sobre el Proyecto",

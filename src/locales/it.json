@@ -100,7 +100,8 @@
                 "description": "Analisi delle applicazioni IA all'avanguardia per gli ambienti di formazione professionale."
             }
         },
-        "chatbot_tooltip": "Chiedi alla nostra IA!"
+        "chatbot_tooltip": "Chiedi alla nostra IA!",
+        "chatbot_greeting": "Ciao! Sono l'assistente IA di Learning Brains. Come posso aiutarti oggi con il progetto o con l'IA sul posto di lavoro?"
     },
     "about": {
         "seo_title": "Informazioni sul Progetto",

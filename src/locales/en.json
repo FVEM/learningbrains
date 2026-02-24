@@ -100,7 +100,8 @@
         "description": "Analyzing state-of-the-art AI applications for vocational training environments."
       }
     },
-    "chatbot_tooltip": "Ask our AI!"
+    "chatbot_tooltip": "Ask our AI!",
+    "chatbot_greeting": "Hello! I'm the Learning Brains AI assistant. How can I help you today with the project or AI in the workplace?"
   },
   "about": {
     "seo_title": "About the Project",

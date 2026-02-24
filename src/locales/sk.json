@@ -95,7 +95,8 @@
                 "description": "Analýza najmodernejších aplikácií UI pre prostredia odborného vzdelávania."
             }
         },
-        "chatbot_tooltip": "Opýtajte sa našej UI!"
+        "chatbot_tooltip": "Opýtajte sa našej UI!",
+        "chatbot_greeting": "Dobrý deň! Som asistent umelej inteligencie Learning Brains. Ako vám dnes môžem pomôcť s projektom alebo UI na pracovisku?"
     },
     "about": {
         "seo_title": "O Projekte",

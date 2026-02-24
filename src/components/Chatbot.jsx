@@ -8,7 +8,7 @@ const Chatbot = () => {
     const [messages, setMessages] = useState([
         {
             role: 'assistant',
-            content: "Hello! I'm the Learning Brains AI assistant. How can I help you today with the project or AI in the workplace?"
+            content: t('home.chatbot_greeting', "Hello! I'm the Learning Brains AI assistant. How can I help you today with the project or AI in the workplace?")
         }
     ]);
     const [input, setInput] = useState('');
@@ -45,6 +45,23 @@ const Chatbot = () => {
     useEffect(() => {
         scrollToBottom();
     }, [messages, isOpen]);
+
+    // Update greeting when language changes
+    useEffect(() => {
+        setMessages(prevMessages => {
+            const firstMessage = prevMessages[0];
+            // Only update the first message if it's the assistant's greeting and no other messages exist, 
+            // or just always update the first message to localized version
+            const newMessages = [...prevMessages];
+            if (newMessages.length > 0 && newMessages[0].role === 'assistant') {
+                newMessages[0] = {
+                    ...newMessages[0],
+                    content: t('home.chatbot_greeting', "Hello! I'm the Learning Brains AI assistant. How can I help you today with the project or AI in the workplace?")
+                };
+            }
+            return newMessages;
+        });
+    }, [t]);
 
     const SYSTEM_PROMPT = `
 You are the strict, technical AI Assistant for "Learning Brains" (Erasmus+ KA220-VET).
