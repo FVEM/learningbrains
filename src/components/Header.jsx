@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown, LineChart } from 'lucide-react';
 const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
 
 const Header = () => {
@@ -70,34 +70,51 @@ const Header = () => {
                         </Link>
                     ))}
 
-                    <div className="relative ml-4">
-                        <button
-                            onClick={() => setLangOpen(!langOpen)}
-                            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 text-slate-600 hover:bg-teal-50 hover:text-brand-secondary transition-all border border-slate-100"
+                    <div className="flex items-center gap-2 ml-4">
+                        <Link
+                            to="/analytics"
+                            className="p-1.5 text-slate-400 hover:text-brand-primary hover:bg-teal-50 rounded-full transition-colors"
+                            title="Analytics Dashboard"
                         >
-                            <Globe className="w-4 h-4" />
-                            <span className="text-xs font-bold uppercase">{currentLang}</span>
-                            <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
-                        </button>
+                            <LineChart className="w-5 h-5" />
+                        </Link>
 
-                        {langOpen && (
-                            <div className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl border border-slate-50 p-2 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
-                                {languages.map((lang) => (
-                                    <button
-                                        key={lang.code}
-                                        onClick={() => changeLanguage(lang.code)}
-                                        className={`w-full text-left px-4 py-2 text-xs font-medium rounded-lg hover:bg-slate-50 transition-colors ${currentLang === lang.code ? 'text-brand-primary bg-teal-50' : 'text-slate-600'}`}
-                                    >
-                                        {lang.name}
-                                    </button>
-                                ))}
-                            </div>
-                        )}
+                        <div className="relative">
+                            <button
+                                onClick={() => setLangOpen(!langOpen)}
+                                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 text-slate-600 hover:bg-teal-50 hover:text-brand-secondary transition-all border border-slate-100"
+                            >
+                                <Globe className="w-4 h-4" />
+                                <span className="text-xs font-bold uppercase">{currentLang}</span>
+                                <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {langOpen && (
+                                <div className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl border border-slate-50 p-2 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => changeLanguage(lang.code)}
+                                            className={`w-full text-left px-4 py-2 text-xs font-medium rounded-lg hover:bg-slate-50 transition-colors ${currentLang === lang.code ? 'text-brand-primary bg-teal-50' : 'text-slate-600'}`}
+                                        >
+                                            {lang.name}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
 
                 {/* Mobile Menu Toggle */}
-                <div className="lg:hidden flex items-center gap-4">
+                <div className="lg:hidden flex items-center gap-3">
+                    <Link
+                        to="/analytics"
+                        className="p-1.5 text-slate-400 hover:text-brand-primary hover:bg-teal-50 rounded-full transition-colors"
+                        title="Analytics Dashboard"
+                    >
+                        <LineChart className="w-5 h-5" />
+                    </Link>
                     <button
                         onClick={() => setLangOpen(!langOpen)}
                         className="px-2 py-1 bg-slate-50 rounded-lg text-slate-600"
