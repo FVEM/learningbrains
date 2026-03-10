@@ -71,7 +71,12 @@
             "duration_value": "24 Mesiacov",
             "duration_label": "TRVANIE",
             "focus_value": "Priemyselná Rekvalifikácia",
-            "focus_label": "ZAMERANIE"
+            "focus_label": "ZAMERANIE",
+            "duration_label_text": "Mesiacov",
+            "partners_label": "PARTNERI",
+            "partners_label_text": "Subjektov",
+            "countries_label": "KRAJINY",
+            "countries_label_text": "Účastníkov"
         },
         "consortium_title": "Konzorcium Projektu",
         "latest_updates": {
