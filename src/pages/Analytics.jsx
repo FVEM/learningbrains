@@ -80,9 +80,7 @@ export default function Analytics() {
                 </Helmet>
 
                 <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-neutral-100">
-                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <ShieldAlert className="w-10 h-10 text-primary" />
-                    </div>
+                    <img src="/learning-brains-logo-transparent-cropped.png" alt="Learning Brains Analytics" className="h-24 w-auto mx-auto mb-6 object-contain" />
                     <h1 className="text-2xl font-bold text-neutral-800 mb-2">Restricted Access</h1>
                     <p className="text-neutral-500 mb-8">Please enter the PIN code to view the analytics dashboard.</p>
 
@@ -94,7 +92,7 @@ export default function Analytics() {
                                 value={pinInput}
                                 onChange={(e) => setPinInput(e.target.value)}
                                 placeholder="Enter PIN"
-                                className={`w-full pl-10 pr-4 py-3 rounded-xl border focus:ring-2 outline-none transition-all ${errorPin ? 'border-red-500 focus:ring-red-200' : 'border-neutral-200 focus:border-primary focus:ring-primary/20'
+                                className={`w-full pl-10 pr-4 py-3 rounded-xl border focus:ring-2 outline-none transition-all ${errorPin ? 'border-red-500 focus:ring-red-200' : 'border-neutral-200 focus:border-brand-primary focus:ring-brand-primary/20'
                                     }`}
                                 autoFocus
                             />
@@ -103,7 +101,7 @@ export default function Analytics() {
 
                         <button
                             type="submit"
-                            className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-xl mt-6 transition-colors shadow-lg shadow-primary/20"
+                            className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 rounded-xl mt-6 transition-colors shadow-lg shadow-brand-primary/20"
                         >
                             Access Dashboard
                         </button>
@@ -124,15 +122,15 @@ export default function Analytics() {
             <header className="bg-white border-b border-neutral-200 sticky top-0 z-30 shadow-sm shadow-black/5">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <TrendingUp className="text-primary w-6 h-6" />
-                        <span className="font-bold text-xl text-neutral-800 tracking-tight">Analytics <span className="text-primary">Dashboard</span></span>
+                        <TrendingUp className="text-brand-primary w-6 h-6" />
+                        <span className="font-bold text-xl text-neutral-800 tracking-tight">Analytics <span className="text-brand-primary">Dashboard</span></span>
                     </div>
 
                     <div className="flex items-center gap-4">
                         <select
                             value={timeRange}
                             onChange={(e) => setTimeRange(e.target.value)}
-                            className="bg-neutral-100 border-none rounded-lg py-1.5 pl-4 pr-10 text-sm font-medium focus:ring-2 focus:ring-primary/50 outline-none cursor-pointer appearance-none hover:bg-neutral-200 transition-colors"
+                            className="bg-neutral-100 border-none rounded-lg py-1.5 pl-4 pr-10 text-sm font-medium focus:ring-2 focus:ring-brand-primary/50 outline-none cursor-pointer appearance-none hover:bg-neutral-200 transition-colors"
                         >
                             <option value="7days">Last 7 Days</option>
                             <option value="30days">Last 30 Days</option>
@@ -155,7 +153,7 @@ export default function Analytics() {
 
                 {isLoading && !data && (
                     <div className="flex flex-col items-center justify-center py-32">
-                        <Loader2 className="w-12 h-12 text-primary animate-spin mb-6" />
+                        <Loader2 className="w-12 h-12 text-brand-primary animate-spin mb-6" />
                         <p className="text-neutral-600 font-medium text-lg">Fetching live data from Google Analytics...</p>
                         <p className="text-neutral-400 text-sm mt-2">This may take a few seconds.</p>
                     </div>
