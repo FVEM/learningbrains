@@ -17,8 +17,28 @@ export default async function handler(req, res) {
 
         // Validar entorno
         const propertyId = process.env.GA_PROPERTY_ID;
-        const clientEmail = process.env.GA_CLIENT_EMAIL;
-        const privateKey = process.env.GA_PRIVATE_KEY?.replace(/\\n/g, '\n');
+        let clientEmail = process.env.GA_CLIENT_EMAIL;
+        let privateKey = process.env.GA_PRIVATE_KEY;
+
+        // Soporte para pegar el JSON entero como GA_PRIVATE_KEY
+        if (privateKey?.trim().startsWith('{')) {
+            try {
+                const creds = JSON.parse(privateKey);
+                privateKey = creds.private_key;
+                if (!clientEmail) clientEmail = creds.client_email;
+            } catch (e) {
+                return res.status(500).json({ error: 'GA_PRIVATE_KEY contains invalid JSON.' });
+            }
+        }
+
+        // Normalizar saltos de línea en la clave privada
+        if (privateKey) {
+            privateKey = privateKey.replace(/\\n/g, '\n');
+            // Añadir cabeceras si faltan
+            if (!privateKey.includes('-----BEGIN')) {
+                privateKey = `-----BEGIN PRIVATE KEY-----\n${privateKey}\n-----END PRIVATE KEY-----\n`;
+            }
+        }
 
         if (!propertyId || !clientEmail || !privateKey) {
             return res.status(500).json({
