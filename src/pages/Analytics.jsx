@@ -61,13 +61,10 @@ export default function Analytics() {
         try {
             // Llamada la api serverless real
             const response = await fetch(`/api/analytics?range=${range}`);
-            if (!response.ok) {
-                throw new Error('Failed to fetch analytics data');
-            }
             const result = await response.json();
 
-            if (result.error) {
-                throw new Error(result.error);
+            if (!response.ok || result.error) {
+                throw new Error(result.error || `HTTP ${response.status}: Failed to fetch analytics data`);
             }
 
             setData(result);
