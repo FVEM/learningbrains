@@ -10,6 +10,7 @@ import News from './pages/News';
 import Resources from './pages/Resources';
 import Impact from './pages/Impact';
 import Contact from './pages/Contact';
+import Analytics from './pages/Analytics';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -31,6 +32,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<RootRedirect />} />
+        <Route path="/analytics" element={<Analytics />} />
 
         {/* All routes wrapped with Language Parameter */}
         <Route path="/:lang" element={<LanguageLayout />}>
