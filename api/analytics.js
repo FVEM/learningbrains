@@ -60,117 +60,164 @@ export default async function handler(req, res) {
             projectId: clientEmail.split('@')[1].split('.')[0] // fallback project id extract
         });
 
-        // === CONSULTA 1: KPIs y Gráfico de Líneas (Tiempo) ===
-        const [timeSeriesResponse] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges: [{ startDate, endDate: 'today' }],
-            dimensions: [{ name: 'date' }],
-            metrics: [
-                { name: 'screenPageViews' },
-                { name: 'activeUsers' },
-                { name: 'bounceRate' },
-                { name: 'userEngagementDuration' }
-            ],
-            orderBys: [{
-                dimension: { dimensionName: 'date' },
-                desc: false,
-            }],
-        });
+        // Ejecutar todas las consultas en paralelo para mayor velocidad
+        const [
+            [kpisResponse],
+            [timeSeriesResponse],
+            [devicesResponse],
+            [osResponse],
+            [countriesResponse],
+            [pagesResponse],
+            [channelsResponse],
+            [eventsResponse]
+        ] = await Promise.all([
+            // 0: KPIs Globales
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                metrics: [
+                    { name: 'screenPageViews' },
+                    { name: 'activeUsers' },
+                    { name: 'newUsers' },
+                    { name: 'userEngagementDuration' },
+                    { name: 'engagementRate' }
+                ]
+            }),
+            // 1: Serie Temporal
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'date' }],
+                metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }],
+                orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }]
+            }),
+            // 2: Dispositivos
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'deviceCategory' }],
+                metrics: [{ name: 'activeUsers' }]
+            }),
+            // 3: Sistemas Operativos
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'operatingSystem' }],
+                metrics: [{ name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+            }),
+            // 4: Países Top 5
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'country' }],
+                metrics: [{ name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
+                limit: 5
+            }),
+            // 5: Páginas Top 6
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'pagePath' }, { name: 'pageTitle' }],
+                metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }, { name: 'userEngagementDuration' }],
+                orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+                limit: 6
+            }),
+            // 6: Canales de Adquisición
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'sessionDefaultChannelGroup' }],
+                metrics: [{ name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+            }),
+            // 7: Eventos Principales
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'eventName' }],
+                metrics: [{ name: 'eventCount' }, { name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+                limit: 7
+            })
+        ]);
 
-        // Procesamos serie temporal y KPIs globales
-        let totalViews = 0;
-        let totalUsers = 0;
-        let totalBounceRate = 0;
-        let totalEngagementDuration = 0;
-        let daysCount = 0;
+        // Procesar KPIs Generales
+        const kpiRow = kpisResponse.rows?.[0];
+        const kpis = kpiRow ? {
+            views: parseInt(kpiRow.metricValues[0].value, 10),
+            users: parseInt(kpiRow.metricValues[1].value, 10),
+            newUsers: parseInt(kpiRow.metricValues[2].value, 10),
+            avgEngagement: parseInt(kpiRow.metricValues[1].value, 10) > 0
+                ? (parseFloat(kpiRow.metricValues[3].value) / parseInt(kpiRow.metricValues[1].value, 10)).toFixed(0)
+                : 0,
+            engagementRate: (parseFloat(kpiRow.metricValues[4].value) * 100).toFixed(1)
+        } : { views: 0, users: 0, newUsers: 0, avgEngagement: 0, engagementRate: 0 };
 
+        // Procesar Serie Temporal
         const timeSeries = timeSeriesResponse.rows?.map(row => {
             const dateStr = row.dimensionValues[0].value;
             const formattedDate = `${dateStr.substring(6, 8)}/${dateStr.substring(4, 6)}`; // DD/MM
-            const views = parseInt(row.metricValues[0].value, 10);
-            const users = parseInt(row.metricValues[1].value, 10);
-            const bounceRate = parseFloat(row.metricValues[2].value);
-            const engagement = parseFloat(row.metricValues[3].value);
-
-            totalViews += views;
-            totalUsers += users;
-            totalBounceRate += bounceRate;
-            totalEngagementDuration += engagement;
-            daysCount++;
-
             return {
                 date: formattedDate,
-                views,
-                users
+                views: parseInt(row.metricValues[0].value, 10),
+                users: parseInt(row.metricValues[1].value, 10)
             };
         }) || [];
 
-        const kpis = {
-            views: totalViews,
-            users: totalUsers,
-            bounceRate: daysCount > 0 ? (totalBounceRate / daysCount * 100).toFixed(1) : 0,
-            avgEngagement: totalUsers > 0 ? (totalEngagementDuration / totalUsers).toFixed(0) : 0
-        };
-
-        // === CONSULTA 2: Dispositivos ===
-        const [devicesResponse] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges: [{ startDate, endDate: 'today' }],
-            dimensions: [{ name: 'deviceCategory' }],
-            metrics: [{ name: 'activeUsers' }]
-        });
-
+        // Procesar Dispositivos
         const devices = devicesResponse.rows?.map(row => ({
             name: row.dimensionValues[0].value,
             value: parseInt(row.metricValues[0].value, 10)
         })) || [];
 
-        // === CONSULTA 3: Países (Top 5) ===
-        const [countriesResponse] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges: [{ startDate, endDate: 'today' }],
-            dimensions: [{ name: 'country' }],
-            metrics: [{ name: 'activeUsers' }],
-            orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
-            limit: 5
-        });
+        // Procesar Sistemas Operativos
+        const os = osResponse.rows?.map(row => ({
+            name: row.dimensionValues[0].value,
+            value: parseInt(row.metricValues[0].value, 10)
+        })) || [];
 
+        // Procesar Países
         const countries = countriesResponse.rows?.map(row => ({
             country: row.dimensionValues[0].value,
             users: parseInt(row.metricValues[0].value, 10)
         })) || [];
 
-        // === CONSULTA 4: Páginas Más Vistas (Top 5) ===
-        const [pagesResponse] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges: [{ startDate, endDate: 'today' }],
-            dimensions: [{ name: 'pagePath' }],
-            metrics: [
-                { name: 'screenPageViews' },
-                { name: 'userEngagementDuration' },
-                { name: 'activeUsers' }
-            ],
-            orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-            limit: 5
-        });
-
+        // Procesar Páginas
         const pages = pagesResponse.rows?.map(row => {
             const path = row.dimensionValues[0].value;
+            const title = row.dimensionValues[1].value;
             const views = parseInt(row.metricValues[0].value, 10);
-            const engDur = parseFloat(row.metricValues[1].value);
-            const users = parseInt(row.metricValues[2].value, 10);
+            const users = parseInt(row.metricValues[1].value, 10);
+            const engDur = parseFloat(row.metricValues[2].value);
             const time = users > 0 ? (engDur / users).toFixed(0) : 0;
-
-            return { path, views, time };
+            return { path, title, views, time };
         }) || [];
 
-        // === DEVOLVER TODO ===
+        // Procesar Canales
+        const channels = channelsResponse.rows?.map(row => ({
+            channel: row.dimensionValues[0].value,
+            users: parseInt(row.metricValues[0].value, 10)
+        })) || [];
+
+        // Procesar Eventos
+        const events = eventsResponse.rows?.map(row => ({
+            name: row.dimensionValues[0].value,
+            count: parseInt(row.metricValues[0].value, 10),
+            users: parseInt(row.metricValues[1].value, 10)
+        })) || [];
+
+        // DEVOLVER TODO
         res.status(200).json({
             kpis,
             timeSeries,
             devices,
+            os,
             countries,
-            pages
+            pages,
+            channels,
+            events
         });
 
     } catch (error) {

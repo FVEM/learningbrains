@@ -4,15 +4,19 @@ import {
     LineChart, Line, BarChart, Bar, PieChart, Pie, Cell,
     XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
-import { ShieldAlert, LogOut, Users, FileText, Clock, MousePointerClick, TrendingUp, KeyRound, Loader2, AlertCircle } from 'lucide-react';
+import {
+    ShieldAlert, LogOut, Users, FileText, Clock, MousePointerClick,
+    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap
+} from 'lucide-react';
 
 // Colores basados en la paleta de Learning Brains
 const BRAND_RED = "#d62828";
 const BRAND_BLUE = "#003049";
 const BRAND_ORANGE = "#f77f00";
 const BRAND_YELLOW = "#fcbf49";
+const BRAND_GRAY = "#6B7280";
 
-const COLORS = [BRAND_RED, BRAND_BLUE, BRAND_ORANGE, BRAND_YELLOW, '#8e44ad', '#27ae60'];
+const COLORS = [BRAND_RED, BRAND_BLUE, BRAND_ORANGE, BRAND_YELLOW, '#8e44ad', '#27ae60', '#e74c3c', '#3498db'];
 
 export default function Analytics() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -59,7 +63,6 @@ export default function Analytics() {
         setIsLoading(true);
         setErrorData(null);
         try {
-            // Llamada la api serverless real
             const response = await fetch(`/api/analytics?range=${range}`);
             const result = await response.json();
 
@@ -84,7 +87,7 @@ export default function Analytics() {
                     <meta name="robots" content="noindex, nofollow" />
                 </Helmet>
 
-                <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center">
+                <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-neutral-100">
                     <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                         <ShieldAlert className="w-10 h-10 text-primary" />
                     </div>
@@ -99,7 +102,7 @@ export default function Analytics() {
                                 value={pinInput}
                                 onChange={(e) => setPinInput(e.target.value)}
                                 placeholder="Enter PIN"
-                                className={`w-full pl-10 pr-4 py-3 rounded-lg border focus:ring-2 outline-none transition-all ${errorPin ? 'border-red-500 focus:ring-red-200' : 'border-neutral-200 focus:border-primary focus:ring-primary/20'
+                                className={`w-full pl-10 pr-4 py-3 rounded-xl border focus:ring-2 outline-none transition-all ${errorPin ? 'border-red-500 focus:ring-red-200' : 'border-neutral-200 focus:border-primary focus:ring-primary/20'
                                     }`}
                                 autoFocus
                             />
@@ -108,7 +111,7 @@ export default function Analytics() {
 
                         <button
                             type="submit"
-                            className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg mt-6 transition-colors shadow-md shadow-primary/20"
+                            className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-xl mt-6 transition-colors shadow-lg shadow-primary/20"
                         >
                             Access Dashboard
                         </button>
@@ -119,15 +122,15 @@ export default function Analytics() {
     }
 
     return (
-        <div className="min-h-screen bg-neutral-50 font-sans pb-12">
+        <div className="min-h-[100dvh] bg-neutral-50 font-sans pb-12">
             <Helmet>
                 <title>Analytics Dashboard | Learning Brains</title>
                 <meta name="robots" content="noindex, nofollow" />
             </Helmet>
 
             {/* Header */}
-            <header className="bg-white border-b border-neutral-200 sticky top-0 z-30">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <header className="bg-white border-b border-neutral-200 sticky top-0 z-30 shadow-sm shadow-black/5">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         <TrendingUp className="text-primary w-6 h-6" />
                         <span className="font-bold text-xl text-neutral-800 tracking-tight">Analytics <span className="text-primary">Dashboard</span></span>
@@ -137,7 +140,7 @@ export default function Analytics() {
                         <select
                             value={timeRange}
                             onChange={(e) => setTimeRange(e.target.value)}
-                            className="bg-neutral-100 border-none rounded-md py-1.5 pl-3 pr-8 text-sm font-medium focus:ring-2 focus:ring-primary/50 outline-none cursor-pointer"
+                            className="bg-neutral-100 border-none rounded-lg py-1.5 pl-4 pr-10 text-sm font-medium focus:ring-2 focus:ring-primary/50 outline-none cursor-pointer appearance-none hover:bg-neutral-200 transition-colors"
                         >
                             <option value="7days">Last 7 Days</option>
                             <option value="30days">Last 30 Days</option>
@@ -146,7 +149,7 @@ export default function Analytics() {
 
                         <button
                             onClick={handleLogout}
-                            className="text-neutral-500 hover:text-red-500 transition-colors p-2 rounded-full hover:bg-red-50"
+                            className="text-neutral-500 hover:text-red-600 transition-colors p-2 rounded-full hover:bg-red-50"
                             title="Logout"
                         >
                             <LogOut className="w-5 h-5" />
@@ -156,124 +159,193 @@ export default function Analytics() {
             </header>
 
             {/* Main Content */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+            <main className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-8">
 
                 {isLoading && !data && (
-                    <div className="flex flex-col items-center justify-center py-20">
-                        <Loader2 className="w-10 h-10 text-primary animate-spin mb-4" />
-                        <p className="text-neutral-500">Fetching live data from Google Analytics...</p>
+                    <div className="flex flex-col items-center justify-center py-32">
+                        <Loader2 className="w-12 h-12 text-primary animate-spin mb-6" />
+                        <p className="text-neutral-600 font-medium text-lg">Fetching live data from Google Analytics...</p>
+                        <p className="text-neutral-400 text-sm mt-2">This may take a few seconds.</p>
                     </div>
                 )}
 
                 {errorData && (
-                    <div className="bg-red-50 border border-red-200 rounded-xl p-6 flex gap-4 items-start mb-8 text-red-800">
-                        <AlertCircle className="w-6 h-6 shrink-0 mt-0.5" />
+                    <div className="bg-red-50 border border-red-200 rounded-2xl p-6 flex gap-4 items-start mb-8 text-red-800 shadow-sm">
+                        <AlertCircle className="w-7 h-7 shrink-0 mt-0.5 text-red-500" />
                         <div>
-                            <h3 className="font-bold mb-1">Configuration Needed</h3>
-                            <p className="text-sm">{errorData}</p>
-                            <p className="text-sm mt-3 font-medium">Please ensure Vercel environment variables are set: <br /><code className="bg-red-100 px-1 py-0.5 rounded">GA_PROPERTY_ID</code>, <code className="bg-red-100 px-1 py-0.5 rounded">GA_CLIENT_EMAIL</code>, <code className="bg-red-100 px-1 py-0.5 rounded">GA_PRIVATE_KEY</code></p>
+                            <h3 className="font-bold text-lg mb-1">Configuration Needed</h3>
+                            <p className="text-neutral-700">{errorData}</p>
+                            <p className="text-sm mt-4 font-medium text-neutral-600 bg-red-100/50 p-3 rounded-lg border border-red-100">
+                                Please ensure Vercel environment variables are set: <br />
+                                <code className="bg-white/80 px-1.5 py-0.5 rounded text-red-700 mx-1 border border-red-200 select-all">GA_PROPERTY_ID</code>,
+                                <code className="bg-white/80 px-1.5 py-0.5 rounded text-red-700 mx-1 border border-red-200 select-all">GA_CLIENT_EMAIL</code>,
+                                <code className="bg-white/80 px-1.5 py-0.5 rounded text-red-700 mx-1 border border-red-200 select-all">GA_PRIVATE_KEY</code>
+                            </p>
                         </div>
                     </div>
                 )}
 
                 {!isLoading && data && !errorData && (
                     <div className="space-y-6">
-                        {/* KPI Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <StatCard title="Total Views" value={data.kpis.views} icon={<MousePointerClick />} trend="+12%" />
-                            <StatCard title="Active Users" value={data.kpis.users} icon={<Users />} trend="+8%" />
-                            <StatCard title="Bounce Rate" value={`${data.kpis.bounceRate}%`} icon={<LogOut />} trend="-2%" inverse />
-                            <StatCard title="Avg. Engagement" value={`${data.kpis.avgEngagement}s`} icon={<Clock />} trend="+5%" inline />
+                        {/* KPI Cards Row */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-6">
+                            <StatCard title="Total Page Views" value={data.kpis.views.toLocaleString()} icon={<MousePointerClick className="w-6 h-6" />} color="text-brand-blue" bgColor="bg-brand-blue/10" />
+                            <StatCard title="Active Users" value={data.kpis.users.toLocaleString()} icon={<Users className="w-6 h-6" />} color="text-brand-red" bgColor="bg-brand-red/10" />
+                            <StatCard title="New Users" value={data.kpis.newUsers.toLocaleString()} icon={<UserPlus className="w-6 h-6" />} color="text-brand-orange" bgColor="bg-brand-orange/10" />
+                            <StatCard title="Engagement Rate" value={`${data.kpis.engagementRate}%`} icon={<TrendingUp className="w-6 h-6" />} color="text-green-600" bgColor="bg-green-100" />
+                            <StatCard title="Avg. Engagement Time" value={`${data.kpis.avgEngagement}s`} icon={<Clock className="w-6 h-6" />} color="text-purple-600" bgColor="bg-purple-100" />
                         </div>
 
+                        {/* Top Charts Row */}
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                            {/* Line Chart - Traffic over time */}
-                            <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-neutral-100 p-6">
+                            {/* Traffic Overview */}
+                            <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-neutral-100 p-6 flex flex-col">
                                 <h3 className="text-lg font-bold text-neutral-800 mb-6">Traffic Overview</h3>
-                                <div className="h-[300px]">
+                                <div className="flex-1 min-h-[300px]">
                                     <ResponsiveContainer width="100%" height="100%">
-                                        <LineChart data={data.timeSeries}>
+                                        <LineChart data={data.timeSeries} margin={{ top: 5, right: 20, left: -20, bottom: 5 }}>
                                             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
-                                            <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} dy={10} />
-                                            <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} dx={-10} />
-                                            <Tooltip
-                                                contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                                            />
+                                            <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} dy={10} minTickGap={20} />
+                                            <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} />
+                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} />
                                             <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
-                                            <Line type="monotone" dataKey="views" name="Page Views" stroke={BRAND_RED} strokeWidth={3} dot={{ r: 4, strokeWidth: 2 }} activeDot={{ r: 6 }} />
-                                            <Line type="monotone" dataKey="users" name="Active Users" stroke={BRAND_BLUE} strokeWidth={3} dot={{ r: 4, strokeWidth: 2 }} />
+                                            <Line type="monotone" dataKey="views" name="Page Views" stroke={BRAND_RED} strokeWidth={3} dot={{ r: 3, strokeWidth: 1 }} activeDot={{ r: 6 }} />
+                                            <Line type="monotone" dataKey="users" name="Active Users" stroke={BRAND_BLUE} strokeWidth={3} dot={{ r: 3, strokeWidth: 1 }} />
                                         </LineChart>
                                     </ResponsiveContainer>
                                 </div>
                             </div>
 
-                            {/* Pie Chart - Devices */}
-                            <div className="bg-white rounded-xl shadow-sm border border-neutral-100 p-6">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-6">Device Category</h3>
-                                <div className="h-[300px] flex items-center justify-center">
+                            {/* Acquisition Channels */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6 flex flex-col">
+                                <h3 className="text-lg font-bold text-neutral-800 mb-6">Acquisition Channels</h3>
+                                <div className="flex-1 min-h-[300px]">
                                     <ResponsiveContainer width="100%" height="100%">
-                                        <PieChart>
-                                            <Pie
-                                                data={data.devices}
-                                                cx="50%"
-                                                cy="50%"
-                                                innerRadius={60}
-                                                outerRadius={90}
-                                                paddingAngle={5}
-                                                dataKey="value"
-                                            >
-                                                {data.devices.map((entry, index) => (
-                                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                                ))}
-                                            </Pie>
-                                            <Tooltip contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Legend iconType="circle" />
-                                        </PieChart>
+                                        <BarChart data={data.channels} layout="vertical" margin={{ top: 0, right: 0, left: 30, bottom: 0 }}>
+                                            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#E5E7EB" />
+                                            <XAxis type="number" hide />
+                                            <YAxis dataKey="channel" type="category" axisLine={false} tickLine={false} tick={{ fill: '#4B5563', fontSize: 13, fontWeight: 500 }} />
+                                            <Tooltip cursor={{ fill: '#F3F4F6' }} contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                                            <Bar dataKey="users" name="Users" fill={BRAND_ORANGE} radius={[0, 4, 4, 0]} barSize={20} />
+                                        </BarChart>
                                     </ResponsiveContainer>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {/* Bar Chart - Countries */}
-                            <div className="bg-white rounded-xl shadow-sm border border-neutral-100 p-6">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-6">Top Countries</h3>
-                                <div className="h-[300px]">
+                        {/* Mid Charts Row */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {/* Devices */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
+                                <h3 className="text-lg font-bold text-neutral-800 mb-2">Device Category</h3>
+                                <div className="h-[250px] flex items-center justify-center">
                                     <ResponsiveContainer width="100%" height="100%">
-                                        <BarChart data={data.countries} layout="vertical" margin={{ left: 20 }}>
-                                            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#E5E7EB" />
-                                            <XAxis type="number" axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} />
-                                            <YAxis dataKey="country" type="category" axisLine={false} tickLine={false} tick={{ fill: '#4B5563', fontSize: 13, fontWeight: 500 }} width={100} />
-                                            <Tooltip cursor={{ fill: '#F3F4F6' }} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Bar dataKey="users" name="Users" fill={BRAND_ORANGE} radius={[0, 4, 4, 0]} barSize={24} />
-                                        </BarChart>
+                                        <PieChart>
+                                            <Pie data={data.devices} cx="50%" cy="50%" innerRadius={60} outerRadius={85} paddingAngle={4} dataKey="value">
+                                                {data.devices.map((entry, index) => (
+                                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                                ))}
+                                            </Pie>
+                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                                            <Legend iconType="circle" />
+                                        </PieChart>
                                     </ResponsiveContainer>
                                 </div>
                             </div>
 
+                            {/* OS */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
+                                <h3 className="text-lg font-bold text-neutral-800 mb-2">Operating Systems</h3>
+                                <div className="h-[250px] flex items-center justify-center">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <PieChart>
+                                            <Pie data={data.os} cx="50%" cy="50%" innerRadius={0} outerRadius={85} paddingAngle={2} dataKey="value">
+                                                {data.os.map((entry, index) => (
+                                                    <Cell key={`cell-os-${index}`} fill={COLORS[(index + 3) % COLORS.length]} />
+                                                ))}
+                                            </Pie>
+                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                                            <Legend iconType="circle" />
+                                        </PieChart>
+                                    </ResponsiveContainer>
+                                </div>
+                            </div>
+
+                            {/* Countries */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
+                                <h3 className="text-lg font-bold text-neutral-800 mb-4">Top Countries</h3>
+                                <div className="h-[250px]">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <BarChart data={data.countries} layout="vertical" margin={{ left: 20 }}>
+                                            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#E5E7EB" />
+                                            <XAxis type="number" hide />
+                                            <YAxis dataKey="country" type="category" axisLine={false} tickLine={false} tick={{ fill: '#4B5563', fontSize: 13, fontWeight: 500 }} width={80} />
+                                            <Tooltip cursor={{ fill: '#F3F4F6' }} contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                                            <Bar dataKey="users" name="Users" fill={BRAND_BLUE} radius={[0, 4, 4, 0]} barSize={20} />
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Tables Row */}
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                             {/* Top Pages Table */}
-                            <div className="bg-white rounded-xl shadow-sm border border-neutral-100 p-6 flex flex-col">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-4 flex items-center gap-2">
-                                    <FileText className="w-5 h-5 text-neutral-400" />
-                                    Top Pages
-                                </h3>
-                                <div className="overflow-auto flex-1">
-                                    <table className="w-full text-sm text-left">
-                                        <thead className="text-xs text-neutral-500 uppercase bg-neutral-50">
+                            <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-neutral-100 flex flex-col overflow-hidden">
+                                <div className="p-6 pb-4 border-b border-neutral-100 flex items-center gap-2">
+                                    <div className="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center text-neutral-500">
+                                        <FileText className="w-4 h-4" />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-neutral-800">Top Pages</h3>
+                                </div>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm text-left whitespace-nowrap">
+                                        <thead className="text-xs text-neutral-500 uppercase bg-neutral-50/50">
                                             <tr>
-                                                <th className="px-4 py-3 rounded-tl-lg">Page Path</th>
-                                                <th className="px-4 py-3 text-right">Views</th>
-                                                <th className="px-4 py-3 text-right rounded-tr-lg">Avg. Time</th>
+                                                <th className="px-6 py-4 font-semibold">Page Config</th>
+                                                <th className="px-6 py-4 text-right font-semibold">Views</th>
+                                                <th className="px-6 py-4 text-right font-semibold">Avg. Engagement</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody className="divide-y divide-neutral-100">
                                             {data.pages.map((page, i) => (
-                                                <tr key={i} className="border-b last:border-0 border-neutral-100 hover:bg-neutral-50/50 transition-colors">
-                                                    <td className="px-4 py-3 font-medium text-neutral-700 truncate max-w-[200px]" title={page.path}>
-                                                        {page.path}
+                                                <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
+                                                    <td className="px-6 py-4">
+                                                        <div className="font-semibold text-neutral-800 truncate max-w-[300px]" title={page.title}>{page.title || '(not set)'}</div>
+                                                        <div className="text-neutral-400 text-xs mt-0.5 truncate max-w-[300px]" title={page.path}>{page.path}</div>
                                                     </td>
-                                                    <td className="px-4 py-3 text-right font-semibold">{page.views.toLocaleString()}</td>
-                                                    <td className="px-4 py-3 text-right text-neutral-500">{page.time}s</td>
+                                                    <td className="px-6 py-4 text-right font-semibold text-neutral-700">{page.views.toLocaleString()}</td>
+                                                    <td className="px-6 py-4 text-right text-neutral-500">{page.time}s</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            {/* Top Events Table */}
+                            <div className="lg:col-span-1 bg-white rounded-2xl shadow-sm border border-neutral-100 flex flex-col overflow-hidden">
+                                <div className="p-6 pb-4 border-b border-neutral-100 flex items-center gap-2">
+                                    <div className="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center text-neutral-500">
+                                        <Zap className="w-4 h-4" />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-neutral-800">Top Events</h3>
+                                </div>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm text-left whitespace-nowrap">
+                                        <thead className="text-xs text-neutral-500 uppercase bg-neutral-50/50">
+                                            <tr>
+                                                <th className="px-6 py-4 font-semibold">Event Name</th>
+                                                <th className="px-6 py-4 text-right font-semibold">Count</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-neutral-100">
+                                            {data.events.map((event, i) => (
+                                                <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
+                                                    <td className="px-6 py-4 font-medium text-neutral-700 capitalize">
+                                                        {event.name.replace(/_/g, ' ')}
+                                                    </td>
+                                                    <td className="px-6 py-4 text-right font-semibold text-neutral-700">{event.count.toLocaleString()}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
@@ -289,26 +361,20 @@ export default function Analytics() {
     );
 }
 
-function StatCard({ title, value, icon, trend, inverse, inline }) {
-    const isPositive = trend.startsWith('+');
-    const showGreen = inverse ? !isPositive : isPositive;
-
+function StatCard({ title, value, icon, color, bgColor }) {
     return (
-        <div className="bg-white rounded-xl shadow-sm border border-neutral-100 p-6 flex flex-col">
-            <div className="flex justify-between items-start mb-4">
-                <div className="w-10 h-10 rounded-lg bg-neutral-50 text-primary flex items-center justify-center">
+        <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6 flex flex-col relative overflow-hidden group">
+            <div className="flex justify-between items-start mb-4 relative z-10">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${bgColor} ${color} transition-transform group-hover:scale-110`}>
                     {icon}
                 </div>
-                {trend && !inline && (
-                    <span className={`text-xs font-bold px-2 py-1 rounded-full ${showGreen ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                        {trend}
-                    </span>
-                )}
             </div>
-            <h4 className="text-neutral-500 text-sm font-medium mb-1">{title}</h4>
-            <div className="flex items-end gap-2">
+            <h4 className="text-neutral-500 text-sm font-medium mb-1 relative z-10">{title}</h4>
+            <div className="flex items-end gap-2 relative z-10">
                 <span className="text-3xl font-bold text-neutral-800 tracking-tight">{value}</span>
             </div>
+            {/* Soft background gradient hint */}
+            <div className={`absolute -bottom-8 -right-8 w-24 h-24 ${bgColor} rounded-full blur-2xl opacity-50 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500`}></div>
         </div>
     );
 }
