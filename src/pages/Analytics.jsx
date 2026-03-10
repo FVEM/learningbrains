@@ -28,12 +28,6 @@ export default function Analytics() {
     const [isLoading, setIsLoading] = useState(false);
     const [errorData, setErrorData] = useState(null);
 
-    useEffect(() => {
-        const isAuth = sessionStorage.getItem('lb_analytics_auth');
-        if (isAuth === 'true') {
-            setIsAuthenticated(true);
-        }
-    }, []);
 
     useEffect(() => {
         if (isAuthenticated) {
@@ -45,7 +39,6 @@ export default function Analytics() {
         e.preventDefault();
         if (pinInput === '2024') {
             setIsAuthenticated(true);
-            sessionStorage.setItem('lb_analytics_auth', 'true');
             setErrorPin(false);
         } else {
             setErrorPin(true);
@@ -55,7 +48,6 @@ export default function Analytics() {
 
     const handleLogout = () => {
         setIsAuthenticated(false);
-        sessionStorage.removeItem('lb_analytics_auth');
         setData(null);
     };
 
