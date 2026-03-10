@@ -7,12 +7,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Dictionary mapping the frontend selection to the specific partner's hidden email address.
 // The user will replace these with the actual emails.
 const emailDictionary = {
-    general: 'contact@learningbrains.eu',
-    es: 'fvem@fvem.es', // Example for Spain (FVEM / Media Creativa)
-    it: 'info@siav.net', // Example for Italy (SIAV)
-    at: 'office@room466.at', // Example for Austria (Room466)
-    sk: 'info@sbagency.sk', // Example for Slovakia (SBA)
-    pt: 'spin@spin.pt', // Example for Portugal (SPIN)
+    general: ['joseba@fvem.es'],
+    es: ['joseba@fvem.es', 'proyectos@mediacreativa.eu', 'europa@mediacreativa.eu'],
+    it: ['area.progetti@siav.net', 'mariateresa.chinellato@siav.net'],
+    at: ['jasmina.salkic@wkstmk.at', 'Verena.Maier@wkstmk.at'],
+    sk: ['gavalcova@sbagency.sk', 'Paluskova@sbagency.sk', 'balko@sbagency.sk'],
+    pt: ['sara_ferreira@virtual-campus.eu']
 };
 
 export default async function handler(req, res) {
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
         // Important: 'from' must be a verified domain in Resend (e.g., noreply@learningbrains.eu)
         const data = await resend.emails.send({
             from: 'Learning Brains Contact <noreply@learningbrains.eu>',
-            to: [targetEmail],
+            to: targetEmail,
             replyTo: user_email,
             subject: `New Contact Request for: ${destination.toUpperCase()}`,
             html: `
