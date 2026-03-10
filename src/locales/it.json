@@ -254,7 +254,14 @@
             "status_success_title": "Messaggio Inviato!",
             "status_success_desc": "Grazie per averci contattato. Ti risponderemo a breve.",
             "status_sending": "Invio...",
-            "status_error": "Qualcosa è andato storto. Riprova più tardi."
+            "status_error": "Qualcosa è andato storto. Riprova più tardi.",
+            "destination_label": "Chi desideri contattare?",
+            "dest_general": "Informazioni Generali",
+            "dest_es": "Partner Spagnoli (FVEM / Media Creativa)",
+            "dest_it": "Partner Italiano (SIAV)",
+            "dest_at": "Partner Austriaco (Room466)",
+            "dest_sk": "Partner Slovacco (SBA)",
+            "dest_pt": "Partner Portoghese (SPIN)"
         }
     },
     "footer": {

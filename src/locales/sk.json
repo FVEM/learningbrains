@@ -254,7 +254,14 @@
             "status_success_title": "Správa Odoslaná!",
             "status_success_desc": "Ďakujeme, že ste nás kontaktovali. Čoskoro sa vám ozveme.",
             "status_sending": "Posielam...",
-            "status_error": "Niečo sa pokazilo. Skúste to prosím neskôr."
+            "status_error": "Niečo sa pokazilo. Skúste to prosím neskôr.",
+            "destination_label": "Koho chcete kontaktovať?",
+            "dest_general": "Všeobecné informácie",
+            "dest_es": "Španielski partneri (FVEM / Media Creativa)",
+            "dest_it": "Taliansky partner (SIAV)",
+            "dest_at": "Rakúsky partner (Room466)",
+            "dest_sk": "Slovenský partner (SBA)",
+            "dest_pt": "Portugalský partner (SPIN)"
         }
     },
     "footer": {

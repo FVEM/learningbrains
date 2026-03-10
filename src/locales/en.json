@@ -254,7 +254,14 @@
             "status_success_title": "Message Sent!",
             "status_success_desc": "Thank you for contacting us. We will get back to you shortly.",
             "status_sending": "Sending...",
-            "status_error": "Something went wrong. Please try again later."
+            "status_error": "Something went wrong. Please try again later.",
+            "destination_label": "Who would you like to contact?",
+            "dest_general": "General Information",
+            "dest_es": "Spanish Partners (FVEM / Media Creativa)",
+            "dest_it": "Italian Partner (SIAV)",
+            "dest_at": "Austrian Partner (Room466)",
+            "dest_sk": "Slovak Partner (SBA)",
+            "dest_pt": "Portuguese Partner (SPIN)"
         }
     },
     "footer": {

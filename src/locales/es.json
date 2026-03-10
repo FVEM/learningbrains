@@ -254,7 +254,14 @@
             "status_success_title": "¡Mensaje Enviado!",
             "status_success_desc": "Gracias por contactarnos. Te responderemos pronto.",
             "status_sending": "Enviando...",
-            "status_error": "Algo ha salido mal. Por favor, inténtalo de nuevo más tarde."
+            "status_error": "Algo ha salido mal. Por favor, inténtalo de nuevo más tarde.",
+            "destination_label": "¿Con quién deseas contactar?",
+            "dest_general": "Información General",
+            "dest_es": "Socios Españoles (FVEM / Media Creativa)",
+            "dest_it": "Socio Italiano (SIAV)",
+            "dest_at": "Socio Austríaco (Room466)",
+            "dest_sk": "Socio Eslovaco (SBA)",
+            "dest_pt": "Socio Portugués (SPIN)"
         }
     },
     "footer": {

@@ -254,7 +254,14 @@
             "status_success_title": "Nachricht gesendet!",
             "status_success_desc": "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
             "status_sending": "Senden...",
-            "status_error": "Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal."
+            "status_error": "Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal.",
+            "destination_label": "Wen möchten Sie kontaktieren?",
+            "dest_general": "Allgemeine Informationen",
+            "dest_es": "Spanische Partner (FVEM / Media Creativa)",
+            "dest_it": "Italienischer Partner (SIAV)",
+            "dest_at": "Österreichischer Partner (Room466)",
+            "dest_sk": "Slowakischer Partner (SBA)",
+            "dest_pt": "Portugiesischer Partner (SPIN)"
         }
     },
     "footer": {

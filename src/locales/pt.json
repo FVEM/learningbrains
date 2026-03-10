@@ -254,7 +254,14 @@
             "status_success_title": "Mensagem Enviada!",
             "status_success_desc": "Obrigado por nos contactar. Responderemos em breve.",
             "status_sending": "A enviar...",
-            "status_error": "Algo correu mal. Por favor, tente novamente mais tarde."
+            "status_error": "Algo correu mal. Por favor, tente novamente mais tarde.",
+            "destination_label": "Quem gostaria de contactar?",
+            "dest_general": "Informação Geral",
+            "dest_es": "Parceiros Espanhóis (FVEM / Media Creativa)",
+            "dest_it": "Parceiro Italiano (SIAV)",
+            "dest_at": "Parceiro Austríaco (Room466)",
+            "dest_sk": "Parceiro Eslovaco (SBA)",
+            "dest_pt": "Parceiro Português (SPIN)"
         }
     },
     "footer": {

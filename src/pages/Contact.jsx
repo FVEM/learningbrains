@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
 import { Mail, MessageSquare, Send, Globe, Phone, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
@@ -9,6 +8,7 @@ const Contact = () => {
     const [formData, setFormData] = useState({
         user_name: '',
         user_email: '',
+        destination: 'general',
         message: ''
     });
     const [status, setStatus] = useState('idle'); // idle, sending, success, error
@@ -21,31 +21,33 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
 
-        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-        if (!serviceId || !templateId || !publicKey) {
-            console.error('EmailJS environment variables are missing.');
-            setStatus('error');
-            return;
-        }
-
-        emailjs.send(serviceId, templateId, formData, publicKey)
-            .then((response) => {
-
+            if (res.ok) {
                 setStatus('success');
-                setFormData({ user_name: '', user_email: '', message: '' });
+                setFormData({ user_name: '', user_email: '', destination: 'general', message: '' });
                 setTimeout(() => setStatus('idle'), 5000);
-            }, (err) => {
-                console.error('FAILED...', err);
+            } else {
+                console.error('FAILED API Response:', await res.text());
                 setStatus('error');
                 setTimeout(() => setStatus('idle'), 5000);
-            });
+            }
+        } catch (error) {
+            console.error('FAILED...', error);
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 5000);
+        }
     };
 
     return (
@@ -135,6 +137,24 @@ const Contact = () => {
                                         placeholder={t('contact.form.placeholder_email')}
                                     />
                                 </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">{t('contact.form.destination_label')}</label>
+                                <select
+                                    name="destination"
+                                    value={formData.destination}
+                                    onChange={handleChange}
+                                    className="w-full px-5 py-4 bg-slate-50 border border-transparent rounded-xl focus:bg-white focus:border-brand-primary outline-none transition-all text-sm font-medium appearance-none cursor-pointer text-slate-700"
+                                    style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', backgroundSize: '1em' }}
+                                >
+                                    <option value="general">{t('contact.form.dest_general')}</option>
+                                    <option value="es">{t('contact.form.dest_es')}</option>
+                                    <option value="it">{t('contact.form.dest_it')}</option>
+                                    <option value="sk">{t('contact.form.dest_sk')}</option>
+                                    <option value="at">{t('contact.form.dest_at')}</option>
+                                    <option value="pt">{t('contact.form.dest_pt')}</option>
+                                </select>
                             </div>
 
                             <div className="space-y-2">
