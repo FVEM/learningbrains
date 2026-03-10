@@ -37,7 +37,7 @@ export default function Analytics() {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        if (pinInput === '2024') {
+        if (pinInput === 'brains2026') {
             setIsAuthenticated(true);
             setErrorPin(false);
         } else {
