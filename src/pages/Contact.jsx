@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, MessageSquare, Send, Globe, Phone, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, MessageSquare, Send, Globe, Phone, CheckCircle, AlertCircle, Loader2, ChevronDown } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
@@ -12,6 +12,16 @@ const Contact = () => {
         message: ''
     });
     const [status, setStatus] = useState('idle'); // idle, sending, success, error
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const destinations = [
+        { value: 'general', label: t('contact.form.dest_general') },
+        { value: 'es', label: t('contact.form.dest_es') },
+        { value: 'it', label: t('contact.form.dest_it') },
+        { value: 'sk', label: t('contact.form.dest_sk') },
+        { value: 'at', label: t('contact.form.dest_at') },
+        { value: 'pt', label: t('contact.form.dest_pt') },
+    ];
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -139,22 +149,62 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">{t('contact.form.destination_label')}</label>
-                                <select
-                                    name="destination"
-                                    value={formData.destination}
-                                    onChange={handleChange}
-                                    className="w-full px-5 py-4 bg-slate-50 border border-transparent rounded-xl focus:bg-white focus:border-brand-primary outline-none transition-all text-sm font-medium appearance-none cursor-pointer text-slate-700"
-                                    style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', backgroundSize: '1em' }}
-                                >
-                                    <option value="general">{t('contact.form.dest_general')}</option>
-                                    <option value="es">{t('contact.form.dest_es')}</option>
-                                    <option value="it">{t('contact.form.dest_it')}</option>
-                                    <option value="sk">{t('contact.form.dest_sk')}</option>
-                                    <option value="at">{t('contact.form.dest_at')}</option>
-                                    <option value="pt">{t('contact.form.dest_pt')}</option>
-                                </select>
+                            <div className="space-y-2 relative cursor-pointer">
+                                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1 cursor-default">
+                                    {t('contact.form.destination_label')}
+                                </label>
+
+                                <div className="relative">
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                        className={`w-full px-5 py-4 bg-slate-50 border rounded-xl text-left transition-all text-sm font-medium flex items-center justify-between group focus:outline-none
+                                            ${isDropdownOpen
+                                                ? 'bg-white border-brand-primary ring-4 ring-brand-primary/10'
+                                                : 'border-transparent hover:bg-slate-100 focus:bg-white focus:border-brand-primary'}`}
+                                    >
+                                        <span className={formData.destination ? 'text-slate-700 font-semibold truncate pr-4' : 'text-slate-400 pr-4'}>
+                                            {destinations.find(d => d.value === formData.destination)?.label || t('contact.form.dest_general')}
+                                        </span>
+                                        <div className={`p-1.5 rounded-lg transition-colors flex-shrink-0 ${isDropdownOpen ? 'bg-brand-primary/10 text-brand-primary' : 'text-slate-400 group-hover:bg-slate-200/50 group-hover:text-slate-600'}`}>
+                                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                                        </div>
+                                    </button>
+
+                                    {isDropdownOpen && (
+                                        <>
+                                            <div
+                                                className="fixed inset-0 z-10"
+                                                onClick={() => setIsDropdownOpen(false)}
+                                            ></div>
+
+                                            <div className="absolute z-20 w-full mt-2 bg-white border border-slate-100 rounded-2xl shadow-xl shadow-slate-200/60 py-2 animate-in fade-in slide-in-from-top-2 duration-200 max-h-64 overflow-y-auto">
+                                                {destinations.map((dest) => (
+                                                    <button
+                                                        key={dest.value}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setFormData(prev => ({ ...prev, destination: dest.value }));
+                                                            setIsDropdownOpen(false);
+                                                        }}
+                                                        className={`w-full px-5 py-3 text-left text-sm transition-all flex items-center justify-between group relative overflow-hidden
+                                                            ${formData.destination === dest.value
+                                                                ? 'bg-brand-primary/5 text-brand-primary font-bold'
+                                                                : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+                                                    >
+                                                        {formData.destination === dest.value && (
+                                                            <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-primary"></div>
+                                                        )}
+                                                        <span className="relative z-10 pr-4 truncate">{dest.label}</span>
+                                                        {formData.destination === dest.value && (
+                                                            <CheckCircle className="w-4 h-4 text-brand-primary relative z-10 flex-shrink-0" />
+                                                        )}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
                             </div>
 
                             <div className="space-y-2">
