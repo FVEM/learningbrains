@@ -273,5 +273,24 @@
         "cookies": "Cookies",
         "transparency": "Transparenz",
         "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
+    },
+    "ai_news": {
+        "label": "Aktuelles zu Industrie & KI",
+        "title": "Einblicke in KI, Wirtschaft & Berufsbildung",
+        "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
+        "items_list": [
+            {
+                "title": "Die Auswirkungen von KI auf den Geschäftsbetrieb",
+                "category": "KI & Wirtschaft",
+                "description": "Untersuchung, wie künstliche Intelligenz traditionelle Geschäftsabläufe verändert und neue Wachstumschancen schafft.",
+                "link": "#"
+            },
+            {
+                "title": "Innovationen in der Berufsbildung",
+                "category": "Ausbildungsmethoden",
+                "description": "Jüngste Fortschritte bei der Vermittlung und dem Erlernen praktischer Fähigkeiten in der modernen Industrielandschaft.",
+                "link": "#"
+            }
+        ]
     }
 }

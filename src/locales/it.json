@@ -273,5 +273,24 @@
         "cookies": "Politica sui Cookie",
         "transparency": "Trasparenza",
         "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
+    },
+    "ai_news": {
+        "label": "Aggiornamenti su Industria e IA",
+        "title": "Notizie su IA, Imprese e Formazione",
+        "subtitle": "Rimani informato sulle ultime tendenze nell'Intelligenza Artificiale, nell'innovazione aziendale e nelle metodologie di formazione professionale.",
+        "items_list": [
+            {
+                "title": "L'impatto dell'IA sulle operazioni aziendali",
+                "category": "IA e Imprese",
+                "description": "Esplorare come l'intelligenza artificiale sta trasformando le operazioni aziendali tradizionali e creando nuove opportunità.",
+                "link": "#"
+            },
+            {
+                "title": "Innovazioni nella Formazione Professionale",
+                "category": "Metodologie Formative",
+                "description": "Recenti progressi nel modo in cui le competenze pratiche vengono insegnate e apprese nel panorama industriale moderno.",
+                "link": "#"
+            }
+        ]
     }
 }

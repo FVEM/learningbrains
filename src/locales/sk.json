@@ -273,5 +273,24 @@
         "cookies": "Zásady používania súborov cookies",
         "transparency": "Transparentnosť",
         "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
+    },
+    "ai_news": {
+        "label": "Aktualizácie o priemysle a UI",
+        "title": "Novinky o UI, podnikaní a vzdelávaní",
+        "subtitle": "Buďte informovaní o najnovších trendoch v umelej inteligencii, podnikových inováciách a metódach odborného vzdelávania.",
+        "items_list": [
+            {
+                "title": "Vplyv UI na obchodné operácie",
+                "category": "UI a podnikanie",
+                "description": "Skúmanie toho, ako umelá inteligencia transformuje tradičné obchodné operácie.",
+                "link": "#"
+            },
+            {
+                "title": "Inovácie v odbornom vzdelávaní",
+                "category": "Metodiky vzdelávania",
+                "description": "Nedávne pokroky v spôsobe, akým sa vyučujú a učia praktické zručnosti v modernom priemysle.",
+                "link": "#"
+            }
+        ]
     }
 }

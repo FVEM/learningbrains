@@ -273,5 +273,24 @@
         "cookies": "Cookies Policy",
         "transparency": "Transparency",
         "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
+    },
+    "ai_news": {
+        "label": "Industry & AI Updates",
+        "title": "AI, Business & Training News",
+        "subtitle": "Stay informed about the latest trends in Artificial Intelligence, business innovation, and vocational training methodologies relevant to our project's goals.",
+        "items_list": [
+            {
+                "title": "The Impact of AI on Business Operations",
+                "category": "AI & Business",
+                "description": "Exploring how artificial intelligence is transforming traditional business operations and creating new opportunities for growth.",
+                "link": "#"
+            },
+            {
+                "title": "Innovations in Vocational Training",
+                "category": "Training Methodologies",
+                "description": "Recent advancements in how practical skills are taught and learned in the modern industrial landscape.",
+                "link": "#"
+            }
+        ]
     }
 }

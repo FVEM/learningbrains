@@ -3,7 +3,7 @@ import { X, Send, User, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Chatbot = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
         {
@@ -63,16 +63,33 @@ const Chatbot = () => {
         });
     }, [t]);
 
+    // Get all translated content for the current language to use as context
+    const currentLanguageData = i18n.getResourceBundle(i18n.language, 'translation') || {};
+    // Extract main sections to keep it relevant (excluding nav, footer, etc if we wanted, but passing everything is fine)
+    const siteContextString = JSON.stringify({
+        home: currentLanguageData.home,
+        about: currentLanguageData.about,
+        impact: currentLanguageData.impact,
+        results: currentLanguageData.results,
+        news: currentLanguageData.news,
+        partners: currentLanguageData.partners
+    }, null, 2);
+
     const SYSTEM_PROMPT = `
 You are the strict, technical AI Assistant for "Learning Brains" (Erasmus+ KA220-VET).
 
 **STRICT GUIDELINES:**
 1. **Scope:** ONLY answer questions directly related to Learning Brains, Erasmus+, Industrial Reskilling, or VET. If off-topic, decline to answer.
-2. **Length:** absolute maximum of 25 words per response. Be extremely concise.
-3. **Tone:** Extremely formal, technical, and professional.
+2. **Length:** absolute maximum of 50 words per response. Be concise but informative.
+3. **Tone:** Formal, technical, and professional.
 4. **Language:** ALWAYS reply in the exact same language as the user's input.
 
-**Project Data:**
+**Project Knowledge Base:**
+Use the following actual content from the Learning Brains website (in JSON format) to answer the user's questions accurately:
+
+${siteContextString}
+
+**Project Basic Data (Fallback):**
 - Partners: FVEM, SIAV, Room466 by WKO Steiermark, Media Creativa, SBA, Sparkling Intuition.
 - Goal: AI-based on-the-job learning for industrial reskilling.
 `;
