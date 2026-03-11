@@ -66,8 +66,8 @@ const Home = () => {
                 // Since we start the loop right after the video ends, this ensures no jump.
                 // Cycle: End -> Start -> End
 
-                // Adjust speed: 80ms per frame equivalent for the full wave period
-                const cycleDuration = frames.length * 80;
+                // Adjust speed: 120ms per frame equivalent for the full wave period
+                const cycleDuration = frames.length * 120;
 
                 // Calculate phase (0 to 1, to 2...)
                 const phase = (runtime / cycleDuration) * 2 * Math.PI;
@@ -156,7 +156,7 @@ const Home = () => {
                 <video
                     ref={videoRef}
                     className="hidden"
-                    src="/grok-video-62201ec6-f2cd-4ba2-8091-1878cb5ffc72.mp4"
+                    src="/grok-video-7192e296-e3c8-4aa5-9d92-ca7001f42615 (1).mp4"
                     muted
                     playsInline
                     loop={false}
@@ -172,7 +172,7 @@ const Home = () => {
                 />
 
                 {/* Light Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/40 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/65 to-transparent z-10" />
 
                 {/* Main Content Container - Positioned higher on page with fluid padding */}
                 <div className="relative z-20 flex-grow flex flex-col justify-start py-fluid-hero w-full">
