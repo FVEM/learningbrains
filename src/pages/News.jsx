@@ -29,16 +29,34 @@ const News = () => {
 
     const aiNewsItems = [
         {
-            date: "Recent",
-            location: "Global",
-            image: "",
+            date: "May 2026",
+            location: "Online",
+            image: "/images/news/course_ai_sales.png",
+            icon: TrendingUp
+        },
+        {
+            date: "June 2026",
+            location: "Online",
+            image: "/images/news/course_ai_engineering.png",
             icon: Lightbulb
         },
         {
-            date: "Recent",
-            location: "Europe",
-            image: "",
+            date: "July 2026",
+            location: "Online",
+            image: "/images/news/course_ai_advanced.png",
             icon: TrendingUp
+        },
+        {
+            date: "April 2026",
+            location: "Online",
+            image: "/images/news/copilot_course.png",
+            icon: TrendingUp
+        },
+        {
+            date: "March 2026",
+            location: "Online",
+            image: "/images/news/ai_roadmap.png",
+            icon: Lightbulb
         }
     ];
 
@@ -163,7 +181,11 @@ const News = () => {
                                             <NewsIcon className="w-10 h-10 text-slate-300 group-hover:text-blue-500/50 transition-colors" />
                                         </div>
                                     )}
-
+                                    <div className="absolute top-3 left-3 z-10">
+                                        <span className="bg-white/95 backdrop-blur-sm text-brand-body font-bold text-[10px] px-3 py-1 rounded-full shadow-sm tracking-widest uppercase">
+                                            Training/ES
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <div className="p-4 sm:p-5 flex flex-col flex-grow justify-center">
