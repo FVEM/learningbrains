@@ -12,7 +12,7 @@ const emailDictionary = {
     it: ['area.progetti@siav.net', 'mariateresa.chinellato@siav.net'],
     at: ['jasmina.salkic@wkstmk.at', 'Verena.Maier@wkstmk.at'],
     sk: ['gavalcova@sbagency.sk', 'Paluskova@sbagency.sk', 'balko@sbagency.sk'],
-    pt: ['sara_ferreira@virtual-campus.eu']
+    pt: ['projects@sparkling-intuition.eu']
 };
 
 export default async function handler(req, res) {
