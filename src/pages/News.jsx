@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Calendar, MapPin, Newspaper, ArrowRight, Users, Lightbulb, TrendingUp } from 'lucide-react';
-import SEOHead from '../components/SEOHead'; // Assuming SEOHead is in this path
+import { Calendar, MapPin, Newspaper, ArrowRight, Users } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const News = () => {
     const { t } = useTranslation();
@@ -26,41 +26,6 @@ const News = () => {
     ];
 
     const translatedNewsItems = t('news.items_list', { returnObjects: true });
-
-    const aiNewsItems = [
-        {
-            date: "May 2026",
-            location: "Online",
-            image: "/images/news/course_ai_sales.png",
-            icon: TrendingUp
-        },
-        {
-            date: "June 2026",
-            location: "Online",
-            image: "/images/news/course_ai_engineering.png",
-            icon: Lightbulb
-        },
-        {
-            date: "July 2026",
-            location: "Online",
-            image: "/images/news/course_ai_advanced.png",
-            icon: TrendingUp
-        },
-        {
-            date: "April 2026",
-            location: "Online",
-            image: "/images/news/copilot_course.png",
-            icon: TrendingUp
-        },
-        {
-            date: "March 2026",
-            location: "Online",
-            image: "/images/news/ai_roadmap.png",
-            icon: Lightbulb
-        }
-    ];
-
-    const translatedAiNewsItems = t('ai_news.items_list', { returnObjects: true });
 
     return (
         <div className="py-20">
@@ -144,70 +109,6 @@ const News = () => {
                                             </span>
                                         </div>
                                     )}
-                                </div>
-                            </article>
-                        );
-                    })}
-                </div>
-
-                {/* AI & Business News Section */}
-                <div className="mt-32 text-center mb-16 animate-fade-in-up">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider mb-6">
-                        <TrendingUp className="w-3 h-3" />
-                        {t('ai_news.label')}
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-brand-headline mb-6 tracking-tight">{t('ai_news.title')}</h2>
-                    <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-                        {t('ai_news.subtitle')}
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in-up delay-100">
-                    {Array.isArray(translatedAiNewsItems) && translatedAiNewsItems.map((item, idx) => {
-                        const staticData = aiNewsItems[idx] || { icon: Lightbulb, date: "Recent", location: "Global" };
-                        const NewsIcon = staticData.icon || Lightbulb;
-
-                        return (
-                            <article key={`ai-${idx}`} className="bg-white border border-slate-100 rounded-2xl overflow-hidden flex flex-col sm:flex-row group hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300">
-                                <div className="sm:w-48 h-40 sm:h-auto bg-slate-50 relative shrink-0 overflow-hidden">
-                                    {staticData.image ? (
-                                        <img
-                                            src={staticData.image.startsWith('http') ? staticData.image : `${import.meta.env.BASE_URL}${staticData.image.replace(/^\//, '')}`}
-                                            alt={item.title}
-                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                    ) : (
-                                        <div className="absolute inset-0 flex items-center justify-center bg-slate-100 group-hover:bg-blue-50/50 transition-colors h-full w-full">
-                                            <NewsIcon className="w-10 h-10 text-slate-300 group-hover:text-blue-500/50 transition-colors" />
-                                        </div>
-                                    )}
-                                    <div className="absolute top-3 left-3 z-10">
-                                        <span className="bg-white/95 backdrop-blur-sm text-brand-body font-bold text-[10px] px-3 py-1 rounded-full shadow-sm tracking-widest uppercase">
-                                            Training/ES
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div className="p-4 sm:p-5 flex flex-col flex-grow justify-center">
-
-                                    <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-2 sm:mb-3 leading-snug group-hover:text-blue-600 transition-colors">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-slate-500 text-xs leading-relaxed mb-4 sm:mb-6 line-clamp-2 sm:line-clamp-3">
-                                        {item.description}
-                                    </p>
-
-                                    {item.link && item.link !== '#' ? (
-                                        <a
-                                            href={item.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center text-blue-600 font-bold text-sm group/link mt-auto w-fit"
-                                        >
-                                            {t('news.read_more')}
-                                            <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover/link:translate-x-1" />
-                                        </a>
-                                    ) : null}
                                 </div>
                             </article>
                         );

@@ -5,6 +5,7 @@
     "results": "Resultados",
     "partners": "Socios",
     "news": "Eventos de Proyecto",
+    "noticias": "Noticias",
     "resources": "Recursos",
     "impact": "Difusión e Impacto",
     "contact": "Contacto"
@@ -275,6 +276,8 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
+    "seo_title": "Noticias sobre IA, Empresa y Formación",
+    "seo_description": "Actualidad sobre Inteligencia Artificial, innovación empresarial y formación profesional relevante para el sector industrial.",
     "label": "Actualidad sobre Industria e IA",
     "title": "Noticias sobre IA, Empresa y Formación",
     "subtitle": "Manténgase informado sobre las últimas tendencias en Inteligencia Artificial, innovación empresarial y metodologías de formación profesional relevantes para los objetivos de nuestro proyecto.",

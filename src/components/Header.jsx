@@ -47,6 +47,7 @@ const Header = () => {
         { name: t('nav.results'), path: 'results' },
         { name: t('nav.partners'), path: 'partners' },
         { name: t('nav.news'), path: 'news' },
+        { name: t('nav.noticias'), path: 'noticias' },
         { name: t('nav.resources'), path: 'resources' },
         { name: t('nav.contact'), path: 'contact' },
     ];

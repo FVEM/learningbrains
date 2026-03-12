@@ -5,6 +5,7 @@
     "results": "Výsledky",
     "partners": "Partneri",
     "news": "Udalosti Projektu",
+    "noticias": "Správy",
     "resources": "Zdroje",
     "impact": "Šírenie a Dopad",
     "contact": "Kontakt"
@@ -275,6 +276,8 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
+    "seo_title": "Novinky o UI, podnikaní a vzdelávaní",
+    "seo_description": "Najnovšie trendy v umelej inteligencii, podnikových inováciách a metódach odborného vzdelávania.",
     "label": "Aktualizácie o priemysle a UI",
     "title": "Novinky o UI, podnikaní a vzdelávaní",
     "subtitle": "Buďte informovaní o najnovších trendoch v umelej inteligencii, podnikových inováciách a metódach odborného vzdelávania.",

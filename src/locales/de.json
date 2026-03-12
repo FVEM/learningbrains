@@ -5,6 +5,7 @@
     "results": "Ergebnisse",
     "partners": "Partner",
     "news": "Projekt-Events",
+    "noticias": "Nachrichten",
     "resources": "Ressourcen",
     "impact": "Verbreitung & Auswirkungen",
     "contact": "Kontakt"
@@ -275,6 +276,8 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
+    "seo_title": "Einblicke in KI, Wirtschaft & Berufsbildung",
+    "seo_description": "Aktuelle Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
     "label": "Aktuelles zu Industrie & KI",
     "title": "Einblicke in KI, Wirtschaft & Berufsbildung",
     "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",

@@ -5,6 +5,7 @@
     "results": "Results",
     "partners": "Partners",
     "news": "Project Events",
+    "noticias": "News",
     "resources": "Resources",
     "impact": "Dissemination & Impact",
     "contact": "Contact"
@@ -275,6 +276,8 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
+    "seo_title": "AI, Business & Training News",
+    "seo_description": "Latest trends in Artificial Intelligence, business innovation and vocational training methodologies.",
     "label": "Industry & AI Updates",
     "title": "AI, Business & Training News",
     "subtitle": "Stay informed about the latest trends in Artificial Intelligence, business innovation, and vocational training methodologies relevant to our project's goals.",
