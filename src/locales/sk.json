@@ -4,7 +4,7 @@
     "about": "O Projekte",
     "results": "Výsledky",
     "partners": "Partneri",
-    "news": "Novinky a Udalosti",
+    "news": "Udalosti Projektu",
     "resources": "Zdroje",
     "impact": "Šírenie a Dopad",
     "contact": "Kontakt"
@@ -160,10 +160,10 @@
     ]
   },
   "news": {
-    "seo_title": "Novinky a Udalosti",
+    "seo_title": "Udalosti Projektu",
     "seo_description": "Najnovšie aktualizácie a udalosti z Learning Brains.",
     "label": "Aktualizácie Projektu",
-    "title": "Novinky a Udalosti",
+    "title": "Udalosti Projektu",
     "subtitle": "Sledujte postup projektu Learning Brains prostredníctvom našich najnovších správ, stretnutí a diseminačných aktivít.",
     "items_list": [
       {

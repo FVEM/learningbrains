@@ -4,7 +4,7 @@
     "about": "El Proyecto",
     "results": "Resultados",
     "partners": "Socios",
-    "news": "Noticias y Eventos",
+    "news": "Eventos de Proyecto",
     "resources": "Recursos",
     "impact": "Difusión e Impacto",
     "contact": "Contacto"
@@ -160,10 +160,10 @@
     ]
   },
   "news": {
-    "seo_title": "Noticias y Eventos",
+    "seo_title": "Eventos de Proyecto",
     "seo_description": "Últimas actualizaciones y eventos de Learning Brains.",
     "label": "Actualizaciones del Proyecto",
-    "title": "Noticias y Eventos",
+    "title": "Eventos de Proyecto",
     "subtitle": "Sigue el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones y actividades de difusión.",
     "items_list": [
       {

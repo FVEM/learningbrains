@@ -4,7 +4,7 @@
     "about": "The Project",
     "results": "Results",
     "partners": "Partners",
-    "news": "News & Events",
+    "news": "Project Events",
     "resources": "Resources",
     "impact": "Dissemination & Impact",
     "contact": "Contact"
@@ -160,10 +160,10 @@
     ]
   },
   "news": {
-    "seo_title": "News & Events",
+    "seo_title": "Project Events",
     "seo_description": "Latest updates and events from Learning Brains.",
     "label": "Project Updates",
-    "title": "News & Events",
+    "title": "Project Events",
     "subtitle": "Follow the progress of the Learning Brains project through our latest news, meetings, and dissemination activities.",
     "items_list": [
       {
