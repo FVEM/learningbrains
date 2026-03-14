@@ -306,7 +306,7 @@ const Home = () => {
                                 {
                                     date: "Feb 2026",
                                     location: "Bilbao, Spain",
-                                    image: "News/BilbaoKickoff.jpg"
+                                    image: "/News/BilbaoKickoff.jpg"
                                 },
                                 {
                                     date: "Apr 2026",
@@ -325,14 +325,24 @@ const Home = () => {
                             const staticData = newsData[idx] || {};
                             const NewsIcon = staticData.icon || Newspaper;
 
+                            // Prioritize Excel data from JSON
+                            const displayImage = item.image || staticData.image;
+                            const displayDate = item.date || staticData.date;
+                            const displayLocation = item.location || staticData.location;
+                            const displayBadge = item.badge || item.category || "EVENT";
+
                             return (
                                 <div key={idx} className="bg-white border border-slate-100 rounded-2xl overflow-hidden group hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col">
                                     <div className="aspect-[16/10] bg-slate-50 relative overflow-hidden">
-                                        {staticData.image ? (
+                                        {displayImage ? (
                                             <img
-                                                src={`${import.meta.env.BASE_URL}${staticData.image}`}
+                                                src={displayImage.startsWith('http') ? displayImage : (displayImage.startsWith('/') ? displayImage : `/${displayImage}`)}
                                                 alt={item.title}
                                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                                onError={(e) => {
+                                                    e.target.style.display = 'none';
+                                                    e.target.parentElement.classList.add('flex', 'items-center', 'justify-center', 'bg-slate-100');
+                                                }}
                                             />
                                         ) : (
                                             <div className="absolute inset-0 flex items-center justify-center bg-slate-100 group-hover:bg-teal-50/50 transition-colors">
@@ -340,21 +350,25 @@ const Home = () => {
                                             </div>
                                         )}
                                         <div className="absolute top-4 left-4">
-                                            <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-primary border border-slate-100">
-                                                {item.category}
+                                            <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-primary border border-slate-100 shadow-sm">
+                                                {displayBadge}
                                             </span>
                                         </div>
                                     </div>
                                     <div className="p-6 flex flex-col flex-grow">
                                         <div className="flex items-center gap-4 text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-4">
-                                            <div className="flex items-center gap-1.5">
-                                                <Calendar className="w-3.5 h-3.5" />
-                                                {staticData.date}
-                                            </div>
-                                            <div className="flex items-center gap-1.5">
-                                                <MapPin className="w-3.5 h-3.5" />
-                                                {staticData.location}
-                                            </div>
+                                            {displayDate && (
+                                                <div className="flex items-center gap-1.5">
+                                                    <Calendar className="w-3.5 h-3.5" />
+                                                    {displayDate}
+                                                </div>
+                                            )}
+                                            {displayLocation && (
+                                                <div className="flex items-center gap-1.5">
+                                                    <MapPin className="w-3.5 h-3.5" />
+                                                    {displayLocation}
+                                                </div>
+                                            )}
                                         </div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-primary transition-colors">
                                             {item.title}
