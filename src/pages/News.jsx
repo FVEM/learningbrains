@@ -63,9 +63,14 @@ const News = () => {
                                 <div className="h-56 bg-slate-50 relative overflow-hidden">
                                     {displayImage ? (
                                         <img
-                                            src={displayImage.startsWith('http') ? displayImage : `${import.meta.env.BASE_URL}${displayImage.replace(/^\//, '')}`}
+                                            src={displayImage.startsWith('http') ? displayImage : (displayImage.startsWith('/') ? displayImage : `/${displayImage}`)}
                                             alt={item.title}
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                            onError={(e) => {
+                                                e.target.style.display = 'none';
+                                                e.target.parentElement.classList.add('flex', 'items-center', 'justify-center', 'bg-slate-100');
+                                                // We could dynamically insert an icon here if we wanted
+                                            }}
                                         />
                                     ) : (
                                         <div className="absolute inset-0 flex items-center justify-center bg-slate-100 group-hover:bg-teal-50/50 transition-colors">

@@ -170,29 +170,29 @@
       {
         "title": "Projektstart-Meeting in Bilbao",
         "category": "",
-        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen des industriellen Umschulungssektors.",
+        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
-        "image": "MEETING",
-        "badge": ""
+        "image": "",
+        "badge": "MEETING"
       },
       {
         "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
         "category": "",
         "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren auszutauschen.",
-        "link": "MEETING",
+        "link": "",
         "date": "Coming Soon",
         "image": "",
-        "badge": ""
+        "badge": "MEETING"
       },
       {
         "title": "Erstes transnationales Projekttreffen",
         "category": "",
         "description": "Die zweite Partnerbesprechung wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
-        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "link": "",
         "date": "Coming Soon",
-        "image": "PROJECT",
-        "badge": ""
+        "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "badge": "PROJECT"
       }
     ],
     "read_more": "Weiterlesen",
@@ -294,7 +294,7 @@
     "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
     "items_list": [
       {
-        "title": "Künstliche Intelligenz für Vertriebsteams: Von der Chance zum Angebot",
+        "title": "Künstliche Intelligenz für Vertriebsteams: von der Chance zum Angebot",
         "description": "Mehr Möglichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
         "link": "Link",
         "category": "Training",
@@ -303,8 +303,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "KI für Ingenieurwesen: mehr Effizienz, weniger repetitive Aufgaben",
-        "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieurteams.",
+        "title": "KI für Ingenieurwesen: mehr Effizienz, weniger wiederholende Aufgaben",
+        "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieursteams.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -312,7 +312,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Tools: Vom Copiloten zu Agenten",
+        "title": "Fortgeschrittene KI und neue Tools: Vom Co-Piloten zu Agenten",
         "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "Link",
         "category": "Training",
@@ -331,7 +331,7 @@
       },
       {
         "title": "Wie gestaltet man den KI-Fahrplan in Ihrer Organisation?",
-        "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
+        "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echter Wirkung",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",

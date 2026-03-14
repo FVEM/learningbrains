@@ -170,29 +170,29 @@
       {
         "title": "Incontro di avvio del progetto a Bilbao",
         "category": "",
-        "description": "Il consorzio Learning Brains si è incontrato per la prima volta a Bilbao per avviare le attività del progetto. I partner hanno discusso della tabella di marcia per il primo anno, incluso l'allestimento della piattaforma digitale e la ricerca iniziale sui bisogni di riqualificazione industriale.",
+        "description": "Il consorzio Learning Brains si è incontrato per la prima volta a Bilbao per avviare le attività del progetto. I partner hanno discusso della tabella di marcia per il primo anno, inclusa la configurazione della piattaforma digitale e la ricerca iniziale sui bisogni di riqualificazione industriale.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
-        "image": "MEETING",
-        "badge": ""
+        "image": "",
+        "badge": "MEETING"
       },
       {
         "title": "Prossimo Workshop: Intelligenza Artificiale nell'istruzione e formazione professionale (VET)",
         "category": "",
-        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti da tutta Europa per condividere approfondimenti e migliori pratiche.",
-        "link": "MEETING",
+        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti da tutta Europa per condividere conoscenze e best practices.",
+        "link": "",
         "date": "Coming Soon",
         "image": "",
-        "badge": ""
+        "badge": "MEETING"
       },
       {
         "title": "Primo Incontro Transnazionale del Progetto",
         "category": "",
-        "description": "Il secondo incontro dei partner sarà ospitato dai nostri partner italiani. L'agenda include la revisione della prima bozza del quadro di riqualificazione e la pianificazione della fase di test pilota.",
-        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "description": "Il secondo meeting dei partner sarà ospitato dai nostri partner italiani. L'agenda include la revisione del primo progetto del quadro di riqualificazione e la pianificazione della fase di test pilota.",
+        "link": "",
         "date": "Coming Soon",
-        "image": "PROJECT",
-        "badge": ""
+        "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "badge": "PROJECT"
       }
     ],
     "read_more": "Leggi di più",
@@ -321,7 +321,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilota in azienda: produttività reale in un ambiente Microsoft",
+        "title": "Co-pilota in azienda: produttività reale in un ambiente Microsoft.",
         "description": "Produttività con Copilot in un'impresa industriale, con un uso sicuro dello strumento",
         "link": "Link",
         "category": "Training",
@@ -330,7 +330,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Come progettare la roadmap sull'IA nella tua organizzazione",
+        "title": "Come progettare la roadmap sull'IA nella tua organizzazione.",
         "description": "Dall'intenzione all'azione: decisioni chiave per implementare l'IA con un impatto reale",
         "link": "Link",
         "category": "Training",
@@ -339,7 +339,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Borse SPRI: Intelligenza Artificiale 2026",
+        "title": "Finanziamenti SPRI: Intelligenza Artificiale 2026",
         "description": "Applicare l'Intelligenza Artificiale per trasformare i processi industriali e acquisire competitività.",
         "link": "Link",
         "category": "GENERAL/EU",

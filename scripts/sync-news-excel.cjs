@@ -11,23 +11,41 @@ const gids = {
 function parseCSV(text) {
     const lines = text.split(/\r?\n/);
     const result = [];
-    const headers = [];
+    let headers = [];
     
-    // Simple CSV parser that handles quotes and commas
     lines.forEach((line, index) => {
-        if (!line.trim()) return;
+        if (!line.trim() && index !== 0) return;
         
-        const matches = line.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
-        if (!matches) return;
+        const row = [];
+        let inQuotes = false;
+        let currentValue = "";
         
-        const cleanCols = matches.map(col => col.replace(/^"|"$/g, '').replace(/""/g, '"').trim());
+        for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            if (char === '"') {
+                if (inQuotes && line[i + 1] === '"') {
+                    currentValue += '"'; // Handle escaped quotes
+                    i++;
+                } else {
+                    inQuotes = !inQuotes;
+                }
+            } else if (char === ',' && !inQuotes) {
+                row.push(currentValue.trim());
+                currentValue = "";
+            } else {
+                currentValue += char;
+            }
+        }
+        row.push(currentValue.trim());
+        
+        const cleanCols = row.map(col => col.replace(/^"|"$/g, '').replace(/""/g, '"').trim());
         
         if (index === 0) {
-            headers.push(...cleanCols);
-        } else {
+            headers = cleanCols.map(h => h.toLowerCase());
+        } else if (cleanCols.length > 1 || cleanCols[0] !== "") {
             const obj = {};
             headers.forEach((header, i) => {
-                obj[header.toLowerCase()] = cleanCols[i] || "";
+                obj[header] = cleanCols[i] || "";
             });
             result.push(obj);
         }
@@ -119,13 +137,26 @@ async function sync() {
         json.ai_news.items_list = aiNewsItems.map(item => {
             const title = item[`title_${lang}`] || item.title_en || item.title || "";
             const description = item[`description_${lang}`] || item.description_en || item.description || "";
+            const rawLink = item.link_url || item.link || "";
+            const rawImage = item.image_url || item.image || "";
+            
+            const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
+            
+            let finalImage = rawImage;
+            if (!finalImage && isImage(rawLink)) finalImage = rawLink;
+
+            // Ensure local paths have leading slash
+            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
+                finalImage = '/' + finalImage;
+            }
+
             return {
                 title,
                 description,
-                link: item.link_url || item.link || "",
+                link: rawLink,
                 category: item.category || "",
                 date: item.date || "",
-                image: item.image_url || item.image || "",
+                image: finalImage,
                 badge: item.badge_text || item.badge || ""
             };
         }).filter(item => item.title.trim() !== "");
@@ -134,13 +165,26 @@ async function sync() {
         json.news.items_list = projectEventsItems.map(item => {
             const title = item[`title_${lang}`] || item.title_en || item.title || "";
             const description = item[`description_${lang}`] || item.description_en || item.description || "";
+            const rawLink = item.link_url || item.link || "";
+            const rawImage = item.image_url || item.image || "";
+            
+            const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
+            
+            let finalImage = rawImage;
+            if (!finalImage && isImage(rawLink)) finalImage = rawLink;
+
+            // Ensure local paths have leading slash
+            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
+                finalImage = '/' + finalImage;
+            }
+
             return {
                 title,
                 category: item.category || "",
                 description,
-                link: item.link_url || item.link || "",
+                link: rawLink,
                 date: item.date || "",
-                image: item.image_url || item.image || "",
+                image: finalImage,
                 badge: item.badge_text || item.badge || ""
             };
         }).filter(item => item.title.trim() !== "");

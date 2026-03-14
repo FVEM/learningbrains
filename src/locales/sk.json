@@ -168,31 +168,31 @@
     "subtitle": "Sledujte postup projektu Learning Brains prostredníctvom našich najnovších správ, stretnutí a diseminačných aktivít.",
     "items_list": [
       {
-        "title": "Zahajovací stretnutie projektu v Bilbau",
+        "title": "Zahajovací stretnutie projektu v Bilbau.",
         "category": "",
-        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o ceste na prvý rok, vrátane nastavenia digitálnej platformy a úvodného výskumu potrieb priemyselného preškolovania.",
+        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a úvodného výskumu potrieb priemyselného preškolovania.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
-        "image": "MEETING",
-        "badge": ""
+        "image": "",
+        "badge": "MEETING"
       },
       {
-        "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
+        "title": "Nadchádzajúci seminár: AI vo vzdelávaní a odbornej príprave.",
         "category": "",
-        "description": "Pripojte sa k online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí budú zdieľať poznatky a najlepšie postupy.",
-        "link": "MEETING",
+        "description": "Pridajte sa k nám na online workshope, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
+        "link": "",
         "date": "Coming Soon",
         "image": "",
-        "badge": ""
+        "badge": "MEETING"
       },
       {
-        "title": "Prvé transnacionálne stretnutie projektu",
+        "title": "Prvé transnacionálne stretnutie projektu.",
         "category": "",
         "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
-        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "link": "",
         "date": "Coming Soon",
-        "image": "PROJECT",
-        "badge": ""
+        "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "badge": "PROJECT"
       }
     ],
     "read_more": "Čítať Viac",
@@ -304,7 +304,7 @@
       },
       {
         "title": "AI pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
-        "description": "Automatizujte technické úlohy a zlepšite produktivitu inžinierskeho tímu.",
+        "description": "Automatizujte technické úlohy a zvyšte produktivitu inžinierskeho tímu.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -313,7 +313,7 @@
       },
       {
         "title": "Pokročilá umeleá inteligencia a nové nástroje: od spolujazdca k agentom.",
-        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte, ako automatizovať a optimalizovať obchodné procesy.",
+        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte, ako automatizovať a optimalizovať podnikové procesy.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,7 +330,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Ako navrhnúť plán rozvoja umelej inteligencie vo vašej organizácii.",
+        "title": "Ako navrhnúť cestovný plán AI vo vašej organizácii?",
         "description": "Od úmyslu k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
         "link": "Link",
         "category": "Training",
