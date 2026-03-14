@@ -168,22 +168,22 @@
     "subtitle": "Acompanhe o progresso do projeto Learning Brains através das nossas últimas notícias, reuniões e atividades de disseminação.",
     "items_list": [
       {
-        "title": "Reunião de Lançamento do Projeto em Bilbau",
+        "title": "Reunião de arranque do projeto em Bilbau",
         "category": "",
-        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
+        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbao para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
         "link": "Link"
       },
       {
         "title": "Próximo Workshop: IA na Formação Profissional",
         "category": "",
-        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar ideias e melhores práticas.",
-        "link": ""
+        "description": "Junte-se a nós em um workshop online explorando o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
+        "link": "MEETING"
       },
       {
         "title": "Primeira Reunião Transnacional do Projeto",
         "category": "",
-        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de testes piloto.",
-        "link": ""
+        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.",
+        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg"
       }
     ],
     "read_more": "Ler Mais",
@@ -285,7 +285,7 @@
     "subtitle": "Mantenha-se informado sobre as últimas tendências em Inteligência Artificial, inovação e metodologias de formação profissional.",
     "items_list": [
       {
-        "title": "IA para equipes de vendas: da oportunidade à oferta",
+        "title": "IA para Equipes de Vendas: da oportunidade à oferta",
         "description": "Mais oportunidades, melhores ofertas e melhor coordenação comercial com IA.",
         "link": "Link",
         "category": "Training",
@@ -294,7 +294,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas.",
+        "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas",
         "description": "Automatizar tarefas técnicas e melhorar a produtividade da equipe de engenharia.",
         "link": "Link",
         "category": "Training",
@@ -312,8 +312,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copiloto na empresa: produtividade real em um ambiente Microsoft.",
-        "description": "Produtividade com o Copilot em uma empresa industrial, com uso seguro da ferramenta",
+        "title": "Copiloto na empresa: produtividade real em um ambiente Microsoft",
+        "description": "Produtividade com o Copilot em uma empresa industrial, com uso seguro da ferramenta.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -321,8 +321,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Como projetar o roteiro de IA na sua organização",
-        "description": "Da intenção à ação: decisões-chave para implementar a IA com impacto real",
+        "title": "Como projetar o roadmap de IA na sua organização.",
+        "description": "De intenção a ação: decisões-chave para implementar a IA com impacto real.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,8 +330,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Subsídios SPRI: Inteligência Artificial 2026",
-        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e obter competitividade.",
+        "title": "Bolsas SPRI: Inteligência Artificial 2026",
+        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e ganhar competitividade.",
         "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",

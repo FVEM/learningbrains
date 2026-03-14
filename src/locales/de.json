@@ -170,20 +170,20 @@
       {
         "title": "Projektstart-Meeting in Bilbao",
         "category": "",
-        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
+        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen der beruflichen Umschulung in der Industrie.",
         "link": "Link"
       },
       {
         "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
         "category": "",
         "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren auszutauschen.",
-        "link": ""
+        "link": "MEETING"
       },
       {
         "title": "Erstes transnationales Projekttreffen",
         "category": "",
-        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
-        "link": ""
+        "description": "Die zweite Partnerbesprechung wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
+        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg"
       }
     ],
     "read_more": "Weiterlesen",
@@ -285,7 +285,7 @@
     "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
     "items_list": [
       {
-        "title": "KI für Vertriebsteams: von der Chance zum Angebot",
+        "title": "Künstliche Intelligenz für Vertriebsteams: Von der Chance zum Angebot",
         "description": "Mehr Möglichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
         "link": "Link",
         "category": "Training",
@@ -303,8 +303,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Tools: Vom Copiloten zu Agenten",
-        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
+        "title": "Fortgeschrittene KI und neue Werkzeuge: Vom Co-Piloten zu Agenten",
+        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis hin zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -322,7 +322,7 @@
       },
       {
         "title": "Wie gestaltet man den KI-Fahrplan in Ihrer Organisation?",
-        "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
+        "description": "Von der Absicht zur Handlung: Schlüsselentscheidungen zur Implementierung von KI mit echter Wirkung",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",

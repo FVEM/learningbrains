@@ -170,20 +170,20 @@
       {
         "title": "Reunión de inicio del proyecto en Bilbao",
         "category": "",
-        "description": "El consorcio de Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
+        "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
         "link": "Link"
       },
       {
         "title": "Próximo taller: IA en la FPE",
         "category": "",
         "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir conocimientos y mejores prácticas.",
-        "link": ""
+        "link": "MEETING"
       },
       {
         "title": "Primera Reunión Transnacional del Proyecto",
         "category": "",
         "description": "La segunda reunión de socios será organizada por nuestros socios italianos. La agenda incluye la revisión del primer borrador del marco de recualificación y la planificación de la fase de pruebas piloto.",
-        "link": ""
+        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg"
       }
     ],
     "read_more": "Leer Más",
@@ -294,7 +294,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas.",
+        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
         "description": "Automatizar tareas técnicas y mejorar la productividad del equipo de ingeniería.",
         "link": "Link",
         "category": "Training",
@@ -303,8 +303,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde el copiloto hasta los agentes.",
-        "description": "Explore el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
+        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes",
+        "description": "Explora el ecosistema actual de la IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -313,7 +313,7 @@
       },
       {
         "title": "Copiloto en la empresa: productividad real en un entorno de Microsoft",
-        "description": "Productividad con Copilot en una empresa industrial, con un uso seguro de la herramienta.",
+        "description": "Productividad con Copilot en una empresa industrial, con el uso seguro de la herramienta.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",

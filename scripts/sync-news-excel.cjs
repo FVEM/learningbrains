@@ -55,23 +55,43 @@ async function sync() {
     if (fs.existsSync(enPath)) {
         const enJson = JSON.parse(fs.readFileSync(enPath, 'utf8'));
         
-        // Simple comparison: check item count and titles of the first items
-        const currentAiCount = enJson.ai_news.items_list.length;
-        const currentProjectCount = enJson.news.items_list.length;
-        
-        const newAiTitles = aiNewsItems.map(i => i.title_en || i.title).join('|');
-        const oldAiTitles = enJson.ai_news.items_list.map(i => i.title).join('|');
-        
-        const newProjectTitles = projectEventsItems.map(i => i.title_en || i.title).join('|');
-        const oldProjectTitles = enJson.news.items_list.map(i => i.title).join('|');
+        // Helper to generate a simplified list for comparison
+        const getAiCompareList = (items) => items.map(item => ({
+            title: item.title_en || item.title || "",
+            description: item.description_en || item.description || "",
+            link: item.link_url || item.link || "",
+            date: item.date || "",
+            badge: item.badge_text || item.badge || ""
+        })).filter(i => i.title.trim() !== "");
 
-        if (newAiTitles === oldAiTitles && newProjectTitles === oldProjectTitles) {
+        const getProjectCompareList = (items) => items.map(item => ({
+            title: item.title_en || item.title || "",
+            description: item.description_en || item.description || "",
+            link: item.link_url || item.link || ""
+        })).filter(i => i.title.trim() !== "");
+
+        const newAiList = getAiCompareList(aiNewsItems);
+        const oldAiList = enJson.ai_news.items_list.map(i => ({
+            title: i.title,
+            description: i.description,
+            link: i.link,
+            date: i.date || "",
+            badge: i.badge || ""
+        }));
+
+        const newProjectList = getProjectCompareList(projectEventsItems);
+        const oldProjectList = enJson.news.items_list.map(i => ({
+            title: i.title,
+            description: i.description,
+            link: i.link
+        }));
+
+        if (JSON.stringify(newAiList) === JSON.stringify(oldAiList) && 
+            JSON.stringify(newProjectList) === JSON.stringify(oldProjectList)) {
             console.log("✅ Content is already synchronized. No changes detected between Google Sheet and Web.");
             return; 
         } else {
-            console.log("🔄 Changes detected! Updating local files...");
-            console.log(`- AI News: ${currentAiCount} -> ${aiNewsItems.length} items`);
-            console.log(`- Project Events: ${currentProjectCount} -> ${projectEventsItems.length} items`);
+            console.log("🔄 Changes detected in Sheet content! Updating local files...");
             hasChanges = true;
         }
     } else {
