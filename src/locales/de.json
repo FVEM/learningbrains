@@ -168,20 +168,22 @@
     "subtitle": "Verfolgen Sie den Fortschritt des Learning Brains Projekts durch unsere neuesten Nachrichten, Treffen und Verbreitungsaktivitäten.",
     "items_list": [
       {
-        "title": "Projekt-Auftaktreffen in Bilbao",
-        "category": "Treffen",
-        "description": "Das Learning Brains Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu industriellen Umschulungsbedürfnissen.",
-        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
+        "title": "Projektstart-Meeting in Bilbao",
+        "category": "",
+        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
+        "link": "Link"
       },
       {
-        "title": "Kommender Workshop: KI in der Berufsbildung",
-        "category": "Workshop",
-        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial künstlicher Intelligenz in der beruflichen Bildung untersucht. Wir begrüßen Experten aus ganz Europa, um Einblicke und Best Practices auszutauschen."
+        "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
+        "category": "",
+        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir begrüßen Experten aus ganz Europa, um Einblicke und bewährte Verfahren auszutauschen.",
+        "link": ""
       },
       {
         "title": "Erstes transnationales Projekttreffen",
-        "category": "Projekt",
-        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Auf der Tagesordnung stehen die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilotphase."
+        "category": "",
+        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
+        "link": ""
       }
     ],
     "read_more": "Weiterlesen",
@@ -283,58 +285,67 @@
     "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
     "items_list": [
       {
-        "title": "KI für Vertriebsteams: von der Opportunity zum Angebot",
-        "description": "Mehr Chancen, bessere Angebote und bessere Koordination des Vertriebs mit KI",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
+        "title": "KI für Vertriebsteams: Von der Gelegenheit zum Angebot",
+        "description": "Mehr Möglichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "KI für das Ingenieurwesen: mehr Effizienz, weniger Routineaufgaben",
-        "description": "Automatisieren Sie technische Aufgaben und steigern Sie die Produktivität des Ingenieurteams",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
+        "title": "KI für Ingenieurwesen: mehr Effizienz, weniger repetitive Aufgaben",
+        "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieurteams.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Tools: vom Copiloten zu Agenten",
-        "description": "Entdecken Sie das aktuelle KI-Ökosystem, von Copiloten bis hin zu intelligenten Agenten, und erfahren Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
+        "title": "Fortgeschrittene KI und neue Tools: Vom Co-Piloten zu Agenten",
+        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot im Unternehmen: echte Produktivität in einer Microsoft-Umgebung",
-        "description": "Produktivität mit Copilot in einem Industrieunternehmen, bei sicherer Nutzung des Tools",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
+        "title": "Kopilot im Unternehmen: Reale Produktivität in einer Microsoft-Umgebung",
+        "description": "Produktivität mit Copilot in einem Industrieunternehmen, bei sicherer Nutzung des Werkzeugs",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "So entwerfen Sie die KI-Roadmap in Ihrem Unternehmen",
-        "description": "Von der Absicht zur Tat: Schlüsselentscheidungen zur Einführung von KI mit echter Wirkung",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
+        "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
+        "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "SPRI-Förderungen: Künstliche Intelligenz 2026",
-        "description": "KI zur Transformation industrieller Prozesse und Steigerung der Wettbewerbsfähigkeit einsetzen",
-        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
+        "title": "SPRI-Zuschüsse: Künstliche Intelligenz 2026",
+        "description": "Wenden Sie künstliche Intelligenz an, um industrielle Prozesse zu transformieren und Wettbewerbsfähigkeit zu erlangen.",
+        "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": "GENER"
+      },
+      {
+        "title": "Sie sind ein professioneller Übersetzer für ein Erasmus+ Projekt namens \"Learning Brains\" über KI in der beruflichen Bildung und industriellen Umschulung. Übersetzen Sie den folgenden Text ins Deutsche. Beibehaltung des professionellen und technischen Tons. Senden Sie NUR den übersetzten Text zurück.",
+        "description": "Sie sind ein professioneller Übersetzer für ein Erasmus+-Projekt namens \"Learning Brains\" über KI in der beruflichen Bildung und industriellen Umschulung. Übersetzen Sie den folgenden Text ins Deutsche. Beibehaltung des professionellen und technischen Tons. Geben Sie NUR den übersetzten Text zurück.",
+        "link": "xxxxx",
+        "category": "Training",
+        "date": "2026-03-15",
+        "image": "xxxxx",
+        "badge": "TRAINING/ES"
       }
     ]
   }

@@ -168,20 +168,22 @@
     "subtitle": "Sledujte postup projektu Learning Brains prostredníctvom našich najnovších správ, stretnutí a diseminačných aktivít.",
     "items_list": [
       {
-        "title": "Úvodné Stretnutie Projektu v Bilbau",
-        "category": "Stretnutie",
-        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie projektových aktivít. Partneri diskutovali o pláne na prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselnej rekvalifikácie.",
-        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
+        "title": "Zahajovacie stretnutie projektu v Bilbau",
+        "category": "",
+        "description": "Konzorcium Learning Brains sa po prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselného preškolovania.",
+        "link": "Link"
       },
       {
-        "title": "Nadchádzajúci Workshop: UI v OVP",
-        "category": "Workshop",
-        "description": "Pridajte sa k nám na online workshop skúmajúci potenciál umelej inteligencie v odbornom vzdelávaní a príprave. Privítame odborníkov z celej Európy, aby sa podelili o poznatky a osvedčené postupy."
+        "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
+        "category": "",
+        "description": "Pripojte sa k nám na online workshope, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
+        "link": ""
       },
       {
-        "title": "Prvé Nadnárodné Stretnutie Projektu",
-        "category": "Projekt",
-        "description": "Druhé stretnutie partnerov budú hostiť naši talianski partneri. Program zahŕňa preskúmanie prvého návrhu rámca rekvalifikácie a plánovanie pilotnej fázy."
+        "title": "Prvé transnacionálne stretnutie projektu",
+        "category": "",
+        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
+        "link": ""
       }
     ],
     "read_more": "Čítať Viac",
@@ -284,57 +286,66 @@
     "items_list": [
       {
         "title": "AI pre predajné tímy: od príležitosti k ponuke",
-        "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s AI",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
+        "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s pomocou umelej inteligencie.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "AI pre inžinierstvo: vyššia efektivita, menej opakujúcich sa úloh",
-        "description": "Automatizujte technické úlohy a zvýšte produktivitu inžinierskeho tímu",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
+        "title": "AI pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
+        "description": "Automatizujte technické úlohy a zlepšite produktivitu inžinierskeho tímu.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Pokročilá AI a nové nástroje: od kopilota k agentom",
-        "description": "Preskúmajte súčasný ekosystém AI, od kopilotov po inteligentných agentov, a zistite, ako automatizovať a optimalizovať obchodné procesy",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
+        "title": "Pokročilá umele inteligencia a nové nástroje: od spolujazdca po agentov",
+        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte spôsoby automatizácie a optimalizácie obchodných procesov.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot v podniku: skutočná produktivita v prostredí Microsoft",
-        "description": "Produktivita s Copilotom v priemyselnom podniku pri bezpečnom používaní nástroja",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
+        "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
+        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Ako navrhnúť plán implementácie AI vo vašej organizácii",
-        "description": "Od zámeru k činom: kľúčové rozhodnutia pre implementáciu AI so skutočným dopadom",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
+        "title": "Ako navrhnúť plán rozvoja umelej inteligencie vo vašej organizácii",
+        "description": "Od zámeru k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Granty SPRI: Umelá inteligencia 2026",
-        "description": "Využite umelú inteligenciu na transformáciu priemyselných procesov a zvýšenie konkurencieschopnosti",
-        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
+        "title": "SPRI granty: Umelej inteligencii 2026",
+        "description": "Použite umelej inteligencie na transformáciu priemyselných procesov a získajte konkurenčnú výhodu.",
+        "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": "GENER"
+      },
+      {
+        "title": "Som profesionálny prekladateľ pre projekt Erasmus+ s názvom \"Learning Brains\" zameraným na umelej inteligencii vo odbornom vzdelávaní a priemyselnom preškolovaní.",
+        "description": "Som profesionálny prekladateľ pre projekt Erasmus+ s názvom \"Learning Brains\" o umelej inteligencii vo odbornom vzdelávaní a priemyselnom preškolovaní.",
+        "link": "xxxxx",
+        "category": "Training",
+        "date": "2026-03-15",
+        "image": "xxxxx",
+        "badge": "TRAINING/ES"
       }
     ]
   }

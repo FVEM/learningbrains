@@ -168,20 +168,22 @@
     "subtitle": "Sigue el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones y actividades de difusión.",
     "items_list": [
       {
-        "title": "Reunión de Inicio del Proyecto en Bilbao",
-        "category": "Reunión",
-        "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, incluyendo la configuración de la plataforma digital y la investigación inicial sobre necesidades de recualificación industrial.",
-        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
+        "title": "Reunión de inicio del proyecto en Bilbao",
+        "category": "",
+        "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye el establecimiento de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
+        "link": "Link"
       },
       {
-        "title": "Próximo Taller: IA en FP",
-        "category": "Taller",
-        "description": "Únete a nosotros para un taller online explorando el potencial de la Inteligencia Artificial en la Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir ideas y mejores prácticas."
+        "title": "Próximo taller: IA en la FPE",
+        "category": "",
+        "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir ideas y mejores prácticas.",
+        "link": ""
       },
       {
         "title": "Primera Reunión Transnacional del Proyecto",
-        "category": "Proyecto",
-        "description": "La segunda reunión de socios será organizada por nuestros socios italianos. La agenda incluye revisar el primer borrador del marco de recualificación y planificar la fase de prueba piloto."
+        "category": "",
+        "description": "La segunda reunión de socios será organizada por nuestros socios italianos. La agenda incluye la revisión del primer borrador del marco de recualificación y la planificación de la fase de pruebas piloto.",
+        "link": ""
       }
     ],
     "read_more": "Leer Más",
@@ -283,9 +285,9 @@
     "subtitle": "Manténgase informado sobre las últimas tendencias en Inteligencia Artificial, innovación empresarial y metodologías de formación profesional relevantes para los objetivos de nuestro proyecto.",
     "items_list": [
       {
-        "title": "IA para Equipos de Ventas: de la oportunidad a la oferta",
-        "description": "Más oportunidades, mejores ofertas y mejor coordinación comercial con IA",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
+        "title": "IA para equipos de ventas: desde la oportunidad hasta la oferta",
+        "description": "Más oportunidades, mejores ofertas y una mejor coordinación comercial con IA.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
@@ -293,48 +295,57 @@
       },
       {
         "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
-        "description": "Automatiza tareas técnicas y mejora la productividad del equipo de ingeniería",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
+        "description": "Automatizar tareas técnicas y mejorar la productividad del equipo de ingeniería.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA Avanzada y nuevas herramientas: del copiloto a los agentes",
-        "description": "Explora el ecosistema actual de la IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos de negocio",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
+        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes.",
+        "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot en la empresa: productividad real en entorno Microsoft",
-        "description": "Productividad con Copilot en la empresa industrial, con uso seguro de la herramienta",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
+        "title": "Copiloto en la empresa: productividad real en un entorno de Microsoft",
+        "description": "Productividad con Copilot en una empresa industrial, con un uso seguro de la herramienta.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Cómo diseñar la hoja de ruta de la IA en tu organización",
-        "description": "De la intención a la acción: decisiones clave para implantar IA con impacto real",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
+        "title": "Cómo diseñar la hoja de ruta de inteligencia artificial en su organización.",
+        "description": "De la intención a la acción: decisiones clave para implementar la inteligencia artificial con un impacto real.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Ayudas SPRI: Inteligencia Artificial 2026",
-        "description": "Aplica Inteligencia Artificial para transformar procesos industriales y ganar competitividad",
-        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
+        "title": "Subvenciones SPRI: Inteligencia Artificial 2026",
+        "description": "Aplicar la Inteligencia Artificial para transformar los procesos industriales y ganar competitividad.",
+        "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": "GENER"
+      },
+      {
+        "title": "Eres un traductor profesional para un proyecto Erasmus+ llamado \"Learning Brains\" sobre IA en la educación vocacional y la recualificación industrial. Traduce el siguiente texto al español. Mantén el tono profesional y técnico. Devuelve SOLAMENTE el texto traducido.",
+        "description": "Eres un traductor profesional para un proyecto Erasmus+ llamado \"Learning Brains\" sobre IA en la educación vocacional y la recualificación industrial. Traduce el siguiente texto al español. Mantén el tono profesional y técnico. Devuelve SOLAMENTE el texto traducido.",
+        "link": "xxxxx",
+        "category": "Training",
+        "date": "2026-03-15",
+        "image": "xxxxx",
+        "badge": "TRAINING/ES"
       }
     ]
   }

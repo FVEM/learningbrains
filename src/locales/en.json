@@ -169,19 +169,21 @@
     "items_list": [
       {
         "title": "Project Kick-off Meeting in Bilbao",
-        "category": "Meeting",
+        "category": "",
         "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
-        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
+        "link": "Link"
       },
       {
         "title": "Upcoming Workshop: AI in VET",
-        "category": "Workshop",
-        "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices."
+        "category": "",
+        "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
+        "link": ""
       },
       {
         "title": "First Transnational Project Meeting",
-        "category": "Project",
-        "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase."
+        "category": "",
+        "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
+        "link": ""
       }
     ],
     "read_more": "Read More",
@@ -285,7 +287,7 @@
       {
         "title": "AI for Sales Teams: from opportunity to offer",
         "description": "More opportunities, better offers and better commercial coordination with AI",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
@@ -294,7 +296,7 @@
       {
         "title": "AI for Engineering: more efficiency, less repetitive tasks",
         "description": "Automate technical tasks and improve the productivity of the engineering team",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
@@ -303,7 +305,7 @@
       {
         "title": "Advanced AI and new tools: from copilot to agents",
         "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
@@ -312,7 +314,7 @@
       {
         "title": "Copilot in the enterprise: real productivity in a Microsoft environment",
         "description": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
@@ -321,7 +323,7 @@
       {
         "title": "How to design the AI roadmap in your organization",
         "description": "From intention to action: key decisions to implement AI with real impact",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
@@ -330,11 +332,20 @@
       {
         "title": "SPRI Grants: Artificial Intelligence 2026",
         "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
-        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
+        "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": "GENER"
+      },
+      {
+        "title": "xxxxx",
+        "description": "xxxxxx",
+        "link": "xxxxx",
+        "category": "Training",
+        "date": "2026-03-15",
+        "image": "xxxxx",
+        "badge": "TRAINING/ES"
       }
     ]
   }

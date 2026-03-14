@@ -169,19 +169,21 @@
     "items_list": [
       {
         "title": "Reunião de Lançamento do Projeto em Bilbau",
-        "category": "Reunião",
-        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre necessidades de requalificação industrial.",
-        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664"
+        "category": "",
+        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reciclagem industrial.",
+        "link": "Link"
       },
       {
-        "title": "Próximo Workshop: IA no EFP",
-        "category": "Workshop",
-        "description": "Junte-se a nós para um workshop online explorando o potencial da Inteligência Artificial no Ensino e Formação Profissional. Receberemos especialistas de toda a Europa para partilhar insights e melhores práticas."
+        "title": "Próximo Workshop: IA na Formação Profissional",
+        "category": "",
+        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar ideias e melhores práticas.",
+        "link": ""
       },
       {
         "title": "Primeira Reunião Transnacional do Projeto",
-        "category": "Projeto",
-        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro esboço do quadro de requalificação e o planeamento da fase piloto."
+        "category": "",
+        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.",
+        "link": ""
       }
     ],
     "read_more": "Ler Mais",
@@ -283,58 +285,67 @@
     "subtitle": "Mantenha-se informado sobre as últimas tendências em Inteligência Artificial, inovação e metodologias de formação profissional.",
     "items_list": [
       {
-        "title": "IA para Equipas de Vendas: da oportunidade à oferta",
-        "description": "Mais oportunidades, melhores ofertas e melhor coordenação comercial com IA",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
+        "title": "IA para equipes de vendas: da oportunidade à oferta",
+        "description": "Mais oportunidades, melhores ofertas e melhor coordenação comercial com IA.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas",
-        "description": "Automatize tarefas técnicas e melhore a produtividade da equipa de engenharia",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
+        "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas.",
+        "description": "Automatize tarefas técnicas e melhore a produtividade da equipe de engenharia.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA Avançada e novas ferramentas: do copiloto para agentes",
-        "description": "Explore o ecossistema atual de IA, desde copilotos a agentes inteligentes, e descubra como automatizar e otimizar os processos de negócio",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
+        "title": "IA avançada e novas ferramentas: de copiloto a agentes",
+        "description": "Explore o ecossistema atual de IA, desde copilotos até agentes inteligentes, e descubra como automatizar e otimizar processos de negócios.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot na empresa: produtividade real em ambiente Microsoft",
-        "description": "Produtividade com Copilot numa empresa industrial, com uso seguro da ferramenta",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
+        "title": "Copiloto na empresa: produtividade real em um ambiente Microsoft",
+        "description": "Produtividade com o Copilot em uma empresa industrial, com uso seguro da ferramenta.",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Como desenhar o roteiro de IA na sua organização",
-        "description": "Da intenção à ação: decisões fundamentais para implementar a IA com impacto real",
-        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
+        "title": "Como projetar o roadmap de IA na sua organização",
+        "description": "Da intenção à ação: decisões-chave para implementar a IA com impacto real",
+        "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Apoios SPRI: Inteligência Artificial 2026",
-        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e ganhar competitividade",
-        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
+        "title": "Bolsas SPRI: Inteligência Artificial 2026",
+        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e ganhar competitividade.",
+        "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": "GENER"
+      },
+      {
+        "title": "Você é um tradutor profissional para um projeto Erasmus+ chamado \"Learning Brains\" sobre IA na educação profissional e reciclagem industrial. Traduza o seguinte texto para o português. Mantenha o tom profissional e técnico. Retorne APENAS o texto traduzido.",
+        "description": "Você é um tradutor profissional para um projeto Erasmus+ chamado \"Learning Brains\" sobre IA na educação profissional e reciclagem industrial. Traduza o seguinte texto para o português. Mantenha o tom profissional e técnico. Retorne APENAS o texto traduzido.",
+        "link": "xxxxx",
+        "category": "Training",
+        "date": "2026-03-15",
+        "image": "xxxxx",
+        "badge": "TRAINING/ES"
       }
     ]
   }
