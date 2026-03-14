@@ -169,25 +169,25 @@
     "items_list": [
       {
         "title": "Project Kick-off Meeting in Bilbao",
-        "category": "",
+        "category": "Meeting",
         "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
-        "link": "Link",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
       {
         "title": "Upcoming Workshop: AI in VET",
-        "category": "",
+        "category": "Meeting",
         "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
         "link": "",
         "date": "Coming Soon",
-        "image": "",
+        "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING"
       },
       {
         "title": "First Transnational Project Meeting",
-        "category": "",
+        "category": "Meeting",
         "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
         "link": "",
         "date": "Coming Soon",
@@ -342,10 +342,10 @@
         "title": "SPRI Grants: Artificial Intelligence 2026",
         "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
-        "category": "GENERAL/EU",
+        "category": "Research",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENER"
+        "badge": "GENERAL/EU"
       }
     ]
   }

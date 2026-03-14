@@ -169,25 +169,25 @@
     "items_list": [
       {
         "title": "Reunión de inicio del proyecto en Bilbao",
-        "category": "",
+        "category": "Meeting",
         "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
-        "link": "Link",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
       {
         "title": "Próximo taller: IA en la FPE",
-        "category": "",
+        "category": "Meeting",
         "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir conocimientos y mejores prácticas.",
         "link": "",
         "date": "Coming Soon",
-        "image": "",
+        "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING"
       },
       {
         "title": "Primera Reunión Transnacional del Proyecto",
-        "category": "",
+        "category": "Meeting",
         "description": "La segunda reunión de socios será organizada por nuestros socios italianos. La agenda incluye la revisión del primer borrador del marco de recualificación y la planificación de la fase de pruebas piloto.",
         "link": "",
         "date": "Coming Soon",
@@ -303,7 +303,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas.",
+        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
         "description": "Automatizar tareas técnicas y mejorar la productividad del equipo de ingeniería.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
@@ -312,7 +312,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde el copiloto hasta los agentes",
+        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes",
         "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
@@ -342,10 +342,10 @@
         "title": "Subvenciones SPRI: Inteligencia Artificial 2026",
         "description": "Aplicar la Inteligencia Artificial para transformar los procesos industriales y ganar competitividad.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
-        "category": "GENERAL/EU",
+        "category": "Research",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENER"
+        "badge": "GENERAL/EU"
       }
     ]
   }

@@ -169,26 +169,26 @@
     "items_list": [
       {
         "title": "Reunião de arranque do projeto em Bilbau",
-        "category": "",
-        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o plano de ação para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
-        "link": "Link",
+        "category": "Meeting",
+        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbao para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
       {
         "title": "Próximo Workshop: IA na Formação Profissional",
-        "category": "",
-        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar perspectivas e melhores práticas.",
+        "category": "Meeting",
+        "description": "Junte-se a nós em um workshop online explorando o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
         "link": "",
         "date": "Coming Soon",
-        "image": "",
+        "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING"
       },
       {
         "title": "Primeira Reunião Transnacional do Projeto",
-        "category": "",
-        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de testes piloto.",
+        "category": "Meeting",
+        "description": "A segunda reunião de parceiros será hospedada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
@@ -294,7 +294,7 @@
     "subtitle": "Mantenha-se informado sobre as últimas tendências em Inteligência Artificial, inovação e metodologias de formação profissional.",
     "items_list": [
       {
-        "title": "IA para Equipes de Vendas: da oportunidade à oferta",
+        "title": "IA para equipes de vendas: da oportunidade à oferta",
         "description": "Mais oportunidades, melhores ofertas e melhor coordenação comercial com IA.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
@@ -312,8 +312,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Inteligência artificial avançada e novas ferramentas: do copiloto aos agentes",
-        "description": "Explore o ecossistema atual de IA, desde copilotos até agentes inteligentes, e descubra como automatizar e otimizar os processos de negócios.",
+        "title": "Inteligência Artificial avançada e novas ferramentas: do copiloto aos agentes",
+        "description": "Explore o ecossistema atual de IA, desde copilotos até agentes inteligentes, e descubra como automatizar e otimizar processos de negócios.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -331,7 +331,7 @@
       },
       {
         "title": "Como projetar o roteiro de IA na sua organização.",
-        "description": "De intenção a ação: decisões-chave para implementar a IA com impacto real.",
+        "description": "Do intenção à ação: decisões-chave para implementar a IA com impacto real.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -340,12 +340,12 @@
       },
       {
         "title": "Bolsas SPRI: Inteligência Artificial 2026",
-        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e ganhar competitividade.",
+        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e obter competitividade.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
-        "category": "GENERAL/EU",
+        "category": "Research",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENER"
+        "badge": "GENERAL/EU"
       }
     ]
   }
