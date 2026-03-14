@@ -170,13 +170,13 @@
       {
         "title": "Reunión de inicio del proyecto en Bilbao",
         "category": "",
-        "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye el establecimiento de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
+        "description": "El consorcio de Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
         "link": "Link"
       },
       {
         "title": "Próximo taller: IA en la FPE",
         "category": "",
-        "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir ideas y mejores prácticas.",
+        "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir conocimientos y mejores prácticas.",
         "link": ""
       },
       {
@@ -294,7 +294,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
+        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas.",
         "description": "Automatizar tareas técnicas y mejorar la productividad del equipo de ingeniería.",
         "link": "Link",
         "category": "Training",
@@ -303,8 +303,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes.",
-        "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
+        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde el copiloto hasta los agentes.",
+        "description": "Explore el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -321,7 +321,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Cómo diseñar la hoja de ruta de inteligencia artificial en su organización.",
+        "title": "Cómo diseñar la hoja de ruta de IA en su organización.",
         "description": "De la intención a la acción: decisiones clave para implementar la inteligencia artificial con un impacto real.",
         "link": "Link",
         "category": "Training",
@@ -337,15 +337,6 @@
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
         "badge": "GENER"
-      },
-      {
-        "title": "Eres un traductor profesional para un proyecto Erasmus+ llamado \"Learning Brains\" sobre IA en la educación vocacional y la recualificación industrial. Traduce el siguiente texto al español. Mantén el tono profesional y técnico. Devuelve SOLAMENTE el texto traducido.",
-        "description": "Eres un traductor profesional para un proyecto Erasmus+ llamado \"Learning Brains\" sobre IA en la educación vocacional y la recualificación industrial. Traduce el siguiente texto al español. Mantén el tono profesional y técnico. Devuelve SOLAMENTE el texto traducido.",
-        "link": "xxxxx",
-        "category": "Training",
-        "date": "2026-03-15",
-        "image": "xxxxx",
-        "badge": "TRAINING/ES"
       }
     ]
   }

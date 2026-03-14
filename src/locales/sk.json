@@ -170,19 +170,19 @@
       {
         "title": "Zahajovacie stretnutie projektu v Bilbau",
         "category": "",
-        "description": "Konzorcium Learning Brains sa po prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselného preškolovania.",
+        "description": "Konzorcium Learning Brains sa stretlo po prvýkrát v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane zriadenia digitálnej platformy a úvodného výskumu potrieb priemyselného preškolovania.",
         "link": "Link"
       },
       {
-        "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
+        "title": "Nadchádzajúci workshop: AI vo vzdelávaní odborných zručností.",
         "category": "",
-        "description": "Pripojte sa k nám na online workshope, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
+        "description": "Pripojte sa k nám na online workshope, ktorý preskúma potenciál umelej inteligencie vo vzdelávaní a odbornej příprave. Privítame expertov z celej Európy, ktorí budú zdieľať poznatky a najlepšie postupy.",
         "link": ""
       },
       {
         "title": "Prvé transnacionálne stretnutie projektu",
         "category": "",
-        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
+        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie fázy pilotného testovania.",
         "link": ""
       }
     ],
@@ -285,7 +285,7 @@
     "subtitle": "Buďte informovaní o najnovších trendoch v umelej inteligencii, podnikových inováciách a metódach odborného vzdelávania.",
     "items_list": [
       {
-        "title": "AI pre predajné tímy: od príležitosti k ponuke",
+        "title": "AI pre predajné tímy: od príležitosti po ponuku",
         "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s pomocou umelej inteligencie.",
         "link": "Link",
         "category": "Training",
@@ -312,8 +312,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
-        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja.",
+        "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoft.",
+        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -322,7 +322,7 @@
       },
       {
         "title": "Ako navrhnúť plán rozvoja umelej inteligencie vo vašej organizácii",
-        "description": "Od zámeru k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
+        "description": "Od úmyslu k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,22 +330,13 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "SPRI granty: Umelej inteligencii 2026",
+        "title": "SPRI dotácie: Umelá inteligencia 2026",
         "description": "Použite umelej inteligencie na transformáciu priemyselných procesov a získajte konkurenčnú výhodu.",
         "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
         "badge": "GENER"
-      },
-      {
-        "title": "Som profesionálny prekladateľ pre projekt Erasmus+ s názvom \"Learning Brains\" zameraným na umelej inteligencii vo odbornom vzdelávaní a priemyselnom preškolovaní.",
-        "description": "Som profesionálny prekladateľ pre projekt Erasmus+ s názvom \"Learning Brains\" o umelej inteligencii vo odbornom vzdelávaní a priemyselnom preškolovaní.",
-        "link": "xxxxx",
-        "category": "Training",
-        "date": "2026-03-15",
-        "image": "xxxxx",
-        "badge": "TRAINING/ES"
       }
     ]
   }

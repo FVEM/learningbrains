@@ -170,7 +170,7 @@
       {
         "title": "Incontro di avvio del progetto a Bilbao",
         "category": "",
-        "description": "Il consorzio Learning Brains si è incontrato per la prima volta a Bilbao per avviare le attività del progetto. I partner hanno discusso della tabella di marcia per il primo anno, inclusa la configurazione della piattaforma digitale e la ricerca iniziale sui bisogni di riqualificazione industriale.",
+        "description": "Il consorzio Learning Brains si è incontrato per la prima volta a Bilbao per avviare le attività del progetto. I partner hanno discusso della tabella di marcia per il primo anno, che include la configurazione della piattaforma digitale e la ricerca iniziale sui bisogni di riqualificazione industriale.",
         "link": "Link"
       },
       {
@@ -180,7 +180,7 @@
         "link": ""
       },
       {
-        "title": "Primo incontro transnazionale del progetto",
+        "title": "Primo Incontro Transnazionale del Progetto",
         "category": "",
         "description": "Il secondo incontro dei partner sarà ospitato dai nostri partner italiani. L'agenda include la revisione del primo progetto del quadro di riqualificazione e la pianificazione della fase di test pilota.",
         "link": ""
@@ -330,22 +330,13 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Finanziamenti SPRI: Intelligenza Artificiale 2026",
+        "title": "Contributi SPRI: Intelligenza Artificiale 2026",
         "description": "Applicare l'Intelligenza Artificiale per trasformare i processi industriali e acquisire competitività.",
         "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
         "badge": "GENER"
-      },
-      {
-        "title": "Sono un traduttore professionista per un progetto Erasmus+ chiamato \"Learning Brains\" sull'Intelligenza Artificiale nell'istruzione professionale e nel riqualificare industriale.",
-        "description": "Sono un traduttore professionista per un progetto Erasmus+ chiamato \"Learning Brains\" sull'Intelligenza Artificiale nell'istruzione professionale e nel riqualificare industriale.",
-        "link": "xxxxx",
-        "category": "Training",
-        "date": "2026-03-15",
-        "image": "xxxxx",
-        "badge": "TRAINING/ES"
       }
     ]
   }

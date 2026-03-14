@@ -170,13 +170,13 @@
       {
         "title": "Projektstart-Meeting in Bilbao",
         "category": "",
-        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
+        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
         "link": "Link"
       },
       {
         "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
         "category": "",
-        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir begrüßen Experten aus ganz Europa, um Einblicke und bewährte Verfahren auszutauschen.",
+        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren auszutauschen.",
         "link": ""
       },
       {
@@ -285,7 +285,7 @@
     "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
     "items_list": [
       {
-        "title": "KI für Vertriebsteams: Von der Gelegenheit zum Angebot",
+        "title": "KI für Vertriebsteams: von der Chance zum Angebot",
         "description": "Mehr Möglichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
         "link": "Link",
         "category": "Training",
@@ -303,7 +303,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Tools: Vom Co-Piloten zu Agenten",
+        "title": "Fortgeschrittene KI und neue Tools: Vom Copiloten zu Agenten",
         "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "Link",
         "category": "Training",
@@ -321,7 +321,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
+        "title": "Wie gestaltet man den KI-Fahrplan in Ihrer Organisation?",
         "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
         "link": "Link",
         "category": "Training",
@@ -337,15 +337,6 @@
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
         "badge": "GENER"
-      },
-      {
-        "title": "Sie sind ein professioneller Übersetzer für ein Erasmus+ Projekt namens \"Learning Brains\" über KI in der beruflichen Bildung und industriellen Umschulung. Übersetzen Sie den folgenden Text ins Deutsche. Beibehaltung des professionellen und technischen Tons. Senden Sie NUR den übersetzten Text zurück.",
-        "description": "Sie sind ein professioneller Übersetzer für ein Erasmus+-Projekt namens \"Learning Brains\" über KI in der beruflichen Bildung und industriellen Umschulung. Übersetzen Sie den folgenden Text ins Deutsche. Beibehaltung des professionellen und technischen Tons. Geben Sie NUR den übersetzten Text zurück.",
-        "link": "xxxxx",
-        "category": "Training",
-        "date": "2026-03-15",
-        "image": "xxxxx",
-        "badge": "TRAINING/ES"
       }
     ]
   }
