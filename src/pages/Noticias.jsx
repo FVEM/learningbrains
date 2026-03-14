@@ -5,29 +5,6 @@ import SEOHead from '../components/SEOHead';
 const Noticias = () => {
     const { t } = useTranslation();
 
-    const aiNewsItems = [
-        {
-            image: "/images/news/course_ai_sales.png",
-            icon: TrendingUp
-        },
-        {
-            image: "/images/news/course_ai_engineering.png",
-            icon: Lightbulb
-        },
-        {
-            image: "/images/news/course_ai_advanced.png",
-            icon: TrendingUp
-        },
-        {
-            image: "/images/news/copilot_course.png",
-            icon: TrendingUp
-        },
-        {
-            image: "/images/news/ai_roadmap.png",
-            icon: Lightbulb
-        }
-    ];
-
     const translatedAiNewsItems = t('ai_news.items_list', { returnObjects: true });
 
     return (
@@ -51,31 +28,33 @@ const Noticias = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in-up delay-100">
                     {Array.isArray(translatedAiNewsItems) && translatedAiNewsItems.map((item, idx) => {
-                        const staticData = aiNewsItems[idx] || { icon: Lightbulb };
-                        const NewsIcon = staticData.icon || Lightbulb;
-
                         return (
                             <article key={`ai-${idx}`} className="bg-white border border-slate-100 rounded-2xl overflow-hidden flex flex-col sm:flex-row group hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300">
                                 <div className="sm:w-48 h-40 sm:h-auto bg-slate-50 relative shrink-0 overflow-hidden">
-                                    {staticData.image ? (
+                                    {item.image ? (
                                         <img
-                                            src={staticData.image.startsWith('http') ? staticData.image : `${import.meta.env.BASE_URL}${staticData.image.replace(/^\//, '')}`}
+                                            src={item.image.startsWith('http') ? item.image : `${import.meta.env.BASE_URL}${item.image.replace(/^\//, '')}`}
                                             alt={item.title}
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                         />
                                     ) : (
                                         <div className="absolute inset-0 flex items-center justify-center bg-slate-100 group-hover:bg-blue-50/50 transition-colors h-full w-full">
-                                            <NewsIcon className="w-10 h-10 text-slate-300 group-hover:text-blue-500/50 transition-colors" />
+                                            <Lightbulb className="w-10 h-10 text-slate-300 group-hover:text-blue-500/50 transition-colors" />
                                         </div>
                                     )}
                                     <div className="absolute top-3 left-3 z-10">
                                         <span className="bg-white/95 backdrop-blur-sm text-brand-body font-bold text-[10px] px-3 py-1 rounded-full shadow-sm tracking-widest uppercase">
-                                            Training/ES
+                                            {item.badge || 'News'}
                                         </span>
                                     </div>
                                 </div>
 
                                 <div className="p-4 sm:p-5 flex flex-col flex-grow justify-center">
+                                    {item.date && (
+                                        <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">
+                                            {item.date}
+                                        </span>
+                                    )}
                                     <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-2 sm:mb-3 leading-snug group-hover:text-blue-600 transition-colors">
                                         {item.title}
                                     </h3>

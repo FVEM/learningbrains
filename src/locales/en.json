@@ -283,34 +283,58 @@
     "subtitle": "Stay informed about the latest trends in Artificial Intelligence, business innovation, and vocational training methodologies relevant to our project's goals.",
     "items_list": [
       {
-        "title": "IA para equipos de Ventas: de la oportunidad a la oferta",
-        "description": "Más oportunidades, mejores ofertas y mejor coordinación comercial con IA",
+        "title": "AI for Sales Teams: from opportunity to offer",
+        "description": "More opportunities, better offers and better commercial coordination with AI",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
-        "category": "Training"
+        "category": "Training",
+        "date": "2026-05-15",
+        "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
+        "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
-        "description": "Automatiza tareas técnicas y mejora la productividad del equipo de ingeniería",
+        "title": "AI for Engineering: more efficiency, less repetitive tasks",
+        "description": "Automate technical tasks and improve the productivity of the engineering team",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
-        "category": "Training"
+        "category": "Training",
+        "date": "2026-06-15",
+        "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
+        "badge": "TRAINING/ES"
       },
       {
-        "title": "IA avanzada y nuevas herramientas: del copiloto a los agentes",
-        "description": "Explora el ecosistema actual de IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar procesos empresariales",
+        "title": "Advanced AI and new tools: from copilot to agents",
+        "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
-        "category": "Training"
+        "category": "Training",
+        "date": "2026-07-15",
+        "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
+        "badge": "TRAINING/ES"
       },
       {
         "title": "Copilot in the enterprise: real productivity in a Microsoft environment",
         "description": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
-        "category": "Training"
+        "category": "Training",
+        "date": "2026-04-15",
+        "image": "https://learningbrains.eu/images/news/copilot_course.png",
+        "badge": "TRAINING/ES"
       },
       {
         "title": "How to design the AI roadmap in your organization",
         "description": "From intention to action: key decisions to implement AI with real impact",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
-        "category": "Training"
+        "category": "Training",
+        "date": "2026-03-15",
+        "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
+        "badge": "TRAINING/ES"
+      },
+      {
+        "title": "Ayudas SPRI: Inteligencia Artificial 2026",
+        "description": "Aplica Inteligencia Artificial para transformar procesos industriales y ganar competitividad",
+        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
+        "category": "GENERAL/EU",
+        "date": "2026-03-14",
+        "image": "Research",
+        "badge": ""
       }
     ]
   }
