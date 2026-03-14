@@ -170,20 +170,29 @@
       {
         "title": "Projektstart-Meeting in Bilbao",
         "category": "",
-        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen der beruflichen Umschulung in der Industrie.",
-        "link": "Link"
+        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen des industriellen Umschulungssektors.",
+        "link": "Link",
+        "date": "Feb 2026 · Bilbao, Spain",
+        "image": "MEETING",
+        "badge": ""
       },
       {
         "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
         "category": "",
         "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren auszutauschen.",
-        "link": "MEETING"
+        "link": "MEETING",
+        "date": "Coming Soon",
+        "image": "",
+        "badge": ""
       },
       {
         "title": "Erstes transnationales Projekttreffen",
         "category": "",
         "description": "Die zweite Partnerbesprechung wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
-        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg"
+        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "date": "Coming Soon",
+        "image": "PROJECT",
+        "badge": ""
       }
     ],
     "read_more": "Weiterlesen",
@@ -303,8 +312,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Werkzeuge: Vom Co-Piloten zu Agenten",
-        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis hin zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
+        "title": "Fortgeschrittene KI und neue Tools: Vom Copiloten zu Agenten",
+        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -322,7 +331,7 @@
       },
       {
         "title": "Wie gestaltet man den KI-Fahrplan in Ihrer Organisation?",
-        "description": "Von der Absicht zur Handlung: Schlüsselentscheidungen zur Implementierung von KI mit echter Wirkung",
+        "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",

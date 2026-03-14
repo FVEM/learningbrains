@@ -67,7 +67,10 @@ async function sync() {
         const getProjectCompareList = (items) => items.map(item => ({
             title: item.title_en || item.title || "",
             description: item.description_en || item.description || "",
-            link: item.link_url || item.link || ""
+            link: item.link_url || item.link || "",
+            date: item.date || "",
+            image: item.image_url || item.image || "",
+            badge: item.badge_text || item.badge || ""
         })).filter(i => i.title.trim() !== "");
 
         const newAiList = getAiCompareList(aiNewsItems);
@@ -76,6 +79,7 @@ async function sync() {
             description: i.description,
             link: i.link,
             date: i.date || "",
+            image: i.image || "",
             badge: i.badge || ""
         }));
 
@@ -83,7 +87,10 @@ async function sync() {
         const oldProjectList = enJson.news.items_list.map(i => ({
             title: i.title,
             description: i.description,
-            link: i.link
+            link: i.link,
+            date: i.date || "",
+            image: i.image || "",
+            badge: i.badge || ""
         }));
 
         if (JSON.stringify(newAiList) === JSON.stringify(oldAiList) && 
@@ -131,7 +138,10 @@ async function sync() {
                 title,
                 category: item.category || "",
                 description,
-                link: item.link_url || item.link || ""
+                link: item.link_url || item.link || "",
+                date: item.date || "",
+                image: item.image_url || item.image || "",
+                badge: item.badge_text || item.badge || ""
             };
         }).filter(item => item.title.trim() !== "");
 

@@ -168,22 +168,31 @@
     "subtitle": "Sigue el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones y actividades de difusión.",
     "items_list": [
       {
-        "title": "Reunión de inicio del proyecto en Bilbao",
+        "title": "Reunión de inicio de proyecto en Bilbao.",
         "category": "",
         "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
-        "link": "Link"
+        "link": "Link",
+        "date": "Feb 2026 · Bilbao, Spain",
+        "image": "MEETING",
+        "badge": ""
       },
       {
         "title": "Próximo taller: IA en la FPE",
         "category": "",
-        "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir conocimientos y mejores prácticas.",
-        "link": "MEETING"
+        "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir ideas y mejores prácticas.",
+        "link": "MEETING",
+        "date": "Coming Soon",
+        "image": "",
+        "badge": ""
       },
       {
         "title": "Primera Reunión Transnacional del Proyecto",
         "category": "",
         "description": "La segunda reunión de socios será organizada por nuestros socios italianos. La agenda incluye la revisión del primer borrador del marco de recualificación y la planificación de la fase de pruebas piloto.",
-        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg"
+        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "date": "Coming Soon",
+        "image": "PROJECT",
+        "badge": ""
       }
     ],
     "read_more": "Leer Más",
@@ -304,7 +313,7 @@
       },
       {
         "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes",
-        "description": "Explora el ecosistema actual de la IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
+        "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -321,8 +330,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Cómo diseñar la hoja de ruta de IA en su organización.",
-        "description": "De la intención a la acción: decisiones clave para implementar la inteligencia artificial con un impacto real.",
+        "title": "Cómo diseñar la hoja de ruta de IA en su organización",
+        "description": "De la intención a la acción: decisiones clave para implementar la IA con un impacto real.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -331,7 +340,7 @@
       },
       {
         "title": "Subvenciones SPRI: Inteligencia Artificial 2026",
-        "description": "Aplicar la Inteligencia Artificial para transformar los procesos industriales y ganar competitividad.",
+        "description": "Aplicar la Inteligencia Artificial para transformar procesos industriales y ganar competitividad.",
         "link": "Link",
         "category": "GENERAL/EU",
         "date": "2026-03-14",

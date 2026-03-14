@@ -168,22 +168,31 @@
     "subtitle": "Sledujte postup projektu Learning Brains prostredníctvom našich najnovších správ, stretnutí a diseminačných aktivít.",
     "items_list": [
       {
-        "title": "Zahajovacie stretnutie projektu v Bilbau.",
+        "title": "Zahajovací stretnutie projektu v Bilbau",
         "category": "",
-        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a prvotného výskumu potrieb priemyselného preškolovania.",
-        "link": "Link"
+        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o ceste na prvý rok, vrátane nastavenia digitálnej platformy a úvodného výskumu potrieb priemyselného preškolovania.",
+        "link": "Link",
+        "date": "Feb 2026 · Bilbao, Spain",
+        "image": "MEETING",
+        "badge": ""
       },
       {
         "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
         "category": "",
-        "description": "Pripojte sa k online workshopu, kde budeme preskúmať potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
-        "link": "MEETING"
+        "description": "Pripojte sa k online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí budú zdieľať poznatky a najlepšie postupy.",
+        "link": "MEETING",
+        "date": "Coming Soon",
+        "image": "",
+        "badge": ""
       },
       {
         "title": "Prvé transnacionálne stretnutie projektu",
         "category": "",
-        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie testovacej fázy pilotného testovania.",
-        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg"
+        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
+        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "date": "Coming Soon",
+        "image": "PROJECT",
+        "badge": ""
       }
     ],
     "read_more": "Čítať Viac",
@@ -295,7 +304,7 @@
       },
       {
         "title": "AI pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
-        "description": "Automatizujte technické úlohy a zvyšte produktivitu inžinierskeho tímu.",
+        "description": "Automatizujte technické úlohy a zlepšite produktivitu inžinierskeho tímu.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -303,8 +312,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Pokročilá umeleá inteligencia a nové nástroje: od spolujazdca po agentov",
-        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte spôsoby automatizácie a optimalizácie obchodných procesov.",
+        "title": "Pokročilá umeleá inteligencia a nové nástroje: od spolujazdca k agentom.",
+        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte, ako automatizovať a optimalizovať obchodné procesy.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -313,7 +322,7 @@
       },
       {
         "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
-        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja",
+        "description": "Produktivita s Copilotom v priemyselnom podniku, s bezpečným používaním nástroja.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",

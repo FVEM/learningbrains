@@ -170,20 +170,29 @@
       {
         "title": "Reunião de arranque do projeto em Bilbau",
         "category": "",
-        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbao para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
-        "link": "Link"
+        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
+        "link": "Link",
+        "date": "Feb 2026 · Bilbao, Spain",
+        "image": "MEETING",
+        "badge": ""
       },
       {
         "title": "Próximo Workshop: IA na Formação Profissional",
         "category": "",
-        "description": "Junte-se a nós em um workshop online explorando o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
-        "link": "MEETING"
+        "description": "Junte-se a nós em um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
+        "link": "MEETING",
+        "date": "Coming Soon",
+        "image": "",
+        "badge": ""
       },
       {
         "title": "Primeira Reunião Transnacional do Projeto",
         "category": "",
         "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.",
-        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg"
+        "link": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "date": "Coming Soon",
+        "image": "PROJECT",
+        "badge": ""
       }
     ],
     "read_more": "Ler Mais",
@@ -285,7 +294,7 @@
     "subtitle": "Mantenha-se informado sobre as últimas tendências em Inteligência Artificial, inovação e metodologias de formação profissional.",
     "items_list": [
       {
-        "title": "IA para Equipes de Vendas: da oportunidade à oferta",
+        "title": "IA para equipes de vendas: da oportunidade à oferta",
         "description": "Mais oportunidades, melhores ofertas e melhor coordenação comercial com IA.",
         "link": "Link",
         "category": "Training",
@@ -295,7 +304,7 @@
       },
       {
         "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas",
-        "description": "Automatizar tarefas técnicas e melhorar a produtividade da equipe de engenharia.",
+        "description": "Automatize tarefas técnicas e melhore a produtividade da equipe de engenharia.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -303,7 +312,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA avançada e novas ferramentas: do copiloto aos agentes",
+        "title": "Inteligência Artificial avançada e novas ferramentas: do copiloto aos agentes",
         "description": "Explore o ecossistema atual de IA, desde copilotos até agentes inteligentes, e descubra como automatizar e otimizar processos de negócios.",
         "link": "Link",
         "category": "Training",
@@ -321,7 +330,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Como projetar o roadmap de IA na sua organização.",
+        "title": "Como projetar o plano de ação de IA na sua organização.",
         "description": "De intenção a ação: decisões-chave para implementar a IA com impacto real.",
         "link": "Link",
         "category": "Training",
