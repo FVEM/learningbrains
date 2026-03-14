@@ -170,7 +170,7 @@
       {
         "title": "Reunião de arranque do projeto em Bilbau",
         "category": "",
-        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o plano de ação para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reciclagem industrial.",
+        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o plano de ação para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
@@ -179,7 +179,7 @@
       {
         "title": "Próximo Workshop: IA na Formação Profissional",
         "category": "",
-        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
+        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar perspectivas e melhores práticas.",
         "link": "",
         "date": "Coming Soon",
         "image": "",
@@ -188,7 +188,7 @@
       {
         "title": "Primeira Reunião Transnacional do Projeto",
         "category": "",
-        "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
+        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de testes piloto.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
@@ -294,27 +294,27 @@
     "subtitle": "Mantenha-se informado sobre as últimas tendências em Inteligência Artificial, inovação e metodologias de formação profissional.",
     "items_list": [
       {
-        "title": "IA para equipes de vendas: da oportunidade à oferta",
+        "title": "IA para Equipes de Vendas: da oportunidade à oferta",
         "description": "Mais oportunidades, melhores ofertas e melhor coordenação comercial com IA.",
-        "link": "Link",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas",
+        "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas.",
         "description": "Automatize tarefas técnicas e melhore a produtividade da equipe de engenharia.",
-        "link": "Link",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Inteligência Artificial avançada e novas ferramentas: do copiloto aos agentes",
-        "description": "Explore o ecossistema atual de IA, desde copilotos até agentes inteligentes, e descubra como automatizar e otimizar processos de negócios.",
-        "link": "Link",
+        "title": "Inteligência artificial avançada e novas ferramentas: do copiloto aos agentes",
+        "description": "Explore o ecossistema atual de IA, desde copilotos até agentes inteligentes, e descubra como automatizar e otimizar os processos de negócios.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
@@ -322,17 +322,17 @@
       },
       {
         "title": "Copiloto na empresa: produtividade real em um ambiente Microsoft",
-        "description": "Produtividade com o Copilot em uma empresa industrial, com uso seguro da ferramenta.",
-        "link": "Link",
+        "description": "Produtividade com Copilot em uma empresa industrial, com uso seguro da ferramenta.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Como projetar o plano de ação de IA na sua organização.",
+        "title": "Como projetar o roteiro de IA na sua organização.",
         "description": "De intenção a ação: decisões-chave para implementar a IA com impacto real.",
-        "link": "Link",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
@@ -340,8 +340,8 @@
       },
       {
         "title": "Bolsas SPRI: Inteligência Artificial 2026",
-        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e obter competitividade.",
-        "link": "Link",
+        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e ganhar competitividade.",
+        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",

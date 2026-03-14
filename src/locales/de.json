@@ -170,7 +170,7 @@
       {
         "title": "Projektstart-Meeting in Bilbao",
         "category": "",
-        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
+        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
@@ -179,7 +179,7 @@
       {
         "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
         "category": "",
-        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren auszutauschen.",
+        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Schulung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren auszutauschen.",
         "link": "",
         "date": "Coming Soon",
         "image": "",
@@ -296,7 +296,7 @@
       {
         "title": "Künstliche Intelligenz für Vertriebsteams: von der Chance zum Angebot",
         "description": "Mehr Möglichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
-        "link": "Link",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
@@ -305,34 +305,34 @@
       {
         "title": "KI für Ingenieurwesen: mehr Effizienz, weniger repetitive Aufgaben",
         "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieurteams.",
-        "link": "Link",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Tools: Vom Co-Piloten zu Agenten",
-        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Co-Piloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
-        "link": "Link",
+        "title": "Fortgeschrittene KI und neue Tools: Vom Copiloten zu Agenten",
+        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis hin zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Kopilot im Unternehmen: Reale Produktivität in einer Microsoft-Umgebung",
-        "description": "Produktivität mit Copilot in einem Industrieunternehmen, bei sicherer Nutzung des Werkzeugs",
-        "link": "Link",
+        "title": "Kopilot im Unternehmen: echte Produktivität in einer Microsoft-Umgebung",
+        "description": "Produktivität mit Copilot in einem Industrieunternehmen, bei sicherer Verwendung des Werkzeugs",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
+        "title": "Wie gestaltet man den KI-Fahrplan in Ihrer Organisation?",
         "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echter Wirkung",
-        "link": "Link",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
@@ -341,7 +341,7 @@
       {
         "title": "SPRI-Zuschüsse: Künstliche Intelligenz 2026",
         "description": "Wenden Sie künstliche Intelligenz an, um industrielle Prozesse zu transformieren und Wettbewerbsfähigkeit zu erlangen.",
-        "link": "Link",
+        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
