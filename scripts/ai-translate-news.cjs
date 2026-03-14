@@ -38,7 +38,7 @@ async function translateText(text, targetLang) {
                 messages: [
                     {
                         role: "system",
-                        content: `You are a professional translator for an Erasmus+ project called "Learning Brains" about AI in vocational education and industrial reskilling. Translate the following text into ${langNames[targetLang]}. Keep the professional and technical tone. Return ONLY the translated text.`
+                        content: `You are a professional translator for an Erasmus+ project called "Learning Brains" about AI in vocational education and industrial reskilling. Detect the source language of the text provided and translate it into ${langNames[targetLang]}. Keep the professional and technical tone. Return ONLY the translated text.`
                     },
                     {
                         role: "user",
