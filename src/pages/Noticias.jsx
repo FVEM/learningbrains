@@ -44,7 +44,7 @@ const Noticias = () => {
                                     )}
                                     <div className="absolute top-3 left-3 z-10">
                                         <span className="bg-white/95 backdrop-blur-sm text-brand-body font-bold text-[10px] px-3 py-1 rounded-full shadow-sm tracking-widest uppercase">
-                                            {item.badge || 'News'}
+                                            {item.badge || item.category || 'News'}
                                         </span>
                                     </div>
                                 </div>

@@ -287,7 +287,7 @@
         "description": "More opportunities, better offers and better commercial coordination with AI",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-05-15",
+        "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "TRAINING/ES"
       },
@@ -296,7 +296,7 @@
         "description": "Automate technical tasks and improve the productivity of the engineering team",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-06-15",
+        "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
@@ -305,7 +305,7 @@
         "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-07-15",
+        "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "TRAINING/ES"
       },
@@ -314,7 +314,7 @@
         "description": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-04-15",
+        "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "TRAINING/ES"
       },
@@ -323,7 +323,7 @@
         "description": "From intention to action: key decisions to implement AI with real impact",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-03-15",
+        "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "TRAINING/ES"
       },
@@ -333,8 +333,8 @@
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "GENERAL/EU",
         "date": "2026-03-14",
-        "image": "Research",
-        "badge": ""
+        "image": "/images/news/spri_ai_2026.png",
+        "badge": "GENERAL/EU"
       }
     ]
   }
