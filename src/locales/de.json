@@ -170,7 +170,7 @@
       {
         "title": "Projektstart-Meeting in Bilbao",
         "category": "",
-        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
+        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
@@ -192,7 +192,7 @@
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "PROJECT"
+        "badge": "MEETING"
       }
     ],
     "read_more": "Weiterlesen",
@@ -303,8 +303,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "KI für Ingenieurwesen: mehr Effizienz, weniger wiederholende Aufgaben",
-        "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieursteams.",
+        "title": "KI für Ingenieurwesen: mehr Effizienz, weniger repetitive Aufgaben",
+        "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieurteams.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -313,7 +313,7 @@
       },
       {
         "title": "Fortgeschrittene KI und neue Tools: Vom Co-Piloten zu Agenten",
-        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
+        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Co-Piloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,7 +330,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Wie gestaltet man den KI-Fahrplan in Ihrer Organisation?",
+        "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
         "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echter Wirkung",
         "link": "Link",
         "category": "Training",

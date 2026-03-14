@@ -168,9 +168,9 @@
     "subtitle": "Sigue el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones y actividades de difusión.",
     "items_list": [
       {
-        "title": "Reunión de inicio del proyecto en Bilbao",
+        "title": "Reunión de inicio del proyecto en Bilbao.",
         "category": "",
-        "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
+        "description": "El consorcio de Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
@@ -192,7 +192,7 @@
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "PROJECT"
+        "badge": "MEETING"
       }
     ],
     "read_more": "Leer Más",
@@ -294,7 +294,7 @@
     "subtitle": "Manténgase informado sobre las últimas tendencias en Inteligencia Artificial, innovación empresarial y metodologías de formación profesional relevantes para los objetivos de nuestro proyecto.",
     "items_list": [
       {
-        "title": "IA para equipos de ventas: de la oportunidad a la oferta",
+        "title": "IA para equipos de ventas: desde la oportunidad hasta la oferta",
         "description": "Más oportunidades, mejores ofertas y una mejor coordinación comercial con IA.",
         "link": "Link",
         "category": "Training",
@@ -313,7 +313,7 @@
       },
       {
         "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes.",
-        "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
+        "description": "Explora el ecosistema actual de la IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,8 +330,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Cómo diseñar la hoja de ruta de inteligencia artificial en su organización.",
-        "description": "De la intención a la acción: decisiones clave para implementar la inteligencia artificial con un impacto real.",
+        "title": "Cómo diseñar la hoja de ruta de inteligencia artificial en su organización",
+        "description": "De la intención a la acción: decisiones clave para implementar la IA con un impacto real.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",

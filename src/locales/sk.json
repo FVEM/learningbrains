@@ -170,29 +170,29 @@
       {
         "title": "Zahajovací stretnutie projektu v Bilbau.",
         "category": "",
-        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a úvodného výskumu potrieb priemyselného preškolovania.",
+        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselného preškolovania.",
         "link": "Link",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
       {
-        "title": "Nadchádzajúci seminár: AI vo vzdelávaní a odbornej príprave.",
+        "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
         "category": "",
-        "description": "Pridajte sa k nám na online workshope, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
+        "description": "Pripojte sa k nám na online workshope, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
         "link": "",
         "date": "Coming Soon",
         "image": "",
         "badge": "MEETING"
       },
       {
-        "title": "Prvé transnacionálne stretnutie projektu.",
+        "title": "Prvé transnacionálne stretnutie projektu",
         "category": "",
         "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "PROJECT"
+        "badge": "MEETING"
       }
     ],
     "read_more": "Čítať Viac",
@@ -313,7 +313,7 @@
       },
       {
         "title": "Pokročilá umeleá inteligencia a nové nástroje: od spolujazdca k agentom.",
-        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte, ako automatizovať a optimalizovať podnikové procesy.",
+        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a zistite, ako automatizovať a optimalizovať podnikové procesy.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -322,7 +322,7 @@
       },
       {
         "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
-        "description": "Produktivita s Copilotom v priemyselnom podniku, s bezpečným používaním nástroja.",
+        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,8 +330,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Ako navrhnúť cestovný plán AI vo vašej organizácii?",
-        "description": "Od úmyslu k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
+        "title": "Ako navrhnúť cestovný plán AI vo vašej organizácii",
+        "description": "Od zámeru k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
         "link": "Link",
         "category": "Training",
         "date": "2026-03-13",
@@ -339,7 +339,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Granty SPRI: Umelej inteligencii 2026",
+        "title": "Granty SPRI: Umelé inteligencie 2026",
         "description": "Použite umelej inteligencie na transformáciu priemyselných procesov a získajte konkurenčnú výhodu.",
         "link": "Link",
         "category": "GENERAL/EU",
