@@ -26,9 +26,9 @@ const Footer = () => {
         {
             title: t('footer.section_legal'),
             links: [
-                { name: t('footer.privacy'), path: '#' },
-                { name: t('footer.cookies'), path: '#' },
-                { name: t('footer.transparency'), path: '#' },
+                { name: t('footer.privacy'), path: '/legal#privacy' },
+                { name: t('footer.cookies'), path: '/legal#cookies' },
+                { name: t('footer.transparency'), path: '/legal#transparency' },
             ]
         }
     ];

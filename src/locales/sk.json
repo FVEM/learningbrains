@@ -348,5 +348,50 @@
         "badge": "GENERAL/EU"
       }
     ]
+  },
+  "legal": {
+    "seo_title": "Právne informácie",
+    "seo_description": "Ochrana osobných údajov, cookies a transparenčnosť projektu Learning Brains.",
+    "title": "Právne informácie",
+    "tab_privacy": "Ochrana údajov",
+    "tab_cookies": "Cookies",
+    "tab_transparency": "Transparenčnosť",
+    "privacy_controller_title": "Prevádzkovateľ",
+    "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, koordinátorka projektu Learning Brains (Erasmus+ KA220-VET), je prevádzkovačkou osobných údajov zozbieraných prostredníctvom tejto webovej stránky.",
+    "privacy_data_title": "Zozbierané údaje",
+    "privacy_data_text": "Zbierame len údaje, ktoré používateľ dobrovoľne poskytne prostredníctvom kontaktného formulára: meno, e-mailová adresa a správa. Údaje malích alebo citlivé údaje sa nezbierajú.",
+    "privacy_purpose_title": "Účel",
+    "privacy_purpose_text": "Údaje sa využívajú výlučne na odpovede na otázky týkajúce sa projektu a na šírenie projektu. Údaje sa neposkytujú tretím stranám, pokiaľ to vyžaduje zákon.",
+    "privacy_rights_title": "Vaše práva",
+    "privacy_rights_text": "Svoje práva na prístup, opravu, vymazanie a námietku môžete uplatniť zasľaním e-mailu na info@fvem.es. Ak sa domnievate, že spracovanie nie je v súclade s predpismi, môžete podať sťažnosť na národnom úrade pre ochranu osobných údajov.",
+    "privacy_legal_basis_title": "Právny základ spracúvania",
+    "privacy_legal_basis_text": "Spracovanie údajov je založené na oprávnených záujmoch konzorcia pre správu a šírenie projektu (cl. 6 ods. 1 písm. f GDPR) a na vašom súhlas, ak o to výlovne požiadate (cl. 6 ods. 1 písm. a GDPR).",
+    "privacy_retention_title": "Uchovávanie údajov",
+    "privacy_retention_text": "Údaje budú uchovávané po dobu trvania projektu (do roku 2027) a následne po minimálnu dobu vyžadovanú platnými predpismi alebo auditornými požiadavkami Európskej komisie (zvvyčajne 5 rokov po ukončení projektu).",
+    "privacy_minors_title": "Maloň Malýchsť",
+    "privacy_minors_text": "Táto webová stránka nie je určená pre osoby mladšie ako 18 rokov a vedome nezbierame osobné údaje od malých. Ak zistíme, že údaje malého boli zhromazdzé bez súhlasu rodičov, okamžite ich vymaveme.",
+    "cookies_what_title": "Čo sú cookies?",
+    "cookies_what_text": "Cookies sú malé súbory uložené vo vašom prehliačači na zlepšenie zážitku z prehľadávania. Táto stránka používa iba technicky nevyhnutné cookies potrebné pre fungovanie webovej stránky.",
+    "cookies_types_title": "Typy používaných cookies",
+    "cookies_types_text": "Relačné cookies: na navigáciu medzi stránkami a výber jazyka. Google Analytics: na anonymné meranie navštevnosti (ak je aktivované). Nepoužívajú sa reklamné ani sledovacie cookies tretích strán.",
+    "cookies_manage_title": "Správa cookies",
+    "cookies_manage_text": "Cookies môžete deaktivovať alebo vymazať v nastaveniach vašho prehliačača. Upozorňujeme, že niektoré funkcie stránky môžu prestať fungovať správne, ak zablokujete všetky cookies.",
+    "cookies_analytics_title": "Google Analytics",
+    "cookies_analytics_text": "Táto stránka môže používať Google Analytics na anonymné meranie návštevnosti. Analytické cookies sa aktivujú iba v prípade, že súhlasíte s bannerom. Ak odmietate, neuladžujú sa žiadne osobné údaje.",
+    "trans_project_title": "Informácie o projekte",
+    "trans_programme": "Program",
+    "trans_funder": "Fundraiser",
+    "trans_funder_value": "Európska komisia — EACEA",
+    "trans_agency": "Národná agentúra",
+    "trans_coordinator": "Koordinátor",
+    "trans_duration": "Trvanie",
+    "trans_partners_label": "Partneri",
+    "eu_disclaimer": "Spolufinancované programom Erasmus+ Európskej únie. Tento projekt bol financovaný s podporou Európskej komisie. Táto publíkácia odráža len názory autora a Komisia nemôže byť zodpovedná za akékoľvek použitie informácií v nej obsiahnutých."
+  },
+  "cookies_banner": {
+    "text": "Používame nevyhnutné technické cookies a, ak súhlasíte, analytické cookies (Google Analytics) na zlepšenie vašej skºsenosti.",
+    "learn_more": "Zistiť viac",
+    "accept": "Prijať",
+    "decline": "Odmietnuť"
   }
 }

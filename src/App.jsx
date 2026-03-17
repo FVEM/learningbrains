@@ -12,6 +12,7 @@ import Impact from './pages/Impact';
 import Contact from './pages/Contact';
 import Analytics from './pages/Analytics';
 import Noticias from './pages/Noticias';
+import Legal from './pages/Legal';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="resources" element={<Resources />} />
           <Route path="impact" element={<Impact />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="legal" element={<Legal />} />
         </Route>
       </Routes>
     </Router>

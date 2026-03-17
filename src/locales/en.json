@@ -348,5 +348,50 @@
         "badge": "GENERAL/EU"
       }
     ]
+  },
+  "legal": {
+    "seo_title": "Legal",
+    "seo_description": "Privacy policy, cookies and transparency information for the Learning Brains project.",
+    "title": "Legal",
+    "tab_privacy": "Privacy",
+    "tab_cookies": "Cookies",
+    "tab_transparency": "Transparency",
+    "privacy_controller_title": "Data Controller",
+    "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as data controller for the personal data collected through this website.",
+    "privacy_data_title": "Data Collected",
+    "privacy_data_text": "We only collect data voluntarily provided by the user through the contact form: name, email address and message. No data from minors or sensitive data is collected.",
+    "privacy_purpose_title": "Purpose",
+    "privacy_purpose_text": "Data is used exclusively to respond to project enquiries and for project dissemination activities. Data is not shared with third parties except as required by law.",
+    "privacy_rights_title": "Your Rights",
+    "privacy_rights_text": "You may exercise your rights of access, rectification, erasure and objection by writing to info@fvem.es. If you believe the processing is not compliant, you can lodge a complaint with your national data protection authority.",
+    "privacy_legal_basis_title": "Legal Basis for Processing",
+    "privacy_legal_basis_text": "Data processing is based on the legitimate interests of the consortium for project management and dissemination (Art. 6.1.f GDPR) and, where you explicitly request it, on your consent (Art. 6.1.a GDPR).",
+    "privacy_retention_title": "Data Retention",
+    "privacy_retention_text": "Data will be retained for the duration of the project (until 2027) and, thereafter, the minimum time required by applicable regulations or by the European Commission's audit requirements (normally 5 years after project completion).",
+    "privacy_minors_title": "Minors",
+    "privacy_minors_text": "This website is not directed at individuals under 18 years of age and we do not knowingly collect personal data from minors. If we detect that data from a minor has been collected without parental consent, we will delete it immediately.",
+    "cookies_what_title": "What are cookies?",
+    "cookies_what_text": "Cookies are small files stored in your browser to improve your browsing experience. This site only uses technical cookies necessary for the website to function.",
+    "cookies_types_title": "Types of cookies we use",
+    "cookies_types_text": "Session cookies: for page navigation and the language selector. Google Analytics: to measure traffic anonymously (if enabled). No advertising or third-party tracking cookies are used.",
+    "cookies_manage_title": "How to manage cookies",
+    "cookies_manage_text": "You can disable or delete cookies from your browser settings. Please note that some site features may stop working correctly if you block all cookies.",
+    "cookies_analytics_title": "Google Analytics",
+    "cookies_analytics_text": "This site may use Google Analytics to measure traffic anonymously. Analytics cookies are only activated if you accept the consent banner. If you decline, no personal data is stored.",
+    "trans_project_title": "Project Information",
+    "trans_programme": "Programme",
+    "trans_funder": "Funder",
+    "trans_funder_value": "European Commission — EACEA",
+    "trans_agency": "National Agency",
+    "trans_coordinator": "Coordinator",
+    "trans_duration": "Duration",
+    "trans_partners_label": "Partners",
+    "eu_disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
+  },
+  "cookies_banner": {
+    "text": "We use necessary technical cookies and, if you accept, analytical cookies (Google Analytics) to improve your experience.",
+    "learn_more": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }

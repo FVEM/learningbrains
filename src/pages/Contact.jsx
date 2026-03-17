@@ -82,16 +82,6 @@ const Contact = () => {
 
                         <div className="space-y-8">
                             <div className="flex items-start gap-5">
-                                <div className="p-3.5 bg-teal-50 text-brand-secondary rounded-2xl border border-teal-100">
-                                    <Mail className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-slate-800 text-base mb-1">{t('contact.email_inquiry')}</h4>
-                                    <p className="text-slate-500 text-sm">contact@learningbrains.eu</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-5">
                                 <div className="p-3.5 bg-slate-50 text-slate-400 rounded-2xl border border-slate-100">
                                     <MessageSquare className="w-6 h-6" />
                                 </div>
@@ -177,7 +167,6 @@ const Contact = () => {
                                                 className="fixed inset-0 z-10"
                                                 onClick={() => setIsDropdownOpen(false)}
                                             ></div>
-
                                             <div className="absolute z-20 w-full mt-2 bg-white border border-slate-100 rounded-2xl shadow-xl shadow-slate-200/60 py-2 animate-in fade-in slide-in-from-top-2 duration-200 max-h-64 overflow-y-auto">
                                                 {destinations.map((dest) => (
                                                     <button

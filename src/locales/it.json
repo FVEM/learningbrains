@@ -348,5 +348,50 @@
         "badge": "GENERAL/EU"
       }
     ]
+  },
+  "legal": {
+    "seo_title": "Legale",
+    "seo_description": "Informativa sulla privacy, cookie e trasparenza del progetto Learning Brains.",
+    "title": "Legale",
+    "tab_privacy": "Privacy",
+    "tab_cookies": "Cookie",
+    "tab_transparency": "Trasparenza",
+    "privacy_controller_title": "Titolare del trattamento",
+    "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, coordinatrice del progetto Learning Brains (Erasmus+ KA220-VET), è il titolare del trattamento dei dati raccolti tramite questo sito web.",
+    "privacy_data_title": "Dati raccolti",
+    "privacy_data_text": "Raccogliamo solo i dati forniti volontariamente dall'utente tramite il modulo di contatto: nome, indirizzo email e messaggio. Non vengono raccolti dati di minori o dati sensibili.",
+    "privacy_purpose_title": "Finalità",
+    "privacy_purpose_text": "I dati sono utilizzati esclusivamente per rispondere alle richieste del progetto e per le attività di disseminazione. I dati non vengono condivisi con terzi salvo obbligo di legge.",
+    "privacy_rights_title": "I tuoi diritti",
+    "privacy_rights_text": "Puoi esercitare i tuoi diritti di accesso, rettifica, cancellazione e opposizione scrivendo a info@fvem.es. Se ritieni che il trattamento non sia conforme, puoi presentare un reclamo all'autorità nazionale di protezione dei dati.",
+    "privacy_legal_basis_title": "Base giuridica del trattamento",
+    "privacy_legal_basis_text": "Il trattamento dei dati si basa sul legittimo interesse del consorzio per la gestione e diffusione del progetto (art. 6.1.f GDPR) e, ove richiesto espressamente, sul tuo consenso (art. 6.1.a GDPR).",
+    "privacy_retention_title": "Conservazione dei dati",
+    "privacy_retention_text": "I dati saranno conservati per la durata del progetto (fino al 2027) e, successivamente, per il tempo minimo richiesto dalla normativa applicabile o dai requisiti di audit della Commissione Europea (normalmente 5 anni dopo il completamento del progetto).",
+    "privacy_minors_title": "Minori",
+    "privacy_minors_text": "Questo sito non è rivolto a persone di età inferiore ai 18 anni e non raccogliamo consapevolmente dati personali di minori. Se rilevassimo che dati di un minore sono stati raccolti senza consenso dei genitori, li elimineremo immediatamente.",
+    "cookies_what_title": "Cosa sono i cookie?",
+    "cookies_what_text": "I cookie sono piccoli file memorizzati nel tuo browser per migliorare l'esperienza di navigazione. Questo sito utilizza solo cookie tecnici necessari al funzionamento del sito.",
+    "cookies_types_title": "Tipi di cookie utilizzati",
+    "cookies_types_text": "Cookie di sessione: per la navigazione tra le pagine e il selettore della lingua. Google Analytics: per misurare il traffico in modo anonimo (se abilitato). Non vengono utilizzati cookie pubblicitari o di tracciamento di terze parti.",
+    "cookies_manage_title": "Come gestire i cookie",
+    "cookies_manage_text": "Puoi disabilitare o eliminare i cookie dalle impostazioni del tuo browser. Tieni presente che alcune funzionalità del sito potrebbero smettere di funzionare correttamente se blocchi tutti i cookie.",
+    "cookies_analytics_title": "Google Analytics",
+    "cookies_analytics_text": "Questo sito può utilizzare Google Analytics per misurare il traffico in modo anonimo. I cookie analitici vengono attivati solo se accetti il banner di consenso. Se rifiuti, non viene memorizzato alcun dato personale.",
+    "trans_project_title": "Informazioni sul progetto",
+    "trans_programme": "Programma",
+    "trans_funder": "Finanziatore",
+    "trans_funder_value": "Commissione Europea — EACEA",
+    "trans_agency": "Agenzia Nazionale",
+    "trans_coordinator": "Coordinatore",
+    "trans_duration": "Durata",
+    "trans_partners_label": "Partner",
+    "eu_disclaimer": "Co-finanziato dal Programma Erasmus+ dell'Unione Europea. Questo progetto è stato finanziato con il supporto della Commissione Europea. Questa pubblicazione riflette solo le opinioni dell'autore e la Commissione non può essere ritenuta responsabile dell'uso che può essere fatto delle informazioni ivi contenute."
+  },
+  "cookies_banner": {
+    "text": "Utilizziamo cookie tecnici necessari e, se accetti, cookie analitici (Google Analytics) per migliorare la tua esperienza.",
+    "learn_more": "Scopri di più",
+    "accept": "Accetta",
+    "decline": "Rifiuta"
   }
 }
