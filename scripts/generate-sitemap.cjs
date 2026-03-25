@@ -1,8 +1,7 @@
-
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://learningbrains.vercel.app';
+const SITE_URL = 'https://learningbrains.eu';
 const LAST_MOD = new Date().toISOString().split('T')[0];
 
 const languages = ['en', 'es', 'it', 'sk', 'de', 'pt'];
