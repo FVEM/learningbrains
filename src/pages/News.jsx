@@ -61,7 +61,7 @@ const News = () => {
                         if (safeImage && safeImage.includes('drive.google.com/file/d/')) {
                             const match = safeImage.match(/\/d\/([a-zA-Z0-9_-]+)/);
                             if (match && match[1]) {
-                                safeImage = `https://drive.google.com/uc?export=view&id=${match[1]}`;
+                                safeImage = `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
                             }
                         }
 
