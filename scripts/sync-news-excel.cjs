@@ -145,6 +145,17 @@ async function sync() {
             let finalImage = rawImage;
             if (!finalImage && isImage(rawLink)) finalImage = rawLink;
 
+            const transformGDriveUrl = (url) => {
+                if (!url) return url;
+                const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                if (match && match[1]) {
+                    return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+                }
+                return url;
+            };
+
+            finalImage = transformGDriveUrl(finalImage);
+
             // Ensure local paths have leading slash
             if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
                 finalImage = '/' + finalImage;
@@ -172,6 +183,17 @@ async function sync() {
             
             let finalImage = rawImage;
             if (!finalImage && isImage(rawLink)) finalImage = rawLink;
+
+            const transformGDriveUrl = (url) => {
+                if (!url) return url;
+                const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                if (match && match[1]) {
+                    return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+                }
+                return url;
+            };
+
+            finalImage = transformGDriveUrl(finalImage);
 
             // Ensure local paths have leading slash
             if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {

@@ -57,13 +57,21 @@ const News = () => {
                         const displayLocation = item.location || staticData.location; // Excel doesn't have this yet, but ready for it
                         const displayBadge = item.badge || item.category || "EVENT";
 
+                        let safeImage = displayImage;
+                        if (safeImage && safeImage.includes('drive.google.com/file/d/')) {
+                            const match = safeImage.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                            if (match && match[1]) {
+                                safeImage = `https://drive.google.com/uc?export=view&id=${match[1]}`;
+                            }
+                        }
+
                         return (
                             <article key={idx} className="bg-white border border-slate-100 rounded-2xl overflow-hidden flex flex-col group hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
                                 {/* Image or Placeholder */}
                                 <div className="h-56 bg-slate-50 relative overflow-hidden">
-                                    {displayImage ? (
+                                    {safeImage ? (
                                         <img
-                                            src={displayImage.startsWith('http') ? displayImage : (displayImage.startsWith('/') ? displayImage : `/${displayImage}`)}
+                                            src={safeImage.startsWith('http') ? safeImage : (safeImage.startsWith('/') ? safeImage : `/${safeImage}`)}
                                             alt={item.title}
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                             onError={(e) => {
