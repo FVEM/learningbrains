@@ -170,16 +170,16 @@
       {
         "title": "Incontro di avvio del progetto a Bilbao",
         "category": "Meeting",
-        "description": "Il consorzio Learning Brains si è incontrato per la prima volta a Bilbao per avviare le attività del progetto. I partner hanno discusso della tabella di marcia per il primo anno, incluso l'allestimento della piattaforma digitale e la ricerca iniziale sui bisogni di riqualificazione industriale.",
+        "description": "Il consorzio Learning Brains si è incontrato per la prima volta a Bilbao per avviare le attività del progetto. I partner hanno discusso della tabella di marcia per il primo anno, inclusa la configurazione della piattaforma digitale e la ricerca iniziale sui bisogni di riqualificazione industriale.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
       {
-        "title": "Prossimo Workshop: Intelligenza Artificiale nell'istruzione e formazione professionale",
+        "title": "Prossimo Workshop: Intelligenza Artificiale nell'istruzione e formazione professionale (VET)",
         "category": "Meeting",
-        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti da tutta Europa per condividere approfondimenti e migliori pratiche.",
+        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti provenienti da tutta Europa per condividere conoscenze e migliori pratiche.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
@@ -188,11 +188,20 @@
       {
         "title": "Primo Incontro del Progetto Transnazionale",
         "category": "Meeting",
-        "description": "Il secondo incontro dei partner sarà ospitato dai nostri partner italiani. L'agenda include la revisione del primo progetto del quadro di riqualificazione e la pianificazione della fase di test pilota.",
+        "description": "Il secondo incontro dei partner sarà ospitato dai nostri partner italiani. L'agenda include la revisione della prima bozza del quadro di riqualificazione e la pianificazione della fase di test pilota.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
+      },
+      {
+        "title": "Sito web ufficiale di Learning Brains!",
+        "category": "Event",
+        "description": "Siamo entusiasti di annunciare il lancio del sito web ufficiale di Learning Brains! Learning Brains (un'iniziativa Erasmus+) è qui per colmare il divario tra la formazione professionale e le esigenze industriali del mondo reale.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
+        "date": "Mar 2026 · Bilbao, Spain",
+        "image": "https://drive.google.com/file/d/1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v/view?usp=drive_link",
+        "badge": "PROJECT"
       }
     ],
     "read_more": "Leggi di più",
@@ -322,7 +331,7 @@
       },
       {
         "title": "Co-pilota in azienda: produttività reale in un ambiente Microsoft.",
-        "description": "Produttività con Copilot in un'impresa industriale, con uso sicuro dello strumento",
+        "description": "Produttività con Copilot in un'impresa industriale, con un uso sicuro dello strumento.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,7 +339,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Come progettare la roadmap sull'Intelligenza Artificiale nella tua organizzazione.",
+        "title": "Come progettare la roadmap sull'IA nella tua organizzazione",
         "description": "Dall'intenzione all'azione: decisioni chiave per implementare l'IA con un impatto reale",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",

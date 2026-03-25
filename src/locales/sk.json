@@ -168,18 +168,18 @@
     "subtitle": "Sledujte postup projektu Learning Brains prostredníctvom našich najnovších správ, stretnutí a diseminačných aktivít.",
     "items_list": [
       {
-        "title": "Zahajovací stretnutie projektu v Bilbau.",
+        "title": "Zahajovací stretnutie projektu v Bilbau",
         "category": "Meeting",
-        "description": "Konzorcium Learning Brains sa stretlo prvýkrát v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselného preškolovania.",
+        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne prác pre prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselného preškolovania.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
       {
-        "title": "Nadchádzajúci workshop: AI vo vzdelávaní odborných zručností.",
+        "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
         "category": "Meeting",
-        "description": "Pripojte sa k online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí budú zdieľať poznatky a najlepšie postupy.",
+        "description": "Pripojte sa k online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí budú zdieľať svoje poznatky a najlepšie postupy.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
@@ -188,11 +188,20 @@
       {
         "title": "Prvé transnacionálne stretnutie projektu",
         "category": "Meeting",
-        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
+        "description": "Druhé partnerstvo sa bude konať u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie fázy pilotného testovania.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
+      },
+      {
+        "title": "Oficiálna webová stránka projektu Learning Brains!",
+        "category": "Event",
+        "description": "S radosťou oznamujeme spustenie oficiálnej webovej stránky projektu Learning Brains! Learning Brains (iniciatíva programu Erasmus+) tu je na to, aby premostila medzeru medzi odborným vzdelávaním a reálnymi potrebami priemyslu.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
+        "date": "Mar 2026 · Bilbao, Spain",
+        "image": "https://drive.google.com/file/d/1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v/view?usp=drive_link",
+        "badge": "PROJECT"
       }
     ],
     "read_more": "Čítať Viac",
@@ -294,8 +303,8 @@
     "subtitle": "Buďte informovaní o najnovších trendoch v umelej inteligencii, podnikových inováciách a metódach odborného vzdelávania.",
     "items_list": [
       {
-        "title": "Umelá inteligencia pre predajné tímy: od príležitosti po ponuku",
-        "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s pomocou umelej inteligencie.",
+        "title": "AI pre predajné tímy: od príležitosti k ponuke",
+        "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s umelou inteligenciou.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -304,7 +313,7 @@
       },
       {
         "title": "AI pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
-        "description": "Automatizujte technické úlohy a zlepšite produktivitu inžinierskeho tímu.",
+        "description": "Automatizujte technické úlohy a zvyšte produktivitu inžinierskeho tímu.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -312,8 +321,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Pokročilá umele inteligencia a nové nástroje: od spolujazdca k agentom",
-        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte spôsoby automatizácie a optimalizácie podnikových procesov.",
+        "title": "Pokročilá umeleá inteligencia a nové nástroje: od spolujazdca k agentom.",
+        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte spôsoby automatizácie a optimalizácie obchodných procesov.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -322,7 +331,7 @@
       },
       {
         "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
-        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja",
+        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,7 +339,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Ako navrhnúť plán rozvoja umelej inteligencie vo vašej organizácii.",
+        "title": "Ako navrhnúť cestovný plán AI vo vašej organizácii",
         "description": "Od úmyslu k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",

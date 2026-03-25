@@ -168,7 +168,7 @@
     "subtitle": "Sigue el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones y actividades de difusión.",
     "items_list": [
       {
-        "title": "Reunión de inicio del proyecto en Bilbao",
+        "title": "Reunión de inicio del proyecto en Bilbao.",
         "category": "Meeting",
         "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
@@ -193,6 +193,15 @@
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
+      },
+      {
+        "title": "Sitio web oficial de Learning Brains.",
+        "category": "Event",
+        "description": "¡Nos complace anunciar el lanzamiento del sitio web oficial de Learning Brains! Learning Brains (una iniciativa de Erasmus+) está aquí para cerrar la brecha entre la formación vocacional y las necesidades industriales del mundo real.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
+        "date": "Mar 2026 · Bilbao, Spain",
+        "image": "https://drive.google.com/file/d/1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v/view?usp=drive_link",
+        "badge": "PROJECT"
       }
     ],
     "read_more": "Leer Más",
@@ -312,7 +321,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes",
+        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes.",
         "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
@@ -321,7 +330,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copiloto en la empresa: productividad real en un entorno de Microsoft",
+        "title": "Copiloto en la empresa: productividad real en un entorno de Microsoft.",
         "description": "Productividad con Copilot en una empresa industrial, con un uso seguro de la herramienta.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
@@ -331,7 +340,7 @@
       },
       {
         "title": "Cómo diseñar la hoja de ruta de inteligencia artificial en su organización.",
-        "description": "De la intención a la acción: decisiones clave para implementar la inteligencia artificial con un impacto real.",
+        "description": "De la intención a la acción: decisiones clave para implementar la IA con un impacto real.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",

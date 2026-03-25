@@ -170,7 +170,7 @@
       {
         "title": "Projektstart-Meeting in Bilbao",
         "category": "Meeting",
-        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen des industriellen Umschulungsbedarfs.",
+        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen des industriellen Umschulungsbedarfs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
@@ -188,11 +188,20 @@
       {
         "title": "Erstes transnationales Projekttreffen",
         "category": "Meeting",
-        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
+        "description": "Die zweite Partnerbesprechung wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
+      },
+      {
+        "title": "Lernende Gehirne offizielle Webseite!",
+        "category": "Event",
+        "description": "Wir freuen uns, die offizielle Website von Learning Brains zu präsentieren! Learning Brains (eine Initiative von Erasmus+) ist hier, um die Kluft zwischen beruflicher Ausbildung und den realen industriellen Anforderungen zu überbrücken.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
+        "date": "Mar 2026 · Bilbao, Spain",
+        "image": "https://drive.google.com/file/d/1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v/view?usp=drive_link",
+        "badge": "PROJECT"
       }
     ],
     "read_more": "Weiterlesen",
@@ -312,8 +321,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Tools: Vom Copiloten zu Agenten",
-        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
+        "title": "Fortgeschrittene KI und neue Werkzeuge: vom Copiloten zu Agenten",
+        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Co-Piloten bis hin zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,7 +339,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
+        "title": "Wie gestaltet man den KI-Fahrplan in Ihrer Organisation?",
         "description": "Von der Absicht zur Handlung: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
