@@ -168,39 +168,39 @@
     "subtitle": "Acompanhe o progresso do projeto Learning Brains através das nossas últimas notícias, reuniões e atividades de disseminação.",
     "items_list": [
       {
-        "title": "Project Kick-off Meeting in Bilbao",
+        "title": "Reunião de arranque do projeto em Bilbau",
         "category": "Meeting",
-        "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
+        "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbau para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
       {
-        "title": "Upcoming Workshop: AI in VET",
+        "title": "Próximo Workshop: IA na Formação Profissional",
         "category": "Meeting",
-        "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
+        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING"
       },
       {
-        "title": "First Transnational Project Meeting",
+        "title": "Primeira Reunião Transnacional do Projeto",
         "category": "Meeting",
-        "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
+        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
       },
       {
-        "title": "Learning Brains official website!",
+        "title": "Website oficial do Learning Brains!",
         "category": "Event",
-        "description": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
+        "description": "Estamos entusiasmados em anunciar o lançamento do site oficial do Learning Brains! O Learning Brains (uma iniciativa do Erasmus+) está aqui para preencher a lacuna entre a formação profissional e as necessidades industriais do mundo real.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 · Bilbao, Spain",
-        "image": "https://drive.google.com/uc?export=view&id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROJECT"
       }
     ],
@@ -303,8 +303,8 @@
     "subtitle": "Mantenha-se informado sobre as últimas tendências em Inteligência Artificial, inovação e metodologias de formação profissional.",
     "items_list": [
       {
-        "title": "AI for Sales Teams: from opportunity to offer",
-        "description": "More opportunities, better offers and better commercial coordination with AI",
+        "title": "IA para equipes de vendas: da oportunidade à oferta",
+        "description": "Mais oportunidades, melhores ofertas e melhor coordenação comercial com IA.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -312,8 +312,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "AI for Engineering: more efficiency, less repetitive tasks",
-        "description": "Automate technical tasks and improve the productivity of the engineering team",
+        "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas",
+        "description": "Automatize tarefas técnicas e melhore a produtividade da equipe de engenharia.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -321,8 +321,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Advanced AI and new tools: from copilot to agents",
-        "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
+        "title": "Inteligência Artificial avançada e novas ferramentas: do copiloto aos agentes",
+        "description": "Explore o ecossistema atual de IA, desde copilotos até agentes inteligentes, e descubra como automatizar e otimizar processos de negócios.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -330,8 +330,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot in the enterprise: real productivity in a Microsoft environment",
-        "description": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
+        "title": "Copiloto na empresa: produtividade real em um ambiente Microsoft",
+        "description": "Produtividade com o Copilot em uma empresa industrial, com uso seguro da ferramenta",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -339,8 +339,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "How to design the AI roadmap in your organization",
-        "description": "From intention to action: key decisions to implement AI with real impact",
+        "title": "Como projetar o roteiro de IA na sua organização.",
+        "description": "De intenção a ação: decisões-chave para implementar a IA com impacto real.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -348,8 +348,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "SPRI Grants: Artificial Intelligence 2026",
-        "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
+        "title": "Bolsas SPRI: Inteligência Artificial 2026",
+        "description": "Aplicar a Inteligência Artificial para transformar processos industriais e ganhar competitividade.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
         "date": "2026-03-14",
