@@ -11,8 +11,8 @@
     "contact": "Kontakt"
   },
   "home": {
-    "seo_title": "Learning Brains - KI für die Berufsbildung",
-    "seo_description": "Revolutionierung der beruflichen Bildung im Industriesektor durch Lernen am Arbeitsplatz und KI.",
+    "seo_title": "Learning Brains – Industrielle Weiterbildung mit KI | Erasmus+",
+    "seo_description": "Learning Brains ist ein Erasmus+ KA220-VET-Projekt, das KI-gestützte Lernlösungen für die Umschulung von Industriearbeitern entwickelt. Entdecken Sie unsere Ergebnisse, Partner und kostenlosen Ressourcen.",
     "hero_badge": "ERASMUS+ KOOPERATIONSPARTNERSCHAFT",
     "hero_name": "Learning Brains",
     "hero_title": "Echte Fähigkeiten für die echte Industrie",
@@ -105,8 +105,8 @@
     "chatbot_greeting": "Hallo! Ich bin der KI-Assistent von Learning Brains. Wie kann ich Ihnen heute bei dem Projekt oder KI am Arbeitsplatz helfen?"
   },
   "about": {
-    "seo_title": "Über das Projekt",
-    "seo_description": "Erfahren Sie mehr über die Ziele und Aufgaben des Learning Brains Projekts.",
+    "seo_title": "Über das Projekt – Learning Brains Erasmus+",
+    "seo_description": "Erfahren Sie mehr über die Ziele, Schwerpunktthemen und Zielgruppen von Learning Brains: ein Erasmus+ KA220-VET-Projekt zur Verbindung von KI and beruflicher Bildung im europäischen Industriesektor.",
     "title": "Über das Projekt",
     "background_title": "Hintergrund & Kontext",
     "background_text": "Die rasante Entwicklung industrieller Prozesse, angetrieben durch Digitalisierung und Automatisierung, schafft einen wachsenden Bedarf an Umschulung der Belegschaft in ganz Europa. Traditionelle Ausbildungsansätze scheitern oft daran, die spezifischen, kontextuellen Lernbedürfnisse von Arbeitnehmern zu adressieren, die sich an neue Technologien und Prozesse anpassen müssen, während sie produktiv bleiben. Learning Brains begegnet dieser Herausforderung durch die Entwicklung integrierter Systeme für das Lernen am Arbeitsplatz, die praktische Arbeitspraxis mit strukturierten Bildungsansätzen kombinieren.",
@@ -134,8 +134,8 @@
     ]
   },
   "partners": {
-    "seo_title": "Unsere Partner",
-    "seo_description": "Lernen Sie die Konsortialpartner des Learning Brains Projekts kennen.",
+    "seo_title": "Partner – Erasmus+ Learning Brains Konsortium",
+    "seo_description": "Lernen Sie die 6 europäischen Organisationen aus Spanien, Italien, der Slowakei, Österreich und Portugal kennen, die im Erasmus+ Projekt Learning Brains für KI und berufliche Bildung zusammenarbeiten.",
     "label": "Transnationale Zusammenarbeit",
     "title": "Unsere Partner",
     "subtitle": "Learning Brains ist eine transnationale Partnerschaft, die Industrieverbände, Wirtschaftsförderungsagenturen und Bildungsexperten aus ganz Europa zusammenbringt.",
@@ -161,55 +161,55 @@
     ]
   },
   "news": {
-    "seo_title": "Projekt-Events",
-    "seo_description": "Neueste Updates und Veranstaltungen von Learning Brains.",
+    "seo_title": "Projekt-Events & Nachrichten – Learning Brains Erasmus+",
+    "seo_description": "Bleiben Sie über die neuesten Veranstaltungen, Workshops und transnationalen Treffen des Erasmus+ Projekts Learning Brains zu KI, VET und industrieller Umschulung informiert.",
     "label": "Projekt-Updates",
     "title": "Projekt-Events",
     "subtitle": "Verfolgen Sie den Fortschritt des Learning Brains Projekts durch unsere neuesten Nachrichten, Treffen und Verbreitungsaktivitäten.",
     "items_list": [
       {
         "title": "Projektstart-Meeting in Bilbao",
-        "category": "Meeting",
-        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der ersten Forschung zu den Bedürfnissen des industriellen Umschulungsbedarfs.",
+        "category": "Treffen",
+        "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 · Bilbao, Spain",
+        "date": "Feb 2026 · Bilbao, Spanien",
         "image": "",
-        "badge": "MEETING"
+        "badge": "TREFFEN"
       },
       {
         "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
-        "category": "Meeting",
-        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren auszutauschen.",
+        "category": "Treffen",
+        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren zu teilen.",
         "link": "",
-        "date": "Coming Soon",
+        "date": "In Kürze",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
-        "badge": "MEETING"
+        "badge": "TREFFEN"
       },
       {
         "title": "Erstes transnationales Projekttreffen",
-        "category": "Meeting",
-        "description": "Die zweite Partnerbesprechung wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
+        "category": "Treffen",
+        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
         "link": "",
-        "date": "Coming Soon",
+        "date": "In Kürze",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "MEETING"
+        "badge": "TREFFEN"
       },
       {
         "title": "Lernende Gehirne offizielle Website!",
-        "category": "Event",
-        "description": "Wir freuen uns, die Veröffentlichung der offiziellen Website von Learning Brains bekannt zu geben! Learning Brains (eine Initiative von Erasmus+) soll die Kluft zwischen beruflicher Ausbildung und den realen industriellen Anforderungen überbrücken.",
+        "category": "Veranstaltung",
+        "description": "Wir freuen uns, die Veröffentlichung der offiziellen Website von Learning Brains bekannt zu geben! Learning Brains (eine Initiative von Erasmus+) ist hier, um die Kluft zwischen beruflicher Ausbildung und den realen industriellen Anforderungen zu überbrücken.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "Mar 2026 · Bilbao, Spain",
+        "date": "Mar 2026 · Bilbao, Spanien",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
-        "badge": "PROJECT"
+        "badge": "PROJEKT"
       }
     ],
     "read_more": "Weiterlesen",
     "details_soon": "Weitere Details folgen in Kürze"
   },
   "resources": {
-    "seo_title": "Ressourcen",
-    "seo_description": "Öffentliches Repository der Learning Brains Dokumente.",
+    "seo_title": "Ressourcen – Kostenlose KI & VET Lernmaterialien",
+    "seo_description": "Laden Sie kostenlose Ressourcen und offene Lernmaterialien des Erasmus+ Projekts Learning Brains für VET-Trainer, Personalverantwortliche und Industriefachleute herunter.",
     "label": "Öffentliches Repository",
     "title": "Ressourcen",
     "subtitle": "Greifen Sie auf die öffentlichen Dokumente, Leitfäden und technischen Vorlagen des Projekts zu, sobald diese im Laufe des Projektlebenszyklus veröffentlicht werden.",
@@ -219,8 +219,8 @@
     "btn_guide": "Implementierungsleitfaden"
   },
   "results": {
-    "seo_title": "Projektergebnisse",
-    "seo_description": "Ergebnisse und Resultate des Learning Brains Projekts.",
+    "seo_title": "Projektergebnisse – KI-Lerntools für die Berufsbildung",
+    "seo_description": "Entdecken Sie die intellektuellen Outputs von Learning Brains: ein europäischer Rahmen für industrielle Umschulung, KI-Coaching-Tools und ein Handbuch für Mentoring am Arbeitsplatz.",
     "title": "Projektergebnisse",
     "subtitle": "Zugang zu den greifbaren Ergebnissen und intellektuellen Beiträgen des Learning Brains Projekts.",
     "status_note": "Das Learning Brains Projekt befindet sich derzeit in der Implementierungsphase. Ergebnisse und Leistungen werden schrittweise veröffentlicht, sobald sie verfügbar sind und von der Europäischen Kommission genehmigt wurden.",
@@ -235,8 +235,8 @@
     ]
   },
   "impact": {
-    "seo_title": "Einfluss & Wirkung",
-    "seo_description": "Verstehen, wie Learning Brains zur beruflichen Bildung und industriellen Umschulung beiträgt.",
+    "seo_title": "Verbreitung & Wirkung – Learning Brains Erasmus+",
+    "seo_description": "Erfahren Sie mehr über die Verbreitungsstrategie und gesellschaftliche Wirkung von Learning Brains: Förderung von KI-Kompetenz und industrieller Umschulung in 5 europäischen Ländern.",
     "label": "Verbreitung & Auswirkungen",
     "title": "Projekteinfluss",
     "subtitle": "Verständnis dafür, wie Learning Brains zur Modernisierung der europäischen Berufsbildung und zur industriellen Umschulung beiträgt.",
@@ -296,8 +296,8 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
-    "seo_title": "Einblicke in KI, Wirtschaft & Berufsbildung",
-    "seo_description": "Aktuelle Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
+    "seo_title": "KI-Nachrichten – Künstliche Intelligenz in Wirtschaft & Berufsbildung",
+    "seo_description": "Aktuelle Trends in Künstlicher Intelligenz für Wirtschaft, Industrie und Berufsbildung (VET). Kuratiert vom Team des Erasmus+ Projekts Learning Brains.",
     "label": "Aktuelles zu Industrie & KI",
     "title": "Einblicke in KI, Wirtschaft & Berufsbildung",
     "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
@@ -306,61 +306,61 @@
         "title": "Künstliche Intelligenz für Vertriebsteams: von der Chance zum Angebot",
         "description": "Mehr Möglichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
         "title": "KI für Ingenieurwesen: mehr Effizienz, weniger repetitive Aufgaben",
-        "description": "Automatisieren Sie technische Aufgaben und steigern Sie die Produktivität des Ingenieurteams.",
+        "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieurteams.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
-        "title": "Fortgeschrittene KI und neue Tools: Vom Copiloten zu Agenten",
-        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
+        "title": "Fortgeschrittene KI und neue Werkzeuge: Vom Copiloten zu Agenten",
+        "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis hin zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
         "title": "Kopilot im Unternehmen: Reale Produktivität in einer Microsoft-Umgebung",
-        "description": "Produktivität mit Copilot in einem Industrieunternehmen, bei sicherer Nutzung des Werkzeugs",
+        "description": "Produktivität mit Copilot in einem Industrieunternehmen, bei sicherer Nutzung des Werkzeugs.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
-        "title": "Wie man den KI-Fahrplan in Ihrer Organisation entwirft",
+        "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
         "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
         "title": "SPRI-Zuschüsse: Künstliche Intelligenz 2026",
         "description": "Wenden Sie künstliche Intelligenz an, um industrielle Prozesse zu transformieren und Wettbewerbsfähigkeit zu erlangen.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
-        "category": "Research",
+        "category": "Forschung",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": "ALLGEMEIN/EU"
       }
     ]
   },
   "legal": {
-    "seo_title": "Rechtliches",
-    "seo_description": "Datenschutz, Cookies und Transparenz des Projekts Learning Brains.",
+    "seo_title": "Rechtlicher Hinweis – Datenschutz & Cookies | Learning Brains",
+    "seo_description": "Datenschutzerklärung, Cookie-Informationen und Transparenzhinweis für die Website des Erasmus+ Projekts Learning Brains.",
     "title": "Rechtliches",
     "tab_privacy": "Datenschutz",
     "tab_cookies": "Cookies",
@@ -368,7 +368,7 @@
     "privacy_controller_title": "Verantwortlicher",
     "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, Koordinatorin des Projekts Learning Brains (Erasmus+ KA220-VET), ist der Verantwortliche für die über diese Website erhobenen personenbezogenen Daten.",
     "privacy_data_title": "Erhobene Daten",
-    "privacy_data_text": "Wir erheben nur Daten, die der Nutzer freiwillig über das Kontaktformular bereitstellt: Name, E-Mail-Adresse und Nachricht. Daten von Minders oder besonders schützenswerte Daten werden nicht erhoben.",
+    "privacy_data_text": "Wir erheben nur Daten, die der Nutzer freiwillig über das Kontaktformular bereitstellt: Name, E-Mail-Adresse und Nachricht. Daten von Minderjährigen oder besonders schützenswerte Daten werden nicht erhoben.",
     "privacy_purpose_title": "Zweck",
     "privacy_purpose_text": "Die Daten werden ausschließlich zur Beantwortung von Projektanfragen und für Verbreitungsaktivitäten des Projekts verwendet. Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben.",
     "privacy_rights_title": "Ihre Rechte",
