@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/sync-news-excel.cjs && node scripts/ai-translate-news.cjs && node scripts/generate-sitemap.cjs && vite build",
+    "build": "(node scripts/sync-news-excel.cjs || true) && (node scripts/ai-translate-news.cjs || true) && (node scripts/generate-sitemap.cjs || true) && vite build",
     "lint": "eslint .",
     "sync-news": "node scripts/sync-news-excel.cjs",
     "preview": "vite preview"
