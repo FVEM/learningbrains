@@ -1,7 +1,8 @@
-import NewsCard from \"../components/NewsCard\";
-import { useTranslation } from \"react-i18next\";
-import { useEffect } from \"react-i18next\";
-import SectionTitle from \"../components/SectionTitle\";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { Layout } from 'lucide-react';
+import NewsCard from "../components/NewsCard";
+import SEOHead from "../components/SEOHead";
 
 const News = () => {
   const { t, i18n } = useTranslation();
@@ -12,102 +13,83 @@ const News = () => {
   }, []);
 
   // Use optional chaining and fallback to empty array to prevent mapping error
-  const newsItems = t(\"news.items_list\", { returnObjects: true }) || [];
+  const newsItems = t("news.items_list", { returnObjects: true }) || [];
 
   // Metadata for SEO
-  const pageTitle = t(\"news.seo.title\");
-  const metaDescription = t(\"news.seo.description\");
+  const pageTitle = t("news.seo.title");
+  const metaDescription = t("news.seo.description");
 
   return (
-    <div
-      className=\"bg-black text-white min-h-screen pt-24 pb-12 overflow-x-hidden\"
-      dir={i18n.dir()}
-    >
+    <div className="py-20" dir={i18n.dir()}>
       {/* Dynamic SEO Tags */}
-      <title>{pageTitle}</title>
-      <meta name=\"description\" content={metaDescription} />
+      <SEOHead 
+        title={pageTitle}
+        description={metaDescription}
+        keywords={t("news.seo.keywords", "Erasmus+, VET, News, Industry, AI")}
+        path="/news"
+      />
 
       {/* Main Content Container */}
-      <div className=\"max-w-7xl mx-auto px-4 md:px-8\">
-        {/* Header Section */}
-        <div className=\"mb-12\" data-aos=\"fade-down\">
-          <SectionTitle
-            main={t(\"news.section_title.main\")}
-            sub={t(\"news.section_title.sub\")}
-          />
-          <p className=\"text-gray-400 mt-4 max-w-2xl text-lg leading-relaxed\">
-            {t(\"news.section_description\")}
-          </p>
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header Section - Matches Partners Style */}
+        <div className="text-center mb-20 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
+                <Layout className="w-3 h-3" />
+                {t('partners.label')}
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">
+                {t("news.section_title.main")}
+            </h1>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
+                {t("news.section_description")}
+            </p>
         </div>
 
         {/* Improved Mosaic Grid Layout */}
-        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up delay-100">
           {Array.isArray(newsItems) && newsItems.length > 0 ? (
             newsItems.map((item, index) => (
               <div
                 key={index}
-                data-aos=\"fade-up\"
-                data-aos-delay={index * 100}
-                className=\"flex transition-transform duration-300 hover:scale-[1.02]\"
+                className="flex"
               >
                 <NewsCard
                   image={item.image}
                   date={item.date}
                   title={item.title}
                   description={item.description}
-                  url={item.url}
+                  url={item.link}
+                  category={item.badge || t("news.section_title.sub")}
                 />
               </div>
             ))
           ) : (
-            <div className=\"col-span-full py-20 text-center\">
-              <p className=\"text-gray-500 text-xl font-medium\">
-                {t(\"news.no_items_found\", \"No news items found.\")}
+            <div className="col-span-full py-20 text-center">
+              <p className="text-slate-400 text-xl font-medium">
+                {t("news.no_items_found", "No news items found.")}
               </p>
             </div>
           )}
         </div>
 
-        {/* Footer info or Call to action can go here */}
+        {/* Stay Updated Section */}
         <div
-          className=\"mt-20 p-8 rounded-2xl bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 text-center\"
-          data-aos=\"zoom-in\"
+          className="mt-20 p-12 rounded-3xl bg-slate-50 border border-slate-100 text-center"
         >
-          <h3 className=\"text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4\">
-            {t(\"news.stay_updated.title\", \"Stay Tuned\")}
+          <h3 className="text-2xl font-bold text-slate-800 mb-4">
+            {t("news.stay_updated.title", "Stay Tuned")}
           </h3>
-          <p className=\"text-gray-300 max-w-xl mx-auto\">
+          <p className="text-slate-500 max-w-xl mx-auto leading-relaxed">
             {t(
-              \"news.stay_updated.description\",
-              \"Follow our journey as we develop innovative learning platforms powered by AI and neuro-education.\"
+              "news.stay_updated.description",
+              "Follow our journey as we develop innovative learning platforms powered by AI and neuro-education."
             )}
           </p>
         </div>
       </div>
-
-      {/* Structured Data (JSON-LD) for better SEO */}
-      <script type=\"application/ld+json\">
-        {JSON.stringify({
-          \"@context\": \"https://schema.org\",
-          \"@type\": \"NewsArticle\",
-          \"headline\": pageTitle,
-          \"description\": metaDescription,
-          \"author\": {
-            \"@type\": \"Organization\",
-            \"name\": \"Learning Brains\",
-          },
-          \"publisher\": {
-            \"@type\": \"Organization\",
-            \"name\": \"Learning Brains\",
-            \"logo\": {
-              \"@type\": \"ImageObject\",
-              \"url\": \"https://learningbrains.eu/logo.png\",
-            },
-          },
-        })}
-      </script>
     </div>
   );
 };
+
 
 export default News;

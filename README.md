@@ -6,9 +6,11 @@ This is the official repository for the **Learning Brains** project website, an 
 
 - `src/`: Source code for the React application
 - `public/`: Static assets (logos, images, etc.)
+- `scripts/`: Production & automation scripts (Sitemap, Sync, Translations)
+- `tools/`: Development utilities and legacy session scripts
 - `src/locales/`: Internationalization files (en, es, sk, it, de, pt)
-- `src/pages/`: Page components (Home, About, Results, Partners, News, Resources, Impact, Contact)
-- `src/components/`: Reusable components (Header, Footer, Layout)
+- `src/pages/`: Page components
+- `src/components/`: Reusable components
 
 ## Features
 

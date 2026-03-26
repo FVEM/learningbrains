@@ -169,42 +169,42 @@
     "seo_description": "Bleiben Sie auf dem Laufenden über die neuesten Veranstaltungen, Workshops und transnationalen Treffen des Erasmus+ Projekts Learning Brains zu KI, BBi und industrieller Umschulung.",
     "label": "Projekt-Updates",
     "title": "Projektveranstaltungen",
-    "subtitle": "Verfolgen Sie den Fortschritt des Projekts Learning Brains durch unsere aktuellen Nachrichten, Treffen und Verbreitungsaktivit\u00e4ten.",
+    "subtitle": "Verfolgen Sie den Fortschritt des Projekts Learning Brains durch unsere aktuellen Nachrichten, Treffen und Verbreitungsaktivitäten.",
     "items_list": [
       {
-        "title": "Kick-off-Meeting des Projekts in Bilbao",
+        "title": "Projekt-Kick-off-Meeting in Bilbao",
         "category": "Meeting",
-        "description": "Das Learning Brains Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivit\u00e4ten zu starten. Die Partner besprachen den Fahrplan f\u00fcr das erste Jahr, einschlie\u00dflich der Einrichtung der digitalen Plattform und der ersten Forschung zu industriellen Reskilling-Bedarfen.",
+        "description": "Das Learning Brains-Konsortium traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner besprachen den Fahrplan für das erste Jahr, einschließlich des Aufbaus der digitalen Plattform und der ersten Forschungsarbeiten zum industriellen Umschulungsbedarf.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 \u00b7 Bilbao, Spanien",
-        "image": "/images/news/bilbaokickoff.jpg",
+        "date": "Feb 2026 · Bilbao, Spanien",
+        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "MEETING"
       },
       {
-        "title": "Bevorstehender Workshop: KI in der Berufsbildung",
+        "title": "Kommender Workshop: KI in der Berufsbildung",
         "category": "Meeting",
-        "description": "Nehmen Sie an einem Online-Workshop teil, in dem das Potenzial k\u00fcnstlicher Intelligenz in der beruflichen Aus- und Weiterbildung untersucht wird. Wir begr\u00fc\u00dfen Experten aus ganz Europa, um Einblicke und bew\u00e4hrte Verfahren auszutauschen.",
+        "description": "Nehmen Sie an einem Online-Workshop teil, in dem das Potenzial künstlicher Intelligenz in der beruflichen Aus- und Weiterbildung untersucht wird. Wir begrüßen Experten aus ganz Europa, um Einblicke und bewährte Verfahren auszutauschen.",
         "link": "",
-        "date": "In K\u00fcrze",
+        "date": "In Kürze",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING"
       },
       {
         "title": "Erstes transnationales Projekttreffen",
         "category": "Meeting",
-        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Auf der Tagesordnung stehen die \u00dcberpr\u00fcfung des ersten Entwurfs des Reskilling-Rahmens und die Planung der Pilotphase.",
+        "description": "Das second Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Auf der Tagesordnung stehen die Überprüfung des ersten Entwurfs des Reskilling-Rahmens und die Planung der Pilotphase.",
         "link": "",
-        "date": "In K\u00fcrze",
+        "date": "In Kürze",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
       },
       {
-        "title": "Offizielle Learning Brains Website ist online!",
-        "category": "Event",
-        "description": "Wir freuen uns, den Start der offiziellen Website von Learning Brains bekannt zu geben! Learning Brains (eine Erasmus+ Initiative) ist da, um die L\u00fccke zwischen beruflicher Ausbildung und realen industriellen Anforderungen zu schlie\u00dfen.",
+        "title": "Offizielle Website von Learning Brains!",
+        "category": "Projekt",
+        "description": "Wir freuen uns, den Start der offiziellen Website von Learning Brains bekannt zu geben! Learning Brains (eine Erasmus+ Initiative) ist da, um die Lücke zwischen beruflicher Ausbildung und realen industriellen Anforderungen zu schließen.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "M\u00e4r 2026 \u00b7 Bilbao, Spanien",
-        "image": "/images/news/learning-brains-01.jpg",
+        "date": "Mär 2026 · Bilbao, Spanien",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROJEKT"
       }
     ],

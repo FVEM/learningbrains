@@ -165,51 +165,61 @@
     ]
   },
   "news": {
-    "seo_title": "Podujatia a Novinky \u2013 Learning Brains Erasmus+",
-    "seo_description": "Zosta\u0148te informovan\u00ed o najnov\u0161\u00edch podujatiach, workshopoch a transnacion\u00e1lnych stretnutiach projektu Erasmus+ Learning Brains o AI, OVP a industri\u00e1lnej rekvalifik\u00e1cii.",
-    "label": "Aktualiz\u00e1cie Projektu",
-    "title": "Projektov\u00e9 Podujatia",
-    "subtitle": "Sledujte pokrok projektu Learning Brains prostredn\u00edctvom na\u0161ich najnov\u0161\u00edch noviniek, stretnut\u00ed a aktiv\u00edt \u0161\u00edrenia.",
+    "seo": {
+      "title": "Novinky a Podujatia – Learning Brains",
+      "description": "Zostaňte informovaní o najnovších správach, transnacionálnych stretnutiach a výsledkoch projektu Learning Brains.",
+      "keywords": "Erasmus+, VET, Novinky, Priemysel, AI"
+    },
+    "section_title": {
+      "main": "Projektové Novinky",
+      "sub": "AKTUÁLNE DIANIE"
+    },
+    "section_description": "Sledujte našu cestu pri vývoji inovatívnych nástrojov pre industriálnu rekvalifikáciu v celej Európe.",
     "items_list": [
       {
-        "title": "Kick-off stretnutie projektu v Bilbau",
-        "category": "Meeting",
-        "description": "Konzorcium Learning Brains sa prv\u00fdkr\u00e1t stretlo v Bilbau, aby od\u0161tartovalo aktivity projektu. Partneri diskutovali o pl\u00e1ne na prv\u00fd rok, vr\u00e1tane nastavenia digit\u00e1lnej platformy a po\u010diato\u010dn\u00e9ho v\u00fdskumu potrieb industri\u00e1lnej rekvalifik\u00e1cie.",
+        "title": "Úvodné stretnutie projektu v Bilbau",
+        "category": "Stretnutie",
+        "description": "Konzorcium Learning Brains sa po prvýkrát stretlo v Bilbau, aby odštartovalo aktivity projektu. Partneri diskutovali o pláne na prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselnej rekvalifikácie.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 \u00b7 Bilbao, \u0160panielsko",
-        "image": "/images/news/bilbaokickoff.jpg",
+        "date": "Feb 2026 · Bilbao, Španielsko",
+        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "STRETNUTIE"
       },
       {
-        "title": "Nadch\u00e1dzaj\u00faci Workshop: AI v odbornom vzdel\u00e1van\u00ed",
-        "category": "Meeting",
-        "description": "Pripojte sa k n\u00e1m na online workshope o potenci\u00e1li umelej inteligencie v odbornom vzdel\u00e1van\u00ed a pr\u00edprave. Priv\u00edtame expertov z celej Eur\u00f3py, aby zdie\u013eali svoje poznatky a osved\u010den\u00e9 postupy.",
+        "title": "Pripravovaný workshop: AI v odbornom vzdelávaní",
+        "category": "Stretnutie",
+        "description": "Pripojte sa k nám na online workshope, ktorý skúma potenciál umelej inteligencie v odbornom vzdelávaní a príprave. Privítame odborníkov z celej Európy, aby sa podelili o svoje poznatky a osvedčené postupy.",
         "link": "",
-        "date": "U\u017e \u010dokoro",
+        "date": "Už čoskoro",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "STRETNUTIE"
       },
       {
-        "title": "Prv\u00e9 transnacion\u00e1lne stretnutie projektu",
-        "category": "Meeting",
-        "description": "Druh\u00e9 stretnutie partnerov bud\u00fa hosti\u0165 na\u0161i talianski partneri. Na programe je presk\u00famanie prv\u00e9ho n\u00e1vrhu r\u00e1mca rekvalifik\u00e1cie a pl\u00e1novanie f\u00e1zy pilotn\u00e9ho testovania.",
+        "title": "Prvé nadnárodné stretnutie projektu",
+        "category": "Stretnutie",
+        "description": "Druhé stretnutie partnerov budú hostiť naši talianski partneri. Na programe je preskúmanie prvého návrhu rámca rekvalifikácie a plánovanie pilotnej fázy testovania.",
         "link": "",
-        "date": "U\u017e \u010dokoro",
+        "date": "Už čoskoro",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "STRETNUTIE"
       },
       {
-        "title": "Ofici\u00e1lna str\u00e1nka Learning Brains je online!",
-        "category": "Event",
-        "description": "S rados\u0165ou oznamujeme spustenie ofici\u00e1lnej webovej str\u00e1nky Learning Brains! Learning Brains (iniciat\u00edva Erasmus+) je tu, aby preklenula medzeru medzi odborn\u00fdm vzdel\u00e1van\u00edm a re\u00e1lnymi industri\u00e1lnymi po\u017eiadavkami.",
+        "title": "Oficiálna webová stránka Learning Brains je online!",
+        "category": "Projekt",
+        "description": "S radosťou oznamujeme spustenie oficiálnej webovej stránky Learning Brains! Learning Brains (iniciatíva Erasmus+) je tu na to, aby preklenula priepasť medzi odborným vzdelávaním a reálnymi priemyselnými požiadavkami.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "Mar 2026 \u00b7 Bilbao, \u0160panielsko",
-        "image": "/images/news/learning-brains-01.jpg",
+        "date": "Mar 2026 · Bilbao, Španielsko",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROJEKT"
       }
     ],
-    "read_more": "\u010c\u00edta\u0165 Viac",
-    "details_soon": "Viac detailov \u010dokoro"
+    "no_items_found": "Momentálne neboli nájdené žiadne podujatia.",
+    "stay_updated": {
+      "title": "Chcete byť v obraze?",
+      "description": "Sledujte nás na sociálnych sieťach, aby vám neušiel žiaden pokrok v integrácii AI a neuro-edukačného vzdelávania."
+    },
+    "read_more": "Čítať Viac",
+    "details_soon": "Viac detailov čoskoro"
   },
   "resources": {
     "seo_title": "Zdroje \u2013 Bezplatn\u00e9 materi\u00e1ly OVP a AI",
@@ -223,19 +233,19 @@
     "btn_guide": "Implementa\u010dn\u00e1 Pr\u00edru\u010dka"
   },
   "results": {
-    "seo_title": "V\u00fdsledky Projektu \u2013 AI n\u00e1stroje pre odborn\u00e9 vzdel\u00e1vanie",
-    "seo_description": "Presk\u00famajte intelektu\u00e1lne v\u00fdsledky Learning Brains: eur\u00f3psky r\u00e1mec industri\u00e1lnej rekvalifik\u00e1cie, AI kou\u010ding n\u00e1stroje a pr\u00edru\u010dka pre mentoring na pracovisku.",
-    "title": "V\u00fdsledky Projektu",
-    "subtitle": "Z\u00edskajte pr\u00edstup k hmatate\u013en\u00fdm v\u00fdsledkom a intelektu\u00e1lnym pr\u00ednosom projektu Learning Brains.",
-    "status_note": "Projekt Learning Brains je moment\u00e1lne vo f\u00e1ze implement\u00e1cie. V\u00fdsledky a v\u00fdstupy bud\u00fa zverej\u014uovan\u00e9 postupne, ako bud\u00fa k dispoz\u00edcii a schv\u00e1len\u00e9 Eur\u00f3pskou komisiou.",
-    "available_title": "Dostupn\u00e9 V\u00fdsledky",
-    "no_results": "Zatia\u013e neboli zverejnen\u00e9 \u017eiadne v\u00fdsledky. Sk\u00faste to pros\u00edm nesk\u00f4r.",
-    "planned_title": "Pl\u00e1novan\u00e9 V\u00fdsledky",
+    "seo_title": "Výsledky Projektu – AI nástroje pre odborné vzdelávanie",
+    "seo_description": "Preskúmajte intelektuálne výsledky Learning Brains: európsky rámec industriálnej rekvalifikácie, AI koučing nástroje a príručka pre mentoring na pracovisku.",
+    "title": "Výsledky Projektu",
+    "subtitle": "Získajte prístup k hmatateľným výsledkom a intelektuálnym prínosom projektu Learning Brains.",
+    "status_note": "Projekt Learning Brains je momentálne vo fáze implementácie. Výsledky a výstupy budú zverejňované postupne, ako budú k dispozícii a schválené Európskou komisiou.",
+    "available_title": "Dostupné Výsledky",
+    "no_results": "Zatiaľ neboli zverejnené žiadne výsledky. Skúste to prosím neskôr.",
+    "planned_title": "Plánované Výsledky",
     "planned_list": [
-      "Eur\u00f3psky r\u00e1mec pre industri\u00e1lnu rekvalifik\u00e1ciu",
-      "Pr\u00edru\u010dka pre mentoring na pracovisku",
-      "AI gener\u00e1tor vzdel\u00e1vac\u00edch ciest",
-      "Transnacion\u00e1lne politick\u00e9 odpor\u00fa\u010dania"
+      "Európsky rámec pre industriálnu rekvalifikáciu",
+      "Príručka pre mentoring na pracovisku",
+      "AI generátor vzdelávacích ciest",
+      "Transnacionálne politické odporúčania"
     ]
   },
   "impact": {
@@ -388,7 +398,7 @@
     "cookies_types_title": "Typy pou\u017e\u00edvan\u00fdch cookies",
     "cookies_types_text": "Session cookies: pre navig\u00e1ciu medzi str\u00e1nkami a prep\u00edna\u010d jazykov. Google Analytics: na anonymné meranie n\u00e1v\u0161tevnosti (ak je povolené). Nepou\u017e\u00edvaj\u00fa sa \u017eiadne reklamn\u00e9 cookies ani sledovanie tret\u00edch str\u00e1n.",
     "cookies_manage_title": "Ako spravova\u0165 cookies",
-    "cookies_manage_text": "Cookies m\u00f4\u017eete zak\u00e1za\u0165 alebo vymaza\u0165 v nastaveniach svojho prehliada\u010da. Upozor\u014ujeme, \u017ee niektoré funkcie webovej str\u00e1nky m\u00f4\u017eu presta\u0165 spr\u00e1vne fungova\u0165, ak zablokujete v\u0161etky cookies.",
+    "cookies_manage_text": "Cookies môžete zakázať alebo vymazať v nastaveniach svojho prehliadača. Upozorňujeme, že niektoré funkcie webovej stránky môžu prestať správne fungovať, ak zablokujete všetky cookies.",
     "cookies_analytics_title": "Google Analytics",
     "cookies_analytics_text": "T\u00e1to webov\u00e1 str\u00e1nka m\u00f4\u017ee pou\u017e\u00edva\u0165 Google Analytics na anonymné meranie n\u00e1v\u0161tevnosti. Analytické cookies sa aktivuj\u00fa iba vtedy, ak s\u00fahlas\u00edte s bannerom s\u00fahlasu. Ak odmietnete, neulo\u017eia sa \u017eiadne osobn\u00e9 \u00fadaje.",
     "trans_project_title": "Inform\u00e1cie o projekte",

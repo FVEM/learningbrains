@@ -165,24 +165,29 @@
     ]
   },
   "news": {
-    "seo_title": "Eventos y Noticias – Learning Brains Erasmus+",
-    "seo_description": "Manténgase al día de los últimos eventos, talleres y reuniones transnacionales del proyecto Erasmus+ Learning Brains sobre IA, FP y recualificación industrial.",
-    "label": "Actualizaciones del Proyecto",
-    "title": "Eventos del Proyecto",
-    "subtitle": "Siga el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones y actividades de diseminación.",
+    "seo": {
+      "title": "Eventos y Noticias – Learning Brains Erasmus+",
+      "description": "Manténgase al día de los últimos eventos, talleres y reuniones transnacionales del proyecto Erasmus+ Learning Brains sobre IA, FP y recualificación industrial.",
+      "keywords": "Erasmus+, VET, Noticias, Industria, IA"
+    },
+    "section_title": {
+      "main": "Eventos del Proyecto",
+      "sub": "ACTUALIDAD"
+    },
+    "section_description": "Siga el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones transnacionales y actividades de impacto.",
     "items_list": [
       {
         "title": "Reunión de Lanzamiento del Proyecto en Bilbao",
         "category": "Reunión",
-        "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para poner en marcha las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, incluida la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
+        "description": "El consorcio de Learning Brains se reunió por primera vez en Bilbao para poner en marcha las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, incluida la configuración de la plataforma digital y la investigación inicial sobre las necesidades de reciclaje industrial.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 \u00b7 Bilbao, España",
-        "image": "/images/news/bilbaokickoff.jpg",
+        "date": "Feb 2026 \u00b7 Bilbao, Espa\u00f1a",
+        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "REUNIÓN"
       },
       {
-        "title": "Próximo Taller: IA en la Formación Profesional",
-        "category": "Reunión",
+        "title": "Próximo taller: IA en la FP",
+        "category": "Evento",
         "description": "Únase a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Contaremos con expertos de toda Europa para compartir ideas y mejores prácticas.",
         "link": "",
         "date": "Próximamente",
@@ -190,24 +195,29 @@
         "badge": "REUNIÓN"
       },
       {
-        "title": "Primera Reunión Transnacional del Proyecto",
+        "title": "Primera reunión transnacional del proyecto",
         "category": "Reunión",
-        "description": "La segunda reunión de socios será organizada por nuestros socios italianos. El orden del día incluye la revisión del primer borrador del marco de recualificación y la planificación de la fase de pruebas piloto.",
+        "description": "Nuestros socios italianos organizarán la segunda reunión de socios. El programa incluye la revisión del primer borrador del marco de reciclaje profesional y la planificación de la fase de pruebas piloto.",
         "link": "",
         "date": "Próximamente",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "REUNIÓN"
       },
       {
-        "title": "¡Web oficial de Learning Brains!",
-        "category": "Event",
-        "description": "¡Estamos encantados de anunciar el lanzamiento de la web oficial de Learning Brains! Learning Brains (una iniciativa Erasmus+) está aquí para cerrar la brecha entre la formación profesional y las necesidades industriales reales.",
+        "title": "\u00a1Web oficial de Learning Brains online!",
+        "category": "Proyecto",
+        "description": "\u00a1Estamos encantados de anunciar el lanzamiento del sitio web oficial de Learning Brains! Learning Brains (una iniciativa Erasmus+) está aquí para cerrar la brecha entre la formación profesional y las necesidades industriales reales.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "Mar 2026 \u00b7 Bilbao, España",
-        "image": "/images/news/learning-brains-01.jpg",
+        "date": "Mar 2026 \u00b7 Bilbao, Espa\u00f1a",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROYECTO"
       }
     ],
+    "no_items_found": "No se han encontrado eventos en este momento.",
+    "stay_updated": {
+      "title": "¿Quieres estar al día?",
+      "description": "Síguenos en nuestras redes sociales para no perderte ningún avance en la integración de la IA y el aprendizaje neuro-educativo."
+    },
     "read_more": "Leer Más",
     "details_soon": "Más detalles próximamente"
   },

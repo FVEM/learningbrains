@@ -177,7 +177,7 @@
         "description": "Il consorzio Learning Brains si è riunito per la prima volta a Bilbao per lanciare le attività del progetto. I partner hanno discusso la tabella di marcia per il primo anno, compresa la configurazione della piattaforma digitale e la ricerca iniziale sulle esigenze di riqualificazione industriale.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 \u00b7 Bilbao, Spagna",
-        "image": "/images/news/bilbaokickoff.jpg",
+        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "INCONTRO"
       },
       {
@@ -190,21 +190,21 @@
         "badge": "INCONTRO"
       },
       {
-        "title": "Primo Incontro Transnazionale del Progetto",
-        "category": "Meeting",
-        "description": "Il secondo incontro dei partner sar\u00e0 ospitato dai nostri partner italiani. L'ordine del giorno include la revisione della prima bozza del quadro di riqualificazione e la pianificazione della fase di test pilota.",
+        "title": "Primo incontro transnazionale del progetto",
+        "category": "Incontro",
+        "description": "Il secondo incontro dei partner sarà ospitato dai nostri partner italiani. L'ordine del giorno include la revisione della prima bozza del quadro di riqualificazione e la pianificazione della fase di test pilota.",
         "link": "",
         "date": "Prossimamente",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "INCONTRO"
       },
       {
-        "title": "Sito ufficiale di Learning Brains online!",
-        "category": "Event",
+        "title": "Sito ufficiale di Learning Brains!",
+        "category": "Progetto",
         "description": "Siamo entusiasti di annunciare il lancio del sito ufficiale di Learning Brains! Learning Brains (un'iniziativa Erasmus+) è qui per colmare il divario tra la formazione professionale e le reali esigenze industriali.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "Mar 2026 \u00b7 Bilbao, Spagna",
-        "image": "/images/news/learning-brains-01.jpg",
+        "date": "Mar 2026 · Bilbao, Spagna",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROGETTO"
       }
     ],

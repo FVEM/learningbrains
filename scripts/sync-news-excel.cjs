@@ -8,6 +8,30 @@ const gids = {
     news: '148983926'
 };
 
+/**
+ * Transforms a Google Drive view link into a direct thumbnail URL
+ * Supports /d/FILE_ID and id=FILE_ID formats
+ */
+function transformGDriveUrl(url) {
+    if (!url || typeof url !== 'string') return url;
+    
+    // If it's already a direct lh3 or thumbnail URL, return it
+    if (url.includes('googleusercontent.com') || url.includes('drive.google.com/thumbnail')) {
+        return url;
+    }
+
+    // Try to extract ID from /d/ID or id=ID
+    const idMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || 
+                  url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    
+    if (idMatch && idMatch[1]) {
+        // Return public thumbnail endpoint with decent width
+        return `https://drive.google.com/thumbnail?id=${idMatch[1]}&sz=w1000`;
+    }
+    
+    return url;
+}
+
 function parseCSV(text) {
     const lines = text.split(/\r?\n/);
     const result = [];
@@ -142,19 +166,8 @@ async function sync() {
             
             const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
             
-            let finalImage = rawImage;
-            if (!finalImage && isImage(rawLink)) finalImage = rawLink;
-
-            const transformGDriveUrl = (url) => {
-                if (!url) return url;
-                const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-                if (match && match[1]) {
-                    return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
-                }
-                return url;
-            };
-
-            finalImage = transformGDriveUrl(finalImage);
+            let finalImage = transformGDriveUrl(rawImage);
+            if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
 
             // Ensure local paths have leading slash
             if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
@@ -181,19 +194,8 @@ async function sync() {
             
             const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
             
-            let finalImage = rawImage;
-            if (!finalImage && isImage(rawLink)) finalImage = rawLink;
-
-            const transformGDriveUrl = (url) => {
-                if (!url) return url;
-                const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-                if (match && match[1]) {
-                    return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
-                }
-                return url;
-            };
-
-            finalImage = transformGDriveUrl(finalImage);
+            let finalImage = transformGDriveUrl(rawImage);
+            if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
 
             // Ensure local paths have leading slash
             if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {

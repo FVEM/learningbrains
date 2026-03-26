@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/sync-news-excel.cjs && node scripts/ai-translate-news.cjs && node scripts/generate-sitemap.cjs && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "sync-news": "node scripts/sync-news-excel.cjs",
+    "translate-news": "node scripts/translate-news.cjs",
+    "generate-sitemap": "node scripts/generate-sitemap.cjs",
     "preview": "vite preview"
   },
   "dependencies": {

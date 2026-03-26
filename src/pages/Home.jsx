@@ -219,7 +219,7 @@ const Home = () => {
                                 </Link>
                             </div>
 
-                            {/* Stats - Tighter spacing below CTAs */}
+                            {/* Stats - Tighter spacing below CTAs */}\
                             <div className="mt-12 animate-fade-in-up delay-400">
                                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                                     <div className="pl-4 border-l-2 border-brand-primary/20">

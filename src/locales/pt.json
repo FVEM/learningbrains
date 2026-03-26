@@ -172,17 +172,17 @@
     "subtitle": "Acompanhe o progresso do projeto Learning Brains atrav\u00e9s das nossas \u00faltimas not\u00edcias, reuni\u00f5es e atividades de divulga\u00e7\u00e3o.",
     "items_list": [
       {
-        "title": "Reuni\u00e3o de Abertura do projeto em Bilbau",
-        "category": "Meeting",
-        "description": "O cons\u00f3rcio Learning Brains reuniu-se pela primeira vez em Bilbau para lan\u00e7ar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configura\u00e7\u00e3o da plataforma digital e a pesquisa inicial sobre necessidades de requalifica\u00e7\u00e3o industrial.",
+        "title": "Reuni\u00e3o de Lançamento do Projeto em Bilbau",
+        "category": "Reuni\u00e3o",
+        "description": "O cons\u00f3rcio Learning Brains reuniu-se pela primeira vez em Bilbau para lan\u00e7ar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configura\u00e7\u00e3o da plataforma digital e a investiga\u00e7\u00e3o inicial sobre as necessidades de requalifica\u00e7\u00e3o industrial.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Fev 2026 \u00b7 Bilbau, Espanha",
-        "image": "/images/news/bilbaokickoff.jpg",
+        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "REUNI\u00c3O"
       },
       {
-        "title": "Pr\u00f3ximo Workshop: IA na Forma\u00e7\u00e3o Profissional",
-        "category": "Meeting",
+        "title": "Pr\u00f3ximo Workshop: IA no Ensino Profissional",
+        "category": "Reuni\u00e3o",
         "description": "Junte-se a n\u00f3s num workshop online explorando o potencial da Intelig\u00eancia Artificial na Educa\u00e7\u00e3o e Forma\u00e7\u00e3o Profissional. Receberemos especialistas de toda a Europa para partilhar ideias e boas pr\u00e1ticas.",
         "link": "",
         "date": "Brevemente",
@@ -191,7 +191,7 @@
       },
       {
         "title": "Primeira Reuni\u00e3o Transnacional do Projeto",
-        "category": "Meeting",
+        "category": "Reuni\u00e3o",
         "description": "A segunda reuni\u00e3o de parceiros ser\u00e1 organizada pelos nossos parceiros italianos. A agenda inclui a revis\u00e3o do primeiro rascunho da estrutura de requalifica\u00e7\u00e3o e o planeamento da fase de testes piloto.",
         "link": "",
         "date": "Brevemente",
@@ -204,7 +204,7 @@
         "description": "Estamos entusiasmados por anunciar o lan\u00e7amento do site oficial do Learning Brains! O Learning Brains (uma iniciativa Erasmus+) est\u00e1 aqui para colmatar a lacuna entre a forma\u00e7\u00e3o profissional e as reais exig\u00eancias industriais.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 \u00b7 Bilbau, Espanha",
-        "image": "/images/news/learning-brains-01.jpg",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROJETO"
       }
     ],

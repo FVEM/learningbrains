@@ -165,27 +165,32 @@
     ]
   },
   "news": {
-    "seo_title": "Events and News – Learning Brains Erasmus+",
-    "seo_description": "Stay updated on the latest events, workshops, and transnational meetings of the Erasmus+ Learning Brains project on AI, VET, and industrial reskilling.",
-    "label": "Project Updates",
-    "title": "Project Events",
-    "subtitle": "Follow the progress of the Learning Brains project through our latest news, meetings, and dissemination activities.",
+    "seo": {
+      "title": "Events and News – Learning Brains Erasmus+",
+      "description": "Stay updated on the latest events, workshops, and transnational meetings of the Erasmus+ Learning Brains project on AI, VET, and industrial reskilling.",
+      "keywords": "Erasmus+, VET, News, Industry, IA"
+    },
+    "section_title": {
+      "main": "Project Events",
+      "sub": "LATEST NEWS"
+    },
+    "section_description": "Follow the progress of the Learning Brains project through our latest news, meetings, and dissemination activities.",
     "items_list": [
       {
         "title": "Project Kick-off Meeting in Bilbao",
         "category": "Meeting",
-        "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the digital platform setup and initial research on industrial reskilling needs.",
+        "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 \u00b7 Bilbao, Spain",
-        "image": "/images/news/bilbaokickoff.jpg",
+        "date": "Feb 2026 · Bilbao, Spain",
+        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "MEETING"
       },
       {
-        "title": "Upcoming Workshop: AI in Vocational Training",
+        "title": "Upcoming Workshop: AI in VET",
         "category": "Meeting",
-        "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will host experts from across Europe to share insights and best practices.",
+        "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
         "link": "",
-        "date": "Coming soon",
+        "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING"
       },
@@ -194,22 +199,27 @@
         "category": "Meeting",
         "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
         "link": "",
-        "date": "Coming soon",
+        "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
       },
       {
         "title": "Learning Brains official website!",
-        "category": "Event",
+        "category": "Project",
         "description": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "Mar 2026 \u00b7 Bilbao, Spain",
-        "image": "/images/news/learning-brains-01.jpg",
+        "date": "Mar 2026 · Bilbao, Spain",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROJECT"
       }
     ],
+    "no_items_found": "No news items found.",
+    "stay_updated": {
+      "title": "Want to stay updated?",
+      "description": "Follow our journey as we develop innovative learning platforms powered by AI and neuro-education."
+    },
     "read_more": "Read More",
-    "details_soon": "More details coming soon"
+    "details_soon": "More details soon"
   },
   "resources": {
     "seo_title": "Resources – Free VET and AI Materials",
