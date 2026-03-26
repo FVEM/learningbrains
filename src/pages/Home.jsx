@@ -301,34 +301,13 @@ const Home = () => {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        {t('news.items_list', { returnObjects: true }).slice(0, 3).map((item, idx) => {
-                            const newsData = [
-                                {
-                                    date: "Feb 2026",
-                                    location: "Bilbao, Spain",
-                                    image: "/News/BilbaoKickoff.jpg"
-                                },
-                                {
-                                    date: "Apr 2026",
-                                    location: "Online",
-                                    image: "",
-                                    icon: Calendar
-                                },
-                                {
-                                    date: "Jun 2026",
-                                    location: "Venice, Italy",
-                                    image: "",
-                                    icon: Users
-                                }
-                            ];
-
-                            const staticData = newsData[idx] || {};
-                            const NewsIcon = staticData.icon || Newspaper;
+                        {Array.isArray(t('news.items_list', { returnObjects: true })) && t('news.items_list', { returnObjects: true }).slice(0, 3).map((item, idx) => {
+                            const NewsIcon = idx === 1 ? Calendar : (idx === 2 ? Users : Newspaper);
 
                             // Prioritize Excel data from JSON
-                            const displayImage = item.image || staticData.image;
-                            const displayDate = item.date || staticData.date;
-                            const displayLocation = item.location || staticData.location;
+                            const displayImage = item.image;
+                            const displayDate = item.date;
+                            const displayLocation = item.location;
                             const displayBadge = item.badge || item.category || "EVENT";
 
                             return (

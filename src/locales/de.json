@@ -15,12 +15,12 @@
     "seo_description": "Learning Brains ist ein Erasmus+ KA220-VET-Projekt, das KI-gestützte Lernlösungen für die Umschulung von Industriearbeitern entwickelt. Entdecken Sie unsere Ergebnisse, Partner und kostenlosen Ressourcen.",
     "hero_badge": "ERASMUS+ KOOPERATIONSPARTNERSCHAFT",
     "hero_name": "Learning Brains",
-    "hero_title": "Echte Fähigkeiten für die echte Industrie",
-    "hero_subtitle": "Integrierte Systeme für das Lernen am Arbeitsplatz zur industriellen Umschulung",
+    "hero_title": "Echte F\u00e4higkeiten f\u00fcr die echte Industrie",
+    "hero_subtitle": "Integrierte Systeme f\u00fcr das Lernen am Arbeitsplatz zur industriellen Umschulung",
     "cta_primary": "Mehr erfahren",
     "cta_secondary": "Unsere Partner",
     "partners_count": "6 Strategische Partner",
-    "partners_text": "In 5 Europäischen Ländern",
+    "partners_text": "In 5 Europ\u00e4ischen L\u00e4ndern",
     "stats": [
       {
         "value": "6",
@@ -28,7 +28,7 @@
       },
       {
         "value": "5",
-        "label": "Länder"
+        "label": "L\u00e4nder"
       },
       {
         "value": "24",
@@ -41,29 +41,29 @@
     ],
     "pillars_badge": "Kernpfeiler",
     "pillars_title": "Innovation von Berufsbildungssystemen",
-    "pillars_subtitle": "Learning Brains führt ein neues Paradigma für die industrielle Ausbildung ein, indem es drei Schlüsselelemente in einem einheitlichen Rahmen kombiniert.",
+    "pillars_subtitle": "Learning Brains f\u00fchrt ein neues Paradigma f\u00fcr die industrielle Ausbildung ein, indem es drei Schl\u00fcsselelemente in einem einheitlichen Rahmen kombiniert.",
     "features": [
       {
         "title": "Industrieller Fokus",
-        "desc": "Maßgeschneiderte Methoden für den Fertigungssektor, die spezifische Qualifikationslücken und technologische Bedürfnisse adressieren."
+        "desc": "Ma\u00dfgeschneiderte Methoden f\u00fcr den Fertigungssektor, die spezifische Qualifikationsl\u00fccken und technologische Bed\u00fcrfnisse adressieren."
       },
       {
         "title": "Lernen am Arbeitsplatz",
         "desc": "Integration von Bildung direkt in den Arbeitsablauf, um Unterbrechungen zu minimieren und die praktische Anwendung zu maximieren."
       },
       {
-        "title": "KI-gestützte Tools",
-        "desc": "Nutzung künstlicher Intelligenz zur Personalisierung von Lernpfaden und Optimierung des Kompetenzerwerbs."
+        "title": "KI-gest\u00fctzte Tools",
+        "desc": "Nutzung k\u00fcnstlicher Intelligenz zur Personalisierung von Lernpfaden und Optimierung des Kompetenzerwerbs."
       }
     ],
     "impact_badge": "Projektwirkung",
     "impact_title": "Echten Wandel vorantreiben",
-    "impact_text": "Wir wollen die Lücke zwischen beruflicher Bildung und realen industriellen Anforderungen durch praktische, messbare Interventionen schließen.",
-    "impact_cta": "Vollständige Wirkung anzeigen",
-    "impact_point_1": "Verbesserte Anpassungsfähigkeit der Belegschaft",
-    "impact_point_2": "Modernisierte Lehrpläne der Berufsbildung",
-    "impact_point_3": "Stärkere Verbindungen zwischen Industrie und Bildung",
-    "chart_label_1": "Anpassungsfähigkeit",
+    "impact_text": "Wir wollen die L\u00fccke zwischen beruflicher Bildung und realen industriellen Anforderungen durch praktische, messbare Interventionen schlie\u00dfen.",
+    "impact_cta": "Vollst\u00e4ndige Wirkung anzeigen",
+    "impact_point_1": "Verbesserte Anpassungsf\u00e4higkeit der Belegschaft",
+    "impact_point_2": "Modernisierte Lehrpl\u00e4ne der Berufsbildung",
+    "impact_point_3": "St\u00e4rkere Verbindungen zwischen Industrie und Bildung",
+    "chart_label_1": "Anpassungsf\u00e4higkeit",
     "chart_label_2": "Ausbildungseffizienz",
     "chart_label_3": "Lerngeschwindigkeit",
     "hero_stats": {
@@ -74,7 +74,7 @@
       "duration_label_text": "Monate",
       "partners_label": "PARTNER",
       "partners_label_text": "Organisationen",
-      "countries_label": "LÄNDER",
+      "countries_label": "L\u00c4NDER",
       "countries_label_text": "Teilnehmer",
       "focus_value": "Industrielle Umschulung",
       "focus_label": "FOKUS"
@@ -84,21 +84,21 @@
       "title": "Aktuelle Updates",
       "description": "Meilensteine, Veranstaltungen und Ergebnisse des Projekts Learning Brains.",
       "view_all": "Alle Nachrichten anzeigen",
-      "coming_soon": "In Kürze",
+      "coming_soon": "In K\u00fcrze",
       "news_1": {
         "badge": "Treffen",
-        "date": "Feb 2026 · Bilbao, Spanien",
+        "date": "Feb 2026 \u00b7 Bilbao, Spanien",
         "title": "Projekt-Auftaktreffen",
         "description": "Die Partner trafen sich zum ersten Mal in der FVEM-Zentrale, um den Zeitplan des Projekts zu besprechen.",
         "link": "Auf LinkedIn lesen"
       },
       "news_2": {
         "title": "Konsortialmethodik",
-        "description": "Entwicklung des Kernrahmens für industrielle Umschulung und Lernen am Arbeitsplatz."
+        "description": "Entwicklung des Kernrahmens f\u00fcr industrielle Umschulung und Lernen am Arbeitsplatz."
       },
       "news_3": {
         "title": "KI-Tools Forschung",
-        "description": "Analyse modernster KI-Anwendungen für berufliche Bildungsumgebungen."
+        "description": "Analyse modernster KI-Anwendungen f\u00fcr berufliche Bildungsumgebungen."
       }
     },
     "chatbot_tooltip": "Fragen Sie unsere KI!",
@@ -109,28 +109,28 @@
     "seo_description": "Erfahren Sie mehr über die Ziele, Schwerpunktthemen und Zielgruppen von Learning Brains: ein Erasmus+ KA220-VET-Projekt zur Verbindung von KI und beruflicher Bildung im europäischen Industriesektor.",
     "title": "Über das Projekt",
     "background_title": "Hintergrund & Kontext",
-    "background_text": "Die rasante Entwicklung industrieller Prozesse, angetrieben durch Digitalisierung und Automatisierung, schafft einen wachsenden Bedarf an Umschulung der Belegschaft in ganz Europa. Traditionelle Ausbildungsansätze scheitern oft daran, die spezifischen, kontextuellen Lernbedürfnisse von Arbeitnehmern zu adressieren, die sich an neue Technologien und Prozesse anpassen müssen, während sie produktiv bleiben. Learning Brains begegnet dieser Herausforderung durch die Entwicklung integrierter Systeme für das Lernen am Arbeitsplatz, die praktische Arbeitspraxis mit strukturierten Bildungsansätzen kombinieren.",
+    "background_text": "Die rasante Entwicklung industrieller Prozesse, angetrieben durch Digitalisierung und Automatisierung, schafft einen wachsenden Bedarf an Umschulung der Belegschaft in ganz Europa. Traditionelle Ausbildungsans\u00e4tze scheitern oft daran, die spezifischen, kontextuellen Lernbed\u00fcrfnisse von Arbeitnehmern zu adressieren, die sich an neue Technologien und Prozesse anpassen m\u00fcssen, w\u00e4hrend sie produktiv bleiben. Learning Brains begegnet dieser Herausforderung durch die Entwicklung integrierter Systeme f\u00fcr das Lernen am Arbeitsplatz, die praktische Arbeitspraxis mit strukturierten Bildungsans\u00e4tzen kombinieren.",
     "objectives_title": "Projektziele",
     "objectives_list": [
-      "Entwicklung innovativer Methoden für das Lernen am Arbeitsplatz, zugeschnitten auf die industrielle Umschulung",
-      "Erstellung von KI-basierten Tools zur Unterstützung personalisierter Lernpfade in Arbeitsumgebungen",
-      "Förderung der Zusammenarbeit zwischen Berufsbildungsanbietern und Industriepartnern in ganz Europa",
-      "Erstellung offener Bildungsressourcen für die industrielle Umschulung, die einem breiten Publikum zugänglich sind",
-      "Beitrag zum europäischen politischen Dialog über die Modernisierung der beruflichen Bildung"
+      "Entwicklung innovativer Methoden f\u00fcr das Lernen am Arbeitsplatz, zugeschnitten auf die industrielle Umschulung",
+      "Erstellung von KI-basierten Tools zur Unterst\u00fctzung personalisierter Lernpfade in Arbeitsumgebungen",
+      "F\u00f6rderung der Zusammenarbeit zwischen Berufsbildungsanbietern und Industriepartnern in ganz Europa",
+      "Erstellung offener Bildungsressourcen f\u00fcr die industrielle Umschulung, die einem breiten Publikum zug\u00e4nglich sind",
+      "Beitrag zum europ\u00e4ischen politischen Dialog \u00fcber die Modernisierung der beruflichen Bildung"
     ],
     "focus_title": "Schwerpunktthemen",
     "focus_list": [
       "Berufliche Bildung (VET)",
       "Methoden des Lernens am Arbeitsplatz",
       "Industrielle Umschulung und Weiterbildung",
-      "KI-basierte Lernunterstützungstools"
+      "KI-basierte Lernunterst\u00fctzungstools"
     ],
     "target_title": "Zielgruppen",
     "target_list": [
       "Industriearbeiter in Umschulungsprozessen",
       "Berufsbildungsanbieter und Ausbilder in Industriesektoren",
       "Personalmanager und Ausbildungskoordinatoren in der Industrie",
-      "Politische Entscheidungsträger in Berufsbildung und Beschäftigung"
+      "Politische Entscheidungstr\u00e4ger in Berufsbildung und Besch\u00e4ftigung"
     ]
   },
   "partners": {
@@ -138,7 +138,7 @@
     "seo_description": "Lernen Sie die 6 europäischen Organisationen aus Spanien, Italien, der Slowakei, Österreich und Portugal kennen, die im Erasmus+ Projekt Learning Brains für KI und berufliche Bildung zusammenarbeiten.",
     "label": "Transnationale Zusammenarbeit",
     "title": "Unsere Partner",
-    "subtitle": "Learning Brains ist eine transnationale Partnerschaft, die Industrieverbände, Wirtschaftsförderungsagenturen und Bildungsexperten aus ganz Europa zusammenbringt.",
+    "subtitle": "Learning Brains ist eine transnationale Partnerschaft, die Industrieverb\u00e4nde, Wirtschaftsf\u00f6rderungsagenturen und Bildungsexperten aus ganz Europa zusammenbringt.",
     "view_org": "Organisation anzeigen",
     "roles": {
       "Coordinator": "Koordinator",
@@ -147,17 +147,17 @@
     "countries": {
       "Spain": "Spanien",
       "Italy": "Italien",
-      "Austria": "Österreich",
+      "Austria": "\u00d6sterreich",
       "Slovakia": "Slowakei",
       "Portugal": "Portugal"
     },
     "descriptions": [
-      "Ein führender Industrieverband, der mehr als 800 Unternehmen im Metallsektor vertritt und sich für Innovation und Ausbildung engagiert.",
-      "Das Dienstleistungsunternehmen der Confindustria Veneto, spezialisiert auf Ausbildung, Innovation und Organisationsentwicklung für regionale Unternehmen.",
-      "Vertritt die Interessen der steirischen Wirtschaft und bietet umfangreiche Bildungs- und Ausbildungsunterstützungsdienste an.",
-      "Experten für das Design und die Implementierung innovativer pädagogischer Methoden und digitaler Lernumgebungen.",
-      "Die älteste spezialisierte gemeinnützige Organisation zur Unterstützung kleiner und mittlerer Unternehmen in der Slowakei.",
-      "Engagiert für die Entwicklung von Humanressourcen und innovative Ausbildungslösungen für den modernen Arbeitsmarkt."
+      "Ein f\u00fchrender Industrieverband, der mehr als 800 Unternehmen im Metallsektor vertritt und sich f\u00fcr Innovation und Ausbildung engagiert.",
+      "Das Dienstleistungsunternehmen der Confindustria Veneto, spezialisiert auf Ausbildung, Innovation und Organisationsentwicklung f\u00fcr regionale Unternehmen.",
+      "Vertritt die Interessen der steirischen Wirtschaft und bietet umfangreiche Bildungs- und Ausbildungsunterst\u00fctzungsdienste an.",
+      "Experten f\u00fcr das Design und die Implementierung innovativer p\u00e4dagogischer Methoden und digitaler Lernumgebungen.",
+      "Die \u00e4lteste spezialisierte gemeinn\u00fctzige Organisation zur Unterst\u00fctzung kleiner und mittlerer Unternehmen in der Slowakei.",
+      "Engagiert f\u00fcr die Entwicklung von Humanressourcen und innovative Ausbildungsl\u00f6sungen f\u00fcr den modernen Arbeitsmarkt."
     ]
   },
   "news": {
@@ -172,65 +172,65 @@
         "category": "Meeting",
         "description": "Das Konsortium Learning Brains traf sich zum ersten Mal in Bilbao, um die Projektaktivitäten zu starten. Die Partner diskutierten den Fahrplan für das erste Jahr, einschließlich der Einrichtung der digitalen Plattform und der anfänglichen Forschung zu den Bedürfnissen im Bereich der industriellen Umschulung.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 · Bilbao, Spain",
-        "image": "",
-        "badge": "MEETING"
+        "date": "Feb 2026 \u00b7 Bilbao, Spanien",
+        "image": "/News/BilbaoKickoff.jpg",
+        "badge": "TREFFEN"
       },
       {
         "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
         "category": "Meeting",
         "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Verfahren zu teilen.",
         "link": "",
-        "date": "Coming Soon",
+        "date": "In K\u00fcrze",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
-        "badge": "MEETING"
+        "badge": "TREFFEN"
       },
       {
         "title": "Erstes transnationales Projekttreffen",
         "category": "Meeting",
         "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
         "link": "",
-        "date": "Coming Soon",
+        "date": "In K\u00fcrze",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "MEETING"
+        "badge": "TREFFEN"
       },
       {
         "title": "Lernende Gehirne offizielle Website!",
         "category": "Event",
         "description": "Wir freuen uns, die Veröffentlichung der offiziellen Website von Learning Brains bekannt zu geben! Learning Brains (eine Initiative von Erasmus+) ist hier, um die Kluft zwischen beruflicher Ausbildung und den realen industriellen Anforderungen zu überbrücken.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "Mar 2026 · Bilbao, Spain",
+        "date": "Mar 2026 \u00b7 Bilbao, Spanien",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
-        "badge": "PROJECT"
+        "badge": "PROJEKT"
       }
     ],
     "read_more": "Weiterlesen",
-    "details_soon": "Weitere Details folgen in Kürze"
+    "details_soon": "Weitere Details folgen in K\u00fcrze"
   },
   "resources": {
     "seo_title": "Ressourcen – Kostenlose KI & VET Lernmaterialien",
     "seo_description": "Laden Sie kostenlose Ressourcen und offene Lernmaterialien des Erasmus+ Projekts Learning Brains für VET-Trainer, Personalverantwortliche und Industriefachleute herunter.",
     "label": "Öffentliches Repository",
     "title": "Ressourcen",
-    "subtitle": "Greifen Sie auf die öffentlichen Dokumente, Leitfäden und technischen Vorlagen des Projekts zu, sobald diese im Laufe des Projektlebenszyklus veröffentlicht werden.",
+    "subtitle": "Greifen Sie auf die \u00f6ffentlichen Dokumente, Leitf\u00e4den und technischen Vorlagen des Projekts zu, sobald diese im Laufe des Projektlebenszyklus ver\u00f6ffentlicht werden.",
     "repo_title": "Dokumenten-Repository",
-    "repo_desc": "Das öffentliche Repository enthält PDF-Downloads von Projektbroschüren, Berichten und Methodenhandbüchern. Derzeit stehen keine Dateien zum öffentlichen Download bereit.",
-    "btn_brochure": "Projektbroschüre",
+    "repo_desc": "Das \u00f6ffentliche Repository enth\u00e4lt PDF-Downloads von Projektbrosch\u00fcreren, Berichten und Methodenhandb\u00fcchern. Derzeit stehen keine Dateien zum \u00f6ffentlichen Download bereit.",
+    "btn_brochure": "Projektbrosch\u00fcre",
     "btn_guide": "Implementierungsleitfaden"
   },
   "results": {
     "seo_title": "Projektergebnisse – KI-Lerntools für die Berufsbildung",
     "seo_description": "Entdecken Sie die intellektuellen Outputs von Learning Brains: ein europäischer Rahmen für industrielle Umschulung, KI-Coaching-Tools und ein Handbuch für Mentoring am Arbeitsplatz.",
     "title": "Projektergebnisse",
-    "subtitle": "Zugang zu den greifbaren Ergebnissen und intellektuellen Beiträgen des Learning Brains Projekts.",
-    "status_note": "Das Learning Brains Projekt befindet sich derzeit in der Implementierungsphase. Ergebnisse und Leistungen werden schrittweise veröffentlicht, sobald sie verfügbar sind und von der Europäischen Kommission genehmigt wurden.",
-    "available_title": "Verfügbare Ergebnisse",
-    "no_results": "Bisher wurden keine Ergebnisse veröffentlicht. Bitte schauen Sie später wieder vorbei.",
+    "subtitle": "Zugang zu den greifbaren Ergebnissen und intellektuellen Beitr\u00e4gen des Learning Brains Projekts.",
+    "status_note": "Das Learning Brains Projekt befindet sich derzeit in der Implementierungsphase. Ergebnisse und Leistungen werden schrittweise ver\u00f6ffentlicht, sobald sie verf\u00fcgbar sind und von der Europ\u00e4ischen Kommission genehmigt wurden.",
+    "available_title": "Verf\u00fcgbare Ergebnisse",
+    "no_results": "Bisher wurden keine Ergebnisse ver\u00f6ffentlicht. Bitte schauen Sie sp\u00e4ter wieder vorbei.",
     "planned_title": "Geplante Ergebnisse",
     "planned_list": [
-      "Europäischer Rahmen für industrielle Umschulung",
-      "Handbuch für Mentoring am Arbeitsplatz",
-      "KI-gestützter Lernpfad-Generator",
+      "Europ\u00e4ischer Rahmen f\u00fcr industrielle Umschulung",
+      "Handbuch f\u00fcr Mentoring am Arbeitsplatz",
+      "KI-gest\u00fctzter Lernpfad-Generator",
       "Transnationale Politikempfehlungen"
     ]
   },
@@ -239,54 +239,54 @@
     "seo_description": "Erfahren Sie mehr über die Verbreitungsstrategie und gesellschaftliche Wirkung von Learning Brains: Förderung von KI-Kompetenz und industrieller Umschulung in 5 europäischen Ländern.",
     "label": "Verbreitung & Auswirkungen",
     "title": "Projekteinfluss",
-    "subtitle": "Verständnis dafür, wie Learning Brains zur Modernisierung der europäischen Berufsbildung und zur industriellen Umschulung beiträgt.",
+    "subtitle": "Verst\u00e4ndnis daf\u00fcr, wie Learning Brains zur Modernisierung der europ\u00e4ischen Berufsbildung und zur industriellen Umschulung beitr\u00e4gt.",
     "strategy_title": "Verbreitungsstrategie",
-    "strategy_text": "Unsere Strategie konzentriert sich darauf, wichtige Interessengruppen in ganz Europa zu erreichen, um sicherzustellen, dass die Projektergebnisse weithin bekannt sind und genutzt werden. Wir nutzen einen Multi-Channel-Ansatz, einschließlich dieses digitalen Hubs, branchenspezifischer sozialer Medien, regionaler Industrieveranstaltungen und transnationaler Workshops.",
+    "strategy_text": "Unsere Strategie konzentriert sich darauf, wichtige Interessengruppen in ganz Europa zu erreichen, um sicherzustellen, dass die Projektergebnisse weithin bekannt sind und genutzt werden. Wir nutzen einen Multi-Channel-Ansatz, einschlie\u00dflich dieses digitalen Hubs, branchenspezifischer sozialer Medien, regionaler Industrieveranstaltungen und transnationaler Workshops.",
     "audience_title": "Zielgruppen",
     "audience_list": [
       "Industriearbeiter",
       "Berufsbildungszentren",
       "Fertigungs-KMU",
-      "Politische Entscheidungsträger",
+      "Politische Entscheidungstr\u00e4ger",
       "Sozialpartner",
       "Forschungsgemeinschaft"
     ],
     "impact_title": "Erwartete Auswirkungen",
-    "impact_text": "Das Learning Brains Projekt erwartet, zur Modernisierung der Berufsbildungssysteme beizutragen, indem validierte Tools für die industrielle Umschulung bereitgestellt werden. Die Auswirkungen werden in der verbesserten Anpassungsfähigkeit von Industriearbeitern an technologische Veränderungen und der gesteigerten Effizienz von Methoden für das Lernen am Arbeitsplatz beobachtet.",
-    "note": "Hinweis: Die Auswirkungen des Projekts werden derzeit nicht quantitativ beschrieben, da sich die Implementierung in einem frühen Stadium befindet."
+    "impact_text": "Das Learning Brains Projekt erwartet, zur Modernisierung der Berufsbildungssysteme beizutragen, indem validierte Tools f\u00fcr die industrielle Umschulung bereitgestellt werden. Die Auswirkungen werden in der verbesserten Anpassungsf\u00e4higkeit von Industriearbeitern an technologische Ver\u00e4nderungen und der gesteigerten Effizienz von Methoden f\u00fcr das Lernen am Arbeitsplatz beobachtet.",
+    "note": "Hinweis: Die Auswirkungen des Projekts werden derzeit nicht quantitativ beschrieben, da sich die Implementierung in einem fr\u00fchen Stadium befindet."
   },
   "contact": {
     "connect_us": "Verbinden Sie sich mit uns",
     "title": "Kontakt aufnehmen",
-    "description": "Haben Sie Fragen zum Learning Brains Projekt? Nehmen Sie über dieses Formular Kontakt mit dem Konsortium auf oder folgen Sie uns auf unseren sozialen Kanälen.",
+    "description": "Haben Sie Fragen zum Learning Brains Projekt? Nehmen Sie \u00fcber dieses Formular Kontakt mit dem Konsortium auf oder folgen Sie uns auf unseren sozialen Kan\u00e4len.",
     "email_inquiry": "E-Mail-Anfrage",
-    "official_channels": "Offizielle Kanäle",
+    "official_channels": "Offizielle Kan\u00e4le",
     "social_pending": "LinkedIn und Twitter werden in der Projektmitte aktiviert",
-    "disclaimer": "Dieses Projekt folgt strengen Sichtbarkeitsvorschriften von Erasmus+. Alle erhaltenen Informationen werden vertraulich behandelt und ausschließlich für Verbreitungszwecke verwendet.",
+    "disclaimer": "Dieses Projekt folgt strengen Sichtbarkeitsvorschriften von Erasmus+. Alle erhaltenen Informationen werden vertraulich behandelt und ausschlie\u00dflich f\u00fcr Verbreitungszwecke verwendet.",
     "form": {
-      "full_name": "Vollständiger Name",
+      "full_name": "Vollst\u00e4ndiger Name",
       "email": "E-Mail-Adresse",
       "message": "Ihre Nachricht",
       "send": "Nachricht senden",
-      "security": "Integration bereit • Sichere Kommunikation",
+      "security": "Integration bereit \u2022 Sichere Kommunikation",
       "placeholder_name": "Max Mustermann",
       "placeholder_email": "max@beispiel.de",
-      "placeholder_message": "Erzählen Sie uns von Ihrem Interesse am Projekt...",
+      "placeholder_message": "Erz\u00e4hlen Sie uns von Ihrem Interesse am Projekt...",
       "status_success_title": "Nachricht gesendet!",
-      "status_success_desc": "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
+      "status_success_desc": "Vielen Dank f\u00fcr Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
       "status_sending": "Senden...",
-      "status_error": "Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal.",
-      "destination_label": "Wen möchten Sie kontaktieren?",
+      "status_error": "Etwas ist schief gelaufen. Bitte versuchen Sie es sp\u00e4ter noch einmal.",
+      "destination_label": "Wen m\u00f6chten Sie kontaktieren?",
       "dest_general": "Allgemeine Informationen",
       "dest_es": "Spanische Partner (FVEM / Media Creativa)",
       "dest_it": "Italienischer Partner (SIAV)",
-      "dest_at": "Österreichischer Partner (Room466)",
+      "dest_at": "\u00d6sterreichischer Partner (Room466)",
       "dest_sk": "Slowakischer Partner (SBA)",
       "dest_pt": "Portugiesischer Partner (SPIN)"
     }
   },
   "footer": {
-    "description": "Integrierte Systeme für das Lernen am Arbeitsplatz zur industriellen Umschulung. Überbrückung der Kluft zwischen Theorie und industrieller Praxis.",
+    "description": "Integrierte Systeme f\u00fcr das Lernen am Arbeitsplatz zur industriellen Umschulung. \u00dcberbr\u00fcckung der Kluft zwischen Theorie und industrieller Praxis.",
     "section_project": "Projekt",
     "section_community": "Gemeinschaft",
     "section_legal": "Rechtliches",
@@ -300,61 +300,61 @@
     "seo_description": "Aktuelle Trends in Künstlicher Intelligenz für Wirtschaft, Industrie und Berufsbildung (VET). Kuratiert vom Team des Erasmus+ Projekts Learning Brains.",
     "label": "Aktuelles zu Industrie & KI",
     "title": "Einblicke in KI, Wirtschaft & Berufsbildung",
-    "subtitle": "Bleiben Sie informiert über die neuesten Trends in Künstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
+    "subtitle": "Bleiben Sie informiert \u00fcber die neuesten Trends in K\u00fcnstlicher Intelligenz, Unternehmensinnovation und Berufsbildungsmethoden.",
     "items_list": [
       {
-        "title": "Künstliche Intelligenz für Vertriebsteams: von der Chance zum Angebot",
-        "description": "Mehr Möglichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
+        "title": "K\u00fcnstliche Intelligenz f\u00fcr Vertriebsteams: von der Chance zum Angebot",
+        "description": "Mehr M\u00f6glichkeiten, bessere Angebote und eine bessere kommerzielle Koordination mit KI.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
         "title": "KI für Ingenieurwesen: mehr Effizienz, weniger repetitive Aufgaben",
         "description": "Automatisieren Sie technische Aufgaben und verbessern Sie die Produktivität des Ingenieurteams.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
         "title": "Fortgeschrittene KI und neue Werkzeuge: Vom Copiloten zu Agenten",
         "description": "Erkunden Sie das aktuelle KI-Ökosystem, von Copiloten bis hin zu intelligenten Agenten, und entdecken Sie, wie Sie Geschäftsprozesse automatisieren und optimieren können.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
         "title": "Kopilot im Unternehmen: Reale Produktivität in einer Microsoft-Umgebung",
         "description": "Produktivität mit Copilot in einem Industrieunternehmen, bei sicherer Nutzung des Werkzeugs.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
         "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
         "description": "Von der Absicht zur Aktion: Schlüsselentscheidungen zur Implementierung von KI mit echtem Einfluss",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
-        "category": "Training",
+        "category": "Schulung",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": "TRAINING/ES"
+        "badge": "SCHULUNG/ES"
       },
       {
-        "title": "SPRI-Zuschüsse: Künstliche Intelligenz 2026",
-        "description": "Wenden Sie künstliche Intelligenz an, um industrielle Prozesse zu transformieren und Wettbewerbsfähigkeit zu erlangen.",
+        "title": "SPRI-Zusch\u00fcsse: K\u00fcnstliche Intelligenz 2026",
+        "description": "Wenden Sie k\u00fcnstliche Intelligenz an, um industrielle Prozesse zu transformieren und Wettbewerbsf\u00e4higkeit zu erlangen.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
-        "category": "Research",
+        "category": "Forschung",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": "ALLGEMEIN/EU"
       }
     ]
   },
@@ -366,36 +366,36 @@
     "tab_cookies": "Cookies",
     "tab_transparency": "Transparenz",
     "privacy_controller_title": "Verantwortlicher",
-    "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, Koordinatorin des Projekts Learning Brains (Erasmus+ KA220-VET), ist der Verantwortliche für die über diese Website erhobenen personenbezogenen Daten.",
+    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, Koordinatorin des Projekts Learning Brains (Erasmus+ KA220-VET), ist der Verantwortliche f\u00fcr die \u00fcber diese Website erhobenen personenbezogenen Daten.",
     "privacy_data_title": "Erhobene Daten",
-    "privacy_data_text": "Wir erheben nur Daten, die der Nutzer freiwillig über das Kontaktformular bereitstellt: Name, E-Mail-Adresse und Nachricht. Daten von Minders oder besonders schützenswerte Daten werden nicht erhoben.",
+    "privacy_data_text": "Wir erheben nur Daten, die der Nutzer freiwillig \u00fcber das Kontaktformular bereitstellt: Name, E-Mail-Adresse und Nachricht. Daten von Minders oder besonders sch\u00fctzenswerte Daten werden nicht erhoben.",
     "privacy_purpose_title": "Zweck",
-    "privacy_purpose_text": "Die Daten werden ausschließlich zur Beantwortung von Projektanfragen und für Verbreitungsaktivitäten des Projekts verwendet. Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben.",
+    "privacy_purpose_text": "Die Daten werden ausschlie\u00dflich zur Beantwortung von Projektanfragen und f\u00fcr Verbreitungsaktivit\u00e4ten des Projekts verwendet. Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben.",
     "privacy_rights_title": "Ihre Rechte",
-    "privacy_rights_text": "Sie können Ihre Rechte auf Zugang, Berichtigung, Löschung und Widerspruch durch eine E-Mail an info@fvem.es ausüben. Wenn Sie der Meinung sind, dass die Verarbeitung nicht konform ist, können Sie eine Klage bei Ihrer nationalen Datenschutzbehörde einreichen.",
+    "privacy_rights_text": "Sie k\u00f6nnen Ihre Rechte auf Zugang, Berichtigung, L\u00f6schung und Widerspruch durch eine E-Mail an info@fvem.es aus\u00fcben. Wenn Sie der Meinung sind, dass die Verarbeitung nicht konform ist, k\u00f6nnen Sie eine Klage bei Ihrer nationalen Datenschutzbeh\u00f6rde einreichen.",
     "privacy_legal_basis_title": "Rechtsgrundlage der Verarbeitung",
-    "privacy_legal_basis_text": "Die Datenverarbeitung erfolgt auf der Grundlage des berechtigten Interesses des Konsortiums an der Durchführung und Verbreitung des Projekts (Art. 6 Abs. 1 lit. f DSGVO) und, auf ausdrücklichen Wunsch, auf der Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).",
+    "privacy_legal_basis_text": "Die Datenverarbeitung erfolgt auf der Grundlage des berechtigten Interesses des Konsortiums an der Durchf\u00fchrung und Verbreitung des Projekts (Art. 6 Abs. 1 lit. f DSGVO) und, auf ausdr\u00fccklichen Wunsch, auf der Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).",
     "privacy_retention_title": "Datenspeicherung",
-    "privacy_retention_text": "Die Daten werden für die Dauer des Projekts (bis 2027) gespeichert und anschließend für den Mindestzeitraum, der durch die anwendbaren Vorschriften oder die Prüfanforderungen der Europäischen Kommission vorgeschrieben ist (in der Regel 5 Jahre nach Projektabschluss).",
-    "privacy_minors_title": "Minderjährige",
-    "privacy_minors_text": "Diese Website richtet sich nicht an Personen unter 18 Jahren und wir erheben wissentlich keine personenbezogenen Daten von Minderjährigen. Wenn wir feststellen, dass Daten eines Minderjährigen ohne Einwilligung der Eltern erhoben wurden, werden wir diese umgehend löschen.",
+    "privacy_retention_text": "Die Daten werden f\u00fcr die Dauer des Projekts (bis 2027) gespeichert und anschlie\u00dfend f\u00fcr den Mindestzeitraum, der durch die anwendbaren Vorschriften oder die Pr\u00fcfanforderungen der Europ\u00e4ischen Kommission vorgeschrieben ist (in der Regel 5 Jahre nach Projektabschluss).",
+    "privacy_minors_title": "Minderj\u00e4hrige",
+    "privacy_minors_text": "Diese Website richtet sich nicht an Personen unter 18 Jahren und wir erheben wissentlich keine personenbezogenen Daten von Minderj\u00e4hrigen. Wenn wir feststellen, dass Daten eines Minderj\u00e4hrigen ohne Einwilligung der Eltern erhoben wurden, werden wir diese umgehend l\u00f6schen.",
     "cookies_what_title": "Was sind Cookies?",
-    "cookies_what_text": "Cookies sind kleine Dateien, die in Ihrem Browser gespeichert werden, um das Surferlebnis zu verbessern. Diese Website verwendet nur technisch notwendige Cookies, die für das Funktionieren der Website erforderlich sind.",
+    "cookies_what_text": "Cookies sind kleine Dateien, die in Ihrem Browser gespeichert werden, um das Surferlebnis zu verbessern. Diese Website verwendet nur technisch notwendige Cookies, die f\u00fcr das Funktionieren der Website erforderlich sind.",
     "cookies_types_title": "Verwendete Cookie-Typen",
-    "cookies_types_text": "Sitzungscookies: für die Navigation zwischen Seiten und die Sprachauswahl. Google Analytics: zur anonymen Messung des Datenverkehrs (wenn aktiviert). Es werden keine Werbe- oder Drittanbieter-Tracking-Cookies verwendet.",
+    "cookies_types_text": "Sitzungscookies: f\u00fcr die Navigation zwischen Seiten und die Sprachauswahl. Google Analytics: zur anonymen Messung des Datenverkehrs (wenn aktiviert). Es werden keine Werbe- oder Drittanbieter-Tracking-Cookies verwendet.",
     "cookies_manage_title": "Verwaltung von Cookies",
-    "cookies_manage_text": "Sie können Cookies über Ihre Browsereinstellungen deaktivieren oder löschen. Bitte beachten Sie, dass einige Website-Funktionen möglicherweise nicht mehr korrekt funktionieren, wenn Sie alle Cookies blockieren.",
+    "cookies_manage_text": "Sie k\u00f6nnen Cookies \u00fcber Ihre Browsereinstellungen deaktivieren oder l\u00f6schen. Bitte beachten Sie, dass einige Website-Funktionen m\u00f6glicherweise nicht mehr korrekt funktionieren, wenn Sie alle Cookies blockieren.",
     "cookies_analytics_title": "Google Analytics",
     "cookies_analytics_text": "Diese Website kann Google Analytics verwenden, um den Datenverkehr anonym zu messen. Analytische Cookies werden nur aktiviert, wenn Sie das Einwilligungsbanner akzeptieren. Wenn Sie ablehnen, werden keine personenbezogenen Daten gespeichert.",
     "trans_project_title": "Projektinformationen",
     "trans_programme": "Programm",
-    "trans_funder": "Förderer",
-    "trans_funder_value": "Europäische Kommission — EACEA",
+    "trans_funder": "F\u00f6rderer",
+    "trans_funder_value": "Europ\u00e4ische Kommission \u2014 EACEA",
     "trans_agency": "Nationale Agentur",
     "trans_coordinator": "Koordinator",
     "trans_duration": "Dauer",
     "trans_partners_label": "Partner",
-    "eu_disclaimer": "Kofinanziert vom Erasmus+-Programm der Europäischen Union. Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Diese Veröffentlichung gibt nur die Ansichten des Autors wieder; die Kommission kann nicht für die Verwendung der darin enthaltenen Informationen verantwortlich gemacht werden."
+    "eu_disclaimer": "Kofinanziert vom Erasmus+-Programm der Europ\u00e4ischen Union. Dieses Projekt wurde mit Unterst\u00fctzung der Europ\u00e4ischen Kommission finanziert. Diese Ver\u00f6ffentlichung gibt nur die Ansichten des Autors wieder; die Kommission kann nicht f\u00fcr die Verwendung der darin enthaltenen Informationen verantwortlich gemacht werden."
   },
   "cookies_banner": {
     "text": "Wir verwenden notwendige technische Cookies und, falls Sie zustimmen, Analyse-Cookies (Google Analytics) zur Verbesserung Ihrer Erfahrung.",
