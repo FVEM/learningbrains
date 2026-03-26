@@ -15,7 +15,7 @@
     "seo_description": "Learning Brains is an Erasmus+ KA220-VET project developing AI-powered work-based learning tools to reskill industrial workers in Europe. Discover our results, partners, and free resources.",
     "hero_badge": "ERASMUS+ COOPERATION PARTNERSHIP",
     "hero_name": "Learning Brains",
-    "hero_title": "Real Skills for the Real Industry",
+    "hero_title": "Real Skills for Real Industry",
     "hero_subtitle": "Integrated Work-Based Learning Systems for Industrial Reskilling",
     "cta_primary": "Learn More",
     "cta_secondary": "Our Partners",
@@ -62,8 +62,8 @@
     "metric_label_1": "Industry Engagement",
     "metric_label_2": "Training Efficiency",
     "metric_label_3": "Job Readiness",
-    "impact_cta": "See Full Impact",
-    "impact_point_1": "Improved Workforce Adaptability",
+    "impact_cta": "View Full Impact",
+    "impact_point_1": "Enhanced Workforce Adaptability",
     "impact_point_2": "Modernized VET Curricula",
     "impact_point_3": "Stronger Industry-Education Links",
     "chart_label_1": "Adaptability",
@@ -85,22 +85,23 @@
     "consortium_title": "Project Consortium",
     "latest_updates": {
       "title": "Latest Updates",
-      "description": "Milestones, events, and results from the Learning Brains project.",
+      "description": "Milestones, events, and project outcomes of the Learning Brains project.",
       "view_all": "View all news",
       "coming_soon": "Coming soon",
       "news_1": {
-        "badge": "MEETING",
+        "badge": "Meeting",
         "date": "Feb 2026 \u00b7 Bilbao, Spain",
         "title": "Project Kick-off Meeting",
         "description": "Partners met for the first time at FVEM headquarters to discuss the project timeline.",
-        "link": "Read on LinkedIn"
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
+        "image": "/images/news/bilbaokickoff.jpg"
       },
       "news_2": {
         "title": "Consortium Methodology",
         "description": "Development of the core framework for industrial reskilling and work-based learning."
       },
       "news_3": {
-        "title": "AI Tools Research",
+        "title": "AI Tool Research",
         "description": "Analysis of cutting-edge AI applications for vocational training environments."
       }
     },
@@ -112,21 +113,21 @@
     "seo_description": "Discover the goals, focus areas, and target groups of Learning Brains: an Erasmus+ KA220-VET project bridging artificial intelligence and vocational training in the European manufacturing sector.",
     "title": "About the Project",
     "background_title": "Background and Context",
-    "background_text": "The rapid evolution of industrial processes, driven by digitalization and automation, is creating a growing need for workforce reskilling across Europe. Traditional training approaches often fail to address the specific, contextual learning needs of workers who must adapt to new technologies and processes while remaining productive. Learning Brains addresses this challenge by developing integrated work-based learning systems that combine practical on-the-job experience with structured educational approaches.",
+    "background_text": "The rapid evolution of industrial processes, driven by digitalization and automation, is creating an increasing need for workforce reskilling across Europe. Traditional training approaches often fail to address the specific, contextual learning needs of workers who must adapt to new technologies and processes while remaining productive. Learning Brains addresses this challenge by developing integrated work-based learning systems that combine hands-on workplace experience with structured educational approaches.",
     "objectives_title": "Project Objectives",
     "objectives_list": [
       "Develop innovative work-based learning methodologies tailored for industrial reskilling",
-      "Create AI-driven tools to support personalized learning paths in work environments",
+      "Create AI-based tools to support personalized learning paths in work environments",
       "Foster cooperation between VET providers and industrial partners across Europe",
       "Produce open educational resources for industrial reskilling accessible to a wide audience",
-      "Contribute to the European policy dialogue on vocational training modernization"
+      "Contribute to the European policy dialogue on modernizing vocational education and training"
     ],
     "focus_title": "Focus Areas",
     "focus_list": [
       "Vocational Education and Training (VET)",
       "Work-based learning methodologies",
       "Industrial reskilling and upskilling",
-      "AI-driven learning support tools"
+      "AI-based learning support tools"
     ],
     "target_title": "Target Groups",
     "target_list": [
@@ -138,7 +139,7 @@
   },
   "partners": {
     "seo_title": "Partners – Learning Brains Erasmus+ Consortium",
-    "seo_description": "Meet the 6 European organizations from Spain, Italy, Slovakia, Austria, and Portugal collaborating on the Learning Brains Erasmus+ project about AI and industrial vocational training.",
+    "seo_description": "Meet the 6 European organizations from Spain, Italy, Slovakia, Austria, and Portugal collaborating on the Erasmus+ Learning Brains project about AI and industrial vocational training.",
     "label": "Transnational Collaboration",
     "title": "Our Partners",
     "subtitle": "Learning Brains is a transnational partnership bringing together industrial associations, business support agencies, and training experts from across Europe.",
@@ -156,16 +157,16 @@
     },
     "descriptions": [
       "A leading industrial federation representing over 800 companies in the metal sector, committed to innovation and training.",
-      "The service company of Confindustria Veneto, specialized in training, innovation, and organizational development for regional companies.",
+      "The service company of Confindustria Veneto, specializing in training, innovation, and organizational development for regional companies.",
       "Representing the interests of the Styrian business community and providing extensive educational and training support services.",
       "Experts in the design and implementation of innovative pedagogical methodologies and digital learning environments.",
-      "The oldest specialized non-profit organization for the support of small and medium-sized enterprises in Slovakia.",
-      "Dedicated to the development of human resources and innovative training solutions for the modern labor market."
+      "The oldest specialized non-profit organization for supporting small and medium-sized enterprises in Slovakia.",
+      "Dedicated to human resource development and innovative training solutions for the modern job market."
     ]
   },
   "news": {
     "seo_title": "Events and News – Learning Brains Erasmus+",
-    "seo_description": "Stay updated with the latest events, workshops, and transnational meetings of the Learning Brains Erasmus+ project on AI, VET, and industrial reskilling.",
+    "seo_description": "Stay updated on the latest events, workshops, and transnational meetings of the Erasmus+ Learning Brains project on AI, VET, and industrial reskilling.",
     "label": "Project Updates",
     "title": "Project Events",
     "subtitle": "Follow the progress of the Learning Brains project through our latest news, meetings, and dissemination activities.",
@@ -200,7 +201,7 @@
       {
         "title": "Learning Brains official website!",
         "category": "Event",
-        "description": "We are thrilled to announce the launch of the official website for Learning Brains! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
+        "description": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 \u00b7 Bilbao, Spain",
         "image": "/images/news/learning-brains-01.jpg",
@@ -208,14 +209,14 @@
       }
     ],
     "read_more": "Read More",
-    "details_soon": "More details soon"
+    "details_soon": "More details coming soon"
   },
   "resources": {
     "seo_title": "Resources – Free VET and AI Materials",
-    "seo_description": "Download free resources and open educational materials produced by the Learning Brains Erasmus+ project for VET trainers, HR managers, and European industrial professionals.",
+    "seo_description": "Download free resources and open educational materials produced by the Erasmus+ Learning Brains project for VET trainers, HR managers, and European industrial professionals.",
     "label": "Public Repository",
     "title": "Resources",
-    "subtitle": "Access the project's public documents, guides, and technical templates as they are released throughout the project lifecycle.",
+    "subtitle": "Access public project documents, guides, and technical templates as they are released throughout the project lifecycle.",
     "repo_title": "Document Repository",
     "repo_desc": "The public repository will contain PDF downloads of project brochures, reports, and methodological handbooks. Currently, no files are available for public download.",
     "btn_brochure": "Project Brochure",
@@ -223,7 +224,7 @@
   },
   "results": {
     "seo_title": "Project Results – AI Tools for Vocational Training",
-    "seo_description": "Explore the intellectual outputs of Learning Brains: an industrial reskilling European framework, AI coaching tools, and an on-the-job mentoring handbook for the manufacturing sector.",
+    "seo_description": "Explore the intellectual results of Learning Brains: a European industrial reskilling framework, AI coaching tools, and a work-based mentoring handbook for the manufacturing sector.",
     "title": "Project Results",
     "subtitle": "Access the tangible outputs and intellectual contributions of the Learning Brains project.",
     "status_note": "The Learning Brains project is currently in its implementation phase. Results and deliverables will be published progressively as they become available and are approved by the European Commission.",
@@ -231,20 +232,20 @@
     "no_results": "No results have been published yet. Please check back later.",
     "planned_title": "Planned Results",
     "planned_list": [
-      "Industrial Reskilling European Framework",
-      "Manual for On-the-Job Mentoring",
+      "European Framework for Industrial Reskilling",
+      "Handbook for Workplace Mentoring",
       "AI-Powered Learning Path Generator",
       "Transnational Policy Recommendations"
     ]
   },
   "impact": {
     "seo_title": "Dissemination and Impact – Learning Brains Erasmus+",
-    "seo_description": "Learn about the dissemination strategy and societal impact of Learning Brains: promoting AI literacy, worker adaptability, and industrial reskilling in 5 European countries.",
+    "seo_description": "Learn about the dissemination strategy and social impact of Learning Brains: promoting AI literacy, worker adaptability, and industrial reskilling across 5 European countries.",
     "label": "Dissemination & Impact",
     "title": "Project Influence",
-    "subtitle": "Understanding how Learning Brains contributes to the modernization of European vocational training and industrial reskilling.",
+    "subtitle": "Understanding how Learning Brains contributes to modernizing European vocational training and industrial reskilling.",
     "strategy_title": "Dissemination Strategy",
-    "strategy_text": "Our strategy focuses on reaching key stakeholders across Europe to ensure project results are widely known and utilized. We use a multi-channel approach including this digital hub, sectoral social media, regional industrial events, and transnational workshops.",
+    "strategy_text": "Our strategy focuses on reaching key stakeholders across Europe to ensure that project results are widely known and utilized. We use a multi-channel approach including this digital hub, sectoral social media, regional industrial events, and transnational workshops.",
     "audience_title": "Target Audiences",
     "audience_list": [
       "Industrial Workers",
@@ -255,17 +256,17 @@
       "Research Community"
     ],
     "impact_title": "Expected Impact",
-    "impact_text": "The Learning Brains project expects to contribute to the modernization of VET systems by providing validated tools for industrial reskilling. Impact will be observed in improved adaptability of industrial workers to technological changes and increased efficiency of work-based training methodologies.",
-    "note": "Note: Project impacts are currently described non-quantitatively as implementation is in its early stages."
+    "impact_text": "The Learning Brains project expects to contribute to the modernization of VET systems by providing validated tools for industrial reskilling. Impact will be observed in enhanced adaptability of industrial workers to technological changes and increased efficiency of workplace training methodologies.",
+    "note": "Note: Project impacts are currently described non-quantitatively as implementation is in its initial phases."
   },
   "contact": {
-    "connect_us": "Connect with us",
+    "connect_us": "Connect with Us",
     "title": "Get in Touch",
-    "description": "Have questions about the Learning Brains project? Reach out to the consortium through this form or follow us on our social channels.",
+    "description": "Have any questions about the Learning Brains project? Reach out to the consortium through this form or follow us on our social channels.",
     "email_inquiry": "Email Inquiry",
     "official_channels": "Official Channels",
     "social_pending": "LinkedIn and Twitter enabled mid-project",
-    "disclaimer": "This project follows strict Erasmus+ visibility mandates. All information received is treated confidentially and used only for dissemination purposes.",
+    "disclaimer": "This project follows strict Erasmus+ visibility mandates. All information received is handled confidentially and used only for dissemination purposes.",
     "form": {
       "full_name": "Full Name",
       "email": "Email Address",
@@ -276,7 +277,7 @@
       "placeholder_email": "john@example.com",
       "placeholder_message": "Tell us about your interest in the project...",
       "status_success_title": "Message Sent!",
-      "status_success_desc": "Thank you for contacting us. We will get back to you soon.",
+      "status_success_desc": "Thank you for reaching out to us. We will get back to you soon.",
       "status_sending": "Sending...",
       "status_error": "Something went wrong. Please try again later.",
       "destination_label": "Who would you like to contact?",
@@ -316,7 +317,7 @@
       },
       {
         "title": "AI for Engineering: more efficiency, fewer repetitive tasks",
-        "description": "Automate technical tasks and improve engineering team productivity.",
+        "description": "Automate technical tasks and increase engineering team productivity.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -333,8 +334,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot in the company: real productivity in a Microsoft environment.",
-        "description": "Productivity with the Copilot in an industrial company, with safe use of the tool.",
+        "title": "Copilot in the company: real productivity in a Microsoft environment",
+        "description": "Productivity with Copilot in an industrial company, with secure use of the tool.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -342,7 +343,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "How to design the AI ​​roadmap in your organization",
+        "title": "How to design the AI roadmap in your organization",
         "description": "From intention to action: key decisions to implement AI with real impact.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
@@ -352,7 +353,7 @@
       },
       {
         "title": "SPRI Grants: Artificial Intelligence 2026",
-        "description": "Applying Artificial Intelligence to transform industrial processes and gain competitiveness.",
+        "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
         "date": "2026-03-14",
@@ -362,34 +363,34 @@
     ]
   },
   "legal": {
-    "seo_title": "Legal Notice – Privacy and Cookies | Learning Brains",
-    "seo_description": "Privacy policy, cookies information, and transparency notice of the Learning Brains Erasmus+ project website.",
+    "seo_title": "Legal Notice – Privacy & Cookies | Learning Brains",
+    "seo_description": "Privacy policy, cookie information, and transparency notice of the Learning Brains Erasmus+ project website.",
     "title": "Legal",
     "tab_privacy": "Privacy",
     "tab_cookies": "Cookies",
     "tab_transparency": "Transparency",
     "privacy_controller_title": "Data Controller",
-    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as the controller of personal data collected through this website.",
-    "privacy_data_title": "Data Collected",
-    "privacy_data_text": "We only collect data that the user voluntarily provides through the contact form: name, email address, and message. No data from minors or sensitive data is collected.",
+    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as the data controller for personal data collected through this website.",
+    "privacy_data_title": "Collected Data",
+    "privacy_data_text": "We only collect data that you voluntarily provide through the contact form: name, email address, and message. No data from minors or sensitive data are collected.",
     "privacy_purpose_title": "Purpose",
-    "privacy_purpose_text": "The data is used exclusively to answer project inquiries and for project dissemination activities. Data is not shared with third parties unless required by law.",
+    "privacy_purpose_text": "Data is used exclusively to respond to project inquiries and for project dissemination activities. Data is not shared with third parties unless required by law.",
     "privacy_rights_title": "Your Rights",
-    "privacy_rights_text": "You can exercise your rights of access, rectification, erasure, and objection by writing to info@fvem.es. If you believe the processing is not compliant, you can file a complaint with the national data protection authority.",
+    "privacy_rights_text": "You can exercise your rights of access, rectification, erasure, and objection by writing to info@fvem.es. If you consider that the processing is not compliant, you can file a complaint with your national data protection authority.",
     "privacy_legal_basis_title": "Legal Basis for Processing",
-    "privacy_legal_basis_text": "Data processing is based on the legitimate interest of the consortium for project management and disclosure (Art. 6(1)(f) GDPR) and, when expressly requested, on your consent (Art. 6(1)(a) GDPR).",
+    "privacy_legal_basis_text": "Data processing is based on the legitimate interest of the consortium for the management and dissemination of the project (Art. 6.1.f GDPR) and on your consent when requested (Art. 6.1.a GDPR).",
     "privacy_retention_title": "Data Retention",
-    "privacy_retention_text": "Data will be kept during the life of the project (until 2027) and subsequently for the minimum period required by applicable legislation or the auditing requirements of the European Commission (usually 5 years after project completion).",
+    "privacy_retention_text": "Data will be kept for the duration of the project (until 2027) and subsequently for the minimum period required by applicable law or audit requirements of the European Commission (usually 5 years after project completion).",
     "privacy_minors_title": "Minors",
-    "privacy_minors_text": "This website is not intended for children under 18 and we do not knowingly collect personal data from minors. If we detect that a minor's data was collected without parental consent, we delete it immediately.",
+    "privacy_minors_text": "This website is not intended for persons under 18 years of age and we do not knowingly collect personal data from minors. If we detect that data from a minor has been collected without parental consent, we will delete it immediately.",
     "cookies_what_title": "What are cookies?",
-    "cookies_what_text": "Cookies are small files stored in your browser to improve the browsing experience. This site use only technical cookies necessary for the operation of the site.",
+    "cookies_what_text": "Cookies are small files stored in your browser to improve the browsing experience. This site uses only technical cookies necessary for the operation of the site.",
     "cookies_types_title": "Types of cookies used",
     "cookies_types_text": "Session cookies: for navigation between pages and the language selector. Google Analytics: to measure traffic anonymously (if enabled). No advertising or third-party tracking cookies are used.",
     "cookies_manage_title": "How to manage cookies",
-    "cookies_manage_text": "You can disable or delete cookies in your browser settings. Please note that some site functions may stop working correctly if you block all cookies.",
+    "cookies_manage_text": "You can disable or delete cookies in your browser settings. Please note that some website functions may stop working correctly if you block all cookies.",
     "cookies_analytics_title": "Google Analytics",
-    "cookies_analytics_text": "This site can use Google Analytics to measure traffic anonymously. Analytical cookies are only activated if you accept the consent banner. If you decline, no personal data is stored.",
+    "cookies_analytics_text": "This site may use Google Analytics to measure traffic anonymously. Analytical cookies are only activated if you accept the consent banner. If you decline, no personal data is saved.",
     "trans_project_title": "Project Information",
     "trans_programme": "Programme",
     "trans_funder": "Funder",
