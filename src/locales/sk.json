@@ -86,14 +86,12 @@
       "view_all": "Zobrazi\u0165 v\u0161etky novinky",
       "coming_soon": "U\u017e \u010doskoro",
       "news_1": {
-        "badge": "Stretnutie",
+        "badge": "STRETNUTIE",
         "date": "Feb 2026 \u00b7 Bilbao, \u0160panielsko",
         "title": "Zahajovacie stretnutie projektu v Bilbau.",
-        "description": "Konzorcium Learning Brains sa prv\u00fdkr\u00e1t stretlo v Bilbau na spustenie aktiv\u00edt projektu. Partneri diskutovali o pl\u00e1ne \u010dinnost\u00ed na prv\u00fd rok, vr\u00e1tane nastavenia digit\u00e1lnej platformy a po\u010diato\u010dn\u00e9ho v\u00fdskumu potrieb priemyseln\u00e9ho pre\u0161kolovania.",
+        "description": "Konzorcium Learning Brains sa prv\u00fdkr\u00e1t stretlo v Bilbau na spustenie aktiv\u00edt projektu. Partneri diskutovali o pl\u00e1ne \u010dinnost\u00ed na prv\u00fd rok.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 \u00b7 Bilbao, \u0160panielsko",
-        "image": "/News/BilbaoKickoff.jpg",
-        "badge": "STRETNUTIE"
+        "image": "/images/news/bilbaokickoff.jpg"
       },
       "news_2": {
         "title": "Metodika Konzorcia",
@@ -176,7 +174,7 @@
         "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností na prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselného preškolovania.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 \u00b7 Bilbao, \u0160panielsko",
-        "image": "/News/BilbaoKickoff.jpg",
+        "image": "/images/news/bilbaokickoff.jpg",
         "badge": "STRETNUTIE"
       },
       {
