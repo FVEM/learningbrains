@@ -173,7 +173,7 @@
         "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
-        "image": "",
+        "image": "/News/BilbaoKickoff.jpg",
         "badge": "MEETING"
       },
       {
@@ -268,7 +268,7 @@
       "email": "Email Address",
       "message": "Your Message",
       "send": "Send Message",
-      "security": "Integration ready • Secure communication",
+      "security": "Integration ready \u2022 Secure communication",
       "placeholder_name": "John Doe",
       "placeholder_email": "john@example.com",
       "placeholder_message": "Tell us about your interest in the project...",
@@ -296,7 +296,7 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
-    "seo_title": "AI News – Artificial Intelligence in Business & VET",
+    "seo_title": "AI News \u2013 Artificial Intelligence in Business & VET",
     "seo_description": "Latest trends in Artificial Intelligence for business, industry and vocational training (VET). Curated by the Learning Brains Erasmus+ project team.",
     "label": "Industry & AI Updates",
     "title": "AI, Business & Training News",
@@ -359,14 +359,14 @@
     ]
   },
   "legal": {
-    "seo_title": "Legal Notice – Privacy & Cookies | Learning Brains",
+    "seo_title": "Legal Notice \u2013 Privacy & Cookies | Learning Brains",
     "seo_description": "Privacy policy, cookies information and transparency notice for the Learning Brains Erasmus+ project website.",
     "title": "Legal",
     "tab_privacy": "Privacy",
     "tab_cookies": "Cookies",
     "tab_transparency": "Transparency",
     "privacy_controller_title": "Data Controller",
-    "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as data controller for the personal data collected through this website.",
+    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as data controller for the personal data collected through this website.",
     "privacy_data_title": "Data Collected",
     "privacy_data_text": "We only collect data voluntarily provided by the user through the contact form: name, email address and message. No data from minors or sensitive data is collected.",
     "privacy_purpose_title": "Purpose",
@@ -390,7 +390,7 @@
     "trans_project_title": "Project Information",
     "trans_programme": "Programme",
     "trans_funder": "Funder",
-    "trans_funder_value": "European Commission — EACEA",
+    "trans_funder_value": "European Commission \u2014 EACEA",
     "trans_agency": "National Agency",
     "trans_coordinator": "Coordinator",
     "trans_duration": "Duration",
