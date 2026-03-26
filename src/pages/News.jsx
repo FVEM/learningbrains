@@ -5,26 +5,6 @@ import SEOHead from '../components/SEOHead';
 const News = () => {
     const { t } = useTranslation();
 
-    const newsItems = [
-        {
-            date: "February 2026",
-            location: "Bilbao, Spain",
-            image: "News/BilbaoKickoff.jpg"
-        },
-        {
-            date: "April 2026",
-            location: "Online",
-            image: "",
-            icon: Calendar
-        },
-        {
-            date: "June 2026",
-            location: "Venice, Italy",
-            image: "",
-            icon: Users
-        }
-    ];
-
     const translatedNewsItems = t('news.items_list', { returnObjects: true });
 
     return (
@@ -47,14 +27,13 @@ const News = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up delay-100">
-                    {translatedNewsItems.map((item, idx) => {
-                        const staticData = newsItems[idx] || {};
-                        const NewsIcon = staticData.icon || Newspaper;
+                    {Array.isArray(translatedNewsItems) && translatedNewsItems.map((item, idx) => {
+                        const NewsIcon = idx === 1 ? Calendar : (idx === 2 ? Users : Newspaper);
                         
-                        // Prioritize data from JSON (Excel) over hardcoded staticData
-                        const displayImage = item.image || staticData.image;
-                        const displayDate = item.date || staticData.date;
-                        const displayLocation = item.location || staticData.location; // Excel doesn't have this yet, but ready for it
+                        // Prioritize data from JSON (Excel)
+                        const displayImage = item.image;
+                        const displayDate = item.date;
+                        const displayLocation = item.location;
                         const displayBadge = item.badge || item.category || "EVENT";
 
                         let safeImage = displayImage;
@@ -77,7 +56,6 @@ const News = () => {
                                             onError={(e) => {
                                                 e.target.style.display = 'none';
                                                 e.target.parentElement.classList.add('flex', 'items-center', 'justify-center', 'bg-slate-100');
-                                                // We could dynamically insert an icon here if we wanted
                                             }}
                                         />
                                     ) : (
