@@ -2,12 +2,11 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-const SEOHead = ({ title, description, path = '' }) => {
+const SEOHead = ({ title, description, keywords, path = '' }) => {
     const { i18n } = useTranslation();
     const location = useLocation();
 
-    // Default site URL - change this to your custom domain in production
-    const siteUrl = 'https://learningbrains.vercel.app';
+    const siteUrl = 'https://learningbrains.eu';
 
     const languages = ['en', 'es', 'it', 'sk', 'de', 'pt'];
     const currentLang = i18n.language;
@@ -19,10 +18,13 @@ const SEOHead = ({ title, description, path = '' }) => {
     // Construct canonical URL
     const canonicalUrl = `${siteUrl}/${currentLang}${cleanPath}`;
 
+    const defaultKeywords = 'Learning Brains, Erasmus+, VET, vocational education training, AI, artificial intelligence, on-the-job learning, industrial reskilling, SMEs, Europe, upskilling';
+
     return (
         <Helmet>
             <title>{title ? `${title} | Learning Brains` : 'Learning Brains - Industrial Reskilling'}</title>
             <meta name="description" content={description || "Integrated On-the-job Learning Systems for Industrial Reskilling. Bridging the gap between theory and industrial practice."} />
+            <meta name="keywords" content={keywords || defaultKeywords} />
 
             <link rel="canonical" href={canonicalUrl} />
 
@@ -36,7 +38,7 @@ const SEOHead = ({ title, description, path = '' }) => {
                 />
             ))}
 
-            {/* x-default points to English usually, or a root selector page */}
+            {/* x-default points to English */}
             <link rel="alternate" hrefLang="x-default" href={`${siteUrl}/en${cleanPath}`} />
 
             <meta property="og:locale" content={currentLang} />

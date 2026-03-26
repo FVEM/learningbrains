@@ -11,8 +11,8 @@
     "contact": "Contacto"
   },
   "home": {
-    "seo_title": "Learning Brains - IA para FP",
-    "seo_description": "Revolucionando la formación profesional en el sector industrial mediante el aprendizaje en el trabajo y la IA.",
+    "seo_title": "Learning Brains – Formación Industrial con IA | Erasmus+",
+    "seo_description": "Learning Brains es un proyecto Erasmus+ KA220-VET que desarrolla herramientas de aprendizaje en el trabajo con IA para recualificar trabajadores industriales en Europa. Conoce nuestros resultados, socios y recursos gratuitos.",
     "hero_badge": "ASOCIACIÓN DE COOPERACIÓN ERASMUS+",
     "hero_name": "Learning Brains",
     "hero_title": "Habilidades Reales para la Industria Real",
@@ -105,8 +105,8 @@
     "chatbot_greeting": "¡Hola! Soy el asistente de IA de Learning Brains. ¿Cómo puedo ayudarte hoy con el proyecto o con la IA en el entorno laboral?"
   },
   "about": {
-    "seo_title": "Sobre el Proyecto",
-    "seo_description": "Conoce los objetivos y metas del proyecto Learning Brains.",
+    "seo_title": "Sobre el Proyecto – Learning Brains Erasmus+",
+    "seo_description": "Descubre los objetivos, áreas de enfoque y grupos objetivo de Learning Brains: un proyecto Erasmus+ KA220-VET que une inteligencia artificial y formación profesional en la industria manufacturera europea.",
     "title": "Sobre el Proyecto",
     "background_title": "Antecedentes y Contexto",
     "background_text": "La rápida evolución de los procesos industriales, impulsada por la digitalización y la automatización, está creando una creciente necesidad de recualificación de la fuerza laboral en toda Europa. Los enfoques de formación tradicionales a menudo no logran abordar las necesidades de aprendizaje específicas y contextuales de los trabajadores que deben adaptarse a nuevas tecnologías y procesos mientras mantienen su productividad. Learning Brains aborda este desafío desarrollando sistemas integrados de aprendizaje en el trabajo que combinan experiencia práctica laboral con enfoques educativos estructurados.",
@@ -134,8 +134,8 @@
     ]
   },
   "partners": {
-    "seo_title": "Nuestros Socios",
-    "seo_description": "Conoce a los socios del consorcio del proyecto Learning Brains.",
+    "seo_title": "Socios – Consorcio Erasmus+ Learning Brains",
+    "seo_description": "Conoce a las 6 organizaciones europeas de España, Italia, Eslovaquia, Austria y Portugal que colaboran en el proyecto Erasmus+ Learning Brains sobre IA y formación profesional industrial.",
     "label": "Colaboración Transnacional",
     "title": "Nuestros Socios",
     "subtitle": "Learning Brains es una asociación transnacional que reúne a asociaciones industriales, agencias de apoyo empresarial y expertos en formación de toda Europa.",
@@ -161,8 +161,8 @@
     ]
   },
   "news": {
-    "seo_title": "Eventos de Proyecto",
-    "seo_description": "Últimas actualizaciones y eventos de Learning Brains.",
+    "seo_title": "Eventos y Noticias – Learning Brains Erasmus+",
+    "seo_description": "Mantente al día con los últimos eventos, talleres y reuniones transnacionales del proyecto Erasmus+ Learning Brains sobre IA, FP y recualificación industrial.",
     "label": "Actualizaciones del Proyecto",
     "title": "Eventos de Proyecto",
     "subtitle": "Sigue el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones y actividades de difusión.",
@@ -186,7 +186,7 @@
         "badge": "MEETING"
       },
       {
-        "title": "Primera Reunión Transnacional del Proyecto",
+        "title": "Primera reunión transnacional del proyecto.",
         "category": "Meeting",
         "description": "La segunda reunión de socios será organizada por nuestros socios italianos. La agenda incluye la revisión del primer borrador del marco de recualificación y la planificación de la fase de pruebas piloto.",
         "link": "",
@@ -208,8 +208,8 @@
     "details_soon": "Más detalles próximamente"
   },
   "resources": {
-    "seo_title": "Recursos",
-    "seo_description": "Repositorio público de documentos de Learning Brains.",
+    "seo_title": "Recursos – Materiales Gratuitos de FP e IA",
+    "seo_description": "Descarga recursos gratuitos y materiales educativos abiertos producidos por el proyecto Erasmus+ Learning Brains para formadores de FP, responsables de RRHH y profesionales industriales.",
     "label": "Repositorio Público",
     "title": "Recursos",
     "subtitle": "Accede a los documentos públicos del proyecto, guías y plantillas técnicas a medida que se publiquen a lo largo del ciclo de vida del proyecto.",
@@ -219,8 +219,8 @@
     "btn_guide": "Guía de Implementación"
   },
   "results": {
-    "seo_title": "Resultados del Proyecto",
-    "seo_description": "Resultados y productos del proyecto Learning Brains.",
+    "seo_title": "Resultados del Proyecto – Herramientas de IA para FP",
+    "seo_description": "Explora los resultados intelectuales de Learning Brains: un marco europeo de recualificación industrial, herramientas de coaching con IA y un manual de mentoría en el trabajo para el sector manufacturero.",
     "title": "Resultados del Proyecto",
     "subtitle": "Accede a los resultados tangibles y contribuciones intelectuales del proyecto Learning Brains.",
     "status_note": "El proyecto Learning Brains está actualmente en su fase de implementación. Los resultados y entregables se publicarán progresivamente a medida que estén disponibles y sean aprobados por la Comisión Europea.",
@@ -235,8 +235,8 @@
     ]
   },
   "impact": {
-    "seo_title": "Influencia e Impacto del Proyecto",
-    "seo_description": "Comprendiendo cómo Learning Brains contribuye a la formación profesional y la recualificación industrial.",
+    "seo_title": "Difusión e Impacto – Learning Brains Erasmus+",
+    "seo_description": "Conoce la estrategia de difusión y el impacto social de Learning Brains: promoviendo la alfabetización en IA, la adaptabilidad laboral y la recualificación industrial en 5 países europeos.",
     "label": "Difusión e Impacto",
     "title": "Influencia del Proyecto",
     "subtitle": "Comprendiendo cómo Learning Brains contribuye a la modernización de la formación profesional europea y la recualificación industrial.",
@@ -296,8 +296,8 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
-    "seo_title": "Noticias sobre IA, Empresa y Formación",
-    "seo_description": "Actualidad sobre Inteligencia Artificial, innovación empresarial y formación profesional relevante para el sector industrial.",
+    "seo_title": "Noticias IA – Inteligencia Artificial en Empresa y FP",
+    "seo_description": "Últimas tendencias en Inteligencia Artificial para empresas, industria y formación profesional (FP). Selección del equipo del proyecto Erasmus+ Learning Brains.",
     "label": "Actualidad sobre Industria e IA",
     "title": "Noticias sobre IA, Empresa y Formación",
     "subtitle": "Manténgase informado sobre las últimas tendencias en Inteligencia Artificial, innovación empresarial y metodologías de formación profesional relevantes para los objetivos de nuestro proyecto.",
@@ -312,7 +312,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas.",
+        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
         "description": "Automatizar tareas técnicas y mejorar la productividad del equipo de ingeniería.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
@@ -321,7 +321,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes.",
+        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes",
         "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
@@ -330,7 +330,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copiloto en la empresa: productividad real en un entorno de Microsoft",
+        "title": "Copiloto en la empresa: productividad real en un entorno de Microsoft.",
         "description": "Productividad con Copilot en una empresa industrial, con un uso seguro de la herramienta.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
@@ -340,7 +340,7 @@
       },
       {
         "title": "Cómo diseñar la hoja de ruta de inteligencia artificial en su organización.",
-        "description": "De la intención a la acción: decisiones clave para implementar la IA con un impacto real.",
+        "description": "De la intención a la acción: decisiones clave para implementar la inteligencia artificial con un impacto real.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -359,8 +359,8 @@
     ]
   },
   "legal": {
-    "seo_title": "Legal",
-    "seo_description": "Política de privacidad, cookies y transparencia del proyecto Learning Brains.",
+    "seo_title": "Aviso Legal – Privacidad y Cookies | Learning Brains",
+    "seo_description": "Política de privacidad, información sobre cookies y aviso de transparencia del sitio web del proyecto Erasmus+ Learning Brains.",
     "title": "Legal",
     "tab_privacy": "Privacidad",
     "tab_cookies": "Cookies",

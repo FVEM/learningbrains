@@ -178,10 +178,11 @@ export default function Analytics() {
                 {!isLoading && data && !errorData && (
                     <div className="space-y-6">
                         {/* KPI Cards Row */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6">
                             <StatCard title="Total Page Views" value={data.kpis.views.toLocaleString()} icon={<MousePointerClick className="w-6 h-6" />} color="text-brand-blue" bgColor="bg-brand-blue/10" />
                             <StatCard title="Active Users" value={data.kpis.users.toLocaleString()} icon={<Users className="w-6 h-6" />} color="text-brand-red" bgColor="bg-brand-red/10" />
                             <StatCard title="New Users" value={data.kpis.newUsers.toLocaleString()} icon={<UserPlus className="w-6 h-6" />} color="text-brand-orange" bgColor="bg-brand-orange/10" />
+                            <StatCard title="Chatbot Uses" value={data.chatInteractions.toLocaleString()} icon={<Zap className="w-6 h-6" />} color="text-emerald-600" bgColor="bg-emerald-100" />
                             <StatCard title="Engagement Rate" value={`${data.kpis.engagementRate}%`} icon={<TrendingUp className="w-6 h-6" />} color="text-green-600" bgColor="bg-green-100" />
                             <StatCard title="Avg. Engagement Time" value={`${data.kpis.avgEngagement}s`} icon={<Clock className="w-6 h-6" />} color="text-purple-600" bgColor="bg-purple-100" />
                         </div>
@@ -243,6 +244,50 @@ export default function Analytics() {
                                 </div>
                             </div>
 
+                            {/* Languages */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
+                                <h3 className="text-lg font-bold text-neutral-800 mb-2">Usage by Language</h3>
+                                <div className="h-[250px] flex items-center justify-center">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <PieChart>
+                                            <Pie data={data.languages} cx="50%" cy="50%" innerRadius={60} outerRadius={85} paddingAngle={4} dataKey="value">
+                                                {data.languages.map((entry, index) => (
+                                                    <Cell key={`cell-lang-${index}`} fill={COLORS[(index + 2) % COLORS.length]} />
+                                                ))}
+                                            </Pie>
+                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                                            <Legend iconType="circle" />
+                                        </PieChart>
+                                    </ResponsiveContainer>
+                                </div>
+                            </div>
+
+                            {/* Consoritum Countries */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
+                                <div className="flex justify-between items-start mb-4">
+                                    <h3 className="text-lg font-bold text-neutral-800">Consortium Impact</h3>
+                                    <span className="text-[10px] font-bold bg-brand-primary/10 text-brand-primary px-2 py-0.5 rounded-full uppercase tracking-wider">Project Partners</span>
+                                </div>
+                                <div className="h-[250px]">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <BarChart data={data.consortiumCountries} layout="vertical" margin={{ left: 25, right: 30 }}>
+                                            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#E5E7EB" />
+                                            <XAxis type="number" hide />
+                                            <YAxis dataKey="country" type="category" axisLine={false} tickLine={false} tick={{ fill: '#4B5563', fontSize: 13, fontWeight: 500 }} width={80} />
+                                            <Tooltip cursor={{ fill: '#F3F4F6' }} contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                                            <Bar dataKey="users" name="Active Users" fill={BRAND_RED} radius={[0, 4, 4, 0]} barSize={20}>
+                                                {data.consortiumCountries.map((entry, index) => (
+                                                    <Cell key={`cell-cons-${index}`} fill={entry.users > 0 ? BRAND_RED : BRAND_GRAY + '40'} />
+                                                ))}
+                                            </Bar>
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* OS & Global Countries Row */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* OS */}
                             <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
                                 <h3 className="text-lg font-bold text-neutral-800 mb-2">Operating Systems</h3>
@@ -263,7 +308,7 @@ export default function Analytics() {
 
                             {/* Countries */}
                             <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-4">Top Countries</h3>
+                                <h3 className="text-lg font-bold text-neutral-800 mb-4">Global Reach (Top 5)</h3>
                                 <div className="h-[250px]">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <BarChart data={data.countries} layout="vertical" margin={{ left: 20 }}>

@@ -99,6 +99,16 @@ ${siteContextString}
         if (!input.trim() || isLoading) return;
 
         const userMessage = { role: 'user', content: input };
+        
+        // Google Analytics Event Tracking
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'chat_message', {
+                'event_category': 'engagement',
+                'event_label': 'Chatbot Interaction',
+                'value': 1
+            });
+        }
+
         // Use functional state update to ensure we have the latest messages
         setMessages(prev => [...prev, userMessage]);
         setInput('');

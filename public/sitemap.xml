@@ -1,627 +1,627 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://learningbrains.vercel.app/en</loc>
+    <loc>https://learningbrains.eu/en</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/en/about</loc>
+    <loc>https://learningbrains.eu/en/about</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/about" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/about" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/about" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/about" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/about" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/about" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/en/results</loc>
+    <loc>https://learningbrains.eu/en/results</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/results" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/results" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/results" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/results" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/results" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/results" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/results" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/results" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/results" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/results" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/results" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/results" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/results" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/en/partners</loc>
+    <loc>https://learningbrains.eu/en/partners</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/partners" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/partners" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/partners" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/partners" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/partners" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/partners" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/partners" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/partners" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/partners" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/partners" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/partners" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/partners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/partners" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/en/news</loc>
+    <loc>https://learningbrains.eu/en/news</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/news" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/news" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/news" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/news" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/news" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/news" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/en/resources</loc>
+    <loc>https://learningbrains.eu/en/resources</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/resources" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/resources" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/resources" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/resources" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/resources" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/resources" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/resources" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/resources" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/resources" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/resources" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/resources" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/en/impact</loc>
+    <loc>https://learningbrains.eu/en/impact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/impact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/impact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/impact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/impact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/impact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/impact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/impact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/impact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/impact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/impact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/impact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/impact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/impact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/en/contact</loc>
+    <loc>https://learningbrains.eu/en/contact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/contact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/contact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/contact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/contact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/contact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es</loc>
+    <loc>https://learningbrains.eu/es</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es/about</loc>
+    <loc>https://learningbrains.eu/es/about</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/about" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/about" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/about" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/about" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/about" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/about" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es/results</loc>
+    <loc>https://learningbrains.eu/es/results</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/results" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/results" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/results" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/results" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/results" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/results" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/results" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/results" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/results" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/results" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/results" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/results" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/results" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es/partners</loc>
+    <loc>https://learningbrains.eu/es/partners</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/partners" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/partners" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/partners" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/partners" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/partners" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/partners" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/partners" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/partners" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/partners" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/partners" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/partners" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/partners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/partners" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es/news</loc>
+    <loc>https://learningbrains.eu/es/news</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/news" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/news" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/news" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/news" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/news" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/news" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es/resources</loc>
+    <loc>https://learningbrains.eu/es/resources</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/resources" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/resources" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/resources" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/resources" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/resources" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/resources" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/resources" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/resources" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/resources" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/resources" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/resources" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es/impact</loc>
+    <loc>https://learningbrains.eu/es/impact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/impact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/impact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/impact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/impact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/impact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/impact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/impact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/impact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/impact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/impact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/impact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/impact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/impact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/es/contact</loc>
+    <loc>https://learningbrains.eu/es/contact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/contact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/contact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/contact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/contact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/contact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it</loc>
+    <loc>https://learningbrains.eu/it</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it/about</loc>
+    <loc>https://learningbrains.eu/it/about</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/about" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/about" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/about" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/about" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/about" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/about" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it/results</loc>
+    <loc>https://learningbrains.eu/it/results</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/results" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/results" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/results" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/results" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/results" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/results" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/results" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/results" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/results" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/results" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/results" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/results" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/results" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it/partners</loc>
+    <loc>https://learningbrains.eu/it/partners</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/partners" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/partners" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/partners" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/partners" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/partners" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/partners" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/partners" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/partners" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/partners" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/partners" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/partners" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/partners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/partners" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it/news</loc>
+    <loc>https://learningbrains.eu/it/news</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/news" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/news" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/news" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/news" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/news" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/news" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it/resources</loc>
+    <loc>https://learningbrains.eu/it/resources</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/resources" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/resources" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/resources" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/resources" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/resources" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/resources" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/resources" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/resources" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/resources" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/resources" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/resources" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it/impact</loc>
+    <loc>https://learningbrains.eu/it/impact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/impact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/impact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/impact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/impact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/impact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/impact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/impact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/impact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/impact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/impact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/impact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/impact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/impact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/it/contact</loc>
+    <loc>https://learningbrains.eu/it/contact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/contact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/contact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/contact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/contact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/contact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk</loc>
+    <loc>https://learningbrains.eu/sk</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk/about</loc>
+    <loc>https://learningbrains.eu/sk/about</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/about" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/about" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/about" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/about" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/about" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/about" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk/results</loc>
+    <loc>https://learningbrains.eu/sk/results</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/results" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/results" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/results" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/results" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/results" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/results" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/results" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/results" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/results" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/results" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/results" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/results" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/results" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk/partners</loc>
+    <loc>https://learningbrains.eu/sk/partners</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/partners" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/partners" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/partners" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/partners" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/partners" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/partners" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/partners" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/partners" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/partners" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/partners" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/partners" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/partners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/partners" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk/news</loc>
+    <loc>https://learningbrains.eu/sk/news</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/news" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/news" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/news" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/news" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/news" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/news" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk/resources</loc>
+    <loc>https://learningbrains.eu/sk/resources</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/resources" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/resources" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/resources" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/resources" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/resources" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/resources" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/resources" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/resources" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/resources" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/resources" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/resources" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk/impact</loc>
+    <loc>https://learningbrains.eu/sk/impact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/impact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/impact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/impact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/impact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/impact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/impact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/impact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/impact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/impact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/impact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/impact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/impact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/impact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/sk/contact</loc>
+    <loc>https://learningbrains.eu/sk/contact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/contact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/contact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/contact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/contact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/contact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de</loc>
+    <loc>https://learningbrains.eu/de</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de/about</loc>
+    <loc>https://learningbrains.eu/de/about</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/about" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/about" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/about" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/about" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/about" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/about" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de/results</loc>
+    <loc>https://learningbrains.eu/de/results</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/results" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/results" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/results" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/results" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/results" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/results" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/results" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/results" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/results" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/results" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/results" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/results" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/results" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de/partners</loc>
+    <loc>https://learningbrains.eu/de/partners</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/partners" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/partners" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/partners" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/partners" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/partners" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/partners" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/partners" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/partners" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/partners" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/partners" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/partners" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/partners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/partners" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de/news</loc>
+    <loc>https://learningbrains.eu/de/news</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/news" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/news" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/news" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/news" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/news" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/news" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de/resources</loc>
+    <loc>https://learningbrains.eu/de/resources</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/resources" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/resources" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/resources" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/resources" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/resources" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/resources" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/resources" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/resources" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/resources" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/resources" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/resources" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de/impact</loc>
+    <loc>https://learningbrains.eu/de/impact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/impact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/impact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/impact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/impact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/impact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/impact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/impact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/impact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/impact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/impact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/impact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/impact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/impact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/de/contact</loc>
+    <loc>https://learningbrains.eu/de/contact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/contact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/contact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/contact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/contact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/contact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt</loc>
+    <loc>https://learningbrains.eu/pt</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt/about</loc>
+    <loc>https://learningbrains.eu/pt/about</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/about" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/about" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/about" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/about" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/about" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/about" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt/results</loc>
+    <loc>https://learningbrains.eu/pt/results</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/results" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/results" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/results" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/results" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/results" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/results" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/results" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/results" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/results" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/results" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/results" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/results" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/results" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt/partners</loc>
+    <loc>https://learningbrains.eu/pt/partners</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/partners" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/partners" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/partners" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/partners" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/partners" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/partners" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/partners" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/partners" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/partners" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/partners" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/partners" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/partners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/partners" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt/news</loc>
+    <loc>https://learningbrains.eu/pt/news</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/news" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/news" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/news" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/news" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/news" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/news" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt/resources</loc>
+    <loc>https://learningbrains.eu/pt/resources</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/resources" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/resources" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/resources" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/resources" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/resources" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/resources" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/resources" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/resources" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/resources" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/resources" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/resources" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt/impact</loc>
+    <loc>https://learningbrains.eu/pt/impact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/impact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/impact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/impact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/impact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/impact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/impact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/impact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/impact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/impact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/impact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/impact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/impact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/impact" />
   </url>
   <url>
-    <loc>https://learningbrains.vercel.app/pt/contact</loc>
+    <loc>https://learningbrains.eu/pt/contact</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.vercel.app/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.vercel.app/es/contact" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.vercel.app/it/contact" />
-    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.vercel.app/sk/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.vercel.app/de/contact" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.vercel.app/pt/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.vercel.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/contact" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/contact" />
   </url>
 </urlset>

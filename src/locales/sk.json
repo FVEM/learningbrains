@@ -11,8 +11,8 @@
     "contact": "Kontakt"
   },
   "home": {
-    "seo_title": "Learning Brains - UI pre OVP",
-    "seo_description": "Revolúcia v odbornom vzdelávaní a príprave v priemyselnom sektore prostredníctvom učenia sa na pracovisku a UI.",
+    "seo_title": "Learning Brains – Priemyselné vzdelávanie s UI | Erasmus+",
+    "seo_description": "Learning Brains je projekt Erasmus+ KA220-VET, ktorý vyvíja nástroje učenia na pracovisku s podporou UI na rekvalifikáciu priemyselných pracovníkov v Európe. Objav te naše výsledky, partnerov a bezplatné zdroje.",
     "hero_badge": "PARTNERSTVO ERASMUS+ V OBLASTI SPOLUPRÁCE",
     "hero_name": "Learning Brains",
     "hero_title": "Praktické zručnosti pre reálny priemysel",
@@ -105,8 +105,8 @@
     "chatbot_greeting": "Dobrý deň! Som asistent umelej inteligencie Learning Brains. Ako vám dnes môžem pomôcť s projektom alebo UI na pracovisku?"
   },
   "about": {
-    "seo_title": "O Projekte",
-    "seo_description": "Zistite viac o cieľoch a zámeroch projektu Learning Brains.",
+    "seo_title": "O Projekte – Learning Brains Erasmus+",
+    "seo_description": "Objavte ciele, oblasti zamerania a cieľové skupiny projektu Learning Brains: projekt Erasmus+ KA220-VET, ktorý spája umelú inteligenciu s odborným vzdelávaním v europškom priemyselnom odvetví.",
     "title": "O Projekte",
     "background_title": "Pozadie a Kontext",
     "background_text": "Rýchly vývoj priemyselných procesov, poháňaný digitalizáciou a automatizáciou, vytvára rastúcu potrebu rekvalifikácie pracovnej sily v celej Európe. Tradičné vzdelávacie prístupy často nedokážu riešiť špecifické, kontextové potreby vzdelávania pracovníkov, ktorí sa musia prispôsobiť novým technológiám a procesom a zároveň zostať produktívni. Learning Brains rieši túto výzvu vývojom integrovaných systémov učenia sa na pracovisku, ktoré kombinujú praktické skúsenosti na pracovisku so štruktúrovanými vzdelávacími prístupmi.",
@@ -134,8 +134,8 @@
     ]
   },
   "partners": {
-    "seo_title": "Naši Partneri",
-    "seo_description": "Spoznajte partnerov konzorcia projektu Learning Brains.",
+    "seo_title": "Partneri – Konzorcium Erasmus+ Learning Brains",
+    "seo_description": "Spoznajte 6 europích organizácií zo Španielska, Tal ianska, Slovenska, Rakúska a Portugalska, ktoré spolupracujú na projekte Erasmus+ Learning Brains o UI a odbornom vzdelávaní.",
     "label": "Nadnárodná Spolupráca",
     "title": "Naši Partneri",
     "subtitle": "Learning Brains je nadnárodné partnerstvo združujúce priemyselné asociácie, agentúry na podporu podnikania a odborníkov na vzdelávanie z celej Európy.",
@@ -161,16 +161,16 @@
     ]
   },
   "news": {
-    "seo_title": "Udalosti Projektu",
-    "seo_description": "Najnovšie aktualizácie a udalosti z Learning Brains.",
+    "seo_title": "Udalosti a Správy – Learning Brains Erasmus+",
+    "seo_description": "Buďte aktuálny o najnovších udalostiach, workshopoch a nadnárodných stretnutiach projektu Erasmus+ Learning Brains o UI, OVP a priemyselnej rekvalif ikácii.",
     "label": "Aktualizácie Projektu",
     "title": "Udalosti Projektu",
     "subtitle": "Sledujte postup projektu Learning Brains prostredníctvom našich najnovších správ, stretnutí a diseminačných aktivít.",
     "items_list": [
       {
-        "title": "Zahájenie projektu v Bilbau",
+        "title": "Zahajovací stretnutie projektu v Bilbau.",
         "category": "Meeting",
-        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a prvotného výskumu potrieb priemyselného preškolovania.",
+        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností na prvý rok, vrátane nastavenia digitálnej platformy a počiatočného výskumu potrieb priemyselného preškolovania.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "",
@@ -179,7 +179,7 @@
       {
         "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
         "category": "Meeting",
-        "description": "Pripojte sa k nám na online workshope, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí budú zdieľať poznatky a najlepšie postupy.",
+        "description": "Pripojte sa k online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame expertov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
@@ -188,7 +188,7 @@
       {
         "title": "Prvé transnacionálne stretnutie projektu",
         "category": "Meeting",
-        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie fázy pilotného testovania.",
+        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
@@ -197,7 +197,7 @@
       {
         "title": "Oficiálna webová stránka projektu Learning Brains!",
         "category": "Event",
-        "description": "S radosťou oznamujeme spustenie oficiálnej webovej stránky projektu Learning Brains! Learning Brains (iniciatíva programu Erasmus+) je tu na to, aby premostila medzeru medzi odborným vzdelávaním a reálnymi potrebami priemyslu.",
+        "description": "S radosťou oznamujeme spustenie oficiálnej webovej stránky projektu Learning Brains! Learning Brains (iniciatíva programu Erasmus+) tu je na to, aby premostila medzeru medzi odborným vzdelávaním a reálnymi potrebami priemyslu.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 · Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
@@ -208,8 +208,8 @@
     "details_soon": "Viac podrobností čoskoro"
   },
   "resources": {
-    "seo_title": "Zdroje",
-    "seo_description": "Verejný repozitár dokumentov Learning Brains.",
+    "seo_title": "Zdroje – Bezplatné mater iály OVP a UI",
+    "seo_description": "Stáhnite bezplatné zdroje a otvorené vzdelávacie mater iály projektu Erasmus+ Learning Brains pre trenérov OVP, HR manažérov a priemyselných odborníkov v Európe.",
     "label": "Verejný Repozitár",
     "title": "Zdroje",
     "subtitle": "Získajte prístup k verejným dokumentom projektu, príručkám a technickým šablónam, ako budú zverejňované počas celého životného cyklu projektu.",
@@ -219,8 +219,8 @@
     "btn_guide": "Implementačná Príručka"
   },
   "results": {
-    "seo_title": "Výsledky Projektu",
-    "seo_description": "Výsledky a výstupy projektu Learning Brains.",
+    "seo_title": "Výsledky Projektu – Nástroje UI pre Odbor né Vzdelávanie",
+    "seo_description": "Preskumajte intelektuálne výsledky Learning Brains: europýcky rámec priemyselnej rekvalif ikácie, nástroje kouch ingu s UI a príručka pre mentoring na pracovisku.",
     "title": "Výsledky Projektu",
     "subtitle": "Prístup k hmatateľným výstupom a intelektuálnym príspevkom projektu Learning Brains.",
     "status_note": "Projekt Learning Brains je v súčasnosti vo fáze implementácie. Výsledky a výstupy budú zverejňované postupne, ako budú k dispozícii a schválené Európskou komisiou.",
@@ -235,8 +235,8 @@
     ]
   },
   "impact": {
-    "seo_title": "Vplyv a Dopad",
-    "seo_description": "Pochopenie toho, ako Learning Brains prispieva k odbornému vzdelávaniu a priemyselnej rekvalifikácii.",
+    "seo_title": "Šírenie a Dopad – Learning Brains Erasmus+",
+    "seo_description": "Zistite viac o stratégii šírenia a spoločenskom dopade Learning Brains: presadzovanie gramotnosti v oblasti UI, adaptabilita pracovníkov a priemyselná rekvalif ikácia v 5 europásdkych krajinách.",
     "label": "Šírenie a Dopad",
     "title": "Vplyv Projektu",
     "subtitle": "Pochopenie toho, ako Learning Brains prispieva k modernizácii európskeho odborného vzdelávania a priemyselnej rekvalifikácie.",
@@ -296,14 +296,14 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
-    "seo_title": "Novinky o UI, podnikaní a vzdelávaní",
-    "seo_description": "Najnovšie trendy v umelej inteligencii, podnikových inováciách a metódach odborného vzdelávania.",
+    "seo_title": "Správy o UI – Umelá Inteligencia v Podnikaní a OVP",
+    "seo_description": "Najnovšie trendy v umelej inteligencii pre podniky, priemysel a odbor né vzdelávanie (OVP). Zostaveno tímom projektu Erasmus+ Learning Brains.",
     "label": "Aktualizácie o priemysle a UI",
     "title": "Novinky o UI, podnikaní a vzdelávaní",
     "subtitle": "Buďte informovaní o najnovších trendoch v umelej inteligencii, podnikových inováciách a metódach odborného vzdelávania.",
     "items_list": [
       {
-        "title": "IA pre predajné tímy: od príležitosti po ponuku",
+        "title": "AI pre predajné tímy: od príležitosti po ponuku",
         "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s umelou inteligenciou.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
@@ -312,8 +312,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "IA pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
-        "description": "Automatizujte technické úlohy a zlepšite produktivitu inžinierskeho tímu.",
+        "title": "AI pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
+        "description": "Automatizujte technické úlohy a zvyšte produktivitu inžinierskeho tímu.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -322,7 +322,7 @@
       },
       {
         "title": "Pokročilá umele inteligencia a nové nástroje: od spolujazdca po agentov",
-        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte, ako automatizovať a optimalizovať obchodné procesy.",
+        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a zistite, ako automatizovať a optimalizovať obchodné procesy.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -331,7 +331,7 @@
       },
       {
         "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
-        "description": "Produktivita s Copilotom v priemyselnom podniku, s bezpečným používaním nástroja.",
+        "description": "Produktivita s Copilotom v priemyselnom podniku s bezpečným používaním nástroja",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -339,7 +339,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Ako navrhnúť cestovný plán pre umelú inteligenciu vo vašej organizácii?",
+        "title": "Ako navrhnúť cestovný plán AI vo vašej organizácii",
         "description": "Od úmyslu k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
@@ -348,7 +348,7 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Granty SPRI: Umelé inteligencie 2026",
+        "title": "Granty SPRI: Umelej inteligencii 2026",
         "description": "Použite umelej inteligencie na transformáciu priemyselných procesov a získajte konkurenčnú výhodu.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
@@ -359,8 +359,8 @@
     ]
   },
   "legal": {
-    "seo_title": "Právne informácie",
-    "seo_description": "Ochrana osobných údajov, cookies a transparenčnosť projektu Learning Brains.",
+    "seo_title": "Právne Informácie – Ochrana údajov a Cookies | Learning Brains",
+    "seo_description": "Politika ochrany osobných údajov, informácie o cookies a oznámenie o transparentnosti webovej stránky projektu Erasmus+ Learning Brains.",
     "title": "Právne informácie",
     "tab_privacy": "Ochrana údajov",
     "tab_cookies": "Cookies",

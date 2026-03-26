@@ -132,14 +132,21 @@ export default async function handler(req, res) {
                 metrics: [{ name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
             }),
-            // 7: Eventos Principales
+            // 7: Eventos Principales (Filtrando por los de Chat si existen)
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'eventName' }],
                 metrics: [{ name: 'eventCount' }, { name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
-                limit: 7
+                limit: 10
+            }),
+            // 8: Idiomas (Calculado de pagePath)
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'pagePath' }],
+                metrics: [{ name: 'activeUsers' }]
             })
         ]);
 
@@ -201,12 +208,72 @@ export default async function handler(req, res) {
             users: parseInt(row.metricValues[0].value, 10)
         })) || [];
 
-        // Procesar Eventos
-        const events = eventsResponse.rows?.map(row => ({
+        // Procesar Eventos y extraer métricas de Chatbot
+        let chatInteractions = 0;
+        const events = eventsResponse.rows?.map(row => {
+            const name = row.dimensionValues[0].value;
+            const count = parseInt(row.metricValues[0].value, 10);
+            
+            // Sumar interacciones de chat si el evento coincide
+            if (name.includes('chat') || name.includes('message')) {
+                chatInteractions += count;
+            }
+            
+            return {
+                name,
+                count,
+                users: parseInt(row.metricValues[1].value, 10)
+            };
+        }) || [];
+
+        // Procesar Fuentes de Tráfico
+        const sources = channelsResponse.rows?.map(row => ({
             name: row.dimensionValues[0].value,
-            count: parseInt(row.metricValues[0].value, 10),
-            users: parseInt(row.metricValues[1].value, 10)
+            users: parseInt(row.metricValues[0].value, 10)
         })) || [];
+
+        // Procesar Idiomas desde los paths
+        const langCounts = { en: 0, es: 0, it: 0, de: 0, sk: 0, pt: 0, other: 0 };
+        const languagesList = ['en', 'es', 'it', 'de', 'sk', 'pt'];
+        
+        const langReport = eventsResponse.rows; // Usamos el reporte de páginas para los idiomas
+        // Nota: En el Promise.all el índice 8 es el reporte de idiomas
+        const languagesResponse = (await Promise.allSettled([]))[0]; // placeholder logic fix below
+        
+        // RE-PROCESADO DE IDIOMAS (Usando la respuesta index 8)
+        const langRows = (await Promise.all([[], [], [], [], [], [], [], [], analyticsDataClient.runReport({
+            property: `properties/${propertyId}`,
+            dateRanges: [{ startDate, endDate: 'today' }],
+            dimensions: [{ name: 'pagePath' }],
+            metrics: [{ name: 'activeUsers' }]
+        })]))[8][0].rows;
+
+        langRows?.forEach(row => {
+            const path = row.dimensionValues[0].value;
+            const users = parseInt(row.metricValues[0].value, 10);
+            const langMatch = path.match(/^\/([a-z]{2})(\/|$)/);
+            const lang = langMatch ? langMatch[1] : 'en'; // default en if root
+            
+            if (languagesList.includes(lang)) {
+                langCounts[lang] += users;
+            } else {
+                langCounts['other'] += users;
+            }
+        });
+
+        const languagesData = Object.entries(langCounts)
+            .filter(([_, value]) => value > 0)
+            .map(([name, value]) => ({ name: name.toUpperCase(), value }));
+
+        // Filtrar Países del Consorcio específicamente
+        const consortiumList = ['Spain', 'Italy', 'Slovakia', 'Austria', 'Portugal'];
+        const consortiumCountries = consortiumList.map(c => {
+            const match = countriesResponse.rows?.find(r => r.dimensionValues[0].value === c);
+            return {
+                country: c,
+                users: match ? parseInt(match.metricValues[0].value, 10) : 0
+            };
+        }).sort((a,b) => b.users - a.users);
 
         // DEVOLVER TODO
         res.status(200).json({
@@ -215,9 +282,12 @@ export default async function handler(req, res) {
             devices,
             os,
             countries,
+            consortiumCountries,
+            languages: languagesData,
             pages,
             channels,
-            events
+            events,
+            chatInteractions: chatInteractions || 0
         });
 
     } catch (error) {
