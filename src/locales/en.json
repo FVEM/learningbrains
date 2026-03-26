@@ -11,8 +11,8 @@
     "contact": "Contact"
   },
   "home": {
-    "seo_title": "Learning Brains - AI for VET",
-    "seo_description": "Revolutionizing vocational education and training in the industrial sector through on-the-job learning and AI.",
+    "seo_title": "Learning Brains \u2013 Erasmus+ AI Training for Industry",
+    "seo_description": "Learning Brains is an Erasmus+ KA220-VET project developing AI-powered on-the-job learning tools to reskill industrial workers across Europe. Discover our free resources, project results, and partners.",
     "hero_badge": "ERASMUS+ COOPERATION PARTNERSHIP",
     "hero_name": "Learning Brains",
     "hero_title": "Real Skills for Real\nIndustry",
@@ -87,7 +87,7 @@
       "coming_soon": "Coming Soon",
       "news_1": {
         "badge": "Meeting",
-        "date": "Feb 2026 · Bilbao, Spain",
+        "date": "Feb 2026 \u00b7 Bilbao, Spain",
         "title": "Project Kick-off Meeting",
         "description": "The partners met for the first time at the FVEM headquarters to discuss the project timeline.",
         "link": "Read on LinkedIn"
@@ -105,8 +105,8 @@
     "chatbot_greeting": "Hello! I'm the Learning Brains AI assistant. How can I help you today with the project or AI in the workplace?"
   },
   "about": {
-    "seo_title": "About the Project",
-    "seo_description": "Learn about the Learning Brains project goals and objectives.",
+    "seo_title": "About the Project \u2013 Learning Brains Erasmus+",
+    "seo_description": "Discover the objectives, focus areas and target groups of Learning Brains: an Erasmus+ KA220-VET project bridging artificial intelligence and vocational education in the European manufacturing sector.",
     "title": "About the Project",
     "background_title": "Background & Context",
     "background_text": "The rapid evolution of industrial processes, driven by digitalisation and automation, is creating a growing need for workforce reskilling across Europe. Traditional training approaches often fail to address the specific, contextual learning needs of workers who must adapt to new technologies and processes while remaining productive. Learning Brains addresses this challenge by developing integrated on-the-job learning systems that combine practical workplace experience with structured educational approaches.",
@@ -134,8 +134,8 @@
     ]
   },
   "partners": {
-    "seo_title": "Our Partners",
-    "seo_description": "Meet the consortium partners of Learning Brains project.",
+    "seo_title": "Partners \u2013 Learning Brains Erasmus+ Consortium",
+    "seo_description": "Meet the 6 European organisations from Spain, Italy, Slovakia, Austria and Portugal collaborating in the Learning Brains Erasmus+ project on AI and vocational education for industry.",
     "label": "Transnational Collaboration",
     "title": "Our Partners",
     "subtitle": "Learning Brains is a transnational partnership bringing together industrial associations, business support agencies, and training experts from across Europe.",
@@ -161,8 +161,8 @@
     ]
   },
   "news": {
-    "seo_title": "Project Events",
-    "seo_description": "Latest updates and events from Learning Brains.",
+    "seo_title": "Project Events & News \u2013 Learning Brains Erasmus+",
+    "seo_description": "Stay up to date with the latest events, workshops and transnational meetings of the Learning Brains Erasmus+ project on AI, VET and industrial reskilling.",
     "label": "Project Updates",
     "title": "Project Events",
     "subtitle": "Follow the progress of the Learning Brains project through our latest news, meetings, and dissemination activities.",
@@ -172,7 +172,7 @@
         "category": "Meeting",
         "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
-        "date": "Feb 2026 · Bilbao, Spain",
+        "date": "Feb 2026 \u00b7 Bilbao, Spain",
         "image": "",
         "badge": "MEETING"
       },
@@ -199,7 +199,7 @@
         "category": "Event",
         "description": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
-        "date": "Mar 2026 · Bilbao, Spain",
+        "date": "Mar 2026 \u00b7 Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROJECT"
       }
@@ -208,8 +208,8 @@
     "details_soon": "More details coming soon"
   },
   "resources": {
-    "seo_title": "Resources",
-    "seo_description": "Public repository of Learning Brains documents.",
+    "seo_title": "Resources \u2013 Free AI & VET Training Materials",
+    "seo_description": "Download free resources and open educational materials produced by the Learning Brains Erasmus+ project for VET trainers, HR managers and industrial professionals across Europe.",
     "label": "Public Repository",
     "title": "Resources",
     "repo_title": "Document Repository",
@@ -219,8 +219,8 @@
     "btn_guide": "Implementation Guide"
   },
   "results": {
-    "seo_title": "Project Results",
-    "seo_description": "Results and outputs of the Learning Brains project.",
+    "seo_title": "Project Results \u2013 AI Learning Tools for VET",
+    "seo_description": "Explore the intellectual outputs of Learning Brains: a European industrial reskilling framework, AI coaching tools, and a handbook for on-the-job mentoring in the manufacturing sector.",
     "title": "Project Results",
     "subtitle": "Access the tangible outputs and intellectual contributions of the Learning Brains project.",
     "status_note": "The Learning Brains project is currently in its implementation phase. Results and deliverables will be published progressively as they become available and are approved by the European Commission.",
@@ -235,8 +235,8 @@
     ]
   },
   "impact": {
-    "seo_title": "Project Influence & Impact",
-    "seo_description": "Understanding how Learning Brains contributes to vocational education and industrial reskilling.",
+    "seo_title": "Dissemination & Impact \u2013 Learning Brains Erasmus+",
+    "seo_description": "Learn about the dissemination strategy and societal impact of Learning Brains: promoting AI literacy, workforce adaptability and industrial reskilling across 5 European countries.",
     "label": "Dissemination & Impact",
     "title": "Project Influence",
     "subtitle": "Understanding how Learning Brains contributes to the modernization of European vocational education and industrial reskilling.",
@@ -268,7 +268,7 @@
       "email": "Email Address",
       "message": "Your Message",
       "send": "Send Message",
-      "security": "Integration ready • Secure communication",
+      "security": "Integration ready \u2022 Secure communication",
       "placeholder_name": "John Doe",
       "placeholder_email": "john@example.com",
       "placeholder_message": "Tell us about your interest in the project...",
@@ -296,8 +296,8 @@
     "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
-    "seo_title": "AI, Business & Training News",
-    "seo_description": "Latest trends in Artificial Intelligence, business innovation and vocational training methodologies.",
+    "seo_title": "AI News \u2013 Artificial Intelligence in Business & VET",
+    "seo_description": "Latest trends in Artificial Intelligence for business, industry and vocational training (VET). Curated by the Learning Brains Erasmus+ project team.",
     "label": "Industry & AI Updates",
     "title": "AI, Business & Training News",
     "subtitle": "Stay informed about the latest trends in Artificial Intelligence, business innovation, and vocational training methodologies relevant to our project's goals.",
@@ -359,14 +359,14 @@
     ]
   },
   "legal": {
-    "seo_title": "Legal",
-    "seo_description": "Privacy policy, cookies and transparency information for the Learning Brains project.",
+    "seo_title": "Legal Notice \u2013 Privacy & Cookies | Learning Brains",
+    "seo_description": "Privacy policy, cookies information and transparency notice for the Learning Brains Erasmus+ project website.",
     "title": "Legal",
     "tab_privacy": "Privacy",
     "tab_cookies": "Cookies",
     "tab_transparency": "Transparency",
     "privacy_controller_title": "Data Controller",
-    "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as data controller for the personal data collected through this website.",
+    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as data controller for the personal data collected through this website.",
     "privacy_data_title": "Data Collected",
     "privacy_data_text": "We only collect data voluntarily provided by the user through the contact form: name, email address and message. No data from minors or sensitive data is collected.",
     "privacy_purpose_title": "Purpose",
@@ -390,7 +390,7 @@
     "trans_project_title": "Project Information",
     "trans_programme": "Programme",
     "trans_funder": "Funder",
-    "trans_funder_value": "European Commission — EACEA",
+    "trans_funder_value": "European Commission \u2014 EACEA",
     "trans_agency": "National Agency",
     "trans_coordinator": "Coordinator",
     "trans_duration": "Duration",
