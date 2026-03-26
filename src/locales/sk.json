@@ -1,82 +1,410 @@
 {
-  \"nav\": {
-    \"home\": \"Domov\",
-    \"project\": \"Projekt\",
-    \"news\": \"Aktuality\",
-    \"partners\": \"Partneri\",
-    \"contact\": \"Kontakt\"
+  "nav": {
+    "home": "Domov",
+    "about": "Projekt",
+    "results": "V\u00fdsledky",
+    "partners": "Partneri",
+    "news": "Projektov\u00e9 Podujatia",
+    "noticias": "Novinky",
+    "resources": "Zdroje",
+    "impact": "Š\u00edrenie a Dopad",
+    "contact": "Kontakt"
   },
-  \"home\": {
-    \"hero\": {
-      \"badge\": \"Európsky inovačný projekt 2024-2027\",
-      \"title_start\": \"Pokrok v r\",
-      \"title_accent\": \"klinickom výskume\",
-      \"title_end\": \"pomocou umelej inteligencie\",
-      \"description\": \"Urýchlenie klinických skúšaní a digitálnych zdravotníckych riešení v neurológii a psychiatrii prostredníctvom špičkových technológií a európskej spolupráce.\",
-      \"cta_primary\": \"Preskúmať projekt\",
-      \"cta_secondary\": \"Pozrieť prehľad\"
-    },
-    \"stats\": {
-      \"partners\": \"Partneri konzorcia\",
-      \"countries\": \"Európske krajiny\",
-      \"budget\": \"Financovanie\",
-      \"duration\": \"Dĺžka v mesiacoch\"
-    },
-    \"features\": {
-      \"section_title\": \"Pionieri v digitálnom zdravotníctve\",
-      \"section_desc\": \"Learning Brains kombinuje pokročilú analytiku, bezpečné zdieľanie údajov a dizajn zameraný na pacienta s cieľom transformovať klinický výskum.\",
-      \"ai\": {
-        \"title\": \"Kognitívna AI\",
-        \"desc\": \"Modely hlbokého učenia pre prediktívnu analýzu v sledovaní neurologického zdravia.\"
+  "home": {
+    "seo_title": "Learning Brains \u2013 Industri\u00e1lne Vzdel\u00e1vanie s AI | Erasmus+",
+    "seo_description": "Learning Brains je projekt Erasmus+ KA220-VET, ktor\u00fd vyv\u00edja n\u00e1stroje na vzdel\u00e1vanie pri pr\u00e1ci zalo\u017een\u00e9 na AI na rekvalifik\u00e1ciu industri\u00e1lnych pracovn\u00edkov v Eur\u00f3pe. Objavte na\u0161e v\u00fdsledky, partnerov a bezplatn\u00e9 zdroje.",
+    "hero_badge": "KOOPERA\u010cN\u00c9 PARTNERSTVO ERASMUS+",
+    "hero_name": "Learning Brains",
+    "hero_title": "Skuto\u010dn\u00e9 Zru\u010dnosti pre Skuto\u010dn\u00fd Priemysel",
+    "hero_subtitle": "Integrovan\u00e9 Syst\u00e9my Vzdel\u00e1vania na Pracovisku pre Industri\u00e1lnu Rekvalifik\u00e1ciu",
+    "cta_primary": "Zisti Viac",
+    "cta_secondary": "Na\u0161i Partneri",
+    "partners_count": "6 Strategick\u00fdch Partnerov",
+    "partners_text": "V 5 Eur\u00f3pskych Krajin\u00e1ch",
+    "stats": [
+      {
+        "value": "6",
+        "label": "Partneri"
       },
-      \"security\": {
-        \"title\": \"Zabezpečené federatívne učenie\",
-        \"desc\": \"Spracovanie údajov so zachovaním súkromia cez hranice pomocou najmodernejšieho šifrovania.\"
+      {
+        "value": "5",
+        "label": "Krajiny"
       },
-      \"performance\": {
-        \"title\": \"Prehľady v reálnom čase\",
-        \"desc\": \"Vysokovýkonné výpočty pre okamžitú podporu klinického rozhodovania a monitorovanie.\"
+      {
+        "value": "24",
+        "label": "Mesiace"
       },
-      \"analytics\": {
-        \"title\": \"Prediktívne biomarkery\",
-        \"desc\": \"Identifikácia digitálnych podpisov pre včasnú detekciu neurologických stavov.\"
+      {
+        "value": "3",
+        "label": "V\u00fdsledky"
       }
+    ],
+    "pillars_badge": "Z\u00e1kladn\u00e9 Piliere",
+    "pillars_title": "Inov\u00e1cia Syst\u00e9mu OVP",
+    "pillars_subtitle": "Learning Brains zav\u00e1dza nov\u00fa paradigmu pre industri\u00e1lne vzdel\u00e1vanie kombin\u00e1ciou troch k\u013e\u00fa\u010dov\u00fdch prvkov v jednotnom r\u00e1mci.",
+    "features": [
+      {
+        "title": "Industri\u00e1lny Fokus",
+        "desc": "Metodol\u00f3gie prisp\u00f4soben\u00e9 v\u00fdrobn\u00e9mu sektoru, rie\u0161iace \u0161pecifick\u00e9 medzery v zru\u010dnostiach a technologick\u00e9 potreby."
+      },
+      {
+        "title": "Vzdel\u00e1vanie na Pracovisku",
+        "desc": "Integr\u00e1cia vzdel\u00e1vania priamo do pracovn\u00e9ho procesu s cie\u013eom minimalizova\u0165 preru\u0161enia a maximalizova\u0165 praktick\u00fa aplik\u00e1ciu."
+      },
+      {
+        "title": "N\u00e1stroje Zalo\u017een\u00e9 na AI",
+        "desc": "Vyu\u017eit\u00e9 umelej inteligencie na personaliz\u00e1ciu vzdel\u00e1vac\u00edch ciest a optimaliz\u00e1ciu nadob\u00fadania zru\u010dnost\u00ed."
+      }
+    ],
+    "impact_badge": "Dopad Projektu",
+    "impact_title": "Pohon Skuto\u010dnej Zmeny",
+    "impact_text": "Na\u0161\u00edm cie\u013eom je preklen\u00fa\u0165 medzeru medzi odborn\u00fdm vzdel\u00e1van\u00edm a re\u00e1lnymi industri\u00e1lnymi po\u017eiadavkami prostredn\u00edctvom praktick\u00fdch a merate\u013en\u00fdch z\u00e1sahov.",
+    "metric_label_1": "Zapojenie Priemyslu",
+    "metric_label_2": "Efekt\u00edvnos\u0165 Vzdel\u00e1vania",
+    "metric_label_3": "Pracovn\u00e1 Pripravenos\u0165",
+    "impact_cta": "Zobrazi\u0165 Celkov\u00fd Dopad",
+    "impact_point_1": "Vy\u0161\u0161ia Adaptabilita Pracovnej Sily",
+    "impact_point_2": "Modernizovan\u00e9 Kurikuly OVP",
+    "impact_point_3": "Silnej\u0161ie Prepojenia Medzi Priemyslom a Vzdel\u00e1van\u00edm",
+    "chart_label_1": "Adaptabilita",
+    "chart_label_2": "Efekt\u00edvnos\u0165 Vzdel\u00e1vania",
+    "chart_label_3": "R\u00fdchlos\u0165 U\u010denia",
+    "hero_stats": {
+      "programme": "PROGRAM",
+      "programme_name": "Erasmus+ KA220-VET",
+      "duration_value": "24 Mesiacov",
+      "duration_label": "TRVANIE",
+      "duration_label_text": "Mesiace",
+      "partners_label": "PARTNERI",
+      "partners_label_text": "Organiz\u00e1cie",
+      "countries_label": "KRAJINY",
+      "countries_label_text": "\u010clenovia",
+      "focus_value": "Industri\u00e1lna Rekvalifik\u00e1cia",
+      "focus_label": "FOKUS"
+    },
+    "consortium_title": "Projektov\u00e9 Konzorcium",
+    "latest_updates": {
+      "title": "Najnov\u0161ie Aktualiz\u00e1cie",
+      "description": "M\u00ed\u013ene kamene, podujatia a v\u00fdsledky projektu Learning Brains.",
+      "view_all": "Zobrazi\u0165 v\u0161etky novinky",
+      "coming_soon": "U\u017e \u010dokoro",
+      "news_1": {
+        "badge": "Stretnutie",
+        "date": "Feb 2026 \u00b7 Bilbao, Španielsko",
+        "title": "Kick-off Stretnutie Projektu",
+        "description": "Partneri sa prv\u00fdkr\u00e1t stretli v s\u00eddle FVEM, aby prerokovali \u010dasov\u00fd harmonogram projektu.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
+        "image": "/images/news/bilbaokickoff.jpg"
+      },
+      "news_2": {
+        "title": "Metodol\u00f3gia Konzorcia",
+        "description": "V\u00fdvoj hlavn\u00e9ho r\u00e1mca pre industri\u00e1lnu rekvalifik\u00e1ciu a vzdel\u00e1vanie na pracovisku."
+      },
+      "news_3": {
+        "title": "V\u00fdskum N\u00e1strojov AI",
+        "description": "Anal\u00fdza najmodernej\u0161\u00edch aplik\u00e1ci\u00ed AI pre prostredie odborn\u00e9ho vzdel\u00e1vania."
+      }
+    },
+    "chatbot_tooltip": "Sp\u00fdtajte sa na\u0161ej AI!",
+    "chatbot_greeting": "Ahoj! Som AI asistent projektu Learning Brains. Ako v\u00e1m m\u00f4\u017eem dnes pom\u00f4c s projektom alebo ot\u00e1zkami o AI na pracovisku?"
+  },
+  "about": {
+    "seo_title": "O Projekte \u2013 Learning Brains Erasmus+",
+    "seo_description": "Objavte ciele, oblasti zamerania a cie\u013eov\u00e9 skupiny Learning Brains: projekt Erasmus+ KA220-VET sp\u00e1jaj\u00faci umel\u00fa inteligenciu a odborn\u00e9 vzdel\u00e1vanie v eur\u00f3pskom v\u00fdrobnom sektore.",
+    "title": "O Projekte",
+    "background_title": "Kontext a Pozadie",
+    "background_text": "R\u00fdchly v\u00fdvoj industri\u00e1lnych procesov, poh\u00e1\u014any digitaliz\u00e1ciou a automatiz\u00e1ciou, vytv\u00e1ra rast\u00facu potrebu rekvalifik\u00e1cie pracovnej sily v celej Eur\u00f3pe. Tradi\u010dn\u00e9 pr\u00edstupy k vzdel\u00e1vaniu \u010dasto nedok\u00e1\u017eu rie\u0161i\u0161 \u0161pecifick\u00e9 a kontextu\u00e1lne potreby vzdel\u00e1vania pracovn\u00edkov, ktor\u00ed sa musia prisp\u00f4sobi\u0165 nov\u00fdm technol\u00f3gi\u00e1m a procesom a z\u00e1rove\u0148 zosta\u0165 produkt\u00edvni. Learning Brains rie\u0161i t\u00fato v\u00fdzvu v\u00fdvojom integrovan\u00fdch syst\u00e9mov vzdel\u00e1vania na pracovisku, ktor\u00e9 kombinuj\u00fa praktick\u00e9 sk\u00fa\u0161enosti v ter\u00e9ne so \u0161trukt\u00farovan\u00fdmi vzdel\u00e1vac\u00edmi pr\u00edstupmi.",
+    "objectives_title": "Ciele Projektu",
+    "objectives_list": [
+      "Vyvin\u00fa\u0165 inovat\u00edvne metodol\u00f3gie vzdel\u00e1vania na pracovisku prisp\u00f4soben\u00e9 industri\u00e1lnej rekvalifik\u00e1cii",
+      "Vytvori\u0165 n\u00e1stroje zalo\u017een\u00e9 na AI na podporu personalizovan\u00fdch vzdel\u00e1vac\u00edch ciest v pracovn\u00fdch prostrediach",
+      "Podporova\u0165 spolupr\u00e1cu medzi poskytovate\u013emi OVP a industri\u00e1lnymi partnermi v celej Eur\u00f3pe",
+      "Produkova\u0165 otvoren\u00e9 vzdel\u00e1vacie zdroje pre industri\u00e1lnu rekvalifik\u00e1ciu pr\u00edstupn\u00e9 \u0161irokej verejnosti",
+      "Prispie\u0165 k eur\u00f3pskemu politick\u00e9mu dial\u00f3gu o moderniz\u00e1cii odborn\u00e9ho vzdel\u00e1vania a pr\u00edpravy"
+    ],
+    "focus_title": "Oblasti Zamerania",
+    "focus_list": [
+      "Odborn\u00e9 vzdel\u00e1vanie a pr\u00edprava (OVP)",
+      "Metodol\u00f3gie vzdel\u00e1vania na pracovisku",
+      "Industri\u00e1lna rekvalifik\u00e1cia a upskilling",
+      "N\u00e1stroje na podporu vzdel\u00e1vania zalo\u017een\u00e9 na AI"
+    ],
+    "target_title": "Cie\u013eov\u00e9 Skupiny",
+    "target_list": [
+      "Industri\u00e1lni pracovn\u00edci v procesoch rekvalifik\u00e1cie",
+      "Poskytovatelia OVP a \u0161kolitelia v industri\u00e1lnych sektoroch",
+      "HR mana\u017e\u00e9ri a koordin\u00e1tori vzdel\u00e1vania v priemysle",
+      "Tvorcovia polit\u00edk v oblasti odborn\u00e9ho vzdel\u00e1vania a zamestnanosti"
+    ]
+  },
+  "partners": {
+    "seo_title": "Partneri \u2013 Erasmus+ Konzorcium Learning Brains",
+    "seo_description": "Spoznajte 6 eur\u00f3pskych organiz\u00e1ci\u00ed zo Španielska, Talianska, Slovenska, Rak\u00faska a Portugalska spolupracuj\u00facich na projekte Erasmus+ Learning Brains o AI a industri\u00e1lnom odbornom vzdel\u00e1van\u00ed.",
+    "label": "Transnacion\u00e1lna Spolupr\u00e1ca",
+    "title": "Na\u0161i Partneri",
+    "subtitle": "Learning Brains je transnacion\u00e1lne partnerstvo sp\u00e1jaj\u00face industri\u00e1lne zdru\u017eenia, agent\u00fary na podporu podnikania a expertov na vzdel\u00e1vanie z celej Eur\u00f3py.",
+    "view_org": "Zobrazi\u0165 Organiz\u00e1ciu",
+    "roles": {
+      "Coordinator": "Koordin\u00e1tor",
+      "Partner": "Partner"
+    },
+    "countries": {
+      "Spain": "\u0160panielsko",
+      "Italy": "Taliansko",
+      "Austria": "Rak\u00fasko",
+      "Slovakia": "Slovensko",
+      "Portugal": "Portugalsko"
+    },
+    "descriptions": [
+      "V\u00faddiaca industri\u00e1lna feder\u00e1cia zastupuj\u00faca viac ako 800 spolo\u010dnost\u00ed v kovospracuj\u00facom sektore, oddan\u00e1 inov\u00e1ci\u00e1m a vzdel\u00e1vaniu.",
+      "Servisn\u00e1 spolo\u010dnos\u0165 Confindustria Veneto, \u0161pecializovan\u00e1 na vzdel\u00e1vanie, inov\u00e1cie a organiza\u010dn\u00fd rozvoj pre region\u00e1lne firmy.",
+      "Zastupuje z\u00e1ujmy \u0161tyrskej podnikate\u013eskej komunity a poskytuje rozsiahle podporn\u00e9 slu\u017eby pre vzdel\u00e1vanie a pr\u00edpravu.",
+      "Experti na dizajn a implement\u00e1ciu inovat\u00edvnych pedagogick\u00fdch metodol\u00f3gi\u00ed a digit\u00e1lnych vzdel\u00e1vac\u00edch prostred\u00ed.",
+      "Najstar\u0161ia \u0161pecializovan\u00e1 neziskov\u00e1 organiz\u00e1cia na podporu mal\u00fdch a stredn\u00fdch podnikov na Slovensku.",
+      "Venovan\u00e1 rozvoju \u013eudsk\u00fdch zdrojov a inovat\u00edvnym vzdel\u00e1vac\u00edm rie\u0161eniam pre modern\u00fd trh pr\u00e1ce."
+    ]
+  },
+  "news": {
+    "seo_title": "Podujatia a Novinky \u2013 Learning Brains Erasmus+",
+    "seo_description": "Zosta\u0148te informovan\u00ed o najnov\u0161\u00edch podujatiach, workshopoch a transnacion\u00e1lnych stretnutiach projektu Erasmus+ Learning Brains o AI, OVP a industri\u00e1lnej rekvalifik\u00e1cii.",
+    "label": "Aktualiz\u00e1cie Projektu",
+    "title": "Projektov\u00e9 Podujatia",
+    "subtitle": "Sledujte pokrok projektu Learning Brains prostredn\u00edctvom na\u0161ich najnov\u0161\u00edch noviniek, stretnut\u00ed a aktiv\u00edt \u0161\u00edrenia.",
+    "items_list": [
+      {
+        "title": "Kick-off stretnutie projektu v Bilbau",
+        "category": "Meeting",
+        "description": "Konzorcium Learning Brains sa prv\u00fdkr\u00e1t stretlo v Bilbau, aby od\u0161tartovalo aktivity projektu. Partneri diskutovali o pl\u00e1ne na prv\u00fd rok, vr\u00e1tane nastavenia digit\u00e1lnej platformy a po\u010diato\u010dn\u00e9ho v\u00fdskumu potrieb industri\u00e1lnej rekvalifik\u00e1cie.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
+        "date": "Feb 2026 \u00b7 Bilbao, \u0160panielsko",
+        "image": "/images/news/bilbaokickoff.jpg",
+        "badge": "STRETNUTIE"
+      },
+      {
+        "title": "Nadch\u00e1dzaj\u00faci Workshop: AI v odbornom vzdel\u00e1van\u00ed",
+        "category": "Meeting",
+        "description": "Pripojte sa k n\u00e1m na online workshope o potenci\u00e1li umelej inteligencie v odbornom vzdel\u00e1van\u00ed a pr\u00edprave. Priv\u00edtame expertov z celej Eur\u00f3py, aby zdie\u013eali svoje poznatky a osved\u010den\u00e9 postupy.",
+        "link": "",
+        "date": "U\u017e \u010dokoro",
+        "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
+        "badge": "STRETNUTIE"
+      },
+      {
+        "title": "Prv\u00e9 transnacion\u00e1lne stretnutie projektu",
+        "category": "Meeting",
+        "description": "Druh\u00e9 stretnutie partnerov bud\u00fa hosti\u0165 na\u0161i talianski partneri. Na programe je presk\u00famanie prv\u00e9ho n\u00e1vrhu r\u00e1mca rekvalifik\u00e1cie a pl\u00e1novanie f\u00e1zy pilotn\u00e9ho testovania.",
+        "link": "",
+        "date": "U\u017e \u010dokoro",
+        "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
+        "badge": "STRETNUTIE"
+      },
+      {
+        "title": "Ofici\u00e1lna str\u00e1nka Learning Brains je online!",
+        "category": "Event",
+        "description": "S rados\u0165ou oznamujeme spustenie ofici\u00e1lnej webovej str\u00e1nky Learning Brains! Learning Brains (iniciat\u00edva Erasmus+) je tu, aby preklenula medzeru medzi odborn\u00fdm vzdel\u00e1van\u00edm a re\u00e1lnymi industri\u00e1lnymi po\u017eiadavkami.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
+        "date": "Mar 2026 \u00b7 Bilbao, \u0160panielsko",
+        "image": "/images/news/learning-brains-01.jpg",
+        "badge": "PROJEKT"
+      }
+    ],
+    "read_more": "\u010c\u00edta\u0165 Viac",
+    "details_soon": "Viac detailov \u010dokoro"
+  },
+  "resources": {
+    "seo_title": "Zdroje \u2013 Bezplatn\u00e9 materi\u00e1ly OVP a AI",
+    "seo_description": "Stiahnite si bezplatn\u00e9 zdroje a otvoren\u00e9 vzdel\u00e1vacie materi\u00e1ly vytvoren\u00e9 projektom Erasmus+ Learning Brains pre \u0161kolite\u013eov OVP, HR mana\u017e\u00e9rov a eur\u00f3pskych industri\u00e1lnych profesion\u00e1lov.",
+    "label": "Verejn\u00fd Repozit\u00e1r",
+    "title": "Zdroje",
+    "subtitle": "Z\u00edskajte pr\u00edstup k verejn\u00fdm projektov\u00fdm dokumentom, pr\u00edru\u010dkam a technick\u00fdm \u0161abl\u00f3nam hne\u010f po ich vydan\u00ed po\u010das \u017eivotn\u00e9ho cyklu projektu.",
+    "repo_title": "Repozit\u00e1r Dokumentov",
+    "repo_desc": "Verejn\u00fd repozit\u00e1r bude obsahova\u0165 PDF na stiahnutie projektov\u00fdch bro\u017e\u00far, spr\u00e1v a metodick\u00fdch pr\u00edru\u010diek. Moment\u00e1lne nie s\u00fa k dispoz\u00edcii \u017eiadne s\u00fabory na verejn\u00e9 stiahnutie.",
+    "btn_brochure": "Projektov\u00e1 Bro\u017e\u00fara",
+    "btn_guide": "Implementa\u010dn\u00e1 Pr\u00edru\u010dka"
+  },
+  "results": {
+    "seo_title": "V\u00fdsledky Projektu \u2013 AI n\u00e1stroje pre odborn\u00e9 vzdel\u00e1vanie",
+    "seo_description": "Presk\u00famajte intelektu\u00e1lne v\u00fdsledky Learning Brains: eur\u00f3psky r\u00e1mec industri\u00e1lnej rekvalifik\u00e1cie, AI kou\u010ding n\u00e1stroje a pr\u00edru\u010dka pre mentoring na pracovisku.",
+    "title": "V\u00fdsledky Projektu",
+    "subtitle": "Z\u00edskajte pr\u00edstup k hmatate\u013en\u00fdm v\u00fdsledkom a intelektu\u00e1lnym pr\u00ednosom projektu Learning Brains.",
+    "status_note": "Projekt Learning Brains je moment\u00e1lne vo f\u00e1ze implement\u00e1cie. V\u00fdsledky a v\u00fdstupy bud\u00fa zverej\u014uovan\u00e9 postupne, ako bud\u00fa k dispoz\u00edcii a schv\u00e1len\u00e9 Eur\u00f3pskou komisiou.",
+    "available_title": "Dostupn\u00e9 V\u00fdsledky",
+    "no_results": "Zatia\u013e neboli zverejnen\u00e9 \u017eiadne v\u00fdsledky. Sk\u00faste to pros\u00edm nesk\u00f4r.",
+    "planned_title": "Pl\u00e1novan\u00e9 V\u00fdsledky",
+    "planned_list": [
+      "Eur\u00f3psky r\u00e1mec pre industri\u00e1lnu rekvalifik\u00e1ciu",
+      "Pr\u00edru\u010dka pre mentoring na pracovisku",
+      "AI gener\u00e1tor vzdel\u00e1vac\u00edch ciest",
+      "Transnacion\u00e1lne politick\u00e9 odpor\u00fa\u010dania"
+    ]
+  },
+  "impact": {
+    "seo_title": "\u0160\u00edrenie a Dopad \u2013 Learning Brains Erasmus+",
+    "seo_description": "Zistite viac o strat\u00e9gii \u0161\u00edrenia a soci\u00e1lnom dopade Learning Brains: podpora AI gramotnosti, adaptability pracovn\u00edkov a industri\u00e1lnej rekvalifik\u00e1cie v 5 eur\u00f3pskych krajin\u00e1ch.",
+    "label": "\u0160\u00edrenie a Dopad",
+    "title": "Vplyv Projektu",
+    "subtitle": "Pochopenie toho, ako Learning Brains prispieva k moderniz\u00e1cii eur\u00f3pskeho odborn\u00e9ho vzdel\u00e1vania a industri\u00e1lnej rekvalifik\u00e1cii.",
+    "strategy_title": "Strat\u00e9gia \u0161\u00edrenia",
+    "strategy_text": "Na\u0161a strat\u00e9gia sa zameriava na oslovenie k\u013e\u00fa\u010dov\u00fdch zainteresovan\u00fdch str\u00e1n v celej Eur\u00f3pe, aby sa zabezpe\u010dilo, \u017ee v\u00fdsledky projektu bud\u00fa \u0161iroko zn\u00e1me a vyu\u017e\u00edvan\u00e9. Vyu\u017e\u00edvame viackan\u00e1lov\u00fd pr\u00edstup, vr\u00e1tane tohto digit\u00e1lneho centra, sektorov\u00fdch soci\u00e1lnych m\u00e9di\u00ed, region\u00e1lnych industri\u00e1lnych podujat\u00ed a transnacion\u00e1lnych workshopov.",
+    "audience_title": "Cie\u013eov\u00e9 publikum",
+    "audience_list": [
+      "Industri\u00e1lni pracovn\u00edci",
+      "Centr\u00e1 odborn\u00e9ho vzdel\u00e1vania",
+      "V\u00fdborn\u00e9 MSP",
+      "Tvorcovia polit\u00edk",
+      "Soci\u00e1lni partneri",
+      "V\u00fdskumn\u00e1 komunita"
+    ],
+    "impact_title": "O\u010dak\u00e1van\u00fd Dopad",
+    "impact_text": "Projekt Learning Brains o\u010dak\u00e1va pr\u00edspevok k moderniz\u00e1cii syst\u00e9mov OVP poskytovan\u00edm validovan\u00fdch n\u00e1strojov pre industri\u00e1lnu rekvalifik\u00e1ciu. Dopad budeme pozorova\u0165 v zlep\u0161enej adaptabilite industri\u00e1lnych pracovn\u00edkov na technologick\u00e9 zmeny a zv\u00fd\u0161enej efekt\u00edvnosti metodol\u00f3gi\u00ed vzdel\u00e1vania na pracovisku.",
+    "note": "Pozn\u00e1mka: Dopady projektu s\u00fa moment\u00e1lne pop\u00edsan\u00e9 nekvantitat\u00edvne, ke\u010f\u017ee implement\u00e1cia je v po\u010diato\u010dn\u00fdch f\u00e1zach."
+  },
+  "contact": {
+    "connect_us": "Spojte sa s nami",
+    "title": "Bu\u010fte v Kontakte",
+    "description": "M\u00e1te ot\u00e1zky o projekte Learning Brains? Kontaktujte konzorcium prostredn\u00edctvom tohto formul\u00e1ra alebo n\u00e1s sledujte na na\u0161ich soci\u00e1lnych kan\u00e1loch.",
+    "email_inquiry": "Ot\u00e1zka e-mailom",
+    "official_channels": "Ofici\u00e1lne kan\u00e1ly",
+    "social_pending": "LinkedIn a Twitter bud\u00fa aktivovan\u00e9 v polovici projektu",
+    "disclaimer": "Tento projekt sa riadi pr\u00edsnymi pravidlami vidite\u013enos\u0165i Erasmus+. V\u0161etky prijat\u00e9 inform\u00e1cie s\u00fa pova\u017eovan\u00e9 za d\u00f4vern\u00e9 a pou\u017eit\u00e9 len na \u00fa\u010dely \u0161\u00edrenia.",
+    "form": {
+      "full_name": "Cel\u00e9 Meno",
+      "email": "E-mailov\u00e1 Adresa",
+      "message": "Va\u0161a Spr\u00e1va",
+      "send": "Odosla\u0165 Spr\u00e1vu",
+      "security": "Integr\u00e1cia pripraven\u00e1 \u2022 Bezpe\u010dn\u00e1 komunik\u00e1cia",
+      "placeholder_name": "Jozef Mrkva",
+      "placeholder_email": "jozef@priklad.sk",
+      "placeholder_message": "Nap\u00ed\u0161te n\u00e1m o va\u0161om z\u00e1ujme o projekt...",
+      "status_success_title": "Spr\u00e1va bola Odoslan\u00e1!",
+      "status_success_desc": "\u010eakujeme, \u017ee ste n\u00e1s kontaktovali. Odpovieme v\u00e1m \u010do najsk\u00f4r.",
+      "status_sending": "Odosiela sa...",
+      "status_error": "Nie\u010do sa pokazilo. Sk\u00faste to pros\u00edm nesk\u00f4r.",
+      "destination_label": "Koho by ste chceli kontaktova\u0165?",
+      "dest_general": "V\u0161eobecn\u00e9 inform\u00e1cie",
+      "dest_es": "\u0160panielski partneri (FVEM / Media Creativa)",
+      "dest_it": "Taliansky partner (SIAV)",
+      "dest_at": "Rak\u00fasky partner (Room466)",
+      "dest_sk": "Slovensk\u00fd partner (SBA)",
+      "dest_pt": "Portugalsk\u00fd partner (SPIN)"
     }
   },
-  \"i18n\": {
-    \"news\": {
-      \"section_badge\": \"ZOSTAŇTE INFORMOVANÍ\",
-      \"section_title\": \"Novinky a míľniky projektu\",
-      \"view_all\": \"Preskúmať celý archív\",
-      \"items_list\": [
-        {
-          \"title\": \"Otváracie stretnutie v Bilbau\",
-          \"category\": \"UDALOSŤ\",
-          \"description\": \"Projekt Learning Brains oficiálne odštartoval svoju cestu v Bilbau, kde sa stretlo 12 partnerov z celej Európy, aby diskutovali o integrácii klinického výskumu a digitálneho zdravotníctva.\",
-          \"link\": \"/news\",
-          \"date\": \"Apríl 2024\",
-          \"image\": \"bilbaokickoff.jpg\",
-          \"badge\": \"Spustenie konzorcia\"
-        },
-        {
-          \"title\": \"Workshop digitálnych biomarkerov\",
-          \"category\": \"VÝSKUM\",
-          \"description\": \"Špecializované stretnutie o identifikácii digitálnych podpisov pre včasnú intervenciu v neurologických stavoch, ktoré sa konalo v Miláne s poprednými neurovedcami.\",
-          \"link\": \"/news\",
-          \"date\": \"Jún 2024\",
-          \"image\": \"milano.jpg\",
-          \"badge\": \"Míľnik 1\"
-        },
-        {
-          \"title\": \"Výročné valné zhromaždenie 2024\",
-          \"category\": \"KONGRES\",
-          \"description\": \"Členovia konzorcia sa stretli, aby zhodnotili pokrok v protokoloch federatívneho učenia a stratégie náboru klinických kohort na nadchádzajúci rok.\",
-          \"link\": \"/news\",
-          \"date\": \"Október 2024\",
-          \"image\": \"generalassembly.jpg\",
-          \"badge\": \"Ročné hodnotenie\"
-        }
-      ]
-    }
+  "footer": {
+    "description": "Integrovan\u00e9 syst\u00e9my vzdel\u00e1vania na pracovisku pre industri\u00e1lnu rekvalifik\u00e1ciu. Preklenutie medzery medzi te\u00f3riou a industri\u00e1lnou praxou.",
+    "section_project": "Projekt",
+    "section_community": "Komunita",
+    "section_legal": "Pr\u00e1vne inform\u00e1cie",
+    "privacy": "Z\u00e1sady Ochrany S\u00fakromia",
+    "cookies": "Z\u00e1sady Pou\u017e\u00edvania Cookies",
+    "transparency": "Transparentnos\u0165",
+    "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
+  },
+  "ai_news": {
+    "seo_title": "AI Novinky \u2013 Umel\u00e1 Inteligencia v Podnikan\u00ed a OVP",
+    "seo_description": "Najnov\u0161ie trendy v umelej inteligencii pre podnikanie, priemysel a odborn\u00e9 vzdel\u00e1vanie (OVP). Kur\u00e1torom je t\u00edm projektu Erasmus+ Learning Brains.",
+    "label": "Aktualiz\u00e1cie z priemyslu a AI",
+    "title": "AI, Biznis a Vzdel\u00e1vacie Novinky",
+    "subtitle": "Zosta\u0148te informovan\u00ed o najnov\u0161\u00edch trendoch v umelej inteligencii, podnikovej inov\u00e1cii a metodol\u00f3gi\u00e1ch odborn\u00e9ho vzdel\u00e1vania.",
+    "items_list": [
+      {
+        "title": "AI pre obchodn\u00e9 t\u00edmy: od pr\u00edle\u017eitosti k ponuke",
+        "description": "Viac pr\u00edle\u017eitost\u00ed, lep\u0161ie ponuky a lep\u0161ia obchodn\u00e1 koordin\u00e1cia s AI.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
+        "category": "Vzdel\u00e1vanie",
+        "date": "2026-03-13",
+        "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
+        "badge": "VZDEL\u00c1VANIE/ES"
+      },
+      {
+        "title": "AI pre in\u017einierstvo: vy\u0161\u0161ia efektivita, menej repetit\u00edvnych \u00faloh",
+        "description": "Automatizujte technick\u00e9 \u00falohy a zv\u00fd\u0161te produktivitu in\u017einierskeho t\u00edmu.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
+        "category": "Vzdel\u00e1vanie",
+        "date": "2026-03-13",
+        "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
+        "badge": "VZDEL\u00c1VANIE/ES"
+      },
+      {
+        "title": "Pokro\u010dil\u00e1 umel\u00e1 inteligencia a nov\u00e9 n\u00e1stroje: od copilota k agentom",
+        "description": "Presk\u00famajte s\u00fa\u010dasn\u00fd ekosyst\u00e9m AI, od pilotov a\u017e po inteligentn\u00fdch agentov, a zistite, ako automatizova\u0165 a optimalizova\u0165 podnikové procesy.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
+        "category": "Vzdel\u00e1vanie",
+        "date": "2026-03-13",
+        "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
+        "badge": "VZDEL\u00c1VANIE/ES"
+      },
+      {
+        "title": "Copilot vo firme: skuto\u010dn\u00e1 produktivita v prostred\u00ed Microsoft",
+        "description": "Produktivita s Copilotom v industri\u00e1lnej spolo\u010dnosti pri bezpe\u010dnom pou\u017e\u00edvan\u00ed n\u00e1stroja.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
+        "category": "Vzdel\u00e1vanie",
+        "date": "2026-03-13",
+        "image": "https://learningbrains.eu/images/news/copilot_course.png",
+        "badge": "VZDEL\u00c1VANIE/ES"
+      },
+      {
+        "title": "Ako navrhn\u00fa\u0165 AI itiner\u00e1r vo va\u0161ej organiz\u00e1cii",
+        "description": "Od z\u00e1meru k akcii: k\u013e\u00fa\u010dov\u00e9 rozhodnutia pri implement\u00e1cii AI so skuto\u010dn\u00fdm dopadom.",
+        "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
+        "category": "Vzdel\u00e1vanie",
+        "date": "2026-03-13",
+        "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
+        "badge": "VZDEL\u00c1VANIE/ES"
+      },
+      {
+        "title": "Granty SPRI: Umel\u00e1 inteligencia 2026",
+        "description": "Aplikujte umel\u00fa inteligenciu na transform\u00e1ciu industri\u00e1lnych procesov a z\u00edskanie konkurencieschopnosti.",
+        "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
+        "category": "V\u00fdskum",
+        "date": "2026-03-14",
+        "image": "/images/news/spri_ai_2026.png",
+        "badge": "GENERAL/EU"
+      }
+    ]
+  },
+  "legal": {
+    "seo_title": "Pr\u00e1vne pozn\u00e1mky \u2013 S\u00fakromie a Cookies | Learning Brains",
+    "seo_description": "Z\u00e1sady ochrany osobn\u00fdch \u00fadajov, inform\u00e1cie o cookies a ozn\u00e1menie o transparentnosti webovej str\u00e1nky projektu Erasmus+ Learning Brains.",
+    "title": "Pr\u00e1vne inform\u00e1cie",
+    "tab_privacy": "S\u00fakromie",
+    "tab_cookies": "Cookies",
+    "tab_transparency": "Transparentnos\u0165",
+    "privacy_controller_title": "Prev\u00e1dzkovate\u013e",
+    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, koordin\u00e1tor projektu Learning Brains (Erasmus+ KA220-VET), p\u00f4sob\u00ed ako prev\u00e1dzkovate\u013e osobn\u00fdch \u00fadajov zhroma\u017eden\u00fdch prostredn\u00edctvom tejto webovej str\u00e1nky.",
+    "privacy_data_title": "Zhroma\u017eden\u00e9 \u00fadaje",
+    "privacy_data_text": "Zhroma\u017e\u010fujeme len \u00fadaje, ktor\u00e9 dobrovo\u013ene poskytnete prostredn\u00edctvom kontaktného formul\u00e1ra: meno, e-mailov\u00fa adresu a spr\u00e1vu. Nezhroma\u017e\u010fujeme \u00fadaje od malolet\u00fdch ani citliv\u00e9 \u00fadaje.",
+    "privacy_purpose_title": "\u00da\u010del",
+    "privacy_purpose_text": "\u00dadaje sa pou\u017e\u00edvaj\u00fa v\u00fdhradne na odpovedanie na ot\u00e1zky t\u00fdkaj\u00face sa projektu a na aktivity \u0161\u00edrenia projektu. \u00dadaje sa nezdie\u013eaj\u00fa s tret\u00edmi stranami, pokia\u013e to nevy\u017eaduje z\u00e1kon.",
+    "privacy_rights_title": "Va\u0161e pr\u00e1va",
+    "privacy_rights_text": "Svoje pr\u00e1va na pr\u00edstup, opravu, vymazanie a namietanie m\u00f4\u017eete uplatni\u0165 p\u00edsomne na adrese info@fvem.es. Ak sa domnievate, \u017ee spracovanie nie je zákonné, m\u00f4\u017eete poda\u0165 s\u0165a\u017enos\u0165 na n\u00e1rodn\u00fd \u00farad na ochranu osobn\u00fdch \u00fadajov.",
+    "privacy_legal_basis_title": "Pr\u00e1vny z\u00e1klad spracovania",
+    "privacy_legal_basis_text": "Spracovanie \u00fadajov je zalo\u017een\u00e9 na opr\u00e1vnenom z\u00e1ujme konzorcia pre riadenie a \u0161\u00edrenie projektu (\u010dl. 6.1.f GDPR) a na va\u0161om s\u00fahlase, ak bol v\u00fdslovne vy\u017eadovan\u00fd (\u010dl. 6.1.a GDPR).",
+    "privacy_retention_title": "Uchov\u00e1vanie \u00fadajov",
+    "privacy_retention_text": "\u00dadaje sa bud\u00fa uchov\u00e1va\u0165 po\u010das trvania projektu (do roku 2027) a následne po minim\u00e1lnu dobu vy\u017eadovan\u00fa platn\u00fdmi pr\u00e1vnymi predpismi alebo po\u017eiadavkami Eur\u00f3pskej komisie na audit (zvy\u010dajne 5 rokov po ukon\u010den\u00ed projektu).",
+    "privacy_minors_title": "Malolet\u00ed",
+    "privacy_minors_text": "T\u00e1to webov\u00e1 str\u00e1nka nie je ur\u010den\u00e1 osob\u00e1m mlad\u0161\u00edm ako 18 rokov a vedome nezhroma\u017e\u010fujeme osobn\u00e9 \u00fadaje od malolet\u00fdch. Ak zist\u00edme, \u017ee boli zhroma\u017eden\u00e9 \u00fadaje od maloletého bez s\u00fahlasu rodi\u010dov, okam\u017eite ich vyma\u017eeme.",
+    "cookies_what_title": "\u010co s\u00fa cookies?",
+    "cookies_what_text": "Cookies s\u00fa mal\u00e9 s\u00fabory ulo\u017eené vo va\u0161om prehliada\u010di na zlep\u0161enie z\u00e1\u017eitku z navig\u00e1cie. T\u00e1to str\u00e1nka pou\u017e\u00edva iba technick\u00e9 cookies nevyhnutn\u00e9 pre fungovanie str\u00e1nky.",
+    "cookies_types_title": "Typy pou\u017e\u00edvan\u00fdch cookies",
+    "cookies_types_text": "Session cookies: pre navig\u00e1ciu medzi str\u00e1nkami a prep\u00edna\u010d jazykov. Google Analytics: na anonymné meranie n\u00e1v\u0161tevnosti (ak je povolené). Nepou\u017e\u00edvaj\u00fa sa \u017eiadne reklamn\u00e9 cookies ani sledovanie tret\u00edch str\u00e1n.",
+    "cookies_manage_title": "Ako spravova\u0165 cookies",
+    "cookies_manage_text": "Cookies m\u00f4\u017eete zak\u00e1za\u0165 alebo vymaza\u0165 v nastaveniach svojho prehliada\u010da. Upozor\u014ujeme, \u017ee niektoré funkcie webovej str\u00e1nky m\u00f4\u017eu presta\u0165 spr\u00e1vne fungova\u0165, ak zablokujete v\u0161etky cookies.",
+    "cookies_analytics_title": "Google Analytics",
+    "cookies_analytics_text": "T\u00e1to webov\u00e1 str\u00e1nka m\u00f4\u017ee pou\u017e\u00edva\u0165 Google Analytics na anonymné meranie n\u00e1v\u0161tevnosti. Analytické cookies sa aktivuj\u00fa iba vtedy, ak s\u00fahlas\u00edte s bannerom s\u00fahlasu. Ak odmietnete, neulo\u017eia sa \u017eiadne osobn\u00e9 \u00fadaje.",
+    "trans_project_title": "Inform\u00e1cie o projekte",
+    "trans_programme": "Program",
+    "trans_funder": "Poskytovate\u013e grantu",
+    "trans_funder_value": "Eur\u00f3pska komisia \u2014 EACEA",
+    "trans_agency": "N\u00e1rodn\u00e1 agent\u00fara",
+    "trans_coordinator": "Koordin\u00e1tor",
+    "trans_duration": "Trvanie",
+    "trans_partners_label": "Partneri",
+    "eu_disclaimer": "Spolufinancovan\u00e9 programom Eur\u00f3pskej \u00fanie Erasmus+. Tento projekt bol financovan\u00fd s podporou Eur\u00f3pskej komisie. T\u00e1to publik\u00e1cia [komunik\u00e1cia] odr\u00e1\u017ea v\u00fdhradne n\u00e1zory autora a Komisia nenesie zodpovednos\u0165 za ak\u00e9ko\u013evek pou\u017eitie inform\u00e1ci\u00ed v nej obsiahnut\u00fdch."
+  },
+  "cookies_banner": {
+    "text": "Pou\u017e\u00edvame nevyhnutné technické cookies a ak s\u00fahlas\u00edte, aj analytické cookies (Google Analytics) na zlep\u0161enie v\u00e1\u0161ho z\u00e1\u017eitku.",
+    "learn_more": "Zisti\u0165 viac",
+    "accept": "Prija\u0165",
+    "decline": "Odmietnu\u0165"
   }
 }
