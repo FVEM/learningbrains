@@ -1,373 +1,357 @@
-import React, { useEffect, useRef, useState, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  ChevronRight, 
-  ExternalLink, 
-  Globe, 
-  Database, 
-  Network, 
-  Activity,
-  Cpu,
-  Brain,
-  ShieldCheck,
-  Zap,
-  BarChart3,
-  Calendar,
+  Brain, 
+  Target, 
+  Zap, 
+  TrendingUp, 
+  Clock, 
+  Layout, 
+  Users,
   MessageSquare,
-  Newspaper,
-  Terminal,
-  PlayCircle
+  Globe,
+  ChevronRight,
+  ExternalLink,
+  Calendar,
+  CheckCircle2
 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ResponsiveContainer, 
+  AreaChart, 
+  Area, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip as RechartsTooltip
+} from 'recharts';
 
 const Home = () => {
   const { t, i18n } = useTranslation();
-  const canvasRef = useRef(null);
-  const videoRef = useRef(null);
-  const [isVideoReady, setIsVideoReady] = useState(false);
-  const [animationFrame, setAnimationFrame] = useState(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Memoize news items to ensure stability
-  const newsItems = useMemo(() => {
-    const rawItems = t('i18n.news.items_list', { returnObjects: true });
-    return Array.isArray(rawItems) ? rawItems : [];
-  }, [t, i18n.language]);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const stats = [
-    { label: t('home.stats.partners'), value: '12', icon: Globe, color: 'text-blue-400' },
-    { label: t('home.stats.countries'), value: '6', icon: Network, color: 'text-purple-400' },
-    { label: t('home.stats.budget'), value: '€2.5M+', icon: Database, color: 'text-emerald-400' },
-    { label: t('home.stats.duration'), value: '36', icon: Activity, color: 'text-rose-400' },
+  const chartData = [
+    { name: t('home.chart_label_1', 'Adaptability'), value: 40 },
+    { name: t('home.chart_label_1', 'Adaptability'), value: 65 },
+    { name: t('home.chart_label_2', 'Training Efficiency'), value: 45 },
+    { name: t('home.chart_label_2', 'Training Efficiency'), value: 85 },
+    { name: t('home.chart_label_3', 'Learning Speed'), value: 35 },
+    { name: t('home.chart_label_3', 'Learning Speed'), value: 92 },
   ];
 
-  const features = [
+  const features = t('home.features', { returnObjects: true }) || [];
+  const stats = t('home.stats', { returnObjects: true }) || [];
+  const impactPoints = [
+    t('home.impact_point_1', 'Enhanced Workforce Adaptability'),
+    t('home.impact_point_2', 'Modernized VET Curricula'),
+    t('home.impact_point_3', 'Stronger Industry-Education Links')
+  ];
+
+  const newsItems = t('home.latest_updates.news_items', { returnObjects: true }) || [
     {
-      title: t('home.features.ai.title'),
-      desc: t('home.features.ai.desc'),
-      icon: Brain,
-      gradient: 'from-blue-500/20 to-cyan-500/20',
-      border: 'border-blue-500/30'
-    },
-    {
-      title: t('home.features.security.title'),
-      desc: t('home.features.security.desc'),
-      icon: ShieldCheck,
-      gradient: 'from-purple-500/20 to-pink-500/20',
-      border: 'border-purple-500/30'
-    },
-    {
-      title: t('home.features.performance.title'),
-      desc: t('home.features.performance.desc'),
-      icon: Zap,
-      gradient: 'from-amber-500/20 to-orange-500/20',
-      border: 'border-amber-500/30'
-    },
-    {
-      title: t('home.features.analytics.title'),
-      desc: t('home.features.analytics.desc'),
-      icon: BarChart3,
-      gradient: 'from-emerald-500/20 to-teal-500/20',
-      border: 'border-emerald-500/30'
+      badge: t('home.latest_updates.news_1.badge', 'Meeting'),
+      date: t('home.latest_updates.news_1.date', 'Feb 2026 \u00b7 Bilbao, Spain'),
+      title: t('home.latest_updates.news_1.title', 'Project Kick-off Meeting'),
+      description: t('home.latest_updates.news_1.description', 'Partners met for the first time at FVEM headquarters to discuss the project timeline.'),
+      link: t('home.latest_updates.news_1.link', 'Read on LinkedIn')
     }
   ];
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
 
-    const ctx = canvas.getContext('2d', { alpha: false });
-    let frameId;
-
-    const resize = () => {
-      const container = canvas.parentElement;
-      canvas.width = container.clientWidth;
-      canvas.height = container.clientHeight;
-    };
-
-    const render = () => {
-      if (videoRef.current && isVideoReady) {
-        ctx.filter = 'contrast(1.1) brightness(0.8) saturate(1.2)';
-        ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
-        
-        // Add futuristic overlay
-        ctx.fillStyle = 'rgba(10, 11, 30, 0.4)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Scanline effect
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
-        ctx.lineWidth = 1;
-        for (let i = 0; i < canvas.height; i += 4) {
-          ctx.beginPath();
-          ctx.moveTo(0, i);
-          ctx.lineTo(canvas.width, i);
-          ctx.stroke();
-        }
-
-        // Mouse glow
-        if (isHovering) {
-          const gradient = ctx.createRadialGradient(
-            mousePos.x, mousePos.y, 0,
-            mousePos.x, mousePos.y, 250
-          );
-          gradient.addColorStop(0, 'rgba(59, 130, 246, 0.15)');
-          gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
-          ctx.fillStyle = gradient;
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-        }
-      }
-      frameId = requestAnimationFrame(render);
-    };
-
-    window.addEventListener('resize', resize);
-    resize();
-    render();
-
-    return () => {
-      window.removeEventListener('resize', resize);
-      cancelAnimationFrame(frameId);
-    };
-  }, [isVideoReady, mousePos, isHovering]);
-
-  const handleMouseMove = (e) => {
-    const rect = canvasRef.current.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
-    });
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
-    <div className=\"min-h-screen bg-[#05050a] text-white selection:bg-blue-500/30\">
+    <div className=\"min-h-screen bg-white\">
       {/* Hero Section */}
-      <section className=\"relative h-screen flex items-center overflow-hidden\">
-        <div className=\"absolute inset-0 z-0\">
-          <video
-            ref={videoRef}
-            src={`${import.meta.env.BASE_URL}hero-bg.mp4`}
-            muted
-            loop
-            playsInline
-            autoPlay
-            onCanPlay={() => setIsVideoReady(true)}
-            className=\"hidden\"
-          />
-          <canvas
-            ref={canvasRef}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            className=\"w-full h-full object-cover transition-opacity duration-1000 opacity-60\"
-          />
-          <div className=\"absolute inset-0 bg-gradient-to-b from-transparent via-[#05050a]/50 to-[#05050a]\" />
-        </div>
-
-        <div className=\"container mx-auto px-6 relative z-10\">
-          <div className=\"max-w-4xl\">
-            <div className=\"inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-fade-in\">
-              <Zap size={14} className=\"animate-pulse\" />
-              {t('home.hero.badge')}
-            </div>
-            
-            <h1 className=\"text-6xl md:text-8xl font-bold font-heading leading-tight mb-8 tracking-tight\">
-              {t('home.hero.title_start')}{' '}
-              <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400\">
-                {t('home.hero.title_accent')}
-              </span>
-              <br />
-              {t('home.hero.title_end')}
-            </h1>
-            
-            <p className=\"text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed\">
-              {t('home.hero.description')}
-            </p>
-
-            <div className=\"flex flex-wrap gap-4\">
-              <Link 
-                to=\"/project\"
-                className=\"group relative px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 overflow-hidden\"
-              >
-                <div className=\"absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700\" />
-                {t('home.hero.cta_primary')}
-                <ArrowRight size={20} className=\"group-hover:translate-x-1 transition-transform\" />
-              </Link>
-              <button className=\"px-8 py-4 bg-white/5 hover:bg-white/10 text-white rounded-xl font-semibold transition-all duration-300 border border-white/10 flex items-center gap-2\">
-                {t('home.hero.cta_secondary')}
-                <PlayCircle size={20} />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className=\"absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30\">
-          <ChevronRight size={32} className=\"rotate-90\" />
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className=\"py-20 border-y border-white/5 bg-[#080812]\">
-        <div className=\"container mx-auto px-6\">
-          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
-            {stats.map((stat, idx) => (
-              <div key={idx} className=\"text-center group\">
-                <div className={`inline-flex p-3 rounded-2xl bg-white/5 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className={stat.color} size={24} />
-                </div>
-                <div className=\"text-3xl font-bold mb-1\">{stat.value}</div>
-                <div className=\"text-sm text-gray-500 uppercase tracking-wider\">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className=\"py-32 relative overflow-hidden\">
-        <div className=\"absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full\" />
-        <div className=\"absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/5 blur-[120px] rounded-full\" />
+      <section className=\"relative pt-32 pb-20 overflow-hidden\">
+        <div className=\"absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50/50 -z-10\" />
+        <div className=\"absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_50%)] -z-10\" />
         
-        <div className=\"container mx-auto px-6\">
-          <div className=\"text-center max-w-3xl mx-auto mb-20\">
-            <h2 className=\"text-4xl md:text-5xl font-bold mb-6\">{t('home.features.section_title')}</h2>
-            <p className=\"text-gray-400 text-lg\">{t('home.features.section_desc')}</p>
-          </div>
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
+          <div className=\"grid lg:grid-cols-2 gap-12 items-center\">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className=\"inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6\">
+                <Zap size={14} />
+                {t('home.hero_badge', 'ERASMUS+ COOPERATION PARTNERSHIP')}
+              </div>
+              <h1 className=\"text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight\">
+                {t('home.hero_name', 'Learning Brains')}
+                <span className=\"block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600\">
+                  {t('home.hero_title', 'Real Skills for Real Industry')}
+                </span>
+              </h1>
+              <p className=\"text-xl text-slate-600 mb-10 leading-relaxed max-w-xl\">
+                {t('home.hero_subtitle', 'Integrated Work-Based Learning Systems for Industrial Reskilling')}
+              </p>
+              
+              <div className=\"flex flex-wrap gap-4\">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className=\"px-8 py-4 bg-slate-900 text-white rounded-xl font-semibold flex items-center gap-2 hover:bg-slate-800 transition-colors shadow-lg shadow-slate-200\"
+                >
+                  {t('home.cta_primary', 'Learn More')}
+                  <ArrowRight size={20} />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className=\"px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 transition-colors\"
+                >
+                  {t('home.cta_secondary', 'Our Partners')}
+                </motion.button>
+              </div>
 
-          <div className=\"grid md:grid-cols-2 lg:grid-cols-4 gap-6\">
-            {features.map((feature, idx) => (
-              <div 
-                key={idx}
-                className={`p-8 rounded-3xl bg-white/5 border ${feature.border} hover:bg-white/10 transition-all duration-500 group relative overflow-hidden`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                <div className=\"relative z-10\">
-                  <div className=\"w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-white/20 transition-colors\">
-                    <feature.icon size={24} className=\"text-blue-400 group-hover:scale-110 transition-transform\" />
-                  </div>
-                  <h3 className=\"text-xl font-bold mb-3\">{feature.title}</h3>
-                  <p className=\"text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors\">
-                    {feature.desc}
-                  </p>
+              <div className=\"mt-12 flex items-center gap-6\">
+                <div className=\"flex -space-x-3\">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className=\"w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center\">
+                      <Users size={16} className=\"text-slate-400\" />
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <div className=\"text-sm font-bold text-slate-900\">{t('home.partners_count', '6 Strategic Partners')}</div>
+                  <div className=\"text-xs text-slate-500\">{t('home.partners_text', 'Across 5 European Countries')}</div>
                 </div>
               </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className=\"relative\"
+            >
+              <div className=\"relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100\">
+                <div className=\"p-8 bg-slate-900\">
+                  <div className=\"flex justify-between items-center mb-8\">
+                    <div className=\"text-white font-bold\">{t('home.impact_title', 'Project Impact')}</div>
+                    <div className=\"flex gap-2\">
+                      <div className=\"w-3 h-3 rounded-full bg-red-400\" />
+                      <div className=\"w-3 h-3 rounded-full bg-amber-400\" />
+                      <div className=\"w-3 h-3 rounded-full bg-green-400\" />
+                    </div>
+                  </div>
+                  <div className=\"h-[300px] w-full\">
+                    <ResponsiveContainer width=\"100%\" height=\"100%\">
+                      <AreaChart data={chartData}>
+                        <defs>
+                          <linearGradient id=\"colorValue\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">
+                            <stop offset=\"5%\" stopColor=\"#3b82f6\" stopOpacity={0.3}/>
+                            <stop offset=\"95%\" stopColor=\"#3b82f6\" stopOpacity={0}/>
+                          </linearGradient>
+                        </defs>
+                        <CartesianGrid strokeDasharray=\"3 3\" stroke=\"#1e293b\" vertical={false} />
+                        <XAxis dataKey=\"name\" stroke=\"#64748b\" fontSize={12} tickLine={false} axisLine={false} />
+                        <YAxis stroke=\"#64748b\" fontSize={12} tickLine={false} axisLine={false} />
+                        <RechartsTooltip 
+                          contentStyle={{ backgroundColor: '#0f172a', border: 'none', borderRadius: '8px', color: '#fff' }}
+                        />
+                        <Area 
+                          type=\"monotone\" 
+                          dataKey=\"value\" 
+                          stroke=\"#3b82f6\" 
+                          strokeWidth={3}
+                          fillOpacity={1} 
+                          fill=\"url(#colorValue)\" 
+                        />
+                      </AreaChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+                <div className=\"grid grid-cols-2 gap-4 p-6 bg-slate-50\">
+                  {stats.map((stat, idx) => (
+                    <div key={idx} className=\"bg-white p-4 rounded-xl border border-slate-100 shadow-sm\">
+                      <div className=\"text-2xl font-bold text-blue-600\">{stat.value}</div>
+                      <div className=\"text-xs font-medium text-slate-500 uppercase tracking-wider\">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Pillars */}
+      <section className=\"py-24 bg-slate-50\">
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
+          <div className=\"text-center max-w-3xl mx-auto mb-16\">
+            <div className=\"inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-4\">
+              {t('home.pillars_badge', 'Core Pillars')}
+            </div>
+            <h2 className=\"text-4xl font-bold text-slate-900 mb-6\">
+              {t('home.pillars_title', 'Innovating VET Systems')}
+            </h2>
+            <p className=\"text-lg text-slate-600\">
+              {t('home.pillars_subtitle', 'Learning Brains introduces a new paradigm for industrial training by combining three key elements into a unified framework.')}
+            </p>
+          </div>
+
+          <div className=\"grid md:grid-cols-3 gap-8\">
+            {features.map((feature, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ y: -5 }}
+                className=\"bg-white p-8 rounded-2xl shadow-sm border border-slate-100\"
+              >
+                <div className=\"w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6\">
+                  {idx === 0 ? <Layout size={24} /> : idx === 1 ? <Target size={24} /> : <Brain size={24} />}
+                </div>
+                <h3 className=\"text-xl font-bold text-slate-900 mb-4\">{feature.title}</h3>
+                <p className=\"text-slate-600 leading-relaxed\">{feature.desc}</p>
+              </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Details Section */}
+      <section className=\"py-24 overflow-hidden\">
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
+          <div className=\"bg-slate-900 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden\">
+            <div className=\"absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent -z-0\" />
+            
+            <div className=\"grid lg:grid-cols-2 gap-12 items-center relative z-10\">
+              <div>
+                <div className=\"inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6 uppercase tracking-widest\">
+                  {t('home.impact_badge', 'Project Impact')}
+                </div>
+                <h2 className=\"text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight\">
+                  {t('home.impact_title', 'Driving Real Change')}
+                </h2>
+                <p className=\"text-blue-100/80 text-lg mb-10 leading-relaxed\">
+                  {t('home.impact_text', 'We aim to bridge the gap between vocational education and real-world industrial needs through practical, measurable interventions.')}
+                </p>
+                
+                <div className=\"space-y-4\">
+                  {impactPoints.map((point, idx) => (
+                    <div key={idx} className=\"flex items-center gap-3 text-white\">
+                      <div className=\"w-6 h-6 rounded-full bg-blue-500/30 flex items-center justify-center shrink-0\">
+                        <CheckCircle2 size={14} className=\"text-blue-400\" />
+                      </div>
+                      <span className=\"font-medium\">{point}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <motion.button
+                  whileHover={{ x: 5 }}
+                  className=\"mt-12 flex items-center gap-2 text-blue-400 font-bold group\"
+                >
+                  {t('home.impact_cta', 'View Full Impact')}
+                  <ChevronRight size={18} className=\"group-hover:translate-x-1 transition-transform\" />
+                </motion.button>
+              </div>
+
+              <div className=\"grid grid-cols-2 gap-6\">
+                <div className=\"space-y-6\">
+                  <div className=\"bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10\">
+                    <div className=\"text-4xl font-bold text-white mb-2\">85%</div>
+                    <div className=\"text-sm text-blue-200 uppercase tracking-widest\">{t('home.metric_label_1', 'Industry Engagement')}</div>
+                  </div>
+                  <div className=\"bg-blue-600 p-8 rounded-3xl shadow-xl shadow-blue-900/20\">
+                    <div className=\"text-4xl font-bold text-white mb-2\">92%</div>
+                    <div className=\"text-sm text-blue-100 uppercase tracking-widest\">{t('home.metric_label_2', 'Training Efficiency')}</div>
+                  </div>
+                </div>
+                <div className=\"pt-12 space-y-6\">
+                  <div className=\"bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10\">
+                    <div className=\"text-4xl font-bold text-white mb-2\">78%</div>
+                    <div className=\"text-sm text-blue-200 uppercase tracking-widest\">{t('home.metric_label_3', 'Job Readiness')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Latest Updates Section */}
-      <section className=\"py-32 bg-[#080812]\">
-        <div className=\"container mx-auto px-6\">
-          <div className=\"flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16\">
-            <div className=\"max-w-2xl\">
-              <div className=\"inline-flex items-center gap-2 text-blue-400 font-medium mb-4\">
-                <Newspaper size={20} />
-                {t('i18n.news.section_badge')}
-              </div>
-              <h2 className=\"text-4xl md:text-5xl font-bold\">{t('i18n.news.section_title')}</h2>
+      <section className=\"py-24 bg-white\">
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
+          <div className=\"flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6\">
+            <div className=\"max-w-xl\">
+              <h2 className=\"text-4xl font-bold text-slate-900 mb-4\">
+                {t('home.latest_updates.title', 'Latest Updates')}
+              </h2>
+              <p className=\"text-slate-600 text-lg italic\">
+                {t('home.latest_updates.description', 'Milestones, events, and project outcomes of the Learning Brains project.')}
+              </p>
             </div>
-            <Link 
-              to=\"/news\" 
-              className=\"inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors group\"
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className=\"px-6 py-3 bg-slate-100 text-slate-900 rounded-xl font-bold flex items-center gap-2 hover:bg-slate-200 transition-colors\"
             >
-              {t('i18n.news.view_all')}
-              <ArrowRight size={20} className=\"group-hover:translate-x-1 transition-transform\" />
-            </Link>
+              {t('home.latest_updates.view_all', 'View all news')}
+              <ExternalLink size={16} />
+            </motion.button>
           </div>
 
-          <div className=\"grid md:grid-cols-3 gap-8\">
-            {newsItems && newsItems.length > 0 ? (
-              newsItems.slice(0, 3).map((item, idx) => (
-                <div 
-                  key={idx}
-                  className=\"group bg-[#05050a] rounded-3xl overflow-hidden border border-white/5 hover:border-blue-500/30 transition-all duration-500\"
-                >
-                  <div className=\"relative aspect-[16/9] overflow-hidden\">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}news/${item.image || 'default-news.jpg'}`} 
-                      alt={item.title}
-                      className=\"w-full h-full object-cover transition-transform duration-700 group-hover:scale-110\"
-                    />
-                    <div className=\"absolute top-4 left-4\">
-                      <span className=\"px-3 py-1 bg-[#05050a]/80 backdrop-blur-md rounded-full text-xs font-medium border border-white/10\">
-                        {item.category}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <div className=\"p-8\">
-                    <div className=\"flex items-center gap-3 text-sm text-gray-500 mb-4 font-mono\">
+          <div className=\"grid lg:grid-cols-2 gap-8\">
+            {newsItems.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial=\"hidden\"
+                whileInView=\"visible\"
+                viewport={{ once: true }}
+                variants={itemVariants}
+                className=\"group\"
+              >
+                <div className=\"bg-slate-50 rounded-[2rem] p-8 border border-slate-100 group-hover:bg-blue-50 group-hover:border-blue-100 transition-all duration-300\">
+                  <div className=\"flex flex-wrap items-center gap-4 mb-6\">
+                    <span className=\"px-3 py-1 rounded-full bg-white text-blue-600 text-xs font-bold uppercase tracking-wider border border-slate-100\">
+                      {item.badge}
+                    </span>
+                    <span className=\"flex items-center gap-2 text-slate-500 text-sm italic\">
                       <Calendar size={14} />
                       {item.date}
-                    </div>
-                    <h3 className=\"text-xl font-bold mb-4 group-hover:text-blue-400 transition-colors line-clamp-2\">
-                      {item.title}
-                    </h3>
-                    <p className=\"text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3\">
-                      {item.description}
-                    </p>
-                    <a 
-                      href={item.link}
-                      target=\"_blank\"
-                      rel=\"noopener noreferrer\"
-                      className=\"inline-flex items-center gap-2 text-sm font-semibold text-blue-400 group-hover:gap-3 transition-all\"
-                    >
-                      READ FULL ARTICLE
-                      <ExternalLink size={14} />
-                    </a>
+                    </span>
                   </div>
+                  <h3 className=\"text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors\">
+                    {item.title}
+                  </h3>
+                  <p className=\"text-slate-600 leading-relaxed mb-8\">
+                    {item.description}
+                  </p>
+                  <a 
+                    href={item.link}
+                    target=\"_blank\"
+                    rel=\"noopener noreferrer\"
+                    className=\"inline-flex items-center gap-2 font-bold text-slate-900 group-hover:gap-3 transition-all\"
+                  >
+                    {t('home.latest_updates.news_1.link', 'Read on LinkedIn')}
+                    <ArrowRight size={18} className=\"text-blue-600\" />
+                  </a>
                 </div>
-              ))
-            ) : (
-              <div className=\"col-span-full py-20 text-center border border-dashed border-white/10 rounded-3xl\">
-                <div className=\"inline-flex p-4 rounded-2xl bg-white/5 mb-4\">
-                  <Terminal size={32} className=\"text-gray-600\" />
-                </div>
-                <p className=\"text-gray-500\">No news articles available at the moment.</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className=\"py-32 relative overflow-hidden\">
-        <div className=\"container mx-auto px-6 relative z-10\">
-          <div className=\"bg-blue-600 rounded-[3rem] p-12 md:p-20 text-center overflow-hidden relative group\">
-            <div className=\"absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-700\" />
-            <div className=\"absolute inset-0 opacity-20 group-hover:scale-110 transition-transform duration-1000\" 
-                 style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
-            
-            <div className=\"relative z-10 max-w-3xl mx-auto\">
-              <h2 className=\"text-4xl md:text-6xl font-bold mb-8 leading-tight\">
-                Ready to explore the future of brain research?
-              </h2>
-              <p className=\"text-blue-100 text-xl mb-12 opacity-90\">
-                Join our network of researchers and institutions dedicated to advancing clinical research through technology.
-              </p>
-              <div className=\"flex flex-wrap justify-center gap-6\">
-                <button className=\"px-10 py-5 bg-white text-blue-600 rounded-2xl font-bold hover:bg-blue-50 transition-all hover:scale-105\">
-                  Schedule Demo
-                </button>
-                <button className=\"px-10 py-5 bg-blue-700/30 backdrop-blur-md text-white border border-white/20 rounded-2xl font-bold hover:bg-blue-700/40 transition-all\">
-                  Contact Project Manager
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Integration Banner */}
-      <section className=\"py-12 border-t border-white/5\">
-        <div className=\"container mx-auto px-6\">
-          <div className=\"flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-500\">
-            <div className=\"flex items-center gap-2 font-heading font-black italic\">PARTNER 01</div>
-            <div className=\"flex items-center gap-2 font-heading font-black italic\">PARTNER 02</div>
-            <div className=\"flex items-center gap-2 font-heading font-black italic\">PARTNER 03</div>
-            <div className=\"flex items-center gap-2 font-heading font-black italic\">PARTNER 04</div>
-            <div className=\"flex items-center gap-2 font-heading font-black italic\">PARTNER 05</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
