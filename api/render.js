@@ -20,22 +20,28 @@ export default async function handler(req, res) {
 
   let html = '';
   try {
-    // 3. Fetch strategy: always get the latest built index.html from the host
-    // This is more reliable on Vercel than local fs for static assets.
-    const protocol = req.headers['x-forwarded-proto'] || 'https';
-    const host = req.headers.host;
-    const baseUrl = `${protocol}://${host}`;
+    // 3. Bundled template read: path.join(process.cwd(), 'index.html')
+    // This is now guaranteed by vercel.json "functions" includeFiles config.
+    const indexPath = path.join(process.cwd(), 'index.html');
     
-    // Fetch specifically the root/index.html (which is static)
-    // We add a cache-buster or just use a direct request to avoid recursion
-    const response = await fetch(`${baseUrl}/index.html`, {
-      headers: { 'x-is-ssr-fetch': 'true' }
-    });
-    
-    if (response.ok) {
-        html = await response.text();
+    if (fs.existsSync(indexPath)) {
+        html = fs.readFileSync(indexPath, 'utf8');
     } else {
-        throw new Error(`Failed to fetch index.html: ${response.status}`);
+        // Fallback to searching in case of absolute path issues
+        const altPaths = [
+          path.join(__dirname, '..', 'index.html'),
+          path.join(__dirname, 'index.html'), // Special case for some Vercel build modes
+        ];
+        for (const p of altPaths) {
+          if (fs.existsSync(p)) {
+            html = fs.readFileSync(p, 'utf8');
+            break;
+          }
+        }
+    }
+
+    if (!html) {
+      throw new Error('Static index.html template not found in bundle.');
     }
 
     // 4. Inject metadata
@@ -65,7 +71,8 @@ export default async function handler(req, res) {
     res.status(200).send(html);
   } catch (error) {
     console.error('SSR Render Error:', error);
-    // Absolute fallback: if fetch fails, return a 500 but still HTML so it's not a white screen
-    res.status(200).send(`<!DOCTYPE html><html><head><title>${meta.title}</title></head><body><div id="root"></div><p>Application loading error. Please refresh.</p></body></html>`);
+    // Ultimate fallback: if we can't get the template, we must still load the site.
+    // We send a minimal wrapper that at least sets the meta and tries to load the manifest or a static asset.
+    res.status(200).send(`<!DOCTYPE html><html><head><title>${meta.title}</title><meta name="description" content="${meta.description}" /></head><body><div id="root"></div><script>window.location.reload();</script></body></html>`);
   }
 }

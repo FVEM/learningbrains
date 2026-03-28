@@ -1,11 +1,16 @@
 {
+    "functions": {
+        "api/render.js": {
+            "includeFiles": "index.html"
+        }
+    },
     "rewrites": [
         {
             "source": "/api/(.*)",
             "destination": "/api/$1"
         },
         {
-            "source": "/((?!api/|assets/|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\.(?:css|js|png|jpg|jpeg|svg|webp|gif|woff2?|ttf|eot)).*)",
+            "source": "/((?!api/|assets/|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\.(?:css|js|png|jpg|jpeg|svg|webp|gif|html|woff2?|ttf|eot)).*)",
             "destination": "/api/render"
         }
     ],
