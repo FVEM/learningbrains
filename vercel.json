@@ -5,7 +5,7 @@
             "destination": "/api/$1"
         },
         {
-            "source": "/((?!assets/|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\.(?:css|js|png|jpg|jpeg|svg|webp|gif|woff2?|ttf|eot)).*)",
+            "source": "/((?!assets/|analytics|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\.(?:css|js|png|jpg|jpeg|svg|webp|gif|woff2?|ttf|eot|jsx)).*)",
             "destination": "/api/render"
         }
     ],
@@ -36,5 +36,10 @@
                 }
             ]
         }
-    ]
+    ],
+    "functions": {
+        "api/render.js": {
+            "includeFiles": "dist/index.html"
+        }
+    }
 }

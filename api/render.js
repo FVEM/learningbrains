@@ -17,10 +17,11 @@ export default async function handler(req, res) {
   const meta = pageMeta[lang] || pageMeta[seoConfig.defaultLang];
 
   try {
-    // 3. Read index.html (the built version)
-    // In Vercel, when running as a function, we need to point to the correct static asset.
-    // Assuming Vite build output is available.
-    const indexPath = path.join(process.cwd(), 'index.html');
+    // 3. Read index.html (prefer the built version in dist)
+    let indexPath = path.join(process.cwd(), 'dist', 'index.html');
+    if (!fs.existsSync(indexPath)) {
+      indexPath = path.join(process.cwd(), 'index.html');
+    }
     let html = fs.readFileSync(indexPath, 'utf8');
 
     // 4. Inject metadata
