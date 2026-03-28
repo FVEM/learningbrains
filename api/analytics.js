@@ -1,14 +1,11 @@
 import { BetaAnalyticsDataClient } from '@google-analytics/data';
 
 export default async function handler(req, res) {
-    // Configuración de CORS
+    // Configuración de CORS por si acaso (aunque esté en el mismo dominio)
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
     res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
-
-    // Caché de Vercel (5 minutos)
-    res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=60');
 
     if (req.method === 'OPTIONS') {
         res.status(200).end();
@@ -18,12 +15,12 @@ export default async function handler(req, res) {
     try {
         const { range = '30days' } = req.query;
 
-        // 1. Validar variables de entorno
+        // Validar entorno
         const propertyId = process.env.GA_PROPERTY_ID;
         let clientEmail = process.env.GA_CLIENT_EMAIL;
         let privateKey = process.env.GA_PRIVATE_KEY;
 
-        // Soporte para pegar el JSON entero de la Service Account en GA_PRIVATE_KEY
+        // Soporte para pegar el JSON entero como GA_PRIVATE_KEY
         if (privateKey?.trim().startsWith('{')) {
             try {
                 const creds = JSON.parse(privateKey);
@@ -34,9 +31,10 @@ export default async function handler(req, res) {
             }
         }
 
-        // Normalizar saltos de línea y cabeceras de la clave privada
+        // Normalizar saltos de línea en la clave privada
         if (privateKey) {
             privateKey = privateKey.replace(/\\n/g, '\n');
+            // Añadir cabeceras si faltan
             if (!privateKey.includes('-----BEGIN')) {
                 privateKey = `-----BEGIN PRIVATE KEY-----\n${privateKey}\n-----END PRIVATE KEY-----\n`;
             }
@@ -44,27 +42,16 @@ export default async function handler(req, res) {
 
         if (!propertyId || !clientEmail || !privateKey) {
             return res.status(500).json({
-                error: 'Missing Google Analytics credentials (GA_PROPERTY_ID, GA_CLIENT_EMAIL, GA_PRIVATE_KEY).'
+                error: 'Missing Google Analytics credentials in environment variables.'
             });
         }
 
-        // 2. Calcular rangos de fechas
-        let startDate, endDate = 'today', prevStartDate, prevEndDate;
-        if (range === '7days') {
-            startDate = '7daysAgo';
-            prevStartDate = '14daysAgo';
-            prevEndDate = '8daysAgo';
-        } else if (range === 'year') {
-            startDate = '365daysAgo';
-            prevStartDate = '730daysAgo';
-            prevEndDate = '366daysAgo';
-        } else {
-            startDate = '30daysAgo';
-            prevStartDate = '60daysAgo';
-            prevEndDate = '31daysAgo';
-        }
+        // Calcular fechas
+        let startDate = '30daysAgo';
+        if (range === '7days') startDate = '7daysAgo';
+        if (range === 'year') startDate = '365daysAgo';
 
-        // 3. Inicializar cliente de GA4
+        // Inicializar cliente
         const analyticsDataClient = new BetaAnalyticsDataClient({
             credentials: {
                 client_email: clientEmail,
@@ -72,18 +59,19 @@ export default async function handler(req, res) {
             }
         });
 
-        // 4. Ejecutar consultas en paralelo
+        // Ejecutar todas las consultas en paralelo para mayor velocidad
         const [
             [kpisResponse],
-            [prevKpisResponse],
             [timeSeriesResponse],
             [devicesResponse],
+            [osResponse],
             [countriesResponse],
             [pagesResponse],
             [channelsResponse],
-            [eventsResponse]
+            [eventsResponse],
+            [languagesResponse]
         ] = await Promise.all([
-            // index 0: KPIs Actuales
+            // 0: KPIs Globales
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
@@ -95,19 +83,7 @@ export default async function handler(req, res) {
                     { name: 'engagementRate' }
                 ]
             }),
-            // index 1: KPIs Previos (Tendencias)
-            analyticsDataClient.runReport({
-                property: `properties/${propertyId}`,
-                dateRanges: [{ startDate: prevStartDate, endDate: prevEndDate }],
-                metrics: [
-                    { name: 'screenPageViews' },
-                    { name: 'activeUsers' },
-                    { name: 'newUsers' },
-                    { name: 'userEngagementDuration' },
-                    { name: 'engagementRate' }
-                ]
-            }),
-            // index 2: Serie Temporal
+            // 1: Serie Temporal
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
@@ -115,31 +91,40 @@ export default async function handler(req, res) {
                 metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }],
                 orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }]
             }),
-            // index 3: Dispositivos
+            // 2: Dispositivos
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'deviceCategory' }],
                 metrics: [{ name: 'activeUsers' }]
             }),
-            // index 4: Países
+            // 3: Sistemas Operativos
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'operatingSystem' }],
+                metrics: [{ name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+            }),
+            // 4: Países Top 5
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'country' }],
                 metrics: [{ name: 'activeUsers' }],
-                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
+                limit: 5
             }),
-            // index 5: Páginas
+            // 5: Páginas Top 6
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'pagePath' }, { name: 'pageTitle' }],
                 metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }, { name: 'userEngagementDuration' }],
                 orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-                limit: 10
+                limit: 6
             }),
-            // index 6: Canales
+            // 6: Canales
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
@@ -147,148 +132,131 @@ export default async function handler(req, res) {
                 metrics: [{ name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
             }),
-            // index 7: Eventos (Chat, PDF, etc.)
+            // 7: Eventos Principales
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'eventName' }],
-                metrics: [{ name: 'eventCount' }],
-                orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }]
+                metrics: [{ name: 'eventCount' }, { name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+                limit: 10
+            }),
+            // 8: Idiomas (Análisis de rutas)
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'pagePath' }],
+                metrics: [{ name: 'activeUsers' }]
             })
         ]);
 
-        // 5. Procesar Datos para el Frontend
-
-        // KPIs
-        const calculateTrend = (curr, prev) => {
-            if (!prev || prev === 0) return 0;
-            return parseFloat(((curr - prev) / prev * 100).toFixed(1));
-        };
-
-        const kRow = kpisResponse.rows?.[0]?.metricValues || [];
-        const pRow = prevKpisResponse.rows?.[0]?.metricValues || [];
-
+        // Procesar KPIs
+        const kpiRow = kpisResponse.rows?.[0];
         const kpis = {
-            views: { 
-                value: parseInt(kRow[0]?.value || 0), 
-                trend: calculateTrend(parseInt(kRow[0]?.value || 0), parseInt(pRow[0]?.value || 0)) 
-            },
-            users: { 
-                value: parseInt(kRow[1]?.value || 0), 
-                trend: calculateTrend(parseInt(kRow[1]?.value || 0), parseInt(pRow[1]?.value || 0)) 
-            },
-            newUsers: { 
-                value: parseInt(kRow[2]?.value || 0), 
-                trend: calculateTrend(parseInt(kRow[2]?.value || 0), parseInt(pRow[2]?.value || 0)) 
-            },
-            avgEngagement: { 
-                value: parseInt(kRow[1]?.value || 0) > 0 
-                    ? Math.round(parseFloat(kRow[3]?.value || 0) / parseInt(kRow[1]?.value || 0)) 
-                    : 0 
-            },
-            engagementRate: { 
-                value: (parseFloat(kRow[4]?.value || 0) * 100).toFixed(1),
-                trend: calculateTrend(parseFloat(kRow[4]?.value || 0), parseFloat(pRow[4]?.value || 0))
-            }
+            views: parseInt(kpiRow?.metricValues?.[0]?.value || '0', 10),
+            users: parseInt(kpiRow?.metricValues?.[1]?.value || '0', 10),
+            newUsers: parseInt(kpiRow?.metricValues?.[2]?.value || '0', 10),
+            avgEngagement: parseInt(kpiRow?.metricValues?.[1]?.value || '1', 10) > 0
+                ? (parseFloat(kpiRow?.metricValues?.[3]?.value || '0') / parseInt(kpiRow?.metricValues?.[1]?.value || '1', 10)).toFixed(0)
+                : 0,
+            engagementRate: (parseFloat(kpiRow?.metricValues?.[4]?.value || '0') * 100).toFixed(1)
         };
 
-        // Serie Temporal
+        // Procesar Serie Temporal
         const timeSeries = timeSeriesResponse.rows?.map(row => {
-            const d = row.dimensionValues[0].value;
+            const dateStr = row.dimensionValues[0].value;
+            const formattedDate = `${dateStr.substring(6, 8)}/${dateStr.substring(4, 6)}`;
             return {
-                date: `${d.substring(6, 8)}/${d.substring(4, 6)}`,
-                views: parseInt(row.metricValues[0].value),
-                users: parseInt(row.metricValues[1].value)
+                date: formattedDate,
+                views: parseInt(row.metricValues[0].value, 10),
+                users: parseInt(row.metricValues[1].value, 10)
             };
         }) || [];
-
-        // Países del Consorcio (Específicos para el proyecto)
-        const projectCountries = ['Spain', 'Italy', 'Austria', 'Slovakia', 'Belgium'];
-        const consortiumCountries = countriesResponse.rows
-            ?.filter(row => projectCountries.includes(row.dimensionValues[0].value))
-            .map(row => ({
-                country: row.dimensionValues[0].value,
-                users: parseInt(row.metricValues[0].value)
-            })) || [];
-        
-        // Si no hay datos de consorcio, usar los top countries
-        if (consortiumCountries.length === 0) {
-            countriesResponse.rows?.slice(0, 5).forEach(row => {
-                consortiumCountries.push({
-                    country: row.dimensionValues[0].value,
-                    users: parseInt(row.metricValues[0].value)
-                });
-            });
-        }
 
         // Dispositivos
         const devices = devicesResponse.rows?.map(row => ({
             name: row.dimensionValues[0].value,
-            value: parseInt(row.metricValues[0].value)
+            value: parseInt(row.metricValues[0].value, 10)
         })) || [];
 
-        // Idiomas (Deducidos del path de la página)
-        const langMap = { ES: 0, EN: 0, IT: 0, SK: 0, DE: 0, PT: 0 };
-        pagesResponse.rows?.forEach(row => {
-            const path = row.dimensionValues[0].value;
-            const users = parseInt(row.metricValues[1].value);
-            const match = path.match(/^\/([a-z]{2})(\/|$)/);
-            if (match) {
-                const l = match[1].toUpperCase();
-                if (langMap[l] !== undefined) langMap[l] += users;
-            } else if (path === '/' || path.startsWith('/?')) {
-                langMap.EN += users;
-            }
-        });
-        const languages = Object.entries(langMap)
-            .filter(([_, v]) => v > 0)
-            .map(([name, value]) => ({ name, value }));
-
-        // Páginas Top
-        const pages = pagesResponse.rows?.slice(0, 5).map(row => ({
-            path: row.dimensionValues[0].value,
-            title: row.dimensionValues[1].value,
-            views: parseInt(row.metricValues[0].value),
-            time: parseInt(row.metricValues[1].value) > 0 
-                ? Math.round(parseFloat(row.metricValues[2].value) / parseInt(row.metricValues[1].value)) 
-                : 0
+        // Sistemas Operativos
+        const os = osResponse.rows?.map(row => ({
+            name: row.dimensionValues[0].value,
+            value: parseInt(row.metricValues[0].value, 10)
         })) || [];
+
+        // Países
+        const countries = countriesResponse.rows?.map(row => ({
+            country: row.dimensionValues[0].value,
+            users: parseInt(row.metricValues[0].value, 10)
+        })) || [];
+
+        // Páginas
+        const pages = pagesResponse.rows?.map(row => {
+            const users = parseInt(row.metricValues[1].value, 10);
+            return {
+                path: row.dimensionValues[0].value,
+                title: row.dimensionValues[1].value,
+                views: parseInt(row.metricValues[0].value, 10),
+                time: users > 0 ? (parseFloat(row.metricValues[2].value) / users).toFixed(0) : 0
+            };
+        }) || [];
 
         // Canales
-        const channels = channelsResponse.rows?.slice(0, 5).map(row => ({
+        const channels = channelsResponse.rows?.map(row => ({
             channel: row.dimensionValues[0].value,
-            users: parseInt(row.metricValues[0].value)
+            users: parseInt(row.metricValues[0].value, 10)
         })) || [];
 
-        // Eventos
+        // Eventos y Chatbot
         let chatInteractions = 0;
-        let pdfDownloads = 0;
-        eventsResponse.rows?.forEach(row => {
+        const events = eventsResponse.rows?.map(row => {
             const name = row.dimensionValues[0].value;
-            const count = parseInt(row.metricValues[0].value);
-            if (name.includes('chat') || name === 'chat_interaction') chatInteractions += count;
-            if (name === 'file_download' || name.includes('pdf')) pdfDownloads += count;
+            const count = parseInt(row.metricValues[0].value, 10);
+            if (name.includes('chat') || name.includes('message')) chatInteractions += count;
+            return { name, count, users: parseInt(row.metricValues[1].value, 10) };
+        }) || [];
+
+        // Idiomas
+        const langCounts = { en: 0, es: 0, it: 0, de: 0, sk: 0, pt: 0, other: 0 };
+        const supportedLangs = ['en', 'es', 'it', 'de', 'sk', 'pt'];
+        
+        languagesResponse.rows?.forEach(row => {
+            const path = row.dimensionValues[0].value;
+            const users = parseInt(row.metricValues[0].value, 10);
+            const match = path.match(/^\/([a-z]{2})(\/|$)/);
+            const lang = match ? match[1] : 'en';
+            if (supportedLangs.includes(lang)) langCounts[lang] += users;
+            else langCounts.other += users;
         });
 
-        // Respuesta Final
+        const languagesData = Object.entries(langCounts)
+            .filter(([_, v]) => v > 0)
+            .map(([name, value]) => ({ name: name.toUpperCase(), value }));
+
+        // Países del Consorcio
+        const consortiumList = ['Spain', 'Italy', 'Slovakia', 'Austria', 'Portugal'];
+        const consortiumCountries = consortiumList.map(c => {
+            const match = countriesResponse.rows?.find(r => r.dimensionValues[0].value === c);
+            return { country: c, users: match ? parseInt(match.metricValues[0].value, 10) : 0 };
+        }).sort((a,b) => b.users - a.users);
+
         res.status(200).json({
             kpis,
             timeSeries,
-            consortiumCountries,
             devices,
-            languages,
+            os,
+            countries,
+            consortiumCountries,
+            languages: languagesData,
             pages,
             channels,
-            chatInteractions,
-            pdfDownloads,
-            lastUpdated: new Date().toISOString()
+            events,
+            chatInteractions
         });
 
     } catch (error) {
         console.error('GA4 API Error:', error);
-        res.status(500).json({ 
-            error: error.message || 'Internal Server Error',
-            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
-        });
+        res.status(500).json({ error: error.message || 'Failed to fetch GA data' });
     }
 }
