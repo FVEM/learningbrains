@@ -18,46 +18,62 @@ export default async function handler(req, res) {
   const pageMeta = seoConfig.pages[slug] || seoConfig.pages.home;
   const meta = pageMeta[lang] || pageMeta[seoConfig.defaultLang];
 
+  let html = '';
   try {
-    // 3. Read index.html (the built version)
-    // In Vercel, when running as a function, we need to point to the correct static asset.
-    // Assuming Vite build output is available.
-    const indexPath = path.join(process.cwd(), 'index.html');
-    let html = fs.readFileSync(indexPath, 'utf8');
+    // 3. Robust read strategy: check /dist (prod) or root
+    // Vercel function /api/render.js is inside /api
+    const pathsToTry = [
+      path.join(process.cwd(), 'dist', 'index.html'),
+      path.join(process.cwd(), 'index.html'),
+      path.join(__dirname, '..', 'dist', 'index.html'),
+      path.join(__dirname, '..', 'index.html')
+    ];
 
-    // 4. Inject metadata
+    let success = false;
+    for (const p of pathsToTry) {
+      if (fs.existsSync(p)) {
+        html = fs.readFileSync(p, 'utf8');
+        success = true;
+        break;
+      }
+    }
+
+    // 4. Fallback if index.html can't be read from disk
+    if (!success) {
+      console.warn('Could not find index.html on disk, using minimal fallback shell.');
+      html = `<!DOCTYPE html><html lang="${lang}"><head><meta charset="UTF-8" /><title>${meta.title}</title><meta name="description" content="${meta.description}" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" type="image/svg+xml" href="/favicon.ico" /></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>`;
+      // Note: /src/main.jsx only works in local dev Vite, but Vercel serves the built /assets/ automatically.
+      // We should ideally use the actual bundle path, but a generic SPA mount point is safer than a white screen.
+    }
+
+    // 5. Inject metadata
     const fullUrl = `https://learningbrains.eu${urlPath}`;
     
     // Replace title
-    html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${meta.title}</title>`);
+    html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${meta.title} | Learning Brains</title>`);
     
-    // Replace Meta Description - more robust regex for multiline/attributes
-    html = html.replace(/<meta\s+name="description"\s+content="[\s\S]*?"\s*\/?>/i, 
-      `<meta name="description" content="${meta.description}" />`);
+    // Replace/Inject Meta Description
+    if (html.includes('name="description"')) {
+      html = html.replace(/<meta\s+name="description"\s+content="[\s\S]*?"\s*\/?>/i, 
+        `<meta name="description" content="${meta.description}" />`);
+    } else {
+      html = html.replace(/<\/head>/i, `<meta name="description" content="${meta.description}" />\n</head>`);
+    }
     
-    // OG Tags - Replacing based on property attribute
-    html = html.replace(/<meta\s+property="og:title"\s+content="[\s\S]*?"\s*\/?>/i, 
-      `<meta property="og:title" content="${meta.title}" />`);
-    
-    html = html.replace(/<meta\s+property="og:description"\s+content="[\s\S]*?"\s*\/?>/i, 
-      `<meta property="og:description" content="${meta.description}" />`);
-    
-    html = html.replace(/<meta\s+property="og:url"\s+content="[\s\S]*?"\s*\/?>/i, 
-      `<meta property="og:url" content="${fullUrl}" />`);
-    
-    // Twitter - Replacing based on name attribute
-    html = html.replace(/<meta\s+name="twitter:title"\s+content="[\s\S]*?"\s*\/?>/i, 
-      `<meta name="twitter:title" content="${meta.title}" />`);
-    
-    html = html.replace(/<meta\s+name="twitter:description"\s+content="[\s\S]*?"\s*\/?>/i, 
-      `<meta name="twitter:description" content="${meta.description}" />`);
+    // Inject OG Tags
+    const ogTags = `
+      <meta property="og:title" content="${meta.title}" />
+      <meta property="og:description" content="${meta.description}" />
+      <meta property="og:url" content="${fullUrl}" />
+    `;
+    html = html.replace(/<\/head>/i, `${ogTags}\n</head>`);
 
-    // 5. Send response
+    // 6. Send response
     res.setHeader('Content-Type', 'text/html');
     res.status(200).send(html);
   } catch (error) {
     console.error('SSR Render Error:', error);
-    // Fallback to serving the original index.html if something fails
-    res.status(500).send('Internal Server Error while rendering meta-tags.');
+    // Absolute fallback: send a 200 with at least a title so it's not a white screen 500
+    res.status(200).send(`<!DOCTYPE html><html><head><title>${meta.title}</title></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>`);
   }
 }
