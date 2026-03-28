@@ -1,187 +1,294 @@
 import { BetaAnalyticsDataClient } from '@google-analytics/data';
 
-// Initialize the GA4 client
-// In Vercel, these should be set as environment variables
-const propertyId = process.env.GA_PROPERTY_ID;
-const credentials = {
-    client_email: process.env.GA_CLIENT_EMAIL,
-    private_key: process.env.GA_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-};
-
-const analyticsDataClient = new BetaAnalyticsDataClient({ credentials });
-
 export default async function handler(req, res) {
-    if (!propertyId || !credentials.client_email || !credentials.private_key) {
-        return res.status(500).json({ error: 'GA4 credentials not configured' });
+    // Configuración de CORS
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+    res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+
+    // Caché de Vercel (5 minutos)
+    res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=60');
+
+    if (req.method === 'OPTIONS') {
+        res.status(200).end();
+        return;
     }
 
     try {
-        // --- Date Range Calculation for Trends ---
-        // Current Period: Last 30 days
-        // Previous Period: 30 days before that
-        const now = new Date();
-        const endDate = now.toISOString().split('T')[0];
-        const thirtyDaysAgo = new Date(now.setDate(now.getDate() - 30));
-        const startDate = thirtyDaysAgo.toISOString().split('T')[0];
-        
-        const sixtyDaysAgo = new Date(thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30));
-        const prevStartDate = sixtyDaysAgo.toISOString().split('T')[0];
-        const prevEndDate = startDate; // The day before current period starts
+        const { range = '30days' } = req.query;
 
-        // Shared Date Ranges
-        const dateRanges = [
-            { startDate, endDate, name: 'current_period' },
-            { startDate: prevStartDate, endDate: prevEndDate, name: 'previous_period' }
-        ];
+        // 1. Validar variables de entorno
+        const propertyId = process.env.GA_PROPERTY_ID;
+        let clientEmail = process.env.GA_CLIENT_EMAIL;
+        let privateKey = process.env.GA_PRIVATE_KEY;
 
-        // 1. Fetch Main KPIs with Trend Comparison
-        const [response] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges,
-            dimensions: [{ name: 'date' }], // Needed to separate ranges in response
-            metrics: [
-                { name: 'activeUsers' },
-                { name: 'sessions' },
-                { name: 'averageSessionDuration' },
-                { name: 'screenPageViews' }
-            ],
-        });
+        // Soporte para pegar el JSON entero de la Service Account en GA_PRIVATE_KEY
+        if (privateKey?.trim().startsWith('{')) {
+            try {
+                const creds = JSON.parse(privateKey);
+                privateKey = creds.private_key;
+                if (!clientEmail) clientEmail = creds.client_email;
+            } catch (e) {
+                return res.status(500).json({ error: 'GA_PRIVATE_KEY contains invalid JSON.' });
+            }
+        }
 
-        // 2. Fetch Events (Chatbot + Resource Downloads)
-        const [eventResponse] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges,
-            dimensions: [{ name: 'eventName' }],
-            metrics: [{ name: 'eventCount' }],
-        });
+        // Normalizar saltos de línea y cabeceras de la clave privada
+        if (privateKey) {
+            privateKey = privateKey.replace(/\\n/g, '\n');
+            if (!privateKey.includes('-----BEGIN')) {
+                privateKey = `-----BEGIN PRIVATE KEY-----\n${privateKey}\n-----END PRIVATE KEY-----\n`;
+            }
+        }
 
-        // 3. Fetch Geographic/Consortium Data
-        const [geoResponse] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges: [{ startDate: '2024-01-01', endDate: 'today' }], // Cumulative for reach
-            dimensions: [{ name: 'country' }],
-            metrics: [{ name: 'activeUsers' }],
-        });
-
-        // 4. Fetch Language Engagement
-        const [langResponse] = await analyticsDataClient.runReport({
-            property: `properties/${propertyId}`,
-            dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
-            dimensions: [{ name: 'language' }],
-            metrics: [{ name: 'activeUsers' }],
-        });
-
-        // --- Data Processing & Trend Calculation ---
-        const processMetrics = (rows) => {
-            const current = { users: 0, sessions: 0, duration: 0, views: 0, count: 0 };
-            const previous = { users: 0, sessions: 0, duration: 0, views: 0, count: 0 };
-
-            rows?.forEach(row => {
-                const isCurrent = row.dimensionValues[0].value === 'current_period' || !row.dimensionValues[0].value;
-                const target = isCurrent ? current : previous;
-                
-                // Note: Index depends on metric order in runReport
-                target.users += parseInt(row.metricValues[0].value);
-                target.sessions += parseInt(row.metricValues[1].value);
-                target.duration += parseFloat(row.metricValues[2].value);
-                target.views += parseInt(row.metricValues[3].value);
-                target.count++;
+        if (!propertyId || !clientEmail || !privateKey) {
+            return res.status(500).json({
+                error: 'Missing Google Analytics credentials (GA_PROPERTY_ID, GA_CLIENT_EMAIL, GA_PRIVATE_KEY).'
             });
+        }
 
-            // Average the duration
-            if (current.count > 0) current.duration = current.duration / current.count;
-            if (previous.count > 0) previous.duration = previous.duration / previous.count;
+        // 2. Calcular rangos de fechas
+        let startDate, endDate = 'today', prevStartDate, prevEndDate;
+        if (range === '7days') {
+            startDate = '7daysAgo';
+            prevStartDate = '14daysAgo';
+            prevEndDate = '8daysAgo';
+        } else if (range === 'year') {
+            startDate = '365daysAgo';
+            prevStartDate = '730daysAgo';
+            prevEndDate = '366daysAgo';
+        } else {
+            startDate = '30daysAgo';
+            prevStartDate = '60daysAgo';
+            prevEndDate = '31daysAgo';
+        }
 
-            return { current, previous };
+        // 3. Inicializar cliente de GA4
+        const analyticsDataClient = new BetaAnalyticsDataClient({
+            credentials: {
+                client_email: clientEmail,
+                private_key: privateKey,
+            }
+        });
+
+        // 4. Ejecutar consultas en paralelo
+        const [
+            [kpisResponse],
+            [prevKpisResponse],
+            [timeSeriesResponse],
+            [devicesResponse],
+            [countriesResponse],
+            [pagesResponse],
+            [channelsResponse],
+            [eventsResponse]
+        ] = await Promise.all([
+            // index 0: KPIs Actuales
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                metrics: [
+                    { name: 'screenPageViews' },
+                    { name: 'activeUsers' },
+                    { name: 'newUsers' },
+                    { name: 'userEngagementDuration' },
+                    { name: 'engagementRate' }
+                ]
+            }),
+            // index 1: KPIs Previos (Tendencias)
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate: prevStartDate, endDate: prevEndDate }],
+                metrics: [
+                    { name: 'screenPageViews' },
+                    { name: 'activeUsers' },
+                    { name: 'newUsers' },
+                    { name: 'userEngagementDuration' },
+                    { name: 'engagementRate' }
+                ]
+            }),
+            // index 2: Serie Temporal
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'date' }],
+                metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }],
+                orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }]
+            }),
+            // index 3: Dispositivos
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'deviceCategory' }],
+                metrics: [{ name: 'activeUsers' }]
+            }),
+            // index 4: Países
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'country' }],
+                metrics: [{ name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+            }),
+            // index 5: Páginas
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'pagePath' }, { name: 'pageTitle' }],
+                metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }, { name: 'userEngagementDuration' }],
+                orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+                limit: 10
+            }),
+            // index 6: Canales
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'sessionDefaultChannelGroup' }],
+                metrics: [{ name: 'activeUsers' }],
+                orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
+            }),
+            // index 7: Eventos (Chat, PDF, etc.)
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'eventName' }],
+                metrics: [{ name: 'eventCount' }],
+                orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }]
+            })
+        ]);
+
+        // 5. Procesar Datos para el Frontend
+
+        // KPIs
+        const calculateTrend = (curr, prev) => {
+            if (!prev || prev === 0) return 0;
+            return parseFloat(((curr - prev) / prev * 100).toFixed(1));
         };
 
-        const metricsData = processMetrics(response.rows);
-        
-        // Calculate Trend Helpers
-        const calcTrend = (curr, prev) => {
-            if (!prev || prev === 0) return 100;
-            return Math.round(((curr - prev) / prev) * 100);
+        const kRow = kpisResponse.rows?.[0]?.metricValues || [];
+        const pRow = prevKpisResponse.rows?.[0]?.metricValues || [];
+
+        const kpis = {
+            views: { 
+                value: parseInt(kRow[0]?.value || 0), 
+                trend: calculateTrend(parseInt(kRow[0]?.value || 0), parseInt(pRow[0]?.value || 0)) 
+            },
+            users: { 
+                value: parseInt(kRow[1]?.value || 0), 
+                trend: calculateTrend(parseInt(kRow[1]?.value || 0), parseInt(pRow[1]?.value || 0)) 
+            },
+            newUsers: { 
+                value: parseInt(kRow[2]?.value || 0), 
+                trend: calculateTrend(parseInt(kRow[2]?.value || 0), parseInt(pRow[2]?.value || 0)) 
+            },
+            avgEngagement: { 
+                value: parseInt(kRow[1]?.value || 0) > 0 
+                    ? Math.round(parseFloat(kRow[3]?.value || 0) / parseInt(kRow[1]?.value || 0)) 
+                    : 0 
+            },
+            engagementRate: { 
+                value: (parseFloat(kRow[4]?.value || 0) * 100).toFixed(1),
+                trend: calculateTrend(parseFloat(kRow[4]?.value || 0), parseFloat(pRow[4]?.value || 0))
+            }
         };
 
-        // Extract Event Stats
-        const getEventCount = (rows, name, period = 'current_period') => {
-            const row = rows?.find(r => r.dimensionValues[0].value === name);
-            return row ? parseInt(row.metricValues[0].value) : 0;
-        };
+        // Serie Temporal
+        const timeSeries = timeSeriesResponse.rows?.map(row => {
+            const d = row.dimensionValues[0].value;
+            return {
+                date: `${d.substring(6, 8)}/${d.substring(4, 6)}`,
+                views: parseInt(row.metricValues[0].value),
+                users: parseInt(row.metricValues[1].value)
+            };
+        }) || [];
 
-        // Custom "Erasmus Impact" Events
-        const pdfDownloads = getEventCount(eventResponse.rows, 'file_download') + getEventCount(eventResponse.rows, 'pdf_download');
-        const chatInteractions = getEventCount(eventResponse.rows, 'chat_interaction');
-
-        // Consortium Reach (Cumulative)
-        const consortiumCountries = ['Spain', 'Italy', 'Austria', 'Slovenia', 'Belgium'];
-        const totalReach = geoResponse.rows?.reduce((acc, row) => acc + parseInt(row.metricValues[0].value), 0) || 0;
-        const consortiumUsers = geoResponse.rows
-            ?.filter(row => consortiumCountries.includes(row.dimensionValues[0].value))
-            .reduce((acc, row) => acc + parseInt(row.metricValues[0].value), 0) || 0;
-
-        // Timeline Data for Sparklines (Last 30 days)
-        const timeline = response.rows
-            ?.filter(r => r.dimensionValues[0].value === 'current_period')
+        // Países del Consorcio (Específicos para el proyecto)
+        const projectCountries = ['Spain', 'Italy', 'Austria', 'Slovakia', 'Belgium'];
+        const consortiumCountries = countriesResponse.rows
+            ?.filter(row => projectCountries.includes(row.dimensionValues[0].value))
             .map(row => ({
-                date: row.dimensionValues[1]?.value, // You might need to add date back to dimensions
-                value: parseInt(row.metricValues[0].value)
-            })) || [];
-
-        const dashboardData = {
-            overview: {
-                users: {
-                    value: metricsData.current.users,
-                    trend: calcTrend(metricsData.current.users, metricsData.previous.users),
-                    prevValue: metricsData.previous.users
-                },
-                sessions: {
-                    value: metricsData.current.sessions,
-                    trend: calcTrend(metricsData.current.sessions, metricsData.previous.sessions),
-                },
-                pageViews: {
-                    value: metricsData.current.views,
-                    trend: calcTrend(metricsData.current.views, metricsData.previous.views),
-                },
-                avgDuration: {
-                    value: Math.round(metricsData.current.duration),
-                    trend: calcTrend(metricsData.current.duration, metricsData.previous.duration),
-                }
-            },
-            impact: {
-                pdfDownloads: {
-                    value: pdfDownloads,
-                    label: "Resource Dissemination"
-                },
-                chatbotEngagement: {
-                    value: chatInteractions,
-                    label: "AI Guidance Provided"
-                },
-                consortiumReach: {
-                    percentage: totalReach > 0 ? Math.round((consortiumUsers / totalReach) * 100) : 0,
-                    value: consortiumUsers
-                }
-            },
-            languages: langResponse.rows?.map(row => ({
-                lang: row.dimensionValues[0].value,
-                users: parseInt(row.metricValues[0].value)
-            })).slice(0, 5) || [],
-            countries: geoResponse.rows?.map(row => ({
                 country: row.dimensionValues[0].value,
                 users: parseInt(row.metricValues[0].value)
-            })).slice(0, 8) || [],
-            lastUpdated: new Date().toISOString()
-        };
+            })) || [];
+        
+        // Si no hay datos de consorcio, usar los top countries
+        if (consortiumCountries.length === 0) {
+            countriesResponse.rows?.slice(0, 5).forEach(row => {
+                consortiumCountries.push({
+                    country: row.dimensionValues[0].value,
+                    users: parseInt(row.metricValues[0].value)
+                });
+            });
+        }
 
-        // Success Response with Vercel Edge Caching (300s = 5 mins)
-        res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=60');
-        return res.status(200).json(dashboardData);
+        // Dispositivos
+        const devices = devicesResponse.rows?.map(row => ({
+            name: row.dimensionValues[0].value,
+            value: parseInt(row.metricValues[0].value)
+        })) || [];
+
+        // Idiomas (Deducidos del path de la página)
+        const langMap = { ES: 0, EN: 0, IT: 0, SK: 0, DE: 0, PT: 0 };
+        pagesResponse.rows?.forEach(row => {
+            const path = row.dimensionValues[0].value;
+            const users = parseInt(row.metricValues[1].value);
+            const match = path.match(/^\/([a-z]{2})(\/|$)/);
+            if (match) {
+                const l = match[1].toUpperCase();
+                if (langMap[l] !== undefined) langMap[l] += users;
+            } else if (path === '/' || path.startsWith('/?')) {
+                langMap.EN += users;
+            }
+        });
+        const languages = Object.entries(langMap)
+            .filter(([_, v]) => v > 0)
+            .map(([name, value]) => ({ name, value }));
+
+        // Páginas Top
+        const pages = pagesResponse.rows?.slice(0, 5).map(row => ({
+            path: row.dimensionValues[0].value,
+            title: row.dimensionValues[1].value,
+            views: parseInt(row.metricValues[0].value),
+            time: parseInt(row.metricValues[1].value) > 0 
+                ? Math.round(parseFloat(row.metricValues[2].value) / parseInt(row.metricValues[1].value)) 
+                : 0
+        })) || [];
+
+        // Canales
+        const channels = channelsResponse.rows?.slice(0, 5).map(row => ({
+            channel: row.dimensionValues[0].value,
+            users: parseInt(row.metricValues[0].value)
+        })) || [];
+
+        // Eventos
+        let chatInteractions = 0;
+        let pdfDownloads = 0;
+        eventsResponse.rows?.forEach(row => {
+            const name = row.dimensionValues[0].value;
+            const count = parseInt(row.metricValues[0].value);
+            if (name.includes('chat') || name === 'chat_interaction') chatInteractions += count;
+            if (name === 'file_download' || name.includes('pdf')) pdfDownloads += count;
+        });
+
+        // Respuesta Final
+        res.status(200).json({
+            kpis,
+            timeSeries,
+            consortiumCountries,
+            devices,
+            languages,
+            pages,
+            channels,
+            chatInteractions,
+            pdfDownloads,
+            lastUpdated: new Date().toISOString()
+        });
 
     } catch (error) {
-        console.error('GA4 Error:', error);
-        return res.status(500).json({ 
-            error: 'Failed to fetch analytics',
-            details: error.message 
+        console.error('GA4 API Error:', error);
+        res.status(500).json({ 
+            error: error.message || 'Internal Server Error',
+            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
         });
     }
 }
