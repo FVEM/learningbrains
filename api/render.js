@@ -7,21 +7,22 @@ export default async function handler(req, res) {
   const urlPath = new URL(url, `http://${req.headers.host}`).pathname;
 
   // 1. Detect language and page slug
-  // Path format: /:lang/:page or /:lang/
+  // Path formats: /:lang/:slug, /:lang/, or /:slug (root pages like /analytics)
   const parts = urlPath.split('/').filter(Boolean);
-  const lang = parts[0] || seoConfig.defaultLang;
-  const slug = parts[1] || 'home';
+  
+  const isFirstPartLang = seoConfig.languages.includes(parts[0]);
+  const lang = isFirstPartLang ? parts[0] : seoConfig.defaultLang;
+  const slug = isFirstPartLang ? (parts[1] || 'home') : (parts[0] || 'home');
 
   // 2. Resolve metadata
   const pageMeta = seoConfig.pages[slug] || seoConfig.pages.home;
   const meta = pageMeta[lang] || pageMeta[seoConfig.defaultLang];
 
   try {
-    // 3. Read index.html (prefer the built version in dist)
-    let indexPath = path.join(process.cwd(), 'dist', 'index.html');
-    if (!fs.existsSync(indexPath)) {
-      indexPath = path.join(process.cwd(), 'index.html');
-    }
+    // 3. Read index.html (the built version)
+    // In Vercel, when running as a function, we need to point to the correct static asset.
+    // Assuming Vite build output is available.
+    const indexPath = path.join(process.cwd(), 'index.html');
     let html = fs.readFileSync(indexPath, 'utf8');
 
     // 4. Inject metadata

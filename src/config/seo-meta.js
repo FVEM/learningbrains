@@ -12,7 +12,7 @@ export const seoConfig = {
       it: { title: "Learning Brains – Formazione Industriale con IA | Erasmus+", description: "Learning Brains è un progetto Erasmus+ KA220-VET che sviluppa strumenti di apprendimento sul lavoro basati sull'IA per riqualificare i lavoratori industriali in Europa." },
       sk: { title: "Learning Brains – Priemyselné vzdelávanie s AI | Erasmus+", description: "Learning Brains je projekt Erasmus+ KA220-VET vyvíjajúci nástroje na vzdelávanie na pracovisku s podporou AI na rekvalifikáciu priemyselných pracovníkov v Európe." },
       de: { title: "Learning Brains – Industrielle Ausbildung mit KI | Erasmus+", description: "Learning Brains ist ein Erasmus+ KA220-VET-Projekt, das KI-gestützte arbeitsbasierte Lerntools entwickelt, um Industriearbeiter in Europa umzuschulen." },
-      pt: { title: "Learning Brains – Formação Industrial com IA | Erasmus+", description: "Learning Brains é un projeto Erasmus+ KA220-VET que desenvolve ferramentas de aprendizagem no trabalho com IA para requalificar trabalhadores industriais na Europa." }
+      pt: { title: "Learning Brains – Formação Industrial con IA | Erasmus+", description: "Learning Brains é un projeto Erasmus+ KA220-VET que desenvolve ferramentas de aprendizagem no trabalho con IA para requalificar trabalhadores industriais na Europa." }
     },
     about: {
       es: { title: "Sobre el Proyecto – Learning Brains Erasmus+", description: "Descubra los objetivos, áreas de enfoque y grupos objetivo de Learning Brains: un proyecto Erasmus+ KA220-VET." },
@@ -33,10 +33,18 @@ export const seoConfig = {
     noticias: {
       es: { title: "Noticias IA – Inteligencia Artificial en Negocios y FP", description: "Últimas tendencias en Inteligencia Artificial para empresas, industria y formación profesional (FP)." },
       en: { title: "AI News – Artificial Intelligence in Business and VET", description: "Latest trends in Artificial Intelligence for business, industry, and vocational training (VET)." },
-      it: { title: "News IA – Intelligenza Artificiale nel Business e nell'IFP", description: "Ultime tendenze nell'Intelligenza Artificiale per le imprese, l'industria e la formazione professionale (IFP)." },
+      it: { title: "News IA – Intelligenza Artificiale nel Business e nell'IFP", description: "Ultime tendenze nell'Intelligenza Artificiale per le imprese, l'industria e la formación professionale (IFP)." },
       sk: { title: "AI Správy – Umelá inteligencia v biznise a VET", description: "Najnovšie trendy v umelej inteligencii pre podnikanie, priemysel a odborné vzdelávanie (VET)." },
-      de: { title: "KI-Neuigkeiten – Künstliche Intelligenz in Wirtschaft und Berufsbildung", description: "Neueste Trends der Künstlichen Intelligenz für Wirtschaft, Industrie und Berufsbildung." },
+      de: { title: "KI-Neuigkeiten – Künstliche Inteligencia in Wirtschaft und Berufsbildung", description: "Neueste Trends der Künstlichen Intelligenz für Wirtschaft, Industrie und Berufsbildung." },
       pt: { title: "Notícias IA – Inteligência Artificial em Negócios e EFP", description: "Últimas tendências em Inteligência Artificial para empresas, indústria e formação profesional (EFP)." }
+    },
+    analytics: {
+      es: { title: "Dashboard Analítica – Learning Brains", description: "Acceso restringido al panel de métricas de impacto del proyecto." },
+      en: { title: "Analytics Dashboard – Learning Brains", description: "Restricted access to the project's impact metrics panel." },
+      it: { title: "Dashboard Analitica – Learning Brains", description: "Accesso limitato al pannello delle metriche di impatto del proyecto." },
+      sk: { title: "Analytický panel – Learning Brains", description: "Obmedzený prístup k panelu metrik dopadu projektu." },
+      de: { title: "Analyse-Dashboard – Learning Brains", description: "Eingeschränkter Zugriff auf das Dashboard der Projekt-Impact-Metriken." },
+      pt: { title: "Dashboard Analítica – Learning Brains", description: "Acesso restrito ao painel de métricas de impacto do projeto." }
     }
   }
 };
