@@ -20,33 +20,25 @@ export default async function handler(req, res) {
 
   let html = '';
   try {
-    // 3. Robust read strategy: check /dist (prod) or root
-    // Vercel function /api/render.js is inside /api
-    const pathsToTry = [
-      path.join(process.cwd(), 'dist', 'index.html'),
-      path.join(process.cwd(), 'index.html'),
-      path.join(__dirname, '..', 'dist', 'index.html'),
-      path.join(__dirname, '..', 'index.html')
-    ];
-
-    let success = false;
-    for (const p of pathsToTry) {
-      if (fs.existsSync(p)) {
-        html = fs.readFileSync(p, 'utf8');
-        success = true;
-        break;
-      }
+    // 3. Fetch strategy: always get the latest built index.html from the host
+    // This is more reliable on Vercel than local fs for static assets.
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const host = req.headers.host;
+    const baseUrl = `${protocol}://${host}`;
+    
+    // Fetch specifically the root/index.html (which is static)
+    // We add a cache-buster or just use a direct request to avoid recursion
+    const response = await fetch(`${baseUrl}/index.html`, {
+      headers: { 'x-is-ssr-fetch': 'true' }
+    });
+    
+    if (response.ok) {
+        html = await response.text();
+    } else {
+        throw new Error(`Failed to fetch index.html: ${response.status}`);
     }
 
-    // 4. Fallback if index.html can't be read from disk
-    if (!success) {
-      console.warn('Could not find index.html on disk, using minimal fallback shell.');
-      html = `<!DOCTYPE html><html lang="${lang}"><head><meta charset="UTF-8" /><title>${meta.title}</title><meta name="description" content="${meta.description}" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" type="image/svg+xml" href="/favicon.ico" /></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>`;
-      // Note: /src/main.jsx only works in local dev Vite, but Vercel serves the built /assets/ automatically.
-      // We should ideally use the actual bundle path, but a generic SPA mount point is safer than a white screen.
-    }
-
-    // 5. Inject metadata
+    // 4. Inject metadata
     const fullUrl = `https://learningbrains.eu${urlPath}`;
     
     // Replace title
@@ -68,12 +60,12 @@ export default async function handler(req, res) {
     `;
     html = html.replace(/<\/head>/i, `${ogTags}\n</head>`);
 
-    // 6. Send response
+    // 5. Send response
     res.setHeader('Content-Type', 'text/html');
     res.status(200).send(html);
   } catch (error) {
     console.error('SSR Render Error:', error);
-    // Absolute fallback: send a 200 with at least a title so it's not a white screen 500
-    res.status(200).send(`<!DOCTYPE html><html><head><title>${meta.title}</title></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>`);
+    // Absolute fallback: if fetch fails, return a 500 but still HTML so it's not a white screen
+    res.status(200).send(`<!DOCTYPE html><html><head><title>${meta.title}</title></head><body><div id="root"></div><p>Application loading error. Please refresh.</p></body></html>`);
   }
 }
