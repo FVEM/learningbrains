@@ -1,415 +1,350 @@
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    LineChart, Line, BarChart, Bar, PieChart, Pie, Cell,
-    XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
-} from 'recharts';
-import {
-    ShieldAlert, LogOut, Users, FileText, Clock, MousePointerClick,
-    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap
+import { 
+  Users, 
+  BarChart3, 
+  Globe, 
+  MessageSquare, 
+  Download, 
+  TrendingUp, 
+  TrendingDown, 
+  Clock,
+  Sparkles,
+  Zap,
+  GraduationCap
 } from 'lucide-react';
+import { 
+  BarChart, 
+  Bar, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  ResponsiveContainer, 
+  PieChart, 
+  Pie, 
+  Cell,
+  LineChart,
+  Line,
+  AreaChart,
+  Area
+} from 'recharts';
 
-// Colores basados en la paleta de Learning Brains
-const BRAND_RED = "#d62828";
-const BRAND_BLUE = "#003049";
-const BRAND_ORANGE = "#f77f00";
-const BRAND_YELLOW = "#fcbf49";
-const BRAND_GRAY = "#6B7280";
+const Analytics = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-const COLORS = [BRAND_RED, BRAND_BLUE, BRAND_ORANGE, BRAND_YELLOW, '#8e44ad', '#27ae60', '#e74c3c', '#3498db'];
-
-export default function Analytics() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [pinInput, setPinInput] = useState('');
-    const [errorPin, setErrorPin] = useState(false);
-
-    const [timeRange, setTimeRange] = useState('30days');
-    const [data, setData] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
-    const [errorData, setErrorData] = useState(null);
-
-
-    useEffect(() => {
-        if (isAuthenticated) {
-            fetchAnalyticsData(timeRange);
-        }
-    }, [isAuthenticated, timeRange]);
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        if (pinInput === 'brains2026') {
-            setIsAuthenticated(true);
-            setErrorPin(false);
-        } else {
-            setErrorPin(true);
-            setPinInput('');
-        }
+  useEffect(() => {
+    const fetchAnalytics = async () => {
+      try {
+        const response = await fetch('/api/analytics');
+        if (!response.ok) throw new Error('Failed to fetch data');
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    const handleLogout = () => {
-        setIsAuthenticated(false);
-        setData(null);
-    };
+    fetchAnalytics();
+  }, []);
 
-    const fetchAnalyticsData = async (range) => {
-        setIsLoading(true);
-        setErrorData(null);
-        try {
-            const response = await fetch(`/api/analytics?range=${range}`);
-            const result = await response.json();
+  if (loading) return (
+    <div className="min-h-screen flex items-center justify-center bg-[#0a1a17]">
+      <div className="flex flex-col items-center gap-4">
+        <div className="w-16 h-16 border-4 border-[#00897b]/30 border-t-[#00897b] rounded-full animate-spin"></div>
+        <p className="text-emerald-400 font-medium animate-pulse">Analyzing Impact Data...</p>
+      </div>
+    </div>
+  );
 
-            if (!response.ok || result.error) {
-                throw new Error(result.error || `HTTP ${response.status}: Failed to fetch analytics data`);
-            }
+  if (error) return (
+    <div className="min-h-screen flex items-center justify-center bg-[#0a1a17] text-white p-6">
+      <div className="bg-red-500/10 border border-red-500/20 p-6 rounded-2xl max-w-md text-center">
+        <h2 className="text-xl font-bold mb-2">Analysis Unavailable</h2>
+        <p className="text-red-300/80">{error}</p>
+      </div>
+    </div>
+  );
 
-            setData(result);
-        } catch (err) {
-            console.error(err);
-            setErrorData(err.message || 'Error loading analytics. Make sure Google Cloud credentials are set.');
-        } finally {
-            setIsLoading(false);
-        }
-    };
+  const COLORS = ['#00897b', '#26a69a', '#4db6ac', '#80cbc4', '#b2dfdb'];
 
-    if (!isAuthenticated) {
-        return (
-            <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-4 font-sans">
-                <Helmet>
-                    <title>Analytics Login | Learning Brains</title>
-                    <meta name="robots" content="noindex, nofollow" />
-                </Helmet>
-
-                <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-neutral-100">
-                    <img src="/learning-brains-logo-transparent-cropped.png" alt="Learning Brains Analytics" className="h-24 w-auto mx-auto mb-6 object-contain" />
-                    <h1 className="text-2xl font-bold text-neutral-800 mb-2">Restricted Access</h1>
-                    <p className="text-neutral-500 mb-8">Please enter the PIN code to view the analytics dashboard.</p>
-
-                    <form onSubmit={handleLogin}>
-                        <div className="relative">
-                            <KeyRound className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 w-5 h-5" />
-                            <input
-                                type="password"
-                                value={pinInput}
-                                onChange={(e) => setPinInput(e.target.value)}
-                                placeholder="Enter PIN"
-                                className={`w-full pl-10 pr-4 py-3 rounded-xl border focus:ring-2 outline-none transition-all ${errorPin ? 'border-red-500 focus:ring-red-200' : 'border-neutral-200 focus:border-brand-primary focus:ring-brand-primary/20'
-                                    }`}
-                                autoFocus
-                            />
-                        </div>
-                        {errorPin && <p className="text-red-500 text-sm mt-2 text-left">Incorrect PIN code.</p>}
-
-                        <button
-                            type="submit"
-                            className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 rounded-xl mt-6 transition-colors shadow-lg shadow-brand-primary/20"
-                        >
-                            Access Dashboard
-                        </button>
-                    </form>
-                </div>
+  return (
+    <div className="min-h-screen bg-[#0a1a17] text-slate-200 selection:bg-emerald-500/30">
+      {/* Premium Header */}
+      <div className="relative overflow-hidden pt-12 pb-12 px-6">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div className="max-w-7xl mx-auto relative">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <div className="flex items-center gap-2 text-emerald-400 mb-3 px-3 py-1 bg-emerald-400/10 rounded-full w-fit border border-emerald-400/20">
+                <Sparkles size={14} />
+                <span className="text-xs font-bold uppercase tracking-wider">Live Impact Demonstrator</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
+                Erasmus+ Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Insights</span>
+              </h1>
+              <p className="text-lg text-slate-400 max-w-2xl font-light">
+                Monitoring real-time engagement and dissemination efficacy across the Learning Brains consortium.
+              </p>
             </div>
-        );
-    }
-
-    return (
-        <div className="min-h-[100dvh] bg-neutral-50 font-sans pb-12">
-            <Helmet>
-                <title>Analytics Dashboard | Learning Brains</title>
-                <meta name="robots" content="noindex, nofollow" />
-            </Helmet>
-
-            {/* Header */}
-            <header className="bg-white border-b border-neutral-200 sticky top-0 z-30 shadow-sm shadow-black/5">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <TrendingUp className="text-brand-primary w-6 h-6" />
-                        <span className="font-bold text-xl text-neutral-800 tracking-tight">Analytics <span className="text-brand-primary">Dashboard</span></span>
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                        <select
-                            value={timeRange}
-                            onChange={(e) => setTimeRange(e.target.value)}
-                            className="bg-neutral-100 border-none rounded-lg py-1.5 pl-4 pr-10 text-sm font-medium focus:ring-2 focus:ring-brand-primary/50 outline-none cursor-pointer appearance-none hover:bg-neutral-200 transition-colors"
-                        >
-                            <option value="7days">Last 7 Days</option>
-                            <option value="30days">Last 30 Days</option>
-                            <option value="year">This Year</option>
-                        </select>
-
-                        <button
-                            onClick={handleLogout}
-                            className="text-neutral-500 hover:text-red-600 transition-colors p-2 rounded-full hover:bg-red-50"
-                            title="Logout"
-                        >
-                            <LogOut className="w-5 h-5" />
-                        </button>
-                    </div>
-                </div>
-            </header>
-
-            {/* Main Content */}
-            <main className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-
-                {isLoading && !data && (
-                    <div className="flex flex-col items-center justify-center py-32">
-                        <Loader2 className="w-12 h-12 text-brand-primary animate-spin mb-6" />
-                        <p className="text-neutral-600 font-medium text-lg">Fetching live data from Google Analytics...</p>
-                        <p className="text-neutral-400 text-sm mt-2">This may take a few seconds.</p>
-                    </div>
-                )}
-
-                {errorData && (
-                    <div className="bg-red-50 border border-red-200 rounded-2xl p-6 flex gap-4 items-start mb-8 text-red-800 shadow-sm">
-                        <AlertCircle className="w-7 h-7 shrink-0 mt-0.5 text-red-500" />
-                        <div>
-                            <h3 className="font-bold text-lg mb-1">Configuration Needed</h3>
-                            <p className="text-neutral-700">{errorData}</p>
-                            <p className="text-sm mt-4 font-medium text-neutral-600 bg-red-100/50 p-3 rounded-lg border border-red-100">
-                                Please ensure Vercel environment variables are set: <br />
-                                <code className="bg-white/80 px-1.5 py-0.5 rounded text-red-700 mx-1 border border-red-200 select-all">GA_PROPERTY_ID</code>,
-                                <code className="bg-white/80 px-1.5 py-0.5 rounded text-red-700 mx-1 border border-red-200 select-all">GA_CLIENT_EMAIL</code>,
-                                <code className="bg-white/80 px-1.5 py-0.5 rounded text-red-700 mx-1 border border-red-200 select-all">GA_PRIVATE_KEY</code>
-                            </p>
-                        </div>
-                    </div>
-                )}
-
-                {!isLoading && data && !errorData && (
-                    <div className="space-y-6">
-                        {/* KPI Cards Row */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6">
-                            <StatCard title="Total Page Views" value={data.kpis.views.toLocaleString()} icon={<MousePointerClick className="w-6 h-6" />} color="text-brand-blue" bgColor="bg-brand-blue/10" />
-                            <StatCard title="Active Users" value={data.kpis.users.toLocaleString()} icon={<Users className="w-6 h-6" />} color="text-brand-red" bgColor="bg-brand-red/10" />
-                            <StatCard title="New Users" value={data.kpis.newUsers.toLocaleString()} icon={<UserPlus className="w-6 h-6" />} color="text-brand-orange" bgColor="bg-brand-orange/10" />
-                            <StatCard title="Chatbot Uses" value={data.chatInteractions.toLocaleString()} icon={<Zap className="w-6 h-6" />} color="text-emerald-600" bgColor="bg-emerald-100" />
-                            <StatCard title="Engagement Rate" value={`${data.kpis.engagementRate}%`} icon={<TrendingUp className="w-6 h-6" />} color="text-green-600" bgColor="bg-green-100" />
-                            <StatCard title="Avg. Engagement Time" value={`${data.kpis.avgEngagement}s`} icon={<Clock className="w-6 h-6" />} color="text-purple-600" bgColor="bg-purple-100" />
-                        </div>
-
-                        {/* Top Charts Row */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                            {/* Traffic Overview */}
-                            <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-neutral-100 p-6 flex flex-col">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-6">Traffic Overview</h3>
-                                <div className="flex-1 min-h-[300px]">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <LineChart data={data.timeSeries} margin={{ top: 5, right: 20, left: -20, bottom: 5 }}>
-                                            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
-                                            <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} dy={10} minTickGap={20} />
-                                            <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} />
-                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} />
-                                            <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
-                                            <Line type="monotone" dataKey="views" name="Page Views" stroke={BRAND_RED} strokeWidth={3} dot={{ r: 3, strokeWidth: 1 }} activeDot={{ r: 6 }} />
-                                            <Line type="monotone" dataKey="users" name="Active Users" stroke={BRAND_BLUE} strokeWidth={3} dot={{ r: 3, strokeWidth: 1 }} />
-                                        </LineChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-
-                            {/* Acquisition Channels */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6 flex flex-col">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-6">Acquisition Channels</h3>
-                                <div className="flex-1 min-h-[300px]">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <BarChart data={data.channels} layout="vertical" margin={{ top: 0, right: 0, left: 30, bottom: 0 }}>
-                                            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#E5E7EB" />
-                                            <XAxis type="number" hide />
-                                            <YAxis dataKey="channel" type="category" axisLine={false} tickLine={false} tick={{ fill: '#4B5563', fontSize: 13, fontWeight: 500 }} />
-                                            <Tooltip cursor={{ fill: '#F3F4F6' }} contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Bar dataKey="users" name="Users" fill={BRAND_ORANGE} radius={[0, 4, 4, 0]} barSize={20} />
-                                        </BarChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Mid Charts Row */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {/* Devices */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-2">Device Category</h3>
-                                <div className="h-[250px] flex items-center justify-center">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <PieChart>
-                                            <Pie data={data.devices} cx="50%" cy="50%" innerRadius={60} outerRadius={85} paddingAngle={4} dataKey="value">
-                                                {data.devices.map((entry, index) => (
-                                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                                ))}
-                                            </Pie>
-                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Legend iconType="circle" />
-                                        </PieChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-
-                            {/* Languages */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-2">Usage by Language</h3>
-                                <div className="h-[250px] flex items-center justify-center">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <PieChart>
-                                            <Pie data={data.languages} cx="50%" cy="50%" innerRadius={60} outerRadius={85} paddingAngle={4} dataKey="value">
-                                                {data.languages.map((entry, index) => (
-                                                    <Cell key={`cell-lang-${index}`} fill={COLORS[(index + 2) % COLORS.length]} />
-                                                ))}
-                                            </Pie>
-                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Legend iconType="circle" />
-                                        </PieChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-
-                            {/* Consoritum Countries */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
-                                <div className="flex justify-between items-start mb-4">
-                                    <h3 className="text-lg font-bold text-neutral-800">Consortium Impact</h3>
-                                    <span className="text-[10px] font-bold bg-brand-primary/10 text-brand-primary px-2 py-0.5 rounded-full uppercase tracking-wider">Project Partners</span>
-                                </div>
-                                <div className="h-[250px]">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <BarChart data={data.consortiumCountries} layout="vertical" margin={{ left: 25, right: 30 }}>
-                                            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#E5E7EB" />
-                                            <XAxis type="number" hide />
-                                            <YAxis dataKey="country" type="category" axisLine={false} tickLine={false} tick={{ fill: '#4B5563', fontSize: 13, fontWeight: 500 }} width={80} />
-                                            <Tooltip cursor={{ fill: '#F3F4F6' }} contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Bar dataKey="users" name="Active Users" fill={BRAND_RED} radius={[0, 4, 4, 0]} barSize={20}>
-                                                {data.consortiumCountries.map((entry, index) => (
-                                                    <Cell key={`cell-cons-${index}`} fill={entry.users > 0 ? BRAND_RED : BRAND_GRAY + '40'} />
-                                                ))}
-                                            </Bar>
-                                        </BarChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* OS & Global Countries Row */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* OS */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-2">Operating Systems</h3>
-                                <div className="h-[250px] flex items-center justify-center">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <PieChart>
-                                            <Pie data={data.os} cx="50%" cy="50%" innerRadius={0} outerRadius={85} paddingAngle={2} dataKey="value">
-                                                {data.os.map((entry, index) => (
-                                                    <Cell key={`cell-os-${index}`} fill={COLORS[(index + 3) % COLORS.length]} />
-                                                ))}
-                                            </Pie>
-                                            <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Legend iconType="circle" />
-                                        </PieChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-
-                            {/* Countries */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6">
-                                <h3 className="text-lg font-bold text-neutral-800 mb-4">Global Reach (Top 5)</h3>
-                                <div className="h-[250px]">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <BarChart data={data.countries} layout="vertical" margin={{ left: 20 }}>
-                                            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#E5E7EB" />
-                                            <XAxis type="number" hide />
-                                            <YAxis dataKey="country" type="category" axisLine={false} tickLine={false} tick={{ fill: '#4B5563', fontSize: 13, fontWeight: 500 }} width={80} />
-                                            <Tooltip cursor={{ fill: '#F3F4F6' }} contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                            <Bar dataKey="users" name="Users" fill={BRAND_BLUE} radius={[0, 4, 4, 0]} barSize={20} />
-                                        </BarChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Tables Row */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                            {/* Top Pages Table */}
-                            <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-neutral-100 flex flex-col overflow-hidden">
-                                <div className="p-6 pb-4 border-b border-neutral-100 flex items-center gap-2">
-                                    <div className="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center text-neutral-500">
-                                        <FileText className="w-4 h-4" />
-                                    </div>
-                                    <h3 className="text-lg font-bold text-neutral-800">Top Pages</h3>
-                                </div>
-                                <div className="overflow-x-auto">
-                                    <table className="w-full text-sm text-left whitespace-nowrap">
-                                        <thead className="text-xs text-neutral-500 uppercase bg-neutral-50/50">
-                                            <tr>
-                                                <th className="px-6 py-4 font-semibold">Page Config</th>
-                                                <th className="px-6 py-4 text-right font-semibold">Views</th>
-                                                <th className="px-6 py-4 text-right font-semibold">Avg. Engagement</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-neutral-100">
-                                            {data.pages.map((page, i) => (
-                                                <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
-                                                    <td className="px-6 py-4">
-                                                        <div className="font-semibold text-neutral-800 truncate max-w-[300px]" title={page.title}>{page.title || '(not set)'}</div>
-                                                        <div className="text-neutral-400 text-xs mt-0.5 truncate max-w-[300px]" title={page.path}>{page.path}</div>
-                                                    </td>
-                                                    <td className="px-6 py-4 text-right font-semibold text-neutral-700">{page.views.toLocaleString()}</td>
-                                                    <td className="px-6 py-4 text-right text-neutral-500">{page.time}s</td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            {/* Top Events Table */}
-                            <div className="lg:col-span-1 bg-white rounded-2xl shadow-sm border border-neutral-100 flex flex-col overflow-hidden">
-                                <div className="p-6 pb-4 border-b border-neutral-100 flex items-center gap-2">
-                                    <div className="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center text-neutral-500">
-                                        <Zap className="w-4 h-4" />
-                                    </div>
-                                    <h3 className="text-lg font-bold text-neutral-800">Top Events</h3>
-                                </div>
-                                <div className="overflow-x-auto">
-                                    <table className="w-full text-sm text-left whitespace-nowrap">
-                                        <thead className="text-xs text-neutral-500 uppercase bg-neutral-50/50">
-                                            <tr>
-                                                <th className="px-6 py-4 font-semibold">Event Name</th>
-                                                <th className="px-6 py-4 text-right font-semibold">Count</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-neutral-100">
-                                            {data.events.map((event, i) => (
-                                                <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
-                                                    <td className="px-6 py-4 font-medium text-neutral-700 capitalize">
-                                                        {event.name.replace(/_/g, ' ')}
-                                                    </td>
-                                                    <td className="px-6 py-4 text-right font-semibold text-neutral-700">{event.count.toLocaleString()}</td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                )}
-            </main>
+            <div className="flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 text-xs text-slate-400 whitespace-nowrap">
+              <Clock size={14} />
+              Last sync: {new Date(data?.lastUpdated).toLocaleTimeString()}
+            </div>
+          </div>
         </div>
-    );
-}
+      </div>
 
-function StatCard({ title, value, icon, color, bgColor }) {
-    return (
-        <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6 flex flex-col relative overflow-hidden group">
-            <div className="flex justify-between items-start mb-4 relative z-10">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${bgColor} ${color} transition-transform group-hover:scale-110`}>
-                    {icon}
-                </div>
-            </div>
-            <h4 className="text-neutral-500 text-sm font-medium mb-1 relative z-10">{title}</h4>
-            <div className="flex items-end gap-2 relative z-10">
-                <span className="text-3xl font-bold text-neutral-800 tracking-tight">{value}</span>
-            </div>
-            {/* Soft background gradient hint */}
-            <div className={`absolute -bottom-8 -right-8 w-24 h-24 ${bgColor} rounded-full blur-2xl opacity-50 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500`}></div>
+      <div className="max-w-7xl mx-auto px-6 pb-24 space-y-8">
+        {/* KPI Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StatCard 
+            title="Active Learners" 
+            value={data?.overview.users.value} 
+            trend={data?.overview.users.trend}
+            icon={<Users className="text-emerald-400" />}
+            subtitle="vs. previous 30 days"
+          />
+          <StatCard 
+            title="Engagement Sessions" 
+            value={data?.overview.sessions.value} 
+            trend={data?.overview.sessions.trend}
+            icon={<Zap className="text-yellow-400" />}
+            subtitle="Total platform interactions"
+          />
+          <StatCard 
+            title="Knowledge Views" 
+            value={data?.overview.pageViews.value} 
+            trend={data?.overview.pageViews.trend}
+            icon={<BarChart3 className="text-blue-400" />}
+            subtitle="Educational content reach"
+          />
+          <StatCard 
+            title="Avg. Stay Duration" 
+            value={`${data?.overview.avgDuration.value}s`} 
+            trend={data?.overview.avgDuration.trend}
+            icon={<Clock className="text-purple-400" />}
+            subtitle="Deep learning index"
+          />
         </div>
-    );
-}
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Main Chart - Reach */}
+          <GlassBox className="lg:col-span-2" title="International Reach" icon={<Globe />}>
+            <div className="h-[350px] w-full mt-6">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={data?.countries}>
+                  <defs>
+                    <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#00897b" stopOpacity={0.3}/>
+                      <stop offset="95%" stopColor="#00897b" stopOpacity={0}/>
+                    </linearGradient>
+                  </defs>
+                  <XAxis 
+                    dataKey="country" 
+                    stroke="#475569" 
+                    fontSize={12} 
+                    tickLine={false} 
+                    axisLine={false} 
+                    dy={10}
+                  />
+                  <YAxis 
+                    stroke="#475569" 
+                    fontSize={12} 
+                    tickLine={false} 
+                    axisLine={false}
+                  />
+                  <Tooltip 
+                    contentStyle={{ 
+                      backgroundColor: '#1e293b', 
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      borderRadius: '12px',
+                      color: '#f1f5f9'
+                    }}
+                  />
+                  <Area 
+                    type="monotone" 
+                    dataKey="users" 
+                    stroke="#00897b" 
+                    strokeWidth={3}
+                    fillOpacity={1} 
+                    fill="url(#colorUsers)" 
+                    animationDuration={2000}
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+          </GlassBox>
+
+          {/* Side Module - Impact */}
+          <GlassBox title="Consortium Impact" icon={<GraduationCap />}>
+             <div className="space-y-6 mt-6">
+                <ImpactItem 
+                  label="Resources Downloaded" 
+                  value={data?.impact.pdfDownloads.value} 
+                  sub="Dissemination KPI"
+                  icon={<Download className="text-emerald-400" size={18} />}
+                />
+                <ImpactItem 
+                  label="AI Assistant Queries" 
+                  value={data?.impact.chatbotEngagement.value} 
+                  sub="User guidance sessions"
+                  icon={<MessageSquare className="text-blue-400" size={18} />}
+                />
+                
+                <div className="pt-6 border-t border-white/5">
+                  <div className="flex justify-between items-end mb-2">
+                    <span className="text-sm text-slate-400">Core Network Reach</span>
+                    <span className="text-2xl font-bold text-white">{data?.impact.consortiumReach.percentage}%</span>
+                  </div>
+                  <div className="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                    <div 
+                      className="bg-gradient-to-r from-emerald-500 to-teal-300 h-full rounded-full transition-all duration-1000"
+                      style={{ width: `${data?.impact.consortiumReach.percentage}%` }}
+                    />
+                  </div>
+                  <p className="text-[10px] text-slate-500 mt-2 uppercase tracking-widest font-bold">Consortium country ratio</p>
+                </div>
+             </div>
+          </GlassBox>
+        </div>
+
+        {/* Secondary Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <GlassBox title="Linguistic Diversity" icon={<Globe />}>
+            <div className="h-[300px] mt-6">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={data?.languages} layout="vertical">
+                  <XAxis type="number" hide />
+                  <YAxis 
+                    dataKey="lang" 
+                    type="category" 
+                    stroke="#94a3b8" 
+                    fontSize={12} 
+                    width={80}
+                  />
+                  <Tooltip 
+                    cursor={{fill: 'rgba(255,255,255,0.05)'}}
+                    contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px' }}
+                  />
+                  <Bar 
+                    dataKey="users" 
+                    fill="#00897b" 
+                    radius={[0, 4, 4, 0]} 
+                    barSize={20}
+                    animationDuration={1500}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </GlassBox>
+
+          <GlassBox title="Project Reach Distribution" icon={<PieChart icon={<BarChart3 />} />}>
+            <div className="h-[300px] mt-6">
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={data?.countries.slice(0, 5)}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={100}
+                    paddingAngle={8}
+                    dataKey="users"
+                    nameKey="country"
+                    animationBegin={500}
+                  >
+                    {data?.countries.slice(0, 5).map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip 
+                    contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px' }}
+                  />
+                </PieChart>
+              </ResponsiveContainer>
+              <div className="flex justify-center gap-4 flex-wrap mt-4">
+                {data?.countries.slice(0, 5).map((entry, index) => (
+                  <div key={index} className="flex items-center gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }}></div>
+                    <span className="text-[10px] text-slate-400 font-medium uppercase">{entry.country}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </GlassBox>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const StatCard = ({ title, value, trend, icon, subtitle }) => {
+  const isPositive = trend >= 0;
+  
+  return (
+    <div className="group bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-3xl transition-all duration-500 hover:bg-white/[0.08] hover:-translate-y-1 hover:border-emerald-500/30">
+      <div className="flex justify-between items-start mb-4">
+        <div className="p-3 bg-white/5 rounded-2xl group-hover:scale-110 transition-transform duration-500 border border-white/5">
+          {icon}
+        </div>
+        <div className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold ${
+          isPositive ? 'bg-emerald-500/10 text-emerald-400' : 'bg-red-500/10 text-red-400'
+        }`}>
+          {isPositive ? <TrendingUp size={12} /> : <TrendingDown size={12} />}
+          {Math.abs(trend)}%
+        </div>
+      </div>
+      <div>
+        <h3 className="text-slate-400 text-sm font-medium mb-1">{title}</h3>
+        <div className="flex items-baseline gap-2">
+          <span className="text-3xl font-black text-white tracking-tight">{value?.toLocaleString()}</span>
+        </div>
+        <p className="text-[11px] text-slate-500 mt-2 font-medium uppercase tracking-wider">{subtitle}</p>
+        
+        {/* Micro Sparkline Simulation */}
+        <div className="mt-4 h-1 w-full bg-white/5 rounded-full overflow-hidden">
+          <div className={`h-full rounded-full transition-all duration-1000 delay-300 ${isPositive ? 'bg-emerald-500' : 'bg-red-500'}`} 
+               style={{ width: `${60 + (trend / 2)}%` }}></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const GlassBox = ({ title, icon, children, className = "" }) => (
+  <div className={`bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[32px] overflow-hidden relative ${className}`}>
+    <div className="absolute top-0 right-0 p-8 text-white/5 pointer-events-none">
+       {icon && <div className="scale-[3] transform opacity-20">{icon}</div>}
+    </div>
+    <div className="relative">
+      <div className="flex items-center gap-3 mb-2">
+        <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-400">
+          {icon}
+        </div>
+        <h2 className="text-xl font-bold text-white tracking-tight">{title}</h2>
+      </div>
+      {children}
+    </div>
+  </div>
+);
+
+const ImpactItem = ({ label, value, sub, icon }) => (
+  <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/5 hover:bg-white/[0.08] transition-colors">
+    <div className="p-3 rounded-xl bg-white/5">
+      {icon}
+    </div>
+    <div>
+      <p className="text-slate-400 text-xs font-medium uppercase tracking-wider">{label}</p>
+      <p className="text-xl font-bold text-white tracking-tight">{value?.toLocaleString()}</p>
+      <p className="text-[10px] text-slate-500 font-medium">{sub}</p>
+    </div>
+  </div>
+);
+
+export default Analytics;

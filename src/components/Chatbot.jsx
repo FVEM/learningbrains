@@ -100,11 +100,13 @@ ${siteContextString}
 
         const userMessage = { role: 'user', content: input };
         
-        // Google Analytics Event Tracking
+        // Google Analytics Event Tracking - Enhanced with engagement metrics
         if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'chat_message', {
+            window.gtag('event', 'chat_interaction', {
                 'event_category': 'engagement',
-                'event_label': 'Chatbot Interaction',
+                'event_label': 'User Message',
+                'message_length': input.trim().length,
+                'chat_session_depth': messages.length,
                 'value': 1
             });
         }
