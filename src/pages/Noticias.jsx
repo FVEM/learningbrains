@@ -5,7 +5,27 @@ import SEOHead from '../components/SEOHead';
 const Noticias = () => {
     const { t } = useTranslation();
 
-    const translatedAiNewsItems = t('ai_news.items_list', { returnObjects: true });
+    const translatedAiNewsItems = t('ai_news.items_list', { returnObjects: true }) || [];
+
+    // Generate Structured Data (Schema.org)
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": t('ai_news.seo_title'),
+        "description": t('ai_news.seo_description'),
+        "itemListElement": translatedAiNewsItems.map((item, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+                "@type": "NewsArticle",
+                "headline": item.title,
+                "description": item.description,
+                "image": item.image ? (item.image.startsWith('http') ? item.image : `https://learningbrains.eu${item.image.startsWith('/') ? '' : '/'}${item.image}`) : undefined,
+                "datePublished": item.date,
+                "url": item.link && item.link.startsWith('http') ? item.link : `https://learningbrains.eu/noticias`
+            }
+        }))
+    };
 
     return (
         <div className="py-20">
@@ -13,6 +33,7 @@ const Noticias = () => {
                 title={t('ai_news.seo_title')}
                 description={t('ai_news.seo_description')}
                 path="/noticias"
+                schema={schema}
             />
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-20 animate-fade-in-up">

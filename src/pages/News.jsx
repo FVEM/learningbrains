@@ -19,6 +19,26 @@ const News = () => {
   const pageTitle = t("news.seo.title");
   const metaDescription = t("news.seo.description");
 
+  // Generate Structured Data (Schema.org)
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": pageTitle,
+    "description": metaDescription,
+    "itemListElement": newsItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "NewsArticle",
+        "headline": item.title,
+        "description": item.description,
+        "image": item.image ? (item.image.startsWith('http') ? item.image : `https://learningbrains.eu${item.image.startsWith('/') ? '' : '/'}${item.image}`) : undefined,
+        "datePublished": item.date, // Note: Ideally should be ISO format
+        "url": item.link && item.link.startsWith('http') ? item.link : `https://learningbrains.eu/news`
+      }
+    }))
+  };
+
   return (
     <div className="py-20" dir={i18n.dir()}>
       {/* Dynamic SEO Tags */}
@@ -27,6 +47,7 @@ const News = () => {
         description={metaDescription}
         keywords={t("news.seo.keywords", "Erasmus+, VET, News, Industry, AI")}
         path="/news"
+        schema={schema}
       />
 
       {/* Main Content Container */}

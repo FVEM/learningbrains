@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-const SEOHead = ({ title, description, keywords, path = '' }) => {
+const SEOHead = ({ title, description, keywords, path = '', schema }) => {
     const { i18n } = useTranslation();
     const location = useLocation();
 
@@ -47,6 +47,13 @@ const SEOHead = ({ title, description, keywords, path = '' }) => {
             <meta property="og:description" content={description} />
             <meta property="og:url" content={canonicalUrl} />
             <meta property="og:site_name" content="Learning Brains" />
+
+            {/* Structured Data (JSON-LD) */}
+            {schema && (
+                <script type="application/ld+json">
+                    {JSON.stringify(schema)}
+                </script>
+            )}
         </Helmet>
     );
 };

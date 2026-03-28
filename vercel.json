@@ -5,8 +5,8 @@
             "destination": "/api/$1"
         },
         {
-            "source": "/(.*)",
-            "destination": "/index.html"
+            "source": "/((?!assets/|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\.(?:css|js|png|jpg|jpeg|svg|webp|gif|woff2?|ttf|eot)).*)",
+            "destination": "/api/render"
         }
     ],
     "headers": [
