@@ -149,72 +149,74 @@ async function sync() {
     }
 
     if (!hasChanges) return;
+    
+    // Helper function for merging items
+    function mergeItems(existingList, sheetList, lang) {
+        const existingMap = new Map();
+        existingList.forEach(item => {
+            if (item.link) existingMap.set(item.link.trim(), item);
+        });
+
+        const mergedItems = sheetList.map(sheetItem => {
+            const rawLink = (sheetItem.link_url || sheetItem.link || "").trim();
+            const existingItem = existingMap.get(rawLink);
+            
+            const titleFromSheet = sheetItem[`title_${lang}`];
+            const descFromSheet = sheetItem[`description_${lang}`];
+
+            const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
+            const rawImage = sheetItem.image_url || sheetItem.image || "";
+            let finalImage = transformGDriveUrl(rawImage);
+            if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
+
+            // Ensure local paths have leading slash
+            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
+                finalImage = '/' + finalImage;
+            }
+
+            // Logic: 
+            // 1. Prefer sheet translation for specific language
+            // 2. Fall back to existing translation in JSON (if any)
+            // 3. Last fallback to sheet EN/General
+            const title = titleFromSheet || (existingItem ? existingItem.title : (sheetItem.title_en || sheetItem.title || ""));
+            const description = descFromSheet || (existingItem ? existingItem.description : (sheetItem.description_en || sheetItem.description || ""));
+
+            return {
+                title,
+                description,
+                link: rawLink,
+                category: sheetItem.category || (existingItem ? existingItem.category : ""),
+                date: sheetItem.date || (existingItem ? existingItem.date : ""),
+                image: finalImage || (existingItem ? existingItem.image : ""),
+                badge: sheetItem.badge_text || sheetItem.badge || (existingItem ? existingItem.badge : "")
+            };
+        }).filter(item => item.title.trim() !== "");
+
+        // Optional: Keep items that are in JSON but NOT in sheet 
+        // (to prevent data loss of manually added items)
+        const sheetLinks = new Set(sheetList.map(s => (s.link_url || s.link || "").trim()));
+        const manuallyAddedItems = existingList.filter(e => e.link && !sheetLinks.has(e.link.trim()));
+        
+        // Combine them (sheet items first, then manual ones)
+        return [...mergedItems, ...manuallyAddedItems];
+    }
 
     for (const lang of locales) {
         const filePath = path.join(__dirname, '..', 'src', 'locales', `${lang}.json`);
-        // ... (rest of the logic remains same but I'll provide full function for clarity)
         if (!fs.existsSync(filePath)) continue;
         
         const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         
-        // Sync AI News
-        json.ai_news.items_list = aiNewsItems.map(item => {
-            const title = item[`title_${lang}`] || item.title_en || item.title || "";
-            const description = item[`description_${lang}`] || item.description_en || item.description || "";
-            const rawLink = item.link_url || item.link || "";
-            const rawImage = item.image_url || item.image || "";
-            
-            const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
-            
-            let finalImage = transformGDriveUrl(rawImage);
-            if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
+        console.log(`Processing ${lang}.json...`);
+        
+        // Sync AI News with Merge Strategy
+        json.ai_news.items_list = mergeItems(json.ai_news.items_list, aiNewsItems, lang);
 
-            // Ensure local paths have leading slash
-            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
-                finalImage = '/' + finalImage;
-            }
-
-            return {
-                title,
-                description,
-                link: rawLink,
-                category: item.category || "",
-                date: item.date || "",
-                image: finalImage,
-                badge: item.badge_text || item.badge || ""
-            };
-        }).filter(item => item.title.trim() !== "");
-
-        // Sync Project News
-        json.news.items_list = projectEventsItems.map(item => {
-            const title = item[`title_${lang}`] || item.title_en || item.title || "";
-            const description = item[`description_${lang}`] || item.description_en || item.description || "";
-            const rawLink = item.link_url || item.link || "";
-            const rawImage = item.image_url || item.image || "";
-            
-            const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
-            
-            let finalImage = transformGDriveUrl(rawImage);
-            if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
-
-            // Ensure local paths have leading slash
-            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
-                finalImage = '/' + finalImage;
-            }
-
-            return {
-                title,
-                category: item.category || "",
-                description,
-                link: rawLink,
-                date: item.date || "",
-                image: finalImage,
-                badge: item.badge_text || item.badge || ""
-            };
-        }).filter(item => item.title.trim() !== "");
+        // Sync Project News with Merge Strategy
+        json.news.items_list = mergeItems(json.news.items_list, projectEventsItems, lang);
 
         fs.writeFileSync(filePath, JSON.stringify(json, null, 2));
-        console.log(`Successfully updated ${lang}.json`);
+        console.log(`✅ Successfully updated/merged ${lang}.json`);
     }
 }
 
