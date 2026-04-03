@@ -3,32 +3,32 @@
     "home": "Inicio",
     "about": "El Proyecto",
     "results": "Resultados",
-    "partners": "Socios",
+    "partners": "Partners",
     "news": "Eventos del Proyecto",
     "noticias": "Noticias",
     "resources": "Recursos",
-    "impact": "Difusi\u00f3n e Impacto",
+    "impact": "Diseminación e Impacto",
     "contact": "Contacto"
   },
   "home": {
-    "seo_title": "Learning Brains \u2013 Formaci\u00f3n Industrial con IA | Erasmus+",
-    "seo_description": "Learning Brains es un proyecto Erasmus+ KA220-VET que desarrolla herramientas de aprendizaje en el puesto de trabajo basadas en IA para recualificar a trabajadores industriales en Europa. Descubre nuestros resultados, socios y recursos gratuitos.",
-    "hero_badge": "ASOCIACI\u00d3N DE COOPERACI\u00d3N ERASMUS+",
+    "seo_title": "Learning Brains – Formación Industrial con IA | Erasmus+",
+    "seo_description": "Learning Brains es un proyecto Erasmus+ KA220-VET que desarrolla herramientas de aprendizaje en el trabajo con IA para recualificar trabajadores industriales en Europa. Conozca nuestros resultados, socios y recursos gratuitos.",
+    "hero_badge": "ASOCIACIÓN DE COOPERACIÓN ERASMUS+",
     "hero_name": "Learning Brains",
-    "hero_title": "Habilidades Reales para una Industria Real",
-    "hero_subtitle": "Sistemas Integrados de Aprendizaje en el Puesto de Trabajo para la Recualificaci\u00f3n Industrial",
-    "cta_primary": "Saber M\u00e1s",
-    "cta_secondary": "Nuestros Socios",
-    "partners_count": "6 Socios Estrat\u00e9gicos",
-    "partners_text": "En 5 Pa\u00edses Europeos",
+    "hero_title": "Competencias Reales para la Industria Real",
+    "hero_subtitle": "Sistemas Integrados de Aprendizaje en el Puesto de Trabajo para la Recualificación Industrial",
+    "cta_primary": "Saber Más",
+    "cta_secondary": "Nuestros Partners",
+    "partners_count": "6 Partners Estratégicos",
+    "partners_text": "En 5 Países Europeos",
     "stats": [
       {
         "value": "6",
-        "label": "Socios"
+        "label": "Partners"
       },
       {
         "value": "5",
-        "label": "Pa\u00edses"
+        "label": "Países"
       },
       {
         "value": "24",
@@ -39,367 +39,368 @@
         "label": "Resultados"
       }
     ],
-    "pillars_badge": "Pilares Fundamentales",
-    "pillars_title": "Innovando los Sistemas VET",
-    "pillars_subtitle": "Learning Brains introduce un nuevo paradigma para la formaci\u00f3n industrial, combinando tres elementos clave en una estructura unificada.",
+    "pillars_badge": "Pilares Centrales",
+    "pillars_title": "Innovar los Sistemas de FP",
+    "pillars_subtitle": "Learning Brains introduce un nuevo paradigma para la formación industrial combinando tres elementos clave en una estructura unificada.",
     "features": [
       {
         "title": "Enfoque Industrial",
-        "desc": "Metodolog\u00edas a medida para el sector metal\u00fargico y manufacturero, abordando brechas de habilidades y necesidades tecnol\u00f3gicas."
+        "desc": "Metodologías adaptadas para el sector manufacturero, abordando brechas de competencias específicas y necesidades tecnológicas."
       },
       {
         "title": "Aprendizaje en el Trabajo",
-        "desc": "Integrando la educaci\u00f3n directamente en el flujo de trabajo para minimizar interrupciones y maximizar la aplicaci\u00f3n pr\u00e1ctica."
+        "desc": "Integrar la educación directamente en el flujo de trabajo para minimizar interrupciones y maximizar la aplicación práctica."
       },
       {
         "title": "Herramientas con IA",
-        "desc": "Aprovechando la inteligencia artificial para personalizar los itinerarios de aprendizaje y optimizar la adquisici\u00f3n de competencias."
+        "desc": "Aprovechar la inteligencia artificial para personalizar itinerarios de aprendizaje y optimizar la adquisición de competencias."
       }
     ],
     "impact_badge": "Impacto del Proyecto",
-    "impact_title": "Impulsando un Cambio Real",
-    "impact_text": "Nuestro objetivo es cerrar la brecha entre la formaci\u00f3n profesional y las necesidades industriales reales a trav\u00e9s de intervenciones pr\u00e1cticas y medibles.",
+    "impact_title": "Impulsar un Cambio Real",
+    "impact_text": "Nuestro objetivo es cerrar la brecha entre la formación profesional y las necesidades industriales reales mediante intervenciones prácticas y medibles.",
     "metric_label_1": "Compromiso Industrial",
-    "metric_label_2": "Eficiencia de Formaci\u00f3n",
-    "metric_label_3": "Preparaci\u00f3n Laboral",
-    "impact_cta": "Ver Impacto Total",
-    "impact_point_1": "Adaptabilidad de la Fuerza Laboral",
-    "impact_point_2": "Curr\u00edculos VET Modernizados",
-    "impact_point_3": "V\u00ednculos m\u00e1s Fuertes Industria-Educaci\u00f3n",
+    "metric_label_2": "Eficiencia Formativa",
+    "metric_label_3": "Preparación Laboral",
+    "impact_cta": "Ver Impacto Completo",
+    "impact_point_1": "Mayor Adaptabilidad de la Fuerza Laboral",
+    "impact_point_2": "Currículos de FP Modernizados",
+    "impact_point_3": "Vínculos Industria-Educación más Fuertes",
     "chart_label_1": "Adaptabilidad",
-    "chart_label_2": "Eficienca Formativa",
+    "chart_label_2": "Eficiencia Formativa",
     "chart_label_3": "Velocidad de Aprendizaje",
     "hero_stats": {
       "programme": "PROGRAMA",
       "programme_name": "Erasmus+ KA220-VET",
       "duration_value": "24 Meses",
-      "duration_label": "DURACI\u00d3N",
+      "duration_label": "DURACIÓN",
       "duration_label_text": "Meses",
-      "partners_label": "SOCIOS",
+      "partners_label": "PARTNERS",
       "partners_label_text": "Organizaciones",
-      "countries_label": "PA\u00cdSES",
+      "countries_label": "PAÍSES",
       "countries_label_text": "Participantes",
-      "focus_value": "Recualificaci\u00f3n Industrial",
-      "focus_label": "OBJETIVO"
+      "focus_value": "Recualificación Industrial",
+      "focus_label": "ENFOQUE"
     },
     "consortium_title": "Consorcio del Proyecto",
     "latest_updates": {
-      "title": "\u00daltimas Actualizaciones",
+      "title": "Últimas Actualizaciones",
       "description": "Hitos, eventos y resultados del proyecto Learning Brains.",
       "view_all": "Ver todas las noticias",
-      "coming_soon": "Pr\u00f3ximamente",
+      "coming_soon": "Próximamente",
       "news_1": {
-        "badge": "Reuni\u00f3n",
-        "date": "Feb 2026 \u00b7 Bilbao, Espa\u00f1a",
-        "title": "Reuni\u00f3n de Lanzamiento del Proyecto",
-        "description": "Los socios se reunieron por primera vez en la sede de la FVEM para discutir el cronograma del proyecto.",
+        "badge": "Reunión",
+        "date": "Feb 2026 \u00b7 Bilbao, España",
+        "title": "Reunión de Lanzamiento del Proyecto",
+        "description": "Los socios se reunieron por primera vez en la sede de FVEM para discutir el cronograma del proyecto.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "image": "/images/news/bilbaokickoff.jpg"
       },
       "news_2": {
-        "title": "Metodolog\u00eda del Consorcio",
-        "description": "Desarrollo del marco central para la recualificaci\u00f3n industrial y el aprendizaje en el trabajo."
+        "title": "Metodología del Consorcio",
+        "description": "Desarrollo del marco central para la recualificación industrial y el aprendizaje en el trabajo."
       },
       "news_3": {
-        "title": "Investigaci\u00f3n sobre Herramientas de IA",
-        "description": "An\u00e1lisis de aplicaciones de IA de vanguardia para entornos de formaci\u00f3n profesional."
+        "title": "Investigación de Herramientas de IA",
+        "description": "Análisis de aplicaciones de IA de última generación para entornos de formación profesional."
       }
     },
-    "chatbot_tooltip": "\u00a1Pregunta a nuestra IA!",
-    "chatbot_greeting": "\u00a1Hola! Soy el asistente de IA de Learning Brains. \u00bfEn qu\u00e9 puedo ayudarte hoy con el proyecto o sobre la IA en el entorno laboral?"
+    "chatbot_tooltip": "¡Pregunta a nuestra IA!",
+    "chatbot_greeting": "¡Hola! Soy el asistente de IA de Learning Brains. ¿Cómo puedo ayudarte hoy con el proyecto o con la IA en el trabajo?"
   },
   "about": {
-    "seo_title": "Sobre el Proyecto \u2013 Learning Brains Erasmus+",
-    "seo_description": "Descubre los objetivos, \u00e1reas de enfoque y grupos destinatarios de Learning Brains: un proyecto Erasmus+ KA220-VET que une la inteligencia artificial y la formaci\u00f3n profesional en el sector manufacturero europeo.",
+    "seo_title": "Sobre el Proyecto – Learning Brains Erasmus+",
+    "seo_description": "Descubra los objetivos, áreas de enfoque y grupos objetivo de Learning Brains: un proyecto Erasmus+ KA220-VET que une inteligencia artificial y formación profesional en el sector manufacturero europeo.",
     "title": "Sobre el Proyecto",
     "background_title": "Antecedentes y Contexto",
-    "background_text": "La r\u00e1pida evoluci\u00f3n de los procesos industriales, impulsada por la digitalizaci\u00f3n y la automatizaci\u00f3n, est\u00e1 creando una necesidad creciente de recualificaci\u00f3n de la fuerza laboral en toda Europa. Los enfoques de formaci\u00f3n tradicionales a menudo no logran abordar las necesidades de aprendizaje espec\u00edficas y contextuales de los trabajadores que deben adaptarse a nuevas tecnolog\u00edas y procesos sin dejar de ser productivos. Learning Brains aborda este desaf\u00edo mediante el desarrollo de sistemas integrados de aprendizaje en el puesto de trabajo que combinan la experiencia pr\u00e1ctica en el lugar de trabajo con enfoques educativos estructurados.",
+    "background_text": "La rápida evolución de los procesos industriales, impulsada por la digitalización y la automatización, está creando una necesidad creciente de recualificación de la fuerza laboral en toda Europa. Los enfoques de formación tradicionales a menudo no logran abordar las necesidades de aprendizaje específicas y contextuales de los trabajadores que deben adaptarse a nuevas tecnologías y procesos mientras se mantienen productivos. Learning Brains aborda este desafío desarrollando sistemas integrados de aprendizaje en el puesto de trabajo que combinan la experiencia práctica con enfoques educativos estructurados.",
     "objectives_title": "Objetivos del Proyecto",
     "objectives_list": [
-      "Desarrollar metodolog\u00edas innovadoras de aprendizaje en el trabajo adaptadas a la recualificaci\u00f3n industrial",
+      "Desarrollar metodologías innovadoras de aprendizaje en el trabajo adaptadas para la recualificación industrial",
       "Crear herramientas basadas en IA para apoyar itinerarios de aprendizaje personalizados en entornos laborales",
-      "Fomentar la cooperaci\u00f3n entre proveedores de VET y socios industriales en toda Europa",
-      "Producir recursos educativos abiertos para la recualificaci\u00f3n industrial accesibles a un p\u00fablico amplio",
-      "Contribuir al di\u00e1logo pol\u00edtico europeo sobre la modernizaci\u00f3n de la educaci\u00f3n y formaci\u00f3n profesional"
+      "Fomentar la cooperación entre proveedores de FP y socios industriales en toda Europa",
+      "Producir recursos educativos abiertos para la recualificación industrial accesibles a un público amplio",
+      "Contribuir al diálogo político europeo sobre la modernización de la educación y formación profesional"
     ],
-    "focus_title": "\u00c1reas de Enfoque",
+    "focus_title": "Áreas de Enfoque",
     "focus_list": [
-      "Educaci\u00f3n y Formaci\u00f3n Profesional (VET)",
-      "Metodolog\u00edas de aprendizaje en el puesto de trabajo",
-      "Recualificaci\u00f3n y upskilling industrial",
-      "Herramientas de apoyo al aprendizaje basadas en IA"
+      "Educación y Formación Profesional (FP)",
+      "Metodologías de aprendizaje en el trabajo",
+      "Recualificación y upskilling industrial",
+      "Herramientas de apoyo al aprendizaje con IA"
     ],
-    "target_title": "Grupos Destinatarios",
+    "target_title": "Grupos Objetivo",
     "target_list": [
-      "Trabajadores industriales en procesos de recualificaci\u00f3n",
-      "Proveedores de VET y formadores en sectores industriales",
-      "Responsables de RRHH y coordinadores de formaci\u00f3n en la industria",
-      "Responsables pol\u00edticos en educaci\u00f3n profesional y empleo"
+      "Trabajadores industriales en procesos de recualificación",
+      "Proveedores de FP y formadores en sectores industriales",
+      "Gerentes de RRHH y coordinadores de formación en la industria",
+      "Responsables políticos en educación profesional y empleo"
     ]
   },
   "partners": {
-    "seo_title": "Socios \u2013 Consorcio Erasmus+ Learning Brains",
-    "seo_description": "Conoce a las 6 organizaciones europeas de Espa\u00f1a, Italia, Eslovaquia, Austria y Portugal que colaboran en el proyecto Erasmus+ Learning Brains sobre IA y formaci\u00f3n profesional industrial.",
-    "label": "Colaboraci\u00f3n Transnacional",
-    "title": "Nuestros Socios",
-    "subtitle": "Learning Brains es una asociaci\u00f3n transnacional que re\u00fane a asociaciones industriales, agencias de apoyo empresarial y expertos en formaci\u00f3n de toda Europa.",
-    "view_org": "Ver Organizaci\u00f3n",
+    "seo_title": "Partners – Consorcio Erasmus+ Learning Brains",
+    "seo_description": "Conozca las 6 organizaciones europeas de España, Italia, Eslovaquia, Austria y Portugal que colaboran en el proyecto Erasmus+ Learning Brains sobre IA y formación profesional industrial.",
+    "label": "Colaboración Transnacional",
+    "title": "Nuestros Partners",
+    "subtitle": "Learning Brains es una asociación transnacional que reúne asociaciones industriales, agencias de apoyo empresarial y expertos en formación de toda Europa.",
+    "view_org": "Ver Organización",
     "roles": {
       "Coordinator": "Coordinador",
-      "Partner": "Socio"
+      "Partner": "Partner"
     },
     "countries": {
-      "Spain": "Espa\u00f1a",
+      "Spain": "España",
       "Italy": "Italia",
       "Austria": "Austria",
       "Slovakia": "Eslovaquia",
       "Portugal": "Portugal"
     },
     "descriptions": [
-      "Federaci\u00f3n industrial l\u00edder que representa a m\u00e1s de 800 empresas del sector del metal, comprometida con la innovaci\u00f3n y la formaci\u00f3n.",
-      "Empresa de servicios de Confindustria Veneto, especializada en formaci\u00f3n, innovaci\u00f3n y desarrollo organizacional para empresas regionales.",
-      "Representa los intereses de la comunidad empresarial de Estiria y ofrece amplios servicios de apoyo a la educaci\u00f3n y la formaci\u00f3n.",
-      "Expertos en el dise\u00f1o e implementaci\u00f3n de metodolog\u00edas pedag\u00f3gicas innovadoras y entornos de aprendizaje digital.",
-      "La organizaci\u00f3n sin \u00e1nimo de lucro especializada m\u00e1s antigua para el apoyo a peque\u00f1as y medianas empresas en Eslovaquia.",
-      "Dedicada al desarrollo de recursos humanos y soluciones de formaci\u00f3n innovadoras para el mercado laboral moderno."
+      "Una federación industrial líder que representa a más de 800 empresas del sector del metal, comprometida con la innovación y la formación.",
+      "La sociedad de servicios de Confindustria Veneto, especializada en formación, innovación y desarrollo organizacional para empresas regionales.",
+      "Representa los intereses de la comunidad empresarial de Estiria y ofrece amplios servicios de apoyo educativo y formativo.",
+      "Expertos en el diseño e implementación de metodologías pedagógicas innovadoras y entornos de aprendizaje digital.",
+      "La organización especializada sin fines de lucro más antigua para el apoyo a las pequeñas y medianas empresas en Eslovaquia.",
+      "Dedicada al desarrollo de recursos humanos y soluciones formativas innovadoras para el mercado laboral moderno."
     ]
   },
   "news": {
-    "seo_title": "Eventos y Noticias \u2013 Learning Brains Erasmus+",
-    "seo_description": "Mant\u00e9ngase al d\u00eda sobre los \u00faltimos eventos, talleres y reuniones transnacionales del proyecto Erasmus+ Learning Brains sobre IA, VET y recualificaci\u00f3n industrial.",
-    "label": "Actualizaciones del Proyecto",
-    "title": "Eventos del Proyecto",
-    "subtitle": "Siga el progreso del proyecto Learning Brains a trav\u00e9s de nuestras \u00faltimas noticias, reuniones y actividades de difusi\u00f3n.",
+    "seo": {
+      "title": "Eventos y Noticias – Learning Brains Erasmus+",
+      "description": "Manténgase al día de los últimos eventos, talleres y reuniones transnacionales del proyecto Erasmus+ Learning Brains sobre IA, FP y recualificación industrial.",
+      "keywords": "Erasmus+, VET, Noticias, Industria, IA"
+    },
+    "section_title": {
+      "main": "Eventos del Proyecto",
+      "sub": "ACTUALIDAD"
+    },
+    "section_description": "Siga el progreso del proyecto Learning Brains a través de nuestras últimas noticias, reuniones transnacionales y actividades de impacto.",
     "items_list": [
       {
-        "title": "Reuni\u00f3n de Lanzamiento del Proyecto en Bilbao",
-        "category": "Reuni\u00f3n",
-        "description": "El consorcio de Learning Brains se reuni\u00f3 por primera vez en Bilbao para poner en marcha las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer a\u00f1o, incluyendo la configuraci\u00f3n de la plataforma digital y la investiga\u00f3n inicial sobre las necesidades de recualificaci\u00f3n industrial.",
+        "title": "Reunión de Lanzamiento del Proyecto en Bilbao",
+        "category": "Reunión",
+        "description": "El consorcio de Learning Brains se reunió por primera vez en Bilbao para poner en marcha las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, incluida la configuración de la plataforma digital y la investigación inicial sobre las necesidades de reciclaje industrial.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 \u00b7 Bilbao, Espa\u00f1a",
         "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
-        "badge": "REUNI\u00d3N"
+        "badge": "REUNIÓN"
       },
       {
-        "title": "Pr\u00f3ximo Taller: IA en la VET",
-        "category": "Reuni\u00f3n",
-        "description": "\u00danase a nosotros en un taller en l\u00ednea que explora el potencial de la Inteligencia Artificial en la Educaci\u00f3n y Formaci\u00f3n Profesional. Contaremos con expertos de toda Europa para compartir ideas y mejores pr\u00e1cticas.",
+        "title": "Próximo taller: IA en la FP",
+        "category": "Evento",
+        "description": "Únase a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Contaremos con expertos de toda Europa para compartir ideas y mejores prácticas.",
         "link": "",
-        "date": "Pr\u00f3ximamente",
+        "date": "Próximamente",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
-        "badge": "REUNI\u00d3N"
+        "badge": "REUNIÓN"
       },
       {
-        "title": "Primera Reuni\u00f3n Transnacional del Proyecto",
-        "category": "Reuni\u00f3n",
-        "description": "La segunda reuni\u00f3n de socios ser\u00e1 organizada por nuestros socios italianos. El programa incluye la revisi\u00f3n del primer borrador del marco de recualificaci\u00f3n y la planificaci\u00f3n de la fase de pruebas piloto.",
+        "title": "Primera reunión transnacional del proyecto",
+        "category": "Reunión",
+        "description": "Nuestros socios italianos organizarán la segunda reunión de socios. El programa incluye la revisión del primer borrador del marco de reciclaje profesional y la planificación de la fase de pruebas piloto.",
         "link": "",
-        "date": "Pr\u00f3ximamente",
+        "date": "Próximamente",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "REUNI\u00d3N"
+        "badge": "REUNIÓN"
       },
       {
         "title": "\u00a1Web oficial de Learning Brains online!",
         "category": "Proyecto",
-        "description": "Estamos encantados de anunciar el lanzamiento de la web oficial de Learning Brains. Learning Brains (una iniciativa Erasmus+) est\u00e1 aqu\u00ed para cerrar la brecha entre la formaci\u00f3n profesional y las necesidades industriales del mundo real.",
+        "description": "\u00a1Estamos encantados de anunciar el lanzamiento del sitio web oficial de Learning Brains! Learning Brains (una iniciativa Erasmus+) está aquí para cerrar la brecha entre la formación profesional y las necesidades industriales reales.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 \u00b7 Bilbao, Espa\u00f1a",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROYECTO"
       }
     ],
-    "read_more": "Leer M\u00e1s",
-    "details_soon": "M\u00e1s detalles pronto"
+    "no_items_found": "No se han encontrado eventos en este momento.",
+    "stay_updated": {
+      "title": "¿Quieres estar al día?",
+      "description": "Síguenos en nuestras redes sociales para no perderte ningún avance en la integración de la IA y el aprendizaje neuro-educativo."
+    },
+    "read_more": "Leer Más",
+    "details_soon": "Más detalles próximamente"
   },
   "resources": {
-    "seo_title": "Recursos \u2013 Materiales Gratuitos de VET e IA",
-    "seo_description": "Descarga recursos gratuitos y materiales educativos abiertos producidos por el proyecto Erasmus+ Learning Brains para formadores VET, responsables de RRHH y profesionales industriales europeos.",
-    "label": "Repositorio P\u00fablico",
+    "seo_title": "Recursos – Materiales Gratuitos de FP e IA",
+    "seo_description": "Descargue recursos gratuitos y materiales educativos abiertos producidos por el proyecto Erasmus+ Learning Brains para formadores de FP, gerentes de RRHH y profesionales industriales europeos.",
+    "label": "Repositorio Público",
     "title": "Recursos",
-    "subtitle": "Acceda a documentos p\u00fablicos del proyecto, gu\u00edas y plantillas t\u00e9cnicas a medida que se publiquen a lo largo del ciclo de vida del proyecto.",
+    "subtitle": "Acceda a los documentos públicos del proyecto, guías y plantillas técnicas a medida que se publiquen a lo largo del ciclo de vida del proyecto.",
     "repo_title": "Repositorio de Documentos",
-    "repo_desc": "El repositorio p\u00fablico contendr\u00e1 descargas en PDF de folletos del proyecto, informes y manuales metodol\u00f3gicos. Actualmente, no hay archivos disponibles para descarga p\u00fablica.",
+    "repo_desc": "El repositorio público contendrá descargas en PDF de folletos del proyecto, informes y manuales metodológicos. Actualmente, no hay archivos disponibles para descarga pública.",
     "btn_brochure": "Folleto del Proyecto",
-    "btn_guide": "Gu\u00eda de Implementaci\u00f3n"
+    "btn_guide": "Guía de Implementación"
   },
   "results": {
-    "seo_title": "Resultados del Proyecto \u2013 Herramientas de IA para la Formaci\u00f3n Profesional",
-    "seo_description": "Explora los resultados intelectuales de Learning Brains: un marco europeo de recualificaci\u00f3n industrial, herramientas de coaching con IA y un manual de mentor\u00eda en el trabajo para el sector manufacturero.",
+    "seo_title": "Resultados del Proyecto – Herramientas IA para la FP",
+    "seo_description": "Explore los resultados intelectuales de Learning Brains: un marco europeo de recualificación industrial, herramientas de coaching con IA y un manual de mentoría en el trabajo para el sector manufacturero.",
     "title": "Resultados del Proyecto",
-    "subtitle": "Acceda a los productos tangibles y contribuciones intelectuales del proyecto Learning Brains.",
-    "status_note": "El proyecto Learning Brains se encuentra actualmente en su fase de implementaci\u00f3n. Los resultados y entregables se publicar\u00e1n progresivamente a medida que est\u00e9n disponibles y sean aprobados por la Comisi\u00f3n Europea.",
+    "subtitle": "Acceda a los resultados tangibles y las contribuciones intelectuales del proyecto Learning Brains.",
+    "status_note": "El proyecto Learning Brains se encuentra actualmente en su fase de ejecución. Los resultados y entregables se publicarán progresivamente a medida que estén disponibles y sean aprobados por la Comisión Europea.",
     "available_title": "Resultados Disponibles",
-    "no_results": "Todav\u00eda no se ha publicado ning\u00fan resultado. Vuelva a consultar m\u00e1s tarde.",
-    "planned_title": "Resultados Planificados",
+    "no_results": "Todavía no se ha publicado ningún resultado. Por favor, vuelva a consultarlo más tarde.",
+    "planned_title": "Resultados Previstos",
     "planned_list": [
-      "Marco Europeo para la Recualificaci\u00f3n Industrial",
-      "Manual para la Mentor\u00eda en el Lugar de Trabajo",
+      "Marco Europeo para la Recualificación Industrial",
+      "Manual para la Mentoría en el Lugar de Trabajo",
       "Generador de Itinerarios de Aprendizaje con IA",
-      "Recomendaciones Pol\u00edticas Transnacionales"
+      "Recomendaciones Políticas Transnacionales"
     ]
   },
   "impact": {
-    "seo_title": "Difusi\u00f3n e Impacto \u2013 Learning Brains Erasmus+",
-    "seo_description": "Conoce la estrategia de difusi\u00f3n y el impacto social de Learning Brains: promoviendo la alfabetizaci\u00f3n en IA, la adaptabilidad de los trabajadores y la recualificaci\u00f3n industrial en 5 pa\u00edses europeos.",
-    "label": "Difusi\u00f3n e Impacto",
+    "seo_title": "Diseminación e Impacto – Learning Brains Erasmus+",
+    "seo_description": "Conozca la estrategia de diseminación y el impacto social de Learning Brains: promoviendo la alfabetización en IA, la adaptabilidad de los trabajadores y la recualificación industrial en 5 países europeos.",
+    "label": "Diseminación e Impacto",
     "title": "Influencia del Proyecto",
-    "subtitle": "Comprender c\u00f3mo Learning Brains contribuye a modernizar la formaci\u00f3n profesional europea y la recualificaci\u00f3n industrial.",
-    "strategy_title": "Estrategia de Difusi\u00f3n",
+    "subtitle": "Comprender cómo Learning Brains contribuye a modernizar la formación profesional europea y la recualificación industrial.",
+    "strategy_title": "Estrategia de Diseminación",
     "strategy_text": "Nuestra estrategia se centra en llegar a las partes interesadas clave de toda Europa para garantizar que los resultados del proyecto sean ampliamente conocidos y utilizados. Utilizamos un enfoque multicanal que incluye este hub digital, redes sociales sectoriales, eventos industriales regionales y talleres transnacionales.",
-    "audience_title": "P\u00fablicos Objetivo",
+    "audience_title": "Audiencias Objetivo",
     "audience_list": [
       "Trabajadores Industriales",
-      "Centros de Formaci\u00f3n Profesional",
-      "Pymes Manufactureras",
-      "Responsables Pol\u00edticos",
-      "Agentes Sociales",
+      "Centros de Formación Profesional",
+      "PYMES Manufactureras",
+      "Responsables Políticos",
+      "Interlocutores Sociales",
       "Comunidad Investigadora"
     ],
     "impact_title": "Impacto Esperado",
-    "impact_text": "El proyecto Learning Brains espera contribuir a la modernizaci\u00f3n de los sistemas VET mediante el suministro de herramientas validadas para la recualificaci\u00f3n industrial. El impacto se observar\u00e1 en una mejor adaptabilidad de los trabajadores industriales a los cambios tecnol\u00f3gicos y una mayor eficiencia de las metodolog\u00edas de formaci\u00f3n en el puesto de trabajo.",
-    "note": "Nota: Los impactos del proyecto se describen actualmente de forma no cuantitativa, ya que la implementaci\u00f3n se encuentra en sus fases iniciales."
+    "impact_text": "El proyecto Learning Brains espera contribuir a la modernización de los sistemas de FP proporcionando herramientas validadas para la recualificación industrial. El impacto se observará en una mejor adaptabilidad de los trabajadores industriales a los cambios tecnológicos y en una mayor eficiencia de las metodologías de formación en el trabajo.",
+    "note": "Nota: Los impactos del proyecto se describen actualmente de forma no cuantitativa, ya que la ejecución se encuentra en sus fases iniciales."
   },
   "contact": {
-    "connect_us": "Conecta con Nosotros",
+    "connect_us": "Conéctate con Nosotros",
     "title": "Ponte en Contacto",
-    "description": "\u00bfTienes alguna pregunta sobre el proyecto Learning Brains? Contacta con el consorcio a trav\u00e9s de este formulario o s\u00edguenos en nuestros canales sociales.",
-    "email_inquiry": "Consulta por Correo",
+    "description": "¿Tienes alguna pregunta sobre el proyecto Learning Brains? Contacta con el consorcio a través de este formulario o síguenos en nuestros canales sociales.",
+    "email_inquiry": "Consulta por Email",
     "official_channels": "Canales Oficiales",
-    "social_pending": "LinkedIn y Twitter habilitados a mitad del proyecto",
-    "disclaimer": "Este proyecto sigue los estrictos mandatos de visibilidad de Erasmus+. Toda la informaci\u00f3n recibida se trata de forma confidencial y se utiliza \u00fanicamente para fines de difusi\u00f3n.",
+    "social_pending": "LinkedIn y Twitter activados a mitad del proyecto",
+    "disclaimer": "Este proyecto sigue estrictos mandatos de visibilidad de Erasmus+. Toda la información recibida se trata de forma confidencial y se utiliza únicamente para fines de diseminación.",
     "form": {
       "full_name": "Nombre Completo",
-      "email": "Correo Electr\u00f3nico",
+      "email": "Dirección de Email",
       "message": "Tu Mensaje",
       "send": "Enviar Mensaje",
-      "security": "Integraci\u00f3n lista \u2022 Comunicaci\u00f3n segura",
-      "placeholder_name": "Juan P\u00e9rez",
+      "security": "Integración lista \u2022 Comunicación segura",
+      "placeholder_name": "Juan Pérez",
       "placeholder_email": "juan@ejemplo.com",
-      "placeholder_message": "Cu\u00e9ntanos tu inter\u00e9s en el proyecto...",
-      "status_success_title": "\u00a1Mensaje Enviado!",
-      "status_success_desc": "Gracias por contactar con nosotros. Te responderemos lo antes posible.",
+      "placeholder_message": "Cuéntanos tu interés en el proyecto...",
+      "status_success_title": "¡Mensaje Enviado!",
+      "status_success_desc": "Gracias por ponerte en contacto con nosotros. Te responderemos pronto.",
       "status_sending": "Enviando...",
-      "status_error": "Algo sali\u00f3 mal. Por favor, int\u00e9ntalo de nuevo m\u00e1s tarde.",
-      "destination_label": "\u00bfA qui\u00e9n le gustar\u00eda contactar?",
-      "dest_general": "Informaci\u00f3n General",
-      "dest_es": "Socios Espa\u00f1oles (FVEM / Media Creativa)",
+      "status_error": "Algo salió mal. Por favor, inténtalo de nuevo más tarde.",
+      "destination_label": "¿A quién te gustaría contactar?",
+      "dest_general": "Información General",
+      "dest_es": "Socios Españoles (FVEM / Media Creativa)",
       "dest_it": "Socio Italiano (SIAV)",
-      "dest_at": "Socio Austriaco (Room466)",
+      "dest_at": "Socio Austríaco (Room466)",
       "dest_sk": "Socio Eslovaco (SBA)",
-      "dest_pt": "Socio Portugu\u00e9s (SPIN)"
+      "dest_pt": "Socio Portugués (SPIN)"
     }
   },
   "footer": {
-    "description": "Sistemas integrados de aprendizaje en el puesto de trabajo para la recualificaci\u00f3n industrial. Cerrando la brecha entre la teor\u00eda y la pr\u00e1ctica industrial.",
+    "description": "Sistemas integrados de aprendizaje en el puesto de trabajo para la recualificación industrial. Cerrando la brecha entre la teoría y la práctica industrial.",
     "section_project": "Proyecto",
     "section_community": "Comunidad",
     "section_legal": "Legal",
-    "privacy": "Pol\u00edtica de Privacidad",
-    "cookies": "Pol\u00edtica de Cookies",
+    "privacy": "Política de Privacidad",
+    "cookies": "Política de Cookies",
     "transparency": "Transparencia",
-    "disclaimer": "Co-fundado por el Programa Erasmus+ de la Uni\u00f3n Europea. Este proyecto ha sido financiado con el apoyo de la Comisi\u00f3n Europea. Esta publicaci\u00f3n refleja \u00fanicamente las opiniones del autor, y la Comisi\u00f3n no se hace responsable del uso que pueda hacerse de la informaci\u00f3n contenida en ella."
+    "disclaimer": "Co-funded by the Erasmus+ Programme of the European Union. This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein."
   },
   "ai_news": {
-    "seo_title": "Noticias de IA \u2013 Inteligencia Artificial en Negocios y VET",
-    "seo_description": "\u00daltimas tendencias en Inteligencia Artificial para empresas, industria y formaci\u00f3n profesional (VET). Curado por el equipo del proyecto Erasmus+ Learning Brains.",
-    "label": "Novedades de Industria e IA",
-    "title": "Noticias de IA, Negocios y Formaci\u00f3n",
-    "subtitle": "Mant\u00e9ngase informado sobre las \u00faltimas tendencias en inteligencia artificial, innovaci\u00f3n empresarial y metodolog\u00edas de formaci\u00f3n profesional.",
+    "seo_title": "Noticias IA – Inteligencia Artificial en Negocios y FP",
+    "seo_description": "Últimas tendencias en Inteligencia Artificial para empresas, industria y formación profesional (FP). Seleccionadas por el equipo del proyecto Erasmus+ Learning Brains.",
+    "label": "Actualizaciones de Industria e IA",
+    "title": "Noticias de IA, Negocios y Formación",
+    "subtitle": "Manténgase informado sobre las últimas tendencias en Inteligencia Artificial, innovación empresarial y metodologías de formación profesional.",
     "items_list": [
       {
         "title": "IA para equipos de ventas: de la oportunidad a la oferta",
-        "description": "M\u00e1s oportunidades, mejores ofertas y mejor coordinaci\u00f3n comercial con IA.",
+        "description": "Más oportunidades, mejores ofertas y mejor coordinación comercial con IA.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
-        "category": "Formaci\u00f3n",
+        "category": "Formación",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": "FORMACI\u00d3N/ES"
+        "badge": "FORMACIÓN/ES"
       },
       {
-        "title": "IA para Ingenier\u00eda: m\u00e1s eficiencia, menos tareas repetitivas",
-        "description": "Automatiza tareas t\u00e9cnicas y aumenta la productividad de los equipos de ingenier\u00eda.",
+        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
+        "description": "Automatiza tareas técnicas e incrementa la productividad del equipo de ingeniería.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
-        "category": "Formaci\u00f3n",
+        "category": "Formación",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": "FORMACI\u00d3N/ES"
+        "badge": "FORMACIÓN/ES"
       },
       {
-        "title": "IA avanzada y nuevas herramientas: del copiloto a los agentes",
-        "description": "Explora el ecosistema actual de IA, desde copilotos hasta agentes inteligentes, y descubre c\u00f3mo automatizar y optimizar procesos de negocio.",
+        "title": "Inteligencia artificial avanzada y nuevas herramientas: del copiloto a los agentes",
+        "description": "Explora el ecosistema actual de la IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar procesos de negocio.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
-        "category": "Formaci\u00f3n",
+        "category": "Formación",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": "FORMACI\u00d3N/ES"
+        "badge": "FORMACIÓN/ES"
       },
       {
         "title": "Copilot en la empresa: productividad real en entorno Microsoft",
-        "description": "Productividad con Copilot en empresa industrial, con un uso seguro de la herramienta.",
+        "description": "Productividad con Copilot en empresa industrial, con uso seguro de la herramienta.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
-        "category": "Formaci\u00f3n",
+        "category": "Formación",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": "FORMACI\u00d3N/ES"
+        "badge": "FORMACIÓN/ES"
       },
       {
-        "title": "C\u00f3mo dise\u00f1ar el roadmap de IA en tu organizaci\u00f3n",
-        "description": "De la intenci\u00f3n a la acci\u00f3n: decisiones clave para implementar IA con impacto real.",
+        "title": "Cómo diseñar la hoja de ruta de la IA en tu organización",
+        "description": "De la intención a la acción: decisiones clave para implementar la IA con impacto real.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
-        "category": "Formaci\u00f3n",
+        "category": "Formación",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": "FORMACI\u00d3N/ES"
+        "badge": "FORMACIÓN/ES"
       },
       {
         "title": "Ayudas SPRI: Inteligencia Artificial 2026",
-        "description": "Aplicar Inteligencia Artificial para transformar los procesos industriales y ganar competitividad.",
+        "description": "Aplicar la Inteligencia Artificial para transformar procesos industriales y ganar competitividad.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
-        "category": "Investigaci\u00f3n",
+        "category": "Investigación",
         "date": "2026-03-14",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/UE"
-      },
-      {
-        "title": "FVEM impulsa Learning Brains, una iniciativa europea para la recualificaci\u00f3n industrial",
-        "description": "FVEM lidera el proyecto Learning Brains, una iniciativa europea en el marco de Erasmus+ que busca adaptar la formaci\u00f3n profesional a las necesidades reales de la industria, en un contexto marcado por la digitalizaci\u00f3n.",
-        "link": "https://boletines.fvem.es/fvem-impulsa-learning-brains-una-iniciativa-europea-para-la-recualificacion-industrial.html",
-        "category": "Evento",
-        "date": "2026-03-27",
-        "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
         "badge": "GENERAL/UE"
       }
     ]
   },
   "legal": {
-    "seo_title": "Aviso Legal \u2013 Privacidad y Cookies | Learning Brains",
-    "seo_description": "Pol\u00edtica de privacidad, informaci\u00f3n sobre cookies y aviso de transparencia de la web del proyecto Erasmus+ Learning Brains.",
+    "seo_title": "Aviso Legal – Privacidad y Cookies | Learning Brains",
+    "seo_description": "Política de privacidad, información sobre cookies y aviso de transparencia del sitio web del proyecto Erasmus+ Learning Brains.",
     "title": "Legal",
     "tab_privacy": "Privacidad",
     "tab_cookies": "Cookies",
     "tab_transparency": "Transparencia",
     "privacy_controller_title": "Responsable del Tratamiento",
-    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, coordinadora del proyecto Learning Brains (Erasmus+ KA220-VET), act\u00faa como responsable del tratamiento de los datos personales recogidos a trav\u00e9s de esta web.",
+    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, coordinadora del proyecto Learning Brains (Erasmus+ KA220-VET), act\u00faa como responsable del tratamiento de los datos personales recogidos a trav\u00e9s de este sitio web.",
     "privacy_data_title": "Datos Recogidos",
     "privacy_data_text": "Solo recogemos los datos que usted facilita voluntariamente a trav\u00e9s del formulario de contacto: nombre, direcci\u00f3n de correo electr\u00f3nico y mensaje. No se recogen datos de menores ni datos sensibles.",
     "privacy_purpose_title": "Finalidad",
-    "privacy_purpose_text": "Los datos se utilizan exclusivamente para responder a las consultas sobre el proyecto y para las actividades de difusi\u00f3n del mismo. Los datos no se comparten con terceros, salvo obligaci\u00f3n legal.",
+    "privacy_purpose_text": "Los datos se utilizan exclusivamente para responder a consultas del proyecto y para actividades de diseminaci\u00f3n del mismo. Los datos no se comparten con terceros salvo obligaci\u00f3n legal.",
     "privacy_rights_title": "Sus Derechos",
-    "privacy_rights_text": "Puede ejercer sus derechos de acceso, rectificaci\u00f3n, supresi\u00f3n y oposici\u00f3n escribiendo a info@fvem.es. Si considera que el tratamiento no es l\u00edcito, puede presentar una reclamaci\u00f3n ante su autoridad nacional de protecci\u00f3n de datos.",
-    "privacy_legal_basis_title": "Base Jur\u00eddica del Tratamiento",
-    "privacy_legal_basis_text": "El tratamiento de datos se basa en el inter\u00e9s leg\u00edtimo del consorcio para la gesti\u00f3n y difusi\u00f3n del proyecto (Art. 6.1.f RGPD) y en su consentimiento cuando se solicita expresamente (Art. 6.1.a RGPD).",
-    "privacy_retention_title": "Retenci\u00f3n de Datos",
-    "privacy_retention_text": "Los datos se conservar\u00e1n durante la duraci\u00f3n del proyecto (hasta 2027) y, posteriormente, durante el periodo m\u00ednimo exigido por la legislaci\u00f3n aplicable o los requisitos de auditor\u00eda de la Comisi\u00f3n Europea (generalmente 5 a\u00f1os tras la finalizaci\u00f3n del proyecto).",
-    "privacy_minors_title": "Menores",
-    "privacy_minors_text": "Esta web no est\u00e1 dirigida a menores de 18 a\u00f1os y no recogemos conscientemente datos personales de menores. Si detectamos que se han recogido datos de un menor sin el consentimiento paterno, los borraremos inmediatamente.",
+    "privacy_rights_text": "Puede ejercer sus derechos de acceso, rectificaci\u00f3n, supresi\u00f3n y oposici\u00f3n escribiendo a info@fvem.es. Si considera que el tratamiento no es conforme, puede presentar una reclamaci\u00f3n ante la autoridad nacional de protecci\u00f3n de datos.",
+    "privacy_legal_basis_title": "Base Legal para el Tratamiento",
+    "privacy_legal_basis_text": "El tratamiento de datos se basa en el inter\u00e9s leg\u00edtimo del consorcio para la gesti\u00f3n y divulgaci\u00f3n del proyecto (art. 6.1.f RGPD) y en su consentimiento cuando se solicita expresamente (art. 6.1.a RGPD).",
+    "privacy_retention_title": "Conservaci\u00f3n de los Datos",
+    "privacy_retention_text": "Los datos se conservar\u00e1n durante la vida del proyecto (hasta 2027) y, posteriormente, durante el periodo m\u00ednimo exigido por la legislaci\u00f3n aplicable o los requisitos de auditor\u00eda de la Comisi\u00f3n Europea (normalmente 5 a\u00f1os tras la finalizaci\u00f3n del proyecto).",
+    "privacy_minors_title": "Menores de Edad",
+    "privacy_minors_text": "Este sitio web no est\u00e1 dirigido a menores de 18 a\u00f1os y no recogemos conscientemente datos personales de menores. Si detectamos que se han recogido datos de un menor sin consentimiento paterno, los eliminaremos de inmediato.",
     "cookies_what_title": "\u00bfQu\u00e9 son las cookies?",
-    "cookies_what_text": "Las cookies son peque\u00f1os archivos que se guardan en su navegador para mejorar la experiencia de navegaci\u00f3n. Este sitio utiliza \u00fanicamente cookies t\u00e9cnicas necesarias para el funcionamiento de la web.",
+    "cookies_what_text": "Las cookies son peque\u00f1os archivos almacenados en su navegador para mejorar la experiencia de navegaci\u00f3n. Este sitio utiliza solo cookies t\u00e9cnicas necesarias para el funcionamiento del sitio.",
     "cookies_types_title": "Tipos de cookies utilizadas",
     "cookies_types_text": "Cookies de sesi\u00f3n: para la navegaci\u00f3n entre p\u00e1ginas y el selector de idioma. Google Analytics: para medir el tr\u00e1fico de forma an\u00f3nima (si se activa). No se utilizan cookies publicitarias ni de seguimiento de terceros.",
     "cookies_manage_title": "C\u00f3mo gestionar las cookies",
-    "cookies_manage_text": "Puede desactivar o borrar las cookies en la configuraci\u00f3n de su navegador. Tenga en cuenta que algunas funciones de la web pueden dejar de funcionar correctamente si bloquea todas las cookies.",
+    "cookies_manage_text": "Puede desactivar o eliminar las cookies en la configuraci\u00f3n de su navegador. Tenga en cuenta que algunas funciones del sitio pueden dejar de funcionar correctamente si bloquea todas las cookies.",
     "cookies_analytics_title": "Google Analytics",
-    "cookies_analytics_text": "Este sitio puede utilizar Google Analytics para medir el tr\u00e1fico de forma an\u00f3nima. Las cookies anal\u00edticas solo se activan si usted acepta el banner de consentimiento. Si lo rechaza, no se guarda ning\u00fan dato personal.",
+    "cookies_analytics_text": "Este sitio puede utilizar Google Analytics para medir el tr\u00e1fico de forma an\u00f3nima. Las cookies anal\u00edticas solo se activan si acepta el banner de consentimiento. Si rechaza, no se guarda ning\u00fan dato personal.",
     "trans_project_title": "Informaci\u00f3n del Proyecto",
     "trans_programme": "Programa",
     "trans_funder": "Financiador",
@@ -408,10 +409,10 @@
     "trans_coordinator": "Coordinador",
     "trans_duration": "Duraci\u00f3n",
     "trans_partners_label": "Socios",
-    "eu_disclaimer": "Co-financiado por el Programa Erasmus+ de la Uni\u00f3n Europea. Este proyecto ha sido financiado con el apoyo de la Comisi\u00f3n Europea. Esta publicaci\u00f3n [comunicaci\u00f3n] refleja \u00fanicamente las opiniones del autor, y la Comisi\u00f3n no se hace responsable del uso que pueda hacerse de la informaci\u00f3n contenida en ella."
+    "eu_disclaimer": "Co-financiado por el Programa Erasmus+ de la Uni\u00f3n Europea. Este proyecto ha sido financiado con el apoyo de la Comisi\u00f3n Europea. Esta publicaci\u00f3n [comunicaci\u00f3n] refleja \u00fanicamente las opiniones de su autor y la Comisi\u00f3n no se hace responsable del uso que pueda hacerse de la informaci\u00f3n contenida en ella."
   },
   "cookies_banner": {
-    "text": "Utilizamos cookies t\u00e9cnicas necesarias y, si usted acepta, cookies anal\u00edticas (Google Analytics) para mejorar su experiencia.",
+    "text": "Utilizamos cookies t\u00e9cnicas necesarias y, si acepta, cookies anal\u00edticas (Google Analytics) para mejorar su experiencia.",
     "learn_more": "Saber m\u00e1s",
     "accept": "Aceptar",
     "decline": "Rechazar"
