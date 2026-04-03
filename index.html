@@ -104,6 +104,19 @@
       }
     }(window.location))
   </script>
+  <script type="text/javascript">
+    // Fast Hard-Redirect for Root (/)
+    // This script intercepts the root path and forces a hard redirect to the language path, 
+    // ensuring the user instantly receives the prerendered HTML from the server instead of waiting for React to mount.
+    (function () {
+      if (window.location.pathname === '/') {
+        var browserLang = navigator.language.split('-')[0];
+        var supportedLangs = ['en', 'es', 'it', 'sk', 'de', 'pt'];
+        var targetLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
+        window.location.replace('/' + targetLang);
+      }
+    })();
+  </script>
 </head>
 
 <body>

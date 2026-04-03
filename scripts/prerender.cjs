@@ -22,6 +22,11 @@ const staticRoutes = [
 ];
 
 async function prerender() {
+    if (process.env.VERCEL) {
+        console.log('Vercel environment detected. Skipping Puppeteer prerendering to prevent build failures. (SSG only runs on GitHub Actions / Local)');
+        process.exit(0);
+    }
+    
     console.log('Starting Prerendering Process...');
     
     // 1. Iniciar servidor express local en la carpeta 'dist'
