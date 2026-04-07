@@ -47,7 +47,7 @@ const Footer = () => {
                             {t('footer.description')}
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-all" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/learning-brains-erasmus-project/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-all" aria-label="LinkedIn">
                                 <Linkedin className="w-5 h-5" />
                             </a>
                             <a href="#" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-sky-500 hover:bg-sky-50 transition-all" aria-label="Twitter">
