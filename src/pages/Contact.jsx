@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, MessageSquare, Send, Globe, Phone, CheckCircle, AlertCircle, Loader2, ChevronDown } from 'lucide-react';
+import { Mail, MessageSquare, Send, Globe, Phone, CheckCircle, AlertCircle, Loader2, ChevronDown, Linkedin } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
@@ -81,15 +81,15 @@ const Contact = () => {
                         </p>
 
                         <div className="space-y-8">
-                            <div className="flex items-start gap-5">
-                                <div className="p-3.5 bg-slate-50 text-slate-400 rounded-2xl border border-slate-100">
-                                    <MessageSquare className="w-6 h-6" />
+                            <a href="https://www.linkedin.com/company/learning-brains-erasmus-project/" target="_blank" rel="noopener noreferrer" className="flex items-start gap-5 group">
+                                <div className="p-3.5 bg-slate-50 text-slate-400 rounded-2xl border border-slate-100 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                                    <Linkedin className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-800 text-base mb-1">{t('contact.official_channels')}</h4>
-                                    <p className="text-slate-500 text-sm">{t('contact.social_pending')}</p>
+                                    <h4 className="font-bold text-slate-800 text-base mb-1 group-hover:text-blue-600 transition-colors">LinkedIn</h4>
+                                    <p className="text-slate-500 text-sm">{t('contact.official_channels')}</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div className="mt-16 p-6 bg-slate-50 rounded-2xl border border-slate-100 border-l-4 border-l-brand-secondary italic">
