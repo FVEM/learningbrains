@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Mail, ExternalLink, Facebook, Instagram } from 'lucide-react';
+import { Linkedin, Mail, ExternalLink } from 'lucide-react';
 const euEmblem = `${import.meta.env.BASE_URL}eu-emblem.png`;
 const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-cropped.png`;
 
@@ -49,15 +49,6 @@ const Footer = () => {
                         <div className="flex gap-4">
                             <a href="https://www.linkedin.com/company/learning-brains-erasmus-project/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-all" aria-label="LinkedIn">
                                 <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-sky-500 hover:bg-sky-50 transition-all" aria-label="Twitter">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-blue-700 hover:bg-blue-50 transition-all" aria-label="Facebook">
-                                <Facebook className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-pink-600 hover:bg-pink-50 transition-all" aria-label="Instagram">
-                                <Instagram className="w-5 h-5" />
                             </a>
                             <Link to={`/${i18n.language}/contact`} className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-emerald-500 hover:bg-emerald-50 transition-all" aria-label="Contact">
                                 <Mail className="w-5 h-5" />
