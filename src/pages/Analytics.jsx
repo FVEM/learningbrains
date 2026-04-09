@@ -6,7 +6,7 @@ import {
 } from 'recharts';
 import {
     ShieldAlert, LogOut, Users, FileText, Clock, MousePointerClick,
-    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap
+    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap, Linkedin
 } from 'lucide-react';
 
 // Colores basados en la paleta de Learning Brains
@@ -141,7 +141,7 @@ export default function Analytics() {
                             onClick={handleLogout}
                             className="text-neutral-500 hover:text-red-600 transition-colors p-2 rounded-full hover:bg-red-50"
                             title="Logout"
-                        >
+                            >
                             <LogOut className="w-5 h-5" />
                         </button>
                     </div>
@@ -178,10 +178,11 @@ export default function Analytics() {
                 {!isLoading && data && !errorData && (
                     <div className="space-y-6">
                         {/* KPI Cards Row */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 gap-4 lg:gap-6">
                             <StatCard title="Total Page Views" value={(data?.kpis?.views ?? 0).toLocaleString()} icon={<MousePointerClick className="w-6 h-6" />} color="text-brand-blue" bgColor="bg-brand-blue/10" />
                             <StatCard title="Active Users" value={(data?.kpis?.users ?? 0).toLocaleString()} icon={<Users className="w-6 h-6" />} color="text-brand-red" bgColor="bg-brand-red/10" />
                             <StatCard title="New Users" value={(data?.kpis?.newUsers ?? 0).toLocaleString()} icon={<UserPlus className="w-6 h-6" />} color="text-brand-orange" bgColor="bg-brand-orange/10" />
+                            <StatCard title="LinkedIn Clicks" value={(data?.linkedinUsers ?? 0).toLocaleString()} icon={<Linkedin className="w-6 h-6" />} color="text-[#0a66c2]" bgColor="bg-[#0a66c2]/10" />
                             <StatCard title="Chatbot Uses" value={(data?.chatInteractions ?? 0).toLocaleString()} icon={<Zap className="w-6 h-6" />} color="text-emerald-600" bgColor="bg-emerald-100" />
                             <StatCard title="Engagement Rate" value={`${data?.kpis?.engagementRate ?? 0}%`} icon={<TrendingUp className="w-6 h-6" />} color="text-green-600" bgColor="bg-green-100" />
                             <StatCard title="Avg. Engagement Time" value={`${data?.kpis?.avgEngagement ?? 0}s`} icon={<Clock className="w-6 h-6" />} color="text-purple-600" bgColor="bg-purple-100" />

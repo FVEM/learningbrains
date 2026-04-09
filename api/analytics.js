@@ -69,7 +69,8 @@ export default async function handler(req, res) {
             [pagesResponse],
             [channelsResponse],
             [eventsResponse],
-            [languagesResponse]
+            [languagesResponse],
+            [sourcesResponse]
         ] = await Promise.all([
             // 0: KPIs Globales
             analyticsDataClient.runReport({
@@ -146,6 +147,13 @@ export default async function handler(req, res) {
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'pagePath' }],
+                metrics: [{ name: 'activeUsers' }]
+            }),
+            // 9: Fuentes de sesión para LinkedIn
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'sessionSource' }],
                 metrics: [{ name: 'activeUsers' }]
             })
         ]);
@@ -241,6 +249,15 @@ export default async function handler(req, res) {
             return { country: c, users: match ? parseInt(match.metricValues[0].value, 10) : 0 };
         }).sort((a,b) => b.users - a.users);
 
+        // Tráfico de LinkedIn
+        let linkedinUsers = 0;
+        sourcesResponse.rows?.forEach(row => {
+            const source = row.dimensionValues[0].value.toLowerCase();
+            if (source.includes('linkedin')) {
+                linkedinUsers += parseInt(row.metricValues[0].value, 10);
+            }
+        });
+
         res.status(200).json({
             kpis,
             timeSeries,
@@ -252,7 +269,8 @@ export default async function handler(req, res) {
             pages,
             channels,
             events,
-            chatInteractions
+            chatInteractions,
+            linkedinUsers
         });
 
     } catch (error) {
