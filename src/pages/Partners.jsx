@@ -60,7 +60,7 @@ const Partners = () => {
             logo: "Sparkling Intuition",
             logoSrc: "/SPIN logo large.png",
             website: "https://sparkling-intuition.eu/",
-            linkedin: "https://www.linkedin.com/company/sparkling-intuition/"
+            linkedin: "https://www.linkedin.com/company/virtualcampuspt/"
         }
     ];
 
