@@ -158,10 +158,26 @@ async function sync() {
         const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         
         // Sync AI News
+        const oldAiNews = json.ai_news?.items_list || [];
         json.ai_news.items_list = aiNewsItems.map(item => {
-            const title = item[`title_${lang}`] || item.title_en || item.title || "";
-            const description = item[`description_${lang}`] || item.description_en || item.description || "";
             const rawLink = item.link_url || item.link || "";
+            let title = item[`title_${lang}`];
+            let description = item[`description_${lang}`];
+            const fallbackTitle = item.title_en || item.title || "";
+            const fallbackDesc = item.description_en || item.description || "";
+
+            // Check if there is an existing local translation that we shouldn't overwrite
+            if (lang !== 'en' && (!title || !description)) {
+                const existing = oldAiNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
+                if (existing) {
+                    if (!title && existing.title && existing.title !== fallbackTitle) title = existing.title;
+                    if (!description && existing.description && existing.description !== fallbackDesc) description = existing.description;
+                }
+            }
+
+            title = title || fallbackTitle;
+            description = description || fallbackDesc;
+
             const rawImage = item.image_url || item.image || "";
             
             const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
@@ -186,10 +202,26 @@ async function sync() {
         }).filter(item => item.title.trim() !== "");
 
         // Sync Project News
+        const oldNews = json.news?.items_list || [];
         json.news.items_list = projectEventsItems.map(item => {
-            const title = item[`title_${lang}`] || item.title_en || item.title || "";
-            const description = item[`description_${lang}`] || item.description_en || item.description || "";
             const rawLink = item.link_url || item.link || "";
+            let title = item[`title_${lang}`];
+            let description = item[`description_${lang}`];
+            const fallbackTitle = item.title_en || item.title || "";
+            const fallbackDesc = item.description_en || item.description || "";
+
+            // Check if there is an existing local translation that we shouldn't overwrite
+            if (lang !== 'en' && (!title || !description)) {
+                const existing = oldNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
+                if (existing) {
+                    if (!title && existing.title && existing.title !== fallbackTitle) title = existing.title;
+                    if (!description && existing.description && existing.description !== fallbackDesc) description = existing.description;
+                }
+            }
+
+            title = title || fallbackTitle;
+            description = description || fallbackDesc;
+
             const rawImage = item.image_url || item.image || "";
             
             const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
