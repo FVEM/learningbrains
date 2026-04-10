@@ -90,7 +90,7 @@
       "coming_soon": "Coming soon",
       "news_1": {
         "badge": "Meeting",
-        "date": "Feb 2026 \u00b7 Bilbao, Spain",
+        "date": "Feb 2026 · Bilbao, Spain",
         "title": "Project Kick-off Meeting",
         "description": "Partners met for the first time at FVEM headquarters to discuss the project timeline.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
@@ -205,7 +205,7 @@
       },
       {
         "title": "Learning Brains official website!",
-        "category": "Project",
+        "category": "Event",
         "description": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 · Bilbao, Spain",
@@ -284,7 +284,7 @@
       "email": "Email Address",
       "message": "Your Message",
       "send": "Send Message",
-      "security": "Integration ready \u2022 Secure communication",
+      "security": "Integration ready • Secure communication",
       "placeholder_name": "John Doe",
       "placeholder_email": "john@example.com",
       "placeholder_message": "Tell us about your interest in the project...",
@@ -319,35 +319,35 @@
     "subtitle": "Stay informed about the latest trends in Artificial Intelligence, business innovation, and vocational training methodologies.",
     "items_list": [
       {
-        "title": "AI for sales teams: from opportunity to offer",
-        "description": "More opportunities, better offers and better commercial coordination with AI.",
+        "title": "AI for Sales Teams: from opportunity to offer",
+        "description": "More opportunities, better offers and better commercial coordination with AI",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-03-13",
+        "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "AI for Engineering: more efficiency, fewer repetitive tasks",
-        "description": "Automate technical tasks and increase engineering team productivity.",
+        "title": "AI for Engineering: more efficiency, less repetitive tasks",
+        "description": "Automate technical tasks and improve the productivity of the engineering team",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-03-13",
+        "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Advanced artificial intelligence and new tools: from copilot to agents",
-        "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes.",
+        "title": "Advanced AI and new tools: from copilot to agents",
+        "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-03-13",
+        "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot in the company: real productivity in a Microsoft environment",
-        "description": "Productivity with Copilot in an industrial company, with secure use of the tool.",
+        "title": "Copilot in the enterprise: real productivity in a Microsoft environment",
+        "description": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -356,20 +356,38 @@
       },
       {
         "title": "How to design the AI roadmap in your organization",
-        "description": "From intention to action: key decisions to implement AI with real impact.",
+        "description": "From intention to action: key decisions to implement AI with real impact",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
-        "date": "2026-03-13",
+        "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "TRAINING/ES"
       },
       {
         "title": "SPRI Grants: Artificial Intelligence 2026",
-        "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness.",
+        "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
-        "date": "2026-03-14",
+        "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
+        "badge": "GENERAL/EU"
+      },
+      {
+        "title": "FVEM impulsa Learning Brains, una iniciativa europea para la recualificación industrial",
+        "description": "FVEM lidera el proyecto Learning Brains, una iniciativa europea enmarcada en Erasmus+ que tiene como objetivo adaptar la formación profesional a las necesidades reales de la industria, en un contexto marcado por la digitalización",
+        "link": "https://boletines.fvem.es/fvem-impulsa-learning-brains-una-iniciativa-europea-para-la-recualificacion-industrial.html",
+        "category": "Event",
+        "date": "2026-03-27",
+        "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
+        "badge": "GENERAL/EU"
+      },
+      {
+        "title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
+        "description": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.",
+        "link": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
+        "category": "Research",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
         "badge": "GENERAL/EU"
       }
     ]
@@ -382,7 +400,7 @@
     "tab_cookies": "Cookies",
     "tab_transparency": "Transparency",
     "privacy_controller_title": "Data Controller",
-    "privacy_controller_text": "FVEM \u2014 Federaci\u00f3n Vizca\u00edna de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as the data controller for personal data collected through this website.",
+    "privacy_controller_text": "FVEM — Federación Vizcaína de Empresas del Metal, coordinator of the Learning Brains project (Erasmus+ KA220-VET), acts as the data controller for personal data collected through this website.",
     "privacy_data_title": "Collected Data",
     "privacy_data_text": "We only collect data that you voluntarily provide through the contact form: name, email address, and message. No data from minors or sensitive data are collected.",
     "privacy_purpose_title": "Purpose",
@@ -406,7 +424,7 @@
     "trans_project_title": "Project Information",
     "trans_programme": "Programme",
     "trans_funder": "Funder",
-    "trans_funder_value": "European Commission \u2014 EACEA",
+    "trans_funder_value": "European Commission — EACEA",
     "trans_agency": "National Agency",
     "trans_coordinator": "Coordinator",
     "trans_duration": "Duration",
