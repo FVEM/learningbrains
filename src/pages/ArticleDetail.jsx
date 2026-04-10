@@ -14,16 +14,6 @@ const ArticleDetail = () => {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  // Fire GA4 event when article is viewed
-  useEffect(() => {
-    if (article?.title && typeof window.gtag === 'function') {
-      window.gtag('event', 'article_view', {
-        article_slug: slug,
-        article_title: article.title,
-      });
-    }
-  }, [article, slug]);
-
   const rawItems = t('articles.items_list', { returnObjects: true }) || [];
   const items = Array.isArray(rawItems) ? rawItems : [];
 
@@ -32,6 +22,16 @@ const ArticleDetail = () => {
 
   // Related articles (up to 3 others)
   const related = items.filter((item) => item.slug !== slug).slice(0, 3);
+
+  // Fire GA4 event when article is viewed (after article is defined)
+  useEffect(() => {
+    if (article?.title && typeof window.gtag === 'function') {
+      window.gtag('event', 'article_view', {
+        article_slug: slug,
+        article_title: article.title,
+      });
+    }
+  }, [article, slug]);
 
   if (!article) {
     return (
