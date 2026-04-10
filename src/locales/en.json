@@ -6,6 +6,7 @@
     "partners": "Partners",
     "news": "Project Events",
     "noticias": "News",
+    "articles": "Articles",
     "resources": "Resources",
     "impact": "Dissemination & Impact",
     "contact": "Contact"
@@ -373,21 +374,12 @@
         "badge": "GENERAL/EU"
       },
       {
-        "title": "FVEM promotes Learning Brains, a European initiative for industrial reskilling",
-        "description": "FVEM leads the Learning Brains project, a European initiative part of Erasmus+ that aims to adapt vocational training to the real needs of industry, in a context marked by digitalization",
+        "title": "FVEM promotes Learning Brains, a European initiative for industrial reskilling.",
+        "description": "FVEM leads the Learning Brains project, a European initiative under Erasmus+ that aims to adapt vocational education to the real needs of the industry, in a context marked by digitalization.",
         "link": "https://boletines.fvem.es/fvem-impulsa-learning-brains-una-iniciativa-europea-para-la-recualificacion-industrial.html",
         "category": "Event",
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
-        "badge": "GENERAL/EU"
-      },
-      {
-        "title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
-        "description": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.",
-        "link": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
-        "category": "Research",
-        "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
         "badge": "GENERAL/EU"
       }
     ]
@@ -436,5 +428,35 @@
     "learn_more": "Learn more",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "articles": {
+    "seo": {
+      "title": "Articles – Learning Brains Erasmus+",
+      "description": "Read the latest articles published by the Learning Brains project partners on AI, VET and industrial reskilling.",
+      "keywords": "Erasmus+, VET, Articles, AI, Industry, Research"
+    },
+    "section_title": {
+      "main": "Articles",
+      "sub": "PUBLISHED BY PARTNERS"
+    },
+    "section_description": "In-depth articles and publications from the Learning Brains consortium on artificial intelligence, vocational training, and industrial reskilling.",
+    "read_article": "Read Article",
+    "download_pdf": "Download PDF",
+    "back_to_articles": "Back to Articles",
+    "related": "More Articles",
+    "no_items": "No articles published yet. Check back soon.",
+    "items_list": [
+      {
+        "slug": "ai-powered-learning-how-artificial-intelligence",
+        "title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
+        "description": "AI-driven learning tools enhance knowledge transfer, operational efficiency, and industrial innovation. This article explores how modern AI systems are bridging the skill gap and reskilling the workforce to meet the evolving demands of Industry 4.0.",
+        "pdf_url": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "category": "Research",
+        "badge": "GENERAL/EU",
+        "partner": "ROOM466"
+      }
+    ]
   }
 }

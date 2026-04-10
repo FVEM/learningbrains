@@ -6,6 +6,7 @@
     "partners": "Partneri",
     "news": "Projektové Podujatia",
     "noticias": "Novinky",
+    "articles": "Články",
     "resources": "Zdroje",
     "impact": "Šírenie a Dopad",
     "contact": "Kontakt"
@@ -188,7 +189,7 @@
       {
         "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
         "category": "Meeting",
-        "description": "Pripojte sa k online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí budú zdieľať poznatky a osvedčené postupy.",
+        "description": "Pripojte sa k nám na online workshope, kde preskúmame potenciál umelej inteligencie vo vzdelávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a osvedčené postupy.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
@@ -197,7 +198,7 @@
       {
         "title": "Prvé transnacionálne stretnutie projektu",
         "category": "Meeting",
-        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie testovacej fázy pilotného projektu.",
+        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie fázy pilotného testovania.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
@@ -380,15 +381,6 @@
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
         "badge": "GENERAL/EU"
-      },
-      {
-        "title": "Umelou inteligenciou riadené učenie: Ako umelej inteligencii premenila priemyselný tréning.",
-        "description": "Nástroje na učenie riadené umelej inteligenciou zvyšujú prenos znalostí, efektívnosť a inovácie v priemyselnom sektore.",
-        "link": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
-        "category": "Research",
-        "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
-        "badge": "GENERAL/EU"
       }
     ]
   },
@@ -433,8 +425,38 @@
   },
   "cookies_banner": {
     "text": "Používame nevyhnutné technické cookies a ak súhlasíte, aj analytické cookies (Google Analytics) na zlepšenie vášho zážitku.",
-    "learn_more": "Zistiť viac",
+    "learn_more": "Zistit viac",
     "accept": "Prijať",
     "decline": "Odmietnuť"
+  },
+  "articles": {
+    "seo": {
+      "title": "Články – Learning Brains Erasmus+",
+      "description": "Prečídajte si najnovšie články zverejnené partnermi projektu Learning Brains o AI, OVP a priemyselnej rekvalifikácii.",
+      "keywords": "Erasmus+, OVP, Články, AI, Priemysel, Výskum"
+    },
+    "section_title": {
+      "main": "Články",
+      "sub": "ZVEREJNENÉ PARTNERMI"
+    },
+    "section_description": "Podrobné články a publíkačné výsledky konzorcia Learning Brains o umelej inteligencii, odbornom vzdělávaní a priemyselnej rekvalifikácii.",
+    "read_article": "Prečítať Článok",
+    "download_pdf": "Stiahnuť PDF",
+    "back_to_articles": "Späť na Články",
+    "related": "Ďalšie Články",
+    "no_items": "Zatiaľ neboli zverejnené žiadne články. Skúste to znovu neskôr.",
+    "items_list": [
+      {
+        "slug": "ai-powered-learning-how-artificial-intelligence",
+        "title": "AI-Poháňané učenie: Ako umelej inteligencii premenila priemyselný tréning",
+        "description": "Nástroje na učenie riadené umelej inteligenciou zlepšujú prenos znalostí, prevádzkovú efektívnosť a priemyselnú inováciu. Tento článok preskúma, ako moderné systémy umelej inteligencie premostili deficit zručností a preškolili pracovnú silu, aby splnili sa meniace požiadavky priemyslu 4.0.",
+        "pdf_url": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "category": "Research",
+        "badge": "GENERAL/EU",
+        "partner": "ROOM466"
+      }
+    ]
   }
 }

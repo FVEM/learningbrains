@@ -6,6 +6,7 @@
     "partners": "Parceiros",
     "news": "Eventos do Projeto",
     "noticias": "Notícias",
+    "articles": "Artigos",
     "resources": "Recursos",
     "impact": "Divulgação e Impacto",
     "contact": "Contacto"
@@ -188,7 +189,7 @@
       {
         "title": "Próximo Workshop: IA na Formação Profissional",
         "category": "Meeting",
-        "description": "Junte-se a nós em um workshop online explorando o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
+        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
@@ -375,15 +376,6 @@
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
         "badge": "GENERAL/EU"
-      },
-      {
-        "title": "Aprendizagem impulsionada por IA: Como a Inteligência Artificial está Transformando a Formação Industrial",
-        "description": "Ferramentas de aprendizagem impulsionadas por IA aumentam a transferência de conhecimento, eficiência e inovação em todo o setor industrial.",
-        "link": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
-        "category": "Research",
-        "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
-        "badge": "GENERAL/EU"
       }
     ]
   },
@@ -431,5 +423,35 @@
     "learn_more": "Saber mais",
     "accept": "Aceitar",
     "decline": "Recusar"
+  },
+  "articles": {
+    "seo": {
+      "title": "Artigos – Learning Brains Erasmus+",
+      "description": "Leia os últimos artigos publicados pelos parceiros do projeto Learning Brains sobre IA, EFP e requalificação industrial.",
+      "keywords": "Erasmus+, EFP, Artigos, IA, Indústria, Investigação"
+    },
+    "section_title": {
+      "main": "Artigos",
+      "sub": "PUBLICADOS PELOS PARCEIROS"
+    },
+    "section_description": "Artigos e publicações aprofundados do consórcio Learning Brains sobre inteligência artificial, formação profissional e requalificação industrial.",
+    "read_article": "Ler Artigo",
+    "download_pdf": "Descarregar PDF",
+    "back_to_articles": "Voltar aos Artigos",
+    "related": "Mais Artigos",
+    "no_items": "Nenhum artigo publicado ainda. Volte em breve.",
+    "items_list": [
+      {
+        "slug": "ai-powered-learning-how-artificial-intelligence",
+        "title": "Aprendizado com IA: Como a Inteligência Artificial está Transformando o Treinamento Industrial",
+        "description": "Ferramentas de aprendizado impulsionadas por IA aprimoram a transferência de conhecimento, a eficiência operacional e a inovação industrial. Este artigo explora como os sistemas de IA modernos estão reduzindo a lacuna de habilidades e requalificando a força de trabalho para atender às demandas em constante evolução da Indústria 4.0.",
+        "pdf_url": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "category": "Research",
+        "badge": "GENERAL/EU",
+        "partner": "ROOM466"
+      }
+    ]
   }
 }

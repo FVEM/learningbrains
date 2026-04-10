@@ -24,9 +24,15 @@ const langNames = {
     'sk': 'Slovak'
 };
 
-async function translateText(text, targetLang) {
+async function translateText(text, targetLang, customPrompt = null) {
     if (!text || text.trim() === "") return "";
     
+    const systemPrompt = customPrompt || `You are a professional translator for an Erasmus+ project called "Learning Brains" about AI in vocational education and industrial reskilling.
+                        Your task is to ensure the text provided is in ${langNames[targetLang]}.
+                        - If the source text is ALREADY in ${langNames[targetLang]}, return it exactly as is.
+                        - If the source text is in another language, translate it to ${langNames[targetLang]} keeping a professional and technical tone.
+                        - Return ONLY the final ${langNames[targetLang]} text.`;
+
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
@@ -39,11 +45,7 @@ async function translateText(text, targetLang) {
                 messages: [
                     {
                         role: "system",
-                        content: `You are a professional translator for an Erasmus+ project called "Learning Brains" about AI in vocational education and industrial reskilling.
-                        Your task is to ensure the text provided is in ${langNames[targetLang]}.
-                        - If the source text is ALREADY in ${langNames[targetLang]}, return it exactly as is.
-                        - If the source text is in another language, translate it to ${langNames[targetLang]} keeping a professional and technical tone.
-                        - Return ONLY the final ${langNames[targetLang]} text.`
+                        content: systemPrompt
                     },
                     {
                         role: "user",
@@ -169,6 +171,35 @@ async function translateLocales() {
 
                     langData.news.items_list[i].title = translatedTitle;
                     langData.news.items_list[i].description = translatedDesc;
+                    updated = true;
+                }
+            }
+        }
+
+        // Process Articles
+        if (enData.articles && enData.articles.items_list) {
+            if (!langData.articles) langData.articles = { items_list: [] };
+            if (!langData.articles.items_list) langData.articles.items_list = [];
+
+            for (let i = 0; i < enData.articles.items_list.length; i++) {
+                const enItem = enData.articles.items_list[i];
+                const langItem = langData.articles.items_list[i];
+
+                if (!langItem || !langItem.title || !langItem.description || langItem.title === enItem.title || langItem.description === enItem.description) {
+                    console.log(`Translating Article: ${enItem.title} -> ${lang}`);
+                    
+                    const titlePrompt = `Translate this article title to ${langNames[lang]}: "${enItem.title}"`;
+                    const descPrompt = `Based on the title "${enItem.title}" and this excerpt: "${enItem.description}", create a professional summary paragraph in ${langNames[lang]} (exactly 2 or 3 sentences long) that functions as a high-quality abstract for the article. Return ONLY the translation.`;
+
+                    const translatedTitle = await translateText(enItem.title, lang, titlePrompt);
+                    const translatedDesc = await translateText(enItem.description, lang, descPrompt);
+
+                    if (!langData.articles.items_list[i]) {
+                        langData.articles.items_list[i] = { ...enItem };
+                    }
+
+                    langData.articles.items_list[i].title = translatedTitle;
+                    langData.articles.items_list[i].description = translatedDesc;
                     updated = true;
                 }
             }

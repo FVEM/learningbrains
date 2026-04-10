@@ -5,7 +5,8 @@ const locales = ['en', 'es', 'de', 'it', 'pt', 'sk'];
 const sheetBaseUrl = 'https://docs.google.com/spreadsheets/d/1RN00ODnuj6F7hlGtvgIIN0d9_1u2UsoTwHQ2KkkKxa0/export?format=csv';
 const gids = {
     ai_news: '0',
-    news: '148983926'
+    news: '148983926',
+    articles: '1344974425'
 };
 
 /**
@@ -89,6 +90,7 @@ async function sync() {
     
     const aiNewsItems = await fetchSheetData(gids.ai_news);
     const projectEventsItems = await fetchSheetData(gids.news);
+    const articlesItems = await fetchSheetData(gids.articles);
 
     // Read current English data for comparison
     const enPath = path.join(__dirname, '..', 'src', 'locales', 'en.json');
@@ -242,6 +244,67 @@ async function sync() {
                 date: item.date || "",
                 image: finalImage,
                 badge: item.badge_text || item.badge || ""
+            };
+        }).filter(item => item.title.trim() !== "");
+
+        // Sync Articles
+        const oldArticles = json.articles?.items_list || [];
+
+        /**
+         * Generates a URL-friendly slug from a title.
+         * "AI-Powered Learning: How AI..." → "ai-powered-learning"
+         */
+        function generateSlug(title) {
+            return title
+                .toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove accents
+                .replace(/[^a-z0-9\s-]/g, '')  // remove special chars
+                .trim()
+                .split(/\s+/)
+                .slice(0, 5)                   // max 5 words
+                .join('-');
+        }
+
+        if (!json.articles) json.articles = { items_list: [] };
+
+        json.articles.items_list = articlesItems.map(item => {
+            const rawPdfUrl = item['pdf_url'] || item['link_url (article pdf)'] || item['link_url'] || item['link'] || "";
+            const rawTitle = item['title_en'] || item['title'] || "";
+            let title = rawTitle;
+            let description = item['description_en'] || item['description'] || "";
+
+            // Translate if needed (preserve local translations)
+            if (lang !== 'en' && (!item[`title_${lang}`] || !item[`description_${lang}`])) {
+                const slug = generateSlug(rawTitle);
+                const existing = oldArticles.find(i => i.slug === slug || i.title === rawTitle);
+                if (existing) {
+                    if (!item[`title_${lang}`] && existing.title && existing.title !== rawTitle) title = existing.title;
+                    if (!item[`description_${lang}`] && existing.description && existing.description !== description) description = existing.description;
+                }
+            }
+
+            if (lang !== 'en') {
+                title = item[`title_${lang}`] || title;
+                description = item[`description_${lang}`] || description;
+            }
+
+            const slug = generateSlug(rawTitle);
+            const rawImage = item['image_url'] || item['image'] || "";
+            let finalImage = transformGDriveUrl(rawImage);
+            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
+                finalImage = '/' + finalImage;
+            }
+
+            return {
+                slug,
+                title,
+                description,
+                pdf_url: rawPdfUrl,
+                date: item['date'] || "",
+                image: finalImage,
+                category: item['category'] || "",
+                badge: item['badge_text'] || item['badge'] || "",
+                partner: item['proposing_pp'] || item['proposing pp'] || ""
             };
         }).filter(item => item.title.trim() !== "");
 

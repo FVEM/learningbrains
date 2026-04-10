@@ -6,6 +6,7 @@
     "partners": "Partner",
     "news": "Projektveranstaltungen",
     "noticias": "Nachrichten",
+    "articles": "Artikel",
     "resources": "Ressourcen",
     "impact": "Verbreitung & Auswirkungen",
     "contact": "Kontakt"
@@ -197,7 +198,7 @@
       {
         "title": "Erstes transnationales Projekttreffen",
         "category": "Meeting",
-        "description": "Die zweite Partnerbesprechung wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilottestphase.",
+        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilot-Testphase.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
@@ -375,15 +376,6 @@
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
         "badge": "GENERAL/EU"
-      },
-      {
-        "title": "KI-gestütztes Lernen: Wie künstliche Intelligenz die industrielle Schulung transformiert",
-        "description": "KI-gesteuerte Lernwerkzeuge steigern den Wissenstransfer, die Effizienz und die Innovation im Industriesektor.",
-        "link": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
-        "category": "Research",
-        "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
-        "badge": "GENERAL/EU"
       }
     ]
   },
@@ -431,5 +423,35 @@
     "learn_more": "Mehr erfahren",
     "accept": "Akzeptieren",
     "decline": "Ablehnen"
+  },
+  "articles": {
+    "seo": {
+      "title": "Artikel – Learning Brains Erasmus+",
+      "description": "Lesen Sie die neuesten Artikel der Projektpartner von Learning Brains zu KI, BBi und industrieller Umschulung.",
+      "keywords": "Erasmus+, BBi, Artikel, KI, Industrie, Forschung"
+    },
+    "section_title": {
+      "main": "Artikel",
+      "sub": "VERÖFFENTLICHT VON PARTNERN"
+    },
+    "section_description": "Ausführliche Artikel und Veröffentlichungen des Learning Brains Konsortiums zu künstlicher Intelligenz, Berufsbildung und industrieller Umschulung.",
+    "read_article": "Artikel lesen",
+    "download_pdf": "PDF herunterladen",
+    "back_to_articles": "Zurück zu Artikeln",
+    "related": "Weitere Artikel",
+    "no_items": "Noch keine Artikel veröffentlicht. Schauen Sie bald wieder vorbei.",
+    "items_list": [
+      {
+        "slug": "ai-powered-learning-how-artificial-intelligence",
+        "title": "KI-gestütztes Lernen: Wie künstliche Intelligenz die industrielle Schulung transformiert",
+        "description": "KI-gesteuerte Lernwerkzeuge verbessern den Wissenstransfer, die operationale Effizienz und die industrielle Innovation. Dieser Artikel untersucht, wie moderne KI-Systeme die Fähigkeitslücke überbrücken und die Belegschaft umschulen, um den sich entwickelnden Anforderungen der Industrie 4.0 gerecht zu werden.",
+        "pdf_url": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "category": "Research",
+        "badge": "GENERAL/EU",
+        "partner": "ROOM466"
+      }
+    ]
   }
 }

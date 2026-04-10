@@ -13,6 +13,8 @@ import Contact from './pages/Contact';
 import Analytics from './pages/Analytics';
 import Noticias from './pages/Noticias';
 import Legal from './pages/Legal';
+import Articles from './pages/Articles';
+import ArticleDetail from './pages/ArticleDetail';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -44,6 +46,8 @@ function App() {
           <Route path="partners" element={<Partners />} />
           <Route path="news" element={<News />} />
           <Route path="noticias" element={<Noticias />} />
+          <Route path="articles" element={<Articles />} />
+          <Route path="articles/:slug" element={<ArticleDetail />} />
           <Route path="resources" element={<Resources />} />
           <Route path="impact" element={<Impact />} />
           <Route path="contact" element={<Contact />} />
