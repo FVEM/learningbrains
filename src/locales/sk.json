@@ -177,36 +177,36 @@
     "section_description": "Sledujte našu cestu pri vývoji inovatívnych nástrojov pre industriálnu rekvalifikáciu v celej Európe.",
     "items_list": [
       {
-        "title": "Project Kick-off Meeting in Bilbao",
+        "title": "Zahajovací stretnutie projektu v Bilbau",
         "category": "Meeting",
-        "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
+        "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a úvodného výskumu potrieb priemyselného preškolovania.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "MEETING"
       },
       {
-        "title": "Upcoming Workshop: AI in VET",
+        "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave.",
         "category": "Meeting",
-        "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
+        "description": "Pripojte sa k online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí budú zdieľať poznatky a osvedčené postupy.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING"
       },
       {
-        "title": "First Transnational Project Meeting",
+        "title": "Prvé transnacionálne stretnutie projektu",
         "category": "Meeting",
-        "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
+        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie testovacej fázy pilotného projektu.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING"
       },
       {
-        "title": "Learning Brains official website!",
+        "title": "Oficiálna webová stránka projektu Learning Brains!",
         "category": "Event",
-        "description": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
+        "description": "S radosťou oznamujeme spustenie oficiálnej webovej stránky projektu Learning Brains! Learning Brains (iniciatíva programu Erasmus+) tu je na to, aby premostila medzeru medzi odborným vzdelávaním a reálnymi potrebami priemyslu.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 · Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
@@ -319,8 +319,8 @@
     "subtitle": "Zostaňte informovaní o najnovších trendoch v umelej inteligencii, podnikovej inovácii a metodológiách odborného vzdelávania.",
     "items_list": [
       {
-        "title": "AI for Sales Teams: from opportunity to offer",
-        "description": "More opportunities, better offers and better commercial coordination with AI",
+        "title": "AI pre predajné tímy: od príležitosti k ponuke",
+        "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s pomocou umelej inteligencie.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-09",
@@ -328,8 +328,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "AI for Engineering: more efficiency, less repetitive tasks",
-        "description": "Automate technical tasks and improve the productivity of the engineering team",
+        "title": "AI pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
+        "description": "Automatizujte technické úlohy a zlepšite produktivitu inžinierskeho tímu.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-10",
@@ -337,8 +337,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Advanced AI and new tools: from copilot to agents",
-        "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
+        "title": "Pokročilá umeleá inteligencia a nové nástroje: od spolujazdca k agentom",
+        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte spôsoby automatizácie a optimalizácie obchodných procesov.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-12",
@@ -346,8 +346,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "Copilot in the enterprise: real productivity in a Microsoft environment",
-        "description": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
+        "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
+        "description": "Produktivita s Copilotom v priemyselnom podniku, s bezpečným používaním nástroja.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
@@ -355,8 +355,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "How to design the AI roadmap in your organization",
-        "description": "From intention to action: key decisions to implement AI with real impact",
+        "title": "Ako navrhnúť cestovný plán AI vo vašej organizácii.",
+        "description": "Od úmyslu k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-15",
@@ -364,8 +364,8 @@
         "badge": "TRAINING/ES"
       },
       {
-        "title": "SPRI Grants: Artificial Intelligence 2026",
-        "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
+        "title": "Granty SPRI: Umelej inteligencii 2026",
+        "description": "Použite umelej inteligencie na transformáciu priemyselných procesov a získajte konkurenčnú výhodu.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
         "date": "2026-03-16",
@@ -373,8 +373,8 @@
         "badge": "GENERAL/EU"
       },
       {
-        "title": "FVEM impulsa Learning Brains, una iniciativa europea para la recualificación industrial",
-        "description": "FVEM lidera el proyecto Learning Brains, una iniciativa europea enmarcada en Erasmus+ que tiene como objetivo adaptar la formación profesional a las necesidades reales de la industria, en un contexto marcado por la digitalización",
+        "title": "FVEM podporuje projekt Learning Brains, európsku iniciatívu pre priekvalifikáciu v priemysle.",
+        "description": "FVEM vedie projekt Learning Brains, európsku iniciatívu v rámci programu Erasmus+, ktorej cieľom je prispôsobiť odborné vzdelávanie reálnym potrebám priemyslu v kontexte digitalizácie.",
         "link": "https://boletines.fvem.es/fvem-impulsa-learning-brains-una-iniciativa-europea-para-la-recualificacion-industrial.html",
         "category": "Event",
         "date": "2026-03-27",
@@ -382,8 +382,8 @@
         "badge": "GENERAL/EU"
       },
       {
-        "title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
-        "description": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.",
+        "title": "Umelou inteligenciou riadené učenie: Ako umelej inteligencii premenila priemyselný tréning.",
+        "description": "Nástroje na učenie riadené umelej inteligenciou zvyšujú prenos znalostí, efektívnosť a inovácie v priemyselnom sektore.",
         "link": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
         "category": "Research",
         "date": "2026-04-15",
