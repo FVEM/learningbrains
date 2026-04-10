@@ -165,11 +165,16 @@
     ]
   },
   "news": {
-    "seo_title": "Veranstaltungen und Nachrichten – Learning Brains Erasmus+",
-    "seo_description": "Bleiben Sie auf dem Laufenden über die neuesten Veranstaltungen, Workshops und transnationalen Treffen des Erasmus+ Projekts Learning Brains zu KI, BBi und industrieller Umschulung.",
-    "label": "Projekt-Updates",
-    "title": "Projektveranstaltungen",
-    "subtitle": "Verfolgen Sie den Fortschritt des Projekts Learning Brains durch unsere aktuellen Nachrichten, Treffen und Verbreitungsaktivitäten.",
+    "seo": {
+      "title": "Veranstaltungen und Nachrichten – Learning Brains Erasmus+",
+      "description": "Bleiben Sie auf dem Laufenden über die neuesten Veranstaltungen, Workshops und transnationalen Treffen des Erasmus+ Projekts Learning Brains zu KI, BBi und industrieller Umschulung.",
+      "keywords": "Erasmus+, VET, Nachrichten, Industrie, KI"
+    },
+    "section_title": {
+      "main": "Projektveranstaltungen",
+      "sub": "AKTUELLE NACHRICHTEN"
+    },
+    "section_description": "Verfolgen Sie den Fortschritt des Projekts Learning Brains durch unsere aktuellen Nachrichten, Treffen und Verbreitungsaktivitäten.",
     "items_list": [
       {
         "title": "Projektstart-Meeting in Bilbao",

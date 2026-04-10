@@ -165,11 +165,16 @@
     ]
   },
   "news": {
-    "seo_title": "Eventos e Notícias – Learning Brains Erasmus+",
-    "seo_description": "Mantenha-se atualizado sobre os últimos eventos, workshops e reuniões transnacionais do projeto Erasmus+ Learning Brains sobre IA, VET e requalificação industrial.",
-    "label": "Atualizações do Projeto",
-    "title": "Eventos do Projeto",
-    "subtitle": "Acompanhe o progresso do projeto Learning Brains através das nossas últimas notícias, reuniões e atividades de divulgação.",
+    "seo": {
+      "title": "Eventos e Notícias – Learning Brains Erasmus+",
+      "description": "Mantenha-se atualizado sobre os últimos eventos, workshops e reuniões transnacionais do projeto Erasmus+ Learning Brains sobre IA, VET e requalificação industrial.",
+      "keywords": "Erasmus+, VET, Notícias, Indústria, IA"
+    },
+    "section_title": {
+      "main": "Eventos do Projeto",
+      "sub": "ÚLTIMAS NOTÍCIAS"
+    },
+    "section_description": "Acompanhe o progresso do projeto Learning Brains através das nossas últimas notícias, reuniões e atividades de divulgação.",
     "items_list": [
       {
         "title": "Reunião de Lançamento do Projeto em Bilbau",

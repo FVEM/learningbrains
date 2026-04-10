@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const localesDir = path.join(__dirname, '..', 'src', 'locales');
-const locales = ['es', 'de', 'it', 'pt', 'sk'];
+const locales = ['en', 'es', 'de', 'it', 'pt', 'sk'];
 
 // Manually read .env file since npm install is restricted
 function getApiKey() {
@@ -16,6 +16,7 @@ function getApiKey() {
 const OPENAI_API_KEY = getApiKey();
 
 const langNames = {
+    'en': 'English',
     'es': 'Spanish',
     'de': 'German',
     'it': 'Italian',
@@ -38,7 +39,11 @@ async function translateText(text, targetLang) {
                 messages: [
                     {
                         role: "system",
-                        content: `You are a professional translator for an Erasmus+ project called "Learning Brains" about AI in vocational education and industrial reskilling. Detect the source language of the text provided and translate it into ${langNames[targetLang]}. Keep the professional and technical tone. Return ONLY the translated text.`
+                        content: `You are a professional translator for an Erasmus+ project called "Learning Brains" about AI in vocational education and industrial reskilling.
+                        Your task is to ensure the text provided is in ${langNames[targetLang]}.
+                        - If the source text is ALREADY in ${langNames[targetLang]}, return it exactly as is.
+                        - If the source text is in another language, translate it to ${langNames[targetLang]} keeping a professional and technical tone.
+                        - Return ONLY the final ${langNames[targetLang]} text.`
                     },
                     {
                         role: "user",
@@ -62,11 +67,62 @@ async function translateText(text, targetLang) {
 }
 
 async function translateLocales() {
-    // Read English as source
+    // We'll read English file but also potentially update it
     const enPath = path.join(localesDir, 'en.json');
-    const enData = JSON.parse(fs.readFileSync(enPath, 'utf8'));
+    let enData = JSON.parse(fs.readFileSync(enPath, 'utf8'));
 
-    for (const lang of locales) {
+    // Step 1: Pre-process English to fix any Spanish/other language leaks
+    console.log("Checking if English (en.json) needs fixes for non-English content...");
+    let enUpdated = false;
+    
+    // Check AI News in EN
+    for (let i = 0; i < (enData.ai_news?.items_list?.length || 0); i++) {
+        const item = enData.ai_news.items_list[i];
+        // Heuristic: If it looks like Spanish (has Spanish-only words or just run it through GPT for safety if it's new)
+        // For simplicity, we can just run it through the "fixer" prompt if it's the first time we see it 
+        // Or check for common Spanish words like "y", "en", "para", "de" mixed with accent marks
+        const hasSpanishVibe = /[áéíóúñ]/i.test(item.title) || /\b(de|la|en|el|y|para|con)\b/i.test(item.title);
+        
+        if (hasSpanishVibe) {
+            console.log(`Potential non-English content in en.json (AI News): "${item.title}". Fixing...`);
+            const fixedTitle = await translateText(item.title, 'en');
+            const fixedDesc = await translateText(item.description, 'en');
+            
+            if (fixedTitle !== item.title || fixedDesc !== item.description) {
+                enData.ai_news.items_list[i].title = fixedTitle;
+                enData.ai_news.items_list[i].description = fixedDesc;
+                enUpdated = true;
+            }
+        }
+    }
+
+    // Check Project News in EN
+    for (let i = 0; i < (enData.news?.items_list?.length || 0); i++) {
+        const item = enData.news.items_list[i];
+        const hasSpanishVibe = /[áéíóúñ]/i.test(item.title) || /\b(de|la|en|el|y|para|con)\b/i.test(item.title);
+        
+        if (hasSpanishVibe) {
+            console.log(`Potential non-English content in en.json (Project News): "${item.title}". Fixing...`);
+            const fixedTitle = await translateText(item.title, 'en');
+            const fixedDesc = await translateText(item.description, 'en');
+            
+            if (fixedTitle !== item.title || fixedDesc !== item.description) {
+                enData.news.items_list[i].title = fixedTitle;
+                enData.news.items_list[i].description = fixedDesc;
+                enUpdated = true;
+            }
+        }
+    }
+
+    if (enUpdated) {
+        fs.writeFileSync(enPath, JSON.stringify(enData, null, 2));
+        console.log("Updated en.json with fixed English translations.");
+    }
+
+    // Step 2: Translate to other languages using (now fixed) enData as source
+    const targetLocales = locales.filter(l => l !== 'en');
+
+    for (const lang of targetLocales) {
         const langPath = path.join(localesDir, `${lang}.json`);
         let langData = JSON.parse(fs.readFileSync(langPath, 'utf8'));
 
@@ -79,8 +135,7 @@ async function translateLocales() {
                 const enItem = enData.ai_news.items_list[i];
                 const langItem = langData.ai_news.items_list[i];
 
-                // If the item doesn't exist or is different (based on title/desc similarity or presence)
-                // We check if the translation matches the English version, if so, it needs translation
+                // If translation matches English version or is missing
                 if (!langItem || langItem.title === enItem.title || langItem.description === enItem.description) {
                     console.log(`Translating AI News item: ${enItem.title} -> ${lang}`);
                     const translatedTitle = await translateText(enItem.title, lang);

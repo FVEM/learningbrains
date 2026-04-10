@@ -165,11 +165,16 @@
     ]
   },
   "news": {
-    "seo_title": "Eventi e Notizie – Learning Brains Erasmus+",
-    "seo_description": "Rimani aggiornato sugli ultimi eventi, workshop e incontri transnazionali del progetto Erasmus+ Learning Brains su IA, IFP e riqualificazione industriale.",
-    "label": "Aggiornamenti del Progetto",
-    "title": "Eventi del Progetto",
-    "subtitle": "Segui i progressi del progetto Learning Brains attraverso le nostre ultime notizie, incontri e attività di diffusione.",
+    "seo": {
+      "title": "Eventi e Notizie – Learning Brains Erasmus+",
+      "description": "Rimani aggiornato sugli ultimi eventi, workshop e incontri transnazionali del progetto Erasmus+ Learning Brains su IA, IFP e riqualificazione industriale.",
+      "keywords": "Erasmus+, VET, Notizie, Industria, IA"
+    },
+    "section_title": {
+      "main": "Eventi del Progetto",
+      "sub": "ULTIME NOTIZIE"
+    },
+    "section_description": "Segui i progressi del progetto Learning Brains attraverso le nostre ultime notizie, incontri e attività di diffusione.",
     "items_list": [
       {
         "title": "Incontro di avvio del progetto a Bilbao",
