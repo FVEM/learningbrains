@@ -6,7 +6,6 @@ const express = require('express');
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const PORT = 3000;
 
-// Reutilizamos la l\u00f3gica del sitemap
 const languages = ['en', 'es', 'it', 'sk', 'de', 'pt'];
 const staticRoutes = [
     '', // Home
@@ -14,7 +13,8 @@ const staticRoutes = [
     '/results',
     '/partners',
     '/news',
-    '/noticias', // Added Noticias specifically for AI News
+    '/noticias',
+    '/articles',
     '/resources',
     '/impact',
     '/contact',
@@ -29,9 +29,17 @@ async function prerender() {
     
     console.log('Starting Prerendering Process...');
     
+    // Load dynamic article routes
+    const enDataPath = path.join(__dirname, '../src/locales/en.json');
+    const enData = JSON.parse(fs.readFileSync(enDataPath, 'utf8'));
+    const articleSlugs = (enData.articles && enData.articles.items_list) 
+        ? enData.articles.items_list.map(item => `/articles/${item.slug}`).filter(s => s && !s.includes('undefined'))
+        : [];
+    
+    const allRoutes = [...staticRoutes, ...articleSlugs];
+
     // 1. Iniciar servidor express local en la carpeta 'dist'
     const app = express();
-    // Enable SPA fallback for the crawler so it always returns index.html if file not found
     app.use(express.static(DIST_DIR));
     app.use((req, res) => res.sendFile(path.join(DIST_DIR, 'index.html')));
     
@@ -43,26 +51,32 @@ async function prerender() {
         // 2. Lanzar Puppeteer
         const browser = await puppeteer.launch({
             headless: 'new',
-            args: ['--no-sandbox', '--disable-setuid-sandbox'] // Safe for CI
+            args: ['--no-sandbox', '--disable-setuid-sandbox'] 
         });
         const page = await browser.newPage();
 
         for (const lang of languages) {
-            for (const route of staticRoutes) {
-                const subPath = route === '' ? '' : route;
-                const urlPath = `/${lang}${subPath}`;
+            for (const route of allRoutes) {
+                const urlPath = `/${lang}${route}`;
                 const url = `http://localhost:${PORT}${urlPath}`;
                 
                 console.log(`Prerendering ${urlPath}...`);
                 
                 // 3. Navegar a la p\u00e1gina y esperar a que React renderice la red
-                await page.goto(url, { waitUntil: 'networkidle0' });
+                try {
+                    await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
+                } catch (e) {
+                    console.warn(`Timeout or error on ${urlPath}. Continuing...`);
+                }
 
                 // 4. Obtener HTML final
                 const html = await page.content();
 
-                // 5. Guardar en el disco (crear carpetas si no existen)
-                const dirPath = path.join(DIST_DIR, lang, route.replace('/', ''));
+                // 5. Guardar en el disco
+                // For nested routes like /articles/slug, we need to handle directory structure
+                const normalizedRoute = route === '' ? '' : route;
+                const dirPath = path.join(DIST_DIR, lang, normalizedRoute);
+                
                 if (!fs.existsSync(dirPath)) {
                     fs.mkdirSync(dirPath, { recursive: true });
                 }
