@@ -407,6 +407,7 @@ export default function Analytics() {
                                         <thead className="text-xs text-neutral-500 uppercase bg-neutral-50/50">
                                             <tr>
                                                 <th className="px-6 py-4 font-semibold">Article</th>
+                                                <th className="px-6 py-4 font-semibold">Partner</th>
                                                 <th className="px-6 py-4 text-right font-semibold">Page Views</th>
                                                 <th className="px-6 py-4 text-right font-semibold">Article Clicks</th>
                                                 <th className="px-6 py-4 text-right font-semibold">CTR</th>
@@ -415,16 +416,22 @@ export default function Analytics() {
                                         <tbody className="divide-y divide-neutral-100">
                                             {(data?.articleStats ?? []).map((article, i) => {
                                                 const ctr = article.views > 0 ? ((article.clicks / article.views) * 100).toFixed(0) : 0;
-                                                const readableTitle = article.slug
-                                                    .replace(/-/g, ' ')
-                                                    .replace(/\b\w/g, c => c.toUpperCase());
                                                 return (
                                                     <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
                                                         <td className="px-6 py-4">
-                                                            <div className="font-semibold text-neutral-800 max-w-[480px] line-clamp-1" title={readableTitle}>
-                                                                {readableTitle}
+                                                            <div className="font-semibold text-neutral-800 max-w-[380px] line-clamp-1" title={article.title}>
+                                                                {article.title}
                                                             </div>
                                                             <div className="text-neutral-400 text-xs mt-0.5 font-mono">{article.slug}</div>
+                                                        </td>
+                                                        <td className="px-6 py-4">
+                                                            {article.partner ? (
+                                                                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-brand-blue/10 text-brand-blue uppercase tracking-wide">
+                                                                    {article.partner}
+                                                                </span>
+                                                            ) : (
+                                                                <span className="text-neutral-300 text-xs">—</span>
+                                                            )}
                                                         </td>
                                                         <td className="px-6 py-4 text-right">
                                                             <span className="font-bold text-neutral-800">{article.views.toLocaleString()}</span>

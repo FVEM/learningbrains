@@ -1,4 +1,10 @@
 import { BetaAnalyticsDataClient } from '@google-analytics/data';
+import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const require = createRequire(import.meta.url);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default async function handler(req, res) {
     // Configuración de CORS por si acaso (aunque esté en el mismo dominio)
@@ -312,10 +318,21 @@ export default async function handler(req, res) {
             }
         });
 
+        // Cargar metadata de artículos desde en.json para enriquecer con título y socio
+        let articleMeta = {};
+        try {
+            const enLocale = require(path.join(__dirname, '../src/locales/en.json'));
+            (enLocale?.articles?.items_list || []).forEach(item => {
+                if (item.slug) articleMeta[item.slug] = { title: item.title, partner: item.partner };
+            });
+        } catch (e) { /* Si falla, continuamos sin metadata */ }
+
         // Merge ambos mapas
         const allSlugs = new Set([...Object.keys(articleViewsMap), ...Object.keys(articleClicksMap)]);
         const articleStats = Array.from(allSlugs).map(slug => ({
             slug,
+            title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+            partner: articleMeta[slug]?.partner || null,
             views: articleViewsMap[slug] || 0,
             clicks: articleClicksMap[slug] || 0
         })).sort((a, b) => b.views - a.views);
