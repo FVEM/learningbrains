@@ -173,11 +173,11 @@ export default async function handler(req, res) {
                 orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
                 limit: 20
             }),
-            // 11: Clics en el botón "Article" por título de artículo
+            // 11: Clics en el botón "Article" por página
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
-                dimensions: [{ name: 'customEvent:article_slug' }],
+                dimensions: [{ name: 'pagePath' }],
                 metrics: [{ name: 'eventCount' }],
                 dimensionFilter: {
                     filter: {
@@ -303,8 +303,11 @@ export default async function handler(req, res) {
 
         const articleClicksMap = {};
         articleClicksResponse.rows?.forEach(row => {
-            const articleSlug = row.dimensionValues[0].value;
-            if (articleSlug && articleSlug !== '(not set)') {
+            const path = row.dimensionValues[0].value;
+            // Extraer slug de /xx/articles/SLUG igual que en las visitas
+            const slugMatch = path.match(/\/articles\/([^/?#]+)/);
+            if (slugMatch) {
+                const articleSlug = slugMatch[1];
                 articleClicksMap[articleSlug] = (articleClicksMap[articleSlug] || 0) + parseInt(row.metricValues[0].value, 10);
             }
         });
