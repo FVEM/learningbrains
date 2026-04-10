@@ -6,7 +6,7 @@ import {
 } from 'recharts';
 import {
     ShieldAlert, LogOut, Users, FileText, Clock, MousePointerClick,
-    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap, Linkedin
+    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap, Linkedin, BookOpen, ExternalLink
 } from 'lucide-react';
 
 // Colores basados en la paleta de Learning Brains
@@ -389,6 +389,68 @@ export default function Analytics() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Article Performance Table */}
+                        {(data?.articleStats ?? []).length > 0 && (
+                            <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 flex flex-col overflow-hidden">
+                                <div className="p-6 pb-4 border-b border-neutral-100 flex items-center gap-2">
+                                    <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center text-teal-600">
+                                        <BookOpen className="w-4 h-4" />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-neutral-800">Article Performance</h3>
+                                    <span className="ml-auto text-[11px] font-bold bg-teal-50 text-teal-600 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                        {(data?.articleStats ?? []).length} articles
+                                    </span>
+                                </div>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm text-left">
+                                        <thead className="text-xs text-neutral-500 uppercase bg-neutral-50/50">
+                                            <tr>
+                                                <th className="px-6 py-4 font-semibold">Article</th>
+                                                <th className="px-6 py-4 text-right font-semibold">Page Views</th>
+                                                <th className="px-6 py-4 text-right font-semibold">Article Clicks</th>
+                                                <th className="px-6 py-4 text-right font-semibold">CTR</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-neutral-100">
+                                            {(data?.articleStats ?? []).map((article, i) => {
+                                                const ctr = article.views > 0 ? ((article.clicks / article.views) * 100).toFixed(0) : 0;
+                                                const readableTitle = article.slug
+                                                    .replace(/-/g, ' ')
+                                                    .replace(/\b\w/g, c => c.toUpperCase());
+                                                return (
+                                                    <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
+                                                        <td className="px-6 py-4">
+                                                            <div className="font-semibold text-neutral-800 max-w-[480px] line-clamp-1" title={readableTitle}>
+                                                                {readableTitle}
+                                                            </div>
+                                                            <div className="text-neutral-400 text-xs mt-0.5 font-mono">{article.slug}</div>
+                                                        </td>
+                                                        <td className="px-6 py-4 text-right">
+                                                            <span className="font-bold text-neutral-800">{article.views.toLocaleString()}</span>
+                                                        </td>
+                                                        <td className="px-6 py-4 text-right">
+                                                            <span className={`font-bold ${article.clicks > 0 ? 'text-teal-600' : 'text-neutral-400'}`}>
+                                                                {article.clicks.toLocaleString()}
+                                                            </span>
+                                                        </td>
+                                                        <td className="px-6 py-4 text-right">
+                                                            <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold ${
+                                                                Number(ctr) >= 20 ? 'bg-green-100 text-green-700' :
+                                                                Number(ctr) >= 5  ? 'bg-yellow-100 text-yellow-700' :
+                                                                                    'bg-neutral-100 text-neutral-500'
+                                                            }`}>
+                                                                {ctr}%
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                );
+                                            })}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        )}
 
                     </div>
                 )}

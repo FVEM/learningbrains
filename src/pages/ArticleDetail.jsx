@@ -14,6 +14,16 @@ const ArticleDetail = () => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  // Fire GA4 event when article is viewed
+  useEffect(() => {
+    if (article?.title && typeof window.gtag === 'function') {
+      window.gtag('event', 'article_view', {
+        article_slug: slug,
+        article_title: article.title,
+      });
+    }
+  }, [article, slug]);
+
   const rawItems = t('articles.items_list', { returnObjects: true }) || [];
   const items = Array.isArray(rawItems) ? rawItems : [];
 
@@ -140,6 +150,14 @@ const ArticleDetail = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-brand-secondary text-white font-bold text-sm hover:bg-brand-primary transition-colors shadow-lg shadow-teal-900/15 hover:shadow-teal-900/25"
+              onClick={() => {
+                if (typeof window.gtag === 'function') {
+                  window.gtag('event', 'article_link_click', {
+                    article_slug: slug,
+                    article_title: article.title,
+                  });
+                }
+              }}
             >
               <FileText className="w-4 h-4" />
               {t('articles.download_pdf', 'Download PDF')}

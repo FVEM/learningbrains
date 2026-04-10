@@ -70,7 +70,9 @@ export default async function handler(req, res) {
             [channelsResponse],
             [eventsResponse],
             [languagesResponse],
-            [sourcesResponse]
+            [sourcesResponse],
+            [articleViewsResponse],
+            [articleClicksResponse]
         ] = await Promise.all([
             // 0: KPIs Globales
             analyticsDataClient.runReport({
@@ -155,6 +157,35 @@ export default async function handler(req, res) {
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'sessionSource' }],
                 metrics: [{ name: 'activeUsers' }]
+            }),
+            // 10: Visitas a páginas de artículos
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'pagePath' }],
+                metrics: [{ name: 'screenPageViews' }],
+                dimensionFilter: {
+                    filter: {
+                        fieldName: 'pagePath',
+                        stringFilter: { matchType: 'CONTAINS', value: '/articles/' }
+                    }
+                },
+                orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+                limit: 20
+            }),
+            // 11: Clics en el botón "Article" por título de artículo
+            analyticsDataClient.runReport({
+                property: `properties/${propertyId}`,
+                dateRanges: [{ startDate, endDate: 'today' }],
+                dimensions: [{ name: 'customEvent:article_slug' }],
+                metrics: [{ name: 'eventCount' }],
+                dimensionFilter: {
+                    filter: {
+                        fieldName: 'eventName',
+                        stringFilter: { matchType: 'EXACT', value: 'article_link_click' }
+                    }
+                },
+                limit: 20
             })
         ]);
 
@@ -258,6 +289,34 @@ export default async function handler(req, res) {
             }
         });
 
+        // Article Stats: combinar visitas de página + clics al botón Article
+        const articleViewsMap = {};
+        articleViewsResponse.rows?.forEach(row => {
+            const path = row.dimensionValues[0].value;
+            // Extraer slug: la última parte de /xx/articles/SLUG
+            const slugMatch = path.match(/\/articles\/([^/?#]+)/);
+            if (slugMatch) {
+                const articleSlug = slugMatch[1];
+                articleViewsMap[articleSlug] = (articleViewsMap[articleSlug] || 0) + parseInt(row.metricValues[0].value, 10);
+            }
+        });
+
+        const articleClicksMap = {};
+        articleClicksResponse.rows?.forEach(row => {
+            const articleSlug = row.dimensionValues[0].value;
+            if (articleSlug && articleSlug !== '(not set)') {
+                articleClicksMap[articleSlug] = (articleClicksMap[articleSlug] || 0) + parseInt(row.metricValues[0].value, 10);
+            }
+        });
+
+        // Merge ambos mapas
+        const allSlugs = new Set([...Object.keys(articleViewsMap), ...Object.keys(articleClicksMap)]);
+        const articleStats = Array.from(allSlugs).map(slug => ({
+            slug,
+            views: articleViewsMap[slug] || 0,
+            clicks: articleClicksMap[slug] || 0
+        })).sort((a, b) => b.views - a.views);
+
         res.status(200).json({
             kpis,
             timeSeries,
@@ -270,7 +329,8 @@ export default async function handler(req, res) {
             channels,
             events,
             chatInteractions,
-            linkedinUsers
+            linkedinUsers,
+            articleStats
         });
 
     } catch (error) {
