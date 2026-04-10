@@ -5,7 +5,8 @@ import SEOHead from '../components/SEOHead';
 const Noticias = () => {
     const { t } = useTranslation();
 
-    const translatedAiNewsItems = t('ai_news.items_list', { returnObjects: true }) || [];
+    const rawAiNewsItems = t('ai_news.items_list', { returnObjects: true }) || [];
+    const translatedAiNewsItems = Array.isArray(rawAiNewsItems) ? [...rawAiNewsItems].reverse() : [];
 
     // Generate Structured Data (Schema.org)
     const schema = {

@@ -1,11 +1,14 @@
 import React from 'react';
 import { Calendar, ExternalLink, Tag } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 /**
  * NewsCard component for the mosaic grid
  * Matches the styling of the Partners section for visual coherence.
  */
 const NewsCard = ({ image, date, title, description, url, category = "Event" }) => {
+  const { t } = useTranslation();
+  
   return (
     <article className="group bg-white border border-slate-100 rounded-2xl p-8 flex flex-col h-full hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
       {/* Image Section */}
@@ -55,7 +58,7 @@ const NewsCard = ({ image, date, title, description, url, category = "Event" }) 
           rel="noopener noreferrer" 
           className="text-[13px] font-bold text-slate-400 hover:text-brand-secondary flex items-center gap-2 group/link transition-all"
         >
-          {url?.includes('linkedin') ? 'View on LinkedIn' : 'Read Article'}
+          {url?.includes('linkedin') ? t('news.view_on_linkedin') : t('news.read_article')}
           <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
         </a>
       </div>

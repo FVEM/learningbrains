@@ -13,7 +13,8 @@ const News = () => {
   }, []);
 
   // Use optional chaining and fallback to empty array to prevent mapping error
-  const newsItems = t("news.items_list", { returnObjects: true }) || [];
+  const newsItemsRaw = t("news.items_list", { returnObjects: true }) || [];
+  const newsItems = Array.isArray(newsItemsRaw) ? [...newsItemsRaw].reverse() : [];
 
   // Metadata for SEO
   const pageTitle = t("news.seo.title");
