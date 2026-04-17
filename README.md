@@ -33,13 +33,28 @@ To run the project locally:
    npm run dev
    ```
 
-## Build
+## Build & Prerender
 
-To build the project for production:
+To build the project and generate static pages for SEO:
 
 ```bash
 npm run build
 ```
+
+## Content Synchronization
+
+The website's news content is managed via a Google Spreadsheet. To sync the latest content:
+
+```bash
+# Fetches data from spreadsheet and updates all localizations
+node scripts/sync-news-excel.cjs
+```
+
+The script performs the following:
+1. Fetches data from the project spreadsheet.
+2. Cleans technical boilerplate and metadata.
+3. Automatically translates new content into 5 other languages using OpenAI GPT-4o.
+4. Generates stable slugs based on English titles.
 
 ## Deployment
 

@@ -179,6 +179,7 @@
     "items_list": [
       {
         "title": "Zahajovací stretnutie projektu v Bilbau",
+        "type": "News",
         "category": "Meeting",
         "description": "Konzorcium Learning Brains sa prvýkrát stretlo v Bilbau na spustenie aktivít projektu. Partneri diskutovali o pláne činností pre prvý rok, vrátane nastavenia digitálnej platformy a úvodného výskumu potrieb priemyselného preškolovania.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
@@ -187,9 +188,10 @@
         "badge": "MEETING"
       },
       {
-        "title": "Nadchádzajúci workshop: AI vo vzdelávaní a odbornej príprave",
+        "title": "Nadchádzajúci workshop: umelej inteligencie vo vzdelávaní a odbornej príprave (VET)",
+        "type": "News",
         "category": "Meeting",
-        "description": "Pridajte sa k nám na online workshope, kde preskúmame potenciál umelej inteligencie vo vzdělávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
+        "description": "Zúčastnite sa online workshopu, ktorý preskúma potenciál umelej inteligencie vo vzdelávaní a odbornej príprave. Privítame odborníkov z celej Európy, ktorí sa podelia o svoje poznatky a najlepšie postupy.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
@@ -197,8 +199,9 @@
       },
       {
         "title": "Prvé transnacionálne stretnutie projektu",
+        "type": "News",
         "category": "Meeting",
-        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca preškolenia a plánovanie fázy pilotného testovania.",
+        "description": "Druhé partnerstvo sa uskutoční u našich talianskych partnerov. Program zahŕňa preskúmanie prvého návrhu rámca pre odborné vzdelávanie a plánovanie fázy pilotného testovania.",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
@@ -206,6 +209,7 @@
       },
       {
         "title": "Oficiálna webová stránka projektu Learning Brains!",
+        "type": "News",
         "category": "Event",
         "description": "S radosťou oznamujeme spustenie oficiálnej webovej stránky projektu Learning Brains! Learning Brains (iniciatíva programu Erasmus+) tu je na to, aby premostila medzeru medzi odborným vzdelávaním a reálnymi potrebami priemyslu.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
@@ -320,67 +324,86 @@
     "subtitle": "Zostaňte informovaní o najnovších trendoch v umelej inteligencii, podnikovej inovácii a metodológiách odborného vzdelávania.",
     "items_list": [
       {
-        "title": "AI pre predajné tímy: od príležitosti k ponuke",
-        "description": "Viac príležitostí, lepšie ponuky a lepšia obchodná koordinácia s pomocou umelej inteligencie.",
+        "title": "IA para equipos de Ventas: de la oportunidad a la oferta",
+        "type": "NEWS",
+        "description": "Más oportunidades, mejores ofertas y mejor coordinación comercial con IA",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
-        "title": "AI pre inžinierstvo: viac efektívnosti, menej opakujúcich sa úloh",
-        "description": "Automatizujte technické úlohy a zlepšite produktivitu inžinierskeho tímu.",
+        "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
+        "type": "NEWS",
+        "description": "Automatiza tareas técnicas y mejora la productividad del equipo de ingeniería",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
-        "title": "Pokročilá umeleá inteligencia a nové nástroje: od spolujazdca k agentom",
-        "description": "Preskúmajte súčasný ekosystém umelej inteligencie, od spolujazdcov po inteligentné agentov, a objavte spôsoby automatizácie a optimalizácie obchodných procesov.",
+        "title": "IA avanzada y nuevas herramientas: del copiloto a los agentes",
+        "type": "NEWS",
+        "description": "Explora el ecosistema actual de IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar procesos empresariales",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Spolujazdec v podniku: skutočná produktivita v prostredí Microsoftu",
+        "type": "NEWS",
         "description": "Produktivita s Copilotom v priemyselnom podniku, s bezpečným používaním nástroja.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Ako navrhnúť cestovný plán AI vo vašej organizácii.",
+        "type": "NEWS",
         "description": "Od úmyslu k akcii: kľúčové rozhodnutia na implementáciu umelej inteligencie s reálnym dopadom.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Granty SPRI: Umelej inteligencii 2026",
+        "type": "NEWS",
         "description": "Použite umelej inteligencie na transformáciu priemyselných procesov a získajte konkurenčnú výhodu.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
         "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": ""
       },
       {
         "title": "FVEM podporuje projekt Learning Brains, európsku iniciatívu pre priekvalifikáciu v priemysle.",
+        "type": "NEWS",
         "description": "FVEM vedie projekt Learning Brains, európsku iniciatívu v rámci programu Erasmus+, ktorej cieľom je prispôsobiť odborné vzdelávanie reálnym potrebám priemyslu v kontexte digitalizácie.",
         "link": "https://boletines.fvem.es/fvem-impulsa-learning-brains-una-iniciativa-europea-para-la-recualificacion-industrial.html",
         "category": "Event",
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
-        "badge": "GENERAL/EU"
+        "badge": ""
+      },
+      {
+        "title": "Učenie s podporou umelej inteligencie: Ako umelej inteligencia transformuje priemyselný tréning",
+        "type": "ARTICLE",
+        "description": "Nástroje na učenie riadené AI zvyšujú prenos znalostí, efektívnosť a inovácie v priemyselnom sektore.",
+        "link": "https://docs.google.com/document/d/1LRq6kDVfBUuBZEDzpL5AzTlJcTfM6a1h/edit",
+        "category": "Research",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "badge": "",
+        "slug": "ai-powered-learning-how-artificial-intelligence",
+        "content": "Vzhľadom na čoraz rýchlejšie technologické zmeny, sa stále sa učiť stalo kľúčovým prvkom konkurencieschopnosti pre priemyselné odvetvia. Zamestnanci sa musia neustále prispôsobovať novým strojom, procesom a digitálnym pracovným postupom. Tradičné modely školenia však často nedosahujú očakávané výsledky - sú časovo náročné, nákladné a zriedka prispôsobené individuálnym potrebám. Umelá inteligencia (AI) mení tento priestor tým, že umožňuje novú éru dynamického a individualizovaného učenia na pracovisku.\nSystémy učenia poháňané AI využívajú údaje a algoritmy na analýzu toho, ako sa zamestnanci učia, rozpoznávajú medzery a personalizujú obsah v reálnom čase. Namiesto programov univerzálneho charakteru dostávajú pracovníci usmernenie a učebné materiály prispôsobené ich rolám a súčasným úrovňam zručností. Údržbár napríklad môže pri servisovaní zariadenia priamo na inteligentnom zariadení okamžite dostávať upozornenia na bezpečnosť alebo návody na odstraňovanie problémov - na základe jeho predchádzajúcich školení a úlohy, ktorú práve vykonáva.\nPersonalizácia je jedným z najväčších benefitov AI v učení na pracovisku. Inteligentné platformy identifikujú vzory učenia, odporúčajú relevantné moduly a prispôsobujú sa pokroku každého používateľa. Tým sa zvyšuje angažovanosť, skracuje sa doba učenia a dosahujú sa merateľné výsledky. Na organizačnej úrovni umožňujú analytické údaje sledovať rozvoj zručností pracovnej sily a identifikovať konkrétne oblasti na zlepšenie.\nĎalšou veľkou výhodou je škálovateľnosť. Zatiaľ čo tradičné školenia vyžadujú fyzické stretnutia a prerušenia pracovného postupu, nástroje na učenie riadené AI sa hladko integrujú do každodenných operácií - dostupné kedykoľvek prostredníctvom mobilných zariadení, tabletov alebo AR okuliarov. Napríklad spoločnosti ako Siemens už využívajú digitálne učebné platformy na poskytovanie prispôsobiteľných simulácií reálneho sveta pre učeňov a technický personál.\nAI tiež podporuje uchovávanie znalostí v starnúcich pracovných silách. Zachytením odborných znalostí a ich digitálnou dostupnosťou môžu spoločnosti uchovať know-how aj keď skúsení zamestnanci odchádzajú do dôchodku. V tomto zmysle sa AI stáva nielen prostriedkom pre učenie, ale dlhodobým strážcom organizačných znalostí.\nNakoniec, AI označuje posun od statického školenia k neustálemu, personalizovanému rozvoju zručností. Pre priemyselné podniky je prijatie učenia riadeného AI investíciou do odolnosti a inovácií - pomáha tímom učiť sa inteligentnejšie, rýchlejšie a byť lepšie pripravenými na budúcnosť."
       }
     ]
   },
@@ -428,35 +451,5 @@
     "learn_more": "Zistit viac",
     "accept": "Prijať",
     "decline": "Odmietnuť"
-  },
-  "articles": {
-    "seo": {
-      "title": "Články – Learning Brains Erasmus+",
-      "description": "Prečídajte si najnovšie články zverejnené partnermi projektu Learning Brains o AI, OVP a priemyselnej rekvalifikácii.",
-      "keywords": "Erasmus+, OVP, Články, AI, Priemysel, Výskum"
-    },
-    "section_title": {
-      "main": "Články",
-      "sub": "ZVEREJNENÉ PARTNERMI"
-    },
-    "section_description": "Podrobné články a publíkačné výsledky konzorcia Learning Brains o umelej inteligencii, odbornom vzdělávaní a priemyselnej rekvalifikácii.",
-    "read_article": "Prečítať Článok",
-    "download_pdf": "Článok",
-    "back_to_articles": "Späť na Články",
-    "related": "Ďalšie Články",
-    "no_items": "Zatiaľ neboli zverejnené žiadne články. Skúste to znovu neskôr.",
-    "items_list": [
-      {
-        "slug": "ai-powered-learning-how-artificial-intelligence",
-        "title": "AI-Poháňané učenie: Ako umelej inteligencii premenila priemyselný tréning",
-        "description": "Nástroje na učenie riadené umelej inteligenciou zlepšujú prenos znalostí, prevádzkovú efektívnosť a priemyselnú inováciu. Tento článok preskúma, ako moderné systémy umelej inteligencie premostili deficit zručností a preškolili pracovnú silu, aby splnili sa meniace požiadavky priemyslu 4.0.",
-        "pdf_url": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
-        "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
-        "category": "Research",
-        "badge": "GENERAL/EU",
-        "partner": "ROOM466"
-      }
-    ]
   }
 }

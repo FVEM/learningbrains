@@ -1,13 +1,75 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const locales = ['en', 'es', 'de', 'it', 'pt', 'sk'];
 const sheetBaseUrl = 'https://docs.google.com/spreadsheets/d/1RN00ODnuj6F7hlGtvgIIN0d9_1u2UsoTwHQ2KkkKxa0/export?format=csv';
 const gids = {
     ai_news: '0',
-    news: '148983926',
-    articles: '1344974425'
+    news: '148983926'
 };
+
+/**
+ * Generates a URL-friendly slug from a title.
+ */
+function generateSlug(title) {
+    if (!title) return '';
+    return title
+        .toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9\s-]/g, '')
+        .trim()
+        .split(/\s+/)
+        .slice(0, 5)
+        .join('-');
+}
+
+/**
+ * Strips technical/template boilerplate from Google Doc text.
+ */
+function cleanContent(text) {
+    if (!text) return '';
+    
+    // 1. Remove trailing boilerplate first (the "Discover how..." footer)
+    const footerPattern = /discover how ai-powered learning can transform workforce development in your company.*/i;
+    let cleanedBody = text.replace(footerPattern, '').trim();
+
+    const lines = cleanedBody.split(/\r?\n/);
+
+    const metadataPatterns = [
+        /^website article$/i,
+        /^date:/i,
+        /^topic:/i,
+        /^link\s*$/i,
+        /^n\.\s*views/i,
+        /^erasmus\+\s+program/i,
+        /^this project has been funded/i,
+        /^\[link\]$/i,
+        /^european commission/i,
+        /reflects the views only of/i,
+        /commission cannot be held/i,
+        /^learning brains – integrated on the-job/i,
+        /^learning systems for industrial reskilling/i,
+        /^ai-powered learning: how artificial intelligence is transforming industrial training/i,
+        /^ai-driven learning tools boost knowledge transfer/i,
+        /^discover how ai-powered learning/i
+    ];
+
+    let startIdx = 0;
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        
+        const isMeta = metadataPatterns.some(p => p.test(line));
+        if (isMeta) continue;
+
+        // First line that is NOT empty and NOT meta is our start
+        startIdx = i;
+        break;
+    }
+
+    return lines.slice(startIdx).join('\n').trim();
+}
 
 /**
  * Transforms a Google Drive view link into a direct thumbnail URL
@@ -90,7 +152,7 @@ async function sync() {
     
     const aiNewsItems = await fetchSheetData(gids.ai_news);
     const projectEventsItems = await fetchSheetData(gids.news);
-    const articlesItems = await fetchSheetData(gids.articles);
+    const docContentCache = {};
 
     // Read current English data for comparison
     const enPath = path.join(__dirname, '..', 'src', 'locales', 'en.json');
@@ -114,7 +176,9 @@ async function sync() {
             link: item.link_url || item.link || "",
             date: item.date || "",
             image: item.image_url || item.image || "",
-            badge: item.badge_text || item.badge || ""
+            badge: item.badge_text || item.badge || "",
+            type: item.type || "News",
+            doc_link: item.doc_link || ""
         })).filter(i => i.title.trim() !== "");
 
         const newAiList = getAiCompareList(aiNewsItems);
@@ -128,13 +192,15 @@ async function sync() {
         }));
 
         const newProjectList = getProjectCompareList(projectEventsItems);
-        const oldProjectList = enJson.news.items_list.map(i => ({
+        const oldProjectList = (enJson.news?.items_list || []).map(i => ({
             title: i.title,
             description: i.description,
             link: i.link,
             date: i.date || "",
             image: i.image || "",
-            badge: i.badge || ""
+            badge: i.badge || "",
+            type: i.type || "News",
+            doc_link: i.doc_link || ""
         }));
 
         if (JSON.stringify(newAiList) === JSON.stringify(oldAiList) && 
@@ -161,7 +227,9 @@ async function sync() {
         
         // Sync AI News
         const oldAiNews = json.ai_news?.items_list || [];
-        json.ai_news.items_list = aiNewsItems.map(item => {
+        json.ai_news.items_list = [];
+
+        for (const item of aiNewsItems) {
             const rawLink = item.link_url || item.link || "";
             let title = item[`title_${lang}`];
             let description = item[`description_${lang}`];
@@ -180,20 +248,56 @@ async function sync() {
             title = title || fallbackTitle;
             description = description || fallbackDesc;
 
+            if (!title.trim()) continue;
+
             const rawImage = item.image_url || item.image || "";
-            
             const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
             
             let finalImage = transformGDriveUrl(rawImage);
             if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
 
-            // Ensure local paths have leading slash
             if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
                 finalImage = '/' + finalImage;
             }
 
-            return {
+            const itemType = item.type || "News";
+            const isArticle = itemType.toLowerCase().trim() === 'article';
+            
+            let slug = "";
+            let contentText = "";
+            let pdfUrl = "";
+
+            if (isArticle) {
+                slug = generateSlug(fallbackTitle);
+
+                // Use doc_link column first, then fall back to link_url if it's a Google Docs URL
+                const docLink = item.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
+                if (docLink) {
+                    const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                    if (docMatch && docMatch[1]) {
+                        const docId = docMatch[1];
+                        if (docContentCache[docId]) {
+                            contentText = docContentCache[docId];
+                        } else {
+                            try {
+                                const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
+                                if (res.ok) {
+                                    const rawText = await res.text();
+                                    contentText = cleanContent(rawText);
+                                    docContentCache[docId] = contentText;
+                                    console.log(`  ✓ Fetched and cleaned Google Doc content (${contentText.length} chars)`);
+                                }
+                            } catch (e) {
+                                console.error("Error fetching doc text for ID", docId, e);
+                            }
+                        }
+                    }
+                }
+            }
+
+            const newItem = {
                 title,
+                type: itemType,
                 description,
                 link: rawLink,
                 category: item.category || "",
@@ -201,11 +305,22 @@ async function sync() {
                 image: finalImage,
                 badge: item.badge_text || item.badge || ""
             };
-        }).filter(item => item.title.trim() !== "");
 
-        // Sync Project News
+            if (isArticle) {
+                if (slug) newItem.slug = slug;
+                if (contentText) newItem.content = contentText;
+                if (item.doc_link) newItem.doc_link = item.doc_link;
+                if (pdfUrl && !item.doc_link) newItem.pdf_url = pdfUrl; 
+            }
+
+            json.ai_news.items_list.push(newItem);
+        }
+
+        // Sync Project News and Articles
         const oldNews = json.news?.items_list || [];
-        json.news.items_list = projectEventsItems.map(item => {
+        json.news.items_list = [];
+
+        for (const item of projectEventsItems) {
             const rawLink = item.link_url || item.link || "";
             let title = item[`title_${lang}`];
             let description = item[`description_${lang}`];
@@ -224,20 +339,55 @@ async function sync() {
             title = title || fallbackTitle;
             description = description || fallbackDesc;
 
+            if (!title.trim()) continue;
+
             const rawImage = item.image_url || item.image || "";
-            
             const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
             
             let finalImage = transformGDriveUrl(rawImage);
             if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
 
-            // Ensure local paths have leading slash
             if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
                 finalImage = '/' + finalImage;
             }
 
-            return {
+            const itemType = item.type || "News";
+            const isArticle = itemType.toLowerCase().trim() === 'article';
+            
+            let slug = "";
+            let contentText = "";
+            let pdfUrl = "";
+
+            if (isArticle) {
+                slug = generateSlug(fallbackTitle);
+                pdfUrl = item.pdf_url || item.link_url || item.link || "";
+
+                const docLink = item.doc_link || "";
+                if (docLink) {
+                    const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                    if (docMatch && docMatch[1]) {
+                        const docId = docMatch[1];
+                        if (docContentCache[docId]) {
+                            contentText = docContentCache[docId];
+                        } else {
+                            try {
+                                const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
+                                if (res.ok) {
+                                    const rawText = await res.text();
+                                    contentText = cleanContent(rawText);
+                                    docContentCache[docId] = contentText;
+                                }
+                            } catch (e) {
+                                console.error("Error fetching doc text for ID", docId, e);
+                            }
+                        }
+                    }
+                }
+            }
+
+            const newItem = {
                 title,
+                type: itemType,
                 category: item.category || "",
                 description,
                 link: rawLink,
@@ -245,71 +395,33 @@ async function sync() {
                 image: finalImage,
                 badge: item.badge_text || item.badge || ""
             };
-        }).filter(item => item.title.trim() !== "");
 
-        // Sync Articles
-        const oldArticles = json.articles?.items_list || [];
+            if (isArticle) {
+                if (slug) newItem.slug = slug;
+                if (contentText) newItem.content = contentText;
+                // Include doc_link for comparison functionality later
+                if (item.doc_link) newItem.doc_link = item.doc_link;
+                if (pdfUrl && !item.doc_link) newItem.pdf_url = pdfUrl; 
+            }
 
-        /**
-         * Generates a URL-friendly slug from a title.
-         * "AI-Powered Learning: How AI..." → "ai-powered-learning"
-         */
-        function generateSlug(title) {
-            return title
-                .toLowerCase()
-                .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove accents
-                .replace(/[^a-z0-9\s-]/g, '')  // remove special chars
-                .trim()
-                .split(/\s+/)
-                .slice(0, 5)                   // max 5 words
-                .join('-');
+            json.news.items_list.push(newItem);
         }
 
-        if (!json.articles) json.articles = { items_list: [] };
-
-        json.articles.items_list = articlesItems.map(item => {
-            const rawPdfUrl = item['pdf_url'] || item['link_url (article pdf)'] || item['link_url'] || item['link'] || "";
-            const rawTitle = item['title_en'] || item['title'] || "";
-            let title = rawTitle;
-            let description = item['description_en'] || item['description'] || "";
-
-            // Translate if needed (preserve local translations)
-            if (lang !== 'en' && (!item[`title_${lang}`] || !item[`description_${lang}`])) {
-                const slug = generateSlug(rawTitle);
-                const existing = oldArticles.find(i => i.slug === slug || i.title === rawTitle);
-                if (existing) {
-                    if (!item[`title_${lang}`] && existing.title && existing.title !== rawTitle) title = existing.title;
-                    if (!item[`description_${lang}`] && existing.description && existing.description !== description) description = existing.description;
-                }
-            }
-
-            if (lang !== 'en') {
-                title = item[`title_${lang}`] || title;
-                description = item[`description_${lang}`] || description;
-            }
-
-            const slug = generateSlug(rawTitle);
-            const rawImage = item['image_url'] || item['image'] || "";
-            let finalImage = transformGDriveUrl(rawImage);
-            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
-                finalImage = '/' + finalImage;
-            }
-
-            return {
-                slug,
-                title,
-                description,
-                pdf_url: rawPdfUrl,
-                date: item['date'] || "",
-                image: finalImage,
-                category: item['category'] || "",
-                badge: item['badge_text'] || item['badge'] || "",
-                partner: item['proposing_pp'] || item['proposing pp'] || ""
-            };
-        }).filter(item => item.title.trim() !== "");
+        // Clean up legacy articles section
+        if (json.articles) {
+            delete json.articles;
+        }
 
         fs.writeFileSync(filePath, JSON.stringify(json, null, 2));
         console.log(`Successfully updated ${lang}.json`);
+    }
+
+    console.log("\n🚀 Triggering AI Translations for all languages...");
+    try {
+        execSync('node scripts/ai-translate-news.cjs', { stdio: 'inherit' });
+        console.log("✅ AI Translation process completed.");
+    } catch (error) {
+        console.error("❌ Error running AI translation script:", error);
     }
 }
 

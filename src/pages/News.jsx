@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import { Layout } from 'lucide-react';
-import NewsCard from "../components/NewsCard";
+import { Layout, FileText } from 'lucide-react';
+import EventCard from "../components/EventCard";
+import ArticleCard from "../components/ArticleCard";
 import SEOHead from "../components/SEOHead";
 
 const News = () => {
@@ -67,24 +68,26 @@ const News = () => {
             </p>
         </div>
 
-        {/* Improved Mosaic Grid Layout */}
+        {/* 3-Column Grid Layout matching Image 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up delay-100">
           {Array.isArray(newsItems) && newsItems.length > 0 ? (
-            newsItems.map((item, index) => (
-              <div
-                key={index}
-                className="flex"
-              >
-                <NewsCard
-                  image={item.image}
-                  date={item.date}
-                  title={item.title}
-                  description={item.description}
-                  url={item.link}
-                  category={item.badge || t("news.section_title.sub")}
-                />
-              </div>
-            ))
+            newsItems.map((item, index) => {
+              const isArticle = item.type === 'Article' || item.slug;
+              
+              if (isArticle) {
+                return (
+                  <div key={index} className="flex md:col-span-2 h-full">
+                    <ArticleCard item={item} lang={i18n.language || 'en'} />
+                  </div>
+                );
+              }
+
+              return (
+                <div key={index} className="flex col-span-1 h-full">
+                  <EventCard item={item} />
+                </div>
+              );
+            })
           ) : (
             <div className="col-span-full py-20 text-center">
               <p className="text-slate-400 text-xl font-medium">

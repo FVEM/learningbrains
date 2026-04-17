@@ -179,6 +179,7 @@
     "items_list": [
       {
         "title": "Project Kick-off Meeting in Bilbao",
+        "type": "News",
         "category": "Meeting",
         "description": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
@@ -188,6 +189,7 @@
       },
       {
         "title": "Upcoming Workshop: AI in VET",
+        "type": "News",
         "category": "Meeting",
         "description": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
         "link": "",
@@ -197,6 +199,7 @@
       },
       {
         "title": "First Transnational Project Meeting",
+        "type": "News",
         "category": "Meeting",
         "description": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
         "link": "",
@@ -206,6 +209,7 @@
       },
       {
         "title": "Learning Brains official website!",
+        "type": "News",
         "category": "Event",
         "description": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
@@ -321,66 +325,85 @@
     "items_list": [
       {
         "title": "AI for Sales Teams: from opportunity to offer",
+        "type": "NEWS",
         "description": "More opportunities, better offers and better commercial coordination with AI",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "AI for Engineering: more efficiency, less repetitive tasks",
+        "type": "NEWS",
         "description": "Automate technical tasks and improve the productivity of the engineering team",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Advanced AI and new tools: from copilot to agents",
+        "type": "NEWS",
         "description": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Copilot in the enterprise: real productivity in a Microsoft environment",
+        "type": "NEWS",
         "description": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "How to design the AI roadmap in your organization",
+        "type": "NEWS",
         "description": "From intention to action: key decisions to implement AI with real impact",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "SPRI Grants: Artificial Intelligence 2026",
+        "type": "NEWS",
         "description": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
         "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": ""
       },
       {
         "title": "FVEM promotes Learning Brains, a European initiative for industrial reskilling.",
-        "description": "FVEM leads the Learning Brains project, a European initiative framed within Erasmus+ that aims to adapt vocational education to the real needs of the industry, in a context marked by digitalization.",
+        "type": "NEWS",
+        "description": "FVEM leads the Learning Brains project, a European initiative within Erasmus+ that aims to adapt vocational education to the real needs of the industry, in a context marked by digitalization.",
         "link": "https://boletines.fvem.es/fvem-impulsa-learning-brains-una-iniciativa-europea-para-la-recualificacion-industrial.html",
         "category": "Event",
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
-        "badge": "GENERAL/EU"
+        "badge": ""
+      },
+      {
+        "title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
+        "type": "ARTICLE",
+        "description": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.",
+        "link": "https://docs.google.com/document/d/1LRq6kDVfBUuBZEDzpL5AzTlJcTfM6a1h/edit",
+        "category": "Research",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "badge": "",
+        "slug": "ai-powered-learning-how-artificial-intelligence",
+        "content": "As industries face ever-faster technological change, continuous learning has become a critical element of competitiveness. Employees must constantly adapt to new machines, processes, and digital workflows. Traditional training models, however, often fall short—they are time-consuming, costly, and rarely customized to individual needs. Artificial intelligence (AI) is reshaping this landscape by enabling a new era of dynamic and individualized learning in the workplace.\nAI-powered learning systems use data and algorithms to analyze how employees learn, recognize gaps, and personalize content in real time. Instead of one-size-fits-all programs, workers receive guidance and learning materials tailored to their roles and current skill levels. A maintenance technician, for example, might receive instant safety reminders or troubleshooting tutorials directly on a smart device while servicing equipment—based on his previous training data and the task at hand.\nPersonalization is one of the most powerful benefits of AI in workplace learning. Intelligent platforms identify learning patterns, recommend relevant modules, and adjust to each user’s progress. This increases engagement, shortens learning time, and delivers measurable results. At the organizational level, data analytics make it possible to track workforce skill development and pinpoint specific areas for improvement.\nScalability is another major advantage. Whereas traditional training requires physical sessions and interruptions to the workflow, AI-driven learning tools integrate smoothly into daily operations—accessible anytime via mobile devices, tablets, or AR glasses. For instance, companies like Siemens already use digital learning platforms to deliver adaptive, real-world simulations for apprentices and technical staff.\nAI also supports knowledge retention within aging workforces. By capturing expertise and making it digitally accessible, companies can preserve know-how even as experienced staff retire. In this sense, AI becomes not merely a facilitator for learning but a long-term guardian of organizational knowledge.\nUltimately, AI marks the shift from static training to continuous, personalized skill development. For industrial enterprises, embracing AI-driven learning is an investment in resilience and innovation—helping teams learn smarter, faster, and better prepared for the future."
       }
     ]
   },
@@ -428,35 +451,5 @@
     "learn_more": "Learn more",
     "accept": "Accept",
     "decline": "Decline"
-  },
-  "articles": {
-    "seo": {
-      "title": "Articles – Learning Brains Erasmus+",
-      "description": "Read the latest articles published by the Learning Brains project partners on AI, VET and industrial reskilling.",
-      "keywords": "Erasmus+, VET, Articles, AI, Industry, Research"
-    },
-    "section_title": {
-      "main": "Articles",
-      "sub": "PUBLISHED BY PARTNERS"
-    },
-    "section_description": "In-depth articles and publications from the Learning Brains consortium on artificial intelligence, vocational training, and industrial reskilling.",
-    "read_article": "Read Article",
-    "download_pdf": "Article",
-    "back_to_articles": "Back to Articles",
-    "related": "More Articles",
-    "no_items": "No articles published yet. Check back soon.",
-    "items_list": [
-      {
-        "slug": "ai-powered-learning-how-artificial-intelligence",
-        "title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
-        "description": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.",
-        "pdf_url": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
-        "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
-        "category": "Research",
-        "badge": "GENERAL/EU",
-        "partner": "ROOM466"
-      }
-    ]
   }
 }

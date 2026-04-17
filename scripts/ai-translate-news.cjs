@@ -137,11 +137,23 @@ async function translateLocales() {
                 const enItem = enData.ai_news.items_list[i];
                 const langItem = langData.ai_news.items_list[i];
 
-                // If translation matches English version or is missing
-                if (!langItem || langItem.title === enItem.title || langItem.description === enItem.description) {
+                const needsTranslation = !langItem || 
+                                       langItem.title === enItem.title || 
+                                       (enItem.content && (!langItem.content || langItem.content === enItem.content));
+
+                if (needsTranslation) {
                     console.log(`Translating AI News item: ${enItem.title} -> ${lang}`);
                     const translatedTitle = await translateText(enItem.title, lang);
                     const translatedDesc = await translateText(enItem.description, lang);
+                    
+                    let translatedContent = "";
+                    if (enItem.content) {
+                        console.log(`  - Translating content for: ${enItem.title} (${enItem.content.length} chars)`);
+                        const contentPrompt = `Translate this technical article about AI in industry to ${langNames[lang]}. 
+                        Maintain the same paragraph structure and professional tone. Do not translate technical terms that should remain in English if common in industry, but translate all descriptive text.
+                        Return ONLY the translated content.`;
+                        translatedContent = await translateText(enItem.content, lang, contentPrompt);
+                    }
                     
                     if (!langData.ai_news.items_list[i]) {
                         langData.ai_news.items_list[i] = { ...enItem };
@@ -149,6 +161,8 @@ async function translateLocales() {
                     
                     langData.ai_news.items_list[i].title = translatedTitle;
                     langData.ai_news.items_list[i].description = translatedDesc;
+                    if (translatedContent) langData.ai_news.items_list[i].content = translatedContent;
+                    
                     updated = true;
                 }
             }
@@ -160,10 +174,19 @@ async function translateLocales() {
                 const enItem = enData.news.items_list[i];
                 const langItem = langData.news.items_list[i];
 
-                if (!langItem || langItem.title === enItem.title || langItem.description === enItem.description) {
+                const needsTranslation = !langItem || 
+                                       langItem.title === enItem.title || 
+                                       (enItem.content && (!langItem.content || langItem.content === enItem.content));
+
+                if (needsTranslation) {
                     console.log(`Translating Project Event: ${enItem.title} -> ${lang}`);
                     const translatedTitle = await translateText(enItem.title, lang);
                     const translatedDesc = await translateText(enItem.description, lang);
+
+                    let translatedContent = "";
+                    if (enItem.content) {
+                        translatedContent = await translateText(enItem.content, lang);
+                    }
 
                     if (!langData.news.items_list[i]) {
                         langData.news.items_list[i] = { ...enItem };
@@ -171,6 +194,8 @@ async function translateLocales() {
 
                     langData.news.items_list[i].title = translatedTitle;
                     langData.news.items_list[i].description = translatedDesc;
+                    if (translatedContent) langData.news.items_list[i].content = translatedContent;
+                    
                     updated = true;
                 }
             }

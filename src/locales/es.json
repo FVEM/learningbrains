@@ -179,6 +179,7 @@
     "items_list": [
       {
         "title": "Reunión de inicio del proyecto en Bilbao",
+        "type": "News",
         "category": "Meeting",
         "description": "El consorcio Learning Brains se reunió por primera vez en Bilbao para lanzar las actividades del proyecto. Los socios discutieron la hoja de ruta para el primer año, que incluye la configuración de la plataforma digital y la investigación inicial sobre las necesidades de recualificación industrial.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
@@ -187,7 +188,8 @@
         "badge": "MEETING"
       },
       {
-        "title": "Próximo Taller: IA en la Formación Profesional",
+        "title": "Próximo Taller: Inteligencia Artificial en la Formación Profesional",
+        "type": "News",
         "category": "Meeting",
         "description": "Únete a nosotros en un taller en línea que explora el potencial de la Inteligencia Artificial en la Educación y Formación Profesional. Daremos la bienvenida a expertos de toda Europa para compartir conocimientos y mejores prácticas.",
         "link": "",
@@ -197,6 +199,7 @@
       },
       {
         "title": "Primera Reunión Transnacional del Proyecto",
+        "type": "News",
         "category": "Meeting",
         "description": "La segunda reunión de socios será organizada por nuestros socios italianos. La agenda incluye la revisión del primer borrador del marco de recualificación y la planificación de la fase de pruebas piloto.",
         "link": "",
@@ -206,6 +209,7 @@
       },
       {
         "title": "Sitio web oficial de Learning Brains.",
+        "type": "News",
         "category": "Event",
         "description": "¡Nos complace anunciar el lanzamiento del sitio web oficial de Learning Brains! Learning Brains (una iniciativa de Erasmus+) está aquí para cerrar la brecha entre la formación profesional y las necesidades industriales del mundo real.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
@@ -320,67 +324,86 @@
     "subtitle": "Manténgase informado sobre las últimas tendencias en Inteligencia Artificial, innovación empresarial y metodologías de formación profesional.",
     "items_list": [
       {
-        "title": "IA para equipos de ventas: desde la oportunidad hasta la oferta",
-        "description": "Más oportunidades, mejores ofertas y una mejor coordinación comercial con IA.",
+        "title": "IA para equipos de Ventas: de la oportunidad a la oferta",
+        "type": "NEWS",
+        "description": "Más oportunidades, mejores ofertas y mejor coordinación comercial con IA",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3233&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
+        "type": "NEWS",
         "description": "Automatizar tareas técnicas y mejorar la productividad del equipo de ingeniería.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3234&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
-        "title": "Inteligencia artificial avanzada y nuevas herramientas: desde copilotos hasta agentes.",
-        "description": "Explora el ecosistema actual de la inteligencia artificial, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar los procesos empresariales.",
+        "title": "IA avanzada y nuevas herramientas: del copiloto a los agentes",
+        "type": "NEWS",
+        "description": "Explora el ecosistema actual de IA, desde copilotos hasta agentes inteligentes, y descubre cómo automatizar y optimizar procesos empresariales",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3235&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Copiloto en la empresa: productividad real en un entorno de Microsoft",
+        "type": "NEWS",
         "description": "Productividad con Copilot en una empresa industrial, con un uso seguro de la herramienta.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3232&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Cómo diseñar la hoja de ruta de inteligencia artificial en su organización.",
+        "type": "NEWS",
         "description": "De la intención a la acción: decisiones clave para implementar la IA con un impacto real.",
         "link": "https://fvem.es/es/cursos-de-formacion/cursos-formacion-bonificada.html?id=3231&task=cursos.detalle&",
         "category": "Training",
         "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": "TRAINING/ES"
+        "badge": ""
       },
       {
         "title": "Subvenciones SPRI: Inteligencia Artificial 2026",
+        "type": "NEWS",
         "description": "Aplicar la Inteligencia Artificial para transformar los procesos industriales y ganar competitividad.",
         "link": "https://www.spri.eus/es/ayudas/inteligencia-artificial/",
         "category": "Research",
         "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": "GENERAL/EU"
+        "badge": ""
       },
       {
         "title": "FVEM promueve Learning Brains, an European initiative for industrial reskilling.",
+        "type": "NEWS",
         "description": "FVEM lidera el proyecto Learning Brains, una iniciativa europea enmarcada en Erasmus+ que tiene como objetivo adaptar la formación profesional a las necesidades reales de la industria, en un contexto marcado por la digitalización.",
         "link": "https://boletines.fvem.es/fvem-impulsa-learning-brains-una-iniciativa-europea-para-la-recualificacion-industrial.html",
         "category": "Event",
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
-        "badge": "GENERAL/EU"
+        "badge": ""
+      },
+      {
+        "title": "Aprendizaje impulsado por IA: Cómo la Inteligencia Artificial está Transformando la Formación Industrial",
+        "type": "ARTICLE",
+        "description": "Las herramientas de aprendizaje impulsadas por la inteligencia artificial potencian la transferencia de conocimientos, la eficiencia y la innovación en el sector industrial.",
+        "link": "https://docs.google.com/document/d/1LRq6kDVfBUuBZEDzpL5AzTlJcTfM6a1h/edit",
+        "category": "Research",
+        "date": "2026-04-15",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "badge": "",
+        "slug": "ai-powered-learning-how-artificial-intelligence",
+        "content": "A medida que las industrias enfrentan un cambio tecnológico cada vez más rápido, el aprendizaje continuo se ha convertido en un elemento crítico de competitividad. Los empleados deben adaptarse constantemente a nuevas máquinas, procesos y flujos de trabajo digitales. Sin embargo, los modelos de capacitación tradicionales a menudo no cumplen con las expectativas, ya que son costosos, consumen tiempo y rara vez se adaptan a las necesidades individuales. La inteligencia artificial (IA) está transformando este panorama al permitir una nueva era de aprendizaje dinámico e individualizado en el lugar de trabajo.\nLos sistemas de aprendizaje impulsados por IA utilizan datos y algoritmos para analizar cómo aprenden los empleados, identificar brechas y personalizar el contenido en tiempo real. En lugar de programas genéricos, los trabajadores reciben orientación y materiales de aprendizaje adaptados a sus roles y niveles de habilidad actuales. Por ejemplo, un técnico de mantenimiento podría recibir recordatorios de seguridad instantáneos o tutoriales de resolución de problemas directamente en un dispositivo inteligente mientras realiza el servicio de equipos, basado en sus datos de capacitación previa y la tarea en cuestión.\nLa personalización es uno de los beneficios más poderosos de la IA en el aprendizaje en el lugar de trabajo. Las plataformas inteligentes identifican patrones de aprendizaje, recomiendan módulos relevantes y se ajustan al progreso de cada usuario. Esto aumenta la participación, acorta el tiempo de aprendizaje y ofrece resultados medibles. A nivel organizacional, la analítica de datos permite rastrear el desarrollo de habilidades de la fuerza laboral y señalar áreas específicas para mejorar.\nLa escalabilidad es otra ventaja importante. Mientras que la capacitación tradicional requiere sesiones físicas e interrupciones en el flujo de trabajo, las herramientas de aprendizaje impulsadas por IA se integran fácilmente en las operaciones diarias, accesibles en cualquier momento a través de dispositivos móviles, tabletas o gafas de RA. Por ejemplo, empresas como Siemens ya utilizan plataformas de aprendizaje digital para ofrecer simulaciones adaptativas del mundo real para aprendices y personal técnico.\nLa IA también apoya la retención de conocimientos en fuerzas laborales envejecidas. Al capturar la experiencia y hacerla digitalmente accesible, las empresas pueden preservar el know-how incluso cuando el personal experimentado se jubila. En este sentido, la IA no solo se convierte en un facilitador del aprendizaje, sino también en un guardián a largo plazo del conocimiento organizacional.\nEn última instancia, la IA marca el cambio de la capacitación estática al desarrollo continuo y personalizado de habilidades. Para las empresas industriales, adoptar el aprendizaje impulsado por IA es una inversión en resiliencia e innovación, ayudando a los equipos a aprender de manera más inteligente, rápida y estar mejor preparados para el futuro."
       }
     ]
   },
@@ -428,35 +451,5 @@
     "learn_more": "Saber más",
     "accept": "Aceptar",
     "decline": "Rechazar"
-  },
-  "articles": {
-    "seo": {
-      "title": "Artículos – Learning Brains Erasmus+",
-      "description": "Lea los últimos artículos publicados por los socios del proyecto Learning Brains sobre IA, FP y recualificación industrial.",
-      "keywords": "Erasmus+, FP, Artículos, IA, Industria, Investigación"
-    },
-    "section_title": {
-      "main": "Artículos",
-      "sub": "PUBLICADOS POR LOS SOCIOS"
-    },
-    "section_description": "Artículos y publicaciones en profundidad del consorcio Learning Brains sobre inteligencia artificial, formación profesional y recualificación industrial.",
-    "read_article": "Leer Artículo",
-    "download_pdf": "Artículo",
-    "back_to_articles": "Volver a Artículos",
-    "related": "Más Artículos",
-    "no_items": "No hay artículos publicados todavía. Vuelve pronto.",
-    "items_list": [
-      {
-        "slug": "ai-powered-learning-how-artificial-intelligence",
-        "title": "Aprendizaje impulsado por IA: Cómo la inteligencia artificial está transformando la formación industrial",
-        "description": "Las herramientas de aprendizaje impulsadas por inteligencia artificial mejoran la transferencia de conocimientos, la eficiencia operativa y la innovación industrial. Este artículo explora cómo los sistemas de IA modernos están cerrando la brecha de habilidades y volviendo a capacitar a la fuerza laboral para cumplir con las demandas en evolución de la Industria 4.0.",
-        "pdf_url": "https://drive.google.com/file/d/1iKDHUDjc91NjerFb473moFiHxo5Kzpqm/view?usp=sharing",
-        "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
-        "category": "Research",
-        "badge": "GENERAL/EU",
-        "partner": "ROOM466"
-      }
-    ]
   }
 }

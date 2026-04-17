@@ -17,9 +17,15 @@ const About = () => {
                 path="/about"
             />
             <div className="max-w-4xl mx-auto px-6">
-                <h1 className="text-4xl md:text-5xl font-bold text-brand-headline text-center mb-16 tracking-tight animate-fade-in-up">
-                    {t('about.title')}
-                </h1>
+                <div className="text-center mb-16 animate-fade-in-up">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
+                        <Users className="w-3 h-3" />
+                        {t('about.label', 'About Us')}
+                    </div>
+                    <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">
+                        {t('about.title')}
+                    </h1>
+                </div>
 
                 <div className="space-y-20">
                     {/* Background & Context */}

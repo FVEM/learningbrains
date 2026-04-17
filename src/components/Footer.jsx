@@ -21,7 +21,6 @@ const Footer = () => {
                 { name: t('nav.partners'), path: '/partners' },
                 { name: t('nav.news'), path: '/news' },
                 { name: t('nav.noticias'), path: '/noticias' },
-                { name: t('nav.articles'), path: '/articles' },
                 { name: t('nav.resources'), path: '/resources' },
             ]
         },

@@ -16,6 +16,10 @@ const Results = () => {
             />
             <div className="max-w-4xl mx-auto px-6">
                 <div className="text-center mb-16 animate-fade-in-up">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-brand-secondary text-[10px] font-bold uppercase tracking-wider mb-6">
+                        <CheckCircle2 className="w-3 h-3" />
+                        {t('results.label', 'Outcomes')}
+                    </div>
                     <h1 className="text-4xl md:text-5xl font-bold text-brand-headline mb-6 tracking-tight">{t('results.title')}</h1>
                     <p className="text-slate-500 text-lg leading-relaxed">
                         {t('results.subtitle')}
