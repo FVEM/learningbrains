@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Calendar, Tag, BookOpen, FileText } from 'lucide-react';
+import { ArrowLeft, Calendar, Tag, BookOpen, FileText, Clock, Share2 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 
@@ -13,6 +13,7 @@ function renderContent(text) {
   const lines = text.split('\n');
   const elements = [];
   let i = 0;
+  let paragraphCount = 0;
 
   const parseBold = (str) => {
     const parts = str.split(/(\*\*.*?\*\*)/g);
@@ -32,10 +33,22 @@ function renderContent(text) {
       continue;
     }
 
+    // Pull Quote Detection: Paragraph wrapped in quotes or short italic-only line
+    if (line.startsWith('"') && line.endsWith('"') && line.length > 20 && line.length < 200) {
+      elements.push(
+        <blockquote key={i} className="editorial-pull-quote">
+          <p>{line.slice(1, -1)}</p>
+        </blockquote>
+      );
+      i++;
+      continue;
+    }
+
     // H1-style: ALL CAPS short line (≤ 80 chars) → section heading
     if (line === line.toUpperCase() && line.length > 3 && line.length <= 80 && /[A-Z]/.test(line)) {
       elements.push(
-        <h2 key={i} className="text-xl font-bold text-slate-800 mt-12 mb-4 pb-2 border-b border-slate-100 tracking-tight">
+        <h2 key={i} className="text-2xl font-bold text-brand-primary mt-14 mb-6 tracking-tight flex items-center gap-3">
+          <span className="w-8 h-[2px] bg-brand-secondary/30" />
           {line}
         </h2>
       );
@@ -46,19 +59,8 @@ function renderContent(text) {
     // Markdown heading ##
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={i} className="text-xl font-bold text-slate-800 mt-10 mb-4 tracking-tight">
+        <h2 key={i} className="text-2xl font-bold text-slate-800 mt-12 mb-6 tracking-tight">
           {parseBold(line.slice(3))}
-        </h2>
-      );
-      i++;
-      continue;
-    }
-
-    // Markdown heading #
-    if (line.startsWith('# ')) {
-      elements.push(
-        <h2 key={i} className="text-2xl font-bold text-slate-800 mt-12 mb-5 tracking-tight">
-          {parseBold(line.slice(2))}
         </h2>
       );
       i++;
@@ -73,10 +75,10 @@ function renderContent(text) {
         i++;
       }
       elements.push(
-        <ul key={`ul-${i}`} className="my-5 space-y-2 pl-0">
+        <ul key={`ul-${i}`} className="my-8 space-y-3 pl-2">
           {listItems.map((li, idx) => (
-            <li key={idx} className="flex items-start gap-3 text-slate-600 text-base leading-relaxed">
-              <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-brand-secondary" />
+            <li key={idx} className="flex items-start gap-3 text-slate-600 text-lg leading-relaxed">
+              <span className="mt-2.5 flex-shrink-0 w-2 h-2 rounded-full bg-brand-secondary/40" />
               <span>{parseBold(li)}</span>
             </li>
           ))}
@@ -88,16 +90,15 @@ function renderContent(text) {
     // Numbered list
     if (/^\d+\.\s/.test(line)) {
       const listItems = [];
-      let num = 1;
       while (i < lines.length && /^\d+\.\s/.test(lines[i].trim())) {
         listItems.push(lines[i].trim().replace(/^\d+\.\s+/, ''));
         i++;
       }
       elements.push(
-        <ol key={`ol-${i}`} className="my-5 space-y-2 pl-0">
+        <ol key={`ol-${i}`} className="my-8 space-y-4 pl-2">
           {listItems.map((li, idx) => (
-            <li key={idx} className="flex items-start gap-3 text-slate-600 text-base leading-relaxed">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-teal-50 text-brand-secondary text-xs font-bold flex items-center justify-center mt-0.5">
+            <li key={idx} className="flex items-start gap-4 text-slate-600 text-lg leading-relaxed">
+              <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-teal-50 text-brand-secondary text-sm font-bold flex items-center justify-center mt-0.5 border border-teal-100/50">
                 {idx + 1}
               </span>
               <span>{parseBold(li)}</span>
@@ -109,8 +110,14 @@ function renderContent(text) {
     }
 
     // Regular paragraph
+    paragraphCount++;
+    const isFirstParagraph = paragraphCount === 1;
+
     elements.push(
-      <p key={i} className="text-slate-600 text-base md:text-lg leading-relaxed mb-5">
+      <p 
+        key={i} 
+        className={`text-slate-600 text-lg leading-[1.8] mb-6 ${isFirstParagraph ? 'editorial-drop-cap' : ''}`}
+      >
         {parseBold(line)}
       </p>
     );
@@ -125,8 +132,18 @@ const ArticleDetail = () => {
   const { t, i18n } = useTranslation();
   const { slug, lang } = useParams();
   const currentLang = lang || i18n.language;
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  useEffect(() => { window.scrollTo(0, 0); }, [slug]);
+  useEffect(() => { 
+    window.scrollTo(0, 0); 
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(progress);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [slug]);
 
   const newsItems   = t('news.items_list',    { returnObjects: true }) || [];
   const aiNewsItems = t('ai_news.items_list', { returnObjects: true }) || [];
@@ -137,6 +154,10 @@ const ArticleDetail = () => {
 
   const isAiNews = aiNewsItems.some((item) => item.slug === slug);
   const article = items.find((item) => item.slug === slug);
+
+  // Calculate reading time
+  const wordCount = article?.content?.split(/\s+/).length || 0;
+  const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
   // Only other Articles for "More Articles"
   const related = items
@@ -225,46 +246,64 @@ const ArticleDetail = () => {
         )}
 
         {/* ── Meta + Title card ── */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 px-8 py-8 -mt-16 relative z-10 mb-10">
+        <div className="bg-white rounded-3xl shadow-sm border border-slate-100 px-8 md:px-12 py-10 -mt-20 relative z-10 mb-12">
+          {/* Progress Bar */}
+          <div className="scroll-progress-container rounded-t-3xl overflow-hidden opacity-0 lg:opacity-100 transition-opacity">
+            <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
+          </div>
+
           {/* Meta */}
-          <div className="flex items-center gap-3 flex-wrap mb-4">
+          <div className="flex items-center gap-4 flex-wrap mb-6">
             {article.date && (
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-                <Calendar className="w-3.5 h-3.5" />
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+                <Calendar className="w-4 h-4" />
                 {article.date}
               </span>
             )}
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+              <Clock className="w-4 h-4" />
+              {readingTime} min read
+            </span>
             {(article.badge || article.category) && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-teal-50 text-brand-secondary border border-teal-100">
-                <Tag className="w-2.5 h-2.5" />
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full bg-teal-50 text-brand-secondary border border-teal-100">
+                <Tag className="w-3 h-3" />
                 {article.badge || article.category}
               </span>
             )}
-            <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-blue-50 text-blue-600 border border-blue-100">
-              <BookOpen className="w-2.5 h-2.5" />
-              Article
-            </span>
           </div>
 
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-headline leading-tight tracking-tight mb-4">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-headline leading-tight tracking-tight mb-8">
             {article.title}
           </h1>
 
-          {/* Divider */}
-          <div className="w-12 h-1 bg-brand-secondary rounded-full" />
+          {/* Action Bar */}
+          <div className="flex items-center justify-between pt-6 border-t border-slate-50">
+            <div className="w-16 h-1 bg-brand-secondary rounded-full" />
+            <button 
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({ title: article.title, url: window.location.href });
+                }
+              }}
+              className="p-2.5 rounded-full bg-slate-50 text-slate-400 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-all"
+            >
+              <Share2 className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* ── Lead / Abstract ── */}
-        <div className="bg-gradient-to-r from-teal-50 to-slate-50 border-l-4 border-brand-secondary rounded-r-xl px-7 py-6 mb-10">
-          <p className="text-slate-700 text-base md:text-lg font-medium leading-relaxed italic">
+        <div className="relative mb-16 px-4">
+          <div className="absolute top-0 left-0 w-1 h-full bg-brand-secondary rounded-full" />
+          <p className="text-slate-700 text-xl md:text-2xl font-medium leading-relaxed italic pl-8">
             "{article.description}"
           </p>
         </div>
 
         {/* ── Full Content ── */}
         {article.content ? (
-          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm px-8 py-10 prose-article">
+          <div className="prose-editorial">
             {renderContent(article.content)}
           </div>
         ) : (
