@@ -284,7 +284,12 @@ export default async function handler(req, res) {
         // Países del Consorcio
         const consortiumList = ['Spain', 'Italy', 'Slovakia', 'Austria', 'Portugal'];
         const consortiumCountries = consortiumList.map(c => {
-            const match = countriesResponse.rows?.find(r => r.dimensionValues[0].value === c);
+            const match = countriesResponse.rows?.find(r => {
+                const gaCountry = r.dimensionValues[0].value;
+                if (gaCountry === c) return true;
+                if (c === 'Slovakia' && gaCountry === 'Slovak Republic') return true;
+                return false;
+            });
             return { country: c, users: match ? parseInt(match.metricValues[0].value, 10) : 0 };
         }).sort((a,b) => b.users - a.users);
 
@@ -335,7 +340,9 @@ export default async function handler(req, res) {
 
         // Merge ambos mapas
         const allSlugs = new Set([...Object.keys(articleViewsMap), ...Object.keys(articleClicksMap)]);
-        const articleStats = Array.from(allSlugs).map(slug => ({
+        const articleStats = Array.from(allSlugs)
+            .filter(slug => articleMeta[slug]) // Only keep articles currently in JSON
+            .map(slug => ({
             slug,
             title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
             partner: articleMeta[slug]?.partner || null,

@@ -236,9 +236,11 @@ async function sync() {
             const fallbackTitle = item.title_en || item.title || "";
             const fallbackDesc = item.description_en || item.description || "";
 
+            // Always try to find existing to preserve fields like partner if missing in sheet
+            const existing = oldAiNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
+
             // Check if there is an existing local translation that we shouldn't overwrite
             if (lang !== 'en' && (!title || !description)) {
-                const existing = oldAiNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
                 if (existing) {
                     if (!title && existing.title && existing.title !== fallbackTitle) title = existing.title;
                     if (!description && existing.description && existing.description !== fallbackDesc) description = existing.description;
@@ -303,7 +305,8 @@ async function sync() {
                 category: item.category || "",
                 date: item.date || "",
                 image: finalImage,
-                badge: item.badge_text || item.badge || ""
+                badge: item.badge_text || item.badge || "",
+                partner: item.partner || (existing ? existing.partner : "") || ""
             };
 
             if (isArticle) {
@@ -327,9 +330,11 @@ async function sync() {
             const fallbackTitle = item.title_en || item.title || "";
             const fallbackDesc = item.description_en || item.description || "";
 
+            // Always try to find existing to preserve fields like partner if missing in sheet
+            const existing = oldNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
+
             // Check if there is an existing local translation that we shouldn't overwrite
             if (lang !== 'en' && (!title || !description)) {
-                const existing = oldNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
                 if (existing) {
                     if (!title && existing.title && existing.title !== fallbackTitle) title = existing.title;
                     if (!description && existing.description && existing.description !== fallbackDesc) description = existing.description;
@@ -393,7 +398,8 @@ async function sync() {
                 link: rawLink,
                 date: item.date || "",
                 image: finalImage,
-                badge: item.badge_text || item.badge || ""
+                badge: item.badge_text || item.badge || "",
+                partner: item.partner || (existing ? existing.partner : "") || ""
             };
 
             if (isArticle) {
