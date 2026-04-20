@@ -422,7 +422,18 @@ export default function Analytics() {
                                                             <div className="font-semibold text-neutral-800 max-w-[380px] line-clamp-1" title={article.title}>
                                                                 {article.title}
                                                             </div>
-                                                            <div className="text-neutral-400 text-xs mt-0.5 font-mono">{article.slug}</div>
+                                                            <div className="flex items-center gap-1.5 mt-1">
+                                                                <span className="text-neutral-400 text-[11px] font-mono">{article.slug}</span>
+                                                                <a 
+                                                                    href={`/en/news/${article.slug}`} 
+                                                                    target="_blank" 
+                                                                    rel="noopener noreferrer"
+                                                                    className="text-brand-primary hover:text-brand-primary/80 transition-colors inline-flex items-center"
+                                                                    title="View Article"
+                                                                >
+                                                                    <ExternalLink className="w-3 h-3" />
+                                                                </a>
+                                                            </div>
                                                         </td>
                                                         <td className="px-6 py-4">
                                                             {article.partner ? (
