@@ -24,7 +24,7 @@ const Noticias = () => {
                 "description": item.description,
                 "image": item.image ? (item.image.startsWith('http') ? item.image : `https://learningbrains.eu${item.image.startsWith('/') ? '' : '/'}${item.image}`) : undefined,
                 "datePublished": item.date,
-                "url": item.link && item.link.startsWith('http') ? item.link : `https://learningbrains.eu/noticias`
+                "url": item.link && item.link.startsWith('http') ? item.link : `https://learningbrains.eu/${i18n.language || 'en'}/news/${item.slug || 'noticias'}`
             }
         }))
     };

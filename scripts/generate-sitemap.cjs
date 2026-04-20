@@ -12,7 +12,6 @@ const staticRoutes = [
     '/partners',
     '/news',
     '/noticias',
-    '/articles',
     '/resources',
     '/impact',
     '/contact',
@@ -23,17 +22,27 @@ const generateSitemap = () => {
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
 
-    // Load articles to generate dynamic routes
+    // Load articles and news to generate dynamic routes
     const enDataPath = path.join(__dirname, '../src/locales/en.json');
     const enData = JSON.parse(fs.readFileSync(enDataPath, 'utf8'));
     
-    const articleSlugsList = (enData.articles && enData.articles.items_list) 
-        ? enData.articles.items_list
-            .map(item => `/articles/${item.slug}`)
+    // Extract slugs from news (Project Events)
+    const newsSlugs = (enData.news && enData.news.items_list) 
+        ? enData.news.items_list
+            .filter(item => item.type === 'Article' || item.slug) // Only articles, not external links
+            .map(item => `/news/${item.slug}`)
+            .filter(s => s && !s.includes('undefined'))
+        : [];
+        
+    // Extract slugs from ai_news (AI News)
+    const aiNewsSlugs = (enData.ai_news && enData.ai_news.items_list)
+        ? enData.ai_news.items_list
+            .filter(item => item.type === 'Article' || item.slug)
+            .map(item => `/news/${item.slug}`)
             .filter(s => s && !s.includes('undefined'))
         : [];
     
-    const allRoutes = [...staticRoutes, ...articleSlugsList];
+    const allRoutes = [...staticRoutes, ...newsSlugs, ...aiNewsSlugs];
 
     languages.forEach(lang => {
         allRoutes.forEach(route => {
@@ -44,7 +53,7 @@ const generateSitemap = () => {
             xml += `    <lastmod>${LAST_MOD}</lastmod>\n`;
             xml += '    <changefreq>weekly</changefreq>\n';
             
-            const priority = (route === '' || route === '/') ? "1.0" : (route.includes("/articles/") ? "0.7" : "0.8");
+            const priority = (route === '' || route === '/') ? "1.0" : (route.includes("/news/") ? "0.7" : "0.8");
             xml += `    <priority>${priority}</priority>\n`;
 
             // Add hreflang links
