@@ -164,20 +164,22 @@ export default async function handler(req, res) {
                 dimensions: [{ name: 'sessionSource' }],
                 metrics: [{ name: 'activeUsers' }]
             }),
-            // 10: Visitas a páginas de artículos
+            // 10: Visitas a páginas de artículos y noticias
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'pagePath' }],
                 metrics: [{ name: 'screenPageViews' }],
                 dimensionFilter: {
-                    filter: {
-                        fieldName: 'pagePath',
-                        stringFilter: { matchType: 'CONTAINS', value: '/articles/' }
+                    orGroup: {
+                        expressions: [
+                            { filter: { fieldName: 'pagePath', stringFilter: { matchType: 'CONTAINS', value: '/articles/' } } },
+                            { filter: { fieldName: 'pagePath', stringFilter: { matchType: 'CONTAINS', value: '/news/' } } }
+                        ]
                     }
                 },
                 orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-                limit: 20
+                limit: 50
             }),
             // 11: Clics en el botón "Article" por página
             analyticsDataClient.runReport({
@@ -299,8 +301,8 @@ export default async function handler(req, res) {
         const articleViewsMap = {};
         articleViewsResponse.rows?.forEach(row => {
             const path = row.dimensionValues[0].value;
-            // Extraer slug: la última parte de /xx/articles/SLUG
-            const slugMatch = path.match(/\/articles\/([^/?#]+)/);
+            // Extraer slug: la última parte de /xx/articles/SLUG o /xx/news/SLUG
+            const slugMatch = path.match(/\/(?:articles|news)\/([^/?#]+)/);
             if (slugMatch) {
                 const articleSlug = slugMatch[1];
                 articleViewsMap[articleSlug] = (articleViewsMap[articleSlug] || 0) + parseInt(row.metricValues[0].value, 10);
@@ -310,8 +312,8 @@ export default async function handler(req, res) {
         const articleClicksMap = {};
         articleClicksResponse.rows?.forEach(row => {
             const path = row.dimensionValues[0].value;
-            // Extraer slug de /xx/articles/SLUG igual que en las visitas
-            const slugMatch = path.match(/\/articles\/([^/?#]+)/);
+            // Extraer slug de /xx/articles/SLUG o /xx/news/SLUG igual que en las visitas
+            const slugMatch = path.match(/\/(?:articles|news)\/([^/?#]+)/);
             if (slugMatch) {
                 const articleSlug = slugMatch[1];
                 articleClicksMap[articleSlug] = (articleClicksMap[articleSlug] || 0) + parseInt(row.metricValues[0].value, 10);
@@ -322,7 +324,11 @@ export default async function handler(req, res) {
         let articleMeta = {};
         try {
             const enLocale = require(path.join(__dirname, '../src/locales/en.json'));
-            (enLocale?.articles?.items_list || []).forEach(item => {
+            const itemsList = [
+                ...(enLocale?.news?.items_list || []),
+                ...(enLocale?.ai_news?.items_list || [])
+            ];
+            itemsList.forEach(item => {
                 if (item.slug) articleMeta[item.slug] = { title: item.title, partner: item.partner };
             });
         } catch (e) { /* Si falla, continuamos sin metadata */ }
