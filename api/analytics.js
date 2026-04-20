@@ -122,7 +122,7 @@ export default async function handler(req, res) {
                 dimensions: [{ name: 'country' }],
                 metrics: [{ name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
-                limit: 5
+                limit: 50
             }),
             // 5: Páginas Top 6
             analyticsDataClient.runReport({
@@ -232,8 +232,8 @@ export default async function handler(req, res) {
             value: parseInt(row.metricValues[0].value, 10)
         })) || [];
 
-        // Países
-        const countries = countriesResponse.rows?.map(row => ({
+        // Países (Top 5 para global, pero pedimos más para asegurar que el consorcio esté cubierto)
+        const countries = countriesResponse.rows?.slice(0, 5).map(row => ({
             country: row.dimensionValues[0].value,
             users: parseInt(row.metricValues[0].value, 10)
         })) || [];
