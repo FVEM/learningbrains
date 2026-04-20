@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate, useParams } from 'react-router-dom';
 
 import LanguageLayout from './components/LanguageLayout';
 import Home from './pages/Home';
@@ -29,6 +29,12 @@ const RootRedirect = () => {
   return null;
 }
 
+// Redirects old "/articles/:slug" routes to the new "/news/:slug" structure
+const ArticleRedirect = () => {
+  const { lang, slug } = useParams();
+  return <Navigate to={`/${lang}/news/${slug}`} replace />;
+};
+
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
@@ -46,6 +52,7 @@ function App() {
           <Route path="news" element={<News />} />
           <Route path="noticias" element={<Noticias />} />
           <Route path="news/:slug" element={<ArticleDetail />} />
+          <Route path="articles/:slug" element={<ArticleRedirect />} />
           <Route path="resources" element={<Resources />} />
           <Route path="impact" element={<Impact />} />
           <Route path="contact" element={<Contact />} />

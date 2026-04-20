@@ -1,4 +1,11 @@
 {
+    "redirects": [
+        {
+            "source": "/:lang/articles/:slug",
+            "destination": "/:lang/news/:slug",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/api/(.*)",

@@ -27,11 +27,15 @@ const langNames = {
 async function translateText(text, targetLang, customPrompt = null) {
     if (!text || text.trim() === "") return "";
     
-    const systemPrompt = customPrompt || `You are a professional translator for an Erasmus+ project called "Learning Brains" about AI in vocational education and industrial reskilling.
-                        Your task is to ensure the text provided is in ${langNames[targetLang]}.
-                        - If the source text is ALREADY in ${langNames[targetLang]}, return it exactly as is.
-                        - If the source text is in another language, translate it to ${langNames[targetLang]} keeping a professional and technical tone.
-                        - Return ONLY the final ${langNames[targetLang]} text.`;
+    const systemPrompt = customPrompt || `You are a professional editorial translator for an Erasmus+ project called "Learning Brains" (AI in vocational education and industrial reskilling).
+                        Your task is to ensure the text in ${langNames[targetLang]} feels like a premium journal article:
+                        - If the source is already in ${langNames[targetLang]}, return it exactly as is.
+                        - Identify 1-2 key insightful sentences and wrap them in double quotes (e.g., "AI is the future of learning.") in a separate paragraph to create a Pull Quote.
+                        - Format all section subheadings in ALL CAPS (e.g., KEY BENEFITS) on their own line.
+                        - Use **bold text** for important technical terms or key concepts.
+                        - Enhance reading rhythm using bullet points (- ) where appropriate.
+                        - Maintain a professional, technical, yet engaging tone.
+                        - Return ONLY the final ${langNames[targetLang]} text without metadata or explanations.`;
 
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -150,7 +154,11 @@ async function translateLocales() {
                     if (enItem.content) {
                         console.log(`  - Translating content for: ${enItem.title} (${enItem.content.length} chars)`);
                         const contentPrompt = `Translate this technical article about AI in industry to ${langNames[lang]}. 
-                        Maintain the same paragraph structure and professional tone. Do not translate technical terms that should remain in English if common in industry, but translate all descriptive text.
+                        EDITORIAL RULES:
+                        1. Select 1-2 key insightful sentences and present them as a PULL QUOTE (in double quotes "").
+                        2. Ensure any subheadings are in ALL CAPS.
+                        3. Use **bold emphasis** for key terms.
+                        4. Maintain professional tone and perfect paragraph structure for a magazine-like feel.
                         Return ONLY the translated content.`;
                         translatedContent = await translateText(enItem.content, lang, contentPrompt);
                     }
