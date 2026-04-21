@@ -409,13 +409,11 @@ export default function Analytics() {
                                                 <th className="px-6 py-4 font-semibold">Article</th>
                                                 <th className="px-6 py-4 font-semibold">Partner</th>
                                                 <th className="px-6 py-4 text-right font-semibold">Page Views</th>
-                                                <th className="px-6 py-4 text-right font-semibold">Article Clicks</th>
-                                                <th className="px-6 py-4 text-right font-semibold">CTR</th>
+                                                <th className="px-6 py-4 text-right font-semibold">Avg. Read Time</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-neutral-100">
                                             {(data?.articleStats ?? []).map((article, i) => {
-                                                const ctr = article.views > 0 ? ((article.clicks / article.views) * 100).toFixed(0) : 0;
                                                 return (
                                                     <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
                                                         <td className="px-6 py-4">
@@ -448,17 +446,8 @@ export default function Analytics() {
                                                             <span className="font-bold text-neutral-800">{article.views.toLocaleString()}</span>
                                                         </td>
                                                         <td className="px-6 py-4 text-right">
-                                                            <span className={`font-bold ${article.clicks > 0 ? 'text-teal-600' : 'text-neutral-400'}`}>
-                                                                {article.clicks.toLocaleString()}
-                                                            </span>
-                                                        </td>
-                                                        <td className="px-6 py-4 text-right">
-                                                            <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold ${
-                                                                Number(ctr) >= 20 ? 'bg-green-100 text-green-700' :
-                                                                Number(ctr) >= 5  ? 'bg-yellow-100 text-yellow-700' :
-                                                                                    'bg-neutral-100 text-neutral-500'
-                                                            }`}>
-                                                                {ctr}%
+                                                            <span className={`font-bold ${article.avgTime > 0 ? 'text-teal-600' : 'text-neutral-400'}`}>
+                                                                {article.avgTime > 0 ? `${Math.floor(article.avgTime / 60)}m ${article.avgTime % 60}s` : '0s'}
                                                             </span>
                                                         </td>
                                                     </tr>

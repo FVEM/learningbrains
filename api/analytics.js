@@ -77,8 +77,7 @@ export default async function handler(req, res) {
             [eventsResponse],
             [languagesResponse],
             [sourcesResponse],
-            [articleViewsResponse],
-            [articleClicksResponse]
+            [articleViewsResponse]
         ] = await Promise.all([
             // 0: KPIs Globales
             analyticsDataClient.runReport({
@@ -164,12 +163,12 @@ export default async function handler(req, res) {
                 dimensions: [{ name: 'sessionSource' }],
                 metrics: [{ name: 'activeUsers' }]
             }),
-            // 10: Visitas a páginas de artículos y noticias
+            // 10: Visitas y Engagement de artículos y noticias
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
                 dateRanges: [{ startDate, endDate: 'today' }],
                 dimensions: [{ name: 'pagePath' }],
-                metrics: [{ name: 'screenPageViews' }],
+                metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }, { name: 'userEngagementDuration' }],
                 dimensionFilter: {
                     orGroup: {
                         expressions: [
@@ -180,20 +179,6 @@ export default async function handler(req, res) {
                 },
                 orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
                 limit: 50
-            }),
-            // 11: Clics en el botón "Article" por página
-            analyticsDataClient.runReport({
-                property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
-                dimensions: [{ name: 'pagePath' }],
-                metrics: [{ name: 'eventCount' }],
-                dimensionFilter: {
-                    filter: {
-                        fieldName: 'eventName',
-                        stringFilter: { matchType: 'EXACT', value: 'article_link_click' }
-                    }
-                },
-                limit: 20
             })
         ]);
 
@@ -302,26 +287,24 @@ export default async function handler(req, res) {
             }
         });
 
-        // Article Stats: combinar visitas de página + clics al botón Article
-        const articleViewsMap = {};
+        // Article Stats: Engagement metrics
+        const articleStatsMap = {};
         articleViewsResponse.rows?.forEach(row => {
             const path = row.dimensionValues[0].value;
+            const views = parseInt(row.metricValues[0].value, 10);
+            const users = parseInt(row.metricValues[1].value, 10);
+            const engagementTime = parseFloat(row.metricValues[2].value);
+
             // Extraer slug: la última parte de /xx/articles/SLUG o /xx/news/SLUG
             const slugMatch = path.match(/\/(?:articles|news)\/([^/?#]+)/);
             if (slugMatch) {
                 const articleSlug = slugMatch[1];
-                articleViewsMap[articleSlug] = (articleViewsMap[articleSlug] || 0) + parseInt(row.metricValues[0].value, 10);
-            }
-        });
-
-        const articleClicksMap = {};
-        articleClicksResponse.rows?.forEach(row => {
-            const path = row.dimensionValues[0].value;
-            // Extraer slug de /xx/articles/SLUG o /xx/news/SLUG igual que en las visitas
-            const slugMatch = path.match(/\/(?:articles|news)\/([^/?#]+)/);
-            if (slugMatch) {
-                const articleSlug = slugMatch[1];
-                articleClicksMap[articleSlug] = (articleClicksMap[articleSlug] || 0) + parseInt(row.metricValues[0].value, 10);
+                if (!articleStatsMap[articleSlug]) {
+                    articleStatsMap[articleSlug] = { views: 0, users: 0, engagementTime: 0 };
+                }
+                articleStatsMap[articleSlug].views += views;
+                articleStatsMap[articleSlug].users += users;
+                articleStatsMap[articleSlug].engagementTime += engagementTime;
             }
         });
 
@@ -338,17 +321,21 @@ export default async function handler(req, res) {
             });
         } catch (e) { /* Si falla, continuamos sin metadata */ }
 
-        // Merge ambos mapas
-        const allSlugs = new Set([...Object.keys(articleViewsMap), ...Object.keys(articleClicksMap)]);
-        const articleStats = Array.from(allSlugs)
+        const allSlugs = Object.keys(articleStatsMap);
+        const articleStats = allSlugs
             .filter(slug => articleMeta[slug]) // Only keep articles currently in JSON
-            .map(slug => ({
-            slug,
-            title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-            partner: articleMeta[slug]?.partner || null,
-            views: articleViewsMap[slug] || 0,
-            clicks: articleClicksMap[slug] || 0
-        })).sort((a, b) => b.views - a.views);
+            .map(slug => {
+                const data = articleStatsMap[slug];
+                const avgEngagementTime = data.users > 0 ? Math.round(data.engagementTime / data.users) : 0;
+                
+                return {
+                    slug,
+                    title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+                    partner: articleMeta[slug]?.partner || null,
+                    views: data.views,
+                    avgTime: avgEngagementTime
+                };
+            }).sort((a, b) => b.views - a.views);
 
         res.status(200).json({
             kpis,
