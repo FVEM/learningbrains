@@ -159,6 +159,7 @@ const Home = () => {
                     src="/grok-video-7192e296-e3c8-4aa5-9d92-ca7001f42615 (1).mp4"
                     muted
                     playsInline
+                    preload="auto"
                     loop={false}
                     onEnded={() => {
                         // handled in useEffect
