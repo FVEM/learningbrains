@@ -185,27 +185,30 @@
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
-        "badge": "MEETING"
+        "badge": "MEETING",
+        "partner": ""
       },
       {
-        "title": "Próximo Workshop: IA na Formação Profissional",
+        "title": "PRÓXIMO WORKSHOP: IA NA EDUCAÇÃO E FORMAÇÃO PROFISSIONAL\n\n\"**A inteligência artificial está revolucionando a forma como aprendemos e nos preparamos para o futuro.**\"\n\nNão perca a oportunidade de participar do nosso workshop sobre **IA na Educação e Formação Profissional**, onde serão abordados os seguintes tópicos:\n\n- Introdução à inteligência artificial\n- Aplicações práticas em ambientes de aprendizagem\n- O futuro da educação com a IA\n\nInscreva-se agora e esteja na vanguarda da inovação educacional!",
         "type": "News",
         "category": "Meeting",
-        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
+        "description": "Junte-se a nós para um workshop online que explora o potencial da Inteligência Artificial na Educação e Formação Profissional. Vamos receber especialistas de toda a Europa para compartilhar **ideias e melhores práticas**.\n\n\"AI is the future of learning.\"",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
-        "badge": "MEETING"
+        "badge": "MEETING",
+        "partner": ""
       },
       {
-        "title": "Primeira Reunião Transnacional do Projeto",
+        "title": "**Primeira Reunião Transnacional do Projeto**",
         "type": "News",
         "category": "Meeting",
-        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.",
+        "description": "A segunda reunião de parceiros será realizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.\n\n\"O uso de **Inteligência Artificial** está revolucionando a forma como aprendemos e nos adaptamos às novas demandas do mercado.\"",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "MEETING"
+        "badge": "MEETING",
+        "partner": ""
       },
       {
         "title": "Website oficial do Learning Brains!",
@@ -215,7 +218,8 @@
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 · Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
-        "badge": "PROJECT"
+        "badge": "PROJECT",
+        "partner": ""
       }
     ],
     "read_more": "Ler Mais",
@@ -326,7 +330,8 @@
         "category": "Training",
         "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
@@ -336,7 +341,8 @@
         "category": "Training",
         "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "IA avanzada y nuevas herramientas: del copiloto a los agentes",
@@ -346,7 +352,8 @@
         "category": "Training",
         "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "Copiloto na empresa: produtividade real em um ambiente Microsoft.",
@@ -356,7 +363,8 @@
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "Como projetar o roadmap de IA na sua organização.",
@@ -366,7 +374,8 @@
         "category": "Training",
         "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "Bolsas SPRI: Inteligência Artificial 2026",
@@ -376,7 +385,8 @@
         "category": "Research",
         "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "A FVEM impulsiona o Learning Brains, uma iniciativa europeia para a reciclagem industrial.",
@@ -386,19 +396,32 @@
         "category": "Event",
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
-        "title": "Aprendizagem Impulsionada por IA: Como a Inteligência Artificial Está Transformando a Formação Industrial",
+        "title": "**APRENDIZAGEM POTENCIADA POR IA: COMO A INTELIGÊNCIA ARTIFICIAL ESTÁ TRANSFORMANDO A FORMAÇÃO INDUSTRIAL**\n\n- \"A IA está revolucionando a forma como os profissionais são treinados, oferecendo soluções mais eficazes e personalizadas.\"\n- \"Com a IA, é possível criar experiências de aprendizagem mais interativas e adaptativas, aumentando a eficiência do treinamento.\"",
         "type": "ARTICLE",
-        "description": "Ferramentas de aprendizagem impulsionadas por IA aumentam a transferência de conhecimento, eficiência e inovação em todo o setor industrial.",
+        "description": "**Benefícios-chave**\n\n- **Transferência de conhecimento aprimorada**\n- **Eficiência otimizada**\n- **Inovação impulsionada**\n\n\"**As ferramentas de aprendizado impulsionadas por IA aumentam a transferência de conhecimento, a eficiência e a inovação em todo o setor industrial.**\"",
         "link": "https://docs.google.com/document/d/1LRq6kDVfBUuBZEDzpL5AzTlJcTfM6a1h/edit",
         "category": "Research",
         "date": "2026-04-15",
         "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
         "badge": "",
+        "partner": "",
         "slug": "ai-powered-learning-how-artificial-intelligence",
-        "content": "À medida que as indústrias enfrentam mudanças tecnológicas cada vez mais rápidas, a aprendizagem contínua tornou-se um elemento crítico de competitividade. Os funcionários devem se adaptar constantemente a novas máquinas, processos e fluxos de trabalho digitais. No entanto, os modelos de treinamento tradicionais muitas vezes deixam a desejar - são demorados, caros e raramente personalizados às necessidades individuais. A inteligência artificial (IA) está remodelando esse cenário, possibilitando uma nova era de aprendizagem dinâmica e individualizada no local de trabalho.\nOs sistemas de aprendizagem alimentados por IA usam dados e algoritmos para analisar como os funcionários aprendem, identificar lacunas e personalizar o conteúdo em tempo real. Em vez de programas genéricos, os trabalhadores recebem orientação e materiais de aprendizagem adaptados às suas funções e níveis de habilidade atuais. Um técnico de manutenção, por exemplo, pode receber lembretes instantâneos de segurança ou tutoriais de resolução de problemas diretamente em um dispositivo inteligente enquanto realiza a manutenção de equipamentos - com base em seus dados de treinamento anterior e na tarefa em questão.\nA personalização é um dos benefícios mais poderosos da IA na aprendizagem no local de trabalho. Plataformas inteligentes identificam padrões de aprendizagem, recomendam módulos relevantes e se ajustam ao progresso de cada usuário. Isso aumenta o engajamento, reduz o tempo de aprendizagem e proporciona resultados mensuráveis. Em nível organizacional, a análise de dados torna possível rastrear o desenvolvimento de habilidades da força de trabalho e identificar áreas específicas para melhoria.\nA escalabilidade é outra grande vantagem. Enquanto o treinamento tradicional requer sessões presenciais e interrupções no fluxo de trabalho, as ferramentas de aprendizagem impulsionadas por IA se integram facilmente às operações diárias - acessíveis a qualquer momento por meio de dispositivos móveis, tablets ou óculos de realidade aumentada. Por exemplo, empresas como a Siemens já utilizam plataformas de aprendizagem digital para fornecer simulações adaptativas do mundo real para aprendizes e pessoal técnico.\nA IA também apoia a retenção de conhecimento em forças de trabalho envelhecidas. Ao capturar a expertise e torná-la digitalmente acessível, as empresas podem preservar o know-how mesmo quando funcionários experientes se aposentam. Nesse sentido, a IA se torna não apenas um facilitador da aprendizagem, mas um guardião de longo prazo do conhecimento organizacional.\nEm última análise, a IA marca a transição do treinamento estático para o desenvolvimento contínuo e personalizado de habilidades. Para as empresas industriais, abraçar a aprendizagem impulsionada por IA é um investimento em resiliência e inovação - ajudando as equipes a aprender de forma mais inteligente, rápida e melhor preparadas para o futuro."
+        "content": "À medida que as indústrias enfrentam mudanças tecnológicas cada vez mais rápidas, a aprendizagem contínua tornou-se um elemento crítico de competitividade. Os funcionários devem se adaptar constantemente a novas máquinas, processos e fluxos de trabalho digitais. \"**A inteligência artificial (IA) está remodelando esse cenário ao possibilitar uma nova era de aprendizagem dinâmica e individualizada no local de trabalho**.\"\n\n**PERSONALIZAÇÃO E ADAPTAÇÃO DINÂMICA**\nSistemas de aprendizagem alimentados por IA utilizam dados e algoritmos para analisar como os funcionários aprendem, reconhecer lacunas e personalizar conteúdo em tempo real. Em vez de programas genéricos, os trabalhadores recebem orientação e materiais de aprendizagem adaptados aos seus cargos e níveis de habilidade atuais. Um técnico de manutenção, por exemplo, pode receber lembretes de segurança instantâneos ou tutoriais de resolução de problemas diretamente em um dispositivo inteligente enquanto realiza a manutenção de equipamentos, com base em seus dados de treinamento anterior e na tarefa em questão.\n\nA personalização é um dos benefícios mais poderosos da IA na aprendizagem no local de trabalho. Plataformas inteligentes identificam padrões de aprendizagem, recomendam módulos relevantes e se ajustam ao progresso de cada usuário. Isso aumenta o engajamento, reduz o tempo de aprendizagem e oferece resultados mensuráveis. Em nível organizacional, a análise de dados torna possível rastrear o desenvolvimento de habilidades da força de trabalho e identificar áreas específicas para melhoria.\n\nA escalabilidade é outra grande vantagem. Enquanto o treinamento tradicional requer sessões físicas e interrupções no fluxo de trabalho, as ferramentas de aprendizagem impulsionadas por IA se integram facilmente às operações diárias, acessíveis a qualquer momento por meio de dispositivos móveis, tablets ou óculos de realidade aumentada. Por exemplo, empresas como a Siemens já utilizam plataformas de aprendizagem digital para fornecer simulações adaptativas do mundo real para aprendizes e equipe técnica.\n\nA IA também apoia a retenção de conhecimento em forças de trabalho envelhecidas. Ao capturar a expertise e torná-la digitalmente acessível, as empresas podem preservar o know-how mesmo quando funcionários experientes se aposentam. Nesse sentido, a IA se torna não apenas um facilitador para a aprendizagem, mas um guardião de longo prazo do conhecimento organizacional.\n\nNo final das contas, a IA marca a transição do treinamento estático para o desenvolvimento contínuo e personalizado de habilidades. Para empresas industriais, adotar a aprendizagem impulsionada por IA é um investimento em resiliência e inovação, ajudando as equipes a aprender de forma mais inteligente, rápida e melhor preparadas para o futuro."
+      },
+      {
+        "title": "**AUMENTO DA DEMANDA POR NOVAS HABILIDADES E APRENDIZAGEM CONTÍNUA**\n\n\"A inteligência artificial (IA) é o futuro da aprendizagem.\"\n\n- A chave para o sucesso profissional atualmente é a capacidade de se adaptar e aprender continuamente.\n- A demanda por novas habilidades está em constante crescimento devido às rápidas mudanças tecnológicas.\n- A principal dificuldade é auxiliar as pessoas a se adaptarem ao trabalho em conjunto com essas tecnologias.",
+        "type": "News",
+        "description": "",
+        "link": "",
+        "category": "",
+        "date": "but people\r,AI is rapidly reshaping jobs",
+        "image": "",
+        "badge": "",
+        "partner": ""
       }
     ]
   },

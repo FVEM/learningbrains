@@ -185,27 +185,30 @@
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "date": "Feb 2026 · Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
-        "badge": "MEETING"
+        "badge": "MEETING",
+        "partner": ""
       },
       {
-        "title": "Bevorstehender Workshop: KI in der beruflichen Bildung",
+        "title": "**BEVORSTEHENDES WORKSHOP: KÜNSTLICHE INTELLIGENZ IN DER BERUFSBILDUNG**\n\n\"Künstliche Intelligenz bietet ein enormes Potenzial für die berufliche Bildung und Umschulung.\"",
         "type": "News",
         "category": "Meeting",
-        "description": "Nehmen Sie an einem Online-Workshop teil, der das Potenzial der künstlichen Intelligenz in der beruflichen Bildung und Ausbildung erkundet. Wir werden Experten aus ganz Europa begrüßen, um Einblicke und bewährte Praktiken zu teilen.",
+        "description": "Lernen Sie mit uns in einem Online-Workshop das Potenzial der Künstlichen Intelligenz in der Berufsbildung und im Training kennen. Wir begrüßen Experten aus ganz Europa, die Einblicke und bewährte Verfahren teilen werden.\n\n\"PULL QUOTE: Künstliche Intelligenz ist der Schlüssel zur Zukunft des Lernens.\"",
         "link": "",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
-        "badge": "MEETING"
+        "badge": "MEETING",
+        "partner": ""
       },
       {
-        "title": "Erstes transnationales Projekttreffen",
+        "title": "ERSTES TRANSNATIONALES PROJEKTMEETING\n\n- \"Künstliche Intelligenz wird zunehmend als Schlüsseltechnologie angesehen, um die Bildungslandschaft zu transformieren.\"\n- \"Die Integration von **KI** in die berufliche Bildung eröffnet neue Möglichkeiten für Lernende und Industrie gleichermaßen.\"",
         "type": "News",
         "category": "Meeting",
-        "description": "Das zweite Partnertreffen wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des Umschulungsrahmens und die Planung der Pilot-Testphase.",
+        "description": "Die zweite Partnerbesprechung wird von unseren italienischen Partnern ausgerichtet. Die Tagesordnung umfasst die Überprüfung des ersten Entwurfs des **Reskilling**-Rahmens und die Planung der Pilottestphase.\n\n- **Pull Quote:**\n\"Künstliche Intelligenz wird zunehmend in der beruflichen Bildung eingesetzt, um Lernprozesse zu optimieren.\"",
         "link": "",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
-        "badge": "MEETING"
+        "badge": "MEETING",
+        "partner": ""
       },
       {
         "title": "Lernende Gehirne offizielle Website!",
@@ -215,7 +218,8 @@
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "date": "Mar 2026 · Bilbao, Spain",
         "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
-        "badge": "PROJECT"
+        "badge": "PROJECT",
+        "partner": ""
       }
     ],
     "read_more": "Mehr lesen",
@@ -326,7 +330,8 @@
         "category": "Training",
         "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "IA para Ingeniería: más eficiencia, menos tareas repetitivas",
@@ -336,7 +341,8 @@
         "category": "Training",
         "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "IA avanzada y nuevas herramientas: del copiloto a los agentes",
@@ -346,7 +352,8 @@
         "category": "Training",
         "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "Kopilot im Unternehmen: Reale Produktivität in einer Microsoft-Umgebung",
@@ -356,7 +363,8 @@
         "category": "Training",
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "Wie entwirft man den KI-Fahrplan in Ihrer Organisation?",
@@ -366,7 +374,8 @@
         "category": "Training",
         "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "SPRI-Zuschüsse: Künstliche Intelligenz 2026",
@@ -376,7 +385,8 @@
         "category": "Research",
         "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
         "title": "FVEM treibt Learning Brains voran, eine europäische Initiative zur beruflichen Umschulung in der Industrie.",
@@ -386,19 +396,32 @@
         "category": "Event",
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
-        "badge": ""
+        "badge": "",
+        "partner": ""
       },
       {
-        "title": "KI-gestütztes Lernen: Wie künstliche Intelligenz die industrielle Schulung transformiert",
+        "title": "KÜNSTLICHE INTELLIGENZ IM INDUSTRIELLEN TRAINING: WIE KÜNSTLICHE INTELLIGENZ DIE AUSBILDUNG VERÄNDERT\n\n- **Künstliche Intelligenz (KI)** hat das Potenzial, das industrielle Training zu revolutionieren.\n- Unternehmen können durch den Einsatz von **KI-gestützten Lernlösungen** ihre Mitarbeiter effizienter schulen.\n- \"KI ermöglicht personalisierte Lernpfade, die auf die individuellen Bedürfnisse der Lernenden zugeschnitten sind.\"\n- Durch die Analyse von Daten können **KI-Systeme** Lernfortschritte überwachen und Anpassungen in Echtzeit vornehmen.",
         "type": "ARTICLE",
-        "description": "KI-gesteuerte Lernwerkzeuge steigern den Wissenstransfer, die Effizienz und die Innovation im Industriesektor.",
+        "description": "KI-gesteuerte Lernwerkzeuge steigern den Wissenstransfer, die Effizienz und die Innovation im Industriesektor. \n\n---\n\n**\"KI-gesteuerte Lernwerkzeuge steigern den Wissenstransfer, die Effizienz und die Innovation im Industriesektor.\"**",
         "link": "https://docs.google.com/document/d/1LRq6kDVfBUuBZEDzpL5AzTlJcTfM6a1h/edit",
         "category": "Research",
         "date": "2026-04-15",
         "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
         "badge": "",
+        "partner": "",
         "slug": "ai-powered-learning-how-artificial-intelligence",
-        "content": "Mit der zunehmend schnellen technologischen Veränderung stehen Industrien vor der Herausforderung, dass kontinuierliches Lernen zu einem entscheidenden Wettbewerbselement geworden ist. Mitarbeiter müssen sich ständig an neue Maschinen, Prozesse und digitale Workflows anpassen. Traditionelle Schulungsmodelle hingegen erweisen sich oft als unzureichend – sie sind zeitaufwändig, kostspielig und selten auf individuelle Bedürfnisse zugeschnitten. Künstliche Intelligenz (KI) gestaltet dieses Umfeld um, indem sie eine neue Ära des dynamischen und individualisierten Lernens am Arbeitsplatz ermöglicht.\nKI-gesteuerte Lernsysteme nutzen Daten und Algorithmen, um zu analysieren, wie Mitarbeiter lernen, Lücken zu erkennen und Inhalte in Echtzeit zu personalisieren. Anstatt Einheitsprogramme erhalten Mitarbeiter individuelle Anleitungen und Lernmaterialien, die auf ihre Rollen und aktuellen Fähigkeiten zugeschnitten sind. Ein Wartungstechniker könnte beispielsweise während der Wartung von Geräten direkt auf einem intelligenten Gerät sofortige Sicherheitshinweise oder Fehlerbehebungsanleitungen erhalten – basierend auf seinen bisherigen Schulungsdaten und der aktuellen Aufgabe.\nPersonalisierung ist einer der stärksten Vorteile von KI im beruflichen Lernen. Intelligente Plattformen identifizieren Lernmuster, empfehlen relevante Module und passen sich dem Fortschritt jedes Benutzers an. Dies steigert die Beteiligung, verkürzt die Lernzeit und liefert messbare Ergebnisse. Auf organisatorischer Ebene ermöglichen Datenanalysen die Verfolgung der Entwicklung von Mitarbeiterfähigkeiten und die Identifizierung spezifischer Verbesserungsbereiche.\nSkalierbarkeit ist ein weiterer großer Vorteil. Während traditionelle Schulungen physische Sitzungen und Unterbrechungen des Arbeitsablaufs erfordern, integrieren KI-gesteuerte Lernwerkzeuge reibungslos in den täglichen Betrieb – jederzeit über mobile Geräte, Tablets oder AR-Brillen zugänglich. Unternehmen wie Siemens nutzen bereits digitale Lernplattformen, um adaptive, praxisnahe Simulationen für Auszubildende und technisches Personal bereitzustellen.\nKI unterstützt auch die Wissensbewahrung in alternden Belegschaften. Indem sie Fachwissen erfasst und digital zugänglich macht, können Unternehmen Know-how auch dann bewahren, wenn erfahrene Mitarbeiter in den Ruhestand gehen. In diesem Sinne wird KI nicht nur zum Förderer des Lernens, sondern auch zum langfristigen Hüter des organisatorischen Wissens.\nLetztendlich markiert KI den Übergang von statischer Schulung zu kontinuierlicher, personalisierter Fähigkeitsentwicklung. Für industrielle Unternehmen bedeutet die Annahme von KI-gesteuertem Lernen eine Investition in Widerstandsfähigkeit und Innovation – sie hilft Teams, klüger, schneller und besser auf die Zukunft vorbereitet zu lernen."
+        "content": "**DIE BEDEUTUNG VON KÜNSTLICHER INTELLIGENZ (KI) IN DER INDUSTRIE**\n\nIn einer Welt, in der Branchen einem immer schnelleren technologischen Wandel gegenüberstehen, ist kontinuierliches Lernen zu einem entscheidenden Wettbewerbselement geworden. Mitarbeiter müssen sich ständig an neue Maschinen, Prozesse und digitale Abläufe anpassen. KI verändert diese Landschaft, indem sie eine neue Ära des dynamischen und individualisierten Lernens am Arbeitsplatz ermöglicht.\n\n**\"Personalisierung ist einer der leistungsstärksten Vorteile von KI im beruflichen Lernen.\"**\n\nKI-gesteuerte Lernsysteme verwenden Daten und Algorithmen, um zu analysieren, wie Mitarbeiter lernen, Lücken zu erkennen und Inhalte in Echtzeit zu personalisieren. Statt Einheitsprogrammen erhalten Mitarbeiter individuell zugeschnittene Anleitungen und Lernmaterialien, die auf ihre Rollen und aktuellen Fähigkeiten abgestimmt sind. Ein Instandhaltungstechniker könnte beispielsweise während der Wartung von Geräten direkt auf einem intelligenten Gerät sofortige Sicherheitshinweise oder Fehlerbehebungstutorials erhalten – basierend auf seinen bisherigen Schulungsdaten und der aktuellen Aufgabe.\n\nDie Skalierbarkeit ist ein weiterer großer Vorteil. Während herkömmliches Training physische Sitzungen und Unterbrechungen des Arbeitsablaufs erfordert, integrieren KI-gesteuerte Lernwerkzeuge sich nahtlos in den täglichen Betrieb – jederzeit über mobile Geräte, Tablets oder AR-Brillen zugänglich. Unternehmen wie Siemens nutzen bereits digitale Lernplattformen, um adaptive, praxisnahe Simulationen für Auszubildende und technisches Personal bereitzustellen.\n\nKI unterstützt auch die Wissensbewahrung in alternden Belegschaften. Indem Expertenwissen erfasst und digital zugänglich gemacht wird, können Unternehmen Know-how bewahren, selbst wenn erfahrene Mitarbeiter in den Ruhestand gehen. Auf diese Weise wird KI nicht nur zu einem Lernhelfer, sondern auch zu einem langfristigen Hüter des organisatorischen Wissens.\n\nLetztendlich markiert KI den Übergang vom statischen Training zur kontinuierlichen, personalisierten Fähigkeitenentwicklung. Für industrielle Unternehmen bedeutet die Annahme von KI-gesteuertem Lernen eine Investition in Resilienz und Innovation – sie hilft Teams dabei, intelligenter, schneller und besser auf die Zukunft vorbereitet zu lernen."
+      },
+      {
+        "title": "**ERHÖHTE NACHFRAGE NACH NEUEN FÄHIGKEITEN UND KONTINUIERLICHEM LERNEN**\n\n\"Die zentrale Herausforderung besteht darin, den Menschen zu helfen, sich an die Arbeit neben diesen Technologien anzupassen.\"\n\n- Unternehmen benötigen verstärkt **digitale Kompetenzen**.\n- **Kontinuierliches Lernen** wird zur Norm.\n- **Anpassungsfähigkeit** wird entscheidend für den Erfolg.",
+        "type": "News",
+        "description": "",
+        "link": "",
+        "category": "",
+        "date": "but people\r,AI is rapidly reshaping jobs",
+        "image": "",
+        "badge": "",
+        "partner": ""
       }
     ]
   },
