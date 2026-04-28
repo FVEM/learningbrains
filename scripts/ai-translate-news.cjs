@@ -24,14 +24,10 @@ const langNames = {
     'sk': 'Slovak'
 };
 
-const EDITORIAL_PROMPT = (lang) => `You are a professional editorial translator for an Erasmus+ project called "Learning Brains" (AI in vocational education and industrial reskilling).
-                        Your task is to translate the text to ${langNames[lang]} and ensure it feels like a premium journal article:
-                        - Identify 1-2 key insightful sentences and wrap them in double quotes (e.g., "AI is the future of learning.") in a separate paragraph to create a Pull Quote.
-                        - Format all section subheadings in ALL CAPS (e.g., KEY BENEFITS) on their own line.
-                        - Use **bold text** for important technical terms or key concepts.
-                        - Enhance reading rhythm using bullet points (- ) where appropriate.
-                        - Maintain a professional, technical, yet engaging tone.
-                        - Return ONLY the final ${langNames[lang]} translation without metadata or explanations.`;
+const EDITORIAL_PROMPT = (lang) => `Translate the following text to ${langNames[lang]}. 
+                        Maintain the original paragraph structure and tone. 
+                        Do not add extra headers, bullet points, or pull quotes. 
+                        Return ONLY the translated text without any other comments or metadata.`;
 
 async function translateText(text, targetLang, customPrompt = null) {
     if (!text || text.trim() === "") return "";
@@ -143,15 +139,17 @@ async function translateLocales() {
 
                 const isCorrupted = langItem && (langItem.title.length > enItem.title.length * 2 || langItem.title.includes('KEY INSIGHTS'));
                 const isStillEnglish = langItem && langItem.content && /\b(the|is|and|with|that)\b/i.test(langItem.content) && lang !== 'en';
+                const isOverFormatted = langItem && langItem.content && (langItem.content.includes('**') || langItem.content.includes('KEY ') || /\n[A-Z\s]{5,}\n/.test(langItem.content));
                 
                 const needsTranslation = !langItem || 
                                        langItem.title === enItem.title || 
-                                       isCorrupted || isStillEnglish ||
+                                       isCorrupted || isStillEnglish || isOverFormatted ||
                                        (enItem.content && (!langItem.content || langItem.content === enItem.content));
 
                 if (needsTranslation) {
                     if (isCorrupted) console.log(`  - Re-translating corrupted title: ${enItem.title} -> ${lang}`);
                     else if (isStillEnglish) console.log(`  - Re-translating English content leak: ${enItem.title} -> ${lang}`);
+                    else if (isOverFormatted) console.log(`  - Re-translating over-formatted content: ${enItem.title} -> ${lang}`);
                     else console.log(`Translating AI News item: ${enItem.title} -> ${lang}`);
                     
                     const translatedTitle = await translateText(enItem.title, lang);
@@ -184,14 +182,18 @@ async function translateLocales() {
 
                 const isCorrupted = langItem && (langItem.title.length > enItem.title.length * 2 || langItem.title.includes('KEY INSIGHTS'));
                 const isStillEnglish = langItem && langItem.content && /\b(the|is|and|with|that)\b/i.test(langItem.content) && lang !== 'en';
+                const isOverFormatted = langItem && langItem.content && (langItem.content.includes('**') || langItem.content.includes('KEY ') || /\n[A-Z\s]{5,}\n/.test(langItem.content));
 
                 const needsTranslation = !langItem || 
                                        langItem.title === enItem.title || 
-                                       isCorrupted || isStillEnglish ||
+                                       isCorrupted || isStillEnglish || isOverFormatted ||
                                        (enItem.content && (!langItem.content || langItem.content === enItem.content));
 
                 if (needsTranslation) {
-                    console.log(`Translating Project Event: ${enItem.title} -> ${lang}`);
+                    if (isCorrupted) console.log(`  - Re-translating corrupted title: ${enItem.title} -> ${lang}`);
+                    else if (isStillEnglish) console.log(`  - Re-translating English content leak: ${enItem.title} -> ${lang}`);
+                    else if (isOverFormatted) console.log(`  - Re-translating over-formatted content: ${enItem.title} -> ${lang}`);
+                    else console.log(`Translating Project Event: ${enItem.title} -> ${lang}`);
                     const translatedTitle = await translateText(enItem.title, lang);
                     const translatedDesc = await translateText(enItem.description, lang);
 
