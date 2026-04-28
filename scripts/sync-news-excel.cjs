@@ -30,9 +30,17 @@ function generateSlug(title) {
 function cleanContent(text) {
     if (!text) return '';
     
-    // 1. Remove trailing boilerplate first (the "Discover how..." footer)
-    const footerPattern = /discover how ai-powered learning can transform workforce development in your company.*/i;
-    let cleanedBody = text.replace(footerPattern, '').trim();
+    // 1. Remove trailing boilerplate first
+    const footers = [
+        /discover how ai-powered learning can transform workforce development in your company.*/i,
+        /how is your organization addressing the impact of ai on jobs and skills.*/i
+    ];
+    
+    let cleanedBody = text;
+    footers.forEach(p => {
+        cleanedBody = cleanedBody.replace(p, '');
+    });
+    cleanedBody = cleanedBody.trim();
 
     const lines = cleanedBody.split(/\r?\n/);
 
@@ -51,6 +59,7 @@ function cleanContent(text) {
         /^learning brains – integrated on the-job/i,
         /^learning systems for industrial reskilling/i,
         /^ai-powered learning: how artificial intelligence is transforming industrial training/i,
+        /^ai and jobs: the real challenge is not technology, but people/i,
         /^ai-driven learning tools boost knowledge transfer/i,
         /^discover how ai-powered learning/i
     ];
@@ -70,6 +79,7 @@ function cleanContent(text) {
 
     return lines.slice(startIdx).join('\n').trim();
 }
+
 
 /**
  * Transforms a Google Drive view link into a direct thumbnail URL
