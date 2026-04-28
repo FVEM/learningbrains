@@ -96,49 +96,59 @@ function transformGDriveUrl(url) {
 }
 
 function parseCSV(text) {
-    const lines = text.split(/\r?\n/);
     const result = [];
-    let headers = [];
-    
-    lines.forEach((line, index) => {
-        if (!line.trim() && index !== 0) return;
-        
-        const row = [];
-        let inQuotes = false;
-        let currentValue = "";
-        
-        for (let i = 0; i < line.length; i++) {
-            const char = line[i];
-            if (char === '"') {
-                if (inQuotes && line[i + 1] === '"') {
-                    currentValue += '"'; // Handle escaped quotes
-                    i++;
-                } else {
-                    inQuotes = !inQuotes;
-                }
-            } else if (char === ',' && !inQuotes) {
-                row.push(currentValue.trim());
-                currentValue = "";
+    const rows = [];
+    let currentRow = [];
+    let currentValue = "";
+    let inQuotes = false;
+
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const nextChar = text[i + 1];
+
+        if (char === '"') {
+            if (inQuotes && nextChar === '"') {
+                currentValue += '"';
+                i++;
             } else {
-                currentValue += char;
+                inQuotes = !inQuotes;
             }
+        } else if (char === ',' && !inQuotes) {
+            currentRow.push(currentValue.trim());
+            currentValue = "";
+        } else if ((char === '\n' || (char === '\r' && nextChar === '\n')) && !inQuotes) {
+            currentRow.push(currentValue.trim());
+            rows.push(currentRow);
+            currentRow = [];
+            currentValue = "";
+            if (char === '\r' && nextChar === '\n') i++; 
+        } else {
+            currentValue += char;
         }
-        row.push(currentValue.trim());
-        
-        const cleanCols = row.map(col => col.replace(/^"|"$/g, '').replace(/""/g, '"').trim());
-        
-        if (index === 0) {
-            headers = cleanCols.map(h => h.toLowerCase());
-        } else if (cleanCols.length > 1 || cleanCols[0] !== "") {
-            const obj = {};
-            headers.forEach((header, i) => {
-                obj[header] = cleanCols[i] || "";
-            });
-            result.push(obj);
-        }
-    });
+    }
+    
+    if (currentRow.length > 0 || currentValue.trim() !== "") {
+        currentRow.push(currentValue.trim());
+        rows.push(currentRow);
+    }
+
+    if (rows.length === 0) return [];
+
+    const rawHeaders = rows[0];
+    const headers = rawHeaders.map(h => h.toLowerCase().trim());
+
+    for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        if (row.length <= 1 && !row[0]) continue;
+        const obj = {};
+        headers.forEach((header, j) => {
+            obj[header] = (row[j] || "").trim();
+        });
+        result.push(obj);
+    }
     return result;
 }
+
 
 async function fetchSheetData(gid) {
     const url = `${sheetBaseUrl}&gid=${gid}`;
