@@ -24,18 +24,21 @@ const langNames = {
     'sk': 'Slovak'
 };
 
-async function translateText(text, targetLang, customPrompt = null) {
-    if (!text || text.trim() === "") return "";
-    
-    const systemPrompt = customPrompt || `You are a professional editorial translator for an Erasmus+ project called "Learning Brains" (AI in vocational education and industrial reskilling).
-                        Your task is to ensure the text in ${langNames[targetLang]} feels like a premium journal article:
-                        - If the source is already in ${langNames[targetLang]}, return it exactly as is.
+const EDITORIAL_PROMPT = (lang) => `You are a professional editorial translator for an Erasmus+ project called "Learning Brains" (AI in vocational education and industrial reskilling).
+                        Your task is to translate the text to ${langNames[lang]} and ensure it feels like a premium journal article:
                         - Identify 1-2 key insightful sentences and wrap them in double quotes (e.g., "AI is the future of learning.") in a separate paragraph to create a Pull Quote.
                         - Format all section subheadings in ALL CAPS (e.g., KEY BENEFITS) on their own line.
                         - Use **bold text** for important technical terms or key concepts.
                         - Enhance reading rhythm using bullet points (- ) where appropriate.
                         - Maintain a professional, technical, yet engaging tone.
-                        - Return ONLY the final ${langNames[targetLang]} text without metadata or explanations.`;
+                        - Return ONLY the final ${langNames[lang]} translation without metadata or explanations.`;
+
+async function translateText(text, targetLang, customPrompt = null) {
+    if (!text || text.trim() === "") return "";
+    
+    const systemPrompt = customPrompt || `Translate the following text to ${langNames[targetLang]}. 
+                        Maintain the original tone and meaning. 
+                        Return ONLY the translated text without any other comments or metadata.`;
 
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -84,9 +87,6 @@ async function translateLocales() {
     // Check AI News in EN
     for (let i = 0; i < (enData.ai_news?.items_list?.length || 0); i++) {
         const item = enData.ai_news.items_list[i];
-        // Heuristic: If it looks like Spanish (has Spanish-only words or just run it through GPT for safety if it's new)
-        // For simplicity, we can just run it through the "fixer" prompt if it's the first time we see it 
-        // Or check for common Spanish words like "y", "en", "para", "de" mixed with accent marks
         const hasSpanishVibe = /[áéíóúñ]/i.test(item.title) || /\b(de|la|en|el|y|para|con)\b/i.test(item.title);
         
         if (hasSpanishVibe) {
@@ -141,26 +141,26 @@ async function translateLocales() {
                 const enItem = enData.ai_news.items_list[i];
                 const langItem = langData.ai_news.items_list[i];
 
+                const isCorrupted = langItem && (langItem.title.length > enItem.title.length * 2 || langItem.title.includes('KEY INSIGHTS'));
+                const isStillEnglish = langItem && langItem.content && /\b(the|is|and|with|that)\b/i.test(langItem.content) && lang !== 'en';
+                
                 const needsTranslation = !langItem || 
                                        langItem.title === enItem.title || 
+                                       isCorrupted || isStillEnglish ||
                                        (enItem.content && (!langItem.content || langItem.content === enItem.content));
 
                 if (needsTranslation) {
-                    console.log(`Translating AI News item: ${enItem.title} -> ${lang}`);
+                    if (isCorrupted) console.log(`  - Re-translating corrupted title: ${enItem.title} -> ${lang}`);
+                    else if (isStillEnglish) console.log(`  - Re-translating English content leak: ${enItem.title} -> ${lang}`);
+                    else console.log(`Translating AI News item: ${enItem.title} -> ${lang}`);
+                    
                     const translatedTitle = await translateText(enItem.title, lang);
                     const translatedDesc = await translateText(enItem.description, lang);
                     
                     let translatedContent = "";
                     if (enItem.content) {
                         console.log(`  - Translating content for: ${enItem.title} (${enItem.content.length} chars)`);
-                        const contentPrompt = `Translate this technical article about AI in industry to ${langNames[lang]}. 
-                        EDITORIAL RULES:
-                        1. Select 1-2 key insightful sentences and present them as a PULL QUOTE (in double quotes "").
-                        2. Ensure any subheadings are in ALL CAPS.
-                        3. Use **bold emphasis** for key terms.
-                        4. Maintain professional tone and perfect paragraph structure for a magazine-like feel.
-                        Return ONLY the translated content.`;
-                        translatedContent = await translateText(enItem.content, lang, contentPrompt);
+                        translatedContent = await translateText(enItem.content, lang, EDITORIAL_PROMPT(lang));
                     }
                     
                     if (!langData.ai_news.items_list[i]) {
@@ -182,8 +182,12 @@ async function translateLocales() {
                 const enItem = enData.news.items_list[i];
                 const langItem = langData.news.items_list[i];
 
+                const isCorrupted = langItem && (langItem.title.length > enItem.title.length * 2 || langItem.title.includes('KEY INSIGHTS'));
+                const isStillEnglish = langItem && langItem.content && /\b(the|is|and|with|that)\b/i.test(langItem.content) && lang !== 'en';
+
                 const needsTranslation = !langItem || 
                                        langItem.title === enItem.title || 
+                                       isCorrupted || isStillEnglish ||
                                        (enItem.content && (!langItem.content || langItem.content === enItem.content));
 
                 if (needsTranslation) {
@@ -193,7 +197,7 @@ async function translateLocales() {
 
                     let translatedContent = "";
                     if (enItem.content) {
-                        translatedContent = await translateText(enItem.content, lang);
+                        translatedContent = await translateText(enItem.content, lang, EDITORIAL_PROMPT(lang));
                     }
 
                     if (!langData.news.items_list[i]) {
