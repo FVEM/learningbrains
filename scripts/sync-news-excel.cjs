@@ -26,14 +26,17 @@ function generateSlug(title) {
 
 /**
  * Strips technical/template boilerplate from Google Doc text.
+ * @param {string} text The raw document text
+ * @param {string} articleTitle The title of the article to strip if it appears at the top
  */
-function cleanContent(text) {
+function cleanContent(text, articleTitle = '') {
     if (!text) return '';
     
     // 1. Remove trailing boilerplate first
     const footers = [
         /discover how ai-powered learning can transform workforce development in your company.*/i,
-        /how is your organization addressing the impact of ai on jobs and skills.*/i
+        /how is your organization addressing the impact of ai on jobs and skills.*/i,
+        /find out more about learning brains.*/i
     ];
     
     let cleanedBody = text;
@@ -55,24 +58,22 @@ function cleanContent(text) {
         /^\[link\]$/i,
         /^european commission/i,
         /reflects the views only of/i,
-        /commission cannot be held/i,
-        /^learning brains – integrated on the-job/i,
-        /^learning systems for industrial reskilling/i,
-        /^ai-powered learning: how artificial intelligence is transforming industrial training/i,
-        /^ai and jobs: the real challenge is not technology, but people/i,
-        /^ai-driven learning tools boost knowledge transfer/i,
-        /^discover how ai-powered learning/i
+        /commission cannot be held/i
     ];
 
     let startIdx = 0;
+    const normalizedTitle = articleTitle.toLowerCase().trim();
+
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
         if (!line) continue;
         
         const isMeta = metadataPatterns.some(p => p.test(line));
-        if (isMeta) continue;
+        const isTitle = normalizedTitle && line.toLowerCase() === normalizedTitle;
+        
+        if (isMeta || isTitle) continue;
 
-        // First line that is NOT empty and NOT meta is our start
+        // First line that is NOT empty, NOT meta, and NOT the title is our start
         startIdx = i;
         break;
     }
@@ -305,7 +306,7 @@ async function sync() {
                                 const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
                                 if (res.ok) {
                                     const rawText = await res.text();
-                                    contentText = cleanContent(rawText);
+                                    contentText = cleanContent(rawText, fallbackTitle);
                                     docContentCache[docId] = contentText;
                                     console.log(`  ✓ Fetched and cleaned Google Doc content (${contentText.length} chars)`);
                                 }
@@ -399,7 +400,7 @@ async function sync() {
                                 const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
                                 if (res.ok) {
                                     const rawText = await res.text();
-                                    contentText = cleanContent(rawText);
+                                    contentText = cleanContent(rawText, fallbackTitle);
                                     docContentCache[docId] = contentText;
                                 }
                             } catch (e) {

@@ -4,7 +4,11 @@ const path = require('path');
 const localesDir = path.join(__dirname, '..', 'src', 'locales');
 const locales = ['en', 'es', 'de', 'it', 'pt', 'sk'];
 
-// Manually read .env file since npm install is restricted
+// ---------------------------------------------------------------------------
+// Config
+// ---------------------------------------------------------------------------
+
+/** Read API key from .env without requiring dotenv */
 function getApiKey() {
     const envPath = path.join(__dirname, '..', '.env');
     if (!fs.existsSync(envPath)) return null;
@@ -24,17 +28,32 @@ const langNames = {
     'sk': 'Slovak'
 };
 
-const EDITORIAL_PROMPT = (lang) => `Translate the following text to ${langNames[lang]}. 
-                        Maintain the original paragraph structure and tone. 
-                        Do not add extra headers, bullet points, or pull quotes. 
-                        Return ONLY the translated text without any other comments or metadata.`;
+/**
+ * System prompt for translating article body content.
+ * Enforces plain paragraph structure — no headers, bullets or bold formatting.
+ */
+const CONTENT_PROMPT = (lang) =>
+    `Translate the following text to ${langNames[lang]}.
+Maintain the original paragraph structure and tone exactly.
+Do NOT add extra headers, bullet points, bold text, pull quotes or any formatting.
+Return ONLY the translated text, nothing else.`;
+
+/**
+ * System prompt for translating short fields (title, description).
+ */
+const SHORT_PROMPT = (lang) =>
+    `Translate the following text to ${langNames[lang]}.
+Maintain the original meaning and tone.
+Return ONLY the translated text, nothing else.`;
+
+// ---------------------------------------------------------------------------
+// OpenAI helper
+// ---------------------------------------------------------------------------
 
 async function translateText(text, targetLang, customPrompt = null) {
-    if (!text || text.trim() === "") return "";
-    
-    const systemPrompt = customPrompt || `Translate the following text to ${langNames[targetLang]}. 
-                        Maintain the original tone and meaning. 
-                        Return ONLY the translated text without any other comments or metadata.`;
+    if (!text || text.trim() === '') return '';
+
+    const systemPrompt = customPrompt || SHORT_PROMPT(targetLang);
 
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -44,16 +63,10 @@ async function translateText(text, targetLang, customPrompt = null) {
                 'Authorization': `Bearer ${OPENAI_API_KEY}`
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
+                model: 'gpt-3.5-turbo',
                 messages: [
-                    {
-                        role: "system",
-                        content: systemPrompt
-                    },
-                    {
-                        role: "user",
-                        content: text
-                    }
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user',   content: text }
                 ],
                 temperature: 0.3
             })
@@ -61,196 +74,200 @@ async function translateText(text, targetLang, customPrompt = null) {
 
         const data = await response.json();
         if (data.error) {
-            console.error(`OpenAI Error: ${data.error.message}`);
-            return text;
+            console.error(`  ⚠ OpenAI Error: ${data.error.message}`);
+            return text; // Fall back to original rather than crashing
         }
         return data.choices[0].message.content.trim();
     } catch (error) {
-        console.error(`Translation error for ${targetLang}:`, error);
+        console.error(`  ⚠ Translation error for ${targetLang}:`, error.message);
         return text;
     }
 }
 
+// ---------------------------------------------------------------------------
+// Quality checks — detect items that need (re-)translation
+// ---------------------------------------------------------------------------
+
+/**
+ * Returns true if a translated item needs to be re-translated.
+ * Checks for: missing translation, title still in English, corrupted title,
+ * content still in English, or content with leftover AI formatting.
+ */
+function needsTranslation(enItem, langItem, lang) {
+    if (!langItem) return { yes: true, reason: 'missing' };
+
+    // Title is identical to English source
+    if (langItem.title && langItem.title.trim() === enItem.title.trim()) {
+        return { yes: true, reason: 'untranslated-title' };
+    }
+
+    // Title has doubled in length or contains editorial artefacts — sign of corruption
+    const isCorrupted = langItem.title &&
+        (langItem.title.length > enItem.title.length * 2.5 ||
+         langItem.title.includes('KEY INSIGHTS'));
+    if (isCorrupted) return { yes: true, reason: 'corrupted-title' };
+
+    // Content exists in English but no translated content exists yet
+    if (enItem.content && (!langItem.content || langItem.content.trim() === '')) {
+        return { yes: true, reason: 'missing-content' };
+    }
+
+    // Content is identical to the English source
+    if (enItem.content && langItem.content && langItem.content.trim() === enItem.content.trim()) {
+        return { yes: true, reason: 'untranslated-content' };
+    }
+
+    // Content still contains leftover AI markdown formatting
+    const isOverFormatted = langItem.content && (
+        langItem.content.includes('**') ||
+        /\n[A-Z\s]{5,}\n/.test(langItem.content) ||
+        langItem.content.includes('KEY TAKEAWAY') ||
+        langItem.content.includes('PULL QUOTE')
+    );
+    if (isOverFormatted) return { yes: true, reason: 'over-formatted' };
+
+    return { yes: false };
+}
+
+// ---------------------------------------------------------------------------
+// Main translation logic
+// ---------------------------------------------------------------------------
+
+async function translateSection(enItems, langItems, lang, sectionLabel) {
+    let updated = false;
+    const result = [...(langItems || [])];
+
+    for (let i = 0; i < enItems.length; i++) {
+        const enItem = enItems[i];
+        const langItem = result[i];
+        const { yes, reason } = needsTranslation(enItem, langItem, lang);
+
+        if (!yes) continue;
+
+        // Log the reason
+        const reasonLabels = {
+            'missing':              `New item`,
+            'untranslated-title':   `Title not translated`,
+            'corrupted-title':      `Corrupted title`,
+            'missing-content':      `Missing content translation`,
+            'untranslated-content': `Content not translated`,
+            'over-formatted':       `Over-formatted content (AI artefacts)`
+        };
+        console.log(`  → [${lang}] ${reasonLabels[reason] || reason}: "${enItem.title}"`);
+
+        const translatedTitle = await translateText(enItem.title, lang);
+        const translatedDesc  = await translateText(enItem.description, lang);
+
+        let translatedContent = '';
+        if (enItem.content) {
+            console.log(`    Translating body (${enItem.content.length} chars)...`);
+            translatedContent = await translateText(enItem.content, lang, CONTENT_PROMPT(lang));
+        }
+
+        // Merge: keep all non-text fields from English, overwrite translatable ones
+        if (!result[i]) {
+            result[i] = { ...enItem };
+        }
+        result[i].title       = translatedTitle;
+        result[i].description = translatedDesc;
+        if (translatedContent) result[i].content = translatedContent;
+
+        updated = true;
+    }
+
+    return { items: result, updated };
+}
+
 async function translateLocales() {
-    // We'll read English file but also potentially update it
+    if (!OPENAI_API_KEY) {
+        console.error('❌ No OpenAI API key found. Set VITE_OPENAI_API_KEY in .env');
+        process.exit(1);
+    }
+
     const enPath = path.join(localesDir, 'en.json');
     let enData = JSON.parse(fs.readFileSync(enPath, 'utf8'));
 
-    // Step 1: Pre-process English to fix any Spanish/other language leaks
-    console.log("Checking if English (en.json) needs fixes for non-English content...");
+    // ------------------------------------------------------------------
+    // Step 1: Sanity-check English source — fix any obvious non-English
+    //         content that crept in (e.g. Spanish leaking into en.json)
+    // ------------------------------------------------------------------
+    console.log('\n📋 Checking English source (en.json) for non-English content...');
     let enUpdated = false;
-    
-    // Check AI News in EN
-    for (let i = 0; i < (enData.ai_news?.items_list?.length || 0); i++) {
-        const item = enData.ai_news.items_list[i];
-        const hasSpanishVibe = /[áéíóúñ]/i.test(item.title) || /\b(de|la|en|el|y|para|con)\b/i.test(item.title);
-        
-        if (hasSpanishVibe) {
-            console.log(`Potential non-English content in en.json (AI News): "${item.title}". Fixing...`);
-            const fixedTitle = await translateText(item.title, 'en');
-            const fixedDesc = await translateText(item.description, 'en');
-            
-            if (fixedTitle !== item.title || fixedDesc !== item.description) {
-                enData.ai_news.items_list[i].title = fixedTitle;
-                enData.ai_news.items_list[i].description = fixedDesc;
-                enUpdated = true;
-            }
-        }
-    }
 
-    // Check Project News in EN
-    for (let i = 0; i < (enData.news?.items_list?.length || 0); i++) {
-        const item = enData.news.items_list[i];
-        const hasSpanishVibe = /[áéíóúñ]/i.test(item.title) || /\b(de|la|en|el|y|para|con)\b/i.test(item.title);
-        
-        if (hasSpanishVibe) {
-            console.log(`Potential non-English content in en.json (Project News): "${item.title}". Fixing...`);
-            const fixedTitle = await translateText(item.title, 'en');
-            const fixedDesc = await translateText(item.description, 'en');
-            
-            if (fixedTitle !== item.title || fixedDesc !== item.description) {
-                enData.news.items_list[i].title = fixedTitle;
-                enData.news.items_list[i].description = fixedDesc;
-                enUpdated = true;
+    const checkSection = async (items, sectionName) => {
+        for (let i = 0; i < (items?.length || 0); i++) {
+            const item = items[i];
+            // Only flag if title contains accented characters specific to Romance languages
+            const hasNonEnglishChars = /[áéíóúñàèìòùâêîôûäëïöü]/i.test(item.title);
+            if (hasNonEnglishChars) {
+                console.log(`  ⚠ Non-English chars in en.json [${sectionName}]: "${item.title}" — fixing...`);
+                const fixedTitle = await translateText(item.title, 'en');
+                const fixedDesc  = await translateText(item.description, 'en');
+                if (fixedTitle !== item.title) { items[i].title = fixedTitle; enUpdated = true; }
+                if (fixedDesc  !== item.description) { items[i].description = fixedDesc; enUpdated = true; }
             }
         }
-    }
+    };
+
+    await checkSection(enData.ai_news?.items_list, 'ai_news');
+    await checkSection(enData.news?.items_list, 'news');
 
     if (enUpdated) {
         fs.writeFileSync(enPath, JSON.stringify(enData, null, 2));
-        console.log("Updated en.json with fixed English translations.");
+        console.log('  ✓ en.json updated with corrected English content.');
+    } else {
+        console.log('  ✓ en.json looks clean.');
     }
 
-    // Step 2: Translate to other languages using (now fixed) enData as source
+    // ------------------------------------------------------------------
+    // Step 2: Translate each target language from the (now clean) English
+    // ------------------------------------------------------------------
     const targetLocales = locales.filter(l => l !== 'en');
 
     for (const lang of targetLocales) {
         const langPath = path.join(localesDir, `${lang}.json`);
         let langData = JSON.parse(fs.readFileSync(langPath, 'utf8'));
 
-        console.log(`Checking translations for ${lang}...`);
-        let updated = false;
+        console.log(`\n🌍 Processing [${lang}]...`);
+        let anyUpdated = false;
 
-        // Process AI News
-        if (enData.ai_news && enData.ai_news.items_list) {
-            for (let i = 0; i < enData.ai_news.items_list.length; i++) {
-                const enItem = enData.ai_news.items_list[i];
-                const langItem = langData.ai_news.items_list[i];
-
-                const isCorrupted = langItem && (langItem.title.length > enItem.title.length * 2 || langItem.title.includes('KEY INSIGHTS'));
-                const isStillEnglish = langItem && langItem.content && /\b(the|is|and|with|that)\b/i.test(langItem.content) && lang !== 'en';
-                const isOverFormatted = langItem && langItem.content && (langItem.content.includes('**') || langItem.content.includes('KEY ') || /\n[A-Z\s]{5,}\n/.test(langItem.content));
-                
-                const needsTranslation = !langItem || 
-                                       langItem.title === enItem.title || 
-                                       isCorrupted || isStillEnglish || isOverFormatted ||
-                                       (enItem.content && (!langItem.content || langItem.content === enItem.content));
-
-                if (needsTranslation) {
-                    if (isCorrupted) console.log(`  - Re-translating corrupted title: ${enItem.title} -> ${lang}`);
-                    else if (isStillEnglish) console.log(`  - Re-translating English content leak: ${enItem.title} -> ${lang}`);
-                    else if (isOverFormatted) console.log(`  - Re-translating over-formatted content: ${enItem.title} -> ${lang}`);
-                    else console.log(`Translating AI News item: ${enItem.title} -> ${lang}`);
-                    
-                    const translatedTitle = await translateText(enItem.title, lang);
-                    const translatedDesc = await translateText(enItem.description, lang);
-                    
-                    let translatedContent = "";
-                    if (enItem.content) {
-                        console.log(`  - Translating content for: ${enItem.title} (${enItem.content.length} chars)`);
-                        translatedContent = await translateText(enItem.content, lang, EDITORIAL_PROMPT(lang));
-                    }
-                    
-                    if (!langData.ai_news.items_list[i]) {
-                        langData.ai_news.items_list[i] = { ...enItem };
-                    }
-                    
-                    langData.ai_news.items_list[i].title = translatedTitle;
-                    langData.ai_news.items_list[i].description = translatedDesc;
-                    if (translatedContent) langData.ai_news.items_list[i].content = translatedContent;
-                    
-                    updated = true;
-                }
+        // AI News
+        if (enData.ai_news?.items_list?.length) {
+            const { items, updated } = await translateSection(
+                enData.ai_news.items_list,
+                langData.ai_news?.items_list || [],
+                lang,
+                'ai_news'
+            );
+            if (updated) {
+                langData.ai_news.items_list = items;
+                anyUpdated = true;
             }
         }
 
-        // Process Project Events (news)
-        if (enData.news && enData.news.items_list) {
-            for (let i = 0; i < enData.news.items_list.length; i++) {
-                const enItem = enData.news.items_list[i];
-                const langItem = langData.news.items_list[i];
-
-                const isCorrupted = langItem && (langItem.title.length > enItem.title.length * 2 || langItem.title.includes('KEY INSIGHTS'));
-                const isStillEnglish = langItem && langItem.content && /\b(the|is|and|with|that)\b/i.test(langItem.content) && lang !== 'en';
-                const isOverFormatted = langItem && langItem.content && (langItem.content.includes('**') || langItem.content.includes('KEY ') || /\n[A-Z\s]{5,}\n/.test(langItem.content));
-
-                const needsTranslation = !langItem || 
-                                       langItem.title === enItem.title || 
-                                       isCorrupted || isStillEnglish || isOverFormatted ||
-                                       (enItem.content && (!langItem.content || langItem.content === enItem.content));
-
-                if (needsTranslation) {
-                    if (isCorrupted) console.log(`  - Re-translating corrupted title: ${enItem.title} -> ${lang}`);
-                    else if (isStillEnglish) console.log(`  - Re-translating English content leak: ${enItem.title} -> ${lang}`);
-                    else if (isOverFormatted) console.log(`  - Re-translating over-formatted content: ${enItem.title} -> ${lang}`);
-                    else console.log(`Translating Project Event: ${enItem.title} -> ${lang}`);
-                    const translatedTitle = await translateText(enItem.title, lang);
-                    const translatedDesc = await translateText(enItem.description, lang);
-
-                    let translatedContent = "";
-                    if (enItem.content) {
-                        translatedContent = await translateText(enItem.content, lang, EDITORIAL_PROMPT(lang));
-                    }
-
-                    if (!langData.news.items_list[i]) {
-                        langData.news.items_list[i] = { ...enItem };
-                    }
-
-                    langData.news.items_list[i].title = translatedTitle;
-                    langData.news.items_list[i].description = translatedDesc;
-                    if (translatedContent) langData.news.items_list[i].content = translatedContent;
-                    
-                    updated = true;
-                }
+        // Project Events & Articles (news section)
+        if (enData.news?.items_list?.length) {
+            const { items, updated } = await translateSection(
+                enData.news.items_list,
+                langData.news?.items_list || [],
+                lang,
+                'news'
+            );
+            if (updated) {
+                langData.news.items_list = items;
+                anyUpdated = true;
             }
         }
 
-        // Process Articles
-        if (enData.articles && enData.articles.items_list) {
-            if (!langData.articles) langData.articles = { items_list: [] };
-            if (!langData.articles.items_list) langData.articles.items_list = [];
-
-            for (let i = 0; i < enData.articles.items_list.length; i++) {
-                const enItem = enData.articles.items_list[i];
-                const langItem = langData.articles.items_list[i];
-
-                if (!langItem || !langItem.title || !langItem.description || langItem.title === enItem.title || langItem.description === enItem.description) {
-                    console.log(`Translating Article: ${enItem.title} -> ${lang}`);
-                    
-                    const titlePrompt = `Translate this article title to ${langNames[lang]}: "${enItem.title}"`;
-                    const descPrompt = `Based on the title "${enItem.title}" and this excerpt: "${enItem.description}", create a professional summary paragraph in ${langNames[lang]} (exactly 2 or 3 sentences long) that functions as a high-quality abstract for the article. Return ONLY the translation.`;
-
-                    const translatedTitle = await translateText(enItem.title, lang, titlePrompt);
-                    const translatedDesc = await translateText(enItem.description, lang, descPrompt);
-
-                    if (!langData.articles.items_list[i]) {
-                        langData.articles.items_list[i] = { ...enItem };
-                    }
-
-                    langData.articles.items_list[i].title = translatedTitle;
-                    langData.articles.items_list[i].description = translatedDesc;
-                    updated = true;
-                }
-            }
-        }
-
-        if (updated) {
+        if (anyUpdated) {
             fs.writeFileSync(langPath, JSON.stringify(langData, null, 2));
-            console.log(`Saved translations for ${lang}`);
+            console.log(`  ✓ Saved ${lang}.json`);
         } else {
-            console.log(`No updates needed for ${lang}`);
+            console.log(`  ✓ No updates needed for ${lang}`);
         }
     }
+
+    console.log('\n✅ AI Translation process completed.\n');
 }
 
 translateLocales().catch(console.error);
