@@ -168,288 +168,276 @@ async function fetchSheetData(gid) {
     return parseCSV(text);
 }
 
-async function sync() {
-    console.log("Checking for updates in Google Sheet...");
-    
-    const aiNewsItems = await fetchSheetData(gids.ai_news);
-    const projectEventsItems = await fetchSheetData(gids.news);
-    const docContentCache = {};
+/**
+ * Returns a stable key to identify an item across runs.
+ * Prefers link URL, falls back to normalized English title.
+ */
+function itemKey(link, title) {
+    if (link && link.trim()) return link.trim();
+    return (title || '').toLowerCase().trim();
+}
 
-    // Read current English data for comparison
-    const enPath = path.join(__dirname, '..', 'src', 'locales', 'en.json');
-    let hasChanges = false;
-    
-    if (fs.existsSync(enPath)) {
-        const enJson = JSON.parse(fs.readFileSync(enPath, 'utf8'));
-        
-        // Helper to generate a simplified list for comparison
-        const getAiCompareList = (items) => items.map(item => ({
-            title: item.title_en || item.title || "",
-            description: item.description_en || item.description || "",
-            link: item.link_url || item.link || "",
-            date: item.date || "",
-            badge: item.badge_text || item.badge || ""
-        })).filter(i => i.title.trim() !== "");
+/**
+ * Checks whether the core source fields of a Sheet item have changed
+ * compared to what is already stored in the locale file.
+ * Only these fields trigger re-processing; metadata like image/badge
+ * can change without invalidating existing translations.
+ */
+function sourceChanged(sheetItem, existingItem) {
+    if (!existingItem) return true;
 
-        const getProjectCompareList = (items) => items.map(item => ({
-            title: item.title_en || item.title || "",
-            description: item.description_en || item.description || "",
-            link: item.link_url || item.link || "",
-            date: item.date || "",
-            image: item.image_url || item.image || "",
-            badge: item.badge_text || item.badge || "",
-            type: item.type || "News",
-            doc_link: item.doc_link || ""
-        })).filter(i => i.title.trim() !== "");
+    const sheetTitle   = sheetItem.title_en || sheetItem.title || '';
+    const sheetDesc    = sheetItem.description_en || sheetItem.description || '';
+    const sheetDocLink = sheetItem.doc_link || '';
 
-        const newAiList = getAiCompareList(aiNewsItems);
-        const oldAiList = enJson.ai_news.items_list.map(i => ({
-            title: i.title,
-            description: i.description,
-            link: i.link,
-            date: i.date || "",
-            image: i.image || "",
-            badge: i.badge || ""
-        }));
+    const existTitle   = existingItem._source_title   || existingItem.title || '';
+    const existDesc    = existingItem._source_desc    || existingItem.description || '';
+    const existDocLink = existingItem._source_doc_link || existingItem.doc_link || '';
 
-        const newProjectList = getProjectCompareList(projectEventsItems);
-        const oldProjectList = (enJson.news?.items_list || []).map(i => ({
-            title: i.title,
-            description: i.description,
-            link: i.link,
-            date: i.date || "",
-            image: i.image || "",
-            badge: i.badge || "",
-            type: i.type || "News",
-            doc_link: i.doc_link || ""
-        }));
+    return (
+        sheetTitle.trim()   !== existTitle.trim()   ||
+        sheetDesc.trim()    !== existDesc.trim()    ||
+        sheetDocLink.trim() !== existDocLink.trim()
+    );
+}
 
-        if (JSON.stringify(newAiList) === JSON.stringify(oldAiList) && 
-            JSON.stringify(newProjectList) === JSON.stringify(oldProjectList)) {
-            console.log("✅ Content is already synchronized. No changes detected between Google Sheet and Web.");
-            return; 
-        } else {
-            console.log("🔄 Changes detected in Sheet content! Updating local files...");
-            hasChanges = true;
-        }
-    } else {
-        console.log("First time sync, generating locale files...");
-        hasChanges = true;
+async function processSection(sheetItems, existingItems, lang, docContentCache) {
+    // Build a lookup map from existing items by key
+    const existingMap = {};
+    for (const item of existingItems) {
+        const key = itemKey(item.link, item._source_title || item.title);
+        existingMap[key] = item;
     }
 
-    if (!hasChanges) return;
+    const result = [];
+    let addedCount   = 0;
+    let updatedCount = 0;
+    let unchangedCount = 0;
+
+    for (const sheetRow of sheetItems) {
+        const rawLink      = sheetRow.link_url || sheetRow.link || '';
+        const fallbackTitle = sheetRow.title_en || sheetRow.title || '';
+        const fallbackDesc  = sheetRow.description_en || sheetRow.description || '';
+
+        if (!fallbackTitle.trim()) continue;
+
+        const key      = itemKey(rawLink, fallbackTitle);
+        const existing = existingMap[key];
+        const changed  = sourceChanged(sheetRow, existing);
+
+        // ── Metadata that always syncs from Sheet (safe to update) ──
+        const rawImage  = sheetRow.image_url || sheetRow.image || '';
+        const isImageUrl = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test((url||'').split('?')[0]);
+        let finalImage  = transformGDriveUrl(rawImage);
+        if (!finalImage && isImageUrl(rawLink)) finalImage = transformGDriveUrl(rawLink);
+        if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
+            finalImage = '/' + finalImage;
+        }
+
+        const itemType  = sheetRow.type || 'News';
+        const isArticle = itemType.toLowerCase().trim() === 'article';
+
+        if (!changed && existing) {
+            // ── Item unchanged: preserve all existing data, just refresh metadata ──
+            unchangedCount++;
+            const preserved = { ...existing };
+            preserved.image  = finalImage  || existing.image  || '';
+            preserved.badge  = sheetRow.badge_text || sheetRow.badge || existing.badge || '';
+            preserved.date   = sheetRow.date  || existing.date  || '';
+            preserved.category = sheetRow.category || existing.category || '';
+            preserved.partner  = sheetRow.partner  || existing.partner  || '';
+            result.push(preserved);
+            continue;
+        }
+
+        // ── Item is new or its source changed: rebuild it ──
+        if (existing) {
+            updatedCount++;
+            console.log(`  📝 Updated: "${fallbackTitle.substring(0,60)}"`);
+        } else {
+            addedCount++;
+            console.log(`  ✨ New item: "${fallbackTitle.substring(0,60)}"`);
+        }
+
+        // For non-EN locales, use Sheet's translated columns if available,
+        // otherwise fall back to existing translation, then to English.
+        let title       = lang !== 'en' ? (sheetRow[`title_${lang}`] || '') : fallbackTitle;
+        let description = lang !== 'en' ? (sheetRow[`description_${lang}`] || '') : fallbackDesc;
+
+        if (lang !== 'en') {
+            if (!title)       title       = (existing && existing.title !== fallbackTitle)       ? existing.title       : fallbackTitle;
+            if (!description) description = (existing && existing.description !== fallbackDesc)  ? existing.description : fallbackDesc;
+        }
+
+        title       = title       || fallbackTitle;
+        description = description || fallbackDesc;
+
+        let slug        = '';
+        let contentText = '';
+
+        if (isArticle) {
+            slug = generateSlug(fallbackTitle);
+
+            const docLink = sheetRow.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
+            if (docLink) {
+                const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                if (docMatch && docMatch[1]) {
+                    const docId = docMatch[1];
+                    // Only re-fetch Google Doc if source actually changed or we have no content yet
+                    const alreadyHasContent = existing && existing.content && existing.content.length > 50;
+                    const docLinkChanged    = (existing?._source_doc_link || existing?.doc_link || '') !== docLink;
+
+                    if (docContentCache[docId]) {
+                        contentText = docContentCache[docId];
+                    } else if (!alreadyHasContent || docLinkChanged) {
+                        try {
+                            const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
+                            if (res.ok) {
+                                const rawText = await res.text();
+                                contentText = cleanContent(rawText, fallbackTitle);
+                                docContentCache[docId] = contentText;
+                                console.log(`    ✓ Fetched Google Doc (${contentText.length} chars)`);
+                            }
+                        } catch (e) {
+                            console.error('    ✗ Error fetching doc', docId, e.message);
+                            // Preserve existing content rather than losing it
+                            contentText = existing?.content || '';
+                        }
+                    } else {
+                        contentText = existing?.content || '';
+                    }
+                }
+            }
+        }
+
+        const newItem = {
+            title,
+            type: itemType,
+            description,
+            link: rawLink,
+            category: sheetRow.category || '',
+            date:     sheetRow.date     || '',
+            image:    finalImage,
+            badge:    sheetRow.badge_text || sheetRow.badge || '',
+            partner:  sheetRow.partner  || existing?.partner || '',
+            // Internal source snapshot — used to detect real changes on next run
+            _source_title:    fallbackTitle,
+            _source_desc:     fallbackDesc,
+            _source_doc_link: sheetRow.doc_link || ''
+        };
+
+        if (isArticle) {
+            if (slug)        newItem.slug     = slug;
+            if (contentText) newItem.content  = contentText;
+            if (sheetRow.doc_link) newItem.doc_link = sheetRow.doc_link;
+        }
+
+        result.push(newItem);
+    }
+
+    console.log(`    → ${addedCount} new, ${updatedCount} updated, ${unchangedCount} unchanged`);
+    return result;
+}
+
+async function sync() {
+    console.log('Checking for updates in Google Sheet...');
+
+    const aiNewsItems       = await fetchSheetData(gids.ai_news);
+    const projectEventsItems = await fetchSheetData(gids.news);
+    const docContentCache   = {};
+
+    const enPath = path.join(__dirname, '..', 'src', 'locales', 'en.json');
+
+    // Quick change detection: compare Sheet source titles+links against en.json
+    if (fs.existsSync(enPath)) {
+        const enJson = JSON.parse(fs.readFileSync(enPath, 'utf8'));
+
+        const sheetAiKeys = aiNewsItems
+            .map(i => itemKey(i.link_url || i.link, i.title_en || i.title))
+            .filter(Boolean);
+        const localAiKeys = (enJson.ai_news?.items_list || [])
+            .map(i => itemKey(i.link, i._source_title || i.title))
+            .filter(Boolean);
+
+        const sheetNewsKeys = projectEventsItems
+            .map(i => itemKey(i.link_url || i.link, i.title_en || i.title))
+            .filter(Boolean);
+        const localNewsKeys = (enJson.news?.items_list || [])
+            .map(i => itemKey(i.link, i._source_title || i.title))
+            .filter(Boolean);
+
+        const aiChanged   = JSON.stringify(sheetAiKeys)   !== JSON.stringify(localAiKeys);
+        const newsChanged = JSON.stringify(sheetNewsKeys) !== JSON.stringify(localNewsKeys);
+
+        if (!aiChanged && !newsChanged) {
+            // Also check if any source content changed for existing items
+            const anySourceChanged =
+                aiNewsItems.some(sheetRow => {
+                    const key = itemKey(sheetRow.link_url || sheetRow.link, sheetRow.title_en || sheetRow.title);
+                    const existing = (enJson.ai_news?.items_list || []).find(i =>
+                        itemKey(i.link, i._source_title || i.title) === key
+                    );
+                    return sourceChanged(sheetRow, existing);
+                }) ||
+                projectEventsItems.some(sheetRow => {
+                    const key = itemKey(sheetRow.link_url || sheetRow.link, sheetRow.title_en || sheetRow.title);
+                    const existing = (enJson.news?.items_list || []).find(i =>
+                        itemKey(i.link, i._source_title || i.title) === key
+                    );
+                    return sourceChanged(sheetRow, existing);
+                });
+
+            if (!anySourceChanged) {
+                console.log('✅ Content is already synchronized. No changes detected.');
+                return;
+            }
+        }
+
+        console.log('🔄 Changes detected. Processing item by item...');
+    } else {
+        console.log('First time sync, generating locale files...');
+    }
 
     for (const lang of locales) {
         const filePath = path.join(__dirname, '..', 'src', 'locales', `${lang}.json`);
-        // ... (rest of the logic remains same but I'll provide full function for clarity)
         if (!fs.existsSync(filePath)) continue;
-        
+
         const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        
-        // Sync AI News
-        const oldAiNews = json.ai_news?.items_list || [];
-        json.ai_news.items_list = [];
 
-        for (const item of aiNewsItems) {
-            const rawLink = item.link_url || item.link || "";
-            let title = item[`title_${lang}`];
-            let description = item[`description_${lang}`];
-            const fallbackTitle = item.title_en || item.title || "";
-            const fallbackDesc = item.description_en || item.description || "";
+        console.log(`\n[${lang}] Syncing ai_news...`);
+        json.ai_news.items_list = await processSection(
+            aiNewsItems,
+            json.ai_news?.items_list || [],
+            lang,
+            docContentCache
+        );
 
-            // Always try to find existing to preserve fields like partner if missing in sheet
-            const existing = oldAiNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
+        console.log(`[${lang}] Syncing news...`);
+        json.news.items_list = await processSection(
+            projectEventsItems,
+            json.news?.items_list || [],
+            lang,
+            docContentCache
+        );
 
-            // Check if there is an existing local translation that we shouldn't overwrite
-            if (lang !== 'en' && (!title || !description)) {
-                if (existing) {
-                    if (!title && existing.title && existing.title !== fallbackTitle) title = existing.title;
-                    if (!description && existing.description && existing.description !== fallbackDesc) description = existing.description;
-                }
-            }
-
-            title = title || fallbackTitle;
-            description = description || fallbackDesc;
-
-            if (!title.trim()) continue;
-
-            const rawImage = item.image_url || item.image || "";
-            const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
-            
-            let finalImage = transformGDriveUrl(rawImage);
-            if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
-
-            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
-                finalImage = '/' + finalImage;
-            }
-
-            const itemType = item.type || "News";
-            const isArticle = itemType.toLowerCase().trim() === 'article';
-            
-            let slug = "";
-            let contentText = "";
-            let pdfUrl = "";
-
-            if (isArticle) {
-                slug = generateSlug(fallbackTitle);
-
-                // Use doc_link column first, then fall back to link_url if it's a Google Docs URL
-                const docLink = item.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
-                if (docLink) {
-                    const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
-                    if (docMatch && docMatch[1]) {
-                        const docId = docMatch[1];
-                        if (docContentCache[docId]) {
-                            contentText = docContentCache[docId];
-                        } else {
-                            try {
-                                const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
-                                if (res.ok) {
-                                    const rawText = await res.text();
-                                    contentText = cleanContent(rawText, fallbackTitle);
-                                    docContentCache[docId] = contentText;
-                                    console.log(`  ✓ Fetched and cleaned Google Doc content (${contentText.length} chars)`);
-                                }
-                            } catch (e) {
-                                console.error("Error fetching doc text for ID", docId, e);
-                            }
-                        }
-                    }
-                }
-            }
-
-            const newItem = {
-                title,
-                type: itemType,
-                description,
-                link: rawLink,
-                category: item.category || "",
-                date: item.date || "",
-                image: finalImage,
-                badge: item.badge_text || item.badge || "",
-                partner: item.partner || (existing ? existing.partner : "") || ""
-            };
-
-            if (isArticle) {
-                if (slug) newItem.slug = slug;
-                if (contentText) newItem.content = contentText;
-                if (item.doc_link) newItem.doc_link = item.doc_link;
-                if (pdfUrl && !item.doc_link) newItem.pdf_url = pdfUrl; 
-            }
-
-            json.ai_news.items_list.push(newItem);
-        }
-
-        // Sync Project News and Articles
-        const oldNews = json.news?.items_list || [];
-        json.news.items_list = [];
-
-        for (const item of projectEventsItems) {
-            const rawLink = item.link_url || item.link || "";
-            let title = item[`title_${lang}`];
-            let description = item[`description_${lang}`];
-            const fallbackTitle = item.title_en || item.title || "";
-            const fallbackDesc = item.description_en || item.description || "";
-
-            // Always try to find existing to preserve fields like partner if missing in sheet
-            const existing = oldNews.find(i => (i.link && i.link === rawLink) || (i.title && i.title === fallbackTitle && fallbackTitle !== ""));
-
-            // Check if there is an existing local translation that we shouldn't overwrite
-            if (lang !== 'en' && (!title || !description)) {
-                if (existing) {
-                    if (!title && existing.title && existing.title !== fallbackTitle) title = existing.title;
-                    if (!description && existing.description && existing.description !== fallbackDesc) description = existing.description;
-                }
-            }
-
-            title = title || fallbackTitle;
-            description = description || fallbackDesc;
-
-            if (!title.trim()) continue;
-
-            const rawImage = item.image_url || item.image || "";
-            const isImage = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url.split('?')[0]);
-            
-            let finalImage = transformGDriveUrl(rawImage);
-            if (!finalImage && isImage(rawLink)) finalImage = transformGDriveUrl(rawLink);
-
-            if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
-                finalImage = '/' + finalImage;
-            }
-
-            const itemType = item.type || "News";
-            const isArticle = itemType.toLowerCase().trim() === 'article';
-            
-            let slug = "";
-            let contentText = "";
-            let pdfUrl = "";
-
-            if (isArticle) {
-                slug = generateSlug(fallbackTitle);
-                pdfUrl = item.pdf_url || item.link_url || item.link || "";
-
-                const docLink = item.doc_link || "";
-                if (docLink) {
-                    const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
-                    if (docMatch && docMatch[1]) {
-                        const docId = docMatch[1];
-                        if (docContentCache[docId]) {
-                            contentText = docContentCache[docId];
-                        } else {
-                            try {
-                                const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
-                                if (res.ok) {
-                                    const rawText = await res.text();
-                                    contentText = cleanContent(rawText, fallbackTitle);
-                                    docContentCache[docId] = contentText;
-                                }
-                            } catch (e) {
-                                console.error("Error fetching doc text for ID", docId, e);
-                            }
-                        }
-                    }
-                }
-            }
-
-            const newItem = {
-                title,
-                type: itemType,
-                category: item.category || "",
-                description,
-                link: rawLink,
-                date: item.date || "",
-                image: finalImage,
-                badge: item.badge_text || item.badge || "",
-                partner: item.partner || (existing ? existing.partner : "") || ""
-            };
-
-            if (isArticle) {
-                if (slug) newItem.slug = slug;
-                if (contentText) newItem.content = contentText;
-                // Include doc_link for comparison functionality later
-                if (item.doc_link) newItem.doc_link = item.doc_link;
-                if (pdfUrl && !item.doc_link) newItem.pdf_url = pdfUrl; 
-            }
-
-            json.news.items_list.push(newItem);
-        }
-
-        // Clean up legacy articles section
-        if (json.articles) {
-            delete json.articles;
-        }
+        // Clean up legacy section
+        if (json.articles) delete json.articles;
 
         fs.writeFileSync(filePath, JSON.stringify(json, null, 2));
-        console.log(`Successfully updated ${lang}.json`);
+        console.log(`  ✓ Saved ${lang}.json`);
     }
 
-    console.log("\n🚀 Triggering AI Translations for all languages...");
+    console.log('\n🚀 Triggering AI Translations for all languages...');
     try {
         execSync('node scripts/ai-translate-news.cjs', { stdio: 'inherit' });
-        console.log("✅ AI Translation process completed.");
+        console.log('✅ AI Translation process completed.');
     } catch (error) {
-        console.error("❌ Error running AI translation script:", error);
+        console.error('❌ Error running AI translation script:', error);
     }
 }
+
+sync().catch(console.error);
+
+
 
 sync().catch(console.error);
