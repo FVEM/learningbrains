@@ -180,46 +180,58 @@
       {
         "title": "Reunião de Lançamento do Projeto em Bilbau",
         "type": "News",
-        "category": "Meeting",
         "description": "O consórcio Learning Brains reuniu-se pela primeira vez em Bilbao para lançar as atividades do projeto. Os parceiros discutiram o roteiro para o primeiro ano, incluindo a configuração da plataforma digital e a pesquisa inicial sobre as necessidades de reskilling industrial.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
+        "category": "Meeting",
         "date": "Feb 2026 · Bilbao, Spain",
-        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
+        "image": "https://lh3.googleusercontent.com/d/1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy",
         "badge": "MEETING",
-        "partner": ""
+        "partner": "",
+        "_source_title": "Project Kick-off Meeting in Bilbao",
+        "_source_desc": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
+        "_source_doc_link": ""
       },
       {
-        "title": "Próximo Workshop: IA na Formação Profissional",
+        "title": "Próximo Workshop: IA na Educação Profissional",
         "type": "News",
-        "category": "Meeting",
-        "description": "Junte-se a nós em um workshop online explorando o potencial da Inteligência Artificial na Educação Profissional e Treinamento. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
+        "description": "Junte-se a nós para um workshop online explorando o potencial da Inteligência Artificial na Educação Profissional e Treinamento. Vamos receber especialistas de toda a Europa para compartilhar insights e melhores práticas.",
         "link": "",
+        "category": "Meeting",
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING",
-        "partner": ""
+        "partner": "",
+        "_source_title": "Upcoming Workshop: AI in VET",
+        "_source_desc": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
+        "_source_doc_link": ""
       },
       {
         "title": "Primeira Reunião de Projeto Transnacional",
         "type": "News",
-        "category": "Meeting",
-        "description": "A segunda reunião de parceiros será organizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem profissional e o planejamento da fase de teste piloto.",
+        "description": "A segunda reunião de parceiros será realizada pelos nossos parceiros italianos. A agenda inclui a revisão do primeiro rascunho do quadro de reciclagem e o planejamento da fase de teste piloto.",
         "link": "",
+        "category": "Meeting",
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING",
-        "partner": ""
+        "partner": "",
+        "_source_title": "First Transnational Project Meeting",
+        "_source_desc": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
+        "_source_doc_link": ""
       },
       {
         "title": "Website oficial do Learning Brains!",
         "type": "News",
-        "category": "Event",
         "description": "Estamos entusiasmados em anunciar o lançamento do site oficial do Learning Brains! O Learning Brains (uma iniciativa do Erasmus+) está aqui para preencher a lacuna entre a formação profissional e as necessidades industriais do mundo real.",
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
+        "category": "Event",
         "date": "Mar 2026 · Bilbao, Spain",
-        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
+        "image": "https://lh3.googleusercontent.com/d/1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v",
         "badge": "PROJECT",
-        "partner": ""
+        "partner": "",
+        "_source_title": "Learning Brains official website!",
+        "_source_desc": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
+        "_source_doc_link": ""
       }
     ],
     "read_more": "Ler Mais",
@@ -331,7 +343,10 @@
         "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "",
-        "partner": ""
+        "partner": "",
+        "_source_title": "AI for Sales Teams: from opportunity to offer",
+        "_source_desc": "More opportunities, better offers and better commercial coordination with AI",
+        "_source_doc_link": ""
       },
       {
         "title": "IA para Engenharia: mais eficiência, menos tarefas repetitivas",
@@ -342,7 +357,10 @@
         "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "",
-        "partner": ""
+        "partner": "",
+        "_source_title": "AI for Engineering: more efficiency, less repetitive tasks",
+        "_source_desc": "Automate technical tasks and improve the productivity of the engineering team",
+        "_source_doc_link": ""
       },
       {
         "title": "Inteligência Artificial avançada e novas ferramentas: de copiloto a agentes",
@@ -353,7 +371,10 @@
         "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "",
-        "partner": ""
+        "partner": "",
+        "_source_title": "Advanced AI and new tools: from copilot to agents",
+        "_source_desc": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
+        "_source_doc_link": ""
       },
       {
         "title": "Copiloto na empresa: produtividade real em um ambiente Microsoft.",
@@ -364,7 +385,10 @@
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "",
-        "partner": ""
+        "partner": "",
+        "_source_title": "Copilot in the enterprise: real productivity in a Microsoft environment",
+        "_source_desc": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
+        "_source_doc_link": ""
       },
       {
         "title": "Como projetar o roadmap de IA na sua organização.",
@@ -375,7 +399,10 @@
         "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "",
-        "partner": ""
+        "partner": "",
+        "_source_title": "How to design the AI roadmap in your organization",
+        "_source_desc": "From intention to action: key decisions to implement AI with real impact",
+        "_source_doc_link": ""
       },
       {
         "title": "Bolsas SPRI: Inteligência Artificial 2026",
@@ -386,7 +413,10 @@
         "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
         "badge": "",
-        "partner": ""
+        "partner": "",
+        "_source_title": "SPRI Grants: Artificial Intelligence 2026",
+        "_source_desc": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
+        "_source_doc_link": ""
       },
       {
         "title": "A FVEM impulsiona o Learning Brains, uma iniciativa europeia para a reciclagem industrial.",
@@ -397,7 +427,10 @@
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
         "badge": "",
-        "partner": ""
+        "partner": "",
+        "_source_title": "FVEM impulsa Learning Brains, una iniciativa europea para la recualificación industrial",
+        "_source_desc": "FVEM lidera el proyecto Learning Brains, una iniciativa europea enmarcada en Erasmus+ que tiene como objetivo adaptar la formación profesional a las necesidades reales de la industria, en un contexto marcado por la digitalización",
+        "_source_doc_link": ""
       },
       {
         "title": "Aprendizado Impulsionado por IA: Como a Inteligência Artificial Está Transformando o Treinamento Industrial",
@@ -406,11 +439,14 @@
         "link": "https://docs.google.com/document/d/1LRq6kDVfBUuBZEDzpL5AzTlJcTfM6a1h/edit",
         "category": "Research",
         "date": "2026-04-15",
-        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
+        "image": "https://lh3.googleusercontent.com/d/1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx",
         "badge": "",
         "partner": "",
+        "_source_title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
+        "_source_desc": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.",
+        "_source_doc_link": "",
         "slug": "ai-powered-learning-how-artificial-intelligence",
-        "content": "Cérebros em Aprendizagem - Sistemas Integrados de Aprendizagem no Local de Trabalho para a Reciclagem Industrial\n\nPrograma Erasmus+ 2025-1-ES01-KA220-VET-000351934\n\nEste projeto foi financiado com o apoio da Comissão Europeia. Esta publicação [comunicação] reflete apenas as opiniões do autor, e a Comissão não pode ser responsabilizada por qualquer uso que possa ser feito das informações contidas no mesmo.\n\nAprendizagem Impulsionada por IA: Como a Inteligência Artificial Está Transformando a Formação Industrial\n\n[Fazer o Download]\n\nFerramentas de aprendizagem impulsionadas por IA aumentam a transferência de conhecimento, eficiência e inovação em todo o setor industrial.\n\nÀ medida que as indústrias enfrentam mudanças tecnológicas cada vez mais rápidas, a aprendizagem contínua tornou-se um elemento crítico de competitividade. Os funcionários devem se adaptar constantemente a novas máquinas, processos e fluxos de trabalho digitais. No entanto, os modelos de treinamento tradicionais muitas vezes deixam a desejar - são demorados, dispendiosos e raramente personalizados às necessidades individuais. A inteligência artificial (IA) está remodelando esse cenário, possibilitando uma nova era de aprendizagem dinâmica e personalizada no local de trabalho.\nOs sistemas de aprendizagem impulsionados por IA usam dados e algoritmos para analisar como os funcionários aprendem, reconhecer lacunas e personalizar o conteúdo em tempo real. Em vez de programas genéricos, os trabalhadores recebem orientação e materiais de aprendizagem adaptados às suas funções e níveis de habilidade atuais. Um técnico de manutenção, por exemplo, pode receber lembretes de segurança instantâneos ou tutoriais de resolução de problemas diretamente em um dispositivo inteligente enquanto realiza a manutenção de equipamentos - com base em seus dados de treinamento anterior e na tarefa em questão.\nA personalização é um dos benefícios mais poderosos da IA na aprendizagem no local de trabalho. As plataformas inteligentes identificam padrões de aprendizagem, recomendam módulos relevantes e se ajustam ao progresso de cada usuário. Isso aumenta o engajamento, reduz o tempo de aprendizagem e oferece resultados mensuráveis. Em nível organizacional, a análise de dados torna possível rastrear o desenvolvimento de habilidades da força de trabalho e identificar áreas específicas para melhoria.\nA escalabilidade é outra grande vantagem. Enquanto o treinamento tradicional requer sessões físicas e interrupções no fluxo de trabalho, as ferramentas de aprendizagem impulsionadas por IA se integram facilmente às operações diárias - acessíveis a qualquer momento por meio de dispositivos móveis, tablets ou óculos de realidade aumentada. Por exemplo, empresas como a Siemens já utilizam plataformas de aprendizagem digital para fornecer simulações adaptativas do mundo real para aprendizes e funcionários técnicos.\nA IA também apoia a retenção de conhecimento em forças de trabalho envelhecidas. Ao capturar a experiência e torná-la digitalmente acessível, as empresas podem preservar o know-how mesmo quando funcionários experientes se aposentam. Nesse sentido, a IA se torna não apenas um facilitador para a aprendizagem, mas um guardião de longo prazo do conhecimento organizacional.\nEm última análise, a IA marca a transição do treinamento estático para o desenvolvimento contínuo e personalizado de habilidades. Para empresas industriais, adotar a aprendizagem impulsionada por IA é um investimento em resiliência e inovação - ajudando as equipes a aprender de forma mais inteligente, rápida e melhor preparadas para o futuro."
+        "content": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.\nAs industries face ever-faster technological change, continuous learning has become a critical element of competitiveness. Employees must constantly adapt to new machines, processes, and digital workflows. Traditional training models, however, often fall short—they are time-consuming, costly, and rarely customized to individual needs. Artificial intelligence (AI) is reshaping this landscape by enabling a new era of dynamic and individualized learning in the workplace.\nAI-powered learning systems use data and algorithms to analyze how employees learn, recognize gaps, and personalize content in real time. Instead of one-size-fits-all programs, workers receive guidance and learning materials tailored to their roles and current skill levels. A maintenance technician, for example, might receive instant safety reminders or troubleshooting tutorials directly on a smart device while servicing equipment—based on his previous training data and the task at hand.\nPersonalization is one of the most powerful benefits of AI in workplace learning. Intelligent platforms identify learning patterns, recommend relevant modules, and adjust to each user’s progress. This increases engagement, shortens learning time, and delivers measurable results. At the organizational level, data analytics make it possible to track workforce skill development and pinpoint specific areas for improvement.\nScalability is another major advantage. Whereas traditional training requires physical sessions and interruptions to the workflow, AI-driven learning tools integrate smoothly into daily operations—accessible anytime via mobile devices, tablets, or AR glasses. For instance, companies like Siemens already use digital learning platforms to deliver adaptive, real-world simulations for apprentices and technical staff.\nAI also supports knowledge retention within aging workforces. By capturing expertise and making it digitally accessible, companies can preserve know-how even as experienced staff retire. In this sense, AI becomes not merely a facilitator for learning but a long-term guardian of organizational knowledge.\nUltimately, AI marks the shift from static training to continuous, personalized skill development. For industrial enterprises, embracing AI-driven learning is an investment in resilience and innovation—helping teams learn smarter, faster, and better prepared for the future."
       },
       {
         "title": "IA e empregos: o verdadeiro desafio não é a tecnologia, mas sim as pessoas.",
@@ -419,11 +455,30 @@
         "link": "https://docs.google.com/document/d/1Yzhf80YZG2c1OWuW6HbycZH6KQhjrTeE/edit",
         "category": "Research",
         "date": "2026-04-29",
-        "image": "https://drive.google.com/thumbnail?id=1qypd3ZwAEt2eTrQT9PwPaefu4JRFc7Nt&sz=w1000",
+        "image": "https://lh3.googleusercontent.com/d/1qypd3ZwAEt2eTrQT9PwPaefu4JRFc7Nt",
         "badge": "",
         "partner": "",
+        "_source_title": "AI and jobs: the real challenge is not technology, but people",
+        "_source_desc": "AI is rapidly reshaping jobs, increasing demand for new skills and continuous learning. The key challenge is helping people adapt to work alongside these technologies.",
+        "_source_doc_link": "",
         "slug": "ai-and-jobs-the-real",
-        "content": "Cérebros em Aprendizagem - Sistemas Integrados de Aprendizagem no Local de Trabalho para a Reciclagem Industrial\n\nPrograma Erasmus+ 2025-1-ES01-KA220-VET-000351934\n\nEste projeto foi financiado com o apoio da Comissão Europeia. Esta publicação [comunicação] reflete apenas as opiniões do autor, e a Comissão não pode ser responsabilizada por qualquer uso que possa ser feito das informações contidas nela.\n\nIA e empregos: o verdadeiro desafio não é a tecnologia, mas as pessoas\n\n[Link]\n\nNotícias recentes mais uma vez trouxeram uma questão crítica para foco: o impacto real da inteligência artificial no emprego. Desde demissões em grandes empresas de tecnologia até crescentes preocupações entre economistas sobre a polarização de empregos, uma coisa é clara, o mercado de trabalho está evoluindo mais rápido do que nunca. Alguns analistas alertam que a IA poderia afetar desproporcionalmente funções de nível intermediário, potencialmente remodelando a estrutura da força de trabalho e aumentando a desigualdade. Ao mesmo tempo, as empresas estão reorganizando suas operações, aproveitando ferramentas de IA para melhorar a eficiência e reduzir a dependência de funções tradicionais. Essa transformação não se limita ao setor de tecnologia. Em toda a Europa, as indústrias estão passando por uma mudança profunda impulsionada pela automação, dados e adoção de IA. À medida que essas tecnologias se tornam mais integradas às operações diárias, a demanda por novas habilidades está acelerando. Nesse contexto, o verdadeiro desafio não é se a IA substituirá certas tarefas, mas como preparamos as pessoas para trabalhar ao lado dela. As organizações estão reconhecendo cada vez mais a necessidade de modelos de aprendizagem mais ágeis e responsivos, que estejam intimamente ligados ao local de trabalho e capazes de abordar lacunas de habilidades em tempo real. Ao mesmo tempo, iniciativas colaborativas em toda a Europa estão explorando como alinhar melhor as necessidades de educação, treinamento e indústria. Ao reunir empresas, provedores de treinamento e especialistas em tecnologia, esses ecossistemas visam criar abordagens mais eficazes e sustentáveis para o desenvolvimento da força de trabalho. No final das contas, a IA não está apenas transformando como trabalhamos, mas também como aprendemos. A aprendizagem contínua, baseada no trabalho e personalizada está se tornando rapidamente uma prioridade estratégica para organizações que desejam permanecer competitivas em um ambiente em rápida mudança."
+        "content": "Recent news has once again brought a critical issue into focus: the real impact of artificial intelligence on employment. From layoffs in major tech companies to growing concerns among economists about job polarization, one thing is clear, the labor market is evolving faster than ever.\nSome analysts warn that AI could disproportionately affect mid-level roles, potentially reshaping the structure of the workforce and increasing inequality. At the same time, companies are reorganizing their operations, leveraging AI tools to improve efficiency and reduce reliance on traditional roles.\nThis transformation is not limited to the tech sector. Across Europe, industries are undergoing a deep shift driven by automation, data, and AI adoption. As these technologies become more embedded in daily operations, the demand for new skills is accelerating.\nIn this context, the real challenge is not whether AI will replace certain tasks, but how we prepare people to work alongside it. Organizations are increasingly recognizing the need for more agile and responsive learning models, ones that are closely connected to the workplace and capable of addressing skills gaps in real time.\nAt the same time, collaborative initiatives across Europe are exploring how to better align education, training, and industry needs. By bringing together companies, training providers, and technology experts, these ecosystems aim to create more effective and sustainable approaches to workforce development.\nUltimately, AI is not only transforming how we work, but also how we learn. Continuous, work-based, and personalized learning is quickly becoming a strategic priority for organizations that want to remain competitive in a rapidly changing environment."
+      },
+      {
+        "title": "A reunião de lançamento em Bilbao dá início à colaboração europeia Learning BRAINS.",
+        "type": "ARTICLE",
+        "description": "A cidade de Bilbau recentemente sediou a Reunião de Lançamento do projeto Erasmus+ Learning BRAINS - Sistemas Integrados de Aprendizagem no Local de Trabalho para a Reciclagem Industrial, marcando oficialmente o início de uma emocionante colaboração europeia de dois anos focada em inovação, aprendizagem baseada em IA e reciclagem industrial.",
+        "link": "https://docs.google.com/document/d/1dGkafw8HBVuecJHvEprEYqgosPf4D7Gr/edit",
+        "category": "Meeting",
+        "date": "2026-05-14",
+        "image": "https://lh3.googleusercontent.com/d/1hcCrgtJlL0reuyHSsts_nVGVq9wEQaZW",
+        "badge": "",
+        "partner": "",
+        "_source_title": "Kick-off Meeting in Bilbao launches the Learning BRAINS European collaboration.",
+        "_source_desc": "The city of Bilbao recently hosted the Kick-off Meeting of the Erasmus+ project Learning BRAINS – Integrated On-the-job Learning Systems for Industrial Reskilling, officially marking the beginning of an exciting two-year European collaboration focused on innovation, AI-based learning and industrial reskilling",
+        "_source_doc_link": "",
+        "slug": "kick-off-meeting-in-bilbao-launches",
+        "content": "A cidade de Bilbao recentemente sediou a Reunião de Lançamento do projeto Erasmus+ Learning BRAINS - Sistemas Integrados de Aprendizagem no Local de Trabalho para a Reciclagem Industrial, marcando oficialmente o início de uma emocionante colaboração europeia de dois anos focada em inovação, aprendizagem baseada em IA e reciclagem industrial.\nA reunião reuniu representantes de todas as organizações parceiras envolvidas no consórcio, combinando participação presencial e online em uma atmosfera dinâmica e colaborativa. O consórcio é coordenado pela Federación Vizcaína de Empresas del Metal e inclui a participação da Confindustria Veneto SIAV S.r.l, Wirtschaftskammer Steiermark, Slovak Business Agency, Sparkling Intuition e Media Creativa 2020, S.L..\n![Kick-off Meeting in Bilbao – Learning BRAINS](images/news/bilbaokickoff.jpg)\nAlém da agenda formal, a reunião proporcionou uma valiosa oportunidade para os parceiros se conhecerem melhor, trocarem experiências e construírem as bases para um relacionamento de trabalho forte e cooperativo. A diversidade de perfis dentro do consórcio - desde associações empresariais e câmaras de comércio até fornecedores de treinamento e especialistas em tecnologia - criou um ambiente muito enriquecedor para discussão e compartilhamento de ideias. Durante as sessões, os parceiros alinharam-se com os objetivos do projeto, roadmap de implementação, procedimentos de comunicação e estrutura de gestão. Foi dada atenção especial aos mecanismos de coordenação que apoiarão a colaboração ao longo da vida do projeto, incluindo planejamento de trabalho, procedimentos de garantia de qualidade, estratégias de disseminação e métodos de cooperação transnacional.\nO consórcio também revisou a estrutura dos pacotes de trabalho do projeto e as responsabilidades atribuídas a cada organização parceira. O projeto é organizado em torno de quatro pacotes de trabalho principais que abrangem gestão de projeto, atividades de comunicação e disseminação, desenvolvimento do Programa de Treinamento Learning BRAINS e criação do Toolkit Learning BRAINS para a implementação de sistemas de treinamento no local de trabalho baseados em IA. Uma das discussões mais interessantes durante a reunião focou no crescente impacto da Inteligência Artificial na educação e treinamento vocacional dentro das PMEs industriais. Os parceiros compartilharam perspectivas sobre os desafios enfrentados pelas empresas atualmente em relação ao aprimoramento e reciclagem da força de trabalho, bem como as oportunidades que a IA pode oferecer para tornar o treinamento mais flexível, personalizado e acessível em ambientes de trabalho reais.\nA reunião também permitiu ao consórcio definir os primeiros passos operacionais para as atividades iniciais de pesquisa e mapeamento previstas no projeto. Essas atividades se concentrarão em identificar ferramentas de IA, práticas inovadoras e estudos de caso bem-sucedidos relacionados à aprendizagem no local de trabalho e treinamento industrial em toda a Europa. O Learning BRAINS visa apoiar gerentes de RH, gerentes de treinamento, treinadores de empresas e PMEs industriais, fornecendo recursos práticos e metodologias inovadoras para projetar e implementar sistemas de treinamento no local de trabalho baseados em IA. O projeto entregará dois resultados principais: um Programa de Treinamento multilíngue e um Toolkit interativo oferecendo orientações práticas, estudos de caso e recursos de IA adaptados aos contextos de treinamento industrial.\nA Reunião de Lançamento confirmou o forte compromisso de todos os membros do consórcio em desenvolver resultados de projeto de alta qualidade e impactantes, reforçando a importância da cooperação europeia para enfrentar os desafios atuais de transformação industrial e digital. Com motivação, expertise compartilhada e uma visão comum clara, a parceria Learning BRAINS inicia sua jornada em direção ao apoio a abordagens mais resilientes, inovadoras e centradas no ser humano para a reciclagem industrial em toda a Europa."
       }
     ]
   },

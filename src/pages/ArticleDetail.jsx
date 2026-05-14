@@ -67,6 +67,36 @@ function renderContent(text) {
       continue;
     }
 
+    // Markdown image: ![alt](url)
+    const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imgMatch) {
+      const [, alt, src] = imgMatch;
+      const resolvedSrc = src.startsWith('http') ? src : `${import.meta.env.BASE_URL || '/'}${src.replace(/^\//, '')}`;
+      elements.push(
+        <figure key={i} className="my-10 -mx-4 md:-mx-12">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl">
+            <img
+              src={resolvedSrc}
+              alt={alt}
+              className="w-full object-cover"
+              style={{ maxHeight: '420px' }}
+              onError={(e) => { e.target.onerror = null; e.target.style.display='none'; }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent pointer-events-none" />
+          </div>
+          {alt && (
+            <figcaption className="mt-3 text-center text-xs text-slate-400 italic flex items-center justify-center gap-2">
+              <span className="w-6 h-px bg-slate-300" />
+              {alt}
+              <span className="w-6 h-px bg-slate-300" />
+            </figcaption>
+          )}
+        </figure>
+      );
+      i++;
+      continue;
+    }
+
     // Bullet list item
     if (line.startsWith('- ') || line.startsWith('• ') || line.startsWith('* ')) {
       const listItems = [];
@@ -303,7 +333,7 @@ const ArticleDetail = () => {
 
         {/* ── Full Content ── */}
         {article.content ? (
-          <div className="prose-editorial">
+          <div className="prose-editorial overflow-hidden">
             {renderContent(article.content)}
           </div>
         ) : (
