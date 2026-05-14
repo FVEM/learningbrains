@@ -15,12 +15,33 @@ function renderContent(text) {
   let i = 0;
   let paragraphCount = 0;
 
-  const parseBold = (str) => {
-    const parts = str.split(/(\*\*.*?\*\*)/g);
+  const parseMarkdown = (str) => {
+    // Regex matches either **bold** or [text](url)
+    const parts = str.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
     return parts.map((part, idx) => {
+      if (!part) return null;
+      
+      // Bold: **text**
       if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={idx} className="font-semibold text-slate-800">{part.slice(2, -2)}</strong>;
+        return <strong key={idx} className="font-bold text-slate-800">{part.slice(2, -2)}</strong>;
       }
+      
+      // Link: [text](url)
+      const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (linkMatch) {
+        return (
+          <a 
+            key={idx} 
+            href={linkMatch[2]} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-brand-primary font-bold hover:text-brand-secondary transition-colors underline decoration-brand-primary/30 underline-offset-4"
+          >
+            {linkMatch[1]}
+          </a>
+        );
+      }
+      
       return part;
     });
   };
@@ -60,7 +81,7 @@ function renderContent(text) {
     if (line.startsWith('## ')) {
       elements.push(
         <h2 key={i} className="text-2xl font-bold text-slate-800 mt-12 mb-6 tracking-tight">
-          {parseBold(line.slice(3))}
+          {parseMarkdown(line.slice(3))}
         </h2>
       );
       i++;
@@ -109,7 +130,7 @@ function renderContent(text) {
           {listItems.map((li, idx) => (
             <li key={idx} className="flex items-start gap-3 text-slate-600 text-lg leading-relaxed">
               <span className="mt-2.5 flex-shrink-0 w-2 h-2 rounded-full bg-brand-secondary/40" />
-              <span>{parseBold(li)}</span>
+              <span>{parseMarkdown(li)}</span>
             </li>
           ))}
         </ul>
@@ -131,7 +152,7 @@ function renderContent(text) {
               <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-teal-50 text-brand-secondary text-sm font-bold flex items-center justify-center mt-0.5 border border-teal-100/50">
                 {idx + 1}
               </span>
-              <span>{parseBold(li)}</span>
+              <span>{parseMarkdown(li)}</span>
             </li>
           ))}
         </ol>
@@ -148,7 +169,7 @@ function renderContent(text) {
         key={i} 
         className={`text-slate-600 text-lg leading-[1.8] mb-6 ${isFirstParagraph ? 'editorial-drop-cap' : ''}`}
       >
-        {parseBold(line)}
+        {parseMarkdown(line)}
       </p>
     );
     i++;
