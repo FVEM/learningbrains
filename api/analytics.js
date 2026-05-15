@@ -331,7 +331,7 @@ export default async function handler(req, res) {
                 return {
                     slug,
                     title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-                    partner: articleMeta[slug]?.partner || null,
+                    partner: articleMeta[slug]?.partner || 'Learning Brains',
                     views: data.views,
                     avgTime: avgEngagementTime
                 };
