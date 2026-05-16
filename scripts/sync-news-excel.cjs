@@ -194,10 +194,14 @@ function sourceChanged(sheetItem, existingItem) {
     const existDesc    = existingItem._source_desc    || existingItem.description || '';
     const existDocLink = existingItem._source_doc_link || existingItem.doc_link || '';
 
+    const sheetPartner = sheetItem.partner || sheetItem['proposing pp'] || '';
+    const existPartner = existingItem.partner || '';
+
     return (
         sheetTitle.trim()   !== existTitle.trim()   ||
         sheetDesc.trim()    !== existDesc.trim()    ||
-        sheetDocLink.trim() !== existDocLink.trim()
+        sheetDocLink.trim() !== existDocLink.trim() ||
+        sheetPartner.trim() !== existPartner.trim()
     );
 }
 
@@ -245,7 +249,7 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             preserved.badge  = sheetRow.badge_text || sheetRow.badge || existing.badge || '';
             preserved.date   = sheetRow.date  || existing.date  || '';
             preserved.category = sheetRow.category || existing.category || '';
-            preserved.partner  = sheetRow.partner  || existing.partner  || '';
+            preserved.partner  = sheetRow.partner || sheetRow['proposing pp'] || existing.partner  || '';
             result.push(preserved);
             continue;
         }
@@ -319,7 +323,7 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             date:     sheetRow.date     || '',
             image:    finalImage,
             badge:    sheetRow.badge_text || sheetRow.badge || '',
-            partner:  sheetRow.partner  || existing?.partner || '',
+            partner:  sheetRow.partner || sheetRow['proposing pp'] || existing?.partner || '',
             // Internal source snapshot — used to detect real changes on next run
             _source_title:    fallbackTitle,
             _source_desc:     fallbackDesc,

@@ -184,9 +184,9 @@
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7426532433669361664",
         "category": "Meeting",
         "date": "Feb 2026 · Bilbao, Spain",
-        "image": "https://lh3.googleusercontent.com/d/1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy",
+        "image": "https://drive.google.com/thumbnail?id=1Y2yldJowH_-1u95oqQ7bnUqoJfipRxjy&sz=w1000",
         "badge": "MEETING",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "Project Kick-off Meeting in Bilbao",
         "_source_desc": "The Learning Brains consortium met for the first time in Bilbao to launch the project activities. Partners discussed the roadmap for the first year, including the setup of the digital platform and the initial research on industrial reskilling needs.",
         "_source_doc_link": ""
@@ -200,7 +200,7 @@
         "date": "Coming Soon",
         "image": "https://industriaerronka.eus/_nuxt/img/visitas-centros.0906b8d.jpg",
         "badge": "MEETING",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "Upcoming Workshop: AI in VET",
         "_source_desc": "Join us for an online workshop exploring the potential of Artificial Intelligence in Vocational Education and Training. We will welcome experts from across Europe to share insights and best practices.",
         "_source_doc_link": ""
@@ -214,7 +214,7 @@
         "date": "Coming Soon",
         "image": "https://provet40.eu/media/uploads/2017/02/Venezia-4.jpg",
         "badge": "MEETING",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "First Transnational Project Meeting",
         "_source_desc": "The second partner meeting will be hosted by our Italian partners. The agenda includes reviewing the first draft of the reskilling framework and planning the pilot testing phase.",
         "_source_doc_link": ""
@@ -226,9 +226,9 @@
         "link": "https://www.linkedin.com/feed/update/urn:li:activity:7442472882334482432",
         "category": "Event",
         "date": "Mar 2026 · Bilbao, Spain",
-        "image": "https://lh3.googleusercontent.com/d/1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v",
+        "image": "https://drive.google.com/thumbnail?id=1ZbJwe3LG0IyqWFHz3zsZ1avPp-iDfP7v&sz=w1000",
         "badge": "PROJECT",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "Learning Brains official website!",
         "_source_desc": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "_source_doc_link": ""
@@ -343,7 +343,7 @@
         "date": "2026-03-09",
         "image": "https://learningbrains.eu/images/news/course_ai_sales.png",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "AI for Sales Teams: from opportunity to offer",
         "_source_desc": "More opportunities, better offers and better commercial coordination with AI",
         "_source_doc_link": ""
@@ -357,7 +357,7 @@
         "date": "2026-03-10",
         "image": "https://learningbrains.eu/images/news/course_ai_engineering.png",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "AI for Engineering: more efficiency, less repetitive tasks",
         "_source_desc": "Automate technical tasks and improve the productivity of the engineering team",
         "_source_doc_link": ""
@@ -371,7 +371,7 @@
         "date": "2026-03-12",
         "image": "https://learningbrains.eu/images/news/course_ai_advanced.png",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "Advanced AI and new tools: from copilot to agents",
         "_source_desc": "Explore the current AI ecosystem, from copilots to intelligent agents, and discover how to automate and optimize business processes",
         "_source_doc_link": ""
@@ -385,7 +385,7 @@
         "date": "2026-03-13",
         "image": "https://learningbrains.eu/images/news/copilot_course.png",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "Copilot in the enterprise: real productivity in a Microsoft environment",
         "_source_desc": "Productivity with Copilot in an industrial enterprise, with safe use of the tool",
         "_source_doc_link": ""
@@ -399,7 +399,7 @@
         "date": "2026-03-15",
         "image": "https://learningbrains.eu/images/news/ai_roadmap.png",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "How to design the AI roadmap in your organization",
         "_source_desc": "From intention to action: key decisions to implement AI with real impact",
         "_source_doc_link": ""
@@ -413,7 +413,7 @@
         "date": "2026-03-16",
         "image": "/images/news/spri_ai_2026.png",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "SPRI Grants: Artificial Intelligence 2026",
         "_source_desc": "Apply Artificial Intelligence to transform industrial processes and gain competitiveness",
         "_source_doc_link": ""
@@ -427,7 +427,7 @@
         "date": "2026-03-27",
         "image": "https://fvem.es/images/cache/invitacion-online_670.gif",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "FVEM impulsa Learning Brains, una iniciativa europea para la recualificación industrial",
         "_source_desc": "FVEM lidera el proyecto Learning Brains, una iniciativa europea enmarcada en Erasmus+ que tiene como objetivo adaptar la formación profesional a las necesidades reales de la industria, en un contexto marcado por la digitalización",
         "_source_doc_link": ""
@@ -435,50 +435,50 @@
       {
         "title": "KI-gestütztes Lernen: Wie künstliche Intelligenz die industrielle Schulung transformiert",
         "type": "ARTICLE",
-        "description": "KI-gesteuerte Lernwerkzeuge steigern den Wissenstransfer, die Effizienz und die Innovation in der Industriebranche.",
+        "description": "KI-gesteuerte Lernwerkzeuge steigern den Wissenstransfer, die Effizienz und Innovationen im Industriesektor.",
         "link": "https://docs.google.com/document/d/1LRq6kDVfBUuBZEDzpL5AzTlJcTfM6a1h/edit",
         "category": "Research",
         "date": "2026-04-15",
-        "image": "https://lh3.googleusercontent.com/d/1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx",
+        "image": "https://drive.google.com/thumbnail?id=1Wk3NyR5rpMAD0Nn8WhRbn28hQQGX_VJx&sz=w1000",
         "badge": "",
-        "partner": "",
+        "partner": "ROOM466",
         "_source_title": "AI-Powered Learning: How Artificial Intelligence Is Transforming Industrial Training",
         "_source_desc": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.",
         "_source_doc_link": "",
         "slug": "ai-powered-learning-how-artificial-intelligence",
-        "content": "AI-driven learning tools boost knowledge transfer, efficiency, and innovation across the industrial sector.\nAs industries face ever-faster technological change, continuous learning has become a critical element of competitiveness. Employees must constantly adapt to new machines, processes, and digital workflows. Traditional training models, however, often fall short—they are time-consuming, costly, and rarely customized to individual needs. Artificial intelligence (AI) is reshaping this landscape by enabling a new era of dynamic and individualized learning in the workplace.\nAI-powered learning systems use data and algorithms to analyze how employees learn, recognize gaps, and personalize content in real time. Instead of one-size-fits-all programs, workers receive guidance and learning materials tailored to their roles and current skill levels. A maintenance technician, for example, might receive instant safety reminders or troubleshooting tutorials directly on a smart device while servicing equipment—based on his previous training data and the task at hand.\nPersonalization is one of the most powerful benefits of AI in workplace learning. Intelligent platforms identify learning patterns, recommend relevant modules, and adjust to each user’s progress. This increases engagement, shortens learning time, and delivers measurable results. At the organizational level, data analytics make it possible to track workforce skill development and pinpoint specific areas for improvement.\nScalability is another major advantage. Whereas traditional training requires physical sessions and interruptions to the workflow, AI-driven learning tools integrate smoothly into daily operations—accessible anytime via mobile devices, tablets, or AR glasses. For instance, companies like Siemens already use digital learning platforms to deliver adaptive, real-world simulations for apprentices and technical staff.\nAI also supports knowledge retention within aging workforces. By capturing expertise and making it digitally accessible, companies can preserve know-how even as experienced staff retire. In this sense, AI becomes not merely a facilitator for learning but a long-term guardian of organizational knowledge.\nUltimately, AI marks the shift from static training to continuous, personalized skill development. For industrial enterprises, embracing AI-driven learning is an investment in resilience and innovation—helping teams learn smarter, faster, and better prepared for the future."
+        "content": "Lernende Gehirne – Integrierte On-the-Job-Lernsysteme für die berufliche Umschulung\n\nErasmus+ Programm 2025-1-ES01-KA220-VET-000351934\n\nDieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Diese Veröffentlichung [Kommunikation] gibt nur die Ansichten des Autors wieder, und die Kommission kann nicht für die Verwendung der darin enthaltenen Informationen verantwortlich gemacht werden.\n\nKI-gestütztes Lernen: Wie künstliche Intelligenz die industrielle Schulung transformiert\n\n[Link]\n\nKI-gesteuerte Lernwerkzeuge steigern den Wissenstransfer, die Effizienz und die Innovation im industriellen Sektor.\n\nDa Branchen einer immer schnelleren technologischen Veränderung gegenüberstehen, ist kontinuierliches Lernen zu einem entscheidenden Wettbewerbselement geworden. Mitarbeiter müssen sich ständig an neue Maschinen, Prozesse und digitale Workflows anpassen. Traditionelle Schulungsmodelle hingegen erweisen sich oft als unzureichend – sie sind zeitaufwendig, kostspielig und selten auf individuelle Bedürfnisse zugeschnitten. Künstliche Intelligenz (KI) gestaltet diese Landschaft um, indem sie eine neue Ära des dynamischen und individualisierten Lernens am Arbeitsplatz ermöglicht.\n\nKI-gestützte Lernsysteme verwenden Daten und Algorithmen, um zu analysieren, wie Mitarbeiter lernen, Lücken zu erkennen und Inhalte in Echtzeit zu personalisieren. Anstatt Einheitsprogramme erhalten Mitarbeiter Anleitung und Lernmaterialien, die auf ihre Rollen und aktuellen Fähigkeiten zugeschnitten sind. Ein Wartungstechniker könnte beispielsweise sofortige Sicherheitshinweise oder Fehlerbehebungstutorials direkt auf einem intelligenten Gerät erhalten, während er Geräte wartet – basierend auf seinen bisherigen Schulungsdaten und der aktuellen Aufgabe.\n\nPersonalisierung ist einer der leistungsstärksten Vorteile von KI im betrieblichen Lernen. Intelligente Plattformen identifizieren Lernmuster, empfehlen relevante Module und passen sich dem Fortschritt jedes Benutzers an. Dies steigert die Beteiligung, verkürzt die Lernzeit und liefert messbare Ergebnisse. Auf organisatorischer Ebene ermöglichen Datenanalysen die Verfolgung der Entwicklung von Mitarbeiterfähigkeiten und die Identifizierung spezifischer Bereiche zur Verbesserung.\n\nSkalierbarkeit ist ein weiterer großer Vorteil. Während herkömmliche Schulungen physische Sitzungen und Unterbrechungen des Arbeitsablaufs erfordern, integrieren KI-gesteuerte Lernwerkzeuge nahtlos in den täglichen Betrieb – jederzeit über mobile Geräte, Tablets oder AR-Brillen zugänglich. Unternehmen wie Siemens nutzen bereits digitale Lernplattformen, um adaptive, praxisnahe Simulationen für Auszubildende und technisches Personal bereitzustellen.\n\nKI unterstützt auch die Wissensbewahrung in alternden Belegschaften. Indem sie Fachwissen erfassen und digital zugänglich machen, können Unternehmen Know-how erhalten, auch wenn erfahrene Mitarbeiter in den Ruhestand gehen. In diesem Sinne wird KI nicht nur zum Lernhelfer, sondern auch zum langfristigen Hüter des organisatorischen Wissens.\n\nLetztendlich markiert KI den Übergang von statischer Schulung zu kontinuierlicher, personalisierter Fähigkeitenentwicklung. Für industrielle Unternehmen ist die Annahme von KI-gesteuertem Lernen eine Investition in Widerstandsfähigkeit und Innovation – sie hilft Teams, klüger, schneller und besser auf die Zukunft vorbereitet zu lernen."
       },
       {
         "title": "Künstliche Intelligenz und Arbeitsplätze: Die eigentliche Herausforderung sind nicht die Technologie, sondern die Menschen.",
         "type": "ARTICLE",
-        "description": "Künstliche Intelligenz formt Jobs schnell um, erhöht die Nachfrage nach neuen Fähigkeiten und kontinuierlichem Lernen. Die Hauptaufgabe besteht darin, den Menschen zu helfen, sich an die Arbeit neben diesen Technologien anzupassen.",
+        "description": "Künstliche Intelligenz verändert Jobs rasch und erhöht die Nachfrage nach neuen Fähigkeiten und kontinuierlichem Lernen. Die Hauptaufgabe besteht darin, den Menschen zu helfen, sich an die Arbeit neben diesen Technologien anzupassen.",
         "link": "https://docs.google.com/document/d/1Yzhf80YZG2c1OWuW6HbycZH6KQhjrTeE/edit",
         "category": "Research",
         "date": "2026-04-29",
-        "image": "https://lh3.googleusercontent.com/d/1qypd3ZwAEt2eTrQT9PwPaefu4JRFc7Nt",
+        "image": "https://drive.google.com/thumbnail?id=1qypd3ZwAEt2eTrQT9PwPaefu4JRFc7Nt&sz=w1000",
         "badge": "",
-        "partner": "",
+        "partner": "MC",
         "_source_title": "AI and jobs: the real challenge is not technology, but people",
         "_source_desc": "AI is rapidly reshaping jobs, increasing demand for new skills and continuous learning. The key challenge is helping people adapt to work alongside these technologies.",
         "_source_doc_link": "",
         "slug": "ai-and-jobs-the-real",
-        "content": "Recent news has once again brought a critical issue into focus: the real impact of artificial intelligence on employment. From layoffs in major tech companies to growing concerns among economists about job polarization, one thing is clear, the labor market is evolving faster than ever.\nSome analysts warn that AI could disproportionately affect mid-level roles, potentially reshaping the structure of the workforce and increasing inequality. At the same time, companies are reorganizing their operations, leveraging AI tools to improve efficiency and reduce reliance on traditional roles.\nThis transformation is not limited to the tech sector. Across Europe, industries are undergoing a deep shift driven by automation, data, and AI adoption. As these technologies become more embedded in daily operations, the demand for new skills is accelerating.\nIn this context, the real challenge is not whether AI will replace certain tasks, but how we prepare people to work alongside it. Organizations are increasingly recognizing the need for more agile and responsive learning models, ones that are closely connected to the workplace and capable of addressing skills gaps in real time.\nAt the same time, collaborative initiatives across Europe are exploring how to better align education, training, and industry needs. By bringing together companies, training providers, and technology experts, these ecosystems aim to create more effective and sustainable approaches to workforce development.\nUltimately, AI is not only transforming how we work, but also how we learn. Continuous, work-based, and personalized learning is quickly becoming a strategic priority for organizations that want to remain competitive in a rapidly changing environment."
+        "content": "Lernende Gehirne – Integrierte On-the-Job-Lernsysteme für die industrielle Umschulung\n\nErasmus+ Programm 2025-1-ES01-KA220-VET-000351934\n\nDieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Diese Veröffentlichung [Kommunikation] spiegelt nur die Ansichten des Autors wider, und die Kommission kann nicht für die Verwendung der darin enthaltenen Informationen verantwortlich gemacht werden.\n\nKI und Arbeitsplätze: Die eigentliche Herausforderung ist nicht die Technologie, sondern die Menschen\n\n[Klicken]\n\nAktuelle Nachrichten haben erneut ein kritisches Thema in den Fokus gerückt: die tatsächlichen Auswirkungen künstlicher Intelligenz auf die Beschäftigung. Von Entlassungen in großen Technologieunternehmen bis hin zu wachsenden Bedenken unter Ökonomen hinsichtlich der Polarisierung von Arbeitsplätzen ist eines klar: Der Arbeitsmarkt entwickelt sich schneller als je zuvor.\nEinige Analysten warnen davor, dass KI mittlere Positionen überproportional beeinflussen könnte und möglicherweise die Struktur der Belegschaft umgestaltet und die Ungleichheit erhöht. Gleichzeitig organisieren Unternehmen ihre Abläufe neu, indem sie KI-Tools nutzen, um die Effizienz zu steigern und die Abhängigkeit von traditionellen Rollen zu verringern.\nDiese Transformation beschränkt sich nicht nur auf den Technologiesektor. In ganz Europa vollziehen Branchen einen tiefgreifenden Wandel, der durch Automatisierung, Daten und die Einführung von KI vorangetrieben wird. Mit zunehmender Integration dieser Technologien in den täglichen Betrieb beschleunigt sich die Nachfrage nach neuen Fähigkeiten.\nIn diesem Kontext besteht die eigentliche Herausforderung nicht darin, ob KI bestimmte Aufgaben ersetzen wird, sondern darin, wie wir die Menschen darauf vorbereiten, Seite an Seite mit ihr zu arbeiten. Organisationen erkennen zunehmend die Notwendigkeit von agileren und reaktionsschnelleren Lernmodellen, die eng mit dem Arbeitsplatz verbunden sind und in der Lage sind, Fähigkeitslücken in Echtzeit zu schließen.\nGleichzeitig erforschen kollaborative Initiativen in ganz Europa, wie Bildung, Ausbildung und Industriebedürfnisse besser aufeinander abgestimmt werden können. Durch die Zusammenarbeit von Unternehmen, Schulungsanbietern und Technologieexperten zielen diese Ökosysteme darauf ab, effektivere und nachhaltigere Ansätze zur Arbeitskräfteentwicklung zu schaffen.\nLetztendlich verändert KI nicht nur, wie wir arbeiten, sondern auch, wie wir lernen. Kontinuierliches, arbeitsbasiertes und personalisiertes Lernen wird schnell zu einer strategischen Priorität für Organisationen, die in einer sich schnell verändernden Umgebung wettbewerbsfähig bleiben möchten."
       },
       {
-        "title": "Das Kick-off-Meeting in Bilbao startet die europäische Zusammenarbeit des Learning BRAINS-Projekts.",
+        "title": "Das Kick-off-Meeting in Bilbao startet die europäische Zusammenarbeit Learning BRAINS.",
         "type": "ARTICLE",
         "description": "Die Stadt Bilbao hat kürzlich das Kick-off-Meeting des Erasmus+ Projekts Learning BRAINS - Integrierte On-the-Job-Lernsysteme für die industrielle Umschulung veranstaltet, was offiziell den Beginn einer spannenden zweijährigen europäischen Zusammenarbeit markiert, die sich auf Innovation, KI-basiertes Lernen und industrielle Umschulung konzentriert.",
         "link": "https://docs.google.com/document/d/1dGkafw8HBVuecJHvEprEYqgosPf4D7Gr/edit",
         "category": "Meeting",
         "date": "2026-05-14",
-        "image": "https://lh3.googleusercontent.com/d/1hcCrgtJlL0reuyHSsts_nVGVq9wEQaZW",
+        "image": "https://drive.google.com/thumbnail?id=1hcCrgtJlL0reuyHSsts_nVGVq9wEQaZW&sz=w1000",
         "badge": "",
-        "partner": "",
+        "partner": "FVEM",
         "_source_title": "Kick-off Meeting in Bilbao launches the Learning BRAINS European collaboration.",
         "_source_desc": "The city of Bilbao recently hosted the Kick-off Meeting of the Erasmus+ project Learning BRAINS – Integrated On-the-job Learning Systems for Industrial Reskilling, officially marking the beginning of an exciting two-year European collaboration focused on innovation, AI-based learning and industrial reskilling",
         "_source_doc_link": "",
         "slug": "kick-off-meeting-in-bilbao-launches",
-        "content": "Die Stadt Bilbao war kürzlich Gastgeber der Auftaktveranstaltung des Erasmus+ Projekts Learning BRAINS – Integrierte On-the-job-Lernsysteme für die berufliche Umschulung und markierte offiziell den Beginn einer spannenden zweijährigen europäischen Zusammenarbeit mit Fokus auf Innovation, KI-basiertem Lernen und beruflicher Umschulung.\nDie Veranstaltung brachte Vertreter aller Partnerorganisationen des Konsortiums zusammen, die sowohl vor Ort als auch online an einer dynamischen und kooperativen Atmosphäre teilnahmen. Das Konsortium wird von der [Federacion Vizcaina de Empresas del Metal](https://www.fvem.es) koordiniert und umfasst die Beteiligung von [Confindustria Veneto SIAV S.r.l](https://www.siav.net/wp/), [Room466 by WKO Steiermark](https://room466.at/en/home-english/), [Slovak Business Agency](https://www.sbagency.sk/), [Sparkling Intuition](https://sparkling-intuition.eu/) und [Media Creativa 2020, S.L.](https://mediacreativa.eu/).\n![Kick-off Meeting in Bilbao – Learning BRAINS](images/news/bilbaokickoff.jpg)\nNeben der formellen Tagesordnung bot die Veranstaltung eine wertvolle Gelegenheit für die Partner, sich besser kennenzulernen, Erfahrungen auszutauschen und die Grundlagen für eine starke und kooperative Arbeitsbeziehung zu schaffen. Die Vielfalt der Profile innerhalb des Konsortiums – von Wirtschaftsverbänden und Handelskammern über Schulungsanbieter bis hin zu Technologieexperten – schuf eine sehr bereichernde Umgebung für Diskussionen und Ideenaustausch.\nWährend der Sitzungen stimmten die Partner die Ziele des Projekts, den Umsetzungsplan, die Kommunikationsverfahren und die Managementstruktur ab. Besonderes Augenmerk wurde auf die Koordinationsmechanismen gelegt, die die Zusammenarbeit während der Projektdauer unterstützen werden, einschließlich Arbeitsplanung, Qualitätssicherungsverfahren, Verbreitungsstrategien und transnationaler Kooperationsmethoden.\nDas Konsortium überprüfte auch die Struktur der Projektarbeitspakete und die Verantwortlichkeiten, die jedem Partner zugeordnet sind. Das Projekt ist in vier Hauptarbeitspakete unterteilt, die das Projektmanagement, Kommunikations- und Verbreitungsaktivitäten, die Entwicklung des Learning BRAINS Schulungsprogramms und die Erstellung des Learning BRAINS Toolkits für die Implementierung von KI-basierten On-the-job-Trainingssystemen umfassen.\nEine der interessantesten Diskussionen während der Veranstaltung konzentrierte sich auf den wachsenden Einfluss der künstlichen Intelligenz in der beruflichen Bildung und Schulung in industriellen KMU. Die Partner teilten Perspektiven zu den Herausforderungen, denen Unternehmen derzeit bei der Qualifizierung und Umschulung ihrer Belegschaft gegenüberstehen, sowie den Möglichkeiten, die KI bieten kann, um Schulungen flexibler, personalisierter und zugänglicher in realen Arbeitsumgebungen zu gestalten.\nDie Veranstaltung ermöglichte es dem Konsortium auch, die ersten operativen Schritte für die in dem Projekt vorgesehenen anfänglichen Forschungs- und Kartierungsaktivitäten zu definieren. Diese Aktivitäten werden sich darauf konzentrieren, KI-Tools, innovative Praktiken und erfolgreiche Fallstudien im Zusammenhang mit dem On-the-job-Lernen und der industriellen Schulung in ganz Europa zu identifizieren.\nLearning BRAINS zielt darauf ab, HR-Manager, Schulungsleiter, Unternehmensausbilder und industrielle KMU zu unterstützen, indem praktische Ressourcen und innovative Methoden bereitgestellt werden, um KI-basierte On-the-job-Trainingssysteme zu entwerfen und umzusetzen. Das Projekt wird zwei Hauptergebnisse liefern: ein mehrsprachiges Schulungsprogramm und ein interaktives Toolkit, das praktische Anleitungen, Fallstudien und KI-Ressourcen bietet, die an industrielle Schulungskontexte angepasst sind.\nDie Auftaktveranstaltung bestätigte das starke Engagement aller Konsortiumsmitglieder für die Entwicklung hochwertiger und wirkungsvoller Projektergebnisse und betonte die Bedeutung der europäischen Zusammenarbeit zur Bewältigung der aktuellen Herausforderungen der industriellen und digitalen Transformation.\nMit Motivation, geteiltem Fachwissen und einer klaren gemeinsamen Vision beginnt die Learning BRAINS-Partnerschaft ihre Reise, um in ganz Europa resilientere, innovativere und auf den Menschen ausgerichtete Ansätze für die berufliche Umschulung zu unterstützen."
+        "content": "Lernende Gehirne - Integrierte On-the-Job-Lernsysteme für die industrielle Umschulung\n\nErasmus+ Programm 2025-1-ES01-KA220-VET-000351934\n\nDieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Diese Veröffentlichung [Kommunikation] spiegelt nur die Ansichten des Autors wider, und die Kommission kann nicht für die Verwendung der darin enthaltenen Informationen verantwortlich gemacht werden.\n\nAuftaktveranstaltung in Bilbao startet die europäische Zusammenarbeit von Learning BRAINS\n\n[Link]\n\nDie Stadt Bilbao war kürzlich Gastgeber der Auftaktveranstaltung des Erasmus+ Projekts Learning BRAINS - Integrierte On-the-Job-Lernsysteme für die industrielle Umschulung und markierte offiziell den Beginn einer spannenden zweijährigen europäischen Zusammenarbeit mit Fokus auf Innovation, KI-basiertem Lernen und industrieller Umschulung.\nDie Veranstaltung brachte Vertreter aller Partnerorganisationen des Konsortiums zusammen, die sowohl persönlich als auch online an einer dynamischen und kollaborativen Atmosphäre teilnahmen. Das Konsortium wird von der Federacion Vizcaina de Empresas del Metal koordiniert und umfasst die Beteiligung von Confindustria Veneto SIAV S.r.l, Wirtschaftskammer Steiermark, Slovak Business Agency, Sparkling Intuition und Media Creativa 2020, S.L..\nÜber die formelle Tagesordnung hinaus bot die Veranstaltung eine wertvolle Gelegenheit für die Partner, sich besser kennenzulernen, Erfahrungen auszutauschen und die Grundlagen für eine starke und kooperative Arbeitsbeziehung zu schaffen. Die Vielfalt der Profile innerhalb des Konsortiums - von Wirtschaftsverbänden und Handelskammern über Schulungsanbieter bis hin zu Technologieexperten - schuf eine sehr bereichernde Umgebung für Diskussionen und Ideenaustausch.\nWährend der Sitzungen stimmten die Partner über die Ziele des Projekts, den Umsetzungsplan, die Kommunikationsverfahren und die Managementstruktur überein. Besondere Aufmerksamkeit wurde den Koordinationsmechanismen gewidmet, die die Zusammenarbeit während der Projektdauer unterstützen werden, einschließlich Arbeitsplanung, Qualitätsicherungsverfahren, Verbreitungsstrategien und transnationalen Kooperationsmethoden.\nDas Konsortium überprüfte auch die Struktur der Projektarbeitspakete und die Verantwortlichkeiten, die jeder Partnerorganisation zugewiesen wurden. Das Projekt ist in vier Hauptarbeitspakete unterteilt, die das Projektmanagement, Kommunikations- und Verbreitungsaktivitäten, die Entwicklung des Learning BRAINS-Trainingsprogramms und die Erstellung des Learning BRAINS-Toolkits für die Implementierung von KI-basierten On-the-Job-Trainingssystemen abdecken.\nEine der interessantesten Diskussionen während der Veranstaltung konzentrierte sich auf den wachsenden Einfluss der künstlichen Intelligenz in der beruflichen Bildung und Schulung in industriellen KMU. Die Partner teilten Perspektiven zu den Herausforderungen, denen Unternehmen derzeit gegenüberstehen, wenn es um die Qualifizierung und Umschulung von Arbeitskräften geht, sowie die Möglichkeiten, die KI bieten kann, um Schulungen in realen Arbeitsumgebungen flexibler, personalisierter und zugänglicher zu gestalten.\nDie Veranstaltung ermöglichte es dem Konsortium auch, die ersten operativen Schritte für die in dem Projekt vorgesehenen anfänglichen Forschungs- und Kartierungsaktivitäten zu definieren. Diese Aktivitäten werden sich darauf konzentrieren, KI-Tools, innovative Praktiken und erfolgreiche Fallstudien im Zusammenhang mit dem Lernen am Arbeitsplatz und der industriellen Schulung in ganz Europa zu identifizieren.\nLearning BRAINS zielt darauf ab, HR-Manager, Schulungsleiter, Unternehmensausbilder und industrielle KMU zu unterstützen, indem praktische Ressourcen und innovative Methoden bereitgestellt werden, um KI-basierte On-the-Job-Trainingssysteme zu entwerfen und umzusetzen. Das Projekt wird zwei Hauptergebnisse liefern: ein mehrsprachiges Trainingsprogramm und ein interaktives Toolkit, das praktische Anleitungen, Fallstudien und KI-Ressourcen bietet, die an industrielle Schulungskontexte angepasst sind.\nDie Auftaktveranstaltung bestätigte das starke Engagement aller Konsortiumsmitglieder für die Entwicklung hochwertiger und wirkungsvoller Projektergebnisse und unterstrich die Bedeutung der europäischen Zusammenarbeit bei der Bewältigung der aktuellen Herausforderungen der industriellen und digitalen Transformation.\nMit Motivation, geteiltem Fachwissen und einer klaren gemeinsamen Vision beginnt die Learning BRAINS-Partnerschaft ihre Reise, um widerstandsfähigere, innovativere und auf den Menschen ausgerichtete Ansätze zur industriellen Umschulung in ganz Europa zu unterstützen."
       }
     ]
   },
