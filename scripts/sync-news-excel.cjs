@@ -58,7 +58,9 @@ function cleanContent(text, articleTitle = '') {
         /^\[link\]$/i,
         /^european commission/i,
         /reflects the views only of/i,
-        /commission cannot be held/i
+        /commission cannot be held/i,
+        /^learning brains\s*[-–]/i,
+        /^learning systems for industrial/i
     ];
 
     let startIdx = 0;
