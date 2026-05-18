@@ -6,7 +6,7 @@ const locales = ['en', 'es', 'de', 'it', 'pt', 'sk'];
 const slug = 'kick-off-meeting-in-bilbao-launches';
 
 const oldName = "Wirtschaftskammer Steiermark";
-const newName = "Room466 by WKO Steiermark";
+const newName = "Room466";
 const url = "https://room466.at/en/home-english/";
 
 locales.forEach(lang => {

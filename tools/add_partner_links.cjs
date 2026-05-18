@@ -9,7 +9,7 @@ const partners = [
   { name: "Federacion Vizcaina de Empresas del Metal", url: "https://www.fvem.es" },
   { name: "Federación Vizcaína de Empresas del Metal", url: "https://www.fvem.es" },
   { name: "Confindustria Veneto SIAV S.r.l", url: "https://www.siav.net/wp/" },
-  { name: "Wirtschaftskammer Steiermark", url: "https://room466.at/en/home-english/" },
+  { name: "Room466", url: "https://room466.at/en/home-english/" },
   { name: "Slovak Business Agency", url: "https://www.sbagency.sk/" },
   { name: "Sparkling Intuition", url: "https://sparkling-intuition.eu/" },
   { name: "Media Creativa 2020, S.L.", url: "https://mediacreativa.eu/" }
