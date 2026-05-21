@@ -238,7 +238,7 @@
         "type": "News",
         "description": "S radosťou zdieľame prvý vydanie bulletinu projektu Learning Brains, v ktorom predstavujeme úvodné kroky tejto iniciatívy Erasmus+ KA220-VET.",
         "link": "",
-        "category": "Event",
+        "category": "Newsletter",
         "date": "may 2026",
         "image": "https://drive.google.com/thumbnail?id=1-zY1h9O9qM5ZHwMLZpd_6TyNprj3Z6eD&sz=w1000",
         "badge": "NEWSLETTER",
@@ -248,7 +248,9 @@
         "_source_doc_link": "",
         "slug": "first-learning-brains-newsletter",
         "content": "S radosťou zdieľame prvý vydanie bulletinu projektu Learning Brains, kde predstavujeme počiatočné kroky tejto iniciatívy Erasmus+ KA220-VET zameranej na využitie umelej inteligencie na zlepšenie učenia na pracovisku a procesov preškolenia v priemysle.\nTento prvý bulletin zdôrazňuje niektoré z kľúčových míľnikov dosiahnutých počas prvých mesiacov projektu, vrátane úspešného zahajovacieho stretnutia v Bilbau, kde sa partneri projektu zišli, aby definovali strategickú cestu, spoluprácu a nadchádzajúce aktivity na nasledujúce dva roky.\nBulletin tiež predstavuje hlavné ciele projektu a spoluprácovnú prácu, ktorú vykonajú partneri zo Španielska, Talianska, Portugalska, Rakúska a Slovenska na vývoj inovatívnych metodík a nástrojov na tréning založených na umelej inteligencii prispôsobených priemyselným prostrediam a MSP.\nOkrem toho čitatelia nájdu informácie o spustení komunikačných kanálov projektu, prvých disemináciách a nadchádzajúcich aktivitách spojených s výskumom, skupinami zameranými na určité témy, rozhovormi a vývojom programu tréningu a sady nástrojov Learning Brains.\nS touto sériou bulletinov si kladieme za cieľ informovať zainteresované strany, spoločnosti, poskytovateľov odborného vzdelávania a širšiu komunitu o pokroku projektu, výsledkoch a príležitostiach na účasť.\nBuďte naladení a sledujte cestu projektu Learning Brains smerom k inteligentnejším, flexibilnejším a viac ľudsko-zameraným systémom učenia na pracovisku.",
-        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing"
+        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
+        "pdf_embed_url": "https://drive.google.com/file/d/1QQfyRR0j2yDJennqb616dJYrgm0ycIcE/view?usp=drive_link"
       }
     ],
     "no_items_found": "Momentálne neboli nájdené žiadne podujatia.",

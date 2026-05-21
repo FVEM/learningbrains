@@ -238,7 +238,7 @@
         "type": "News",
         "description": "Estamos entusiasmados em compartilhar a primeira edição do boletim do projeto Learning Brains, onde apresentamos os primeiros passos desta iniciativa Erasmus+ KA220-VET.",
         "link": "",
-        "category": "Event",
+        "category": "Newsletter",
         "date": "may 2026",
         "image": "https://drive.google.com/thumbnail?id=1-zY1h9O9qM5ZHwMLZpd_6TyNprj3Z6eD&sz=w1000",
         "badge": "NEWSLETTER",
@@ -248,7 +248,9 @@
         "_source_doc_link": "",
         "slug": "first-learning-brains-newsletter",
         "content": "Estamos entusiasmados em compartilhar a primeira edição do boletim do projeto Learning Brains, onde apresentamos os primeiros passos desta iniciativa Erasmus+ KA220-VET focada no uso de Inteligência Artificial para melhorar os processos de aprendizagem no trabalho e de reciclagem industrial.\nEste primeiro boletim destaca alguns dos marcos importantes alcançados nos primeiros meses do projeto, incluindo a bem-sucedida Reunião de Lançamento realizada em Bilbau, onde os parceiros do projeto se reuniram para definir o roadmap estratégico, dinâmica de colaboração e atividades futuras para os próximos dois anos.\nO boletim também apresenta os principais objetivos do projeto e o trabalho colaborativo que será realizado pelos parceiros da Espanha, Itália, Portugal, Áustria e Eslováquia para desenvolver metodologias de treinamento inovadoras baseadas em IA e ferramentas adaptadas a ambientes industriais e PMEs.\nAlém disso, os leitores encontrarão informações sobre o lançamento dos canais de comunicação do projeto, as primeiras ações de disseminação e as próximas atividades relacionadas à pesquisa, grupos focais, entrevistas e desenvolvimento do Programa de Treinamento e Kit de Ferramentas do Learning Brains.\nAtravés desta série de boletins, pretendemos manter os interessados, empresas, provedores de VET e a comunidade em geral informados sobre o progresso do projeto, resultados e oportunidades de participação.\nFiquem atentos e acompanhem a jornada do Learning Brains em direção a sistemas de aprendizagem no local de trabalho mais inteligentes, flexíveis e centrados no ser humano.",
-        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing"
+        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
+        "pdf_embed_url": "https://drive.google.com/file/d/1QQfyRR0j2yDJennqb616dJYrgm0ycIcE/view?usp=drive_link"
       }
     ],
     "read_more": "Ler Mais",

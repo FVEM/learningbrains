@@ -351,6 +351,10 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             newItem.doc_link = docLink;
         }
 
+        // Preserve custom PDF properties if they exist
+        if (existing?.pdf_url) newItem.pdf_url = existing.pdf_url;
+        if (existing?.pdf_embed_url) newItem.pdf_embed_url = existing.pdf_embed_url;
+
         result.push(newItem);
     }
 

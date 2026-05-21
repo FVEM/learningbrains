@@ -238,7 +238,7 @@
         "type": "News",
         "description": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
         "link": "",
-        "category": "Event",
+        "category": "Newsletter",
         "date": "may 2026",
         "image": "https://drive.google.com/thumbnail?id=1-zY1h9O9qM5ZHwMLZpd_6TyNprj3Z6eD&sz=w1000",
         "badge": "NEWSLETTER",
@@ -248,7 +248,9 @@
         "_source_doc_link": "",
         "slug": "first-learning-brains-newsletter",
         "content": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative focused on the use of Artificial Intelligence to improve on-the-job learning and industrial reskilling processes.\nThis first newsletter highlights some of the key milestones achieved during the first months of the project, including the successful Kick-off Meeting held in Bilbao, where project partners came together to define the strategic roadmap, collaboration dynamics and upcoming activities for the next two years.\nThe newsletter also introduces the main objectives of the project and the collaborative work that will be carried out by partners from Spain, Italy, Portugal, Austria and Slovakia to develop innovative AI-based training methodologies and tools tailored to industrial environments and SMEs.\nIn addition, readers will find information about the launch of the project’s communication channels, the first dissemination actions, and the upcoming activities linked to research, focus groups, interviews and the development of the Learning Brains Training Programme and Toolkit.\nThrough this newsletter series, we aim to keep stakeholders, companies, VET providers and the wider community informed about the project’s progress, results and opportunities for participation.\nStay tuned and follow the Learning Brains journey towards smarter, more flexible and more human-centred workplace learning systems.",
-        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing"
+        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
+        "pdf_embed_url": "https://drive.google.com/file/d/1QQfyRR0j2yDJennqb616dJYrgm0ycIcE/view?usp=drive_link"
       }
     ],
     "no_items_found": "No news items found.",
