@@ -249,7 +249,8 @@
         "slug": "first-learning-brains-newsletter",
         "content": "S radosťou zdieľame prvý vydanie newsletteru projektu Learning Brains, kde predstavujeme počiatočné kroky tejto iniciatívy Erasmus+ KA220-VET zameranej na využitie umelej inteligencie na zlepšenie učenia na pracovisku a procesov preškolenia v priemysle.\nTento prvý newsletter zdôrazňuje niektoré z kľúčových míľnikov dosiahnutých počas prvých mesiacov projektu, vrátane úspešného zahajovacieho stretnutia v Bilbau, kde sa partneri projektu zišli, aby definovali strategickú cestu, spoluprácu a nadchádzajúce aktivity na nasledujúce dva roky.\nNewsletter tiež predstavuje hlavné ciele projektu a spolupracujúcu prácu, ktorú vykonajú partneri zo Španielska, Talianska, Portugalska, Rakúska a Slovenska na vývoj inovatívnych metodík a nástrojov založených na umelej inteligencii prispôsobených priemyselným prostrediam a MSP.\nOkrem toho čitatelia nájdu informácie o spustení komunikačných kanálov projektu, prvých disemináciách a nadchádzajúcich aktivitách spojených s výskumom, skupinami zameranými na určité témy, rozhovormi a vývojom programu vzdelávania a nástrojov Learning Brains.\nProstredníctvom tejto série newsletterov sa snažíme udržiavať zainteresované strany, spoločnosti, poskytovateľov odborného vzdelávania a širšiu komunitu informované o pokroku projektu, výsledkoch a príležitostiach na účasť.\nBuďte naladení a sledujte cestu projektu Learning Brains smerom k inteligentnejším, flexibilnejším a ľudskejším systémom učenia na pracovisku.",
         "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
-        "pdf_url": "/documents/first-learning-brains-newsletter.pdf"
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
+        "pdf_embed_url": "https://drive.google.com/file/d/1g2uZF0UTvXazXSVRXucistDMEa-DYaqB/preview"
       }
     ],
     "no_items_found": "Momentálne neboli nájdené žiadne podujatia.",
@@ -571,6 +572,8 @@
     "open_new_tab": "Celá obrazovka",
     "download_pdf": "Stiahnuť PDF",
     "mobile_hint": "Zobrazte alebo stiahnite si oficiálnu verziu nášho newslettera v PDF do svojho mobilného zariadenia.",
-    "view_pdf": "Otvoriť Newsletter (PDF)"
+    "view_pdf": "Otvoriť Newsletter (PDF)",
+    "fallback_title": "Náhľad nie je k dispozícii",
+    "fallback_desc": "Váš prehliadač nepodporuje priame zobrazenie PDF alebo je nakonfigurovaný na sťahovanie súborov. PDF si môžete stiahnuť a zobraziť vo svojom zariadení."
   }
 }

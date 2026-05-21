@@ -249,7 +249,8 @@
         "slug": "first-learning-brains-newsletter",
         "content": "Siamo entusiasti di condividere la prima edizione del bollettino del progetto Learning Brains, in cui presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET focalizzata sull'uso dell'Intelligenza Artificiale per migliorare l'apprendimento sul lavoro e i processi di riqualificazione industriale.\nQuesto primo bollettino mette in evidenza alcuni dei principali traguardi raggiunti durante i primi mesi del progetto, tra cui il Kick-off Meeting di successo tenutosi a Bilbao, dove i partner del progetto si sono riuniti per definire la roadmap strategica, la dinamica di collaborazione e le attività future per i prossimi due anni.\nIl bollettino presenta anche gli obiettivi principali del progetto e il lavoro collaborativo che sarà svolto dai partner provenienti da Spagna, Italia, Portogallo, Austria e Slovacchia per sviluppare metodologie di formazione innovative basate sull'IA e strumenti su misura per ambienti industriali e PMI.\nInoltre, i lettori troveranno informazioni sul lancio dei canali di comunicazione del progetto, le prime azioni di diffusione e le prossime attività legate alla ricerca, ai focus group, alle interviste e allo sviluppo del Programma di Formazione e del Toolkit di Learning Brains.\nAttraverso questa serie di bollettini, miriamo a mantenere informati gli stakeholder, le aziende, i fornitori di formazione professionale e la comunità più ampia sui progressi, i risultati e le opportunità di partecipazione del progetto.\nRimanete sintonizzati e seguite il percorso di Learning Brains verso sistemi di apprendimento sul lavoro più intelligenti, flessibili e centrati sull'umanità.",
         "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
-        "pdf_url": "/documents/first-learning-brains-newsletter.pdf"
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
+        "pdf_embed_url": "https://drive.google.com/file/d/1g2uZF0UTvXazXSVRXucistDMEa-DYaqB/preview"
       }
     ],
     "read_more": "Leggi di Più",
@@ -566,6 +567,8 @@
     "open_new_tab": "Schermo Intero",
     "download_pdf": "Scarica PDF",
     "mobile_hint": "Visualizza o scarica la versione ufficiale in PDF del nostro bollettino sul tuo dispositivo mobile.",
-    "view_pdf": "Apri Bollettino (PDF)"
+    "view_pdf": "Apri Bollettino (PDF)",
+    "fallback_title": "Anteprima non disponibile",
+    "fallback_desc": "Il tuo browser non supporta la visualizzazione diretta dei PDF o è configurato per scaricarli. Puoi scaricare il PDF per visualizzarlo sul tuo dispositivo."
   }
 }

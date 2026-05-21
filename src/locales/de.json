@@ -249,7 +249,8 @@
         "slug": "first-learning-brains-newsletter",
         "content": "Wir freuen uns, die erste Ausgabe des Newsletters des Learning Brains-Projekts zu teilen, in dem wir die ersten Schritte dieser Erasmus+ KA220-VET-Initiative vorstellen, die sich auf die Verwendung von künstlicher Intelligenz zur Verbesserung des Lernens am Arbeitsplatz und der industriellen Umschulungsprozesse konzentriert.\nDieser erste Newsletter hebt einige der wichtigsten Meilensteine hervor, die in den ersten Monaten des Projekts erreicht wurden, darunter das erfolgreiche Kick-off-Meeting in Bilbao, bei dem die Projektpartner zusammenkamen, um den strategischen Fahrplan, die Zusammenarbeitsdynamik und die bevorstehenden Aktivitäten für die nächsten zwei Jahre festzulegen.\nDer Newsletter stellt auch die Hauptziele des Projekts und die gemeinsame Arbeit vor, die von Partnern aus Spanien, Italien, Portugal, Österreich und der Slowakei durchgeführt wird, um innovative KI-basierte Schulungsmethoden und -werkzeuge zu entwickeln, die auf industrielle Umgebungen und KMUs zugeschnitten sind.\nDarüber hinaus finden die Leser Informationen über den Start der Kommunikationskanäle des Projekts, die ersten Verbreitungsmaßnahmen und die bevorstehenden Aktivitäten im Zusammenhang mit Forschung, Fokusgruppen, Interviews und der Entwicklung des Learning Brains-Trainingsprogramms und -Toolkits.\nDurch diese Newsletter-Serie wollen wir Stakeholder, Unternehmen, Berufsbildungsanbieter und die breitere Gemeinschaft über den Fortschritt des Projekts, die Ergebnisse und die Möglichkeiten zur Beteiligung informieren.\nBleiben Sie dran und verfolgen Sie die Reise von Learning Brains zu intelligenteren, flexibleren und menschenzentrierteren Lernsystemen am Arbeitsplatz.",
         "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
-        "pdf_url": "/documents/first-learning-brains-newsletter.pdf"
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
+        "pdf_embed_url": "https://drive.google.com/file/d/1g2uZF0UTvXazXSVRXucistDMEa-DYaqB/preview"
       }
     ],
     "read_more": "Mehr lesen",
@@ -566,6 +567,8 @@
     "open_new_tab": "Vollbild",
     "download_pdf": "PDF Herunterladen",
     "mobile_hint": "Zeigen Sie die offizielle PDF-Version unseres Newsletters an oder laden Sie sie auf Ihr Mobilgerät herunter.",
-    "view_pdf": "Newsletter öffnen (PDF)"
+    "view_pdf": "Newsletter öffnen (PDF)",
+    "fallback_title": "Vorschau nicht verfügbar",
+    "fallback_desc": "Ihr Browser unterstützt keine direkte PDF-Anzeige oder ist so konfiguriert, dass Dateien heruntergeladen werden. Sie können das PDF herunterladen, um es auf Ihrem Gerät anzuzeigen."
   }
 }

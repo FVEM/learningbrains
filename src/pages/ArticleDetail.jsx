@@ -247,6 +247,12 @@ const ArticleDetail = () => {
       : `${import.meta.env.BASE_URL || '/'}${article.pdf_url.replace(/^\//, '')}`
     : null;
 
+  const resolvedPdfEmbedUrl = article.pdf_embed_url
+    ? article.pdf_embed_url
+    : resolvedPdfUrl 
+      ? `${resolvedPdfUrl}#toolbar=1` 
+      : null;
+
   return (
     <div className="min-h-screen bg-slate-50" dir={i18n.dir()}>
       <SEOHead
@@ -411,11 +417,33 @@ const ArticleDetail = () => {
             <div className="p-4 bg-slate-50 border-t border-slate-100">
               {/* Desktop embedded PDF viewer */}
               <div className="hidden md:block relative w-full h-[750px] rounded-2xl overflow-hidden shadow-inner border border-slate-200 bg-white">
-                <iframe
-                  src={`${resolvedPdfUrl}#toolbar=1`}
-                  title={article.title}
+                <object
+                  data={`${resolvedPdfUrl}#toolbar=1`}
+                  type="application/pdf"
                   className="w-full h-full border-0"
-                />
+                  title={article.title}
+                >
+                  {/* Premium Fallback Card inside the frame */}
+                  <div className="flex flex-col items-center justify-center p-12 text-center h-full bg-slate-50">
+                    <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center text-red-500 mb-4 border border-red-100/60 shadow-sm animate-pulse">
+                      <FileText className="w-8 h-8" />
+                    </div>
+                    <h4 className="text-slate-800 font-bold text-lg mb-2">
+                      {t('newsletter.fallback_title', 'Preview Not Available')}
+                    </h4>
+                    <p className="text-slate-500 text-sm mb-6 max-w-md">
+                      {t('newsletter.fallback_desc', 'Your browser does not support inline PDF viewing or is configured to download files. You can download the PDF to view it on your device.')}
+                    </p>
+                    <a
+                      href={resolvedPdfUrl}
+                      download="Learning_Brains_Newsletter_1.pdf"
+                      className="px-6 py-3 rounded-xl bg-brand-secondary text-slate-900 font-bold text-sm flex items-center gap-2 hover:bg-brand-secondary/95 transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
+                    >
+                      <Download className="w-4 h-4" />
+                      {t('newsletter.download_pdf', 'Download PDF')}
+                    </a>
+                  </div>
+                </object>
               </div>
 
               {/* Mobile custom preview and direct button */}
