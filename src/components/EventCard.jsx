@@ -37,9 +37,7 @@ const EventCard = ({ item, lang }) => {
           <img
             src={imageUrl}
             alt={item.title}
-            className={`w-full h-full ${
-              isDocImage ? "object-contain bg-slate-50" : "object-cover"
-            } transform group-hover:scale-105 transition-transform duration-700`}
+            className="w-full h-full object-contain bg-slate-50 transform group-hover:scale-105 transition-transform duration-700"
             onError={(e) => { e.target.onerror = null; }}
           />
         ) : (
