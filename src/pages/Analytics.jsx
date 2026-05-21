@@ -390,23 +390,23 @@ export default function Analytics() {
                             </div>
                         </div>
 
-                        {/* Article Performance Table */}
+                        {/* Articles & Newsletters Performance Table */}
                         {(data?.articleStats ?? []).length > 0 && (
                             <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 flex flex-col overflow-hidden">
                                 <div className="p-6 pb-4 border-b border-neutral-100 flex items-center gap-2">
                                     <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center text-teal-600">
                                         <BookOpen className="w-4 h-4" />
                                     </div>
-                                    <h3 className="text-lg font-bold text-neutral-800">Article Performance</h3>
+                                    <h3 className="text-lg font-bold text-neutral-800">Articles & Newsletters Performance</h3>
                                     <span className="ml-auto text-[11px] font-bold bg-teal-50 text-teal-600 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                                        {(data?.articleStats ?? []).length} articles
+                                        {(data?.articleStats ?? []).length} items
                                     </span>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-sm text-left">
                                         <thead className="text-xs text-neutral-500 uppercase bg-neutral-50/50">
                                             <tr>
-                                                <th className="px-6 py-4 font-semibold">Article</th>
+                                                <th className="px-6 py-4 font-semibold">Title</th>
                                                 <th className="px-6 py-4 font-semibold">Partner</th>
                                                 <th className="px-6 py-4 text-right font-semibold">Page Views</th>
                                                 <th className="px-6 py-4 text-right font-semibold">Avg. Read Time</th>
@@ -417,8 +417,19 @@ export default function Analytics() {
                                                 return (
                                                     <tr key={i} className="hover:bg-neutral-50/50 transition-colors">
                                                         <td className="px-6 py-4">
-                                                            <div className="font-semibold text-neutral-800 max-w-[380px] line-clamp-1" title={article.title}>
-                                                                {article.title}
+                                                            <div className="flex items-center gap-2.5">
+                                                                <span className="font-semibold text-neutral-800 max-w-[380px] line-clamp-1" title={article.title}>
+                                                                    {article.title}
+                                                                </span>
+                                                                {article.type && (
+                                                                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase ${
+                                                                        article.type.toUpperCase() === 'NEWS'
+                                                                            ? 'bg-purple-50 border border-purple-100 text-purple-700'
+                                                                            : 'bg-teal-50 border border-teal-100 text-teal-700'
+                                                                    }`}>
+                                                                        {article.type.toUpperCase() === 'NEWS' ? 'Newsletter' : 'Article'}
+                                                                    </span>
+                                                                )}
                                                             </div>
                                                             <div className="flex items-center gap-1.5 mt-1">
                                                                 <span className="text-neutral-400 text-[11px] font-mono">{article.slug}</span>
@@ -427,7 +438,7 @@ export default function Analytics() {
                                                                     target="_blank" 
                                                                     rel="noopener noreferrer"
                                                                     className="text-brand-primary hover:text-brand-primary/80 transition-colors inline-flex items-center"
-                                                                    title="View Article"
+                                                                    title="View Post"
                                                                 >
                                                                     <ExternalLink className="w-3 h-3" />
                                                                 </a>

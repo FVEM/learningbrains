@@ -194,7 +194,7 @@
       {
         "title": "Prossimo workshop: Intelligenza Artificiale nella Formazione Professionale",
         "type": "News",
-        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti provenienti da tutta Europa per condividere conoscenze e pratiche migliori.",
+        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti da tutta Europa per condividere conoscenze e migliori pratiche.",
         "link": "",
         "category": "Meeting",
         "date": "Coming Soon",
@@ -232,6 +232,24 @@
         "_source_title": "Learning Brains official website!",
         "_source_desc": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "_source_doc_link": ""
+      },
+      {
+        "title": "Prima newsletter Learning BRAINS",
+        "type": "News",
+        "description": "Siamo entusiasti di condividere la prima edizione della newsletter del progetto Learning Brains, dove presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET.",
+        "link": "",
+        "category": "Event",
+        "date": "may 2026",
+        "image": "https://drive.google.com/thumbnail?id=1-zY1h9O9qM5ZHwMLZpd_6TyNprj3Z6eD&sz=w1000",
+        "badge": "PROJECT",
+        "partner": "FVEM",
+        "_source_title": "First Learning Brains Newsletter",
+        "_source_desc": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
+        "_source_doc_link": "",
+        "slug": "first-learning-brains-newsletter",
+        "content": "Siamo entusiasti di condividere la prima edizione del bollettino del progetto Learning Brains, in cui presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET focalizzata sull'uso dell'Intelligenza Artificiale per migliorare l'apprendimento sul lavoro e i processi di riqualificazione industriale.\nQuesto primo bollettino mette in evidenza alcuni dei principali traguardi raggiunti durante i primi mesi del progetto, tra cui il Kick-off Meeting di successo tenutosi a Bilbao, dove i partner del progetto si sono riuniti per definire la roadmap strategica, la dinamica di collaborazione e le attività future per i prossimi due anni.\nIl bollettino presenta anche gli obiettivi principali del progetto e il lavoro collaborativo che sarà svolto dai partner provenienti da Spagna, Italia, Portogallo, Austria e Slovacchia per sviluppare metodologie di formazione innovative basate sull'IA e strumenti su misura per ambienti industriali e PMI.\nInoltre, i lettori troveranno informazioni sul lancio dei canali di comunicazione del progetto, le prime azioni di diffusione e le prossime attività legate alla ricerca, ai focus group, alle interviste e allo sviluppo del Programma di Formazione e del Toolkit di Learning Brains.\nAttraverso questa serie di bollettini, miriamo a mantenere informati gli stakeholder, le aziende, i fornitori di formazione professionale e la comunità più ampia sui progressi, i risultati e le opportunità di partecipazione del progetto.\nRimanete sintonizzati e seguite il percorso di Learning Brains verso sistemi di apprendimento sul lavoro più intelligenti, flessibili e centrati sull'umanità.",
+        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf"
       }
     ],
     "read_more": "Leggi di Più",
@@ -542,5 +560,12 @@
     "learn_more": "Saperne di più",
     "accept": "Accetta",
     "decline": "Rifiuta"
+  },
+  "newsletter": {
+    "viewer_title": "Pubblicazione Ufficiale del Bollettino",
+    "open_new_tab": "Schermo Intero",
+    "download_pdf": "Scarica PDF",
+    "mobile_hint": "Visualizza o scarica la versione ufficiale in PDF del nostro bollettino sul tuo dispositivo mobile.",
+    "view_pdf": "Apri Bollettino (PDF)"
   }
 }

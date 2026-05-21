@@ -232,6 +232,24 @@
         "_source_title": "Learning Brains official website!",
         "_source_desc": "We are thrilled to announce the launch of the Learning Brains official website! Learning Brains (an Erasmus+ initiative) is here to bridge the gap between vocational training and real-world industrial needs.",
         "_source_doc_link": ""
+      },
+      {
+        "title": "Prvý bulletin Learning BRAINS",
+        "type": "News",
+        "description": "S radosťou zdieľame prvý vydanie bulletinu projektu Learning Brains, kde predstavujeme úvodné kroky tejto iniciatívy Erasmus+ KA220-VET.",
+        "link": "",
+        "category": "Event",
+        "date": "may 2026",
+        "image": "https://drive.google.com/thumbnail?id=1-zY1h9O9qM5ZHwMLZpd_6TyNprj3Z6eD&sz=w1000",
+        "badge": "PROJECT",
+        "partner": "FVEM",
+        "_source_title": "First Learning Brains Newsletter",
+        "_source_desc": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
+        "_source_doc_link": "",
+        "slug": "first-learning-brains-newsletter",
+        "content": "S radosťou zdieľame prvý vydanie newsletteru projektu Learning Brains, kde predstavujeme počiatočné kroky tejto iniciatívy Erasmus+ KA220-VET zameranej na využitie umelej inteligencie na zlepšenie učenia na pracovisku a procesov preškolenia v priemysle.\nTento prvý newsletter zdôrazňuje niektoré z kľúčových míľnikov dosiahnutých počas prvých mesiacov projektu, vrátane úspešného zahajovacieho stretnutia v Bilbau, kde sa partneri projektu zišli, aby definovali strategickú cestu, spoluprácu a nadchádzajúce aktivity na nasledujúce dva roky.\nNewsletter tiež predstavuje hlavné ciele projektu a spolupracujúcu prácu, ktorú vykonajú partneri zo Španielska, Talianska, Portugalska, Rakúska a Slovenska na vývoj inovatívnych metodík a nástrojov založených na umelej inteligencii prispôsobených priemyselným prostrediam a MSP.\nOkrem toho čitatelia nájdu informácie o spustení komunikačných kanálov projektu, prvých disemináciách a nadchádzajúcich aktivitách spojených s výskumom, skupinami zameranými na určité témy, rozhovormi a vývojom programu vzdelávania a nástrojov Learning Brains.\nProstredníctvom tejto série newsletterov sa snažíme udržiavať zainteresované strany, spoločnosti, poskytovateľov odborného vzdelávania a širšiu komunitu informované o pokroku projektu, výsledkoch a príležitostiach na účasť.\nBuďte naladení a sledujte cestu projektu Learning Brains smerom k inteligentnejším, flexibilnejším a ľudskejším systémom učenia na pracovisku.",
+        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
+        "pdf_url": "/documents/first-learning-brains-newsletter.pdf"
       }
     ],
     "no_items_found": "Momentálne neboli nájdené žiadne podujatia.",
@@ -547,5 +565,12 @@
     "learn_more": "Zistit viac",
     "accept": "Prijať",
     "decline": "Odmietnuť"
+  },
+  "newsletter": {
+    "viewer_title": "Oficiálne vydanie newslettera",
+    "open_new_tab": "Celá obrazovka",
+    "download_pdf": "Stiahnuť PDF",
+    "mobile_hint": "Zobrazte alebo stiahnite si oficiálnu verziu nášho newslettera v PDF do svojho mobilného zariadenia.",
+    "view_pdf": "Otvoriť Newsletter (PDF)"
   }
 }

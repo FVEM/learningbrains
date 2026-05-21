@@ -1,13 +1,15 @@
 import React from 'react';
-import { Calendar, MapPin, ExternalLink, Tag, Bookmark } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Tag, Bookmark, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 /**
  * EventCard: Vertical card for the Project Events section.
  * Replaces the horizontal layout to match the requested design.
  */
-const EventCard = ({ item }) => {
+const EventCard = ({ item, lang }) => {
   const { t } = useTranslation();
+  const slug = item.slug;
 
   const imageUrl = item.image
     ? item.image.startsWith('http')
@@ -23,6 +25,10 @@ const EventCard = ({ item }) => {
     return <Tag className="w-3 h-3" />;
   };
 
+  const isDocImage = item.slug || 
+                     item.title?.toLowerCase().includes('newsletter') || 
+                     item.title?.toLowerCase().includes('boletín');
+
   return (
     <article className="group bg-white rounded-3xl overflow-hidden flex flex-col h-full border border-slate-50 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500">
       {/* 1. Image Header */}
@@ -31,7 +37,9 @@ const EventCard = ({ item }) => {
           <img
             src={imageUrl}
             alt={item.title}
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+            className={`w-full h-full ${
+              isDocImage ? "object-contain bg-slate-50" : "object-cover"
+            } transform group-hover:scale-105 transition-transform duration-700`}
             onError={(e) => { e.target.onerror = null; }}
           />
         ) : (
@@ -72,15 +80,25 @@ const EventCard = ({ item }) => {
 
         {/* Footer Link */}
         <div className="mt-auto pt-4 border-t border-slate-50">
-          <a
-            href={item.link || '#'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[14px] font-bold text-blue-600 hover:text-brand-primary transition-colors group/link"
-          >
-            {item.link?.includes('linkedin') ? t('news.view_on_linkedin') : t('news.read_article')}
-            <ExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-          </a>
+          {slug ? (
+            <Link
+              to={`/${lang || 'en'}/news/${slug}`}
+              className="inline-flex items-center gap-2 text-[14px] font-bold text-teal-600 hover:text-brand-primary transition-colors group/link"
+            >
+              {t('news.read_article', 'Read Article')}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+            </Link>
+          ) : (
+            <a
+              href={item.link || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[14px] font-bold text-blue-600 hover:text-brand-primary transition-colors group/link"
+            >
+              {item.link?.includes('linkedin') ? t('news.view_on_linkedin') : t('news.read_article')}
+              <ExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+            </a>
+          )}
         </div>
       </div>
     </article>

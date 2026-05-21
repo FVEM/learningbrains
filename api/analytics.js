@@ -317,7 +317,13 @@ export default async function handler(req, res) {
                 ...(enLocale?.ai_news?.items_list || [])
             ];
             itemsList.forEach(item => {
-                if (item.slug) articleMeta[item.slug] = { title: item.title, partner: item.partner };
+                if (item.slug) {
+                    articleMeta[item.slug] = { 
+                        title: item.title, 
+                        partner: item.partner,
+                        type: item.type
+                    };
+                }
             });
         } catch (e) { /* Si falla, continuamos sin metadata */ }
 
@@ -332,6 +338,7 @@ export default async function handler(req, res) {
                     slug,
                     title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
                     partner: articleMeta[slug]?.partner || 'Learning Brains',
+                    type: articleMeta[slug]?.type || 'ARTICLE',
                     views: data.views,
                     avgTime: avgEngagementTime
                 };

@@ -302,87 +302,105 @@ const Home = () => {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        {Array.isArray(t('news.items_list', { returnObjects: true })) && t('news.items_list', { returnObjects: true }).slice(0, 3).map((item, idx) => {
-                            const NewsIcon = idx === 1 ? Calendar : (idx === 2 ? Users : Newspaper);
+                        {(() => {
+                            const rawItems = t('news.items_list', { returnObjects: true });
+                            const newsItems = Array.isArray(rawItems) ? [...rawItems].reverse() : [];
+                            return newsItems.slice(0, 3).map((item, idx) => {
+                                const NewsIcon = idx === 1 ? Calendar : (idx === 2 ? Users : Newspaper);
 
-                            // Prioritize Excel data from JSON
-                            const displayImage = item.image;
-                            const displayDate = item.date;
-                            const displayLocation = item.location;
-                            const displayBadge = item.badge || item.category || "EVENT";
+                                // Prioritize Excel data from JSON
+                                const displayImage = item.image;
+                                const displayDate = item.date;
+                                const displayLocation = item.location;
+                                const displayBadge = item.badge || item.category || "EVENT";
 
-                            return (
-                                <div key={idx} className="bg-white border border-slate-100 rounded-2xl overflow-hidden group hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col">
-                                    <div className="aspect-[16/10] bg-slate-50 relative overflow-hidden">
-                                        {displayImage ? (
-                                            <img
-                                                src={displayImage.startsWith('http') ? displayImage : `${import.meta.env.BASE_URL}${displayImage.replace(/^\//, '')}`}
-                                                alt={item.title}
-                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                                onError={(e) => {
-                                                    e.target.style.display = 'none';
-                                                    const parent = e.target.parentElement;
-                                                    const placeholder = parent ? parent.querySelector('.img-placeholder') : null;
-                                                    if (placeholder) placeholder.style.display = 'flex';
-                                                }}
-                                            />
-                                        ) : null}
-                                        <div
-                                            className="img-placeholder absolute inset-0 items-center justify-center bg-slate-100 group-hover:bg-teal-50/50 transition-colors"
-                                            style={{ display: displayImage ? 'none' : 'flex' }}
-                                        >
-                                            <NewsIcon className="w-12 h-12 text-slate-200 group-hover:text-brand-secondary/30 transition-colors" />
+                                const isDocImage = item.slug || 
+                                                   item.title?.toLowerCase().includes('newsletter') || 
+                                                   item.title?.toLowerCase().includes('boletín');
+
+                                return (
+                                    <div key={idx} className="bg-white border border-slate-100 rounded-2xl overflow-hidden group hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col">
+                                        <div className="aspect-[16/10] bg-slate-50 relative overflow-hidden">
+                                            {displayImage ? (
+                                                <img
+                                                    src={displayImage.startsWith('http') ? displayImage : `${import.meta.env.BASE_URL}${displayImage.replace(/^\//, '')}`}
+                                                    alt={item.title}
+                                                    className={`w-full h-full ${
+                                                        isDocImage ? "object-contain bg-slate-50" : "object-cover"
+                                                    } transform group-hover:scale-105 transition-transform duration-700`}
+                                                    onError={(e) => {
+                                                        e.target.style.display = 'none';
+                                                        const parent = e.target.parentElement;
+                                                        const placeholder = parent ? parent.querySelector('.img-placeholder') : null;
+                                                        if (placeholder) placeholder.style.display = 'flex';
+                                                    }}
+                                                />
+                                            ) : null}
+                                            <div
+                                                className="img-placeholder absolute inset-0 items-center justify-center bg-slate-100 group-hover:bg-teal-50/50 transition-colors"
+                                                style={{ display: displayImage ? 'none' : 'flex' }}
+                                            >
+                                                <NewsIcon className="w-12 h-12 text-slate-200 group-hover:text-brand-secondary/30 transition-colors" />
+                                            </div>
+                                            <div className="absolute top-4 left-4">
+                                                <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-primary border border-slate-100 shadow-sm">
+                                                    {displayBadge}
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div className="absolute top-4 left-4">
-                                            <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-primary border border-slate-100 shadow-sm">
-                                                {displayBadge}
-                                            </span>
+                                        <div className="p-6 flex flex-col flex-grow">
+                                            <div className="flex items-center gap-4 text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-4">
+                                                {displayDate && (
+                                                    <div className="flex items-center gap-1.5">
+                                                        <Calendar className="w-3.5 h-3.5" />
+                                                        {displayDate}
+                                                    </div>
+                                                )}
+                                                {displayLocation && (
+                                                    <div className="flex items-center gap-1.5">
+                                                        <MapPin className="w-3.5 h-3.5" />
+                                                        {displayLocation}
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-primary transition-colors">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                                                {item.description}
+                                            </p>
+                                            {item.slug ? (
+                                                <Link
+                                                    to={`/${i18n.language}/news/${item.slug}`}
+                                                    className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
+                                                >
+                                                    {t('news.read_more')}
+                                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
+                                                </Link>
+                                            ) : item.link ? (
+                                                <a
+                                                    href={item.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
+                                                >
+                                                    {t('news.read_more')}
+                                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
+                                                </a>
+                                            ) : (
+                                                <Link
+                                                    to={`/${i18n.language}/news`}
+                                                    className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
+                                                >
+                                                    {t('news.read_more')}
+                                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
+                                                </Link>
+                                            )}
                                         </div>
                                     </div>
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        <div className="flex items-center gap-4 text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-4">
-                                            {displayDate && (
-                                                <div className="flex items-center gap-1.5">
-                                                    <Calendar className="w-3.5 h-3.5" />
-                                                    {displayDate}
-                                                </div>
-                                            )}
-                                            {displayLocation && (
-                                                <div className="flex items-center gap-1.5">
-                                                    <MapPin className="w-3.5 h-3.5" />
-                                                    {displayLocation}
-                                                </div>
-                                            )}
-                                        </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-primary transition-colors">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
-                                            {item.description}
-                                        </p>
-                                        {item.link ? (
-                                            <a
-                                                href={item.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
-                                            >
-                                                {t('news.read_more')}
-                                                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
-                                            </a>
-                                        ) : (
-                                            <Link
-                                                to={`/${i18n.language}/news`}
-                                                className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
-                                            >
-                                                {t('news.read_more')}
-                                                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
-                                            </Link>
-                                        )}
-                                    </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            });
+                        })()}
                     </div>
                 </div>
             </section >

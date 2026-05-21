@@ -192,6 +192,12 @@ function sourceChanged(sheetItem, existingItem) {
     const sheetDesc    = sheetItem.description_en || sheetItem.description || '';
     const sheetDocLink = sheetItem.doc_link || '';
 
+    const rawLink      = sheetItem.link_url || sheetItem.link || '';
+    const hasDocLink   = !!(sheetDocLink || rawLink.includes('docs.google.com/document'));
+    if (hasDocLink && !existingItem.slug) {
+        return true;
+    }
+
     const existTitle   = existingItem._source_title   || existingItem.title || '';
     const existDesc    = existingItem._source_desc    || existingItem.description || '';
     const existDocLink = existingItem._source_doc_link || existingItem.doc_link || '';
@@ -229,7 +235,13 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
 
         const key      = itemKey(rawLink, fallbackTitle);
         const existing = existingMap[key];
-        const changed  = sourceChanged(sheetRow, existing);
+        let changed  = sourceChanged(sheetRow, existing);
+
+        const docLink = sheetRow.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
+        const hasDocLink = !!docLink;
+        if (existing && hasDocLink && !existing.slug) {
+            changed = true;
+        }
 
         // ── Metadata that always syncs from Sheet (safe to update) ──
         const rawImage  = sheetRow.image_url || sheetRow.image || '';
@@ -281,37 +293,37 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
         let slug        = '';
         let contentText = '';
 
-        if (isArticle) {
+        // Generate slug + fetch content for ANY item with a Google Doc link (doc_link or link_url)
+        // docLink and hasDocLink are already defined at the start of the loop
+
+        if (hasDocLink) {
             slug = generateSlug(fallbackTitle);
 
-            const docLink = sheetRow.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
-            if (docLink) {
-                const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
-                if (docMatch && docMatch[1]) {
-                    const docId = docMatch[1];
-                    // Only re-fetch Google Doc if source actually changed or we have no content yet
-                    const alreadyHasContent = existing && existing.content && existing.content.length > 50;
-                    const docLinkChanged    = (existing?._source_doc_link || existing?.doc_link || '') !== docLink;
+            const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
+            if (docMatch && docMatch[1]) {
+                const docId = docMatch[1];
+                // Only re-fetch Google Doc if source actually changed or we have no content yet
+                const alreadyHasContent = existing && existing.content && existing.content.length > 50;
+                const docLinkChanged    = (existing?._source_doc_link || existing?.doc_link || '') !== docLink;
 
-                    if (docContentCache[docId]) {
-                        contentText = docContentCache[docId];
-                    } else if (!alreadyHasContent || docLinkChanged) {
-                        try {
-                            const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
-                            if (res.ok) {
-                                const rawText = await res.text();
-                                contentText = cleanContent(rawText, fallbackTitle);
-                                docContentCache[docId] = contentText;
-                                console.log(`    ✓ Fetched Google Doc (${contentText.length} chars)`);
-                            }
-                        } catch (e) {
-                            console.error('    ✗ Error fetching doc', docId, e.message);
-                            // Preserve existing content rather than losing it
-                            contentText = existing?.content || '';
+                if (docContentCache[docId]) {
+                    contentText = docContentCache[docId];
+                } else if (!alreadyHasContent || docLinkChanged) {
+                    try {
+                        const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
+                        if (res.ok) {
+                            const rawText = await res.text();
+                            contentText = cleanContent(rawText, fallbackTitle);
+                            docContentCache[docId] = contentText;
+                            console.log(`    ✓ Fetched Google Doc (${contentText.length} chars)`);
                         }
-                    } else {
+                    } catch (e) {
+                        console.error('    ✗ Error fetching doc', docId, e.message);
+                        // Preserve existing content rather than losing it
                         contentText = existing?.content || '';
                     }
+                } else {
+                    contentText = existing?.content || '';
                 }
             }
         }
@@ -320,7 +332,8 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             title,
             type: itemType,
             description,
-            link: rawLink,
+            // If the link is a Google Doc, don't expose it as the card's external link
+            link: hasDocLink ? '' : rawLink,
             category: sheetRow.category || '',
             date:     sheetRow.date     || '',
             image:    finalImage,
@@ -332,10 +345,10 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             _source_doc_link: sheetRow.doc_link || ''
         };
 
-        if (isArticle) {
+        if (hasDocLink) {
             if (slug)        newItem.slug     = slug;
             if (contentText) newItem.content  = contentText;
-            if (sheetRow.doc_link) newItem.doc_link = sheetRow.doc_link;
+            newItem.doc_link = docLink;
         }
 
         result.push(newItem);
