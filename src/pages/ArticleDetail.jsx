@@ -380,100 +380,42 @@ const ArticleDetail = () => {
 
         {/* ── PDF Newsletter Embed Module ── */}
         {resolvedPdfUrl && (
-          <div className="mt-12 bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
-            {/* Dark Premium Glassmorphic Header */}
-            <div className="bg-slate-900 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-red-500/15 flex items-center justify-center text-red-500 border border-red-500/10">
-                  <FileText className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-xs font-bold tracking-wide uppercase text-slate-300">{t('newsletter.viewer_title', 'Official Newsletter Publication')}</h3>
-                  <p className="text-[10px] text-slate-400 font-mono mt-0.5">PDF Document · 2.3 MB</p>
-                </div>
+          <div className="mt-12 bg-white rounded-3xl border border-slate-100 shadow-md p-8 sm:p-12 flex flex-col sm:flex-row items-center sm:items-start gap-8 justify-between relative overflow-hidden group">
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 transition-transform group-hover:scale-110 duration-700"></div>
+
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 relative z-10 w-full sm:w-auto text-center sm:text-left">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-3xl bg-brand-primary/5 flex items-center justify-center text-brand-primary border-2 border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative">
+                 <div className="absolute inset-0 border border-brand-primary/10 rounded-3xl"></div>
+                 <FileText className="w-10 h-10 sm:w-12 sm:h-12 drop-shadow-sm" />
               </div>
-              <div className="flex items-center gap-2">
-                <a
-                  href={resolvedPdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all border border-white/10"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  <span>{t('newsletter.open_new_tab', 'Fullscreen')}</span>
-                </a>
-                <a
-                  href={resolvedPdfUrl}
-                  download="Learning_Brains_Newsletter_1.pdf"
-                  className="px-3.5 py-1.5 rounded-lg bg-brand-secondary hover:bg-brand-secondary/95 text-slate-900 text-xs font-bold flex items-center gap-1.5 transition-all"
-                >
-                  <Download className="w-3.5 h-3.5" />
-                  <span>{t('newsletter.download_pdf', 'Download')}</span>
-                </a>
+              <div>
+                <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
+                   <span className="px-2.5 py-1 rounded-md bg-brand-primary/10 text-brand-primary text-[10px] font-bold tracking-wider uppercase">PDF Document</span>
+                   <span className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-500 text-[10px] font-bold tracking-wider uppercase">2.3 MB</span>
+                </div>
+                <h4 className="text-slate-800 font-extrabold text-xl sm:text-2xl">{t('newsletter.viewer_title', 'Official Newsletter Publication')}</h4>
               </div>
             </div>
-
-            {/* Viewer Content Frame */}
-            <div className="p-4 bg-slate-50 border-t border-slate-100">
-              {/* Desktop embedded PDF viewer */}
-              <div className="hidden md:block relative w-full h-[750px] rounded-2xl overflow-hidden shadow-inner border border-slate-200 bg-white">
-                <object
-                  data={`${resolvedPdfUrl}#toolbar=1`}
-                  type="application/pdf"
-                  className="w-full h-full border-0"
-                  title={article.title}
-                >
-                  {/* Premium Fallback Card inside the frame */}
-                  <div className="flex flex-col items-center justify-center p-12 text-center h-full bg-slate-50">
-                    <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center text-red-500 mb-4 border border-red-100/60 shadow-sm animate-pulse">
-                      <FileText className="w-8 h-8" />
-                    </div>
-                    <h4 className="text-slate-800 font-bold text-lg mb-2">
-                      {t('newsletter.fallback_title', 'Preview Not Available')}
-                    </h4>
-                    <p className="text-slate-500 text-sm mb-6 max-w-md">
-                      {t('newsletter.fallback_desc', 'Your browser does not support inline PDF viewing or is configured to download files. You can download the PDF to view it on your device.')}
-                    </p>
-                    <a
-                      href={resolvedPdfUrl}
-                      download="Learning_Brains_Newsletter_1.pdf"
-                      className="px-6 py-3 rounded-xl bg-brand-secondary text-slate-900 font-bold text-sm flex items-center gap-2 hover:bg-brand-secondary/95 transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
-                    >
-                      <Download className="w-4 h-4" />
-                      {t('newsletter.download_pdf', 'Download PDF')}
-                    </a>
-                  </div>
-                </object>
-              </div>
-
-              {/* Mobile custom preview and direct button */}
-              <div className="md:hidden p-8 text-center bg-white rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center">
-                <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center text-red-500 mb-4 border border-red-100/60 shadow-sm">
-                  <FileText className="w-8 h-8" />
-                </div>
-                <h4 className="text-slate-800 font-bold text-base mb-1">{article.title}</h4>
-                <p className="text-slate-400 text-xs mb-6 max-w-xs">{t('newsletter.mobile_hint', 'View or download the official PDF version of our newsletter on your mobile device.')}</p>
-
-                <div className="flex flex-col gap-3 w-full">
-                  <a
-                    href={resolvedPdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3 px-4 rounded-xl bg-brand-secondary text-slate-900 font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-secondary/95 transition-all shadow-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    {t('newsletter.view_pdf', 'Open Newsletter (PDF)')}
-                  </a>
-                  <a
-                    href={resolvedPdfUrl}
-                    download="Learning_Brains_Newsletter_1.pdf"
-                    className="w-full py-3 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-600 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-slate-100 transition-all"
-                  >
-                    <Download className="w-4 h-4" />
-                    {t('newsletter.download_pdf', 'Download PDF')}
-                  </a>
-                </div>
-              </div>
+            
+            <div className="flex flex-col gap-3 w-full sm:w-64 shrink-0 relative z-10 mt-4 sm:mt-0">
+              <a
+                href={resolvedPdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 px-6 rounded-xl bg-brand-secondary text-slate-900 font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-secondary/90 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.05)] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                <ExternalLink className="w-5 h-5" />
+                {t('newsletter.open_new_tab', 'Fullscreen')}
+              </a>
+              <a
+                href={resolvedPdfUrl}
+                download="Learning_Brains_Newsletter_1.pdf"
+                className="w-full py-4 px-6 rounded-xl border-2 border-slate-100 bg-white text-slate-600 font-bold text-sm flex items-center justify-center gap-2 hover:border-slate-200 hover:bg-slate-50 transition-all active:translate-y-0"
+              >
+                <Download className="w-5 h-5" />
+                {t('newsletter.download_pdf', 'Download PDF')}
+              </a>
             </div>
           </div>
         )}
