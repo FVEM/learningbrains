@@ -192,9 +192,9 @@
         "_source_doc_link": ""
       },
       {
-        "title": "Prossimo workshop: Intelligenza Artificiale nella Formazione Professionale",
+        "title": "Prossimo workshop: Intelligenza Artificiale nella formazione professionale.",
         "type": "News",
-        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti da tutta Europa per condividere conoscenze e migliori pratiche.",
+        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti provenienti da tutta Europa per condividere conoscenze e best practices.",
         "link": "",
         "category": "Meeting",
         "date": "Coming Soon",
@@ -234,23 +234,21 @@
         "_source_doc_link": ""
       },
       {
-        "title": "Prima newsletter Learning BRAINS",
+        "title": "Prima newsletter di Learning Brains",
         "type": "News",
         "description": "Siamo entusiasti di condividere la prima edizione della newsletter del progetto Learning Brains, dove presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET.",
         "link": "",
-        "category": "Newsletter",
+        "category": "Event",
         "date": "may 2026",
         "image": "https://drive.google.com/thumbnail?id=1-zY1h9O9qM5ZHwMLZpd_6TyNprj3Z6eD&sz=w1000",
-        "badge": "Newsletter",
+        "badge": "NEWSLETTER",
         "partner": "FVEM",
         "_source_title": "First Learning Brains Newsletter",
         "_source_desc": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
         "_source_doc_link": "",
         "slug": "first-learning-brains-newsletter",
-        "content": "Siamo entusiasti di condividere la prima edizione del bollettino del progetto Learning Brains, in cui presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET focalizzata sull'uso dell'Intelligenza Artificiale per migliorare l'apprendimento sul lavoro e i processi di riqualificazione industriale.\nQuesto primo bollettino mette in evidenza alcuni dei principali traguardi raggiunti durante i primi mesi del progetto, tra cui il Kick-off Meeting di successo tenutosi a Bilbao, dove i partner del progetto si sono riuniti per definire la roadmap strategica, la dinamica di collaborazione e le attività future per i prossimi due anni.\nIl bollettino presenta anche gli obiettivi principali del progetto e il lavoro collaborativo che sarà svolto dai partner provenienti da Spagna, Italia, Portogallo, Austria e Slovacchia per sviluppare metodologie di formazione innovative basate sull'IA e strumenti su misura per ambienti industriali e PMI.\nInoltre, i lettori troveranno informazioni sul lancio dei canali di comunicazione del progetto, le prime azioni di diffusione e le prossime attività legate alla ricerca, ai focus group, alle interviste e allo sviluppo del Programma di Formazione e del Toolkit di Learning Brains.\nAttraverso questa serie di bollettini, miriamo a mantenere informati gli stakeholder, le aziende, i fornitori di formazione professionale e la comunità più ampia sui progressi, i risultati e le opportunità di partecipazione del progetto.\nRimanete sintonizzati e seguite il percorso di Learning Brains verso sistemi di apprendimento sul lavoro più intelligenti, flessibili e centrati sull'umanità.",
-        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
-        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
-        "pdf_embed_url": "https://drive.google.com/file/d/1QQfyRR0j2yDJennqb616dJYrgm0ycIcE/view?usp=drive_link"
+        "content": "Siamo entusiasti di condividere la prima edizione del bollettino del progetto Learning Brains, in cui presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET incentrata sull'uso dell'Intelligenza Artificiale per migliorare i processi di apprendimento sul lavoro e di riqualificazione industriale.\nQuesto primo bollettino mette in evidenza alcuni dei principali traguardi raggiunti durante i primi mesi del progetto, tra cui il Kick-off Meeting di successo tenutosi a Bilbao, dove i partner del progetto si sono riuniti per definire la roadmap strategica, la dinamica di collaborazione e le attività imminenti per i prossimi due anni.\nIl bollettino presenta anche gli obiettivi principali del progetto e il lavoro collaborativo che sarà svolto dai partner provenienti da Spagna, Italia, Portogallo, Austria e Slovacchia per sviluppare metodologie di formazione innovative basate sull'IA e strumenti su misura per ambienti industriali e PMI.\nInoltre, i lettori troveranno informazioni sul lancio dei canali di comunicazione del progetto, sulle prime azioni di diffusione e sulle attività imminenti legate alla ricerca, ai gruppi di discussione, alle interviste e allo sviluppo del Programma di Formazione e del Toolkit di Learning Brains.\nAttraverso questa serie di bollettini, miriamo a mantenere informati gli stakeholder, le aziende, i fornitori di formazione professionale e la comunità più ampia sui progressi del progetto, sui risultati e sulle opportunità di partecipazione.\nRimanete sintonizzati e seguite il percorso di Learning Brains verso sistemi di apprendimento sul lavoro più intelligenti, flessibili e centrati sull'umanità.",
+        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing"
       }
     ],
     "read_more": "Leggi di Più",
@@ -514,6 +512,20 @@
         "_source_doc_link": "",
         "slug": "from-training-to-real-skills",
         "content": "Nel panorama industriale odierno, il cambiamento avviene più rapidamente che mai. L'automazione, la digitalizzazione, l'intelligenza artificiale e i sistemi di produzione in evoluzione stanno trasformando il modo in cui le aziende operano. Mentre le industrie si adattano, una sfida diventa sempre più urgente: come possono i lavoratori sviluppare continuamente le competenze necessarie per tenere il passo con il cambiamento?\nI metodi tradizionali di formazione sul posto di lavoro non sono più sufficienti.\nPer decenni, la formazione dei dipendenti si è spesso basata su seminari occasionali, presentazioni statiche o sessioni in aula disconnesse dalle reali situazioni lavorative. Sebbene questi approcci abbiano ancora valore, spesso faticano a produrre un impatto duraturo in ambienti industriali in rapida evoluzione. I dipendenti possono acquisire conoscenze teoriche, ma applicarle efficacemente in contesti reali rimane una sfida.\nLe moderne industrie richiedono un approccio diverso - uno che dia priorità alla formazione continua, all'applicazione pratica e all'adattabilità.\nÈ qui che diventa essenziale l'apprendimento sul campo. Invece di separare la formazione dal lavoro quotidiano, i dipendenti imparano mentre svolgono compiti reali, risolvono sfide pratiche e sviluppano competenze direttamente rilevanti per i loro ruoli. L'apprendimento si integra nei flussi di lavoro quotidiani, rendendolo più coinvolgente, efficiente e incisivo.\nAllo stesso tempo, l'intelligenza artificiale (IA) sta aprendo nuove possibilità per l'istruzione sul posto di lavoro. Gli strumenti di apprendimento alimentati dall'IA possono supportare esperienze di formazione più personalizzate, adattando i contenuti ai livelli di competenza dei dipendenti, al ritmo di apprendimento e alle esigenze professionali. Ciò aiuta le aziende a passare da modelli di formazione \"un taglia per tutti\" a soluzioni di apprendimento più intelligenti e mirate.\nPer le PMI industriali in particolare, questo cambiamento è sempre più importante. Le aziende più piccole spesso affrontano risorse limitate per la formazione, mentre sperimentano una forte pressione per rimanere competitive in mercati in rapida evoluzione. Approcci flessibili basati sul lavoro supportati da strumenti digitali e alimentati dall'IA possono contribuire a colmare questa lacuna.\nIl progetto Learning Brains risponde direttamente a queste sfide esplorando modi innovativi per integrare l'IA nell'apprendimento sul posto di lavoro e nel riqualificare l'industria. Sostenendo la collaborazione tra fornitori di istruzione professionale, partner industriali e professionisti della formazione in tutta Europa, il progetto mira a rafforzare la preparazione della forza lavoro per il futuro dell'industria.\nPerché nel mondo industriale moderno, l'apprendimento non è più qualcosa che accade occasionalmente - deve diventare parte del lavoro quotidiano."
+      },
+      {
+        "title": "Gruppo di discussione - Spagna",
+        "type": "NEWS",
+        "description": "La Federación Vizcaína de Empresas del Metal sta organizzando un Focus Group rivolto a aziende industriali interessate a esplorare e discutere il reale impatto dell'Intelligenza Artificiale sui processi di apprendimento sul posto di lavoro e di formazione aziendale.",
+        "link": "https://www.linkedin.com/posts/erasmus-learningbrainsproject-industrialreskilling-ugcPost-7462104936118480896-xOLT?utm_source=share&utm_medium=member_desktop&rcm=ACoAACY8XM8BqJfYfkjdGmv0NP3jG_Hs9geyy50",
+        "category": "Meeting",
+        "date": "2026-05-21",
+        "image": "https://drive.google.com/thumbnail?id=1Q_av9mB55Stjx8JxEFmQqcXUdDuAODD3&sz=w1000",
+        "badge": "",
+        "partner": "FVEM",
+        "_source_title": "Focus Group - Spain",
+        "_source_desc": "Federación Vizcaína de Empresas del Metal is organizing a Focus Group aimed at industrial companies interested in exploring and discussing the real impact of Artificial Intelligence on workplace learning and corporate training processes.",
+        "_source_doc_link": ""
       }
     ]
   },

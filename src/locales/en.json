@@ -234,23 +234,21 @@
         "_source_doc_link": ""
       },
       {
-        "title": "First Learning BRAINS Newsletter",
+        "title": "First Learning Brains Newsletter",
         "type": "News",
         "description": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
         "link": "",
-        "category": "Newsletter",
+        "category": "Event",
         "date": "may 2026",
         "image": "https://drive.google.com/thumbnail?id=1-zY1h9O9qM5ZHwMLZpd_6TyNprj3Z6eD&sz=w1000",
-        "badge": "Newsletter",
+        "badge": "NEWSLETTER",
         "partner": "FVEM",
         "_source_title": "First Learning Brains Newsletter",
         "_source_desc": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
         "_source_doc_link": "",
         "slug": "first-learning-brains-newsletter",
         "content": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative focused on the use of Artificial Intelligence to improve on-the-job learning and industrial reskilling processes.\nThis first newsletter highlights some of the key milestones achieved during the first months of the project, including the successful Kick-off Meeting held in Bilbao, where project partners came together to define the strategic roadmap, collaboration dynamics and upcoming activities for the next two years.\nThe newsletter also introduces the main objectives of the project and the collaborative work that will be carried out by partners from Spain, Italy, Portugal, Austria and Slovakia to develop innovative AI-based training methodologies and tools tailored to industrial environments and SMEs.\nIn addition, readers will find information about the launch of the project’s communication channels, the first dissemination actions, and the upcoming activities linked to research, focus groups, interviews and the development of the Learning Brains Training Programme and Toolkit.\nThrough this newsletter series, we aim to keep stakeholders, companies, VET providers and the wider community informed about the project’s progress, results and opportunities for participation.\nStay tuned and follow the Learning Brains journey towards smarter, more flexible and more human-centred workplace learning systems.",
-        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
-        "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
-        "pdf_embed_url": "https://drive.google.com/file/d/1QQfyRR0j2yDJennqb616dJYrgm0ycIcE/view?usp=drive_link"
+        "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing"
       }
     ],
     "no_items_found": "No news items found.",
@@ -522,6 +520,20 @@
         "_source_doc_link": "",
         "slug": "from-training-to-real-skills",
         "content": "In today’s industrial landscape, change is happening faster than ever. Automation, digitalisation, artificial intelligence, and evolving production systems are transforming how companies operate. As industries adapt, one challenge becomes increasingly urgent: how can workers continuously develop the skills needed to keep pace with change?\nTraditional workplace training methods are no longer enough.\nFor decades, employee training often relied on one-off seminars, static presentations, or classroom-based sessions disconnected from real workplace situations. While these approaches still have value, they often struggle to deliver lasting impact in fast-changing industrial environments. Employees may gain theoretical knowledge, but applying it effectively in real-world settings remains a challenge.\nModern industries require a different approach — one that prioritises continuous learning, practical application, and adaptability.\nThis is where on-the-job learning becomes essential. Instead of separating training from daily work, employees learn while performing real tasks, solving practical challenges, and developing skills directly relevant to their roles. Learning becomes embedded into everyday workflows, making it more engaging, efficient, and impactful.\nAt the same time, artificial intelligence (AI) is opening new possibilities for workplace education. AI-powered learning tools can support more personalised training experiences, adapting content to employees’ skill levels, learning pace, and professional needs. This helps companies move away from “one-size-fits-all” training models toward smarter and more targeted learning solutions.\nFor industrial SMEs in particular, this shift is increasingly important. Smaller companies often face limited resources for training while also experiencing strong pressure to remain competitive in rapidly changing markets. Flexible, workplace-based learning approaches supported by digital and AI-driven tools can help bridge this gap.\nThe Learning Brains project responds directly to these challenges by exploring innovative ways to integrate AI into workplace learning and industrial reskilling. By supporting collaboration between vocational education providers, industry partners, and training professionals across Europe, the project aims to strengthen workforce readiness for the future of industry.\nBecause in the modern industrial world, learning is no longer something that happens occasionally — it must become part of everyday work."
+      },
+      {
+        "title": "Focus Group - Spain",
+        "type": "NEWS",
+        "description": "Federación Vizcaína de Empresas del Metal is organizing a Focus Group aimed at industrial companies interested in exploring and discussing the real impact of Artificial Intelligence on workplace learning and corporate training processes.",
+        "link": "https://www.linkedin.com/posts/erasmus-learningbrainsproject-industrialreskilling-ugcPost-7462104936118480896-xOLT?utm_source=share&utm_medium=member_desktop&rcm=ACoAACY8XM8BqJfYfkjdGmv0NP3jG_Hs9geyy50",
+        "category": "Meeting",
+        "date": "2026-05-21",
+        "image": "https://drive.google.com/thumbnail?id=1Q_av9mB55Stjx8JxEFmQqcXUdDuAODD3&sz=w1000",
+        "badge": "",
+        "partner": "FVEM",
+        "_source_title": "Focus Group - Spain",
+        "_source_desc": "Federación Vizcaína de Empresas del Metal is organizing a Focus Group aimed at industrial companies interested in exploring and discussing the real impact of Artificial Intelligence on workplace learning and corporate training processes.",
+        "_source_doc_link": ""
       }
     ]
   },
