@@ -400,7 +400,7 @@ const ArticleDetail = () => {
             
             <div className="flex flex-col gap-3 w-full sm:w-64 shrink-0 relative z-10 mt-4 sm:mt-0">
               <a
-                href={resolvedPdfUrl}
+                href={article.pdf_embed_url || resolvedPdfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 px-6 rounded-xl bg-brand-secondary text-slate-900 font-bold text-sm flex items-center justify-center gap-2 hover:bg-brand-secondary/90 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.05)] hover:-translate-y-0.5 active:translate-y-0"
@@ -409,7 +409,7 @@ const ArticleDetail = () => {
                 {t('newsletter.open_new_tab', 'Fullscreen')}
               </a>
               <a
-                href={resolvedPdfUrl}
+                href={article.pdf_embed_url || resolvedPdfUrl}
                 download="Learning_Brains_Newsletter_1.pdf"
                 className="w-full py-4 px-6 rounded-xl border-2 border-slate-100 bg-white text-slate-600 font-bold text-sm flex items-center justify-center gap-2 hover:border-slate-200 hover:bg-slate-50 transition-all active:translate-y-0"
               >
