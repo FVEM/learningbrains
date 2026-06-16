@@ -17,7 +17,18 @@ const News = () => {
   // Use optional chaining and fallback to empty array to prevent mapping error
   const newsItemsRaw = t("news.items_list", { returnObjects: true }) || [];
   const newsItems = useMemo(() => {
-    return Array.isArray(newsItemsRaw) ? [...newsItemsRaw].reverse() : [];
+    if (!Array.isArray(newsItemsRaw)) return [];
+    const sorted = [...newsItemsRaw].sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      if (isNaN(dateA) && isNaN(dateB)) return 0;
+      if (isNaN(dateA)) return 1;
+      if (isNaN(dateB)) return -1;
+      return dateB - dateA;
+    });
+    console.log('newsItemsRaw:', newsItemsRaw.map(i => i.date));
+    console.log('sorted:', sorted.map(i => i.date));
+    return sorted;
   }, [newsItemsRaw]);
 
   // Extract dynamic categories from items to build dynamic filter pills

@@ -236,7 +236,7 @@
       {
         "title": "Prvý newsletter Learning Brains",
         "type": "News",
-        "description": "S radosťou zdieľame prvý vydanie bulletinu projektu Learning Brains, v ktorom predstavujeme úvodné kroky tejto iniciatívy Erasmus+ KA220-VET.",
+        "description": "S radosťou zdieľame prvý vydanie bulletinu projektu Learning Brains, kde predstavujeme prvotné kroky tejto iniciatívy Erasmus+ KA220-VET.",
         "link": "",
         "category": "Newsletter",
         "date": "may 2026",
@@ -247,7 +247,7 @@
         "_source_desc": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
         "_source_doc_link": "",
         "slug": "first-learning-brains-newsletter",
-        "content": "S radosťou zdieľame prvý vydanie bulletinu projektu Learning Brains, kde predstavujeme počiatočné kroky tejto iniciatívy Erasmus+ KA220-VET zameranej na využitie umelej inteligencie na zlepšenie učenia na pracovisku a procesov preškolenia v priemysle.\nTento prvý bulletin zdôrazňuje niektoré z kľúčových míľnikov dosiahnutých počas prvých mesiacov projektu, vrátane úspešného zahajovacieho stretnutia v Bilbau, kde sa partneri projektu zišli, aby definovali strategickú cestu, spoluprácu a nadchádzajúce aktivity na nasledujúce dva roky.\nBulletin tiež predstavuje hlavné ciele projektu a spoluprácovnú prácu, ktorú vykonajú partneri zo Španielska, Talianska, Portugalska, Rakúska a Slovenska na vývoj inovatívnych metodík a nástrojov na tréning založených na umelej inteligencii prispôsobených priemyselným prostrediam a MSP.\nOkrem toho čitatelia nájdu informácie o spustení komunikačných kanálov projektu, prvých disemináciách a nadchádzajúcich aktivitách spojených s výskumom, skupinami zameranými na určité témy, rozhovormi a vývojom programu tréningu a sady nástrojov Learning Brains.\nS touto sériou bulletinov si kladieme za cieľ informovať zainteresované strany, spoločnosti, poskytovateľov odborného vzdelávania a širšiu komunitu o pokroku projektu, výsledkoch a príležitostiach na účasť.\nBuďte naladení a sledujte cestu projektu Learning Brains smerom k inteligentnejším, flexibilnejším a viac ľudsko-zameraným systémom učenia na pracovisku.",
+        "content": "S radosťou zdieľame prvý vydanie bulletinu projektu Learning Brains, kde predstavujeme počiatočné kroky tejto iniciatívy Erasmus+ KA220-VET zameranej na využitie umelej inteligencie na zlepšenie učenia na pracovisku a procesov rekvalifikácie v priemysle. Tento prvý bulletin zdôrazňuje niektoré z kľúčových míľnikov dosiahnutých počas prvých mesiacov projektu, vrátane úspešného zahajovacieho stretnutia v Bilbau, kde sa partneri projektu zišli na definovanie strategického plánu, spolupracovných dynamík a nadchádzajúcich aktivít na nasledujúce dva roky. Bulletin tiež predstavuje hlavné ciele projektu a spolupracovnú prácu, ktorú vykonajú partneri zo Španielska, Talianska, Portugalska, Rakúska a Slovenska na vývoj inovatívnych metodík a nástrojov založených na umelej inteligencii prispôsobených priemyselným prostrediam a MSP. Okrem toho čitatelia nájdu informácie o spustení komunikačných kanálov projektu, prvých disemináciách a nadchádzajúcich aktivitách spojených s výskumom, skupinami zameranými na určité témy, pohovormi a vývojom programu vzdelávania a nástrojov Learning Brains. S touto sériou bulletinov si kladieme za cieľ informovať zainteresované strany, spoločnosti, poskytovateľov odborného vzdelávania a širšiu komunitu o pokroku projektu, výsledkoch a možnostiach na účasť. Buďte naladení a sledujte cestu projektu Learning Brains smerom k inteligentnejším, flexibilnejším a viac ľudskocentrovaným systémom pracovného učenia.",
         "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
         "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
         "pdf_embed_url": "https://drive.google.com/file/d/1QQfyRR0j2yDJennqb616dJYrgm0ycIcE/view?usp=drive_link"
@@ -494,7 +494,7 @@
         "description": "Mesto Bilbao nedávno hostilo zahajovacie stretnutie projektu Erasmus+ Learning BRAINS - Integrované systémy učenia na pracovisku pre priekvalifikáciu v priemysle, čím oficiálne označilo začiatok vzrušujúcej dvojročnej európskej spolupráce zameranej na inovácie, učenie založené na umelej inteligencii a priekvalifikáciu v priemysle.",
         "link": "https://docs.google.com/document/d/1dGkafw8HBVuecJHvEprEYqgosPf4D7Gr/edit",
         "category": "Meeting",
-        "date": "2026-05-14",
+        "date": "2026-02-24",
         "image": "https://drive.google.com/thumbnail?id=1hcCrgtJlL0reuyHSsts_nVGVq9wEQaZW&sz=w1000",
         "badge": "",
         "partner": "FVEM",
@@ -533,6 +533,23 @@
         "_source_title": "Focus Group - Spain",
         "_source_desc": "Federación Vizcaína de Empresas del Metal is organizing a Focus Group aimed at industrial companies interested in exploring and discussing the real impact of Artificial Intelligence on workplace learning and corporate training processes.",
         "_source_doc_link": ""
+      },
+      {
+        "title": "IA ako spojenec pri digitálnej transformácii pre dospelých.",
+        "type": "ARTICLE",
+        "description": "Zručnosti požadované na trhu práce sa menia rýchlejšie, než dokážu tradičné vzdelávacie systémy udržať krok, a dospelí čelia dvojitej výzve: prispôsobiť sa existujúcim technológiám a zároveň sa pripraviť na tie, ktoré ešte len prichádzajú.",
+        "link": "",
+        "category": "Research",
+        "date": "2026-06-09",
+        "image": "https://drive.google.com/thumbnail?id=1oIfq7L7102bKdF8NF2U1Ln_3oC7PB_An&sz=w1000",
+        "badge": "",
+        "partner": "S.I.",
+        "_source_title": "AI as an Ally in the Digital Transition for Adults",
+        "_source_desc": "The skills demanded by the labour market change faster than traditional education systems can keep up with, and adults face a double challenge: adapting to existing technologies while simultaneously preparing for those that are still emerging.",
+        "_source_doc_link": "",
+        "slug": "ai-as-an-ally-in",
+        "content": "Žijeme v ére, kde digitálna transformácia postupuje nevídaným tempom. Zručnosti, ktoré požaduje trh práce, sa menia rýchlejšie, než dokážu tradičné vzdelávacie systémy udržať krok, a dospelí čelia dvojitému výzvam: prispôsobiť sa existujúcim technológiám a zároveň sa pripraviť na tie, ktoré ešte len vznikajú.\nČísla hovoria jasný príbeh. Podľa Svetovej banky asi 2,6 miliardy ľudí stále žije bez prístupu na internet. V rámci Európskej únie sám takmer polovica dospelých nemá dostatočné digitálne zručnosti na pohodlnú navigáciu v dnešnom digitálnom prostredí. Zároveň sa umelelá inteligencia (AI), kybernetická bezpečnosť a veda o dátach stali veľmi cenými a čoraz nevyhnutnejšími kompetenciami.\nExistuje rozšírený predpoklad, že starší dospelí majú ťažšie naučiť sa digitálne zručnosti. Vedecké dôkazy však tento stereotyp vyvracajú: ľudia si zachovávajú svoju kognitívnu kapacitu s vekom a učenie je možné v akejkoľvek fáze života.\nTo, čo skutočne bráni dospelým v digitálnom učení, nie je biológia, ale kontextuálne a emocionálne faktory:\n* Nedostatok prístupu k adekvátnemu, úrovni vhodnému vzdelávaniu\n* Úzkosť z technológií a strach z chýb v digitálnych prostrediach\n* Negatívne predchádzajúce skúsenosti s technológiou alebo formálnymi vzdelávacími systémami\n* Nedostatok času a vnútornej motivácie\n* Vzdelávací obsah, ktorý nie je zosúladený s reálnymi životnými a profesionálnymi kontextmi\nJedným z najvýznamnejších pokrokov, ktoré AI prináša do vzdelávania dospelých, je schopnosť personalizovať cestu každého študenta. Adaptívne učebné systémy dokážu identifikovať aktuálnu úroveň zručností používateľa, zistiť konkrétne medzery a navrhnúť obsah prispôsobený ich tempu, štýlu učenia a profesionálnemu kontextu. Na rozdiel od pružných tradičných kurzov môže platforma poháňaná AI ponúknuť stavebníkovi praktické cvičenia zamerané na digitálne nástroje relevantné pre jeho odvetvie, zatiaľ čo môže odporučiť účtovníkovi cesty zamerané na finančný softvér alebo automatizáciu procesov.\nAI založené virtuálne asistenti fungujú ako osobní učitelia, ktorí sú neustále k dispozícii. Dokážu odpovedať na otázky prirodzeným jazykom, vysvetliť koncepty jednoducho, poskytnúť okamžitú spätnú väzbu na cvičeniach a monitorovať pokrok študenta bez súdov. Táto neustála dostupnosť je obzvlášť dôležitá pre dospelých, ktorí študujú mimo pracovných hodín alebo ktorí majú obavy z odhalenia svojich ťažkostí v skupinovom prostredí. AI vytvára bezpečné prostredie na učenie sa vo vlastnom tempe.\nMnoho dospelých s nízkymi kvalifikáciami sa tiež stretáva s problémami s základnou gramotnosťou. AI nástroje s funkciou prekladu textu na reč, automatickým prekladom a zjednodušením jazyka môžu zabezpečiť prístup k digitálnym znalostiam viac ľuďom, dosahujúc populácie, ktoré tradičné systémy zlyhávajú.\nDigitálna transformácia nemôže byť dosiahnutá len technológiou: vyžaduje si ľudí, ktorí sú vybavení na to, aby učili iných. AI môže podporiť samotných trénerov, pomáhajúc im vytvárať prispôsobené pedagogické materiály, monitorovať pokrok kohorty a identifikovať, kto potrebuje dodatočnú podporu. Ide o to, či táto transformácia bude inkluzívna - či dosiahne všetkých dospelých, bez ohľadu na vek, vzdelanie, geografickú polohu alebo ekonomickú situáciu - alebo či prehlbí existujúce sociálne rozdiely.\nUmelá inteligencia, keď je aplikovaná premyslene, má potenciál byť veľkým vyrovnávačom v tejto transformácii. Môže urobiť učenie prístupnejším, personalizovanejším, efektívnejším a motivujúcejším pre dospelých, ktorí najviac potrebujú podporu na svojej digitálnej ceste.\nAvšak technológia sama osebe nestačí. Je potrebná politická vôľa, verejná investícia, koordinácia medzi sektormi a predovšetkým ľudskocentrované vízie - taká, ktorá kladie ľudské potreby, obavy a obrovský učebný potenciál do stredu pozornosti.",
+        "doc_link": "https://docs.google.com/document/d/14xPCHbSKRTbOHPT4X9LrP1d2rNVPxREs/edit"
       }
     ]
   },

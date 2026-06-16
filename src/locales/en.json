@@ -497,7 +497,7 @@
         "description": "The city of Bilbao recently hosted the Kick-off Meeting of the Erasmus+ project Learning BRAINS – Integrated On-the-job Learning Systems for Industrial Reskilling, officially marking the beginning of an exciting two-year European collaboration focused on innovation, AI-based learning and industrial reskilling",
         "link": "https://docs.google.com/document/d/1dGkafw8HBVuecJHvEprEYqgosPf4D7Gr/edit",
         "category": "Meeting",
-        "date": "2026-05-14",
+        "date": "2026-02-24",
         "image": "https://drive.google.com/thumbnail?id=1hcCrgtJlL0reuyHSsts_nVGVq9wEQaZW&sz=w1000",
         "badge": "",
         "partner": "FVEM",
@@ -536,6 +536,23 @@
         "_source_title": "Focus Group - Spain",
         "_source_desc": "Federación Vizcaína de Empresas del Metal is organizing a Focus Group aimed at industrial companies interested in exploring and discussing the real impact of Artificial Intelligence on workplace learning and corporate training processes.",
         "_source_doc_link": ""
+      },
+      {
+        "title": "AI as an Ally in the Digital Transition for Adults",
+        "type": "ARTICLE",
+        "description": "The skills demanded by the labour market change faster than traditional education systems can keep up with, and adults face a double challenge: adapting to existing technologies while simultaneously preparing for those that are still emerging.",
+        "link": "",
+        "category": "Research",
+        "date": "2026-06-09",
+        "image": "https://drive.google.com/thumbnail?id=1oIfq7L7102bKdF8NF2U1Ln_3oC7PB_An&sz=w1000",
+        "badge": "",
+        "partner": "S.I.",
+        "_source_title": "AI as an Ally in the Digital Transition for Adults",
+        "_source_desc": "The skills demanded by the labour market change faster than traditional education systems can keep up with, and adults face a double challenge: adapting to existing technologies while simultaneously preparing for those that are still emerging.",
+        "_source_doc_link": "",
+        "slug": "ai-as-an-ally-in",
+        "content": "We live in an era where digital transformation is advancing at an unprecedented pace. The skills demanded by the labour market change faster than traditional education systems can keep up with, and adults face a double challenge: adapting to existing technologies while simultaneously preparing for those that are still emerging.\nThe numbers tell a stark story. According to the World Bank, approximately 2.6 billion people still live without access to the internet. Within the European Union alone, nearly half of all adults lack sufficient digital skills to navigate today's digital environment comfortably. At the same time, artificial intelligence (AI), cybersecurity, and data science have become highly valued and increasingly indispensable competencies.\nThere is a widespread assumption that older adults find it harder to learn digital skills. However, scientific evidence challenges this stereotype: people retain their cognitive capacity as they age, and learning is possible at any stage of life.\nWhat genuinely hinders digital learning in adults is not biology, but contextual and emotional factors:\n* Lack of access to adequate, level-appropriate training\n* Technology anxiety and fear of making mistakes in digital environments\n* Negative prior experiences with technology or formal education systems\n* Lack of time and intrinsic motivation\n* Training content that is misaligned with adults' real-life and professional contexts\nOne of the most significant advances AI brings to adult education is the ability to personalise each learner's journey. Adaptive learning systems can identify a user's current skill level, detect specific gaps, and propose content tailored to their pace, learning style, and professional context. Unlike rigid traditional courses, an AI-powered platform can offer a construction worker practical exercises focused on digital tools relevant to their sector, while recommending an accountant pathways centred on financial software or process automation.\nAI-based virtual assistants function as personal tutors that are permanently available. They can answer questions in natural language, explain concepts simply, provide immediate feedback on exercises, and monitor a learner's progress without judgement. This continuous availability is especially relevant for adults who study outside working hours or who are reluctant to expose their difficulties in group settings. AI creates a safe space to learn at one's own pace.\nMany adults with low qualifications also face challenges with basic literacy. AI tools with text-to-speech, automatic translation, and language simplification capabilities can make access to digital knowledge more inclusive, reaching populations that traditional systems fail to serve.\nDigital transition cannot be achieved through technology alone: it requires people who are equipped to teach others. AI can support trainers themselves, helping them create adapted pedagogical materials, monitor cohort progress, and identify who needs additional support. What is at stake is whether this transition will be inclusive — whether it will reach all adults, regardless of age, educational background, geographic location, or economic situation — or whether it will deepen existing social divides.\nArtificial intelligence, when applied thoughtfully, has the potential to be the great equaliser of this transformation. It can make learning more accessible, more personalised, more effective, and more motivating for the adults who most need support on their digital journey.\nBut technology alone is not enough. Political will, public investment, cross-sector coordination, and above all a people-centred vision are required — one that places human needs, fears, and enormous learning potential at its core.",
+        "doc_link": "https://docs.google.com/document/d/14xPCHbSKRTbOHPT4X9LrP1d2rNVPxREs/edit"
       }
     ]
   },

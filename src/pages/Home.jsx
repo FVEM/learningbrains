@@ -304,7 +304,14 @@ const Home = () => {
                     <div className="grid md:grid-cols-3 gap-8">
                         {(() => {
                             const rawItems = t('news.items_list', { returnObjects: true });
-                            const newsItems = Array.isArray(rawItems) ? [...rawItems].reverse() : [];
+                            const newsItems = Array.isArray(rawItems) ? [...rawItems].sort((a, b) => {
+                                const dateA = new Date(a.date);
+                                const dateB = new Date(b.date);
+                                if (isNaN(dateA) && isNaN(dateB)) return 0;
+                                if (isNaN(dateA)) return 1;
+                                if (isNaN(dateB)) return -1;
+                                return dateB - dateA;
+                            }) : [];
                             return newsItems.slice(0, 3).map((item, idx) => {
                                 const NewsIcon = idx === 1 ? Calendar : (idx === 2 ? Users : Newspaper);
 

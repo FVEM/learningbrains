@@ -10,7 +10,14 @@ const Noticias = () => {
     const [selectedCategory, setSelectedCategory] = useState("all");
 
     const rawAiNewsItems = t('ai_news.items_list', { returnObjects: true }) || [];
-    const translatedAiNewsItems = Array.isArray(rawAiNewsItems) ? [...rawAiNewsItems].reverse() : [];
+    const translatedAiNewsItems = Array.isArray(rawAiNewsItems) ? [...rawAiNewsItems].sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        if (isNaN(dateA) && isNaN(dateB)) return 0;
+        if (isNaN(dateA)) return 1;
+        if (isNaN(dateB)) return -1;
+        return dateB - dateA;
+    }) : [];
 
     // Extract dynamic categories
     const categories = useMemo(() => {

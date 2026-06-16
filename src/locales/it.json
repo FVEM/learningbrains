@@ -192,9 +192,9 @@
         "_source_doc_link": ""
       },
       {
-        "title": "Prossimo workshop: Intelligenza Artificiale nella formazione professionale.",
+        "title": "Prossimo workshop: Intelligenza Artificiale nella Formazione Professionale",
         "type": "News",
-        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti provenienti da tutta Europa per condividere conoscenze e best practices.",
+        "description": "Unisciti a noi per un workshop online che esplora il potenziale dell'Intelligenza Artificiale nell'Educazione e Formazione Professionale. Accoglieremo esperti da tutta Europa per condividere conoscenze e migliori pratiche.",
         "link": "",
         "category": "Meeting",
         "date": "Coming Soon",
@@ -236,7 +236,7 @@
       {
         "title": "Primo bollettino Learning Brains",
         "type": "News",
-        "description": "Siamo entusiasti di condividere la prima edizione della newsletter del progetto Learning Brains, dove presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET.",
+        "description": "Siamo entusiasti di condividere la prima edizione della newsletter del progetto Learning Brains, in cui presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET.",
         "link": "",
         "category": "Newsletter",
         "date": "may 2026",
@@ -247,7 +247,7 @@
         "_source_desc": "We are excited to share the first edition of the Learning Brains project newsletter, where we present the initial steps of this Erasmus+ KA220-VET initiative.",
         "_source_doc_link": "",
         "slug": "first-learning-brains-newsletter",
-        "content": "Siamo entusiasti di condividere la prima edizione del bollettino del progetto Learning Brains, in cui presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET incentrata sull'uso dell'Intelligenza Artificiale per migliorare i processi di apprendimento sul lavoro e di riqualificazione industriale.\nQuesto primo bollettino mette in evidenza alcuni dei principali traguardi raggiunti durante i primi mesi del progetto, tra cui il Kick-off Meeting di successo tenutosi a Bilbao, dove i partner del progetto si sono riuniti per definire la roadmap strategica, la dinamica di collaborazione e le attività imminenti per i prossimi due anni.\nIl bollettino presenta anche gli obiettivi principali del progetto e il lavoro collaborativo che sarà svolto dai partner provenienti da Spagna, Italia, Portogallo, Austria e Slovacchia per sviluppare metodologie di formazione innovative basate sull'IA e strumenti su misura per ambienti industriali e PMI.\nInoltre, i lettori troveranno informazioni sul lancio dei canali di comunicazione del progetto, sulle prime azioni di diffusione e sulle attività imminenti legate alla ricerca, ai gruppi di discussione, alle interviste e allo sviluppo del Programma di Formazione e del Toolkit di Learning Brains.\nAttraverso questa serie di bollettini, miriamo a mantenere informati gli stakeholder, le aziende, i fornitori di formazione professionale e la comunità più ampia sui progressi del progetto, sui risultati e sulle opportunità di partecipazione.\nRimanete sintonizzati e seguite il percorso di Learning Brains verso sistemi di apprendimento sul lavoro più intelligenti, flessibili e centrati sull'umanità.",
+        "content": "Siamo entusiasti di condividere la prima edizione del bollettino del progetto Learning Brains, in cui presentiamo i primi passi di questa iniziativa Erasmus+ KA220-VET incentrata sull'uso dell'Intelligenza Artificiale per migliorare l'apprendimento sul lavoro e i processi di riqualificazione industriale.\nQuesto primo bollettino mette in evidenza alcuni dei principali traguardi raggiunti durante i primi mesi del progetto, tra cui il Kick-off Meeting di successo tenutosi a Bilbao, dove i partner del progetto si sono riuniti per definire la roadmap strategica, la dinamica di collaborazione e le attività future per i prossimi due anni.\nIl bollettino introduce anche gli obiettivi principali del progetto e il lavoro collaborativo che sarà svolto dai partner provenienti da Spagna, Italia, Portogallo, Austria e Slovacchia per sviluppare metodologie di formazione innovative basate sull'IA e strumenti personalizzati per ambienti industriali e PMI.\nInoltre, i lettori troveranno informazioni sul lancio dei canali di comunicazione del progetto, sulle prime azioni di diffusione e sulle prossime attività legate alla ricerca, ai focus group, alle interviste e allo sviluppo del Programma di Formazione e del Toolkit di Learning Brains.\nAttraverso questa serie di bollettini, miriamo a mantenere informati gli stakeholder, le aziende, i fornitori di formazione professionale e la comunità più ampia sui progressi, i risultati e le opportunità di partecipazione del progetto.\nRimanete sintonizzati e seguite il percorso di Learning Brains verso sistemi di apprendimento sul posto di lavoro più intelligenti, flessibili e centrati sull'umanità.",
         "doc_link": "https://docs.google.com/document/d/1WUdEDCSaAkmzxy2EBj6YqEyrkaIIpQRxWT67SPwYpfQ/edit?usp=sharing",
         "pdf_url": "/documents/first-learning-brains-newsletter.pdf",
         "pdf_embed_url": "https://drive.google.com/file/d/1QQfyRR0j2yDJennqb616dJYrgm0ycIcE/view?usp=drive_link"
@@ -489,7 +489,7 @@
         "description": "La città di Bilbao ha recentemente ospitato il Kick-off Meeting del progetto Erasmus+ Learning BRAINS - Integrated On-the-job Learning Systems for Industrial Reskilling, segnando ufficialmente l'inizio di una entusiasmante collaborazione europea di due anni incentrata sull'innovazione, sull'apprendimento basato sull'IA e sul riqualificare industriale.",
         "link": "https://docs.google.com/document/d/1dGkafw8HBVuecJHvEprEYqgosPf4D7Gr/edit",
         "category": "Meeting",
-        "date": "2026-05-14",
+        "date": "2026-02-24",
         "image": "https://drive.google.com/thumbnail?id=1hcCrgtJlL0reuyHSsts_nVGVq9wEQaZW&sz=w1000",
         "badge": "",
         "partner": "FVEM",
@@ -528,6 +528,23 @@
         "_source_title": "Focus Group - Spain",
         "_source_desc": "Federación Vizcaína de Empresas del Metal is organizing a Focus Group aimed at industrial companies interested in exploring and discussing the real impact of Artificial Intelligence on workplace learning and corporate training processes.",
         "_source_doc_link": ""
+      },
+      {
+        "title": "L'IA come alleato nella transizione digitale per gli adulti",
+        "type": "ARTICLE",
+        "description": "Le competenze richieste dal mercato del lavoro cambiano più rapidamente di quanto i sistemi educativi tradizionali possano tenere il passo, e gli adulti si trovano di fronte a una doppia sfida: adattarsi alle tecnologie esistenti mentre si preparano contemporaneamente a quelle ancora in fase di sviluppo.",
+        "link": "",
+        "category": "Research",
+        "date": "2026-06-09",
+        "image": "https://drive.google.com/thumbnail?id=1oIfq7L7102bKdF8NF2U1Ln_3oC7PB_An&sz=w1000",
+        "badge": "",
+        "partner": "S.I.",
+        "_source_title": "AI as an Ally in the Digital Transition for Adults",
+        "_source_desc": "The skills demanded by the labour market change faster than traditional education systems can keep up with, and adults face a double challenge: adapting to existing technologies while simultaneously preparing for those that are still emerging.",
+        "_source_doc_link": "",
+        "slug": "ai-as-an-ally-in",
+        "content": "Viviamo in un'epoca in cui la trasformazione digitale avanza a un ritmo senza precedenti. Le competenze richieste dal mercato del lavoro cambiano più rapidamente di quanto i sistemi educativi tradizionali possano tenere il passo, e gli adulti si trovano di fronte a una doppia sfida: adattarsi alle tecnologie esistenti preparandosi contemporaneamente a quelle emergenti.\nI numeri raccontano una storia cruda. Secondo la Banca Mondiale, circa 2,6 miliardi di persone vivono ancora senza accesso a internet. All'interno dell'Unione Europea da sola, quasi la metà degli adulti non possiede competenze digitali sufficienti per navigare comodamente nell'ambiente digitale di oggi. Allo stesso tempo, l'intelligenza artificiale (IA), la cybersecurity e la scienza dei dati sono diventate competenze altamente apprezzate e sempre più indispensabili.\nEsiste l'ampia convinzione che agli adulti più anziani sia più difficile imparare competenze digitali. Tuttavia, le prove scientifiche sfidano questo stereotipo: le persone mantengono le proprie capacità cognitive con l'età, e l'apprendimento è possibile in qualsiasi fase della vita.\nCiò che ostacola veramente l'apprendimento digitale negli adulti non è la biologia, ma fattori contestuali ed emotivi:\n* Mancanza di accesso a formazioni adeguate e adeguate al livello\n* Ansia legata alla tecnologia e paura di commettere errori in ambienti digitali\n* Esperienze precedenti negative con la tecnologia o con i sistemi educativi formali\n* Mancanza di tempo e di motivazione intrinseca\n* Contenuti formativi non allineati con i contesti reali e professionali degli adulti\nUno dei progressi più significativi che l'IA porta all'istruzione degli adulti è la capacità di personalizzare il percorso di apprendimento di ciascun discente. I sistemi di apprendimento adattivo possono individuare il livello di competenza attuale di un utente, individuare lacune specifiche e proporre contenuti adattati al loro ritmo, stile di apprendimento e contesto professionale. A differenza dei corsi tradizionali rigidi, una piattaforma alimentata da IA può offrire a un operaio edile esercizi pratici incentrati sugli strumenti digitali rilevanti per il loro settore, mentre consiglia a un contabile percorsi centrati sul software finanziario o sull'automazione dei processi.",
+        "doc_link": "https://docs.google.com/document/d/14xPCHbSKRTbOHPT4X9LrP1d2rNVPxREs/edit"
       }
     ]
   },
