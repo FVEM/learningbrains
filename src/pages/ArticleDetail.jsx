@@ -80,7 +80,7 @@ function renderContent(text) {
     // Markdown heading ##
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={i} className="text-2xl font-bold text-slate-800 mt-12 mb-6 tracking-tight">
+        <h2 key={i} className="text-2xl font-bold text-slate-500 mt-12 mb-6 tracking-tight">
           {parseMarkdown(line.slice(3))}
         </h2>
       );
