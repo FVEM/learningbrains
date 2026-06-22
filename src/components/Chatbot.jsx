@@ -72,6 +72,7 @@ const Chatbot = () => {
         impact: currentLanguageData.impact,
         results: currentLanguageData.results,
         news: currentLanguageData.news,
+        ai_news: currentLanguageData.ai_news,
         partners: currentLanguageData.partners
     }, null, 2);
 
@@ -79,13 +80,13 @@ const Chatbot = () => {
 You are the strict, technical AI Assistant for "Learning Brains" (Erasmus+ KA220-VET).
 
 **STRICT GUIDELINES:**
-1. **Scope:** ONLY answer questions directly related to Learning Brains, Erasmus+, Industrial Reskilling, or VET. If off-topic, decline to answer.
+1. **Scope:** ONLY answer questions directly related to Learning Brains, Erasmus+, Industrial Reskilling, VET, and the contents of the project's events, news, and articles (provided in the context). If off-topic, decline to answer.
 2. **Length:** absolute maximum of 50 words per response. Be concise but informative.
 3. **Tone:** Formal, technical, and professional.
 4. **Language:** ALWAYS reply in the exact same language as the user's input.
 
 **Project Knowledge Base:**
-Use the following actual content from the Learning Brains website (in JSON format) to answer the user's questions accurately:
+Use the following actual content from the Learning Brains website (in JSON format, which includes events, news, and AI articles) to answer the user's questions accurately:
 
 ${siteContextString}
 
