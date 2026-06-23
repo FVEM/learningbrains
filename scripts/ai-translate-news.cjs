@@ -30,12 +30,12 @@ const langNames = {
 
 /**
  * System prompt for translating article body content.
- * Enforces plain paragraph structure — no headers, bullets or bold formatting.
+ * Preserves markdown formatting such as ## headings.
  */
 const CONTENT_PROMPT = (lang) =>
     `Translate the following text to ${langNames[lang]}.
-Maintain the original paragraph structure and tone exactly.
-Do NOT add extra headers, bullet points, bold text, pull quotes or any formatting.
+Maintain the original paragraph structure, tone, and markdown formatting exactly.
+If there are markdown headings (e.g. ## ), preserve them exactly as they are.
 Return ONLY the translated text, nothing else.`;
 
 /**
@@ -50,38 +50,44 @@ Return ONLY the translated text, nothing else.`;
 // OpenAI helper
 // ---------------------------------------------------------------------------
 
-async function translateText(text, targetLang, customPrompt = null) {
+async function translateText(text, targetLang, customPrompt = null, retries = 3) {
     if (!text || text.trim() === '') return '';
 
     const systemPrompt = customPrompt || SHORT_PROMPT(targetLang);
 
-    try {
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${OPENAI_API_KEY}`
-            },
-            body: JSON.stringify({
-                model: 'gpt-3.5-turbo',
-                messages: [
-                    { role: 'system', content: systemPrompt },
-                    { role: 'user',   content: text }
-                ],
-                temperature: 0.3
-            })
-        });
+    for (let attempt = 1; attempt <= retries; attempt++) {
+        try {
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${OPENAI_API_KEY}`
+                },
+                body: JSON.stringify({
+                    model: 'gpt-4o-mini',
+                    messages: [
+                        { role: 'system', content: systemPrompt },
+                        { role: 'user',   content: text }
+                    ],
+                    temperature: 0.3
+                })
+            });
 
-        const data = await response.json();
-        if (data.error) {
-            console.error(`  ⚠ OpenAI Error: ${data.error.message}`);
-            return text; // Fall back to original rather than crashing
+            const data = await response.json();
+            if (data.error) {
+                console.error(`  ⚠ OpenAI Error on attempt ${attempt}: ${data.error.message}`);
+                if (attempt === retries) return text;
+                await new Promise(r => setTimeout(r, 2000 * attempt));
+                continue;
+            }
+            return data.choices[0].message.content.trim();
+        } catch (error) {
+            console.error(`  ⚠ Translation error for ${targetLang} on attempt ${attempt}:`, error.message);
+            if (attempt === retries) return text;
+            await new Promise(r => setTimeout(r, 2000 * attempt));
         }
-        return data.choices[0].message.content.trim();
-    } catch (error) {
-        console.error(`  ⚠ Translation error for ${targetLang}:`, error.message);
-        return text;
     }
+    return text;
 }
 
 // ---------------------------------------------------------------------------
@@ -115,6 +121,11 @@ function needsTranslation(enItem, langItem, lang) {
     // Content is identical to the English source
     if (enItem.content && langItem.content && langItem.content.trim() === enItem.content.trim()) {
         return { yes: true, reason: 'untranslated-content' };
+    }
+
+    // Content is significantly shorter than English source (truncated by AI)
+    if (enItem.content && langItem.content && langItem.content.length < enItem.content.length * 0.75) {
+        return { yes: true, reason: 'truncated-content' };
     }
 
     // Content still contains leftover AI markdown formatting
@@ -151,6 +162,7 @@ async function translateSection(enItems, langItems, lang, sectionLabel) {
             'corrupted-title':      `Corrupted title`,
             'missing-content':      `Missing content translation`,
             'untranslated-content': `Content not translated`,
+            'truncated-content':    `Truncated content (AI stopped halfway)`,
             'over-formatted':       `Over-formatted content (AI artefacts)`
         };
         console.log(`  → [${lang}] ${reasonLabels[reason] || reason}: "${enItem.title}"`);

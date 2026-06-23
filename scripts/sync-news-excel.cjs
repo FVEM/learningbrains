@@ -80,7 +80,19 @@ function cleanContent(text, articleTitle = '') {
         break;
     }
 
-    return lines.slice(startIdx).join('\n').trim();
+    const cleanedLines = lines.slice(startIdx).map(line => {
+        let trimmed = line.trim();
+        if (!trimmed) return line;
+        const isBullet = /^(?:[-•*]|\d+\.)/.test(trimmed);
+        const endsWithPunctuation = /[\.\:\?\!\”\’\"\'\]]$/.test(trimmed);
+        const isHeader = !isBullet && !endsWithPunctuation && trimmed.length > 10 && trimmed.length < 150 && !trimmed.startsWith('## ');
+        if (isHeader) {
+            return `## ${trimmed}`;
+        }
+        return line;
+    });
+
+    return cleanedLines.join('\n').trim();
 }
 
 
@@ -217,8 +229,10 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
     // Build a lookup map from existing items by key
     const existingMap = {};
     for (const item of existingItems) {
-        const key = itemKey(item.link, item._source_title || item.title);
-        existingMap[key] = item;
+        const linkKey = itemKey(item.link || item._source_doc_link || '', '');
+        const titleKey = itemKey('', item._source_title || item.title);
+        if (linkKey) existingMap[linkKey] = item;
+        if (titleKey) existingMap[titleKey] = item;
     }
 
     const result = [];
@@ -233,8 +247,9 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
 
         if (!fallbackTitle.trim()) continue;
 
-        const key      = itemKey(rawLink, fallbackTitle);
-        const existing = existingMap[key];
+        const linkKey = itemKey(rawLink, '');
+        const titleKey = itemKey('', fallbackTitle);
+        const existing = existingMap[linkKey] || existingMap[titleKey];
         let changed  = sourceChanged(sheetRow, existing);
 
         const docLink = sheetRow.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
@@ -329,15 +344,16 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
         }
 
         const newItem = {
+            ...(existing || {}),
             title,
             type: itemType,
             description,
             // If the link is a Google Doc, don't expose it as the card's external link
             link: hasDocLink ? '' : rawLink,
-            category: sheetRow.category || '',
-            date:     sheetRow.date     || '',
+            category: sheetRow.category || (existing?.category || ''),
+            date:     sheetRow.date     || (existing?.date || ''),
             image:    finalImage,
-            badge:    sheetRow.badge_text || sheetRow.badge || '',
+            badge:    sheetRow.badge_text || sheetRow.badge || (existing?.badge || ''),
             partner:  sheetRow.partner || sheetRow['proposing pp'] || existing?.partner || '',
             // Internal source snapshot — used to detect real changes on next run
             _source_title:    fallbackTitle,
