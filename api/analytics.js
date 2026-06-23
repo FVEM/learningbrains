@@ -323,7 +323,8 @@ export default async function handler(req, res) {
                     articleMeta[item.slug] = { 
                         title: item.title, 
                         partner: item.partner,
-                        type: item.type
+                        type: item.type,
+                        date: item.date
                     };
                 }
             });
@@ -341,11 +342,12 @@ export default async function handler(req, res) {
                     title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
                     partner: articleMeta[slug]?.partner || 'Learning Brains',
                     type: articleMeta[slug]?.type || 'ARTICLE',
+                    date: articleMeta[slug]?.date || '1970-01-01',
                     views: data.views,
                     users: data.users,
                     avgTime: avgEngagementTime
                 };
-            }).sort((a, b) => b.views - a.views);
+            }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
         res.status(200).json({
             kpis,
