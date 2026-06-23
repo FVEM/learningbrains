@@ -342,6 +342,7 @@ export default async function handler(req, res) {
                     partner: articleMeta[slug]?.partner || 'Learning Brains',
                     type: articleMeta[slug]?.type || 'ARTICLE',
                     views: data.views,
+                    users: data.users,
                     avgTime: avgEngagementTime
                 };
             }).sort((a, b) => b.views - a.views);
