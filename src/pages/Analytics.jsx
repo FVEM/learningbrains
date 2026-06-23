@@ -23,7 +23,7 @@ export default function Analytics() {
     const [pinInput, setPinInput] = useState('');
     const [errorPin, setErrorPin] = useState(false);
 
-    const [timeRange, setTimeRange] = useState('30days');
+    const [timeRange, setTimeRange] = useState('seg1');
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [errorData, setErrorData] = useState(null);
@@ -132,9 +132,10 @@ export default function Analytics() {
                             onChange={(e) => setTimeRange(e.target.value)}
                             className="bg-neutral-100 border-none rounded-lg py-1.5 pl-4 pr-10 text-sm font-medium focus:ring-2 focus:ring-brand-primary/50 outline-none cursor-pointer appearance-none hover:bg-neutral-200 transition-colors"
                         >
-                            <option value="7days">Last 7 Days</option>
-                            <option value="30days">Last 30 Days</option>
-                            <option value="year">This Year</option>
+                            <option value="seg1">Seguimiento 1 (Dic 2025 – May 2026)</option>
+                            <option value="seg2">Seguimiento 2 (Jun 2026 – Nov 2026)</option>
+                            <option value="seg3">Seguimiento 3 (Dic 2026 – May 2027)</option>
+                            <option value="seg4">Seguimiento 4 (Jun 2027 – Nov 2027)</option>
                         </select>
 
                         <button
@@ -409,6 +410,7 @@ export default function Analytics() {
                                                 <th className="px-6 py-4 font-semibold">Title</th>
                                                 <th className="px-6 py-4 font-semibold">Partner</th>
                                                 <th className="px-6 py-4 text-right font-semibold">Page Views</th>
+                                                <th className="px-6 py-4 text-right font-semibold">Active Users</th>
                                                 <th className="px-6 py-4 text-right font-semibold">Avg. Read Time</th>
                                             </tr>
                                         </thead>
@@ -455,6 +457,9 @@ export default function Analytics() {
                                                         </td>
                                                         <td className="px-6 py-4 text-right">
                                                             <span className="font-bold text-neutral-800">{article.views.toLocaleString()}</span>
+                                                        </td>
+                                                        <td className="px-6 py-4 text-right">
+                                                            <span className="font-bold text-neutral-600">{(article.users || 0).toLocaleString()}</span>
                                                         </td>
                                                         <td className="px-6 py-4 text-right">
                                                             <span className={`font-bold ${article.avgTime > 0 ? 'text-teal-600' : 'text-neutral-400'}`}>

@@ -100,7 +100,7 @@ async function generateReport() {
           dimensions: [{ name: 'pagePath' }, { name: 'pageTitle' }],
           metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }],
           orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-          limit: 30
+          limit: 250
       }),
       client.runReport({
           property: `properties/${propertyId}`,
@@ -141,10 +141,16 @@ The project's web platform features a comprehensive multi-language system suppor
 - **The Project (About):** Offers an in-depth exploration of the project's background. It details the specific European context, the underlying needs that justified the creation of the Erasmus+ consortium, the target groups, and the long-term strategic goals the alliance aims to achieve.
 - **Results:** Acts as the central repository for all intellectual outputs and project deliverables (PRs). This section is crucial for transparency and dissemination, allowing users to freely access the tangible results, research findings, and methodologies developed throughout the project's lifecycle.
 - **Partners:** Introduces the European organizations that constitute the consortium. It provides background information on each partner institution, detailing their specific roles, expertise, and contributions to the project's success.
-- **News and Events:** A dynamic hub for project updates. It covers the progress of transnational partner meetings, multiplier events, and also features informative articles and case studies related to the practical application of Artificial Intelligence in the industrial sector.
+- **Project Events:** The official noticeboard for the Erasmus+ consortium. It is strictly dedicated to internal activities such as Transnational Meetings, project milestones, official newsletters, and consortium workshops. Content is visually classified with badges like **MEETING**, **PROJECT**, and **NEWSLETTER**.
+- **News (AI, Business & Training):** An outward-focused curation hub dedicated to Artificial Intelligence applied to industry and VET. It features announcements for specialized AI training courses, research articles, thought leadership pieces, and industry updates. Content is classified with badges like **NEWS** and **ARTICLE**.
 - **Resources:** A dedicated library of open-access materials. Here, vocational trainers, educators, and industry professionals can find practical guides, training materials, and interactive tools designed to facilitate the integration of AI in their daily operations.
-- **Dissemination and Impact:** Highlights the project's reach and its tangible effects on the target audience. It includes metrics, feedback, and evidence of how the knowledge generated is being successfully transferred to society and the industrial sector.
+- **Analytics:** An internal, restricted-access dashboard embedded within the website. It allows consortium partners to monitor real-time data, track visitor metrics, and evaluate the ongoing impact of web-related dissemination activities.
 - **Contact:** Provides clear and direct communication channels, including a contact form, to reach the project coordinators and foster ongoing engagement with stakeholders.
+
+### Transversal Web Features
+- **EU Transparency & Legal:** The website strictly complies with European data protection regulations (Privacy and Cookies Policies). Importantly, it prominently features the mandatory Erasmus+ funding disclaimer and the EU emblem across all pages, ensuring proper visibility of the European Commission's support.
+- **Responsive Design & Accessibility:** The platform is fully optimized for mobile devices and tablets, maximizing the reach and accessibility of the dissemination materials.
+- **Social Media Integration:** The website acts as a central digital hub, seamlessly linking to the project's official social media channels to amplify the impact of results and news.
 
 ## 1. Global KPIs
 - **Active Users:** ${users}
@@ -165,14 +171,44 @@ The project's web platform features a comprehensive multi-language system suppor
       markdown += `| ${r.dimensionValues[0].value} | ${r.metricValues[0].value} | ${r.metricValues[1].value} |\n`;
   });
 
-  markdown += `\n## 4. Most Visited Content (Top 30)\n| Path | Title | Page Views | Users |\n|------|-------|------------|-------|\n`;
+  markdown += `\n## 4. Most Visited Content (Grouped by Path)\n| Path | Page Title(s) | Page Views | Users (approx) |\n|------|---------------|------------|----------------|\n`;
+  const aggregatedPages = {};
   pagesResponse.rows?.forEach(r => {
-      // Limpiar titulo para tabla markdown
+      const path = r.dimensionValues[0].value;
       const title = r.dimensionValues[1].value.replace(/\|/g, '-');
-      markdown += `| ${r.dimensionValues[0].value} | ${title} | ${r.metricValues[0].value} | ${r.metricValues[1].value} |\n`;
+      const views = parseInt(r.metricValues[0].value, 10);
+      const users = parseInt(r.metricValues[1].value, 10);
+      if (!aggregatedPages[path]) {
+          aggregatedPages[path] = { views: 0, users: 0, titles: new Set() };
+      }
+      aggregatedPages[path].views += views;
+      aggregatedPages[path].users += users;
+      aggregatedPages[path].titles.add(title);
   });
 
-  markdown += `\n## 5. Acquisition Channels\n| Channel | Users | Sessions |\n|---------|-------|----------|\n`;
+  const sortedPaths = Object.keys(aggregatedPages)
+      .sort((a, b) => aggregatedPages[b].views - aggregatedPages[a].views)
+      .slice(0, 30);
+
+  sortedPaths.forEach(path => {
+      const data = aggregatedPages[path];
+      // Only show the first title if there are multiple to keep it clean, or join them
+      const titles = Array.from(data.titles).join('<br>').replace(/\n/g, ' ');
+      markdown += `| ${path} | ${titles} | ${data.views} | ${data.users} |\n`;
+  });
+
+  markdown += `\n## 5. Articles Performance\n| Path | Page Title(s) | Page Views | Users (approx) |\n|------|---------------|------------|----------------|\n`;
+  const articlePaths = Object.keys(aggregatedPages)
+      .filter(p => p.includes('/article') || p.includes('/articulo'))
+      .sort((a, b) => aggregatedPages[b].views - aggregatedPages[a].views);
+  
+  articlePaths.forEach(path => {
+      const data = aggregatedPages[path];
+      const titles = Array.from(data.titles).join('<br>').replace(/\n/g, ' ');
+      markdown += `| ${path} | ${titles} | ${data.views} | ${data.users} |\n`;
+  });
+
+  markdown += `\n## 6. Acquisition Channels\n| Channel | Users | Sessions |\n|---------|-------|----------|\n`;
   channelsResponse.rows?.forEach(r => {
       markdown += `| ${r.dimensionValues[0].value} | ${r.metricValues[0].value} | ${r.metricValues[1].value} |\n`;
   });

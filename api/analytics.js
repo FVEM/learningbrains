@@ -53,9 +53,11 @@ export default async function handler(req, res) {
         }
 
         // Calcular fechas
-        let startDate = '30daysAgo';
-        if (range === '7days') startDate = '7daysAgo';
-        if (range === 'year') startDate = '365daysAgo';
+        let startDate = '2025-12-01';
+        let endDate = '2026-05-31';
+        if (range === 'seg2') { startDate = '2026-06-01'; endDate = '2026-11-30'; }
+        if (range === 'seg3') { startDate = '2026-12-01'; endDate = '2027-05-31'; }
+        if (range === 'seg4') { startDate = '2027-06-01'; endDate = '2027-11-30'; }
 
         // Inicializar cliente
         const analyticsDataClient = new BetaAnalyticsDataClient({
@@ -82,7 +84,7 @@ export default async function handler(req, res) {
             // 0: KPIs Globales
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 metrics: [
                     { name: 'screenPageViews' },
                     { name: 'activeUsers' },
@@ -94,7 +96,7 @@ export default async function handler(req, res) {
             // 1: Serie Temporal
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'date' }],
                 metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }],
                 orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }]
@@ -102,14 +104,14 @@ export default async function handler(req, res) {
             // 2: Dispositivos
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'deviceCategory' }],
                 metrics: [{ name: 'activeUsers' }]
             }),
             // 3: Sistemas Operativos
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'operatingSystem' }],
                 metrics: [{ name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
@@ -117,7 +119,7 @@ export default async function handler(req, res) {
             // 4: Países Top 5
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'country' }],
                 metrics: [{ name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
@@ -126,7 +128,7 @@ export default async function handler(req, res) {
             // 5: Páginas Top 6
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'pagePath' }, { name: 'pageTitle' }],
                 metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }, { name: 'userEngagementDuration' }],
                 orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
@@ -135,7 +137,7 @@ export default async function handler(req, res) {
             // 6: Canales
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'sessionDefaultChannelGroup' }],
                 metrics: [{ name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }]
@@ -143,7 +145,7 @@ export default async function handler(req, res) {
             // 7: Eventos Principales
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'eventName' }],
                 metrics: [{ name: 'eventCount' }, { name: 'activeUsers' }],
                 orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
@@ -152,21 +154,21 @@ export default async function handler(req, res) {
             // 8: Idiomas (Análisis de rutas)
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'pagePath' }],
                 metrics: [{ name: 'activeUsers' }]
             }),
             // 9: Fuentes de sesión para LinkedIn
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'sessionSource' }],
                 metrics: [{ name: 'activeUsers' }]
             }),
             // 10: Visitas y Engagement de artículos y noticias
             analyticsDataClient.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate, endDate: 'today' }],
+                dateRanges: [{ startDate, endDate }],
                 dimensions: [{ name: 'pagePath' }],
                 metrics: [{ name: 'screenPageViews' }, { name: 'activeUsers' }, { name: 'userEngagementDuration' }],
                 dimensionFilter: {
