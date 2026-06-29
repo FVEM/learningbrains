@@ -145,7 +145,11 @@ const Noticias = () => {
                                             <img
                                                 src={item.image.startsWith('http') ? item.image : `${import.meta.env.BASE_URL}${item.image.replace(/^\//, '')}`}
                                                 alt={item.title}
-                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                                className={`w-full h-full ${
+                                                    (item.title?.toLowerCase().includes('newsletter') || item.title?.toLowerCase().includes('boletín') || item.title?.toLowerCase().includes('smart')) 
+                                                    ? 'object-contain p-2' 
+                                                    : 'object-cover'
+                                                } transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100`}
                                             />
                                         ) : (
                                             <div className="absolute inset-0 flex items-center justify-center bg-slate-50 group-hover:bg-blue-50/50 transition-colors h-full w-full">

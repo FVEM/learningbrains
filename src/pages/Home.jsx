@@ -321,9 +321,10 @@ const Home = () => {
                                 const displayLocation = item.location;
                                 const displayBadge = item.badge || item.category || "EVENT";
 
-                                const isDocImage = item.slug || 
+                                const isDocImage = item.title?.toLowerCase().includes('document') || 
                                                    item.title?.toLowerCase().includes('newsletter') || 
-                                                   item.title?.toLowerCase().includes('boletín');
+                                                   item.title?.toLowerCase().includes('boletín') ||
+                                                   item.title?.toLowerCase().includes('smart');
 
                                 return (
                                     <div key={idx} className="bg-white border border-slate-100 rounded-2xl overflow-hidden group hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col">
