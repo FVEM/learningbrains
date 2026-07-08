@@ -94,22 +94,18 @@ function renderContent(text) {
       const [, alt, src] = imgMatch;
       const resolvedSrc = src.startsWith('http') ? src : `${import.meta.env.BASE_URL || '/'}${src.replace(/^\//, '')}`;
       elements.push(
-        <figure key={i} className="my-10 -mx-4 md:-mx-12">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl">
-            <img
-              src={resolvedSrc}
-              alt={alt}
-              className="w-full object-cover"
-              style={{ maxHeight: '420px' }}
-              onError={(e) => { e.target.onerror = null; e.target.style.display='none'; }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent pointer-events-none" />
-          </div>
+        <figure key={i} className="my-10 -mx-4 md:-mx-12 flex flex-col items-center">
+          <img
+            src={resolvedSrc}
+            alt={alt}
+            className="w-full h-auto rounded-3xl shadow-xl border border-slate-100/50"
+            onError={(e) => { e.target.onerror = null; e.target.style.display='none'; }}
+          />
           {alt && (
-            <figcaption className="mt-3 text-center text-xs text-slate-400 italic flex items-center justify-center gap-2">
-              <span className="w-6 h-px bg-slate-300" />
+            <figcaption className="mt-4 text-center text-xs text-slate-400 font-medium italic flex items-center justify-center gap-2 px-6">
+              <span className="w-6 h-px bg-slate-200" />
               {alt}
-              <span className="w-6 h-px bg-slate-300" />
+              <span className="w-6 h-px bg-slate-200" />
             </figcaption>
           )}
         </figure>

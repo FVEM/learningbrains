@@ -120,6 +120,124 @@ function transformGDriveUrl(url) {
     return url;
 }
 
+/**
+ * Fetches Google Drive folder page and returns list of files (name, id)
+ */
+async function fetchDriveFolderFiles(folderUrl) {
+    if (!folderUrl || typeof folderUrl !== 'string') return [];
+    if (!folderUrl.includes('drive.google.com/drive/folders/') && !folderUrl.includes('/folders/')) return [];
+    
+    try {
+        const response = await fetch(folderUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            }
+        });
+        if (!response.ok) return [];
+        const html = await response.text();
+        
+        const items = [];
+        const regex = /aria-label="([^"]+)"[^>]*?ssk='[^']*?:([a-zA-Z0-9_-]{28,})[^']*?'/g;
+        let match;
+        while ((match = regex.exec(html)) !== null) {
+            let name = match[1]
+                .replace(/\s+Image\s+Shared$/i, '')
+                .replace(/\s+Microsoft\s+Word\s+Shared$/i, '')
+                .replace(/\s+Shared$/i, '')
+                .trim();
+            let fileId = match[2];
+            if (fileId.includes('-0-')) {
+                fileId = fileId.split('-0-')[0];
+            }
+            items.push({ name, id: fileId });
+        }
+        return items;
+    } catch (e) {
+        console.error('Error fetching drive folder files:', e.message);
+        return [];
+    }
+}
+
+/**
+ * Harmoniously integrates multiple extra images from a folder into the article body text.
+ */
+function integrateArticleImages(content, folderImages, rawImageUrl) {
+    if (!content) return content;
+    
+    const nonCoverImages = folderImages.filter(f => !f.name.toLowerCase().includes('cover'));
+    if (nonCoverImages.length === 0) return content;
+    
+    // Sort them alphabetically/numerically
+    nonCoverImages.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+    
+    const isVenice = rawImageUrl.includes('1mqHaKlyxoxg2Yb0NmKs3eXFYvztttXz4');
+    
+    if (isVenice && content.includes('## Day 1:') && content.includes('## Day 2:') && content.includes('## Looking Ahead')) {
+        const lines = content.split('\n');
+        const resultLines = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            const trimmed = line.trim();
+            
+            if (trimmed.startsWith('## Day 1:')) {
+                resultLines.push('');
+                resultLines.push(`![Day 1 Meeting](/images/news/venice-photo-2.jpg)`);
+                resultLines.push('');
+            }
+            if (trimmed.startsWith('## Day 2:')) {
+                resultLines.push('');
+                resultLines.push(`![Day 1 Collaboration](/images/news/venice-photo-4.jpg)`);
+                resultLines.push('');
+            }
+            if (trimmed.startsWith('## Looking Ahead')) {
+                resultLines.push('');
+                resultLines.push(`![Day 2 Venice Visit](/images/news/venice-photo-3.jpg)`);
+                resultLines.push('');
+            }
+            resultLines.push(line);
+        }
+        return resultLines.join('\n');
+    }
+    
+    // Fallback: Paragraph-based insertion (every 2 paragraphs)
+    const lines = content.split('\n');
+    const resultLines = [];
+    let paragraphCount = 0;
+    let imageIdx = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const trimmed = line.trim();
+        resultLines.push(line);
+        
+        if (trimmed && !trimmed.startsWith('#') && !trimmed.startsWith('!') && !trimmed.startsWith('-') && !/^\d+\./.test(trimmed)) {
+            paragraphCount++;
+            
+            if (imageIdx < nonCoverImages.length && paragraphCount === (imageIdx + 1) * 2) {
+                const img = nonCoverImages[imageIdx];
+                const imgSrc = `https://drive.google.com/thumbnail?id=${img.id}&sz=w1000`;
+                const altText = img.name.replace(/\.[^/.]+$/, "").replace(/^\d+_/, "");
+                resultLines.push('');
+                resultLines.push(`![${altText}](${imgSrc})`);
+                resultLines.push('');
+                imageIdx++;
+            }
+        }
+    }
+    
+    while (imageIdx < nonCoverImages.length) {
+        const img = nonCoverImages[imageIdx];
+        const imgSrc = `https://drive.google.com/thumbnail?id=${img.id}&sz=w1000`;
+        const altText = img.name.replace(/\.[^/.]+$/, "").replace(/^\d+_/, "");
+        resultLines.push('');
+        resultLines.push(`![${altText}](${imgSrc})`);
+        resultLines.push('');
+        imageIdx++;
+    }
+    
+    return resultLines.join('\n');
+}
+
 function parseCSV(text) {
     const result = [];
     const rows = [];
@@ -205,7 +323,7 @@ function sourceChanged(sheetItem, existingItem) {
     const sheetDocLink = sheetItem.doc_link || '';
 
     const rawLink      = sheetItem.link_url || sheetItem.link || '';
-    const hasDocLink   = !!(sheetDocLink || rawLink.includes('docs.google.com/document'));
+    const hasDocLink   = !!(sheetDocLink || rawLink.includes('docs.google.com/document') || rawLink.includes('drive.google.com/drive/folders/') || rawLink.includes('/folders/'));
     if (hasDocLink && !existingItem.slug) {
         return true;
     }
@@ -252,19 +370,45 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
         const existing = existingMap[linkKey] || existingMap[titleKey];
         let changed  = sourceChanged(sheetRow, existing);
 
-        const docLink = sheetRow.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
-        const hasDocLink = !!docLink;
-        if (existing && hasDocLink && !existing.slug) {
-            changed = true;
+        // Fetch image folder files if image_url is a folder
+        const rawImage  = sheetRow.image_url || sheetRow.image || '';
+        let finalImage = '';
+        let folderImages = [];
+
+        if (rawImage.includes('drive.google.com/drive/folders/') || rawImage.includes('/folders/')) {
+            const folderFiles = await fetchDriveFolderFiles(rawImage);
+            folderImages = folderFiles.filter(f => /\.(jpg|jpeg|png|webp|gif)$/i.test(f.name));
+            const coverImage = folderImages.find(f => f.name.toLowerCase().includes('cover'));
+            if (coverImage) {
+                if (rawImage.includes('1mqHaKlyxoxg2Yb0NmKs3eXFYvztttXz4')) {
+                    finalImage = '/images/news/venice-cover.jpg';
+                } else {
+                    finalImage = `https://drive.google.com/thumbnail?id=${coverImage.id}&sz=w1000`;
+                }
+            } else if (folderImages.length > 0) {
+                finalImage = `https://drive.google.com/thumbnail?id=${folderImages[0].id}&sz=w1000`;
+            }
+        } else {
+            finalImage = transformGDriveUrl(rawImage);
         }
 
-        // ── Metadata that always syncs from Sheet (safe to update) ──
-        const rawImage  = sheetRow.image_url || sheetRow.image || '';
         const isImageUrl = (url) => /\.(jpg|jpeg|png|webp|gif|svg)$/i.test((url||'').split('?')[0]);
-        let finalImage  = transformGDriveUrl(rawImage);
         if (!finalImage && isImageUrl(rawLink)) finalImage = transformGDriveUrl(rawLink);
         if (finalImage && !finalImage.startsWith('http') && !finalImage.startsWith('/')) {
             finalImage = '/' + finalImage;
+        }
+
+        // Determine doc link
+        let docLink = sheetRow.doc_link || '';
+        let hasDocLink = !!docLink || rawLink.includes('docs.google.com/document');
+
+        if (!hasDocLink && (rawLink.includes('drive.google.com/drive/folders/') || rawLink.includes('/folders/'))) {
+            const folderFiles = await fetchDriveFolderFiles(rawLink);
+            const docxFile = folderFiles.find(f => f.name.toLowerCase().endsWith('.docx') || f.name.toLowerCase().endsWith('.doc'));
+            if (docxFile) {
+                docLink = `https://docs.google.com/document/d/${docxFile.id}`;
+                hasDocLink = true;
+            }
         }
 
         const itemType  = sheetRow.type || 'News';
@@ -316,7 +460,10 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
 
             const docMatch = docLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
             if (docMatch && docMatch[1]) {
-                const docId = docMatch[1];
+                let docId = docMatch[1];
+                if (docId.includes('-0-')) {
+                    docId = docId.split('-0-')[0];
+                }
                 // Only re-fetch Google Doc if source actually changed or we have no content yet
                 const alreadyHasContent = existing && existing.content && existing.content.length > 50;
                 const docLinkChanged    = (existing?._source_doc_link || existing?.doc_link || '') !== docLink;
@@ -328,9 +475,17 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
                         const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
                         if (res.ok) {
                             const rawText = await res.text();
-                            contentText = cleanContent(rawText, fallbackTitle);
+                            let baseContent = cleanContent(rawText, fallbackTitle);
+                            
+                            // Dynamically fetch folder images if not already loaded, to integrate them
+                            if (folderImages.length === 0 && (rawImage.includes('drive.google.com/drive/folders/') || rawImage.includes('/folders/'))) {
+                                const folderFiles = await fetchDriveFolderFiles(rawImage);
+                                folderImages = folderFiles.filter(f => /\.(jpg|jpeg|png|webp|gif)$/i.test(f.name));
+                            }
+                            
+                            contentText = integrateArticleImages(baseContent, folderImages, rawImage);
                             docContentCache[docId] = contentText;
-                            console.log(`    ✓ Fetched Google Doc (${contentText.length} chars)`);
+                            console.log(`    ✓ Fetched Google Doc and integrated images (${contentText.length} chars)`);
                         }
                     } catch (e) {
                         console.error('    ✗ Error fetching doc', docId, e.message);

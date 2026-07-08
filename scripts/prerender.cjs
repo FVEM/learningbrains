@@ -14,7 +14,6 @@ const staticRoutes = [
     '/partners',
     '/news',
     '/noticias',
-    '/articles',
     '/resources',
     '/impact',
     '/contact',
@@ -32,9 +31,16 @@ async function prerender() {
     // Load dynamic article routes
     const enDataPath = path.join(__dirname, '../src/locales/en.json');
     const enData = JSON.parse(fs.readFileSync(enDataPath, 'utf8'));
-    const articleSlugs = (enData.articles && enData.articles.items_list) 
-        ? enData.articles.items_list.map(item => `/articles/${item.slug}`).filter(s => s && !s.includes('undefined'))
+    
+    const newsSlugs = (enData.news && enData.news.items_list)
+        ? enData.news.items_list.filter(item => item.slug).map(item => `/news/${item.slug}`)
         : [];
+        
+    const aiNewsSlugs = (enData.ai_news && enData.ai_news.items_list)
+        ? enData.ai_news.items_list.filter(item => item.slug).map(item => `/news/${item.slug}`)
+        : [];
+        
+    const articleSlugs = [...newsSlugs, ...aiNewsSlugs];
     
     const allRoutes = [...staticRoutes, ...articleSlugs];
 
