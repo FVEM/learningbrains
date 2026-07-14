@@ -132,7 +132,7 @@ export default function Analytics() {
                             onChange={(e) => setTimeRange(e.target.value)}
                             className="bg-neutral-100 border-none rounded-lg py-1.5 pl-4 pr-10 text-sm font-medium focus:ring-2 focus:ring-brand-primary/50 outline-none cursor-pointer appearance-none hover:bg-neutral-200 transition-colors"
                         >
-                            <option value="total">Total acumulado</option>
+                            <option value="total">Accumulated Total</option>
                             <option value="seg1">Dic 2025 – May 2026</option>
                             <option value="seg2">Jun 2026 – Nov 2026</option>
                             <option value="seg3">Dic 2026 – May 2027</option>
