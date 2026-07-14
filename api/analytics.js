@@ -56,8 +56,16 @@ export default async function handler(req, res) {
         let startDate = '2025-12-01';
         let endDate = '2026-05-31';
         if (range === 'seg2') { startDate = '2026-06-01'; endDate = '2026-11-30'; }
-        if (range === 'seg3') { startDate = '2026-12-01'; endDate = '2027-05-31'; }
-        if (range === 'seg4') { startDate = '2027-06-01'; endDate = '2027-11-30'; }
+        else if (range === 'seg3') { startDate = '2026-12-01'; endDate = '2027-05-31'; }
+        else if (range === 'seg4') { startDate = '2027-06-01'; endDate = '2027-11-30'; }
+        else if (range === 'total') {
+            startDate = '2025-12-01';
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            endDate = `${yyyy}-${mm}-${dd}`;
+        }
 
         // Inicializar cliente
         const analyticsDataClient = new BetaAnalyticsDataClient({
