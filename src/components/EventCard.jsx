@@ -9,7 +9,11 @@ import { Link } from 'react-router-dom';
  */
 const EventCard = ({ item, lang }) => {
   const { t } = useTranslation();
-  const slug = item.slug;
+  const ownDomainMatch = item.link && (
+    item.link.match(/learningbrains\.eu\/(?:en|es|it|de|pt|sk)\/news\/([a-zA-Z0-9_-]+)/) ||
+    item.link.match(/^\/(?:en|es|it|de|pt|sk)\/news\/([a-zA-Z0-9_-]+)/)
+  );
+  const slug = item.slug || (ownDomainMatch ? ownDomainMatch[1] : null);
 
   const imageUrl = item.image
     ? item.image.startsWith('http')
@@ -25,9 +29,12 @@ const EventCard = ({ item, lang }) => {
     return <Tag className="w-3 h-3" />;
   };
 
-  const isDocImage = item.slug || 
-                     item.title?.toLowerCase().includes('newsletter') || 
-                     item.title?.toLowerCase().includes('boletín');
+  const isDocImage = 
+    item.category?.toLowerCase().includes('newsletter') ||
+    item.badge?.toLowerCase().includes('newsletter') ||
+    item.title?.toLowerCase().includes('newsletter') ||
+    item.title?.toLowerCase().includes('boletín') ||
+    item.title?.toLowerCase().includes('pdf');
 
   return (
     <article className="group bg-white rounded-3xl overflow-hidden flex flex-col h-full border border-slate-50 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500">
@@ -37,7 +44,9 @@ const EventCard = ({ item, lang }) => {
           <img
             src={imageUrl}
             alt={item.title}
-            className="w-full h-full object-contain bg-slate-50 transform group-hover:scale-105 transition-transform duration-700"
+            className={`w-full h-full transform group-hover:scale-105 transition-transform duration-700 ${
+              isDocImage ? 'object-contain bg-slate-50/50 p-6' : 'object-cover'
+            }`}
             onError={(e) => { e.target.onerror = null; }}
           />
         ) : (

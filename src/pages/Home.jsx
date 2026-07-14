@@ -303,17 +303,43 @@ const Home = () => {
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {(() => {
+                            const parseCustomDate = (dateStr) => {
+                                if (!dateStr) return new Date(0);
+                                const cleaned = dateStr.toLowerCase().trim();
+                                if (cleaned.includes('coming soon')) return new Date(0);
+                                const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+                                let foundMonth = -1;
+                                let foundYear = -1;
+                                const yearMatch = cleaned.match(/\b(20\d{2})\b/);
+                                if (yearMatch) {
+                                    foundYear = parseInt(yearMatch[1], 10);
+                                }
+                                for (let i = 0; i < months.length; i++) {
+                                    if (cleaned.includes(months[i])) {
+                                        foundMonth = i;
+                                        break;
+                                    }
+                                }
+                                if (foundYear !== -1) {
+                                    return new Date(foundYear, foundMonth !== -1 ? foundMonth : 0, 1);
+                                }
+                                return new Date(0);
+                            };
                             const rawItems = t('news.items_list', { returnObjects: true });
                             const newsItems = Array.isArray(rawItems) ? [...rawItems].sort((a, b) => {
-                                const dateA = new Date(a.date);
-                                const dateB = new Date(b.date);
-                                if (isNaN(dateA) && isNaN(dateB)) return 0;
-                                if (isNaN(dateA)) return 1;
-                                if (isNaN(dateB)) return -1;
+                                const dateA = parseCustomDate(a.date);
+                                const dateB = parseCustomDate(b.date);
                                 return dateB - dateA;
                             }) : [];
                             return newsItems.slice(0, 3).map((item, idx) => {
                                 const NewsIcon = idx === 1 ? Calendar : (idx === 2 ? Users : Newspaper);
+
+                                // Dynamically resolve slug if the link points to our own news section
+                                const ownDomainMatch = item.link && (
+                                    item.link.match(/learningbrains\.eu\/(?:en|es|it|de|pt|sk)\/news\/([a-zA-Z0-9_-]+)/) ||
+                                    item.link.match(/^\/(?:en|es|it|de|pt|sk)\/news\/([a-zA-Z0-9_-]+)/)
+                                );
+                                const cardSlug = item.slug || (ownDomainMatch ? ownDomainMatch[1] : null);
 
                                 // Prioritize Excel data from JSON
                                 const displayImage = item.image;
@@ -377,9 +403,9 @@ const Home = () => {
                                             <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
                                                 {item.description}
                                             </p>
-                                            {item.slug ? (
+                                            {cardSlug ? (
                                                 <Link
-                                                    to={`/${i18n.language}/news/${item.slug}`}
+                                                    to={`/${i18n.language}/news/${cardSlug}`}
                                                     className="inline-flex items-center text-brand-secondary font-bold text-sm group/link"
                                                 >
                                                     {t('news.read_more')}

@@ -128,9 +128,8 @@ function needsTranslation(enItem, langItem, lang) {
         return { yes: true, reason: 'truncated-content' };
     }
 
-    // Content still contains leftover AI markdown formatting
+    // Content still contains leftover AI markdown formatting (e.g. metadata tags)
     const isOverFormatted = langItem.content && (
-        langItem.content.includes('**') ||
         /\n[A-Z\s]{5,}\n/.test(langItem.content) ||
         langItem.content.includes('KEY TAKEAWAY') ||
         langItem.content.includes('PULL QUOTE')
