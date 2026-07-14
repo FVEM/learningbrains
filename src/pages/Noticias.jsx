@@ -11,11 +11,32 @@ const Noticias = () => {
 
     const rawAiNewsItems = t('ai_news.items_list', { returnObjects: true }) || [];
     const translatedAiNewsItems = Array.isArray(rawAiNewsItems) ? [...rawAiNewsItems].sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        if (isNaN(dateA) && isNaN(dateB)) return 0;
-        if (isNaN(dateA)) return 1;
-        if (isNaN(dateB)) return -1;
+        const parseCustomDate = (dateStr) => {
+            if (!dateStr) return new Date(0);
+            const standardDate = new Date(dateStr);
+            if (!isNaN(standardDate)) return standardDate;
+            const cleaned = dateStr.toLowerCase().trim();
+            if (cleaned.includes('coming soon')) return new Date(0);
+            const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+            let foundMonth = -1;
+            let foundYear = -1;
+            const yearMatch = cleaned.match(/\b(20\d{2})\b/);
+            if (yearMatch) {
+                foundYear = parseInt(yearMatch[1], 10);
+            }
+            for (let i = 0; i < months.length; i++) {
+                if (cleaned.includes(months[i])) {
+                    foundMonth = i;
+                    break;
+                }
+            }
+            if (foundYear !== -1) {
+                return new Date(foundYear, foundMonth !== -1 ? foundMonth : 0, 1);
+            }
+            return new Date(0);
+        };
+        const dateA = parseCustomDate(a.date);
+        const dateB = parseCustomDate(b.date);
         return dateB - dateA;
     }) : [];
 

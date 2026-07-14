@@ -305,6 +305,8 @@ const Home = () => {
                         {(() => {
                             const parseCustomDate = (dateStr) => {
                                 if (!dateStr) return new Date(0);
+                                const standardDate = new Date(dateStr);
+                                if (!isNaN(standardDate)) return standardDate;
                                 const cleaned = dateStr.toLowerCase().trim();
                                 if (cleaned.includes('coming soon')) return new Date(0);
                                 const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
