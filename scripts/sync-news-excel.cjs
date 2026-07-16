@@ -320,17 +320,17 @@ function sourceChanged(sheetItem, existingItem) {
 
     const sheetTitle   = sheetItem.title_en || sheetItem.title || '';
     const sheetDesc    = sheetItem.description_en || sheetItem.description || '';
-    const sheetDocLink = sheetItem.doc_link || '';
-
     const rawLink      = sheetItem.link_url || sheetItem.link || '';
+    const sheetDocLink = sheetItem.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
     const hasDocLink   = !!(sheetDocLink || rawLink.includes('docs.google.com/document') || rawLink.includes('drive.google.com/drive/folders/') || rawLink.includes('/folders/'));
-    if (hasDocLink && !existingItem.slug) {
+    if (hasDocLink && (!existingItem.slug || !existingItem.content || existingItem.content.length < 50)) {
         return true;
     }
 
     const existTitle   = existingItem._source_title   || existingItem.title || '';
     const existDesc    = existingItem._source_desc    || existingItem.description || '';
-    const existDocLink = existingItem._source_doc_link || existingItem.doc_link || '';
+    const existDocLinkRaw = existingItem._source_doc_link || existingItem.doc_link || existingItem.link || '';
+    const existDocLink = existDocLinkRaw.includes('docs.google.com/document') ? existDocLinkRaw : '';
 
     const sheetPartner = sheetItem.partner || sheetItem['proposing pp'] || '';
     const existPartner = existingItem.partner || '';
@@ -347,7 +347,9 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
     // Build a lookup map from existing items by key
     const existingMap = {};
     for (const item of existingItems) {
-        const linkKey = itemKey(item.link || item._source_doc_link || '', '');
+        const docLink = item._source_doc_link || item.doc_link || '';
+        const isDoc = docLink.includes('docs.google.com') || (item.link && item.link.includes('docs.google.com'));
+        const linkKey = !isDoc ? itemKey(item.link || '', '') : '';
         const titleKey = itemKey('', item._source_title || item.title);
         if (linkKey) existingMap[linkKey] = item;
         if (titleKey) existingMap[titleKey] = item;
@@ -365,9 +367,10 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
 
         if (!fallbackTitle.trim()) continue;
 
-        const linkKey = itemKey(rawLink, '');
+        const isDoc = rawLink.includes('docs.google.com') || rawLink.includes('drive.google.com');
+        const linkKey = !isDoc ? itemKey(rawLink, '') : '';
         const titleKey = itemKey('', fallbackTitle);
-        const existing = existingMap[linkKey] || existingMap[titleKey];
+        const existing = existingMap[titleKey] || existingMap[linkKey];
         let changed  = sourceChanged(sheetRow, existing);
 
         // Fetch image folder files if image_url is a folder
@@ -399,7 +402,7 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
         }
 
         // Determine doc link
-        let docLink = sheetRow.doc_link || '';
+        let docLink = sheetRow.doc_link || (rawLink.includes('docs.google.com/document') ? rawLink : '');
         let hasDocLink = !!docLink || rawLink.includes('docs.google.com/document');
 
         if (!hasDocLink && (rawLink.includes('drive.google.com/drive/folders/') || rawLink.includes('/folders/'))) {
@@ -466,7 +469,9 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
                 }
                 // Only re-fetch Google Doc if source actually changed or we have no content yet
                 const alreadyHasContent = existing && existing.content && existing.content.length > 50;
-                const docLinkChanged    = (existing?._source_doc_link || existing?.doc_link || '') !== docLink;
+                const existDocLinkRaw   = existing?._source_doc_link || existing?.doc_link || existing?.link || '';
+                const existDocLink      = existDocLinkRaw.includes('docs.google.com/document') ? existDocLinkRaw : '';
+                const docLinkChanged    = existDocLink !== docLink;
 
                 if (docContentCache[docId]) {
                     contentText = docContentCache[docId];
@@ -513,7 +518,7 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             // Internal source snapshot — used to detect real changes on next run
             _source_title:    fallbackTitle,
             _source_desc:     fallbackDesc,
-            _source_doc_link: sheetRow.doc_link || ''
+            _source_doc_link: docLink || ''
         };
 
         if (hasDocLink) {
@@ -629,9 +634,5 @@ async function sync() {
         console.error('❌ Error running AI translation script:', error);
     }
 }
-
-sync().catch(console.error);
-
-
 
 sync().catch(console.error);
