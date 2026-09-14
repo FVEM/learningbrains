@@ -121,12 +121,12 @@ export const VALIDATION_CAMPAIGNS = {
                 pt: 'Comité Piloto Nacional'
             },
             title: {
-                en: 'NPC 1: Strategic Validation & Industrial Needs',
-                es: 'NPC 1: Validación Estratégica y Necesidades Industriales',
-                it: 'NPC 1: Validazione Strategica e Fabbisogni Industriali',
-                de: 'NPC 1: Strategische Validierung & Industrielle Bedarfe',
-                sk: 'NPC 1: Strategická validácia a priemyselné potreby',
-                pt: 'NPC 1: Validação Estratégica e Necessidades Industriais'
+                en: 'National Pilot Committee 1: Strategic Validation & Industrial Needs',
+                es: 'National Pilot Committee 1: Validación Estratégica y Necesidades Industriales',
+                it: 'National Pilot Committee 1: Validazione Strategica e Fabbisogni Industriali',
+                de: 'National Pilot Committee 1: Strategische Validierung & Industrielle Bedarfe',
+                sk: 'National Pilot Committee 1: Strategická validácia a priemyselné potreby',
+                pt: 'National Pilot Committee 1: Validação Estratégica e Necessidades Industriais'
             },
             subtitle: {
                 en: 'Evaluation of the project framework, targeted skills in AI for industrial SMEs, and regional implementation pilot guidelines.',
@@ -477,12 +477,12 @@ export const VALIDATION_CAMPAIGNS = {
                 pt: 'Comité Piloto Nacional'
             },
             title: {
-                en: 'NPC 2: Mid-term Pilot Evaluation & Workplace Testing',
-                es: 'NPC 2: Evaluación Intermedia de Pilotos en Empresas',
-                it: 'NPC 2: Valutazione Intermedia dei Progetti Pilota',
-                de: 'NPC 2: Zwischenbewertung der Unternehmens-Piloten',
-                sk: 'NPC 2: Priebežné hodnotenie pilotného testovania',
-                pt: 'NPC 2: Avaliação Intermédia dos Pilotos nas Empresas'
+                en: 'National Pilot Committee 2: Mid-term Pilot Evaluation & Workplace Testing',
+                es: 'National Pilot Committee 2: Evaluación Intermedia de Pilotos en Empresas',
+                it: 'National Pilot Committee 2: Valutazione Intermedia dei Progetti Pilota',
+                de: 'National Pilot Committee 2: Zwischenbewertung der Unternehmens-Piloten',
+                sk: 'National Pilot Committee 2: Priebežné hodnotenie pilotného testovania',
+                pt: 'National Pilot Committee 2: Avaliação Intermédia dos Pilotos nas Empresas'
             },
             subtitle: {
                 en: 'Validation of the practical on-the-job pilot testing, trainer observations, and initial SME performance metrics.',
@@ -512,12 +512,12 @@ export const VALIDATION_CAMPAIGNS = {
                 pt: 'Comité Piloto Nacional'
             },
             title: {
-                en: 'NPC 3: Final Impact, Exploitation & Regional Policy Recommendations',
-                es: 'NPC 3: Impacto Final, Sostenibilidad y Recomendaciones Políticas',
-                it: 'NPC 3: Impatto Finale, Sostenibilità e Raccomandazioni Politiche',
-                de: 'NPC 3: Endgültige Wirkung, Verstetigung & Politische Empfehlungen',
-                sk: 'NPC 3: Záverečný vplyv, udržateľnosť a odporúčania pre politiky',
-                pt: 'NPC 3: Impacto Final, Sustentabilidade e Recomendações Políticas'
+                en: 'National Pilot Committee 3: Final Impact, Exploitation & Regional Policy Recommendations',
+                es: 'National Pilot Committee 3: Impacto Final, Sostenibilidad y Recomendaciones Políticas',
+                it: 'National Pilot Committee 3: Impatto Finale, Sostenibilità e Raccomandazioni Politiche',
+                de: 'National Pilot Committee 3: Endgültige Wirkung, Verstetigung & Politische Empfehlungen',
+                sk: 'National Pilot Committee 3: Záverečný vplyv, udržateľnosť a odporúčania pre politiky',
+                pt: 'National Pilot Committee 3: Impacto Final, Sustentabilidade e Recomendações Políticas'
             },
             subtitle: {
                 en: 'Consortium wrap-up, institutional sustainability plans, and policy recommendations for regional industrial reskilling.',

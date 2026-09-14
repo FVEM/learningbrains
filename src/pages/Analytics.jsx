@@ -152,7 +152,7 @@ export default function Analytics() {
                                 }`}
                             >
                                 <FileCheck className="w-3.5 h-3.5" />
-                                Inputs Externos & NPCs
+                                Inputs Externos & National Pilot Committees
                             </button>
                             <button
                                 onClick={() => setAdminTab('web')}
@@ -210,7 +210,7 @@ export default function Analytics() {
                                     <span className="text-xs text-neutral-400 font-medium">Inputs Externos y Validación</span>
                                 </div>
                                 <h2 className="text-xl font-bold text-neutral-800">
-                                    Comités Piloto Nacionales (NPC) e Itinerarios Formativos
+                                    National Pilot Committees e Itinerarios Formativos
                                 </h2>
                                 <p className="text-xs text-neutral-500 mt-1 max-w-2xl">
                                     Genera y copia enlaces directos para los evaluadores y miembros de comités en España, Italia, Austria, Eslovaquia y Portugal. Las respuestas se registran de forma centralizada en Google Sheets.

@@ -179,7 +179,7 @@ export default function ValidationPortal() {
                             to="/validation/npc-1"
                             className="block w-full py-2.5 px-4 bg-brand-primary text-white rounded-xl font-medium hover:bg-opacity-90 transition-all text-sm"
                         >
-                            Go to NPC 1 Validation
+                            Go to National Pilot Committee 1 Validation
                         </Link>
                         <Link
                             to="/validation/itinerario-formativo"

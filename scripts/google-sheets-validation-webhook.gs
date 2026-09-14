@@ -29,7 +29,11 @@ function doPost(e) {
     // Map campaign to sheet tab
     var sheetName = "Validations General";
     if (data.campaignId === 'npc-1') {
-      sheetName = "NPC 1";
+      sheetName = "National Pilot Committee 1";
+    } else if (data.campaignId === 'npc-2') {
+      sheetName = "National Pilot Committee 2";
+    } else if (data.campaignId === 'npc-3') {
+      sheetName = "National Pilot Committee 3";
     } else if (data.campaignId === 'itinerario-formativo' || data.campaignId === 'training-pathway') {
       sheetName = "Itinerario Formativo";
     } else if (data.campaignId) {
