@@ -14,6 +14,7 @@ import Analytics from './pages/Analytics';
 import Noticias from './pages/Noticias';
 import Legal from './pages/Legal';
 import ArticleDetail from './pages/ArticleDetail';
+import ValidationPortal from './pages/ValidationPortal';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -42,6 +43,10 @@ function App() {
       <Routes>
         <Route path="/" element={<RootRedirect />} />
         <Route path="/analytics" element={<Analytics />} />
+
+        {/* Private Validation / External Inputs Portal (Unlisted) */}
+        <Route path="/validation/:campaignId" element={<ValidationPortal />} />
+        <Route path="/eval/:campaignId" element={<ValidationPortal />} />
 
         {/* All routes wrapped with Language Parameter */}
         <Route path="/:lang" element={<LanguageLayout />}>
