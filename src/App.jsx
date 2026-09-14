@@ -15,6 +15,7 @@ import Noticias from './pages/Noticias';
 import Legal from './pages/Legal';
 import ArticleDetail from './pages/ArticleDetail';
 import ValidationPortal from './pages/ValidationPortal';
+import ValidationHub from './pages/ValidationHub';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -44,7 +45,10 @@ function App() {
         <Route path="/" element={<RootRedirect />} />
         <Route path="/analytics" element={<Analytics />} />
 
-        {/* Private Validation / External Inputs Portal (Unlisted) */}
+        {/* Private Validation / External Inputs Portal & Hub (Unlisted) */}
+        <Route path="/validation" element={<ValidationHub />} />
+        <Route path="/eval" element={<ValidationHub />} />
+        <Route path="/inputs-externos" element={<ValidationHub />} />
         <Route path="/validation/:campaignId" element={<ValidationPortal />} />
         <Route path="/eval/:campaignId" element={<ValidationPortal />} />
 

@@ -460,13 +460,150 @@ export const VALIDATION_CAMPAIGNS = {
                 }
             }
         ]
+    },
+
+    'npc-2': {
+        id: 'npc-2',
+        slug: 'npc-2',
+        status: 'upcoming',
+        documentUrl: '/documents/validation/npc-2-sample.pdf',
+        meta: {
+            tag: {
+                en: 'National Pilot Committee',
+                es: 'Comité Piloto Nacional',
+                it: 'Comitato Pilota Nazionale',
+                de: 'Nationaler Pilot-Ausschuss',
+                sk: 'Národný pilotný výbor',
+                pt: 'Comité Piloto Nacional'
+            },
+            title: {
+                en: 'NPC 2: Mid-term Pilot Evaluation & Workplace Testing',
+                es: 'NPC 2: Evaluación Intermedia de Pilotos en Empresas',
+                it: 'NPC 2: Valutazione Intermedia dei Progetti Pilota',
+                de: 'NPC 2: Zwischenbewertung der Unternehmens-Piloten',
+                sk: 'NPC 2: Priebežné hodnotenie pilotného testovania',
+                pt: 'NPC 2: Avaliação Intermédia dos Pilotos nas Empresas'
+            },
+            subtitle: {
+                en: 'Validation of the practical on-the-job pilot testing, trainer observations, and initial SME performance metrics.',
+                es: 'Validación del pilotaje práctico en los puestos de trabajo, observaciones de los formadores y primeras métricas de impacto en PYMEs.',
+                it: 'Validazione della sperimentazione pilota sul lavoro, osservazioni dei formatori e prime metriche di impatto sulle PMI.',
+                de: 'Validierung der betrieblichen Pilottests, Beobachtungen der Ausbilder und erste KMU-Wirkungsmetriken.',
+                sk: 'Validácia praktického testovania na pracovisku, postrehy školiteľov a počiatočné ukazovatele vplyvu na MSP.',
+                pt: 'Validação da testagem prática no posto de trabalho, observações dos formadores e métricas iniciais de impacto nas PME.'
+            }
+        },
+        likertQuestions: [],
+        qualitativeQuestions: []
+    },
+
+    'npc-3': {
+        id: 'npc-3',
+        slug: 'npc-3',
+        status: 'upcoming',
+        documentUrl: '/documents/validation/npc-3-sample.pdf',
+        meta: {
+            tag: {
+                en: 'National Pilot Committee',
+                es: 'Comité Piloto Nacional',
+                it: 'Comitato Pilota Nazionale',
+                de: 'Nationaler Pilot-Ausschuss',
+                sk: 'Národný pilotný výbor',
+                pt: 'Comité Piloto Nacional'
+            },
+            title: {
+                en: 'NPC 3: Final Impact, Exploitation & Regional Policy Recommendations',
+                es: 'NPC 3: Impacto Final, Sostenibilidad y Recomendaciones Políticas',
+                it: 'NPC 3: Impatto Finale, Sostenibilità e Raccomandazioni Politiche',
+                de: 'NPC 3: Endgültige Wirkung, Verstetigung & Politische Empfehlungen',
+                sk: 'NPC 3: Záverečný vplyv, udržateľnosť a odporúčania pre politiky',
+                pt: 'NPC 3: Impacto Final, Sustentabilidade e Recomendações Políticas'
+            },
+            subtitle: {
+                en: 'Consortium wrap-up, institutional sustainability plans, and policy recommendations for regional industrial reskilling.',
+                es: 'Cierre del consorcio, planes de sostenibilidad institucional y recomendaciones para las políticas regionales de reciclaje industrial.',
+                it: 'Chiusura del consorzio, piani di sostenibilità istituzionale e raccomandazioni per le politiche regionali.',
+                de: 'Projektabschluss, institutionelle Verstetigungspläne und Politikempfehlungen für die regionale Weiterbildung.',
+                sk: 'Záverečné zhodnotenie konzorcia, plány inštitucionálnej udržateľnosti a odporúčania pre regionálne politiky.',
+                pt: 'Encerramento do consórcio, planos de sustentabilidade institucional e recomendações para as políticas regionais.'
+            }
+        },
+        likertQuestions: [],
+        qualitativeQuestions: []
     }
 };
+
+/**
+ * Resolves the document URL for a campaign and chosen language
+ */
+export function getCampaignDocumentUrl(campaign, lang = 'en') {
+    if (!campaign) return '';
+    if (campaign.documentUrls && typeof campaign.documentUrls === 'object') {
+        return campaign.documentUrls[lang] || campaign.documentUrls.en || Object.values(campaign.documentUrls)[0] || campaign.documentUrl;
+    }
+    return campaign.documentUrl || '';
+}
 
 /**
  * Common UI interface strings translated for the validation portal
  */
 export const VALIDATION_UI = {
+    hub_title: {
+        en: 'External Validation & Peer-Review Portal',
+        es: 'Portal de Validación Externa y Comités de Pilotaje',
+        it: 'Portale di Validazione Esterna e Comitati Pilota',
+        de: 'Portal für Externe Validierung & Pilot-Ausschüsse',
+        sk: 'Portál pre externú validáciu a pilotné výbory',
+        pt: 'Portal de Validação Externa e Comités Piloto'
+    },
+    hub_subtitle: {
+        en: 'Welcome to the central evaluation space for the Erasmus+ Learning Brains project. Select your language above and click on an active deliverable to review the document and provide your structured feedback.',
+        es: 'Bienvenido al espacio central de evaluación del proyecto Erasmus+ Learning Brains. Selecciona tu idioma preferido y accede a los entregables activos para revisar la documentación y aportar tu valoración.',
+        it: 'Benvenuti nello spazio centrale di valutazione del progetto Erasmus+ Learning Brains. Selezionate la lingua preferita e accedete ai deliverable attivi per esaminare la documentazione e inviare il vostro feedback.',
+        de: 'Willkommen im zentralen Evaluierungsbereich des Erasmus+-Projekts Learning Brains. Wählen Sie Ihre Sprache und klicken Sie auf ein aktives Projektergebnis, um das Dokument zu prüfen und Ihr Feedback abzugeben.',
+        sk: 'Vitajte v centrálnom hodnotiacom priestore projektu Erasmus+ Learning Brains. Zvoľte si jazyk a kliknite na aktívny výstup, aby ste preskúmali dokumentáciu a poskytli spätnú väzbu.',
+        pt: 'Bem-vindo ao espaço central de avaliação do projeto Erasmus+ Learning Brains. Selecione o seu idioma e aceda aos resultados ativos para analisar a documentação e fornecer a sua avaliação.'
+    },
+    hub_active_badge: {
+        en: 'Open for Review',
+        es: 'Abierto para Evaluación',
+        it: 'Aperto per la Valutazione',
+        de: 'Offen zur Begutachtung',
+        sk: 'Otvorené na hodnotenie',
+        pt: 'Aberto para Avaliação'
+    },
+    hub_upcoming_badge: {
+        en: 'Scheduled / Phase 2',
+        es: 'Próximamente / Fase 2',
+        it: 'In arrivo / Fase 2',
+        de: 'Demnächst / Phase 2',
+        sk: 'Pripravuje sa / 2. fáza',
+        pt: 'Brevemente / Fase 2'
+    },
+    hub_start_btn: {
+        en: 'Review Document & Submit Feedback →',
+        es: 'Revisar Documento y Evaluar →',
+        it: 'Esamina Documento e Valuta →',
+        de: 'Dokument prüfen & Feedback geben →',
+        sk: 'Preskúmať dokument a hodnotiť →',
+        pt: 'Analisar Documento e Avaliar →'
+    },
+    hub_disabled_btn: {
+        en: 'Scheduled for Later Phase',
+        es: 'Programado para Siguiente Fase',
+        it: 'Previsto per la Fase Successiva',
+        de: 'Für spätere Phase geplant',
+        sk: 'Naplánované na neskoršiu fázu',
+        pt: 'Previsto para Fase Posterior'
+    },
+    back_to_hub: {
+        en: 'Back to Validation Hub',
+        es: 'Volver al Portal de Validación',
+        it: 'Torna al Portale di Validazione',
+        de: 'Zurück zum Validierungsportal',
+        sk: 'Späť na portál validácie',
+        pt: 'Voltar ao Portal de Validação'
+    },
     step_profile: {
         en: '1. Evaluator Profile',
         es: '1. Perfil del Evaluador',
