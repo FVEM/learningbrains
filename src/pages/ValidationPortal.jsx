@@ -201,13 +201,13 @@ export default function ValidationPortal() {
                 <title>{tr(campaign.meta.title)} | Learning Brains Validation</title>
             </Helmet>
 
-            {/* Top Navigation Bar */}
-            <header className="bg-white border-b border-slate-200 sticky top-0 z-40 px-4 lg:px-8 py-3.5">
+            {/* Top Navigation Bar - Matches Main Website Header */}
+            <header className="bg-white shadow-sm sticky top-0 z-40 px-4 lg:px-8 py-4">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-4">
                         <Link
                             to={`/validation?lang=${currentLang}`}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-all border border-slate-200 shadow-2xs"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-700 rounded-xl text-xs font-semibold transition-all border border-slate-200 shadow-2xs"
                             title={ui('back_to_hub')}
                         >
                             <ArrowLeft className="w-3.5 h-3.5" />
@@ -216,10 +216,10 @@ export default function ValidationPortal() {
                         <div className="hidden sm:block h-6 w-px bg-slate-200" />
                         <Link
                             to={`/${currentLang || 'en'}`}
-                            className="flex items-center transition-transform hover:scale-[1.03] group"
+                            className="flex items-center transition-transform hover:scale-[1.02] group"
                             title={currentLang === 'es' ? 'Ir a la web general del proyecto Learning Brains' : 'Go to Learning Brains main website'}
                         >
-                            <img src={logo} alt="Learning Brains" className="h-9 w-auto group-hover:opacity-90 transition-opacity" />
+                            <img src={logo} alt="Learning Brains" className="h-10 md:h-11 w-auto group-hover:scale-105 transition-transform" />
                         </Link>
                         <div className="hidden sm:block h-6 w-px bg-slate-200" />
                         <div>

@@ -596,6 +596,30 @@ export const VALIDATION_UI = {
         sk: 'Naplánované na neskoršiu fázu',
         pt: 'Previsto para Fase Posterior'
     },
+    hub_active_section_title: {
+        en: 'Active Deliverables Open for Validation',
+        es: 'Acciones y Entregables Activos para Validación',
+        it: 'Azioni e Deliverable Attivi per la Validazione',
+        de: 'Aktive Projektergebnisse zur Validierung',
+        sk: 'Aktívne výstupy otvorené na validáciu',
+        pt: 'Ações e Entregáveis Ativos para Validação'
+    },
+    hub_upcoming_section_title: {
+        en: 'Upcoming Validation Phases (Project Roadmap)',
+        es: 'Próximas Fases de Validación (Roadmap del Proyecto)',
+        it: 'Prossime Fasi di Validazione (Roadmap del Progetto)',
+        de: 'Kommende Validierungsphasen (Projekt-Roadmap)',
+        sk: 'Pripravované fázy validácie (Harmonogram projektu)',
+        pt: 'Próximas Fases de Validação (Roteiro do Projeto)'
+    },
+    hub_available_count: {
+        en: 'available',
+        es: 'disponibles',
+        it: 'disponibili',
+        de: 'verfügbar',
+        sk: 'k dispozícii',
+        pt: 'disponíveis'
+    },
     back_to_hub: {
         en: 'Back to Validation Hub',
         es: 'Volver al Portal de Validación',
