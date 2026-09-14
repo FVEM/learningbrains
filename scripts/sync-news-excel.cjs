@@ -335,11 +335,15 @@ function sourceChanged(sheetItem, existingItem) {
     const sheetPartner = sheetItem.partner || sheetItem['proposing pp'] || '';
     const existPartner = existingItem.partner || '';
 
+    const sheetImage   = sheetItem.image_url || sheetItem.image || '';
+    const existImage   = existingItem._source_image || existingItem.image || '';
+
     return (
         sheetTitle.trim()   !== existTitle.trim()   ||
         sheetDesc.trim()    !== existDesc.trim()    ||
         sheetDocLink.trim() !== existDocLink.trim() ||
-        sheetPartner.trim() !== existPartner.trim()
+        sheetPartner.trim() !== existPartner.trim() ||
+        sheetImage.trim()   !== existImage.trim()
     );
 }
 
@@ -472,10 +476,9 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
                 const existDocLinkRaw   = existing?._source_doc_link || existing?.doc_link || existing?.link || '';
                 const existDocLink      = existDocLinkRaw.includes('docs.google.com/document') ? existDocLinkRaw : '';
                 const docLinkChanged    = existDocLink !== docLink;
+                const rawImageChanged   = (existing?._source_image || existing?.image || '') !== rawImage;
 
-                if (docContentCache[docId]) {
-                    contentText = docContentCache[docId];
-                } else if (!alreadyHasContent || docLinkChanged) {
+                if (lang === 'en' && (!alreadyHasContent || docLinkChanged || rawImageChanged)) {
                     try {
                         const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
                         if (res.ok) {
@@ -494,11 +497,18 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
                         }
                     } catch (e) {
                         console.error('    ✗ Error fetching doc', docId, e.message);
-                        // Preserve existing content rather than losing it
                         contentText = existing?.content || '';
                     }
+                } else if (docContentCache[docId] && (!existing?.content || (lang === 'en' && rawImageChanged))) {
+                    contentText = docContentCache[docId];
+                } else if (existing?.content) {
+                    contentText = existing.content;
+                    // If image is no longer a folder, clean up any previously integrated folder images from non-EN content
+                    if (!rawImage.includes('/folders/') && contentText.includes('![')) {
+                        contentText = contentText.replace(/\n*!\[[^\]]*\]\([^\)]+\)\n*/g, '\n\n').replace(/\n{3,}/g, '\n\n').trim();
+                    }
                 } else {
-                    contentText = existing?.content || '';
+                    contentText = docContentCache[docId] || '';
                 }
             }
         }
@@ -518,7 +528,8 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             // Internal source snapshot — used to detect real changes on next run
             _source_title:    fallbackTitle,
             _source_desc:     fallbackDesc,
-            _source_doc_link: docLink || ''
+            _source_doc_link: docLink || '',
+            _source_image:    rawImage || ''
         };
 
         if (hasDocLink) {
