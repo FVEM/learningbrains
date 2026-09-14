@@ -214,7 +214,13 @@ export default function ValidationPortal() {
                             <span className="hidden sm:inline">{ui('back_to_hub')}</span>
                         </Link>
                         <div className="hidden sm:block h-6 w-px bg-slate-200" />
-                        <img src={logo} alt="Learning Brains" className="h-9 w-auto" />
+                        <Link
+                            to={`/${currentLang || 'en'}`}
+                            className="flex items-center transition-transform hover:scale-[1.03] group"
+                            title={currentLang === 'es' ? 'Ir a la web general del proyecto Learning Brains' : 'Go to Learning Brains main website'}
+                        >
+                            <img src={logo} alt="Learning Brains" className="h-9 w-auto group-hover:opacity-90 transition-opacity" />
+                        </Link>
                         <div className="hidden sm:block h-6 w-px bg-slate-200" />
                         <div>
                             <div className="flex items-center gap-2">
