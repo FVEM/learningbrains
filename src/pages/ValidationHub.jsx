@@ -111,9 +111,9 @@ export default function ValidationHub() {
             {/* Hero / Header Section */}
             <section className="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200/80 py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold uppercase tracking-wider mb-4 animate-fade-in">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold tracking-wide mb-4 animate-fade-in">
                         <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-                        European Peer-Review Portal
+                        Learning Brains Peer-Review Portal
                     </div>
                     <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
                         {ui('hub_title')}
