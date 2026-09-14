@@ -11,8 +11,8 @@ export const SUPPORTED_LANGUAGES = [
     { code: 'en', name: 'English', flag: '🇬🇧' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'de', name: 'Deutsch', flag: '🇦🇹' },
     { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
+    { code: 'de', name: 'Deutsch', flag: '🇦🇹' },
     { code: 'pt', name: 'Português', flag: '🇵🇹' },
 ];
 
