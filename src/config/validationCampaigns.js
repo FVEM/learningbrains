@@ -549,12 +549,12 @@ export function getCampaignDocumentUrl(campaign, lang = 'en') {
  */
 export const VALIDATION_UI = {
     hub_title: {
-        en: 'External Validation & Peer-Review Portal',
-        es: 'Portal de Validación Externa y Comités de Pilotaje',
-        it: 'Portale di Validazione Esterna e Comitati Pilota',
-        de: 'Portal für Externe Validierung & Pilot-Ausschüsse',
-        sk: 'Portál pre externú validáciu a pilotné výbory',
-        pt: 'Portal de Validação Externa e Comités Piloto'
+        en: 'External Validation Portal',
+        es: 'Portal de Validación Externa',
+        it: 'Portale di Validazione Esterna',
+        de: 'Portal für Externe Validierung',
+        sk: 'Portál pre externú validáciu',
+        pt: 'Portal de Validação Externa'
     },
     hub_subtitle: {
         en: 'Welcome to the central evaluation space for the Erasmus+ Learning Brains project. Select your language above and click on an active deliverable to review the document and provide your structured feedback.',
