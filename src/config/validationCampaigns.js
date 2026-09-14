@@ -604,6 +604,54 @@ export const VALIDATION_UI = {
         sk: 'Späť na portál validácie',
         pt: 'Voltar ao Portal de Validação'
     },
+    hub_step1_title: {
+        en: 'Select Deliverable',
+        es: 'Selecciona Entregable',
+        it: 'Seleziona Deliverable',
+        de: 'Ergebnis auswählen',
+        sk: 'Výber výstupu',
+        pt: 'Selecionar Entregável'
+    },
+    hub_step1_desc: {
+        en: 'Choose the active action you want to evaluate.',
+        es: 'Elige la acción activa en la que deseas participar.',
+        it: 'Scegli l\'azione attiva a cui desideri partecipare.',
+        de: 'Wählen Sie die aktive Maßnahme zur Begutachtung aus.',
+        sk: 'Vyberte aktívnu akciu, ktorú chcete hodnotiť.',
+        pt: 'Escolha a ação ativa em que pretende participar.'
+    },
+    hub_step2_title: {
+        en: 'Review Document',
+        es: 'Revisa el Documento',
+        it: 'Esamina il Documento',
+        de: 'Dokument prüfen',
+        sk: 'Preskúmanie dokumentu',
+        pt: 'Rever o Documento'
+    },
+    hub_step2_desc: {
+        en: 'Examine the PDF inside the integrated viewer.',
+        es: 'Examina el documento en el visor o descárgalo.',
+        it: 'Esamina il PDF nel visualizzatore integrato o scaricalo.',
+        de: 'Prüfen Sie das PDF im integrierten Viewer.',
+        sk: 'Prezrite si PDF v integrovanom prehliadači.',
+        pt: 'Examine o PDF no visualizador integrado.'
+    },
+    hub_step3_title: {
+        en: 'Submit Feedback',
+        es: 'Envía tu Valoración',
+        it: 'Invia Valutazione',
+        de: 'Feedback absenden',
+        sk: 'Odoslanie spätnej väzby',
+        pt: 'Submeter Avaliação'
+    },
+    hub_step3_desc: {
+        en: 'Complete the short structured form (5-10 min).',
+        es: 'Completa el cuestionario rápido (aprox. 5-10 min).',
+        it: 'Completa il breve questionario (circa 5-10 min).',
+        de: 'Füllen Sie das kurze Formular aus (ca. 5-10 Min.).',
+        sk: 'Vyplňte krátky štruktúrovaný formulár (5-10 min).',
+        pt: 'Preencha o formulário estruturado (5-10 min).'
+    },
     step_profile: {
         en: '1. Evaluator Profile',
         es: '1. Perfil del Evaluador',

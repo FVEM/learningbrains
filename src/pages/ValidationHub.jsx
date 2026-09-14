@@ -108,47 +108,51 @@ export default function ValidationHub() {
                 </div>
             </header>
 
-            {/* Hero / Header Section */}
-            <section className="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200/80 py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold tracking-wide mb-4 animate-fade-in">
-                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+            {/* Hero / Header Section with Brand Colors */}
+            <section className="relative overflow-hidden bg-gradient-to-b from-[#e3f4f0] via-[#edf7f5] to-[#e6f5f1] border-b border-teal-300/80 py-12 md:py-14 px-4 sm:px-6 lg:px-8">
+                {/* Subtle Ambient Decorative Glow */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-56 bg-gradient-to-b from-teal-400/25 via-emerald-400/15 to-transparent blur-3xl pointer-events-none -z-0" />
+                <div className="absolute inset-0 bg-[radial-gradient(#00897b_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.045] pointer-events-none" />
+
+                <div className="relative z-10 max-w-4xl mx-auto text-center">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-teal-300/90 text-brand-primary text-xs font-bold tracking-wide mb-4 shadow-xs animate-fade-in">
+                        <Sparkles className="w-3.5 h-3.5 text-brand-secondary" />
                         Learning Brains Peer-Review Portal
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    <h1 className="text-3xl md:text-4xl font-extrabold text-brand-primary tracking-tight mb-4">
                         {ui('hub_title')}
                     </h1>
                     <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
                         {ui('hub_subtitle')}
                     </p>
 
-                    {/* Process Overview Pills */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto mt-8 text-left text-xs">
-                        <div className="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs">
-                            <div className="font-bold text-slate-800 mb-1 flex items-center gap-1.5">
-                                <span className="w-5 h-5 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center text-[10px]">1</span>
-                                {currentLang === 'es' ? 'Selecciona Entregable' : 'Select Deliverable'}
+                    {/* Process Overview Cards */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 max-w-2xl mx-auto mt-8 text-left text-xs">
+                        <div className="p-4 bg-white rounded-xl border border-teal-200/90 shadow-sm hover:border-brand-secondary/60 hover:shadow-md transition-all group">
+                            <div className="font-bold text-brand-primary mb-1.5 flex items-center gap-2 text-xs">
+                                <span className="w-5 h-5 rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary text-white flex items-center justify-center text-[10px] font-bold shadow-xs">1</span>
+                                {ui('hub_step1_title')}
                             </div>
-                            <p className="text-slate-500">
-                                {currentLang === 'es' ? 'Elige la acción activa en la que deseas participar.' : 'Choose the active action you want to evaluate.'}
+                            <p className="text-slate-600 text-[11px] leading-relaxed">
+                                {ui('hub_step1_desc')}
                             </p>
                         </div>
-                        <div className="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs">
-                            <div className="font-bold text-slate-800 mb-1 flex items-center gap-1.5">
-                                <span className="w-5 h-5 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center text-[10px]">2</span>
-                                {currentLang === 'es' ? 'Revisa el PDF' : 'Review Document'}
+                        <div className="p-4 bg-white rounded-xl border border-teal-200/90 shadow-sm hover:border-brand-secondary/60 hover:shadow-md transition-all group">
+                            <div className="font-bold text-brand-primary mb-1.5 flex items-center gap-2 text-xs">
+                                <span className="w-5 h-5 rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary text-white flex items-center justify-center text-[10px] font-bold shadow-xs">2</span>
+                                {ui('hub_step2_title')}
                             </div>
-                            <p className="text-slate-500">
-                                {currentLang === 'es' ? 'Examina el documento en el visor o descárgalo.' : 'Examine the PDF inside the integrated viewer.'}
+                            <p className="text-slate-600 text-[11px] leading-relaxed">
+                                {ui('hub_step2_desc')}
                             </p>
                         </div>
-                        <div className="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs">
-                            <div className="font-bold text-slate-800 mb-1 flex items-center gap-1.5">
-                                <span className="w-5 h-5 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center text-[10px]">3</span>
-                                {currentLang === 'es' ? 'Envía tu Feedback' : 'Submit Feedback'}
+                        <div className="p-4 bg-white rounded-xl border border-teal-200/90 shadow-sm hover:border-brand-secondary/60 hover:shadow-md transition-all group">
+                            <div className="font-bold text-brand-primary mb-1.5 flex items-center gap-2 text-xs">
+                                <span className="w-5 h-5 rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary text-white flex items-center justify-center text-[10px] font-bold shadow-xs">3</span>
+                                {ui('hub_step3_title')}
                             </div>
-                            <p className="text-slate-500">
-                                {currentLang === 'es' ? 'Completa el cuestionario rápido (aprox. 5-10 min).' : 'Complete the short structured form (5-10 min).'}
+                            <p className="text-slate-600 text-[11px] leading-relaxed">
+                                {ui('hub_step3_desc')}
                             </p>
                         </div>
                     </div>
