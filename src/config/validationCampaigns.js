@@ -299,7 +299,7 @@ export const VALIDATION_CAMPAIGNS = {
                 pt: 'Itinerário Formativo e Currículo'
             },
             title: {
-                en: 'AI Training Pathway for Industrial SMEs: Curriculum Validation',
+                en: 'AI Training Itinerary for Industrial SMEs: Curriculum Validation',
                 es: 'Itinerario Formativo en IA para PYMEs Industriales: Validación Curricular',
                 it: 'Itinerario Formativo in IA per PMI Industriali: Validazione del Curriculum',
                 de: 'KI-Ausbildungspfad für industrielle KMU: Lehrplanvalidierung',
