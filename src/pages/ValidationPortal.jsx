@@ -438,25 +438,25 @@ export default function ValidationPortal() {
                             <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
                                 
                                 {/* Stepper Navigation */}
-                                <div className="px-5 py-3.5 bg-slate-50 border-b border-slate-200">
-                                    <div className="flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-500">
+                                <div className="px-5 py-4 bg-slate-50 border-b border-slate-200">
+                                    <div className="flex items-center justify-between text-sm sm:text-base font-semibold text-slate-500">
                                         <span className={currentStep === 1 ? 'text-brand-primary font-bold' : ''}>
                                             {ui('step_profile')}
                                         </span>
-                                        <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
+                                        <ChevronRight className="w-4 h-4 text-slate-300" />
                                         <span className={currentStep === 2 ? 'text-brand-primary font-bold' : ''}>
                                             {ui('step_ratings')}
                                         </span>
-                                        <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
+                                        <ChevronRight className="w-4 h-4 text-slate-300" />
                                         <span className={currentStep === 3 ? 'text-brand-primary font-bold' : ''}>
                                             {ui('step_feedback')}
                                         </span>
-                                        <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
+                                        <ChevronRight className="w-4 h-4 text-slate-300" />
                                         <span className={currentStep === 4 ? 'text-brand-primary font-bold' : ''}>
                                             {ui('step_submit')}
                                         </span>
                                     </div>
-                                    <div className="w-full bg-slate-200 h-1.5 rounded-full mt-2.5 overflow-hidden">
+                                    <div className="w-full bg-slate-200 h-2 rounded-full mt-3 overflow-hidden">
                                         <div
                                             className="bg-brand-primary h-full transition-all duration-300"
                                             style={{ width: `${(currentStep / 4) * 100}%` }}
@@ -468,63 +468,63 @@ export default function ValidationPortal() {
 
                                     {/* ──── PASO 1: DATOS DEL EVALUADOR ──── */}
                                     {currentStep === 1 && (
-                                        <div className="space-y-4 animate-fade-in">
-                                            <div className="mb-2">
-                                                <h3 className="text-lg font-bold text-slate-800">
+                                        <div className="space-y-5 animate-fade-in">
+                                            <div className="mb-3">
+                                                <h3 className="text-xl font-bold text-slate-900">
                                                     {ui('step_profile')}
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-slate-500">
+                                                <p className="text-sm sm:text-base text-slate-600 mt-1">
                                                     {ui('step_profile_desc')}
                                                 </p>
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                     {ui('name')} *
                                                 </label>
                                                 <div className="relative">
-                                                    <User className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                                                    <User className="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5" />
                                                     <input
                                                         type="text"
                                                         required
                                                         value={evaluator.name}
                                                         onChange={(e) => setEvaluator({ ...evaluator, name: e.target.value })}
                                                         placeholder="e.g. Maria Rossi / John Smith"
-                                                        className="w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all"
+                                                        className="w-full pl-11 pr-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                     {ui('email')} *
                                                 </label>
                                                 <div className="relative">
-                                                    <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                                                    <Mail className="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5" />
                                                     <input
                                                         type="email"
                                                         required
                                                         value={evaluator.email}
                                                         onChange={(e) => setEvaluator({ ...evaluator, email: e.target.value })}
                                                         placeholder="name@organization.eu"
-                                                        className="w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all"
+                                                        className="w-full pl-11 pr-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                     {ui('organization')} *
                                                 </label>
                                                 <div className="relative">
-                                                    <Building2 className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                                                    <Building2 className="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5" />
                                                     <input
                                                         type="text"
                                                         required
                                                         value={evaluator.organization}
                                                         onChange={(e) => setEvaluator({ ...evaluator, organization: e.target.value })}
                                                         placeholder="Company / Training Center name"
-                                                        className="w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all"
+                                                        className="w-full pl-11 pr-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                     />
                                                 </div>
                                             </div>
@@ -532,14 +532,14 @@ export default function ValidationPortal() {
                                             {isItineraryCampaign ? (
                                                 <div className="space-y-4">
                                                     <div>
-                                                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                        <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                             {ui('country')} *
                                                         </label>
                                                         <select
                                                             required
                                                             value={evaluator.country}
                                                             onChange={(e) => setEvaluator({ ...evaluator, country: e.target.value })}
-                                                            className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                            className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                         >
                                                             <option value="">{ui('select_option')}</option>
                                                             {CONSORTIUM_COUNTRIES.map((c) => (
@@ -551,14 +551,14 @@ export default function ValidationPortal() {
                                                     </div>
 
                                                     <div>
-                                                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                        <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                             {ui('professional_background')} *
                                                         </label>
                                                         <select
                                                             required
                                                             value={evaluator.professionalBackground}
                                                             onChange={(e) => setEvaluator({ ...evaluator, professionalBackground: e.target.value })}
-                                                            className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                            className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                         >
                                                             <option value="">{ui('select_option')}</option>
                                                             {ITINERARY_PROFESSIONAL_BACKGROUNDS.map((b) => (
@@ -571,7 +571,7 @@ export default function ValidationPortal() {
 
                                                     {evaluator.professionalBackground === 'other' && (
                                                         <div className="animate-fade-in">
-                                                            <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                                 {ui('other_specify')} *
                                                             </label>
                                                             <input
@@ -580,21 +580,21 @@ export default function ValidationPortal() {
                                                                 value={evaluator.otherBackground || ''}
                                                                 onChange={(e) => setEvaluator({ ...evaluator, otherBackground: e.target.value })}
                                                                 placeholder="e.g. Innovation Consultant / Technology Transfer"
-                                                                className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all"
+                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                             />
                                                         </div>
                                                     )}
 
                                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                         <div>
-                                                            <label className="block text-sm font-semibold text-slate-700 mb-1.5 leading-tight">
+                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2 leading-tight">
                                                                 {ui('years_experience')} *
                                                             </label>
                                                             <select
                                                                 required
                                                                 value={evaluator.yearsExperience}
                                                                 onChange={(e) => setEvaluator({ ...evaluator, yearsExperience: e.target.value })}
-                                                                className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700 mt-1"
+                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs mt-1"
                                                             >
                                                                 <option value="">{ui('select_option')}</option>
                                                                 {EXPERIENCE_YEARS.map((y) => (
@@ -606,14 +606,14 @@ export default function ValidationPortal() {
                                                         </div>
 
                                                         <div>
-                                                            <label className="block text-sm font-semibold text-slate-700 mb-1.5 leading-tight">
+                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2 leading-tight">
                                                                 {ui('ai_experience')} *
                                                             </label>
                                                             <select
                                                                 required
                                                                 value={evaluator.aiExperience}
                                                                 onChange={(e) => setEvaluator({ ...evaluator, aiExperience: e.target.value })}
-                                                                className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700 mt-1"
+                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs mt-1"
                                                             >
                                                                 <option value="">{ui('select_option')}</option>
                                                                 {AI_EXPERIENCE_LEVELS.map((lvl) => (
@@ -628,14 +628,14 @@ export default function ValidationPortal() {
                                             ) : (
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                     <div>
-                                                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                        <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                             {ui('country')} *
                                                         </label>
                                                         <select
                                                             required
                                                             value={evaluator.country}
                                                             onChange={(e) => setEvaluator({ ...evaluator, country: e.target.value })}
-                                                            className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                            className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                         >
                                                             <option value="">{ui('select_option')}</option>
                                                             {CONSORTIUM_COUNTRIES.map((c) => (
@@ -647,14 +647,14 @@ export default function ValidationPortal() {
                                                     </div>
 
                                                     <div>
-                                                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                                        <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
                                                             {ui('role')} *
                                                         </label>
                                                         <select
                                                             required
                                                             value={evaluator.role}
                                                             onChange={(e) => setEvaluator({ ...evaluator, role: e.target.value })}
-                                                            className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                            className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
                                                         >
                                                             <option value="">{ui('select_option')}</option>
                                                             {STAKEHOLDER_TYPES.map((t) => (
@@ -673,10 +673,10 @@ export default function ValidationPortal() {
                                     {currentStep === 2 && (
                                         <div className="space-y-6 animate-fade-in">
                                             <div>
-                                                <h3 className="text-lg font-bold text-slate-800">
+                                                <h3 className="text-xl font-bold text-slate-900">
                                                     {ui('step_ratings')}
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-slate-500 mb-1">
+                                                <p className="text-sm sm:text-base text-slate-600 mt-1 mb-1 leading-relaxed">
                                                     {ui('scale_legend')}
                                                 </p>
                                             </div>
@@ -694,22 +694,22 @@ export default function ValidationPortal() {
                                                         <div key={q.id} className="space-y-2">
                                                             {isNewSection && (
                                                                 <div className={`pt-4 pb-2 border-b border-teal-100 flex items-center justify-between ${idx > 0 ? 'mt-6' : 'mt-1'}`}>
-                                                                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-50 text-brand-primary border border-teal-200">
+                                                                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider bg-teal-50 text-brand-primary border border-teal-200">
                                                                         {currentSection}
                                                                     </span>
-                                                                    <span className="text-xs text-slate-400 font-medium hidden sm:inline">
+                                                                    <span className="text-xs sm:text-sm text-slate-400 font-medium hidden sm:inline">
                                                                         Learning Brains Framework
                                                                     </span>
                                                                 </div>
                                                             )}
-                                                            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-3">
+                                                            <div className="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-300 space-y-3 shadow-2xs">
                                                                 <div className="flex items-start justify-between gap-2">
                                                                     <div>
-                                                                        <div className="text-sm sm:text-[15px] font-bold text-slate-800 leading-snug">
+                                                                        <div className="text-base sm:text-[17px] font-bold text-slate-900 leading-snug">
                                                                             {idx + 1}. {tr(q.title)}
                                                                         </div>
                                                                         {q.description && (
-                                                                            <p className="text-xs sm:text-sm text-slate-500 leading-normal mt-1">
+                                                                            <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mt-1.5">
                                                                                 {tr(q.description)}
                                                                             </p>
                                                                         )}
@@ -717,7 +717,7 @@ export default function ValidationPortal() {
                                                                 </div>
 
                                                                 {/* Rating Buttons: 1 to 5 + N/A */}
-                                                                <div className="grid grid-cols-6 gap-1.5 pt-1">
+                                                                <div className="grid grid-cols-6 gap-2 pt-1.5">
                                                                     {[1, 2, 3, 4, 5, 'N/A'].map((num) => {
                                                                         const isSelected = selectedVal === num;
                                                                         const isNA = num === 'N/A';
@@ -727,13 +727,13 @@ export default function ValidationPortal() {
                                                                                 key={num}
                                                                                 onClick={() => setRatings({ ...ratings, [q.id]: num })}
                                                                                 title={isNA ? ui('scale_na_desc') : `${num} / 5`}
-                                                                                className={`py-2.5 rounded-xl text-sm font-bold transition-all flex flex-col items-center justify-center ${
+                                                                                className={`py-3 rounded-xl text-base font-bold transition-all flex flex-col items-center justify-center ${
                                                                                     isSelected
                                                                                         ? (isNA ? 'bg-slate-700 text-white shadow-sm ring-2 ring-slate-700/30' : 'bg-brand-primary text-white shadow-sm ring-2 ring-brand-primary/30')
-                                                                                        : (isNA ? 'bg-slate-200/80 text-slate-700 border border-slate-300 hover:bg-slate-300/80' : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100')
+                                                                                        : (isNA ? 'bg-slate-200/80 text-slate-700 border border-slate-300 hover:bg-slate-300/80' : 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-100')
                                                                                 }`}
                                                                             >
-                                                                                <span className={isNA ? 'text-xs sm:text-sm' : 'text-sm'}>{num}</span>
+                                                                                <span className={isNA ? 'text-xs sm:text-sm' : 'text-base font-bold'}>{num}</span>
                                                                             </button>
                                                                         );
                                                                     })}
@@ -750,17 +750,17 @@ export default function ValidationPortal() {
                                     {currentStep === 3 && (
                                         <div className="space-y-5 animate-fade-in">
                                             <div>
-                                                <h3 className="text-lg font-bold text-slate-800">
+                                                <h3 className="text-xl font-bold text-slate-900">
                                                     {ui('step_feedback')}
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-slate-500">
+                                                <p className="text-sm sm:text-base text-slate-600 mt-1">
                                                     {ui('step_feedback_desc')}
                                                 </p>
                                             </div>
 
                                             {campaign.qualitativeQuestions.map((q) => (
                                                 <div key={q.id} className="space-y-2">
-                                                    <label className="block text-sm sm:text-[15px] font-bold text-slate-800 leading-snug">
+                                                    <label className="block text-base sm:text-[17px] font-bold text-slate-900 leading-snug">
                                                         {tr(q.title)}
                                                     </label>
                                                     <textarea
@@ -768,7 +768,7 @@ export default function ValidationPortal() {
                                                         value={feedback[q.id] || ''}
                                                         onChange={(e) => setFeedback({ ...feedback, [q.id]: e.target.value })}
                                                         placeholder={tr(q.placeholder)}
-                                                        className="w-full p-3.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all resize-none text-slate-700 leading-relaxed"
+                                                        className="w-full p-4 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all resize-none text-slate-800 leading-relaxed shadow-2xs"
                                                     />
                                                 </div>
                                             ))}
@@ -779,16 +779,16 @@ export default function ValidationPortal() {
                                     {currentStep === 4 && (
                                         <div className="space-y-5 animate-fade-in">
                                             <div>
-                                                <h3 className="text-lg font-bold text-slate-800">
+                                                <h3 className="text-xl font-bold text-slate-900">
                                                     {ui('step_submit')}
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-slate-500">
+                                                <p className="text-sm sm:text-base text-slate-600 mt-1">
                                                     {ui('step_submit_desc')}
                                                 </p>
                                             </div>
 
                                             {/* Summary Recap Box */}
-                                            <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2.5 text-sm">
+                                            <div className="p-5 bg-slate-50 rounded-xl border border-slate-300 space-y-3 text-base sm:text-[15px] shadow-2xs">
                                                 <div className="flex justify-between">
                                                     <span className="text-slate-500">{ui('summary_evaluator')}:</span>
                                                     <span className="font-semibold text-slate-800">{evaluator.name || 'N/A'}</span>
@@ -835,28 +835,28 @@ export default function ValidationPortal() {
                                             </div>
 
                                             {/* GDPR / Erasmus+ Consent Checkbox & Reassurance Notice */}
-                                            <div className="p-4 bg-emerald-50/60 rounded-xl border border-emerald-100 space-y-2.5">
-                                                <div className="flex items-start gap-3">
+                                            <div className="p-4 sm:p-5 bg-emerald-50/70 rounded-xl border border-emerald-200 space-y-3">
+                                                <div className="flex items-start gap-3.5">
                                                     <input
                                                         type="checkbox"
                                                         id="gdpr_consent"
                                                         required
                                                         checked={consent}
                                                         onChange={(e) => setConsent(e.target.checked)}
-                                                        className="mt-0.5 h-4 w-4 rounded text-brand-primary focus:ring-brand-primary border-slate-300 cursor-pointer shrink-0"
+                                                        className="mt-0.5 h-5 w-5 rounded text-brand-primary focus:ring-brand-primary border-slate-400 cursor-pointer shrink-0"
                                                     />
-                                                    <label htmlFor="gdpr_consent" className="text-xs sm:text-sm text-slate-700 cursor-pointer leading-relaxed font-medium">
+                                                    <label htmlFor="gdpr_consent" className="text-sm sm:text-base text-slate-800 cursor-pointer leading-relaxed font-semibold">
                                                         {ui('consent_label')}
                                                     </label>
                                                 </div>
-                                                <div className="pt-2 text-[11px] text-slate-500 leading-normal border-t border-emerald-100/60">
+                                                <div className="pt-2.5 text-xs sm:text-sm text-slate-600 leading-normal border-t border-emerald-200/70">
                                                     🛡️ <strong>{ui('gdpr_controller_title')}:</strong> {ui('gdpr_controller_desc')}
                                                 </div>
                                             </div>
 
                                             {submitError && (
-                                                <div className="p-3 bg-red-50 text-red-700 rounded-xl text-xs sm:text-sm flex items-center gap-2 border border-red-200">
-                                                    <AlertCircle className="w-4 h-4 shrink-0" />
+                                                <div className="p-4 bg-red-50 text-red-700 rounded-xl text-sm sm:text-base flex items-center gap-2.5 border border-red-200">
+                                                    <AlertCircle className="w-5 h-5 shrink-0" />
                                                     <span>{submitError}</span>
                                                 </div>
                                             )}
@@ -864,12 +864,12 @@ export default function ValidationPortal() {
                                     )}
 
                                     {/* Action Buttons: Prev / Next / Submit */}
-                                    <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                                    <div className="pt-5 border-t border-slate-200 flex items-center justify-between gap-3">
                                         {currentStep > 1 ? (
                                             <button
                                                 type="button"
                                                 onClick={() => setCurrentStep(currentStep - 1)}
-                                                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors"
+                                                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm sm:text-base font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
                                             >
                                                 <ChevronLeft className="w-4 h-4" />
                                                 {ui('back')}
@@ -883,10 +883,10 @@ export default function ValidationPortal() {
                                                 type="button"
                                                 disabled={(currentStep === 1 && !isStep1Valid) || (currentStep === 2 && !isStep2Valid)}
                                                 onClick={() => setCurrentStep(currentStep + 1)}
-                                                className={`inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold text-white transition-all ${
+                                                className={`inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm sm:text-base font-bold text-white transition-all ${
                                                     ((currentStep === 1 && !isStep1Valid) || (currentStep === 2 && !isStep2Valid))
                                                         ? 'bg-slate-300 cursor-not-allowed'
-                                                        : 'bg-brand-primary hover:bg-opacity-90 shadow-sm'
+                                                        : 'bg-brand-primary hover:bg-opacity-90 shadow-md hover:shadow-lg'
                                                 }`}
                                             >
                                                 {ui('next')}
@@ -896,20 +896,20 @@ export default function ValidationPortal() {
                                             <button
                                                 type="submit"
                                                 disabled={!consent || isSubmitting}
-                                                className={`inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold text-white transition-all ${
+                                                className={`inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl text-sm sm:text-base font-extrabold text-white transition-all ${
                                                     !consent || isSubmitting
                                                         ? 'bg-slate-300 cursor-not-allowed'
-                                                        : 'bg-emerald-600 hover:bg-emerald-700 shadow-md'
+                                                        : 'bg-emerald-600 hover:bg-emerald-700 shadow-md hover:shadow-lg'
                                                 }`}
                                             >
                                                 {isSubmitting ? (
                                                     <>
-                                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                                        <Loader2 className="w-5 h-5 animate-spin" />
                                                         {ui('submitting')}
                                                     </>
                                                 ) : (
                                                     <>
-                                                        <Send className="w-3.5 h-3.5" />
+                                                        <Send className="w-4 h-4" />
                                                         {ui('submit')}
                                                     </>
                                                 )}
