@@ -78,7 +78,9 @@ export default async function handler(req, res) {
                             <li><strong>Email:</strong> ${evaluator.email || 'No especificado'}</li>
                             <li><strong>Entidad:</strong> ${evaluator.organization || 'No especificada'}</li>
                             <li><strong>País:</strong> ${evaluator.country || 'No especificado'}</li>
-                            <li><strong>Rol / Tipología:</strong> ${evaluator.role || 'No especificado'}</li>
+                            <li><strong>Rol / Tipología:</strong> ${evaluator.role || evaluator.professionalBackground || 'No especificado'} ${evaluator.otherBackground ? `(${evaluator.otherBackground})` : ''}</li>
+                            ${evaluator.yearsExperience ? `<li><strong>Años de experiencia:</strong> ${evaluator.yearsExperience}</li>` : ''}
+                            ${evaluator.aiExperience ? `<li><strong>Experiencia con IA:</strong> ${evaluator.aiExperience}</li>` : ''}
                             <li><strong>Idioma empleado:</strong> ${language.toUpperCase()}</li>
                         </ul>
                         <hr/>

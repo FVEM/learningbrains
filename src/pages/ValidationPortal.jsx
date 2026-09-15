@@ -11,6 +11,9 @@ import {
     SUPPORTED_LANGUAGES,
     CONSORTIUM_COUNTRIES,
     STAKEHOLDER_TYPES,
+    ITINERARY_PROFESSIONAL_BACKGROUNDS,
+    EXPERIENCE_YEARS,
+    AI_EXPERIENCE_LEVELS,
     VALIDATION_UI,
     getCampaignDocumentUrl
 } from '../config/validationCampaigns';
@@ -49,7 +52,11 @@ export default function ValidationPortal() {
         email: '',
         organization: '',
         country: '',
-        role: ''
+        role: '',
+        professionalBackground: '',
+        otherBackground: '',
+        yearsExperience: '',
+        aiExperience: ''
     });
 
     const [ratings, setRatings] = useState({});
@@ -114,9 +121,22 @@ export default function ValidationPortal() {
         return item[currentLang] || item.en || item.es || fallback;
     };
 
+    const isItineraryCampaign = campaign?.profileType === 'itinerary' || campaignId === 'itinerario-formativo';
+
     // Validation step check
-    const isStep1Valid = evaluator.name.trim() && evaluator.email.trim() && evaluator.country && evaluator.role;
-    const isStep2Valid = campaign?.likertQuestions?.every(q => ratings[q.id]);
+    const isStep1Valid = Boolean(
+        evaluator.name.trim() &&
+        evaluator.email.trim() &&
+        evaluator.organization.trim() &&
+        evaluator.country &&
+        (isItineraryCampaign
+            ? (evaluator.professionalBackground &&
+               (evaluator.professionalBackground !== 'other' || evaluator.otherBackground?.trim()) &&
+               evaluator.yearsExperience &&
+               evaluator.aiExperience)
+            : evaluator.role)
+    );
+    const isStep2Valid = campaign?.likertQuestions?.every(q => ratings[q.id] !== undefined && ratings[q.id] !== '');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -513,45 +533,143 @@ export default function ValidationPortal() {
                                                 </div>
                                             </div>
 
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                                <div>
-                                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
-                                                        {ui('country')} *
-                                                    </label>
-                                                    <select
-                                                        required
-                                                        value={evaluator.country}
-                                                        onChange={(e) => setEvaluator({ ...evaluator, country: e.target.value })}
-                                                        className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
-                                                    >
-                                                        <option value="">{ui('select_option')}</option>
-                                                        {CONSORTIUM_COUNTRIES.map((c) => (
-                                                            <option key={c.code} value={c.code}>
-                                                                {tr(c.label)}
-                                                            </option>
-                                                        ))}
-                                                    </select>
-                                                </div>
+                                            {isItineraryCampaign ? (
+                                                <div className="space-y-4">
+                                                    <div>
+                                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                                            {ui('country')} *
+                                                        </label>
+                                                        <select
+                                                            required
+                                                            value={evaluator.country}
+                                                            onChange={(e) => setEvaluator({ ...evaluator, country: e.target.value })}
+                                                            className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                        >
+                                                            <option value="">{ui('select_option')}</option>
+                                                            {CONSORTIUM_COUNTRIES.map((c) => (
+                                                                <option key={c.code} value={c.code}>
+                                                                    {tr(c.label)}
+                                                                </option>
+                                                            ))}
+                                                        </select>
+                                                    </div>
 
-                                                <div>
-                                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
-                                                        {ui('role')} *
-                                                    </label>
-                                                    <select
-                                                        required
-                                                        value={evaluator.role}
-                                                        onChange={(e) => setEvaluator({ ...evaluator, role: e.target.value })}
-                                                        className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
-                                                    >
-                                                        <option value="">{ui('select_option')}</option>
-                                                        {STAKEHOLDER_TYPES.map((t) => (
-                                                            <option key={t.id} value={t.id}>
-                                                                {tr(t.label)}
-                                                            </option>
-                                                        ))}
-                                                    </select>
+                                                    <div>
+                                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                                            {ui('professional_background')} *
+                                                        </label>
+                                                        <select
+                                                            required
+                                                            value={evaluator.professionalBackground}
+                                                            onChange={(e) => setEvaluator({ ...evaluator, professionalBackground: e.target.value })}
+                                                            className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                        >
+                                                            <option value="">{ui('select_option')}</option>
+                                                            {ITINERARY_PROFESSIONAL_BACKGROUNDS.map((b) => (
+                                                                <option key={b.id} value={b.id}>
+                                                                    {tr(b.label)}
+                                                                </option>
+                                                            ))}
+                                                        </select>
+                                                    </div>
+
+                                                    {evaluator.professionalBackground === 'other' && (
+                                                        <div className="animate-fade-in">
+                                                            <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                                                {ui('other_specify')} *
+                                                            </label>
+                                                            <input
+                                                                type="text"
+                                                                required
+                                                                value={evaluator.otherBackground || ''}
+                                                                onChange={(e) => setEvaluator({ ...evaluator, otherBackground: e.target.value })}
+                                                                placeholder="e.g. Innovation Consultant / Technology Transfer"
+                                                                className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all"
+                                                            />
+                                                        </div>
+                                                    )}
+
+                                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                        <div>
+                                                            <label className="block text-xs font-semibold text-slate-700 mb-1 leading-tight">
+                                                                {ui('years_experience')} *
+                                                            </label>
+                                                            <select
+                                                                required
+                                                                value={evaluator.yearsExperience}
+                                                                onChange={(e) => setEvaluator({ ...evaluator, yearsExperience: e.target.value })}
+                                                                className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700 mt-1"
+                                                            >
+                                                                <option value="">{ui('select_option')}</option>
+                                                                {EXPERIENCE_YEARS.map((y) => (
+                                                                    <option key={y.id} value={y.id}>
+                                                                        {tr(y.label)}
+                                                                    </option>
+                                                                ))}
+                                                            </select>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-xs font-semibold text-slate-700 mb-1 leading-tight">
+                                                                {ui('ai_experience')} *
+                                                            </label>
+                                                            <select
+                                                                required
+                                                                value={evaluator.aiExperience}
+                                                                onChange={(e) => setEvaluator({ ...evaluator, aiExperience: e.target.value })}
+                                                                className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700 mt-1"
+                                                            >
+                                                                <option value="">{ui('select_option')}</option>
+                                                                {AI_EXPERIENCE_LEVELS.map((lvl) => (
+                                                                    <option key={lvl.id} value={lvl.id}>
+                                                                        {tr(lvl.label)}
+                                                                    </option>
+                                                                ))}
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            ) : (
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                    <div>
+                                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                                            {ui('country')} *
+                                                        </label>
+                                                        <select
+                                                            required
+                                                            value={evaluator.country}
+                                                            onChange={(e) => setEvaluator({ ...evaluator, country: e.target.value })}
+                                                            className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                        >
+                                                            <option value="">{ui('select_option')}</option>
+                                                            {CONSORTIUM_COUNTRIES.map((c) => (
+                                                                <option key={c.code} value={c.code}>
+                                                                    {tr(c.label)}
+                                                                </option>
+                                                            ))}
+                                                        </select>
+                                                    </div>
+
+                                                    <div>
+                                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                                            {ui('role')} *
+                                                        </label>
+                                                        <select
+                                                            required
+                                                            value={evaluator.role}
+                                                            onChange={(e) => setEvaluator({ ...evaluator, role: e.target.value })}
+                                                            className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-700"
+                                                        >
+                                                            <option value="">{ui('select_option')}</option>
+                                                            {STAKEHOLDER_TYPES.map((t) => (
+                                                                <option key={t.id} value={t.id}>
+                                                                    {tr(t.label)}
+                                                                </option>
+                                                            ))}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
                                     )}
 
@@ -567,41 +685,63 @@ export default function ValidationPortal() {
                                                 </p>
                                             </div>
 
-                                            <div className="space-y-5">
+                                            <div className="space-y-4">
                                                 {campaign.likertQuestions.map((q, idx) => {
                                                     const selectedVal = ratings[q.id];
-                                                    return (
-                                                        <div key={q.id} className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-                                                            <div className="flex items-start justify-between gap-2">
-                                                                <div>
-                                                                    <div className="text-xs font-bold text-slate-800">
-                                                                        {idx + 1}. {tr(q.title)}
-                                                                    </div>
-                                                                    <p className="text-[11px] text-slate-500 leading-normal">
-                                                                        {tr(q.description)}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
+                                                    const prevSection = idx > 0 && campaign.likertQuestions[idx - 1].section
+                                                        ? tr(campaign.likertQuestions[idx - 1].section)
+                                                        : null;
+                                                    const currentSection = q.section ? tr(q.section) : null;
+                                                    const isNewSection = currentSection && currentSection !== prevSection;
 
-                                                            {/* 1-5 Rating Buttons */}
-                                                            <div className="grid grid-cols-5 gap-1.5 pt-1">
-                                                                {[1, 2, 3, 4, 5].map((num) => {
-                                                                    const isSelected = selectedVal === num;
-                                                                    return (
-                                                                        <button
-                                                                            type="button"
-                                                                            key={num}
-                                                                            onClick={() => setRatings({ ...ratings, [q.id]: num })}
-                                                                            className={`py-2 rounded-lg text-xs font-bold transition-all flex flex-col items-center justify-center ${
-                                                                                isSelected
-                                                                                    ? 'bg-brand-primary text-white shadow-sm ring-2 ring-brand-primary/30'
-                                                                                    : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
-                                                                            }`}
-                                                                        >
-                                                                            <span>{num}</span>
-                                                                        </button>
-                                                                    );
-                                                                })}
+                                                    return (
+                                                        <div key={q.id} className="space-y-2">
+                                                            {isNewSection && (
+                                                                <div className={`pt-4 pb-2 border-b border-teal-100 flex items-center justify-between ${idx > 0 ? 'mt-6' : 'mt-1'}`}>
+                                                                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-50 text-brand-primary border border-teal-200">
+                                                                        {currentSection}
+                                                                    </span>
+                                                                    <span className="text-[11px] text-slate-400 font-medium hidden sm:inline">
+                                                                        Learning Brains Framework
+                                                                    </span>
+                                                                </div>
+                                                            )}
+                                                            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2.5">
+                                                                <div className="flex items-start justify-between gap-2">
+                                                                    <div>
+                                                                        <div className="text-xs font-bold text-slate-800 leading-snug">
+                                                                            {idx + 1}. {tr(q.title)}
+                                                                        </div>
+                                                                        {q.description && (
+                                                                            <p className="text-[11px] text-slate-500 leading-normal mt-1">
+                                                                                {tr(q.description)}
+                                                                            </p>
+                                                                        )}
+                                                                    </div>
+                                                                </div>
+
+                                                                {/* Rating Buttons: 1 to 5 + N/A */}
+                                                                <div className="grid grid-cols-6 gap-1.5 pt-1">
+                                                                    {[1, 2, 3, 4, 5, 'N/A'].map((num) => {
+                                                                        const isSelected = selectedVal === num;
+                                                                        const isNA = num === 'N/A';
+                                                                        return (
+                                                                            <button
+                                                                                type="button"
+                                                                                key={num}
+                                                                                onClick={() => setRatings({ ...ratings, [q.id]: num })}
+                                                                                title={isNA ? ui('scale_na_desc') : `${num} / 5`}
+                                                                                className={`py-2 rounded-lg text-xs font-bold transition-all flex flex-col items-center justify-center ${
+                                                                                    isSelected
+                                                                                        ? (isNA ? 'bg-slate-700 text-white shadow-sm ring-2 ring-slate-700/30' : 'bg-brand-primary text-white shadow-sm ring-2 ring-brand-primary/30')
+                                                                                        : (isNA ? 'bg-slate-200/70 text-slate-600 border border-slate-300/80 hover:bg-slate-200' : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100')
+                                                                                }`}
+                                                                            >
+                                                                                <span className={isNA ? 'text-[11px]' : 'text-xs'}>{num}</span>
+                                                                            </button>
+                                                                        );
+                                                                    })}
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     );
@@ -661,6 +801,29 @@ export default function ValidationPortal() {
                                                     <span className="text-slate-500">Organization:</span>
                                                     <span className="font-semibold text-slate-800">{evaluator.organization || 'N/A'} ({evaluator.country || 'N/A'})</span>
                                                 </div>
+                                                {isItineraryCampaign ? (
+                                                    <>
+                                                        <div className="flex justify-between">
+                                                            <span className="text-slate-500">Background:</span>
+                                                            <span className="font-semibold text-slate-800 text-right">
+                                                                {evaluator.professionalBackground === 'other'
+                                                                    ? (evaluator.otherBackground || 'Other')
+                                                                    : (ITINERARY_PROFESSIONAL_BACKGROUNDS.find(b => b.id === evaluator.professionalBackground)?.label[currentLang] || evaluator.professionalBackground || 'N/A')}
+                                                            </span>
+                                                        </div>
+                                                        <div className="flex justify-between">
+                                                            <span className="text-slate-500">Experience / AI:</span>
+                                                            <span className="font-semibold text-slate-800">
+                                                                {evaluator.yearsExperience || 'N/A'} yrs · AI: {evaluator.aiExperience || 'N/A'}
+                                                            </span>
+                                                        </div>
+                                                    </>
+                                                ) : (
+                                                    <div className="flex justify-between">
+                                                        <span className="text-slate-500">Role / Profile:</span>
+                                                        <span className="font-semibold text-slate-800">{evaluator.role || 'N/A'}</span>
+                                                    </div>
+                                                )}
                                                 <div className="flex justify-between">
                                                     <span className="text-slate-500">Quantitative Questions:</span>
                                                     <span className="font-semibold text-emerald-700">
