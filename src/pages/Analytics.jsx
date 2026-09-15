@@ -6,7 +6,7 @@ import {
 } from 'recharts';
 import {
     ShieldAlert, LogOut, Users, FileText, Clock, MousePointerClick,
-    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap, Linkedin, ExternalLink
+    TrendingUp, KeyRound, Loader2, AlertCircle, UserPlus, Zap, Linkedin, ExternalLink, BookOpen
 } from 'lucide-react';
 
 // Colores basados en la paleta de Learning Brains
