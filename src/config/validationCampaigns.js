@@ -1442,5 +1442,149 @@ export const VALIDATION_UI = {
         de: 'Fragebogen',
         sk: 'Dotazník',
         pt: 'Formulário'
+    },
+    step_profile_desc: {
+        en: 'Please indicate your contact details and organizational profile.',
+        es: 'Por favor, indica tus datos de contacto y perfil profesional u organizativo.',
+        it: 'Si prega di indicare i propri dati di contatto e il profilo professionale o organizzativo.',
+        de: 'Bitte geben Sie Ihre Kontaktdaten und Ihr Organisationsprofil an.',
+        sk: 'Uveďte svoje kontaktné údaje a organizačný profil.',
+        pt: 'Por favor, indique os seus dados de contacto e perfil profissional ou da organização.'
+    },
+    step_feedback_desc: {
+        en: 'Share specific qualitative remarks, suggestions and regional considerations.',
+        es: 'Comparte comentarios cualitativos específicos, sugerencias y consideraciones regionales.',
+        it: 'Condividi osservazioni qualitative specifiche, suggerimenti e considerazioni regionali.',
+        de: 'Teilen Sie spezifische qualitative Anmerkungen, Vorschläge und regionale Überlegungen.',
+        sk: 'Zdieľajte konkrétne kvalitatívne postrehy, návrhy a regionálne špecifiká.',
+        pt: 'Partilhe observações qualitativas específicas, sugestões e considerações regionais.'
+    },
+    step_submit_desc: {
+        en: 'Review summary before registering your validation into the project records.',
+        es: 'Revisa el resumen antes de registrar tu validación en el expediente del proyecto.',
+        it: 'Rivedi il riepilogo prima di registrare la validazione nei registri del progetto.',
+        de: 'Überprüfen Sie die Zusammenfassung vor der endgültigen Übermittlung an das Projekt.',
+        sk: 'Pred zaznamenaním validácie do záznamov projektu skontrolujte zhrnutie.',
+        pt: 'Reveja o resumo antes de registar a sua validação nos registos do projeto.'
+    },
+    summary_evaluator: {
+        en: 'Evaluator',
+        es: 'Evaluador/a',
+        it: 'Valutatore',
+        de: 'Gutachter/in',
+        sk: 'Hodnotiteľ',
+        pt: 'Avaliador/a'
+    },
+    summary_organization: {
+        en: 'Organization',
+        es: 'Organización',
+        it: 'Organizzazione',
+        de: 'Organisation',
+        sk: 'Organizácia',
+        pt: 'Organização'
+    },
+    summary_background: {
+        en: 'Background',
+        es: 'Perfil Profesional',
+        it: 'Profilo Professionale',
+        de: 'Beruflicher Hintergrund',
+        sk: 'Odborný profil',
+        pt: 'Perfil Profissional'
+    },
+    summary_experience_ai: {
+        en: 'Experience / AI',
+        es: 'Experiencia / IA',
+        it: 'Esperienza / IA',
+        de: 'Erfahrung / KI',
+        sk: 'Prax / AI',
+        pt: 'Experiência / IA'
+    },
+    summary_years: {
+        en: 'yrs',
+        es: 'años',
+        it: 'anni',
+        de: 'Jahre',
+        sk: 'rokov',
+        pt: 'anos'
+    },
+    summary_role: {
+        en: 'Role / Profile',
+        es: 'Cargo / Perfil',
+        it: 'Ruolo / Profilo',
+        de: 'Rolle / Profil',
+        sk: 'Rola / Profil',
+        pt: 'Função / Perfil'
+    },
+    summary_quantitative: {
+        en: 'Quantitative Questions',
+        es: 'Preguntas Cuantitativas',
+        it: 'Domande Quantitative',
+        de: 'Quantitative Fragen',
+        sk: 'Kvantitatívne otázky',
+        pt: 'Questões Quantitativas'
+    },
+    summary_answered: {
+        en: 'answered',
+        es: 'respondidas',
+        it: 'risposte',
+        de: 'beantwortet',
+        sk: 'zodpovedaných',
+        pt: 'respondidas'
+    },
+    summary_qualitative: {
+        en: 'Qualitative Inputs',
+        es: 'Aportaciones Cualitativas',
+        it: 'Contributi Qualitativi',
+        de: 'Qualitative Beiträge',
+        sk: 'Kvalitatívne príspevky',
+        pt: 'Contributos Qualitativos'
+    },
+    summary_sections_provided: {
+        en: 'sections provided',
+        es: 'secciones completadas',
+        it: 'sezioni compilate',
+        de: 'Bereiche ausgefüllt',
+        sk: 'sekcií vyplnených',
+        pt: 'secções preenchidas'
+    },
+    gdpr_controller_title: {
+        en: 'Data Controller',
+        es: 'Responsable del Tratamiento',
+        it: 'Titolare del Trattamento',
+        de: 'Verantwortlicher',
+        sk: 'Prevádzkovateľ',
+        pt: 'Responsável pelo Tratamento'
+    },
+    gdpr_controller_desc: {
+        en: 'Learning Brains Erasmus+ Consortium (coordinated by FVEM, Spain). In accordance with GDPR (EU 2016/679), responses are processed solely for project justification and evaluation. Stored securely within restricted consortium-only resources.',
+        es: 'Consorcio Erasmus+ Learning Brains (coordinado por FVEM, España). Conforme al RGPD (UE 2016/679), las respuestas se tratan exclusivamente para la evaluación y justificación del proyecto. Almacenado de forma segura en recursos restringidos al consorcio.',
+        it: 'Consorzio Erasmus+ Learning Brains (coordinato da FVEM, Spagna). In conformità con il GDPR (UE 2016/679), le risposte sono trattate esclusivamente a fini di valutazione e rendicontazione del progetto. Archiviate in modo sicuro all\'interno di risorse riservate al consorzio.',
+        de: 'Erasmus+-Konsortium Learning Brains (koordiniert von FVEM, Spanien). Gemäß DSGVO (EU 2016/679) werden die Antworten ausschließlich zur Evaluierung und Nachweisführung des Projekts verarbeitet. Sichere Speicherung in geschützten Konsortialressourcen.',
+        sk: 'Konzorcium Erasmus+ Learning Brains (koordinované FVEM, Španielsko). V súlade s GDPR (EÚ 2016/679) sa odpovede spracúvajú výhradne na účely hodnotenia a vykazovania projektu. Bezpečne uložené v prostriedkoch prístupných len konzorciu.',
+        pt: 'Consórcio Erasmus+ Learning Brains (coordenado pela FVEM, Espanha). De acordo com o RGPD (UE 2016/679), as respostas são tratadas exclusivamente para efeitos de avaliação e justificação do projeto. Armazenadas de forma segura em recursos restritos ao consórcio.'
+    },
+    submit_error: {
+        en: 'Could not submit your feedback at this time. Please try again.',
+        es: 'No se pudo enviar la respuesta en este momento. Por favor, inténtalo de nuevo.',
+        it: 'Impossibile inviare la valutazione in questo momento. Riprova più tardi.',
+        de: 'Ihre Rückmeldung konnte derzeit nicht übermittelt werden. Bitte versuchen Sie es erneut.',
+        sk: 'Spätnú väzbu sa momentálne nepodarilo odoslať. Skúste to znova.',
+        pt: 'Não foi possível submeter o seu feedback neste momento. Por favor, tente novamente.'
+    },
+    pdf_preview: {
+        en: 'PDF Document Preview',
+        es: 'Vista Previa del Documento PDF',
+        it: 'Anteprima Documento PDF',
+        de: 'PDF-Dokumentenvorschau',
+        sk: 'Náhľad PDF dokumentu',
+        pt: 'Pré-visualização do Documento PDF'
+    },
+    submit_another: {
+        en: 'Submit another response',
+        es: 'Enviar otra respuesta',
+        it: 'Invia un\'altra risposta',
+        de: 'Weitere Rückmeldung senden',
+        sk: 'Odoslať ďalšiu odpoveď',
+        pt: 'Submeter outra resposta'
     }
 };

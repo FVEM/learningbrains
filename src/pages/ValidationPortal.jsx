@@ -171,11 +171,7 @@ export default function ValidationPortal() {
             setIsSubmitted(true);
         } catch (err) {
             console.error('Submission error:', err);
-            setSubmitError(
-                currentLang === 'es'
-                    ? 'No se pudo enviar la respuesta en este momento. Por favor, inténtalo de nuevo.'
-                    : 'Could not submit your feedback at this time. Please try again.'
-            );
+            setSubmitError(ui('submit_error'));
         } finally {
             setIsSubmitting(false);
         }
@@ -360,7 +356,7 @@ export default function ValidationPortal() {
                                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-all"
                             >
                                 <RefreshCw className="w-4 h-4" />
-                                Submit another response
+                                {ui('submit_another')}
                             </button>
                             <a
                                 href={documentUrl}
@@ -391,7 +387,7 @@ export default function ValidationPortal() {
                                                 {tr(campaign.meta.title)}
                                             </h2>
                                             <p className="text-[11px] text-slate-500">
-                                                PDF Document Preview
+                                                {ui('pdf_preview')}
                                             </p>
                                         </div>
                                     </div>
@@ -478,7 +474,7 @@ export default function ValidationPortal() {
                                                     {ui('step_profile')}
                                                 </h3>
                                                 <p className="text-xs sm:text-sm text-slate-500">
-                                                    Please indicate your contact details and organizational profile.
+                                                    {ui('step_profile_desc')}
                                                 </p>
                                             </div>
 
@@ -758,7 +754,7 @@ export default function ValidationPortal() {
                                                     {ui('step_feedback')}
                                                 </h3>
                                                 <p className="text-xs sm:text-sm text-slate-500">
-                                                    Share specific qualitative remarks, suggestions and regional considerations.
+                                                    {ui('step_feedback_desc')}
                                                 </p>
                                             </div>
 
@@ -787,24 +783,24 @@ export default function ValidationPortal() {
                                                     {ui('step_submit')}
                                                 </h3>
                                                 <p className="text-xs sm:text-sm text-slate-500">
-                                                    Review summary before registering your validation into the project records.
+                                                    {ui('step_submit_desc')}
                                                 </p>
                                             </div>
 
                                             {/* Summary Recap Box */}
                                             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2.5 text-sm">
                                                 <div className="flex justify-between">
-                                                    <span className="text-slate-500">Evaluator:</span>
+                                                    <span className="text-slate-500">{ui('summary_evaluator')}:</span>
                                                     <span className="font-semibold text-slate-800">{evaluator.name || 'N/A'}</span>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <span className="text-slate-500">Organization:</span>
+                                                    <span className="text-slate-500">{ui('summary_organization')}:</span>
                                                     <span className="font-semibold text-slate-800">{evaluator.organization || 'N/A'} ({evaluator.country || 'N/A'})</span>
                                                 </div>
                                                 {isItineraryCampaign ? (
                                                     <>
                                                         <div className="flex justify-between">
-                                                            <span className="text-slate-500">Background:</span>
+                                                            <span className="text-slate-500">{ui('summary_background')}:</span>
                                                             <span className="font-semibold text-slate-800 text-right">
                                                                 {evaluator.professionalBackground === 'other'
                                                                     ? (evaluator.otherBackground || 'Other')
@@ -812,28 +808,28 @@ export default function ValidationPortal() {
                                                             </span>
                                                         </div>
                                                         <div className="flex justify-between">
-                                                            <span className="text-slate-500">Experience / AI:</span>
+                                                            <span className="text-slate-500">{ui('summary_experience_ai')}:</span>
                                                             <span className="font-semibold text-slate-800">
-                                                                {evaluator.yearsExperience || 'N/A'} yrs · AI: {evaluator.aiExperience || 'N/A'}
+                                                                {evaluator.yearsExperience || 'N/A'} {ui('summary_years', 'yrs')} · AI: {evaluator.aiExperience || 'N/A'}
                                                             </span>
                                                         </div>
                                                     </>
                                                 ) : (
                                                     <div className="flex justify-between">
-                                                        <span className="text-slate-500">Role / Profile:</span>
+                                                        <span className="text-slate-500">{ui('summary_role')}:</span>
                                                         <span className="font-semibold text-slate-800">{evaluator.role || 'N/A'}</span>
                                                     </div>
                                                 )}
                                                 <div className="flex justify-between">
-                                                    <span className="text-slate-500">Quantitative Questions:</span>
+                                                    <span className="text-slate-500">{ui('summary_quantitative')}:</span>
                                                     <span className="font-semibold text-emerald-700">
-                                                        {Object.keys(ratings).length} / {campaign.likertQuestions.length} answered
+                                                        {Object.keys(ratings).length} / {campaign.likertQuestions.length} {ui('summary_answered')}
                                                     </span>
                                                 </div>
                                                 <div className="flex justify-between">
-                                                    <span className="text-slate-500">Qualitative Inputs:</span>
+                                                    <span className="text-slate-500">{ui('summary_qualitative')}:</span>
                                                     <span className="font-semibold text-slate-800">
-                                                        {Object.values(feedback).filter(Boolean).length} sections provided
+                                                        {Object.values(feedback).filter(Boolean).length} {ui('summary_sections_provided')}
                                                     </span>
                                                 </div>
                                             </div>
@@ -854,7 +850,7 @@ export default function ValidationPortal() {
                                                     </label>
                                                 </div>
                                                 <div className="pt-2 text-[11px] text-slate-500 leading-normal border-t border-emerald-100/60">
-                                                    🛡️ <strong>Data Controller:</strong> Learning Brains Erasmus+ Consortium (coordinated by FVEM, Spain). In accordance with GDPR (EU 2016/679), responses are processed solely for project justification and evaluation. Stored securely within restricted consortium-only resources.
+                                                    🛡️ <strong>{ui('gdpr_controller_title')}:</strong> {ui('gdpr_controller_desc')}
                                                 </div>
                                             </div>
 
