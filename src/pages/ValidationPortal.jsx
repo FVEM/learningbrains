@@ -880,10 +880,10 @@ export default function ValidationPortal() {
                                         {currentStep < 4 ? (
                                             <button
                                                 type="button"
-                                                disabled={currentStep === 1 && !isStep1Valid}
+                                                disabled={(currentStep === 1 && !isStep1Valid) || (currentStep === 2 && !isStep2Valid)}
                                                 onClick={() => setCurrentStep(currentStep + 1)}
                                                 className={`inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold text-white transition-all ${
-                                                    (currentStep === 1 && !isStep1Valid)
+                                                    ((currentStep === 1 && !isStep1Valid) || (currentStep === 2 && !isStep2Valid))
                                                         ? 'bg-slate-300 cursor-not-allowed'
                                                         : 'bg-brand-primary hover:bg-opacity-90 shadow-sm'
                                                 }`}
