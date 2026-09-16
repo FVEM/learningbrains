@@ -83,7 +83,7 @@ const ArticleCard = ({ item, lang }) => {
               to={`/${lang}/news/${slug}`}
               className="inline-flex items-center gap-2 text-sm font-bold text-brand-secondary hover:text-brand-primary transition-colors group/link"
             >
-              {t('articles.read_article', 'Read Article')}
+              {t('news.read_article', t('articles.read_article', 'Read Article'))}
               <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
             </Link>
           ) : null}

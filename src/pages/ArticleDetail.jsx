@@ -117,9 +117,16 @@ function renderContent(text) {
     // Bullet list item
     if (line.startsWith('- ') || line.startsWith('• ') || line.startsWith('* ')) {
       const listItems = [];
-      while (i < lines.length && (lines[i].trim().startsWith('- ') || lines[i].trim().startsWith('• ') || lines[i].trim().startsWith('* '))) {
-        listItems.push(lines[i].trim().replace(/^[-•*]\s+/, ''));
-        i++;
+      while (i < lines.length) {
+        const currentTrim = lines[i].trim();
+        if (currentTrim.startsWith('- ') || currentTrim.startsWith('• ') || currentTrim.startsWith('* ')) {
+          listItems.push(currentTrim.replace(/^[-•*]\s+/, ''));
+          i++;
+        } else if (!currentTrim && i + 1 < lines.length && (lines[i + 1].trim().startsWith('- ') || lines[i + 1].trim().startsWith('• ') || lines[i + 1].trim().startsWith('* '))) {
+          i++; // Skip blank line between items
+        } else {
+          break;
+        }
       }
       elements.push(
         <ul key={`ul-${i}`} className="my-8 space-y-3 pl-2">
@@ -137,9 +144,16 @@ function renderContent(text) {
     // Numbered list
     if (/^\d+\.\s/.test(line)) {
       const listItems = [];
-      while (i < lines.length && /^\d+\.\s/.test(lines[i].trim())) {
-        listItems.push(lines[i].trim().replace(/^\d+\.\s+/, ''));
-        i++;
+      while (i < lines.length) {
+        const currentTrim = lines[i].trim();
+        if (/^\d+\.\s/.test(currentTrim)) {
+          listItems.push(currentTrim.replace(/^\d+\.\s+/, ''));
+          i++;
+        } else if (!currentTrim && i + 1 < lines.length && /^\d+\.\s/.test(lines[i + 1].trim())) {
+          i++; // Skip blank line between items
+        } else {
+          break;
+        }
       }
       elements.push(
         <ol key={`ol-${i}`} className="my-8 space-y-4 pl-2">
@@ -223,9 +237,9 @@ const ArticleDetail = () => {
       <div className="py-32 text-center">
         <FileText className="w-16 h-16 text-slate-200 mx-auto mb-6" />
         <h1 className="text-2xl font-bold text-slate-600 mb-4">Article not found</h1>
-        <Link to={`/${currentLang}/news`} className="inline-flex items-center gap-2 text-brand-secondary font-bold hover:underline">
+        <Link to={`/${currentLang}/${isAiNews ? 'noticias' : 'news'}`} className="inline-flex items-center gap-2 text-brand-secondary font-bold hover:underline">
           <ArrowLeft className="w-4 h-4" />
-          {t('articles.back_to_articles', 'Back to News')}
+          {t('news.back_to_news', t('articles.back_to_articles', 'Back to News'))}
         </Link>
       </div>
     );
@@ -280,11 +294,11 @@ const ArticleDetail = () => {
           {/* Back link on hero */}
           <div className="absolute top-6 left-6">
             <Link
-              to={`/${currentLang}/news`}
+              to={`/${currentLang}/${isAiNews ? 'noticias' : 'news'}`}
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/15 backdrop-blur-md text-white text-sm font-semibold hover:bg-white/25 transition-colors border border-white/20"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              {t('articles.back_to_articles', 'Back to News')}
+              {t('news.back_to_news', t('articles.back_to_articles', 'Back to News'))}
             </Link>
           </div>
         </div>
@@ -296,11 +310,11 @@ const ArticleDetail = () => {
         {/* Back link (when no hero) */}
         {!imageUrl && (
           <Link
-            to={`/${currentLang}/news`}
+            to={`/${currentLang}/${isAiNews ? 'noticias' : 'news'}`}
             className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400 hover:text-brand-secondary transition-colors mt-10 mb-8 group"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
-            {t('articles.back_to_articles', 'Back to News')}
+            {t('news.back_to_news', t('articles.back_to_articles', 'Back to News'))}
           </Link>
         )}
 
@@ -431,7 +445,7 @@ const ArticleDetail = () => {
         {related.length > 0 && (
           <div className="mt-16 pt-10 border-t border-slate-100">
             <h2 className="text-lg font-bold text-slate-800 mb-6">
-              {t('articles.related', 'More Articles')}
+              {t('news.more_articles', t('articles.related', 'More Articles'))}
             </h2>
             <div className="flex flex-col gap-4">
               {related.map((rel, idx) => (
