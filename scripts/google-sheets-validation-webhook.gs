@@ -1,18 +1,22 @@
 /**
  * GOOGLE APPS SCRIPT WEBHOOK FOR LEARNING BRAINS VALIDATION
  * 
+ * TARGET GOOGLE DRIVE FOLDER:
+ * https://drive.google.com/drive/folders/1Lpbav93Mpq0HG0F1JEAv1AfZhZjf2dp2 (Folder: "Validation")
+ * 
  * Instructions for setup in Google Sheets:
- * 1. Open your target Google Sheet (or create a new one named "Learning Brains - External Validation & NPCs").
- * 2. Click on "Extensions" (Extensiones) > "Apps Script".
- * 3. Delete any code in the editor and paste this entire file.
- * 4. Click "Deploy" (Implementar) > "New deployment" (Nueva implementación).
- * 5. Choose "Web app" (Aplicación web) as the type.
+ * 1. Open the target Google Drive folder above.
+ * 2. Create a new Google Sheet inside that folder named "Learning Brains - Training Itinerary & External Validation".
+ * 3. In the new Google Sheet, click on "Extensions" (Extensiones) > "Apps Script".
+ * 4. Delete any code in the editor and paste this entire file.
+ * 5. Click "Deploy" (Implementar) > "New deployment" (Nueva implementación).
+ * 6. Choose "Web app" (Aplicación web) as the type:
  *    - Description: "Learning Brains Validation Webhook"
  *    - Execute as: "Me" (tu cuenta)
  *    - Who has access: "Anyone" (Cualquiera) -> Crucial so Vercel can post without OAuth prompt.
- * 6. Click "Deploy" and authorize permissions.
- * 7. Copy the "Web app URL" (e.g. https://script.google.com/macros/s/.../exec).
- * 8. Add this URL to your Vercel Environment Variables as GOOGLE_SHEET_WEBHOOK_URL.
+ * 7. Click "Deploy" and authorize permissions.
+ * 8. Copy the "Web app URL" (e.g. https://script.google.com/macros/s/.../exec).
+ * 9. Add this URL to your Vercel Environment Variables as GOOGLE_SHEET_WEBHOOK_URL.
  */
 
 function doPost(e) {
