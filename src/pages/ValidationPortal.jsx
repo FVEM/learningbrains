@@ -132,7 +132,6 @@ export default function ValidationPortal() {
         (isItineraryCampaign
             ? (evaluator.professionalBackground &&
                (evaluator.professionalBackground !== 'other' || evaluator.otherBackground?.trim()) &&
-               evaluator.yearsExperience &&
                evaluator.aiExperience)
             : evaluator.role)
     );
@@ -585,44 +584,23 @@ export default function ValidationPortal() {
                                                         </div>
                                                     )}
 
-                                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                                        <div>
-                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2 leading-tight">
-                                                                {ui('years_experience')} *
-                                                            </label>
-                                                            <select
-                                                                required
-                                                                value={evaluator.yearsExperience}
-                                                                onChange={(e) => setEvaluator({ ...evaluator, yearsExperience: e.target.value })}
-                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs mt-1"
-                                                            >
-                                                                <option value="">{ui('select_option')}</option>
-                                                                {EXPERIENCE_YEARS.map((y) => (
-                                                                    <option key={y.id} value={y.id}>
-                                                                        {tr(y.label)}
-                                                                    </option>
-                                                                ))}
-                                                            </select>
-                                                        </div>
-
-                                                        <div>
-                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2 leading-tight">
-                                                                {ui('ai_experience')} *
-                                                            </label>
-                                                            <select
-                                                                required
-                                                                value={evaluator.aiExperience}
-                                                                onChange={(e) => setEvaluator({ ...evaluator, aiExperience: e.target.value })}
-                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs mt-1"
-                                                            >
-                                                                <option value="">{ui('select_option')}</option>
-                                                                {AI_EXPERIENCE_LEVELS.map((lvl) => (
-                                                                    <option key={lvl.id} value={lvl.id}>
-                                                                        {tr(lvl.label)}
-                                                                    </option>
-                                                                ))}
-                                                            </select>
-                                                        </div>
+                                                    <div>
+                                                        <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
+                                                            {ui('ai_experience')} *
+                                                        </label>
+                                                        <select
+                                                            required
+                                                            value={evaluator.aiExperience}
+                                                            onChange={(e) => setEvaluator({ ...evaluator, aiExperience: e.target.value })}
+                                                            className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
+                                                        >
+                                                            <option value="">{ui('select_option')}</option>
+                                                            {AI_EXPERIENCE_LEVELS.map((lvl) => (
+                                                                <option key={lvl.id} value={lvl.id}>
+                                                                    {tr(lvl.label)}
+                                                                </option>
+                                                            ))}
+                                                        </select>
                                                     </div>
                                                 </div>
                                             ) : (
@@ -808,9 +786,9 @@ export default function ValidationPortal() {
                                                             </span>
                                                         </div>
                                                         <div className="flex justify-between">
-                                                            <span className="text-slate-500">{ui('summary_experience_ai')}:</span>
+                                                            <span className="text-slate-500">{ui('summary_ai_experience', 'AI Experience')}:</span>
                                                             <span className="font-semibold text-slate-800">
-                                                                {evaluator.yearsExperience || 'N/A'} {ui('summary_years', 'yrs')} · AI: {evaluator.aiExperience || 'N/A'}
+                                                                {AI_EXPERIENCE_LEVELS.find(lvl => lvl.id === evaluator.aiExperience)?.label[currentLang] || evaluator.aiExperience || 'N/A'}
                                                             </span>
                                                         </div>
                                                     </>
@@ -915,6 +893,13 @@ export default function ValidationPortal() {
                                                 )}
                                             </button>
                                         )}
+                                    </div>
+
+                                    {/* Assistance & Contact Note */}
+                                    <div className="pt-4 text-center">
+                                        <p className="text-xs sm:text-sm text-slate-500">
+                                            {ui('contact_assistance')}
+                                        </p>
                                     </div>
                                 </form>
                             </div>

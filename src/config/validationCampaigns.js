@@ -432,12 +432,12 @@ export const VALIDATION_CAMPAIGNS = {
                 pt: 'Quadro curricular para a IA na formação em contexto de trabalho em empresas industriais: estrutura de aprendizagem, competências e orientações.'
             },
             instructions: {
-                en: 'Thank you for taking part in the validation of the Learning Brains Training Itinerary. The itinerary provides the curricular framework for the future Learning Brains Training Programme on the use of artificial intelligence in on-the-job training in industrial companies. It is not intended to contain the complete training content, activities, tools or case studies. Instead, it defines the learning structure, the competences to be developed and the general guidance for the subsequent development of the Training Programme.',
-                es: 'Gracias por participar en la validación del Itinerario Formativo de Learning Brains. El itinerario proporciona el marco curricular para el futuro Programa Formativo sobre el uso de la inteligencia artificial en el aprendizaje en el puesto de trabajo en empresas industriales. No pretende contener el temario completo ni todas las actividades o herramientas, sino definir la estructura formativa, las competencias a desarrollar y las pautas para el despliegue del programa.',
-                it: 'Grazie per aver partecipato alla validazione dell\'Itinerario Formativo di Learning Brains. L\'itinerario fornisce il quadro curricolare per il futuro Programma di Formazione sull\'uso dell\'intelligenza artificiale nella formazione sul posto di lavoro nelle aziende industriali. Definisce la struttura dell\'apprendimento, le competenze da sviluppare e le indicazioni generali.',
-                de: 'Vielen Dank für Ihre Teilnahme an der Validierung des Learning Brains-Ausbildungspfads. Der Pfad bietet den curricularen Rahmen für das künftige Schulungsprogramm zum Einsatz von KI am Arbeitsplatz in Industrieunternehmen. Er definiert die Lernstruktur, die zu entwickelnden Kompetenzen und Orientierungspunkte.',
-                sk: 'Ďakujeme za účasť na validácii vzdelávacej cesty Learning Brains. Dokument poskytuje kurikulárny rámec pre budúci vzdelávací program o využívaní umelej inteligencie pri vzdelávaní na pracovisku v priemyselných podnikoch. Definuje štruktúru vzdelávania, rozvíjané kompetencie a metodické usmernenia.',
-                pt: 'Agradecemos a sua participação na validação do Itinerário Formativo Learning Brains. O itinerário fornece o quadro curricular para o futuro Programa de Formação sobre o uso de inteligência artificial na formação em contexto de trabalho em empresas industriais. Define a estrutura de aprendizagem, as competências e as orientações gerais.'
+                en: 'Thank you for taking part in the validation of the Learning Brains Training Itinerary. The questionnaire takes approximately 10–15 minutes to complete, once you have reviewed the Learning Brains Training Itinerary. The itinerary provides the curricular framework for the future Learning Brains Training Programme on the use of artificial intelligence in on-the-job training in industrial companies. It is not intended to contain the complete training content, activities, tools or case studies. Instead, it defines the learning structure, the competences to be developed and the general guidance for the subsequent development of the Training Programme. Your feedback is essential to help us ensure the quality, relevance and practical usefulness of the Learning Brains Training Itinerary. Please assess the document based on your professional experience.',
+                es: 'Gracias por participar en la validación del Itinerario Formativo de Learning Brains. Completar el cuestionario requiere aproximadamente de 10 a 15 minutos, una vez revisado el Itinerario Formativo. El itinerario proporciona el marco curricular para el futuro Programa Formativo de Learning Brains sobre el uso de la inteligencia artificial en el aprendizaje en el puesto de trabajo en empresas industriales. No pretende contener todo el temario formativo, actividades, herramientas o casos prácticos, sino definir la estructura del aprendizaje, las competencias a desarrollar y las pautas generales para el posterior desarrollo del Programa Formativo. Tu valoración es fundamental para asegurar la calidad, relevancia y utilidad práctica del itinerario. Por favor, evalúa el documento desde tu experiencia profesional.',
+                it: 'Grazie per aver partecipato alla validazione dell\'Itinerario Formativo di Learning Brains. La compilazione del questionario richiede circa 10-15 minuti, dopo aver esaminato l\'Itinerario Formativo di Learning Brains. L\'itinerario fornisce il quadro curricolare per il futuro Programma di Formazione di Learning Brains sull\'uso dell\'intelligenza artificiale nella formazione sul lavoro nelle imprese industriali. Non intende contenere l\'intero programma formativo, attività, strumenti o casi di studio, bensì definisce la struttura dell\'apprendimento, le competenze da sviluppare e le linee guida generali per il successivo sviluppo del Programma di Formazione. Il vostro feedback è fondamentale per garantire la qualità, la pertinenza e l\'utilità pratica dell\'Itinerario Formativo. Vi invitiamo a valutare il documento sulla base della vostra esperienza professionale.',
+                de: 'Vielen Dank für Ihre Teilnahme an der Validierung des Learning Brains-Ausbildungspfads. Das Ausfüllen des Fragebogens dauert nach Prüfung des Ausbildungspfads etwa 10–15 Minuten. Der Ausbildungspfad bietet den curricularen Rahmen für das künftige Learning Brains-Schulungsprogramm zum Einsatz von künstlicher Intelligenz am Arbeitsplatz in Industrieunternehmen. Er beinhaltet nicht die vollständigen Schulungsinhalte, Aktivitäten, Werkzeuge oder Fallstudien, sondern definiert die Lernstruktur, die zu entwickelnden Kompetenzen und allgemeine Leitlinien für die anschließende Entwicklung des Schulungsprogramms. Ihr Feedback ist unerlässlich, um Qualität, Relevanz und praktischen Nutzen des Ausbildungspfads sicherzustellen. Bitte beurteilen Sie das Dokument auf Grundlage Ihrer beruflichen Erfahrung.',
+                sk: 'Ďakujeme za účasť na validácii vzdelávacej cesty Learning Brains. Vyplnenie dotazníka trvá približne 10–15 minút po preštudovaní vzdelávacej cesty Learning Brains. Dokument poskytuje kurikulárny rámec pre budúci vzdelávací program Learning Brains o využívaní umelej inteligencie pri vzdelávaní na pracovisku v priemyselných podnikoch. Nemá za cieľ obsahovať kompletný obsah vzdelávania, aktivity, nástroje či prípadové štúdie, ale definuje štruktúru vzdelávania, rozvíjané kompetencie a všeobecné usmernenia pre následný vývoj vzdelávacieho programu. Vaša spätná väzba je nevyhnutná na zabezpečenie kvality, relevantnosti a praktickej užitočnosti vzdelávacej cesty. Posúďte prosím dokument na základe svojich profesionálnych skúseností.',
+                pt: 'Agradecemos a sua participação na validação do Itinerário Formativo Learning Brains. O preenchimento do questionário demora cerca de 10 a 15 minutos, após a leitura do Itinerário Formativo Learning Brains. O itinerário fornece o quadro curricular para o futuro Programa de Formação Learning Brains sobre a utilização de inteligência artificial na formação em contexto de trabalho em empresas industriais. Não pretende conter a totalidade dos conteúdos de formação, atividades, ferramentas ou estudos de caso, mas sim definir a estrutura de aprendizagem, as competências a desenvolver e as orientações gerais para o subsequente desenvolvimento do Programa de Formação. O seu feedback é essencial para assegurar a qualidade, relevância e utilidade prática do Itinerário Formativo. Por favor, avalie o documento com base na sua experiência profissional.'
             }
         },
         likertQuestions: [
@@ -919,12 +919,12 @@ export const VALIDATION_CAMPAIGNS = {
                     pt: 'Secção 7. Utilização prática e transferibilidade'
                 },
                 title: {
-                    en: 'The itinerary is sufficiently clear to be used by trainers or organisations outside the consortium.',
-                    es: 'El itinerario es suficientemente claro como para ser utilizado por formadores u organizaciones ajenas al consorcio.',
-                    it: 'L\'itinerario è sufficientemente chiaro per essere impiegato da formatori o organizzazioni esterne al consorzio.',
-                    de: 'Der Ausbildungspfad ist so verständlich aufbereitet, dass er auch von externen Trainern und Organisationen genutzt werden kann.',
-                    sk: 'Vzdelávacia cesta je dostatočne zrozumiteľná, aby ju mohli využívať školitelia alebo organizácie mimo konzorcia.',
-                    pt: 'O itinerário é suficientemente claro para ser utilizado por formadores ou organizações fora do consórcio.'
+                    en: 'The itinerary is sufficiently clear to be used by trainers or organisations outside the consortium or beyond the project activities.',
+                    es: 'El itinerario es suficientemente claro como para ser utilizado por formadores u organizaciones ajenas al consorcio o más allá de las actividades del proyecto.',
+                    it: 'L\'itinerario è sufficientemente chiaro per essere impiegato da formatori o organizzazioni esterne al consorzio o al di là delle attività del progetto.',
+                    de: 'Der Ausbildungspfad ist so verständlich aufbereitet, dass er von Trainern oder Organisationen außerhalb des Konsortiums oder über die Projektaktivitäten hinaus genutzt werden kann.',
+                    sk: 'Vzdelávacia cesta je dostatočne zrozumiteľná, aby ju mohli využívať školitelia alebo organizácie mimo konzorcia alebo nad rámec projektových aktivít.',
+                    pt: 'O itinerário é suficientemente claro para ser utilizado por formadores ou organizações fora do consórcio ou além das atividades do projeto.'
                 }
             },
             {
@@ -984,6 +984,25 @@ export const VALIDATION_CAMPAIGNS = {
                     de: 'Nennen Sie etwaige Lücken, klärungsbedürftige Teile oder Verbesserungsvorschläge...',
                     sk: 'Uveďte prípadné nedostatky, časti vyžadujúce spresnenie alebo odporúčania na zlepšenie...',
                     pt: 'Indique eventuais lacunas, partes que necessitem de clarificação ou sugestões de melhoria...'
+                }
+            },
+            {
+                id: 'q3_missing_topics',
+                title: {
+                    en: 'Do you think any relevant topic is missing from the Learning Brains Training Itinerary? If yes, please specify.',
+                    es: '¿Consideras que falta algún tema relevante en el Itinerario Formativo de Learning Brains? En caso afirmativo, indícalo por favor.',
+                    it: 'Ritiene che manchi qualche argomento rilevante nell\'Itinerario Formativo di Learning Brains? In caso affermativo, si prega di specificare.',
+                    de: 'Fehlt Ihrer Ansicht nach ein relevantes Thema im Learning Brains-Ausbildungspfad? Wenn ja, bitte erläutern Sie dies kurz.',
+                    sk: 'Myslíte si, že vo vzdelávacej ceste Learning Brains chýba nejaká dôležitá téma? Ak áno, uveďte ju prosím.',
+                    pt: 'Considera que falta algum tópico relevante no Itinerário Formativo do Learning Brains? Se sim, especifique, por favor.'
+                },
+                placeholder: {
+                    en: 'Specify any missing topic, theme or competence area that should be addressed...',
+                    es: 'Indica cualquier tema, contenido o competencia que consideres necesario añadir...',
+                    it: 'Indica eventuali argomenti, contenuti o competenze che ritiene opportuno aggiungere...',
+                    de: 'Nennen Sie fehlende Themen, Inhalte oder Kompetenzbereiche, die ergänzt werden sollten...',
+                    sk: 'Uveďte chýbajúce témy, obsah alebo oblasti kompetencií, ktoré by mali byť doplnené...',
+                    pt: 'Indique tópicos, conteúdos ou áreas de competência em falta que deveriam ser incluídos...'
                 }
             }
         ]
@@ -1586,5 +1605,21 @@ export const VALIDATION_UI = {
         de: 'Weitere Rückmeldung senden',
         sk: 'Odoslať ďalšiu odpoveď',
         pt: 'Submeter outra resposta'
+    },
+    summary_ai_experience: {
+        en: 'AI Experience',
+        es: 'Experiencia en IA',
+        it: 'Esperienza in IA',
+        de: 'KI-Erfahrung',
+        sk: 'Skúsenosti s AI',
+        pt: 'Experiência em IA'
+    },
+    contact_assistance: {
+        en: 'For any question or clarification, please contact joseba@fvem.es',
+        es: 'Para cualquier duda o aclaración, contacta con joseba@fvem.es',
+        it: 'Per qualsiasi chiarimento o informazione, contattare joseba@fvem.es',
+        de: 'Für Fragen oder Klarstellungen wenden Sie sich bitte an joseba@fvem.es',
+        sk: 'V prípade akýchkoľvek otázok alebo nejasností nás kontaktujte na joseba@fvem.es',
+        pt: 'Para quaisquer esclarecimentos ou dúvidas, por favor contacte joseba@fvem.es'
     }
 };
