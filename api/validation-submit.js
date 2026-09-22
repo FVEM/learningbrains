@@ -33,13 +33,13 @@ export default async function handler(req, res) {
         };
 
         let sheetResult = null;
-        const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
+        const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbyqfyXKBvv_g6Eso97FibinK2W_BcailgefPpKoB4EwAt86xp0QfP53gbJmlaZEJfLP/exec';
 
         if (webhookUrl) {
             try {
                 const sheetResponse = await fetch(webhookUrl, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                     body: JSON.stringify(payload),
                     redirect: 'follow'
                 });
