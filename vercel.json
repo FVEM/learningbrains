@@ -12,11 +12,28 @@
             "destination": "/api/$1"
         },
         {
-            "source": "/((?!api/|assets/|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)",
+            "source": "/((?!api/|assets/|documents/|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)",
             "destination": "/index.html"
         }
     ],
     "headers": [
+        {
+            "source": "/documents/(.*)",
+            "headers": [
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "X-Frame-Options",
+                    "value": "SAMEORIGIN"
+                },
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=86400"
+                }
+            ]
+        },
         {
             "source": "/(.*)",
             "headers": [
@@ -26,7 +43,7 @@
                 },
                 {
                     "key": "X-Frame-Options",
-                    "value": "DENY"
+                    "value": "SAMEORIGIN"
                 },
                 {
                     "key": "X-XSS-Protection",

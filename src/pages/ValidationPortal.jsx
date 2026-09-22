@@ -550,13 +550,19 @@ export default function ValidationPortal() {
                                     </div>
                                 )}
 
-                                {/* PDF Embed / Iframe */}
-                                <div className="flex-1 bg-slate-200 relative">
-                                    <iframe
-                                        src={`${documentUrl}#toolbar=1&navpanes=0`}
+                                {/* PDF Embed */}
+                                <div className="flex-1 bg-slate-100 relative min-h-[400px]">
+                                    <object
+                                        data={`${documentUrl}#toolbar=1&navpanes=0`}
+                                        type="application/pdf"
                                         className="w-full h-full border-0"
-                                        title={tr(campaign.meta.title)}
-                                    />
+                                    >
+                                        <iframe
+                                            src={`${documentUrl}#toolbar=1&navpanes=0`}
+                                            className="w-full h-full border-0"
+                                            title={tr(campaign.meta.title)}
+                                        />
+                                    </object>
                                 </div>
 
                                 {/* Guidance Box under Viewer */}
