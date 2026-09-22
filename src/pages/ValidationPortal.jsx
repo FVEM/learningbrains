@@ -421,13 +421,16 @@ export default function ValidationPortal() {
                                 </div>
 
                                 {/* Guidance Box under Viewer */}
-                                <div className="p-4 bg-teal-50/70 border-t border-teal-100 text-xs text-slate-600 leading-relaxed">
-                                    <p className="font-medium text-brand-primary mb-1">
-                                        📌 {tr(campaign.meta.subtitle)}
-                                    </p>
-                                    <p className="text-slate-500">
-                                        {tr(campaign.meta.instructions)}
-                                    </p>
+                                <div className="p-4 sm:p-5 bg-teal-50/70 border-t border-teal-100 flex items-start gap-3">
+                                    <span className="text-lg select-none shrink-0 mt-0.5" aria-hidden="true">📌</span>
+                                    <div className="space-y-1.5">
+                                        <p className="text-sm sm:text-[15px] font-bold text-brand-primary leading-snug">
+                                            {tr(campaign.meta.subtitle)}
+                                        </p>
+                                        <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                                            {tr(campaign.meta.instructions)}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
