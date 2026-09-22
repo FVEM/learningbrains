@@ -43,7 +43,12 @@ export default async function handler(req, res) {
                     body: JSON.stringify(payload),
                     redirect: 'follow'
                 });
-                sheetResult = await sheetResponse.json();
+                const responseText = await sheetResponse.text();
+                try {
+                    sheetResult = JSON.parse(responseText);
+                } catch {
+                    sheetResult = { raw: responseText };
+                }
             } catch (sheetError) {
                 console.error('[validation-submit] Error posting to Google Sheet webhook:', sheetError);
             }
