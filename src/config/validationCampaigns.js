@@ -408,7 +408,11 @@ export const VALIDATION_CAMPAIGNS = {
         documentUrl: '/documents/validation/learning-brains-training-itinerary-en.pdf',
         documentUrls: {
             en: '/documents/validation/learning-brains-training-itinerary-en.pdf',
-            es: '/documents/validation/learning-brains-training-itinerary-es.pdf'
+            es: '/documents/validation/learning-brains-training-itinerary-es.pdf',
+            de: '/documents/validation/learning-brains-training-itinerary-de.pdf',
+            it: '/documents/validation/learning-brains-training-itinerary-it.pdf',
+            pt: '/documents/validation/learning-brains-training-itinerary-pt.pdf',
+            sk: '/documents/validation/learning-brains-training-itinerary-sk.pdf'
         },
         meta: {
             tag: {
