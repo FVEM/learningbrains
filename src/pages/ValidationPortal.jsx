@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, useSearchParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -42,6 +42,23 @@ export default function ValidationPortal() {
     const [mobileTab, setMobileTab] = useState('document'); // 'document' | 'form'
     const [currentStep, setCurrentStep] = useState(1);
     const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+    const [downloadDropdownOpen, setDownloadDropdownOpen] = useState(false);
+    const downloadDropdownRef = useRef(null);
+
+    const currentLangObj = useMemo(() => {
+        return SUPPORTED_LANGUAGES.find(l => l.code === currentLang) || SUPPORTED_LANGUAGES[0];
+    }, [currentLang]);
+
+    // Close download dropdown on outside click
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (downloadDropdownRef.current && !downloadDropdownRef.current.contains(event.target)) {
+                setDownloadDropdownOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     // Campaign definition & document URLs
     const campaign = VALIDATION_CAMPAIGNS[campaignId];
@@ -80,6 +97,7 @@ export default function ValidationPortal() {
         setCurrentLang(newLang);
         setSearchParams({ lang: newLang });
         setLangDropdownOpen(false);
+        setDownloadDropdownOpen(false);
     };
 
     // Auto-load draft from localStorage
@@ -364,25 +382,38 @@ export default function ValidationPortal() {
                                 <RefreshCw className="w-4 h-4" />
                                 {ui('submit_another')}
                             </button>
-                            {isTranslatedDoc && originalDocumentUrl && (
+                            {isTranslatedDoc ? (
+                                <>
+                                    <a
+                                        href={documentUrl}
+                                        download
+                                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-primary hover:bg-opacity-90 text-white text-sm font-semibold transition-all shadow-xs"
+                                    >
+                                        <Download className="w-4 h-4" />
+                                        <span>{currentLangObj.flag} {ui('download_translated_pdf')} ({currentLangObj.name})</span>
+                                    </a>
+                                    {originalDocumentUrl && (
+                                        <a
+                                            href={originalDocumentUrl}
+                                            download
+                                            title={ui('download_original_desc')}
+                                            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold transition-all border border-slate-300"
+                                        >
+                                            <Download className="w-4 h-4 text-slate-600" />
+                                            <span>🇬🇧 {ui('download_original_pdf')}</span>
+                                        </a>
+                                    )}
+                                </>
+                            ) : (
                                 <a
-                                    href={originalDocumentUrl}
+                                    href={documentUrl}
                                     download
-                                    title={ui('download_original_desc')}
-                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold transition-all border border-slate-300"
+                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-primary hover:bg-opacity-90 text-white text-sm font-semibold transition-all shadow-xs"
                                 >
-                                    <Download className="w-4 h-4 text-slate-600" />
-                                    {ui('download_original_pdf')}
+                                    <Download className="w-4 h-4" />
+                                    <span>{ui('download_pdf')}</span>
                                 </a>
                             )}
-                            <a
-                                href={documentUrl}
-                                download
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-primary hover:bg-opacity-90 text-white text-sm font-semibold transition-all"
-                            >
-                                <Download className="w-4 h-4" />
-                                {ui('download_pdf')}
-                            </a>
                         </div>
                     </div>
                 ) : (
@@ -417,17 +448,7 @@ export default function ValidationPortal() {
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2 shrink-0">
-                                        {isTranslatedDoc && originalDocumentUrl && (
-                                            <a
-                                                href={originalDocumentUrl}
-                                                download
-                                                title={ui('download_original_desc')}
-                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 hover:text-brand-primary border border-slate-300 rounded-lg shadow-xs transition-all"
-                                            >
-                                                <Download className="w-3.5 h-3.5 text-slate-500" />
-                                                <span className="hidden sm:inline">{ui('download_original_pdf')}</span>
-                                            </a>
-                                        )}
+                                        {/* Open in new tab */}
                                         <a
                                             href={documentUrl}
                                             target="_blank"
@@ -437,37 +458,95 @@ export default function ValidationPortal() {
                                         >
                                             <ExternalLink className="w-4 h-4" />
                                         </a>
-                                        <a
-                                            href={documentUrl}
-                                            download
-                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-primary bg-white hover:bg-teal-50 border border-slate-200 rounded-lg shadow-xs transition-all"
-                                        >
-                                            <Download className="w-3.5 h-3.5" />
-                                            <span className="hidden sm:inline">{ui('download_pdf')}</span>
-                                        </a>
+
+                                        {/* Download Action: Unified Dropdown if multiple versions, direct button if single */}
+                                        {isTranslatedDoc && originalDocumentUrl ? (
+                                            <div className="relative" ref={downloadDropdownRef}>
+                                                <button
+                                                    onClick={() => setDownloadDropdownOpen(!downloadDropdownOpen)}
+                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-primary bg-white hover:bg-teal-50 border border-slate-200 rounded-lg shadow-xs transition-all cursor-pointer"
+                                                >
+                                                    <Download className="w-3.5 h-3.5" />
+                                                    <span>{ui('download_pdf')}</span>
+                                                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${downloadDropdownOpen ? 'rotate-180' : ''}`} />
+                                                </button>
+
+                                                {downloadDropdownOpen && (
+                                                    <div className="absolute right-0 mt-2 w-72 bg-white rounded-xl shadow-xl border border-slate-200 p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-left">
+                                                        <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1">
+                                                            {ui('download_options')}
+                                                        </div>
+
+                                                        {/* Current translated version */}
+                                                        <a
+                                                            href={documentUrl}
+                                                            download
+                                                            onClick={() => setDownloadDropdownOpen(false)}
+                                                            className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-teal-50 text-slate-800 transition-colors group"
+                                                        >
+                                                            <span className="text-lg shrink-0 mt-0.5">{currentLangObj.flag}</span>
+                                                            <div className="min-w-0">
+                                                                <div className="text-xs font-bold text-slate-800 group-hover:text-brand-primary flex items-center gap-1.5">
+                                                                    <span>{currentLangObj.name}</span>
+                                                                    <span className="text-[10px] text-amber-700 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200 font-medium">IA</span>
+                                                                </div>
+                                                                <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                                                                    {ui('download_translated_desc')}
+                                                                </div>
+                                                            </div>
+                                                        </a>
+
+                                                        {/* Official English original */}
+                                                        <a
+                                                            href={originalDocumentUrl}
+                                                            download
+                                                            onClick={() => setDownloadDropdownOpen(false)}
+                                                            className="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 text-slate-800 transition-colors group border-t border-slate-100 mt-1 pt-2"
+                                                        >
+                                                            <span className="text-lg shrink-0 mt-0.5">🇬🇧</span>
+                                                            <div className="min-w-0">
+                                                                <div className="text-xs font-bold text-slate-800 group-hover:text-brand-primary flex items-center gap-1.5">
+                                                                    <span>English</span>
+                                                                    <span className="text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200 font-medium">{ui('official_original')}</span>
+                                                                </div>
+                                                                <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                                                                    {ui('download_original_desc')}
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ) : (
+                                            <a
+                                                href={documentUrl}
+                                                download
+                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-primary bg-white hover:bg-teal-50 border border-slate-200 rounded-lg shadow-xs transition-all"
+                                            >
+                                                <Download className="w-3.5 h-3.5" />
+                                                <span className="hidden sm:inline">{ui('download_pdf')}</span>
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
 
                                 {/* AI Translation Notice Banner */}
                                 {isTranslatedDoc && (
-                                    <div className="px-4 py-2.5 bg-amber-50/90 border-b border-amber-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs text-amber-900">
-                                        <div className="flex items-start gap-2 min-w-0">
-                                            <span className="text-base select-none shrink-0" aria-hidden="true">🤖</span>
-                                            <p className="leading-snug">
-                                                <span className="font-bold">{ui('ai_translation_notice_title')}: </span>
-                                                <span>{ui('ai_translation_notice_desc')}</span>
-                                            </p>
-                                        </div>
-                                        {originalDocumentUrl && (
-                                            <a
-                                                href={originalDocumentUrl}
-                                                download
-                                                className="shrink-0 inline-flex items-center gap-1 font-bold text-amber-950 hover:text-brand-primary underline transition-colors whitespace-nowrap self-end sm:self-center"
-                                            >
-                                                <span>{ui('download_original_pdf')}</span>
-                                                <ChevronRight className="w-3.5 h-3.5" />
-                                            </a>
-                                        )}
+                                    <div className="px-4 py-2.5 bg-amber-50/90 border-b border-amber-200/80 flex items-start gap-2.5 text-xs text-amber-900 leading-relaxed">
+                                        <span className="text-base select-none shrink-0" aria-hidden="true">🤖</span>
+                                        <p>
+                                            <strong className="font-semibold">{ui('ai_translation_notice_title')}: </strong>
+                                            <span>{ui('ai_translation_notice_inline')}</span>
+                                            {originalDocumentUrl && (
+                                                <a
+                                                    href={originalDocumentUrl}
+                                                    download
+                                                    className="font-bold underline text-amber-950 hover:text-brand-primary transition-colors inline-flex items-center gap-0.5 ml-1"
+                                                >
+                                                    <span>{ui('download_original_link')}</span>
+                                                </a>
+                                            )}
+                                        </p>
                                     </div>
                                 )}
 

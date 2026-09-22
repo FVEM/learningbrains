@@ -1645,6 +1645,30 @@ export const VALIDATION_UI = {
         sk: 'Preklad pomocou AI',
         pt: 'Tradução por IA'
     },
+    download_options: {
+        en: 'Select Version to Download',
+        es: 'Selecciona versión para descargar',
+        it: 'Seleziona versione da scaricare',
+        de: 'Download-Version auswählen',
+        sk: 'Vyberte verziu na stiahnutie',
+        pt: 'Selecionar versão para descarregar'
+    },
+    official_original: {
+        en: 'Official Reference',
+        es: 'Referencia Oficial',
+        it: 'Riferimento Ufficiale',
+        de: 'Offizielle Referenz',
+        sk: 'Oficiálna referencia',
+        pt: 'Referência Oficial'
+    },
+    download_translated_desc: {
+        en: 'AI-assisted translation (previewed in viewer)',
+        es: 'Traducción asistida por IA (mostrada en el visor)',
+        it: 'Traduzione con IA (mostrata nel visualizzatore)',
+        de: 'KI-Übersetzung (im Viewer angezeigt)',
+        sk: 'Preklad pomocou AI (zobrazený v prehliadači)',
+        pt: 'Tradução por IA (apresentada no visualizador)'
+    },
     download_original_pdf: {
         en: 'Download Original PDF (EN)',
         es: 'Descargar Original (EN)',
@@ -1654,12 +1678,20 @@ export const VALIDATION_UI = {
         pt: 'Descarregar Original (EN)'
     },
     download_original_desc: {
-        en: 'Download official original document in English',
-        es: 'Descargar documento original oficial en inglés',
-        it: 'Scarica il documento originale ufficiale in inglese',
-        de: 'Offizielles Originaldokument auf Englisch herunterladen',
-        sk: 'Stiahnuť oficiálny originálny dokument v angličtine',
-        pt: 'Descarregar documento original oficial em inglês'
+        en: 'Official reference document in English',
+        es: 'Documento original oficial de referencia en inglés',
+        it: 'Documento originale ufficiale di riferimento in inglese',
+        de: 'Offizielles Referenzdokument auf Englisch',
+        sk: 'Oficiálny referenčný dokument v angličtine',
+        pt: 'Documento original oficial de referência em inglês'
+    },
+    download_original_link: {
+        en: 'download the official English original (EN) →',
+        es: 'descargar el original oficial en inglés (EN) →',
+        it: 'scaricare l\'originale ufficiale in inglese (EN) →',
+        de: 'das offizielle englische Original (EN) herunterladen →',
+        sk: 'stiahnuť oficiálny anglický originál (EN) →',
+        pt: 'descarregar o original oficial em inglês (EN) →'
     },
     ai_translation_notice_title: {
         en: 'AI Translation Notice',
@@ -1672,9 +1704,17 @@ export const VALIDATION_UI = {
     ai_translation_notice_desc: {
         en: 'This preview shows an AI-assisted translation of the official English original. For the authoritative reference, you can download the original English version.',
         es: 'Este visor muestra una traducción asistida por IA del documento original en inglés. Para consultar la versión oficial de referencia, puedes descargar el original en inglés.',
-        it: 'Questo visualizzatore mostra una traduzione assistita da IA del documento originale in inglese. Per consultare la versione ufficiale di riferimento, puoi scaricare l\'originale in inglese.',
+        it: 'Questo visualizzatore mostra una traduzione assistita da IA del documento originale in inglese. Per consultare la versione oficiale di riferimento, puoi scaricare l\'originale in inglese.',
         de: 'Diese Vorschau zeigt eine KI-unterstützte Übersetzung des englischen Originaldokuments. Die maßgebliche Referenzfassung auf Englisch können Sie herunterladen.',
         sk: 'Tento náhľad zobrazuje preklad pôvodného anglického dokumentu vytvorený pomocou AI. Záväzné pôvodné znenie v angličtine si môžete stiahnuť.',
         pt: 'Este visualizador apresenta uma tradução assistida por IA a partir do documento original em inglês. Para consultar a versão oficial de referência, pode descarregar o original em inglês.'
+    },
+    ai_translation_notice_inline: {
+        en: 'This preview shows an AI-assisted translation of the official English document. For the authoritative reference, you can ',
+        es: 'Este visor muestra una traducción asistida por IA del documento original en inglés. Para consultar la versión oficial de referencia, puedes ',
+        it: 'Questo visualizzatore mostra una traduzione con IA del documento originale in inglese. Per consultare la versione ufficiale di riferimento, puoi ',
+        de: 'Diese Vorschau zeigt eine KI-unterstützte Übersetzung des englischen Originaldokuments. Die maßgebliche Referenzfassung können Sie ',
+        sk: 'Tento náhľad zobrazuje preklad pôvodného anglického dokumentu vytvorený pomocou AI. Záväzné znenie môžete ',
+        pt: 'Este visualizador apresenta uma tradução assistida por IA a partir do original em inglês. Para consultar a versão oficial de referência, pode '
     }
 };
