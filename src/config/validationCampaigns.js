@@ -405,7 +405,11 @@ export const VALIDATION_CAMPAIGNS = {
         slug: 'itinerario-formativo',
         status: 'active',
         profileType: 'itinerary',
-        documentUrl: '/documents/validation/itinerario-formativo-sample.pdf',
+        documentUrl: '/documents/validation/learning-brains-training-itinerary-en.pdf',
+        documentUrls: {
+            en: '/documents/validation/learning-brains-training-itinerary-en.pdf',
+            es: '/documents/validation/learning-brains-training-itinerary-es.pdf'
+        },
         meta: {
             tag: {
                 en: 'Training Pathway Curriculum',
@@ -1091,6 +1095,17 @@ export function getCampaignDocumentUrl(campaign, lang = 'en') {
 }
 
 /**
+ * Resolves the original English reference document URL for a campaign
+ */
+export function getCampaignOriginalDocumentUrl(campaign) {
+    if (!campaign) return '';
+    if (campaign.documentUrls && typeof campaign.documentUrls === 'object') {
+        return campaign.documentUrls.en || campaign.documentUrl || Object.values(campaign.documentUrls)[0];
+    }
+    return campaign.documentUrl || '';
+}
+
+/**
  * Common UI interface strings translated for the validation portal
  */
 export const VALIDATION_UI = {
@@ -1621,5 +1636,45 @@ export const VALIDATION_UI = {
         de: 'Für Fragen oder Klarstellungen wenden Sie sich bitte an joseba@fvem.es',
         sk: 'V prípade akýchkoľvek otázok alebo nejasností nás kontaktujte na joseba@fvem.es',
         pt: 'Para quaisquer esclarecimentos ou dúvidas, por favor contacte joseba@fvem.es'
+    },
+    ai_translated_badge: {
+        en: 'AI Translation',
+        es: 'Traducción por IA',
+        it: 'Traduzione con IA',
+        de: 'KI-Übersetzung',
+        sk: 'Preklad pomocou AI',
+        pt: 'Tradução por IA'
+    },
+    download_original_pdf: {
+        en: 'Download Original PDF (EN)',
+        es: 'Descargar Original (EN)',
+        it: 'Scarica Originale (EN)',
+        de: 'Original-PDF (EN)',
+        sk: 'Stiahnuť originál (EN)',
+        pt: 'Descarregar Original (EN)'
+    },
+    download_original_desc: {
+        en: 'Download official original document in English',
+        es: 'Descargar documento original oficial en inglés',
+        it: 'Scarica il documento originale ufficiale in inglese',
+        de: 'Offizielles Originaldokument auf Englisch herunterladen',
+        sk: 'Stiahnuť oficiálny originálny dokument v angličtine',
+        pt: 'Descarregar documento original oficial em inglês'
+    },
+    ai_translation_notice_title: {
+        en: 'AI Translation Notice',
+        es: 'Aviso sobre Traducción por IA',
+        it: 'Avviso Traduzione con IA',
+        de: 'Hinweis zur KI-Übersetzung',
+        sk: 'Upozornenie na preklad pomocou AI',
+        pt: 'Aviso de Tradução por IA'
+    },
+    ai_translation_notice_desc: {
+        en: 'This preview shows an AI-assisted translation of the official English original. For the authoritative reference, you can download the original English version.',
+        es: 'Este visor muestra una traducción asistida por IA del documento original en inglés. Para consultar la versión oficial de referencia, puedes descargar el original en inglés.',
+        it: 'Questo visualizzatore mostra una traduzione assistita da IA del documento originale in inglese. Per consultare la versione ufficiale di riferimento, puoi scaricare l\'originale in inglese.',
+        de: 'Diese Vorschau zeigt eine KI-unterstützte Übersetzung des englischen Originaldokuments. Die maßgebliche Referenzfassung auf Englisch können Sie herunterladen.',
+        sk: 'Tento náhľad zobrazuje preklad pôvodného anglického dokumentu vytvorený pomocou AI. Záväzné pôvodné znenie v angličtine si môžete stiahnuť.',
+        pt: 'Este visualizador apresenta uma tradução assistida por IA a partir do documento original em inglês. Para consultar a versão oficial de referência, pode descarregar o original em inglês.'
     }
 };
