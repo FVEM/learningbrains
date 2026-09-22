@@ -431,17 +431,9 @@ export default function ValidationPortal() {
                                             <FileText className="w-4 h-4" />
                                         </div>
                                         <div className="min-w-0">
-                                            <div className="flex items-center gap-2 flex-wrap">
-                                                <h2 className="text-sm font-bold text-slate-800 truncate">
-                                                    {tr(campaign.meta.title)}
-                                                </h2>
-                                                {isTranslatedDoc && (
-                                                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-900 bg-amber-100/90 px-2 py-0.5 rounded-full shrink-0 border border-amber-300 shadow-2xs">
-                                                        <span>🤖</span>
-                                                        <span>{ui('ai_translated_badge')}</span>
-                                                    </span>
-                                                )}
-                                            </div>
+                                            <h2 className="text-sm font-bold text-slate-800 truncate">
+                                                {tr(campaign.meta.title)}
+                                            </h2>
                                             <p className="text-[11px] text-slate-500">
                                                 {ui('pdf_preview')}
                                             </p>
