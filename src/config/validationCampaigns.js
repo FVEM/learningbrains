@@ -236,21 +236,21 @@ export const VALIDATION_CAMPAIGNS = {
                 sk: 'Národný pilotný výbor',
                 pt: 'Comité Piloto Nacional'
             },
-            title: {
-                en: 'National Pilot Committee 1: Strategic Validation & Industrial Needs',
-                es: 'National Pilot Committee 1: Validación Estratégica y Necesidades Industriales',
-                it: 'National Pilot Committee 1: Validazione Strategica e Fabbisogni Industriali',
-                de: 'National Pilot Committee 1: Strategische Validierung & Industrielle Bedarfe',
-                sk: 'National Pilot Committee 1: Strategická validácia a priemyselné potreby',
-                pt: 'National Pilot Committee 1: Validação Estratégica e Necessidades Industriais'
+                        title: {
+                en: 'National Pilot Committee 1: Good Practices & Key Trends Selection',
+                es: 'National Pilot Committee 1: Revisión de Buenas Prácticas y Selección de Tendencias',
+                it: 'National Pilot Committee 1: Revisione delle Buone Pratiche e Selezione delle Tendenze',
+                de: 'National Pilot Committee 1: Überprüfung von Best Practices & Auswahl von Trends',
+                sk: 'National Pilot Committee 1: Preskúmanie osvedčených postupov a výber trendov',
+                pt: 'National Pilot Committee 1: Revisão de Boas Práticas e Seleção de Tendências'
             },
             subtitle: {
-                en: 'Evaluation of the project framework, targeted skills in AI for industrial SMEs, and regional implementation pilot guidelines.',
-                es: 'Evaluación del marco del proyecto, competencias de IA prioritarias para las PYMEs industriales y directrices para los pilotos regionales.',
-                it: 'Valutazione del quadro del progetto, delle competenze prioritari in IA per le PMI industriali e delle linee guida per i progetti pilota regionali.',
-                de: 'Bewertung des Projektrahmens, der priorisierten KI-Kompetenzen für industrielle KMU und der regionalen Pilotrichtlinien.',
-                sk: 'Hodnotenie projektového rámca, prioritných zručností v oblasti umelej inteligencie pre priemyselné MSP a usmernení pre pilotné overovanie.',
-                pt: 'Avaliação do quadro do projeto, competências prioritárias em IA para as PME industriais e diretrizes para os pilotos regionais.'
+                en: 'Convened after the research phase to review the identified good practices and trends, contributing to selecting the most relevant ones.',
+                es: 'Convocado tras la fase de investigación para revisar las buenas prácticas y tendencias identificadas y contribuir a seleccionar las más relevantes.',
+                it: 'Convocato dopo la fase di ricerca per esaminare le buone pratiche e le tendenze individuate e contribuire a selezionare le più rilevanti.',
+                de: 'Einberufen nach der Forschungsphase, um die ermittelten Best Practices und Trends zu prüfen und die relevantesten auszuwählen.',
+                sk: 'Zvoláva sa po fáze výskumu na preskúmanie identifikovaných osvedčených postupov a trendov a výber tých najrelevantnejších.',
+                pt: 'Convocado após a fase de investigação para rever as boas práticas e tendências identificadas e contribuir para selecionar as mais relevantes.'
             },
             instructions: {
                 en: 'Please review the document in the viewer on the left (or download it for offline reading) and provide your expert feedback through the form on the right. Your inputs directly shape the project deliverables submitted to the European Commission.',
@@ -1030,21 +1030,21 @@ export const VALIDATION_CAMPAIGNS = {
                 sk: 'Národný pilotný výbor',
                 pt: 'Comité Piloto Nacional'
             },
-            title: {
-                en: 'National Pilot Committee 2: Mid-term Pilot Evaluation & Workplace Testing',
-                es: 'National Pilot Committee 2: Evaluación Intermedia de Pilotos en Empresas',
-                it: 'National Pilot Committee 2: Valutazione Intermedia dei Progetti Pilota',
-                de: 'National Pilot Committee 2: Zwischenbewertung der Unternehmens-Piloten',
-                sk: 'National Pilot Committee 2: Priebežné hodnotenie pilotného testovania',
-                pt: 'National Pilot Committee 2: Avaliação Intermédia dos Pilotos nas Empresas'
+                        title: {
+                en: 'National Pilot Committee 2: Toolkit Draft Review & Recommendations',
+                es: 'National Pilot Committee 2: Borrador del Toolkit y Recomendaciones Previas',
+                it: 'National Pilot Committee 2: Bozza del Toolkit e Raccomandazioni Preliminari',
+                de: 'National Pilot Committee 2: Toolkit-Entwurf & Vorläufige Empfehlungen',
+                sk: 'National Pilot Committee 2: Návrh sady nástrojov (Toolkit) a predbežné odporúčania',
+                pt: 'National Pilot Committee 2: Rascunho do Toolkit e Recomendações Prévias'
             },
             subtitle: {
-                en: 'Validation of the practical on-the-job pilot testing, trainer observations, and initial SME performance metrics.',
-                es: 'Validación del pilotaje práctico en los puestos de trabajo, observaciones de los formadores y primeras métricas de impacto en PYMEs.',
-                it: 'Validazione della sperimentazione pilota sul lavoro, osservazioni dei formatori e prime metriche di impatto sulle PMI.',
-                de: 'Validierung der betrieblichen Pilottests, Beobachtungen der Ausbilder und erste KMU-Wirkungsmetriken.',
-                sk: 'Validácia praktického testovania na pracovisku, postrehy školiteľov a počiatočné ukazovatele vplyvu na MSP.',
-                pt: 'Validação da testagem prática no posto de trabalho, observações dos formadores e métricas iniciais de impacto nas PME.'
+                en: 'Convened once the Toolkit draft is available to provide expert recommendations and guidance prior to its full development.',
+                es: 'Convocado cuando exista un borrador del Toolkit para aportar recomendaciones y orientaciones expertas antes de su desarrollo.',
+                it: 'Convocato in presenza di una bozza del Toolkit per fornire raccomandazioni e orientamenti esperti prima del suo sviluppo.',
+                de: 'Einberufen bei Vorliegen eines Toolkit-Entwurfs, um vor dessen vollständiger Ausarbeitung Empfehlungen einzubringen.',
+                sk: 'Zvoláva sa pri dostupnosti návrhu sady nástrojov (Toolkit) s cieľom poskytnúť odporúčania pred jej konečným vývojom.',
+                pt: 'Convocado quando existir um rascunho do Toolkit para fornecer recomendações e orientações especializadas antes do seu desenvolvimento.'
             }
         },
         likertQuestions: [],
@@ -1065,21 +1065,21 @@ export const VALIDATION_CAMPAIGNS = {
                 sk: 'Národný pilotný výbor',
                 pt: 'Comité Piloto Nacional'
             },
-            title: {
-                en: 'National Pilot Committee 3: Final Impact, Exploitation & Regional Policy Recommendations',
-                es: 'National Pilot Committee 3: Impacto Final, Sostenibilidad y Recomendaciones Políticas',
-                it: 'National Pilot Committee 3: Impatto Finale, Sostenibilità e Raccomandazioni Politiche',
-                de: 'National Pilot Committee 3: Endgültige Wirkung, Verstetigung & Politische Empfehlungen',
-                sk: 'National Pilot Committee 3: Záverečný vplyv, udržateľnosť a odporúčania pre politiky',
-                pt: 'National Pilot Committee 3: Impacto Final, Sustentabilidade e Recomendações Políticas'
+                        title: {
+                en: 'National Pilot Committee 3: Testing & Validation of Deliverables R1 and R2',
+                es: 'National Pilot Committee 3: Prueba y Validación de los Resultados R1 y R2',
+                it: 'National Pilot Committee 3: Sperimentazione e Validazione dei Risultati R1 e R2',
+                de: 'National Pilot Committee 3: Erprobung und Validierung der Ergebnisse R1 und R2',
+                sk: 'National Pilot Committee 3: Testovanie a validácia výsledkov R1 a R2',
+                pt: 'National Pilot Committee 3: Testagem e Validação dos Resultados R1 e R2'
             },
             subtitle: {
-                en: 'Consortium wrap-up, institutional sustainability plans, and policy recommendations for regional industrial reskilling.',
-                es: 'Cierre del consorcio, planes de sostenibilidad institucional y recomendaciones para las políticas regionales de reciclaje industrial.',
-                it: 'Chiusura del consorzio, piani di sostenibilità istituzionale e raccomandazioni per le politiche regionali.',
-                de: 'Projektabschluss, institutionelle Verstetigungspläne und Politikempfehlungen für die regionale Weiterbildung.',
-                sk: 'Záverečné zhodnotenie konzorcia, plány inštitucionálnej udržateľnosti a odporúčania pre regionálne politiky.',
-                pt: 'Encerramento do consórcio, planos de sustentabilidade institucional e recomendações para as políticas regionais.'
+                en: 'Convened when Deliverables R1 and R2 are prepared and ready for comprehensive workplace testing and validation.',
+                es: 'Convocado cuando los resultados R1 y R2 estén preparados para su prueba y validación práctica en empresas.',
+                it: 'Convocato quando i risultati R1 e R2 sono pronti per la sperimentazione e la validazione pratica nelle imprese.',
+                de: 'Einberufen, sobald die Ergebnisse R1 und R2 für die praktische Erprobung und Validierung in Unternehmen bereitstehen.',
+                sk: 'Zvoláva sa v momente, keď sú výsledky R1 a R2 pripravené na praktické testovanie a validáciu v podnikoch.',
+                pt: 'Convocado quando os resultados R1 e R2 estiverem preparados para teste prático e validação nas empresas.'
             }
         },
         likertQuestions: [],
