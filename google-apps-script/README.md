@@ -17,8 +17,8 @@ En la carpeta del proyecto ya se ha creado el archivo:
 2. Arrastra y suelta dicho archivo `.xlsx`.
 3. Haz doble clic sobre él y ábrelo con **Google Sheets**.
 4. ¡Listo! Ya tienes la estructura con:
-   - **Pestaña 1 (`Respuestas_Itinerario`):** 47 columnas preparadas, coloreadas por sección, cabeceras congeladas y fórmulas de promedio automáticas.
-   - **Pestaña 2 (`Codebook_Preguntas`):** Diccionario con el texto de las 26 preguntas Likert y 3 cualitativas en inglés y español.
+   - **Pestaña 1 (`Validation_Responses`):** 47 columnas preparadas, coloreadas por sección, cabeceras congeladas y fórmulas de promedio automáticas.
+   - **Pestaña 2 (`Codebook_Questions`):** Diccionario con el texto de las 26 preguntas Likert y 3 cualitativas en inglés y español.
    - **Pestaña 3 (`KPI_Dashboard`):** Cuadro de mando resumen con fórmulas de promedios para informes Erasmus+.
 
 ---

@@ -449,509 +449,509 @@ export const VALIDATION_CAMPAIGNS = {
             }
         },
         likertQuestions: [
-            // Section 2. Purpose and relevance
+            // Section 2. Purpose and relevance (5 questions)
             {
-                id: 'p1',
+                id: "p1",
                 section: {
-                    en: 'Section 2. Purpose and relevance',
-                    es: 'Sección 2. Objeto y pertinencia',
-                    it: 'Sezione 2. Scopo e rilevanza',
-                    de: 'Abschnitt 2. Zweck und Relevanz',
-                    sk: 'Časť 2. Účel a relevantnosť',
-                    pt: 'Secção 2. Propósito e relevância'
+                    en: "Section 2. Purpose and relevance",
+                    es: "Sección 2. Objeto y pertinencia",
+                    it: "Sezione 2. Scopo e rilevanza",
+                    de: "Abschnitt 2. Zweck und Relevanz",
+                    sk: "Časť 2. Účel a relevantnosť",
+                    pt: "Secção 2. Propósito e relevância"
                 },
                 title: {
-                    en: 'The itinerary addresses relevant needs related to on-the-job training in industrial companies.',
-                    es: 'El itinerario responde a necesidades relevantes relacionadas con el aprendizaje en el puesto de trabajo en empresas industriales.',
-                    it: 'L\'itinerario risponde a esigenze rilevanti legate alla formazione sul posto di lavoro nelle imprese industriali.',
-                    de: 'Der Ausbildungspfad adressiert relevante Bedarfe bezüglich des Lernens am Arbeitsplatz in Industrieunternehmen.',
-                    sk: 'Vzdelávacia cesta reaguje na relevantné potreby súvisiace so vzdelávaním na pracovisku v priemyselných podnikoch.',
-                    pt: 'O itinerário responde a necessidades relevantes relacionadas com a formação no posto de trabalho em empresas industriais.'
+                    en: "The overall aims of the itinerary are clear.",
+                    es: "Los objetivos generales del itinerario son claros.",
+                    it: "Gli obiettivi generali dell'itinerario sono chiari.",
+                    de: "Die übergeordneten Ziele des Ausbildungspfads sind klar formuliert.",
+                    sk: "Celkové ciele vzdelávacej cesty sú jasné.",
+                    pt: "Os objetivos gerais do itinerário são claros."
                 }
             },
             {
-                id: 'p2',
+                id: "p2",
                 section: {
-                    en: 'Section 2. Purpose and relevance',
-                    es: 'Sección 2. Objeto y pertinencia',
-                    it: 'Sezione 2. Scopo e rilevanza',
-                    de: 'Abschnitt 2. Zweck und Relevanz',
-                    sk: 'Časť 2. Účel a relevantnosť',
-                    pt: 'Secção 2. Propósito e relevância'
+                    en: "Section 2. Purpose and relevance",
+                    es: "Sección 2. Objeto y pertinencia",
+                    it: "Sezione 2. Scopo e rilevanza",
+                    de: "Abschnitt 2. Zweck und Relevanz",
+                    sk: "Časť 2. Účel a relevantnosť",
+                    pt: "Secção 2. Propósito e relevância"
                 },
                 title: {
-                    en: 'The overall aims of the itinerary are clear.',
-                    es: 'Los objetivos generales del itinerario son claros.',
-                    it: 'Gli obiettivi generali dell\'itinerario sono chiari.',
-                    de: 'Die übergeordneten Ziele des Ausbildungspfads sind klar formuliert.',
-                    sk: 'Celkové ciele vzdelávacej cesty sú jasné.',
-                    pt: 'Os objetivos gerais do itinerário são claros.'
+                    en: "The main learning outcomes are realistic and appropriate.",
+                    es: "Los principales resultados de aprendizaje previstos son realistas y adecuados.",
+                    it: "I principali risultati di apprendimento sono realistici e appropriati.",
+                    de: "Die wesentlichen Lernergebnisse sind realistisch und angemessen.",
+                    sk: "Hlavné výstupy vzdelávania sú realistické a primerané.",
+                    pt: "Os principais resultados de aprendizagem são realistas e adequados."
                 }
             },
             {
-                id: 'p3',
+                id: "p3",
                 section: {
-                    en: 'Section 2. Purpose and relevance',
-                    es: 'Sección 2. Objeto y pertinencia',
-                    it: 'Sezione 2. Scopo e rilevanza',
-                    de: 'Abschnitt 2. Zweck und Relevanz',
-                    sk: 'Časť 2. Účel a relevantnosť',
-                    pt: 'Secção 2. Propósito e relevância'
+                    en: "Section 2. Purpose and relevance",
+                    es: "Sección 2. Objeto y pertinencia",
+                    it: "Sezione 2. Scopo e rilevanza",
+                    de: "Abschnitt 2. Zweck und Relevanz",
+                    sk: "Časť 2. Účel a relevantnosť",
+                    pt: "Secção 2. Propósito e relevância"
                 },
                 title: {
-                    en: 'The intended target groups are clearly identified.',
-                    es: 'Los grupos destinatarios previstos están claramente identificados.',
-                    it: 'I gruppi destinatari previsti sono chiaramente identificati.',
-                    de: 'Die vorgesehenen Zielgruppen sind klar benannt.',
-                    sk: 'Plánované cieľové skupiny sú jasne identifikované.',
-                    pt: 'Os grupos-alvo pretendidos estão claramente identificados.'
+                    en: "The itinerary addresses relevant needs related to on-the-job training in industrial companies.",
+                    es: "El itinerario responde a necesidades relevantes relacionadas con el aprendizaje en el puesto de trabajo en empresas industriales.",
+                    it: "L'itinerario risponde a esigenze rilevanti legate alla formazione sul posto di lavoro nelle imprese industriali.",
+                    de: "Der Ausbildungspfad adressiert relevante Bedarfe bezüglich des Lernens am Arbeitsplatz in Industrieunternehmen.",
+                    sk: "Vzdelávacia cesta reaguje na relevantné potreby súvisiace so vzdelávaním na pracovisku v priemyselných podnikoch.",
+                    pt: "O itinerário responde a necessidades relevantes relacionadas com a formação no posto de trabalho em empresas industriais."
                 }
             },
             {
-                id: 'p4',
+                id: "p4",
                 section: {
-                    en: 'Section 2. Purpose and relevance',
-                    es: 'Sección 2. Objeto y pertinencia',
-                    it: 'Sezione 2. Scopo e rilevanza',
-                    de: 'Abschnitt 2. Zweck und Relevanz',
-                    sk: 'Časť 2. Účel a relevantnosť',
-                    pt: 'Secção 2. Propósito e relevância'
+                    en: "Section 2. Purpose and relevance",
+                    es: "Sección 2. Objeto y pertinencia",
+                    it: "Sezione 2. Scopo e rilevanza",
+                    de: "Abschnitt 2. Zweck und Relevanz",
+                    sk: "Časť 2. Účel a relevantnosť",
+                    pt: "Secção 2. Propósito e relevância"
                 },
                 title: {
-                    en: 'The itinerary is relevant to HR and training managers and identified target groups.',
-                    es: 'El itinerario es relevante para los responsables de RRHH, formadores y los grupos destinatarios identificados.',
-                    it: 'L\'itinerario è rilevante per i responsabili HR, della formazione e per i gruppi destinatari individuati.',
-                    de: 'Der Ausbildungspfad ist für HR- und Ausbildungsleiter sowie die identifizierten Zielgruppen relevant.',
-                    sk: 'Vzdelávacia cesta je relevantná pre manažérov ľudských zdrojov, školiteľov a identifikované cieľové skupiny.',
-                    pt: 'O itinerário é relevante para gestores de RH, formação e para os grupos-alvo identificados.'
-                }
-            },
-
-            // Section 3. Structure and coherence
-            {
-                id: 's1',
-                section: {
-                    en: 'Section 3. Structure and coherence',
-                    es: 'Sección 3. Estructura y coherencia',
-                    it: 'Sezione 3. Struttura e coerenza',
-                    de: 'Abschnitt 3. Struktur und Kohärenz',
-                    sk: 'Časť 3. Štruktúra a koherentnosť',
-                    pt: 'Secção 3. Estrutura e coerência'
-                },
-                title: {
-                    en: 'The document is clearly structured and easy to navigate.',
-                    es: 'El documento está claramente estructurado y es fácil de navegar y consultar.',
-                    it: 'Il documento è strutturato chiaramente e facile da consultare.',
-                    de: 'Das Dokument ist klar strukturiert und einfach zu navigieren.',
-                    sk: 'Dokument je prehľadne štruktúrovaný a ľahko sa v ňom orientuje.',
-                    pt: 'O documento está claramente estruturado e é fácil de consultar.'
+                    en: "The intended target groups are clearly identified.",
+                    es: "Los grupos destinatarios previstos están claramente identificados.",
+                    it: "I gruppi destinatari previsti sono chiaramente identificati.",
+                    de: "Die vorgesehenen Zielgruppen sind klar benannt.",
+                    sk: "Plánované cieľové skupiny sú jasne identifikované.",
+                    pt: "Os grupos-alvo pretendidos estão claramente identificados."
                 }
             },
             {
-                id: 's2',
+                id: "p5",
                 section: {
-                    en: 'Section 3. Structure and coherence',
-                    es: 'Sección 3. Estructura y coherencia',
-                    it: 'Sezione 3. Struttura e coerenza',
-                    de: 'Abschnitt 3. Struktur und Kohärenz',
-                    sk: 'Časť 3. Štruktúra a koherentnosť',
-                    pt: 'Secção 3. Estrutura e coerência'
+                    en: "Section 2. Purpose and relevance",
+                    es: "Sección 2. Objeto y pertinencia",
+                    it: "Sezione 2. Scopo e rilevanza",
+                    de: "Abschnitt 2. Zweck und Relevanz",
+                    sk: "Časť 2. Účel a relevantnosť",
+                    pt: "Secção 2. Propósito e relevância"
                 },
                 title: {
-                    en: 'The division of the document into four parts is useful and logical.',
-                    es: 'La división del documento en cuatro partes es útil y lógica.',
-                    it: 'La suddivisione del documento in quattro parti è utile e logica.',
-                    de: 'Die Aufteilung des Dokuments in vier Teile ist sinnvoll und logisch.',
-                    sk: 'Rozdelenie dokumentu na štyri časti je užitočné a logické.',
-                    pt: 'A divisão do documento em quatro partes é útil e lógica.'
-                }
-            },
-            {
-                id: 's3',
-                section: {
-                    en: 'Section 3. Structure and coherence',
-                    es: 'Sección 3. Estructura y coherencia',
-                    it: 'Sezione 3. Struttura e coerenza',
-                    de: 'Abschnitt 3. Struktur und Kohärenz',
-                    sk: 'Časť 3. Štruktúra a koherentnosť',
-                    pt: 'Secção 3. Estrutura e coerência'
-                },
-                title: {
-                    en: 'The relationship between the framework, the learning units, the guidance for trainers and the European reference frameworks is clear.',
-                    es: 'La relación entre el marco, las unidades de aprendizaje, la guía para formadores y los marcos de referencia europeos es clara.',
-                    it: 'La relazione tra il quadro, le unità di apprendimento, le linee guida per i formatori e i quadri di riferimento europei è chiara.',
-                    de: 'Die Verknüpfung zwischen Rahmenwerk, Lerneinheiten, Trainerleitfaden und europäischen Referenzrahmen ist klar.',
-                    sk: 'Vzťah medzi rámcom, vzdelávacími jednotkami, usmerneniami pre trénerov a európskymi referenčnými rámcami je jasný.',
-                    pt: 'A relação entre o quadro, as unidades de aprendizagem, as orientações para formadores e os quadros de referência europeus é clara.'
-                }
-            },
-            {
-                id: 's4',
-                section: {
-                    en: 'Section 3. Structure and coherence',
-                    es: 'Sección 3. Estructura y coherencia',
-                    it: 'Sezione 3. Struttura e coerenza',
-                    de: 'Abschnitt 3. Struktur und Kohärenz',
-                    sk: 'Časť 3. Štruktúra a koherentnosť',
-                    pt: 'Secção 3. Estrutura e coerência'
-                },
-                title: {
-                    en: 'The progression between the learning units is coherent.',
-                    es: 'La progresión entre las unidades de aprendizaje es coherente.',
-                    it: 'La progressione tra le unità di apprendimento è coerente.',
-                    de: 'Die Abfolge zwischen den Lerneinheiten ist kohärent.',
-                    sk: 'Postupnosť medzi jednotlivými vzdelávacími jednotkami je koherentná.',
-                    pt: 'A progressão entre as unidades de aprendizagem é coerente.'
+                    en: "The itinerary is relevant to HR and training managers and identified target groups.",
+                    es: "El itinerario es relevante para los responsables de RRHH, formadores y los grupos destinatarios identificados.",
+                    it: "L'itinerario è rilevante per i responsabili HR, della formazione e per i gruppi destinatari individuati.",
+                    de: "Der Ausbildungspfad ist für HR- und Ausbildungsleiter sowie die identifizierten Zielgruppen relevant.",
+                    sk: "Vzdelávacia cesta je relevantná pre manažérov ľudských zdrojov, školiteľov a identifikované cieľové skupiny.",
+                    pt: "O itinerário é relevante para gestores de RH, formação e para os grupos-alvo identificados."
                 }
             },
 
-            // Section 4. Learning units
+            // Section 3. Structure and coherence (4 questions)
             {
-                id: 'u1',
+                id: "s1",
                 section: {
-                    en: 'Section 4. Learning units',
-                    es: 'Sección 4. Unidades de aprendizaje',
-                    it: 'Sezione 4. Unità di apprendimento',
-                    de: 'Abschnitt 4. Lerneinheiten',
-                    sk: 'Časť 4. Vzdelávacie jednotky',
-                    pt: 'Secção 4. Unidades de aprendizagem'
+                    en: "Section 3. Structure and coherence",
+                    es: "Sección 3. Estructura y coherencia",
+                    it: "Sezione 3. Struttura e coerenza",
+                    de: "Abschnitt 3. Struktur und Kohärenz",
+                    sk: "Časť 3. Štruktúra a koherentnosť",
+                    pt: "Secção 3. Estrutura e coerência"
                 },
                 title: {
-                    en: 'The six learning units collectively cover the main competences needed to use AI in on-the-job training.',
-                    es: 'Las seis unidades de aprendizaje cubren en conjunto las principales competencias necesarias para utilizar la IA en la formación en el puesto de trabajo.',
-                    it: 'Le sei unità di apprendimento coprono collettivamente le principali competenze necessarie per utilizzare l\'IA nella formazione sul lavoro.',
-                    de: 'Die sechs Lerneinheiten decken gemeinsam die wichtigsten Kompetenzen für den Einsatz von KI am Arbeitsplatz ab.',
-                    sk: 'Šesť vzdelávacích jednotiek spoločne pokrýva hlavné kompetencie potrebné na využívanie umelej inteligencie pri vzdelávaní na pracovisku.',
-                    pt: 'As seis unidades de aprendizagem cobrem em conjunto as principais competências necessárias para utilizar a IA na formação no posto de trabalho.'
+                    en: "The document is clearly structured and easy to navigate.",
+                    es: "El documento está claramente estructurado y es fácil de navegar y consultar.",
+                    it: "Il documento è strutturato chiaramente e facile da consultare.",
+                    de: "Das Dokument ist klar strukturiert und einfach zu navigieren.",
+                    sk: "Dokument je prehľadne štruktúrovaný a ľahko sa v ňom orientuje.",
+                    pt: "O documento está claramente estruturado e é fácil de consultar."
                 }
             },
             {
-                id: 'u2',
+                id: "s2",
                 section: {
-                    en: 'Section 4. Learning units',
-                    es: 'Sección 4. Unidades de aprendizaje',
-                    it: 'Sezione 4. Unità di apprendimento',
-                    de: 'Abschnitt 4. Lerneinheiten',
-                    sk: 'Časť 4. Vzdelávacie jednotky',
-                    pt: 'Secção 4. Unidades de aprendizagem'
+                    en: "Section 3. Structure and coherence",
+                    es: "Sección 3. Estructura y coherencia",
+                    it: "Sezione 3. Struttura e coerenza",
+                    de: "Abschnitt 3. Struktur und Kohärenz",
+                    sk: "Časť 3. Štruktúra a koherentnosť",
+                    pt: "Secção 3. Estrutura e coerência"
                 },
                 title: {
-                    en: 'The descriptions of the core focus of each unit are clear.',
-                    es: 'Las descripciones del enfoque central de cada unidad formativa son claras.',
-                    it: 'Le descrizioni del focus principale di ciascuna unità sono chiare.',
-                    de: 'Die Beschreibungen des Kernfokus der jeweiligen Einheiten sind klar und verständlich.',
-                    sk: 'Popisy hlavného zamerania každej jednotky sú jasné.',
-                    pt: 'As descrições do foco central de cada unidade são claras.'
+                    en: "The division of the document into four parts is useful and logical.",
+                    es: "La división del documento en cuatro partes es útil y lógica.",
+                    it: "La suddivisione del documento in quattro parti è utile e logica.",
+                    de: "Die Aufteilung des Dokuments in vier Teile ist sinnvoll und logisch.",
+                    sk: "Rozdelenie dokumentu na štyri časti je užitočné a logické.",
+                    pt: "A divisão do documento em quatro partes é útil e lógica."
                 }
             },
             {
-                id: 'u3',
+                id: "s3",
                 section: {
-                    en: 'Section 4. Learning units',
-                    es: 'Sección 4. Unidades de aprendizaje',
-                    it: 'Sezione 4. Unità di apprendimento',
-                    de: 'Abschnitt 4. Lerneinheiten',
-                    sk: 'Časť 4. Vzdelávacie jednotky',
-                    pt: 'Secção 4. Unidades de aprendizagem'
+                    en: "Section 3. Structure and coherence",
+                    es: "Sección 3. Estructura y coherencia",
+                    it: "Sezione 3. Struttura e coerenza",
+                    de: "Abschnitt 3. Struktur und Kohärenz",
+                    sk: "Časť 3. Štruktúra a koherentnosť",
+                    pt: "Secção 3. Estrutura e coerência"
                 },
                 title: {
-                    en: 'The main learning outcomes are realistic and appropriate.',
-                    es: 'Los principales resultados de aprendizaje previstos son realistas y adecuados.',
-                    it: 'I principali risultati di apprendimento sono realistici e appropriati.',
-                    de: 'Die wesentlichen Lernergebnisse sind realistisch und angemessen.',
-                    sk: 'Hlavné výstupy vzdelávania sú realistické a primerané.',
-                    pt: 'Os principais resultados de aprendizagem são realistas e adequados.'
+                    en: "The progression between the learning units is coherent.",
+                    es: "La progresión entre las unidades de aprendizaje es coherente.",
+                    it: "La progressione tra le unità di apprendimento è coerente.",
+                    de: "Die Abfolge zwischen den Lerneinheiten ist kohärent.",
+                    sk: "Postupnosť medzi jednotlivými vzdelávacími jednotkami je koherentná.",
+                    pt: "A progressão entre as unidades de aprendizagem é coerente."
                 }
             },
             {
-                id: 'u4',
+                id: "s4",
                 section: {
-                    en: 'Section 4. Learning units',
-                    es: 'Sección 4. Unidades de aprendizaje',
-                    it: 'Sezione 4. Unità di apprendimento',
-                    de: 'Abschnitt 4. Lerneinheiten',
-                    sk: 'Časť 4. Vzdelávacie jednotky',
-                    pt: 'Secção 4. Unidades de aprendizagem'
+                    en: "Section 3. Structure and coherence",
+                    es: "Sección 3. Estructura y coherencia",
+                    it: "Sezione 3. Struttura e coerenza",
+                    de: "Abschnitt 3. Struktur und Kohärenz",
+                    sk: "Časť 3. Štruktúra a koherentnosť",
+                    pt: "Secção 3. Estrutura e coerência"
                 },
                 title: {
-                    en: 'The balance between conceptual understanding and practical application is appropriate.',
-                    es: 'El equilibrio entre la comprensión conceptual y la aplicación práctica es el adecuado.',
-                    it: 'L\'equilibrio tra comprensione concettuale e applicazione pratica è appropriato.',
-                    de: 'Das Verhältnis zwischen konzeptionellem Verständnis und praktischer Anwendung ist ausgewogen.',
-                    sk: 'Rovnováha medzi koncepčným porozumením a praktickou aplikáciou je primeraná.',
-                    pt: 'O equilíbrio entre compreensão conceptual e aplicação prática é adequado.'
-                }
-            },
-            {
-                id: 'u5',
-                section: {
-                    en: 'Section 4. Learning units',
-                    es: 'Sección 4. Unidades de aprendizaje',
-                    it: 'Sezione 4. Unità di apprendimento',
-                    de: 'Abschnitt 4. Lerneinheiten',
-                    sk: 'Časť 4. Vzdelávacie jednotky',
-                    pt: 'Secção 4. Unidades de aprendizagem'
-                },
-                title: {
-                    en: 'The learning units are sufficiently adaptable to different learner profiles and company contexts.',
-                    es: 'Las unidades de aprendizaje son suficientemente adaptables a distintos perfiles de alumnado y contextos de empresa.',
-                    it: 'Le unità di apprendimento sono sufficientemente adattabili a diversi profili di discenti e contesti aziendali.',
-                    de: 'Die Lerneinheiten lassen sich flexibel an verschiedene Zielgruppen und Unternehmensstrukturen anpassen.',
-                    sk: 'Vzdelávacie jednotky sú dostatočne adaptabilné na rôzne profily účastníkov a firemné kontexty.',
-                    pt: 'As unidades de aprendizagem são suficientemente adaptáveis a diferentes perfis de formandos e contextos empresariais.'
+                    en: "The relationship between the framework, the learning units, the guidance for trainers and the European reference frameworks is clear.",
+                    es: "La relación entre el marco, las unidades de aprendizaje, la guía para formadores y los marcos de referencia europeos es clara.",
+                    it: "La relazione tra il quadro, le unità di apprendimento, le linee guida per i formatori e i quadri di riferimento europei è chiara.",
+                    de: "Die Verknüpfung zwischen Rahmenwerk, Lerneinheiten, Trainerleitfaden und europäischen Referenzrahmen ist klar.",
+                    sk: "Vzťah medzi rámcom, vzdelávacími jednotkami, usmerneniami pre trénerov a európskymi referenčnými rámcami je jasný.",
+                    pt: "A relação entre o quadro, as unidades de aprendizagem, as orientações para formadores e os quadros de referência europeus é clara."
                 }
             },
 
-            // Section 5. Ethical, legal and inclusive principles
+            // Section 4. Learning units (4 questions)
             {
-                id: 'e1',
+                id: "u1",
                 section: {
-                    en: 'Section 5. Ethical, legal and inclusive principles',
-                    es: 'Sección 5. Principios éticos, legales e inclusivos',
-                    it: 'Sezione 5. Principi etici, legali e inclusivi',
-                    de: 'Abschnitt 5. Ethische, rechtliche und inklusive Prinzipien',
-                    sk: 'Časť 5. Etické, právne a inkluzívne princípy',
-                    pt: 'Secção 5. Princípios éticos, legais e inclusivos'
+                    en: "Section 4. Learning units",
+                    es: "Sección 4. Unidades de aprendizaje",
+                    it: "Sezione 4. Unità di apprendimento",
+                    de: "Abschnitt 4. Lerneinheiten",
+                    sk: "Časť 4. Vzdelávacie jednotky",
+                    pt: "Secção 4. Unidades de aprendizagem"
                 },
                 title: {
-                    en: 'Ethical and legal aspects are sufficiently integrated into the itinerary.',
-                    es: 'Los aspectos éticos y legales están suficientemente integrados en el itinerario.',
-                    it: 'Gli aspetti etici e legali sono sufficientemente integrati nell\'itinerario.',
-                    de: 'Ethische und rechtliche Gesichtspunkte sind fundiert in den Ausbildungspfad integriert.',
-                    sk: 'Etické a právne aspekty sú do vzdelávacej cesty dostatočne začlenené.',
-                    pt: 'Os aspetos éticos e legais estão suficientemente integrados no itinerário.'
+                    en: "The six learning units collectively cover the main competences needed to use AI in on-the-job training.",
+                    es: "Las seis unidades de aprendizaje cubren en conjunto las principales competencias necesarias para utilizar la IA en la formación en el puesto de trabajo.",
+                    it: "Le sei unità di apprendimento coprono collettivamente le principali competenze necessarie per utilizzare l'IA nella formazione sul lavoro.",
+                    de: "Die sechs Lerneinheiten decken gemeinsam die wichtigsten Kompetenzen für den Einsatz von KI am Arbeitsplatz ab.",
+                    sk: "Šesť vzdelávacích jednotiek spoločne pokrýva hlavné kompetencie potrebné na využívanie umelej inteligencie pri vzdelávaní na pracovisku.",
+                    pt: "As seis unidades de aprendizagem cobrem em conjunto as principais competências necessárias para utilizar a IA na formação no posto de trabalho."
                 }
             },
             {
-                id: 'e2',
+                id: "u2",
                 section: {
-                    en: 'Section 5. Ethical, legal and inclusive principles',
-                    es: 'Sección 5. Principios éticos, legales e inclusivos',
-                    it: 'Sezione 5. Principi etici, legali e inclusivi',
-                    de: 'Abschnitt 5. Ethische, rechtliche und inklusive Prinzipien',
-                    sk: 'Časť 5. Etické, právne a inkluzívne princípy',
-                    pt: 'Secção 5. Princípios éticos, legais e inclusivos'
+                    en: "Section 4. Learning units",
+                    es: "Sección 4. Unidades de aprendizaje",
+                    it: "Sezione 4. Unità di apprendimento",
+                    de: "Abschnitt 4. Lerneinheiten",
+                    sk: "Časť 4. Vzdelávacie jednotky",
+                    pt: "Secção 4. Unidades de aprendizagem"
                 },
                 title: {
-                    en: 'The treatment of ethical and legal issues is appropriate for the target groups.',
-                    es: 'El tratamiento de las cuestiones éticas y legales es adecuado para los grupos destinatarios.',
-                    it: 'Il trattamento delle questioni etiche e legali è appropriato per i gruppi destinatari.',
-                    de: 'Die Behandlung ethischer und rechtlicher Fragen ist zielgruppengerecht gestaltet.',
-                    sk: 'Spracovanie etických a právnych otázok je primerané pre cieľové skupiny.',
-                    pt: 'O tratamento das questões éticas e legais é adequado para os grupos-alvo.'
+                    en: "The descriptions of the core focus of each unit are clear.",
+                    es: "Las descripciones del enfoque central de cada unidad formativa son claras.",
+                    it: "Le descrizioni del focus principale di ciascuna unità sono chiare.",
+                    de: "Die Beschreibungen des Kernfokus der jeweiligen Einheiten sind klar und verständlich.",
+                    sk: "Popisy hlavného zamerania každej jednotky sú jasné.",
+                    pt: "As descrições do foco central de cada unidade são claras."
                 }
             },
             {
-                id: 'e3',
+                id: "u3",
                 section: {
-                    en: 'Section 5. Ethical, legal and inclusive principles',
-                    es: 'Sección 5. Principios éticos, legales e inclusivos',
-                    it: 'Sezione 5. Principi etici, legali e inclusivi',
-                    de: 'Abschnitt 5. Ethische, rechtliche und inklusive Prinzipien',
-                    sk: 'Časť 5. Etické, právne a inkluzívne princípy',
-                    pt: 'Secção 5. Princípios éticos, legais e inclusivos'
+                    en: "Section 4. Learning units",
+                    es: "Sección 4. Unidades de aprendizaje",
+                    it: "Sezione 4. Unità di apprendimento",
+                    de: "Abschnitt 4. Lerneinheiten",
+                    sk: "Časť 4. Vzdelávacie jednotky",
+                    pt: "Secção 4. Unidades de aprendizagem"
                 },
                 title: {
-                    en: 'The ethical dimension is connected meaningfully with tool selection, training design and implementation.',
-                    es: 'La dimensión ética se conecta de forma significativa con la selección de herramientas, el diseño formativo y su ejecución.',
-                    it: 'La dimensione etica è collegata in modo significativo alla selezione degli strumenti, alla progettazione didattica e all\'implementazione.',
-                    de: 'Die ethische Dimension ist praxisnah mit Werkzeugauswahl, Schulungsdesign und Durchführung verzahnt.',
-                    sk: 'Etický rozmer je zmysluplne prepojený s výberom nástrojov, návrhom školenia a jeho realizáciou.',
-                    pt: 'A dimensão ética está ligada de forma significativa à seleção de ferramentas, conceção da formação e implementação.'
+                    en: "The balance between conceptual understanding and practical application is appropriate.",
+                    es: "El equilibrio entre la comprensión conceptual y la aplicación práctica es el adecuado.",
+                    it: "L'equilibrio tra comprensione concettuale e applicazione pratica è appropriato.",
+                    de: "Das Verhältnis zwischen konzeptionellem Verständnis und praktischer Anwendung ist ausgewogen.",
+                    sk: "Rovnováha medzi koncepčným porozumením a praktickou aplikáciou je primeraná.",
+                    pt: "O equilíbrio entre compreensão conceptual e aplicação prática é adequado."
                 }
             },
             {
-                id: 'e4',
+                id: "u4",
                 section: {
-                    en: 'Section 5. Ethical, legal and inclusive principles',
-                    es: 'Sección 5. Principios éticos, legales e inclusivos',
-                    it: 'Sezione 5. Principi etici, legali e inclusivos',
-                    de: 'Abschnitt 5. Ethische, rechtliche und inklusive Prinzipien',
-                    sk: 'Časť 5. Etické, právne a inkluzívne princípy',
-                    pt: 'Secção 5. Princípios éticos, legais e inclusivos'
+                    en: "Section 4. Learning units",
+                    es: "Sección 4. Unidades de aprendizaje",
+                    it: "Sezione 4. Unità di apprendimento",
+                    de: "Abschnitt 4. Lerneinheiten",
+                    sk: "Časť 4. Vzdelávacie jednotky",
+                    pt: "Secção 4. Unidades de aprendizagem"
                 },
                 title: {
-                    en: 'The itinerary gives appropriate attention to fairness, accessibility and inclusion.',
-                    es: 'El itinerario presta la debida atención a la equidad, la accesibilidad y la inclusión.',
-                    it: 'L\'itinerario presta un\'adeguata attenzione a equità, accessibilità e inclusione.',
-                    de: 'Der Ausbildungspfad schenkt Fairness, Barrierefreiheit und Inklusion gebührende Aufmerksamkeit.',
-                    sk: 'Vzdelávacia cesta venuje náležitú pozornosť spravodlivosti, prístupnosti a inklúzii.',
-                    pt: 'O itinerário dá a devida atenção à equidade, acessibilidade e inclusão.'
-                }
-            },
-
-            // Section 6. Competence framework
-            {
-                id: 'c1',
-                section: {
-                    en: 'Section 6. Competence framework',
-                    es: 'Sección 6. Marco de competencias',
-                    it: 'Sezione 6. Quadro delle competenze',
-                    de: 'Abschnitt 6. Kompetenzrahmen',
-                    sk: 'Časť 6. Kompetenčný rámec',
-                    pt: 'Secção 6. Quadro de competências'
-                },
-                title: {
-                    en: 'The Knowledge, Skills and Attitudes structure is appropriate for the itinerary.',
-                    es: 'La estructura de Conocimientos, Habilidades y Actitudes (KSA) es adecuada para el itinerario.',
-                    it: 'La struttura basata su Conoscenze, Abilità e Attitudini è idonea per l\'itinerario.',
-                    de: 'Die Strukturierung nach Wissen, Fertigkeiten und Haltungen (KSA) ist für das Programm passend.',
-                    sk: 'Štruktúra vedomostí, zručností a postojov je pre vzdelávaciu cestu vhodná.',
-                    pt: 'A estrutura de Conhecimentos, Competências e Atitudes é adequada para o itinerário.'
-                }
-            },
-            {
-                id: 'c2',
-                section: {
-                    en: 'Section 6. Competence framework',
-                    es: 'Sección 6. Marco de competencias',
-                    it: 'Sezione 6. Quadro delle competencias',
-                    de: 'Abschnitt 6. Kompetenzrahmen',
-                    sk: 'Časť 6. Kompetenčný rámec',
-                    pt: 'Secção 6. Quadro de competências'
-                },
-                title: {
-                    en: 'The competence framework is aligned with the learning units.',
-                    es: 'El marco de competencias está debidamente alineado con las unidades de aprendizaje.',
-                    it: 'Il quadro delle competenze è allineato con le unità di apprendimento.',
-                    de: 'Der Kompetenzrahmen ist präzise auf die Lerneinheiten abgestimmt.',
-                    sk: 'Kompetenčný rámec je v súlade so vzdelávacími jednotkami.',
-                    pt: 'O quadro de competências está alinhado com as unidades de aprendizagem.'
-                }
-            },
-            {
-                id: 'c3',
-                section: {
-                    en: 'Section 6. Competence framework',
-                    es: 'Sección 6. Marco de competencias',
-                    it: 'Sezione 6. Quadro delle competencias',
-                    de: 'Abschnitt 6. Kompetenzrahmen',
-                    sk: 'Časť 6. Kompetenčný rámec',
-                    pt: 'Secção 6. Quadro de competências'
-                },
-                title: {
-                    en: 'The attitudes identified are appropriate for responsible and practical use of AI.',
-                    es: 'Las actitudes identificadas son adecuadas para un uso responsable y práctico de la IA.',
-                    it: 'Le attitudini identificate sono adatte per un utilizzo responsabile e pratico dell\'IA.',
-                    de: 'Die formulierten Haltungen fördern einen verantwortungsvollen und praxisnahen Einsatz von KI.',
-                    sk: 'Identifikované postoje sú vhodné pre zodpovedné a praktické využívanie umelej inteligencie.',
-                    pt: 'As atitudes identificadas são adequadas para um uso responsável e prático da IA.'
-                }
-            },
-            {
-                id: 'c4',
-                section: {
-                    en: 'Section 6. Competence framework',
-                    es: 'Sección 6. Marco de competencias',
-                    it: 'Sezione 6. Quadro delle competencias',
-                    de: 'Abschnitt 6. Kompetenzrahmen',
-                    sk: 'Časť 6. Kompetenčný rámec',
-                    pt: 'Secção 6. Quadro de competências'
-                },
-                title: {
-                    en: 'The competence framework can support the subsequent development of learning content and activities.',
-                    es: 'El marco de competencias puede sustentar con éxito el posterior desarrollo de contenidos y actividades formativas.',
-                    it: 'Il quadro delle competenze può supportare il successivo sviluppo di contenuti formativi e attività.',
-                    de: 'Der Kompetenzrahmen eignet sich hervorragend als Grundlage für die spätere Ausarbeitung konkreter Lerninhalte.',
-                    sk: 'Kompetenčný rámec dokáže podporiť následnú tvorbu vzdelávacieho obsahu a aktivít.',
-                    pt: 'O quadro de competências pode apoiar o posterior desenvolvimento de conteúdos e atividades de aprendizagem.'
+                    en: "The learning units are sufficiently adaptable to different learner profiles and company contexts.",
+                    es: "Las unidades de aprendizaje son suficientemente adaptables a distintos perfiles de alumnado y contextos de empresa.",
+                    it: "Le unità di apprendimento sono sufficientemente adattabili a diversi profili di discenti e contesti aziendali.",
+                    de: "Die Lerneinheiten lassen sich flexibel an verschiedene Zielgruppen und Unternehmensstrukturen anpassen.",
+                    sk: "Vzdelávacie jednotky sú dostatočne adaptabilné na rôzne profily účastníkov a firemné kontexty.",
+                    pt: "As unidades de aprendizagem são suficientemente adaptáveis a diferentes perfis de formandos e contextos empresariais."
                 }
             },
 
-            // Section 7. Practical use and transferability
+            // Section 5. Competence framework (4 questions)
             {
-                id: 't1',
+                id: "c1",
                 section: {
-                    en: 'Section 7. Practical use and transferability',
-                    es: 'Sección 7. Uso práctico y transferibilidad',
-                    it: 'Sezione 7. Uso pratico e trasferibilità',
-                    de: 'Abschnitt 7. Praktischer Nutzen und Transferierbarkeit',
-                    sk: 'Časť 7. Praktické využitie a prenositeľnosť',
-                    pt: 'Secção 7. Utilização prática e transferibilidade'
+                    en: "Section 5. Competence framework",
+                    es: "Sección 5. Marco de competencias",
+                    it: "Sezione 5. Quadro delle competenze",
+                    de: "Abschnitt 5. Kompetenzrahmen",
+                    sk: "Časť 5. Kompetenčný rámec",
+                    pt: "Secção 5. Quadro de competências"
                 },
                 title: {
-                    en: 'The itinerary provides useful guidance for developing a complete Training Programme.',
-                    es: 'El itinerario proporciona directrices útiles para el desarrollo de un Programa Formativo integral.',
-                    it: 'L\'itinerario fornisce una guida utile per lo sviluppo di un Programma di Formazione completo.',
-                    de: 'Der Ausbildungspfad bietet wertvolle Leitlinien zur Ausarbeitung eines vollständigen Lehrgangs.',
-                    sk: 'Vzdelávacia cesta poskytuje užitočné usmernenia na vytvorenie uceleného vzdelávacieho programu.',
-                    pt: 'O itinerário fornece orientações úteis para o desenvolvimento de um Programa de Formação completo.'
+                    en: "The Knowledge, Skills and Attitudes structure is appropriate for the itinerary.",
+                    es: "La estructura de Conocimientos, Habilidades y Actitudes (KSA) es adecuada para el itinerario.",
+                    it: "La struttura basata su Conoscenze, Abilità e Attitudini è idonea per l'itinerario.",
+                    de: "Die Strukturierung nach Wissen, Fertigkeiten und Haltungen (KSA) ist für das Programm passend.",
+                    sk: "Štruktúra vedomostí, zručností a postojov je pre vzdelávaciu cestu vhodná.",
+                    pt: "A estrutura de Conhecimentos, Competências e Atitudes é adequada para o itinerário."
                 }
             },
             {
-                id: 't2',
+                id: "c2",
                 section: {
-                    en: 'Section 7. Practical use and transferability',
-                    es: 'Sección 7. Uso práctico y transferibilidad',
-                    it: 'Sezione 7. Uso pratico e trasferibilità',
-                    de: 'Abschnitt 7. Praktischer Nutzen und Transferierbarkeit',
-                    sk: 'Časť 7. Praktické využitie a prenositeľnosť',
-                    pt: 'Secção 7. Utilização prática e transferibilidade'
+                    en: "Section 5. Competence framework",
+                    es: "Sección 5. Marco de competencias",
+                    it: "Sezione 5. Quadro delle competencias",
+                    de: "Abschnitt 5. Kompetenzrahmen",
+                    sk: "Časť 5. Kompetenčný rámec",
+                    pt: "Secção 5. Quadro de competências"
                 },
                 title: {
-                    en: 'The practical guidance for trainers is useful.',
-                    es: 'Las orientaciones prácticas para formadores son de gran utilidad.',
-                    it: 'Le indicazioni pratiche per i formatori sono utili.',
-                    de: 'Die praxisbezogenen Handlungsempfehlungen für Trainer sind hilfreich.',
-                    sk: 'Praktické pokyny pre školiteľov sú užitočné.',
-                    pt: 'As orientações práticas para formadores são úteis.'
+                    en: "The competence framework is aligned with the learning units.",
+                    es: "El marco de competencias está debidamente alineado con las unidades de aprendizaje.",
+                    it: "Il quadro delle competenze è allineato con le unità di apprendimento.",
+                    de: "Der Kompetenzrahmen ist präzise auf die Lerneinheiten abgestimmt.",
+                    sk: "Kompetenčný rámec je v súlade so vzdelávacími jednotkami.",
+                    pt: "O quadro de competências está alinhado com as unidades de aprendizagem."
                 }
             },
             {
-                id: 't3',
+                id: "c3",
                 section: {
-                    en: 'Section 7. Practical use and transferability',
-                    es: 'Sección 7. Uso práctico y transferibilidad',
-                    it: 'Sezione 7. Uso pratico e trasferibilità',
-                    de: 'Abschnitt 7. Praktischer Nutzen und Transferierbarkeit',
-                    sk: 'Časť 7. Praktické využitie a prenositeľnosť',
-                    pt: 'Secção 7. Utilização prática e transferibilidade'
+                    en: "Section 5. Competence framework",
+                    es: "Sección 5. Marco de competencias",
+                    it: "Sezione 5. Quadro delle competencias",
+                    de: "Abschnitt 5. Kompetenzrahmen",
+                    sk: "Časť 5. Kompetenčný rámec",
+                    pt: "Secção 5. Quadro de competências"
                 },
                 title: {
-                    en: 'The adaptation roadmap can help external trainers adapt the itinerary to different learner groups.',
-                    es: 'La hoja de ruta de adaptación puede ayudar a formadores externos a adaptar el itinerario a diversos grupos de participantes.',
-                    it: 'La tabella di marcia di adattamento può aiutare i formatori esterni ad adattare il percorso a diversi profili di discenti.',
-                    de: 'Der Adaptionsleitfaden hilft externen Dozenten, den Pfad an unterschiedliche Lerngruppen anzupassen.',
-                    sk: 'Plán adaptácie pomôže externým školiteľom prispôsobiť vzdelávaciu cestu rôznym skupinám účastníkov.',
-                    pt: 'O roteiro de adaptação pode ajudar formadores externos a adaptar o itinerário a diferentes perfis de formandos.'
+                    en: "The attitudes identified are appropriate for responsible and practical use of AI.",
+                    es: "Las actitudes identificadas son adecuadas para un uso responsable y práctico de la IA.",
+                    it: "Le attitudini identificate sono adatte per un utilizzo responsabile e pratico dell'IA.",
+                    de: "Die formulierten Haltungen fördern einen verantwortungsvollen und praxisnahen Einsatz von KI.",
+                    sk: "Identifikované postoje sú vhodné pre zodpovedné a praktické využívanie umelej inteligencie.",
+                    pt: "As atitudes identificadas são adequadas para um uso responsável e prático da IA."
                 }
             },
             {
-                id: 't4',
+                id: "c4",
                 section: {
-                    en: 'Section 7. Practical use and transferability',
-                    es: 'Sección 7. Uso práctico y transferibilidad',
-                    it: 'Sezione 7. Uso pratico e trasferibilità',
-                    de: 'Abschnitt 7. Praktischer Nutzen und Transferierbarkeit',
-                    sk: 'Časť 7. Praktické využitie a prenositeľnosť',
-                    pt: 'Secção 7. Utilização prática e transferibilidade'
+                    en: "Section 5. Competence framework",
+                    es: "Sección 5. Marco de competencias",
+                    it: "Sezione 5. Quadro delle competencias",
+                    de: "Abschnitt 5. Kompetenzrahmen",
+                    sk: "Časť 5. Kompetenčný rámec",
+                    pt: "Secção 5. Quadro de competências"
                 },
                 title: {
-                    en: 'The itinerary is sufficiently clear to be used by trainers or organisations outside the consortium or beyond the project activities.',
-                    es: 'El itinerario es suficientemente claro como para ser utilizado por formadores u organizaciones ajenas al consorcio o más allá de las actividades del proyecto.',
-                    it: 'L\'itinerario è sufficientemente chiaro per essere impiegato da formatori o organizzazioni esterne al consorzio o al di là delle attività del progetto.',
-                    de: 'Der Ausbildungspfad ist so verständlich aufbereitet, dass er von Trainern oder Organisationen außerhalb des Konsortiums oder über die Projektaktivitäten hinaus genutzt werden kann.',
-                    sk: 'Vzdelávacia cesta je dostatočne zrozumiteľná, aby ju mohli využívať školitelia alebo organizácie mimo konzorcia alebo nad rámec projektových aktivít.',
-                    pt: 'O itinerário é suficientemente claro para ser utilizado por formadores ou organizações fora do consórcio ou além das atividades do projeto.'
+                    en: "The competence framework can support the subsequent development of learning content and activities.",
+                    es: "El marco de competencias puede sustentar con éxito el posterior desarrollo de contenidos y actividades formativas.",
+                    it: "Il quadro delle competenze può supportare il successivo sviluppo di contenuti formativi e attività.",
+                    de: "Der Kompetenzrahmen eignet sich hervorragend als Grundlage für die spätere Ausarbeitung konkreter Lerninhalte.",
+                    sk: "Kompetenčný rámec dokáže podporiť následnú tvorbu vzdelávacieho obsahu a aktivít.",
+                    pt: "O quadro de competências pode apoiar o posterior desenvolvimento de conteúdos e atividades de aprendizagem."
+                }
+            },
+
+            // Section 6. Practical use and transferability (5 questions)
+            {
+                id: "t1",
+                section: {
+                    en: "Section 6. Practical use and transferability",
+                    es: "Sección 6. Uso práctico y transferibilidad",
+                    it: "Sezione 6. Uso pratico e trasferibilità",
+                    de: "Abschnitt 6. Praktischer Nutzen und Transferierbarkeit",
+                    sk: "Časť 6. Praktické využitie a prenositeľnosť",
+                    pt: "Secção 6. Utilização prática e transferibilidade"
+                },
+                title: {
+                    en: "The itinerary provides useful guidance for developing a complete Training Programme.",
+                    es: "El itinerario proporciona directrices útiles para el desarrollo de un Programa Formativo integral.",
+                    it: "L'itinerario fornisce una guida utile per lo sviluppo di un Programma di Formazione completo.",
+                    de: "Der Ausbildungspfad bietet wertvolle Leitlinien zur Ausarbeitung eines vollständigen Lehrgangs.",
+                    sk: "Vzdelávacia cesta poskytuje užitočné usmernenia na vytvorenie uceleného vzdelávacieho programu.",
+                    pt: "O itinerário fornece orientações úteis para o desenvolvimento de um Programa de Formação completo."
                 }
             },
             {
-                id: 't5',
+                id: "t2",
                 section: {
-                    en: 'Section 7. Practical use and transferability',
-                    es: 'Sección 7. Uso práctico y transferibilidad',
-                    it: 'Sezione 7. Uso pratico e trasferibilità',
-                    de: 'Abschnitt 7. Praktischer Nutzen und Transferierbarkeit',
-                    sk: 'Časť 7. Praktické využitie a prenositeľnosť',
-                    pt: 'Secção 7. Utilização prática e transferibilidade'
+                    en: "Section 6. Practical use and transferability",
+                    es: "Sección 6. Uso práctico y transferibilidad",
+                    it: "Sezione 6. Uso pratico e trasferibilità",
+                    de: "Abschnitt 6. Praktischer Nutzen und Transferierbarkeit",
+                    sk: "Časť 6. Praktické využitie a prenositeľnosť",
+                    pt: "Secção 6. Utilização prática e transferibilidade"
                 },
                 title: {
-                    en: 'The document has potential to support the development of training actions in different European contexts.',
-                    es: 'El documento tiene un alto potencial para respaldar el desarrollo de acciones formativas en diversos contextos europeos.',
-                    it: 'Il documento possiede il potenziale per supportare lo sviluppo di azioni formative in differenti contesti europei.',
-                    de: 'Das Dokument birgt großes Potenzial, die Umsetzung von Qualifizierungsmaßnahmen in verschiedenen europäischen Kontexten zu unterstützen.',
-                    sk: 'Dokument má potenciál podporiť rozvoj vzdelávacích aktivít v rôznych európskych kontextoch.',
-                    pt: 'O documento tem potencial para apoiar o desenvolvimento de ações formativas em diferentes contextos europeus.'
+                    en: "The practical guidance for trainers is useful.",
+                    es: "Las orientaciones prácticas para formadores son de gran utilidad.",
+                    it: "Le indicazioni pratiche per i formatori sono utili.",
+                    de: "Die praxisbezogenen Handlungsempfehlungen für Trainer sind hilfreich.",
+                    sk: "Praktické pokyny pre školiteľov sú užitočné.",
+                    pt: "As orientações práticas para formadores são úteis."
+                }
+            },
+            {
+                id: "t3",
+                section: {
+                    en: "Section 6. Practical use and transferability",
+                    es: "Sección 6. Uso práctico y transferibilidad",
+                    it: "Sezione 6. Uso pratico e trasferibilità",
+                    de: "Abschnitt 6. Praktischer Nutzen und Transferierbarkeit",
+                    sk: "Časť 6. Praktické využitie a prenositeľnosť",
+                    pt: "Secção 6. Utilização prática e transferibilidade"
+                },
+                title: {
+                    en: "The adaptation roadmap can help external trainers adapt the itinerary to different learner groups.",
+                    es: "La hoja de ruta de adaptación puede ayudar a formadores externos a adaptar el itinerario a diversos grupos de participantes.",
+                    it: "La tabella di marcia di adattamento può aiutare i formatori esterni ad adattare il percorso a diversi profili di discenti.",
+                    de: "Der Adaptionsleitfaden hilft externen Dozenten, den Pfad an unterschiedliche Lerngruppen anzupassen.",
+                    sk: "Plán adaptácie pomôže externým školiteľom prispôsobiť vzdelávaciu cestu rôznym skupinám účastníkov.",
+                    pt: "O roteiro de adaptação pode ajudar formadores externos a adaptar o itinerário a diferentes perfis de formandos."
+                }
+            },
+            {
+                id: "t4",
+                section: {
+                    en: "Section 6. Practical use and transferability",
+                    es: "Sección 6. Uso práctico y transferibilidad",
+                    it: "Sezione 6. Uso pratico e trasferibilità",
+                    de: "Abschnitt 6. Praktischer Nutzen und Transferierbarkeit",
+                    sk: "Časť 6. Praktické využitie a prenositeľnosť",
+                    pt: "Secção 6. Utilização prática e transferibilidade"
+                },
+                title: {
+                    en: "The itinerary is sufficiently clear to be used by trainers or organisations outside the consortium or beyond the project activities.",
+                    es: "El itinerario es suficientemente claro como para ser utilizado por formadores u organizaciones ajenas al consorcio o más allá de las actividades del proyecto.",
+                    it: "L'itinerario è sufficientemente chiaro per essere impiegato da formatori o organizzazioni esterne al consorzio o al di là delle attività del progetto.",
+                    de: "Der Ausbildungspfad ist so verständlich aufbereitet, dass er von Trainern oder Organisationen außerhalb des Konsortiums oder über die Projektaktivitäten hinaus genutzt werden kann.",
+                    sk: "Vzdelávacia cesta je dostatočne zrozumiteľná, aby ju mohli využívať školitelia alebo organizácie mimo konzorcia alebo nad rámec projektových aktivít.",
+                    pt: "O itinerário é suficientemente claro para ser utilizado por formadores ou organizações fora do consórcio ou além das atividades do projeto."
+                }
+            },
+            {
+                id: "t5",
+                section: {
+                    en: "Section 6. Practical use and transferability",
+                    es: "Sección 6. Uso práctico y transferibilidad",
+                    it: "Sezione 6. Uso pratico e trasferibilità",
+                    de: "Abschnitt 6. Praktischer Nutzen und Transferierbarkeit",
+                    sk: "Časť 6. Praktické využitie a prenositeľnosť",
+                    pt: "Secção 6. Utilização prática e transferibilidade"
+                },
+                title: {
+                    en: "The document has potential to support the development of training actions in different European contexts.",
+                    es: "El documento tiene un alto potencial para respaldar el desarrollo de acciones formativas en diversos contextos europeos.",
+                    it: "Il documento possiede il potenziale per supportare lo sviluppo di azioni formative in differenti contesti europei.",
+                    de: "Das Dokument birgt großes Potenzial, die Umsetzung von Qualifizierungsmaßnahmen in verschiedenen europäischen Kontexten zu unterstützen.",
+                    sk: "Dokument má potenciál podporiť rozvoj vzdelávacích aktivít v rôznych európskych kontextoch.",
+                    pt: "O documento tem potencial para apoiar o desenvolvimento de ações formativas em diferentes contextos europeus."
+                }
+            },
+
+            // Section 7. Ethical, legal and inclusive principles (4 questions)
+            {
+                id: "e1",
+                section: {
+                    en: "Section 7. Ethical, legal and inclusive principles",
+                    es: "Sección 7. Principios éticos, legales e inclusivos",
+                    it: "Sezione 7. Principi etici, legali e inclusivi",
+                    de: "Abschnitt 7. Ethische, rechtliche und inklusive Prinzipien",
+                    sk: "Časť 7. Etické, právne a inkluzívne princípy",
+                    pt: "Secção 7. Princípios éticos, legais e inclusivos"
+                },
+                title: {
+                    en: "Ethical and legal aspects are sufficiently integrated into the itinerary.",
+                    es: "Los aspectos éticos y legales están suficientemente integrados en el itinerario.",
+                    it: "Gli aspetti etici e legali sono sufficientemente integrati nell'itinerario.",
+                    de: "Ethische und rechtliche Gesichtspunkte sind fundiert in den Ausbildungspfad integriert.",
+                    sk: "Etické a právne aspekty sú do vzdelávacej cesty dostatočne začlenené.",
+                    pt: "Os aspetos éticos e legais estão suficientemente integrados no itinerário."
+                }
+            },
+            {
+                id: "e2",
+                section: {
+                    en: "Section 7. Ethical, legal and inclusive principles",
+                    es: "Sección 7. Principios éticos, legales e inclusivos",
+                    it: "Sezione 7. Principi etici, legali e inclusivi",
+                    de: "Abschnitt 7. Ethische, rechtliche und inklusive Prinzipien",
+                    sk: "Časť 7. Etické, právne a inkluzívne princípy",
+                    pt: "Secção 7. Princípios éticos, legais e inclusivos"
+                },
+                title: {
+                    en: "The treatment of ethical and legal issues is appropriate for the target groups.",
+                    es: "El tratamiento de las cuestiones éticas y legales es adecuado para los grupos destinatarios.",
+                    it: "Il trattamento delle questioni etiche e legali è appropriato per i gruppi destinatari.",
+                    de: "Die Behandlung ethischer und rechtlicher Fragen ist zielgruppengerecht gestaltet.",
+                    sk: "Spracovanie etických a právnych otázok je primerané pre cieľové skupiny.",
+                    pt: "O tratamento das questões éticas e legais é adequado para os grupos-alvo."
+                }
+            },
+            {
+                id: "e3",
+                section: {
+                    en: "Section 7. Ethical, legal and inclusive principles",
+                    es: "Sección 7. Principios éticos, legales e inclusivos",
+                    it: "Sezione 7. Principi etici, legali e inclusivi",
+                    de: "Abschnitt 7. Ethische, rechtliche und inklusive Prinzipien",
+                    sk: "Časť 7. Etické, právne a inkluzívne princípy",
+                    pt: "Secção 7. Princípios éticos, legais e inclusivos"
+                },
+                title: {
+                    en: "The ethical dimension is connected meaningfully with tool selection, training design and implementation.",
+                    es: "La dimensión ética se conecta de forma significativa con la selección de herramientas, el diseño formativo y su ejecución.",
+                    it: "La dimensione etica è collegata in modo significativo alla selezione degli strumenti, alla progettazione didattica e all'implementazione.",
+                    de: "Die ethische Dimension ist praxisnah mit Werkzeugauswahl, Schulungsdesign und Durchführung verzahnt.",
+                    sk: "Etický rozmer je zmysluplne prepojený s výberom nástrojov, návrhom školenia a jeho realizáciou.",
+                    pt: "A dimensão ética está ligada de forma significativa à seleção de ferramentas, conceção da formação e implementação."
+                }
+            },
+            {
+                id: "e4",
+                section: {
+                    en: "Section 7. Ethical, legal and inclusive principles",
+                    es: "Sección 7. Principios éticos, legales e inclusivos",
+                    it: "Sezione 7. Principi etici, legali e inclusivos",
+                    de: "Abschnitt 7. Ethische, rechtliche und inklusive Prinzipien",
+                    sk: "Časť 7. Etické, právne a inkluzívne princípy",
+                    pt: "Secção 7. Princípios éticos, legais e inclusivos"
+                },
+                title: {
+                    en: "The itinerary gives appropriate attention to fairness, accessibility and inclusion.",
+                    es: "El itinerario presta la debida atención a la equidad, la accesibilidad y la inclusión.",
+                    it: "L'itinerario presta un'adeguata attenzione a equità, accessibilità e inclusione.",
+                    de: "Der Ausbildungspfad schenkt Fairness, Barrierefreiheit und Inklusion gebührende Aufmerksamkeit.",
+                    sk: "Vzdelávacia cesta venuje náležitú pozornosť spravodlivosti, prístupnosti a inklúzii.",
+                    pt: "O itinerário dá a devida atenção à equidade, acessibilidade e inclusão."
                 }
             }
         ],
