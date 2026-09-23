@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import {
     FileText, Download, ExternalLink, CheckCircle, ChevronRight,
     ChevronLeft, Globe, Building2, User, Mail, Send,
-    Loader2, ShieldCheck, Check, AlertCircle, RefreshCw, ArrowLeft, ChevronDown
+    Loader2, ShieldCheck, Check, AlertCircle, RefreshCw, ArrowLeft, ChevronDown, Clock
 } from 'lucide-react';
 import {
     VALIDATION_CAMPAIGNS,
@@ -201,31 +201,36 @@ export default function ValidationPortal() {
         }
     };
 
-    if (!campaign) {
+    if (!campaign || campaign.status !== 'active') {
+        const isUpcoming = campaign && campaign.status !== 'active';
         return (
             <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
                 <Helmet>
                     <meta name="robots" content="noindex, nofollow" />
-                    <title>Campaign Not Found | Learning Brains</title>
+                    <title>{campaign ? tr(campaign.meta.title) : 'Campaign Not Found'} | Learning Brains</title>
                 </Helmet>
                 <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center border border-slate-200">
-                    <div className="w-16 h-16 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <AlertCircle className="w-8 h-8" />
+                    <div className={`w-16 h-16 ${isUpcoming ? 'bg-teal-50 text-brand-secondary' : 'bg-amber-50 text-amber-600'} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                        {isUpcoming ? <Clock className="w-8 h-8" /> : <AlertCircle className="w-8 h-8" />}
                     </div>
-                    <h1 className="text-2xl font-bold text-slate-800 mb-2">Campaign Not Found</h1>
-                    <p className="text-slate-600 mb-6">{ui('campaign_not_found')}</p>
+                    <h1 className="text-2xl font-bold text-slate-800 mb-2">
+                        {campaign ? tr(campaign.meta.title) : 'Campaign Not Found'}
+                    </h1>
+                    <p className="text-slate-600 mb-6 text-sm leading-relaxed">
+                        {isUpcoming ? ui('campaign_upcoming_notice') : ui('campaign_not_found')}
+                    </p>
                     <div className="space-y-2">
                         <Link
-                            to="/validation/npc-1"
+                            to={`/validation/itinerario-formativo?lang=${currentLang}`}
                             className="block w-full py-2.5 px-4 bg-brand-primary text-white rounded-xl font-medium hover:bg-opacity-90 transition-all text-sm"
                         >
-                            Go to National Pilot Committee 1 Validation
+                            {ui('go_to_active_validation')}
                         </Link>
                         <Link
-                            to="/validation/itinerario-formativo"
+                            to={`/validation?lang=${currentLang}`}
                             className="block w-full py-2.5 px-4 bg-slate-100 text-slate-700 rounded-xl font-medium hover:bg-slate-200 transition-all text-sm"
                         >
-                            Go to Training Pathway Validation
+                            {ui('back_to_hub')}
                         </Link>
                     </div>
                 </div>
@@ -390,7 +395,7 @@ export default function ValidationPortal() {
                                         className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-primary hover:bg-opacity-90 text-white text-sm font-semibold transition-all shadow-xs"
                                     >
                                         <Download className="w-4 h-4" />
-                                        <span>{currentLangObj.flag} {ui('download_translated_pdf')} ({currentLangObj.name})</span>
+                                        <span>{ui('download_translated_btn')}</span>
                                     </a>
                                     {originalDocumentUrl && (
                                         <a
@@ -400,7 +405,7 @@ export default function ValidationPortal() {
                                             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold transition-all border border-slate-300"
                                         >
                                             <Download className="w-4 h-4 text-slate-600" />
-                                            <span>🇬🇧 {ui('download_original_pdf')}</span>
+                                            <span>{ui('download_original_btn')}</span>
                                         </a>
                                     )}
                                 </>
@@ -411,7 +416,7 @@ export default function ValidationPortal() {
                                     className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-primary hover:bg-opacity-90 text-white text-sm font-semibold transition-all shadow-xs"
                                 >
                                     <Download className="w-4 h-4" />
-                                    <span>{ui('download_pdf')}</span>
+                                    <span>{ui('download_original_btn')}</span>
                                 </a>
                             )}
                         </div>

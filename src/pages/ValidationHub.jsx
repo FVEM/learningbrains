@@ -181,11 +181,11 @@ export default function ValidationHub() {
                         </span>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className={activeCampaigns.length === 1 ? "max-w-2xl mx-auto" : "grid grid-cols-1 md:grid-cols-2 gap-8"}>
                         {activeCampaigns.map((campaign) => (
                             <div
                                 key={campaign.id}
-                                className="group bg-white border border-slate-100 rounded-2xl p-8 flex flex-col justify-between hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300"
+                                className="group bg-white border border-slate-200 rounded-2xl p-8 flex flex-col justify-between hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 shadow-sm"
                             >
                                 <div>
                                     <div className="flex items-center justify-between mb-4">
@@ -238,7 +238,7 @@ export default function ValidationHub() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {upcomingCampaigns.map((campaign) => (
                             <div
                                 key={campaign.id}

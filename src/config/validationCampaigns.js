@@ -225,7 +225,7 @@ export const VALIDATION_CAMPAIGNS = {
     'npc-1': {
         id: 'npc-1',
         slug: 'npc-1',
-        status: 'active',
+        status: 'upcoming',
         documentUrl: '/documents/validation/npc-1-sample.pdf',
         meta: {
             tag: {
@@ -1138,12 +1138,12 @@ export const VALIDATION_UI = {
         pt: 'Aberto para Avaliação'
     },
     hub_upcoming_badge: {
-        en: 'Scheduled / Phase 2',
-        es: 'Próximamente / Fase 2',
-        it: 'In arrivo / Fase 2',
-        de: 'Demnächst / Phase 2',
-        sk: 'Pripravuje sa / 2. fáza',
-        pt: 'Brevemente / Fase 2'
+        en: 'Scheduled / Upcoming',
+        es: 'Programado / Próximamente',
+        it: 'Previsto / Prossimamente',
+        de: 'Geplant / Demnächst',
+        sk: 'Naplánované / Pripravuje sa',
+        pt: 'Programado / Brevemente'
     },
     hub_start_btn: {
         en: 'Review Document & Submit Feedback →',
@@ -1720,5 +1720,37 @@ export const VALIDATION_UI = {
         de: 'Diese Vorschau zeigt eine KI-unterstützte Übersetzung des englischen Originaldokuments. Die maßgebliche Referenzfassung können Sie ',
         sk: 'Tento náhľad zobrazuje preklad pôvodného anglického dokumentu vytvorený pomocou AI. Záväzné znenie môžete ',
         pt: 'Este visualizador apresenta uma tradução assistida por IA a partir do original em inglês. Para consultar a versão oficial de referência, pode '
+    },
+    download_translated_btn: {
+        en: 'Download Document (EN)',
+        es: 'Descarga en Español',
+        it: 'Scarica in Italiano',
+        de: 'Auf Deutsch herunterladen',
+        sk: 'Stiahnuť v slovenčine',
+        pt: 'Descarregar em Português'
+    },
+    download_original_btn: {
+        en: 'Download Original (EN)',
+        es: 'Descarga Original (EN)',
+        it: 'Scarica Originale (EN)',
+        de: 'Original herunterladen (EN)',
+        sk: 'Stiahnuť originál (EN)',
+        pt: 'Descarregar Original (EN)'
+    },
+    campaign_upcoming_notice: {
+        en: 'This validation phase is not yet open for evaluation. It will be available in the upcoming project phase.',
+        es: 'Esta fase de validación aún no está abierta a evaluación. Estará disponible en la próxima fase del proyecto.',
+        it: 'Questa fase di validazione non è ancora aperta. Sarà disponibile nella prossima fase del progetto.',
+        de: 'Diese Validierungsphase ist noch nicht zur Bewertung freigegeben. Sie wird in der nächsten Projektphase verfügbar sein.',
+        sk: 'Táto fáza validácie ešte nie je otvorená. Bude k dispozícii v nasledujúcej fáze projektu.',
+        pt: 'Esta fase de validação ainda não está aberta para avaliação. Estará disponível na próxima fase do projeto.'
+    },
+    go_to_active_validation: {
+        en: 'Go to Training Itinerary Validation',
+        es: 'Ir a Validación del Itinerario Formativo',
+        it: 'Vai alla Validazione dell\'Itinerario Formativo',
+        de: 'Zur Lehrplanvalidierung gehen',
+        sk: 'Prejsť na validáciu vzdelávacej cesty',
+        pt: 'Ir para a Validação do Itinerário Formativo'
     }
 };
