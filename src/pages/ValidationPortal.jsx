@@ -420,6 +420,11 @@ export default function ValidationPortal() {
                                 </a>
                             )}
                         </div>
+
+                        {/* Assistance & Contact Note */}
+                        <p className="text-xs sm:text-sm text-slate-500 mt-8 pt-4 border-t border-slate-100">
+                            {ui('contact_assistance')}
+                        </p>
                     </div>
                 ) : (
                     /* Split Layout: Document Viewer (Left) & Feedback Form (Right) */
@@ -1038,13 +1043,6 @@ export default function ValidationPortal() {
                                                 )}
                                             </button>
                                         )}
-                                    </div>
-
-                                    {/* Assistance & Contact Note */}
-                                    <div className="pt-4 text-center">
-                                        <p className="text-xs sm:text-sm text-slate-500">
-                                            {ui('contact_assistance')}
-                                        </p>
                                     </div>
                                 </form>
                             </div>
