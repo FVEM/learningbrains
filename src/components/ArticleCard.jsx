@@ -19,12 +19,12 @@ const ArticleCard = ({ item, lang }) => {
   return (
     <article className="w-full h-full group bg-gradient-to-br from-white to-teal-50/20 border border-slate-100 rounded-2xl overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-2xl hover:shadow-teal-900/10 hover:-translate-y-0.5 transition-all duration-300">
       {/* Left: Image */}
-      <div className="sm:w-56 lg:w-64 h-52 sm:h-auto bg-slate-50 relative shrink-0 overflow-hidden">
+      <div className="w-full sm:w-56 lg:w-64 h-52 sm:h-auto sm:self-stretch bg-slate-50 relative shrink-0 overflow-hidden">
         {imageUrl ? (
           <img
             src={imageUrl}
             alt={item.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full sm:absolute sm:inset-0 object-cover object-[center_30%] transition-transform duration-500 group-hover:scale-105"
             onError={(e) => { e.target.onerror = null; }}
           />
         ) : (
