@@ -49,8 +49,11 @@ function cleanContent(text, articleTitle = '') {
 
     const metadataPatterns = [
         /^website article$/i,
+        /^title:/i,
         /^date:/i,
         /^topic:/i,
+        /^author:/i,
+        /^partner:/i,
         /^link\s*$/i,
         /^n\.\s*views/i,
         /^erasmus\+\s+program/i,
@@ -70,8 +73,9 @@ function cleanContent(text, articleTitle = '') {
         const line = lines[i].trim();
         if (!line) continue;
         
+        const cleanLine = line.toLowerCase().replace(/^title:\s*/i, '').trim();
         const isMeta = metadataPatterns.some(p => p.test(line));
-        const isTitle = normalizedTitle && line.toLowerCase() === normalizedTitle;
+        const isTitle = normalizedTitle && (cleanLine === normalizedTitle || line.toLowerCase() === normalizedTitle);
         
         if (isMeta || isTitle) continue;
 
@@ -84,8 +88,9 @@ function cleanContent(text, articleTitle = '') {
         let trimmed = line.trim();
         if (!trimmed) return line;
         const isBullet = /^(?:[-•*]|\d+\.)/.test(trimmed);
-        const endsWithPunctuation = /[\.\:\?\!\”\’\"\'\]]$/.test(trimmed);
-        const isHeader = !isBullet && !endsWithPunctuation && trimmed.length > 10 && trimmed.length < 150 && !trimmed.startsWith('## ');
+        const endsWithPunctuation = /[\.\:\!\”\’\"\'\]]$/.test(trimmed);
+        const isQuestionHeader = trimmed.endsWith('?') && trimmed.length < 80;
+        const isHeader = !isBullet && (!endsWithPunctuation || isQuestionHeader) && trimmed.length > 10 && trimmed.length < 150 && !trimmed.startsWith('## ');
         if (isHeader) {
             return `## ${trimmed}`;
         }
@@ -338,6 +343,13 @@ function sourceChanged(sheetItem, existingItem) {
     const sheetImage   = sheetItem.image_url || sheetItem.image || '';
     const existImage   = existingItem._source_image || existingItem.image || '';
 
+    const hasBoilerplate = existingItem.content && (
+        existingItem.content.startsWith('Title:') ||
+        existingItem.content.startsWith('Website Article') ||
+        existingItem.content.includes('Erasmus+ Program 2025')
+    );
+    if (hasBoilerplate) return true;
+
     return (
         sheetTitle.trim()   !== existTitle.trim()   ||
         sheetDesc.trim()    !== existDesc.trim()    ||
@@ -477,8 +489,13 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
                 const existDocLink      = existDocLinkRaw.includes('docs.google.com/document') ? existDocLinkRaw : '';
                 const docLinkChanged    = existDocLink !== docLink;
                 const rawImageChanged   = (existing?._source_image || existing?.image || '') !== rawImage;
+                const hasBoilerplate    = existing?.content && (
+                    existing.content.startsWith('Title:') ||
+                    existing.content.startsWith('Website Article') ||
+                    existing.content.includes('Erasmus+ Program 2025')
+                );
 
-                if (lang === 'en' && (!alreadyHasContent || docLinkChanged || rawImageChanged)) {
+                if (lang === 'en' && (!alreadyHasContent || docLinkChanged || rawImageChanged || hasBoilerplate)) {
                     try {
                         const res = await fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`);
                         if (res.ok) {
@@ -499,7 +516,7 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
                         console.error('    ✗ Error fetching doc', docId, e.message);
                         contentText = existing?.content || '';
                     }
-                } else if (docContentCache[docId] && (!existing?.content || (lang === 'en' && rawImageChanged))) {
+                } else if (docContentCache[docId] && (!existing?.content || hasBoilerplate || (lang === 'en' && rawImageChanged))) {
                     contentText = docContentCache[docId];
                 } else if (existing?.content) {
                     contentText = existing.content;

@@ -136,6 +136,18 @@ function needsTranslation(enItem, langItem, lang) {
     );
     if (isOverFormatted) return { yes: true, reason: 'over-formatted' };
 
+    // Content still contains boilerplate from doc export
+    const hasBoilerplate = langItem.content && (
+        langItem.content.startsWith('Title:') ||
+        langItem.content.startsWith('Título:') ||
+        langItem.content.startsWith('Titel:') ||
+        langItem.content.startsWith('Titolo:') ||
+        langItem.content.startsWith('Názov:') ||
+        langItem.content.includes('Erasmus+ Program 2025') ||
+        langItem.content.includes('Programa Erasmus+ 2025')
+    );
+    if (hasBoilerplate) return { yes: true, reason: 'has-boilerplate' };
+
     return { yes: false };
 }
 
@@ -208,14 +220,18 @@ async function translateLocales() {
     const checkSection = async (items, sectionName) => {
         for (let i = 0; i < (items?.length || 0); i++) {
             const item = items[i];
-            // Only flag if title contains accented characters specific to Romance languages
-            const hasNonEnglishChars = /[áéíóúñàèìòùâêîôûäëïöü]/i.test(item.title);
-            if (hasNonEnglishChars) {
-                console.log(`  ⚠ Non-English chars in en.json [${sectionName}]: "${item.title}" — fixing...`);
+            const titleHasNonEnglish = /[áéíóúñàèìòùâêîôûäëïöü¿¡]/i.test(item.title);
+            const descHasNonEnglish  = /[áéíóúñàèìòùâêîôûäëïöü¿¡]/i.test(item.description);
+
+            if (titleHasNonEnglish) {
+                console.log(`  ⚠ Non-English chars in en.json title [${sectionName}]: "${item.title}" — fixing...`);
                 const fixedTitle = await translateText(item.title, 'en');
-                const fixedDesc  = await translateText(item.description, 'en');
                 if (fixedTitle !== item.title) { items[i].title = fixedTitle; enUpdated = true; }
-                if (fixedDesc  !== item.description) { items[i].description = fixedDesc; enUpdated = true; }
+            }
+            if (descHasNonEnglish) {
+                console.log(`  ⚠ Non-English chars in en.json desc [${sectionName}]: "${(item.description || '').substring(0, 40)}..." — fixing...`);
+                const fixedDesc = await translateText(item.description, 'en');
+                if (fixedDesc !== item.description) { items[i].description = fixedDesc; enUpdated = true; }
             }
         }
     };
