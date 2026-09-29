@@ -225,8 +225,11 @@ export const VALIDATION_CAMPAIGNS = {
     'npc-1': {
         id: 'npc-1',
         slug: 'npc-1',
-        status: 'upcoming',
-        documentUrl: '/documents/validation/npc-1-sample.pdf',
+        status: 'active',
+        documentUrl: '/documents/validation/learning-brains-npc1-good-practices-en.pdf',
+        documentUrls: {
+            en: '/documents/validation/learning-brains-npc1-good-practices-en.pdf'
+        },
         meta: {
             tag: {
                 en: 'National Pilot Committee',
