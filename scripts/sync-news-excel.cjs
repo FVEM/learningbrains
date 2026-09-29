@@ -90,7 +90,7 @@ function cleanContent(text, articleTitle = '') {
         const isBullet = /^(?:[-•*]|\d+\.)/.test(trimmed);
         const endsWithPunctuation = /[\.\:\!\”\’\"\'\]]$/.test(trimmed);
         const isQuestionHeader = trimmed.endsWith('?') && trimmed.length < 80;
-        const isHeader = !isBullet && (!endsWithPunctuation || isQuestionHeader) && trimmed.length > 10 && trimmed.length < 150 && !trimmed.startsWith('## ');
+        const isHeader = !isBullet && (!endsWithPunctuation || isQuestionHeader) && trimmed.length >= 4 && trimmed.length < 150 && !trimmed.startsWith('## ');
         if (isHeader) {
             return `## ${trimmed}`;
         }
