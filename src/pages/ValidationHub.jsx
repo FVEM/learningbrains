@@ -225,11 +225,11 @@ export default function ValidationHub() {
                                     <div className="grid grid-cols-2 gap-3 p-3.5 bg-slate-50/80 rounded-xl border border-slate-100 text-xs text-slate-600 mb-6">
                                         <div className="flex items-center gap-2">
                                             <FileText className="w-4 h-4 text-brand-secondary" />
-                                            <span className="font-medium">PDF Preview Ready</span>
+                                            <span className="font-medium">{ui('hub_card_pdf_preview', 'PDF Preview Ready')}</span>
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <Clock className="w-4 h-4 text-brand-secondary" />
-                                            <span className="font-medium">~5-10 min review</span>
+                                            <span className="font-medium">{ui('hub_card_review_time', '~10-15 min review')}</span>
                                         </div>
                                     </div>
                                 </div>

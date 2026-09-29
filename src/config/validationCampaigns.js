@@ -337,12 +337,12 @@ export const VALIDATION_CAMPAIGNS = {
                 pt: 'R1 – Relatório de Mapeamento de Ferramentas de IA para a Formação no Posto de Trabalho: Tendências e Casos de Estudo'
             },
             instructions: {
-                en: 'This questionnaire is designed for the first National Pilot Committee (NPC) consultation on R1 – Mapping Report of AI-tools for On-the-job Training Practice: Trends and Case Studies. Your independent expert feedback will support the quality, relevance and practical usefulness of the report before its finalization. Estimated completion time: 15-20 minutes.',
-                es: 'Este cuestionario está diseñado para la primera consulta del Comité Piloto Nacional (NPC) sobre el R1 – Informe de Mapeo de Herramientas de IA para la Formación en el Puesto de Trabajo: Tendencias y Casos de Estudio. Tus aportaciones expertas e independientes ayudarán a garantizar la calidad, relevancia y utilidad práctica del informe antes de su cierre. Tiempo estimado: 15-20 minutos.',
-                it: 'Questo questionario è progettato per la prima consultazione del Comitato Pilota Nazionale (NPC) su R1 – Rapporto di Mappatura degli Strumenti di IA per la Formazione sul Lavoro: Tendenze e Casi Studio. Il vostro feedback esperto indipendente sosterrà la qualità, la rilevanza e l\'utilità pratica del rapporto prima della sua finalizzazione. Tempo stimato: 15-20 minuti.',
-                de: 'Dieser Fragebogen dient der ersten Konsultation des Nationalen Pilot-Ausschusses (NPC) zu R1 – Mapping-Bericht über KI-Tools für die betriebliche Ausbildung: Trends und Fallstudien. Ihr Expertenfeedback fließt direkt in die Finalisierung des Berichts ein. Geschätzte Dauer: 15-20 Minuten.',
-                sk: 'Tento dotazník je určený pre prvú konzultáciu Národného pilotného výboru (NPC) k R1 – Mapovacia správa o nástrojoch umelej inteligencie pre prax vzdelávania na pracovisku: Trendy a prípadové štúdie. Vaša spätná väzba podporí kvalitu a praktickú využiteľnosť správy pred jej dokončením. Odhadovaný čas: 15-20 minút.',
-                pt: 'Este questionário destina-se à primeira consulta do Comité Piloto Nacional (NPC) sobre o R1 – Relatório de Mapeamento de Ferramentas de IA para a Formação no Posto de Trabalho: Tendências e Casos de Estudo. O seu feedback apoiará a qualidade, relevância e utilidade prática do relatório antes da sua conclusão. Tempo estimado: 15-20 minutos.'
+                en: 'This questionnaire is designed for the first National Pilot Committee (NPC) consultation on R1 – Mapping Report of AI-tools for On-the-job Training Practice: Trends and Case Studies. Your independent expert feedback will support the quality, relevance and practical usefulness of the report before its finalization. Estimated completion time: 10-15 minutes.',
+                es: 'Este cuestionario está diseñado para la primera consulta del Comité Piloto Nacional (NPC) sobre el R1 – Informe de Mapeo de Herramientas de IA para la Formación en el Puesto de Trabajo: Tendencias y Casos de Estudio. Tus aportaciones expertas e independientes ayudarán a garantizar la calidad, relevancia y utilidad práctica del informe antes de su cierre. Tiempo estimado: 10-15 minutos.',
+                it: 'Questo questionario è progettato per la prima consultazione del Comitato Pilota Nazionale (NPC) su R1 – Rapporto di Mappatura degli Strumenti di IA per la Formazione sul Lavoro: Tendenze e Casi Studio. Il vostro feedback esperto indipendente sosterrà la qualità, la rilevanza e l\'utilità pratica del rapporto prima della sua finalizzazione. Tempo stimato: 10-15 minuti.',
+                de: 'Dieser Fragebogen dient der ersten Konsultation des Nationalen Pilot-Ausschusses (NPC) zu R1 – Mapping-Bericht über KI-Tools für die betriebliche Ausbildung: Trends und Fallstudien. Ihr Expertenfeedback fließt direkt in die Finalisierung des Berichts ein. Geschätzte Dauer: 10-15 Minuten.',
+                sk: 'Tento dotazník je určený pre prvú konzultáciu Národného pilotného výboru (NPC) k R1 – Mapovacia správa o nástrojoch umelej inteligencie pre prax vzdelávania na pracovisku: Trendy a prípadové štúdie. Vaša spätná väzba podporí kvalitu a praktickú využiteľnosť správy pred jej dokončením. Odhadovaný čas: 10-15 minút.',
+                pt: 'Este questionário destina-se à primeira consulta do Comité Piloto Nacional (NPC) sobre o R1 – Relatório de Mapeamento de Ferramentas de IA para a Formação no Posto de Trabalho: Tendências e Casos de Estudo. O seu feedback apoiará a qualidade, relevância e utilidade prática do relatório antes da sua conclusão. Tempo estimado: 10-15 minutos.'
             }
         },
         likertQuestions: [
@@ -1762,12 +1762,28 @@ export const VALIDATION_UI = {
         pt: 'Submeter Avaliação'
     },
     hub_step3_desc: {
-        en: 'Complete the short structured form (5-10 min).',
-        es: 'Completa el cuestionario rápido (aprox. 5-10 min).',
-        it: 'Completa il breve questionario (circa 5-10 min).',
-        de: 'Füllen Sie das kurze Formular aus (ca. 5-10 Min.).',
-        sk: 'Vyplňte krátky štruktúrovaný formulár (5-10 min).',
-        pt: 'Preencha o formulário estruturado (5-10 min).'
+        en: 'Complete the structured form (approx. 10-15 min).',
+        es: 'Completa el cuestionario estructurado (aprox. 10-15 min).',
+        it: 'Completa il questionario strutturato (circa 10-15 min).',
+        de: 'Füllen Sie das strukturierte Formular aus (ca. 10-15 Min.).',
+        sk: 'Vyplňte štruktúrovaný formulár (cca 10-15 min).',
+        pt: 'Preencha o formulário estruturado (aprox. 10-15 min).'
+    },
+    hub_card_pdf_preview: {
+        en: 'PDF Preview Ready',
+        es: 'Vista previa PDF disponible',
+        it: 'Anteprima PDF disponibile',
+        de: 'PDF-Vorschau verfügbar',
+        sk: 'Náhľad PDF pripravený',
+        pt: 'Pré-visualização PDF disponível'
+    },
+    hub_card_review_time: {
+        en: '~10-15 min review',
+        es: '~10-15 min de revisión',
+        it: '~10-15 min di revisione',
+        de: '~10-15 Min. Begutachtung',
+        sk: '~10-15 min. hodnotenie',
+        pt: '~10-15 min de revisão'
     },
     step_profile: {
         en: '1. Evaluator Profile',
