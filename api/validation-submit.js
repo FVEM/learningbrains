@@ -33,7 +33,10 @@ export default async function handler(req, res) {
         };
 
         let sheetResult = null;
-        const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbyqfyXKBvv_g6Eso97FibinK2W_BcailgefPpKoB4EwAt86xp0QfP53gbJmlaZEJfLP/exec';
+        let webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbyqfyXKBvv_g6Eso97FibinK2W_BcailgefPpKoB4EwAt86xp0QfP53gbJmlaZEJfLP/exec';
+        if (campaignId === 'npc-1' && process.env.GOOGLE_SHEET_WEBHOOK_URL_NPC1) {
+            webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL_NPC1;
+        }
 
         if (webhookUrl) {
             try {
