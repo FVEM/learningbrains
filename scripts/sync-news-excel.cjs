@@ -169,6 +169,14 @@ async function fetchDriveFolderFiles(folderUrl) {
 function integrateArticleImages(content, folderImages, rawImageUrl) {
     if (!content) return content;
     
+    // Check custom article-specific graphics
+    if (content.includes('## Understanding the Pain Point') && !content.includes('ai-training-framework.jpg')) {
+        content = content.replace(
+            /(## Understanding the Pain Point)/,
+            '![From a Training Challenge to Real Impact with AI — A practical 5-step approach](/images/news/ai-training-framework.jpg)\n\n$1'
+        );
+    }
+
     const nonCoverImages = folderImages.filter(f => !f.name.toLowerCase().includes('cover'));
     if (nonCoverImages.length === 0) return content;
     
