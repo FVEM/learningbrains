@@ -94,11 +94,11 @@ function renderContent(text) {
       const [, alt, src] = imgMatch;
       const resolvedSrc = src.startsWith('http') ? src : `${import.meta.env.BASE_URL || '/'}${src.replace(/^\//, '')}`;
       elements.push(
-        <figure key={i} className="my-10 -mx-4 md:-mx-12 flex flex-col items-center">
+        <figure key={i} className="my-10 w-full flex flex-col items-center">
           <img
             src={resolvedSrc}
             alt={alt}
-            className="w-full h-auto rounded-3xl shadow-xl border border-slate-100/50"
+            className="w-full h-auto rounded-2xl md:rounded-3xl shadow-lg border border-slate-100/80"
             onError={(e) => { e.target.onerror = null; e.target.style.display='none'; }}
           />
           {alt && (
@@ -376,7 +376,7 @@ const ArticleDetail = () => {
 
         {/* ── Full Content ── */}
         {article.content ? (
-          <div className="prose-editorial overflow-hidden">
+          <div className="prose-editorial">
             {renderContent(article.content)}
           </div>
         ) : (
