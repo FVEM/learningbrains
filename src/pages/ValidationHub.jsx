@@ -18,15 +18,28 @@ const logo = `${import.meta.env.BASE_URL}learning-brains-logo-transparent-croppe
 export default function ValidationHub() {
     const [searchParams, setSearchParams] = useSearchParams();
 
-    // Determine initial language from query param or browser
+    // Determine initial language from query param, localStorage, browser languages, or fallback to 'en'
     const initialLang = useMemo(() => {
         const queryLang = searchParams.get('lang')?.toLowerCase();
         if (queryLang && SUPPORTED_LANGUAGES.some(l => l.code === queryLang)) {
             return queryLang;
         }
-        const browserLang = navigator.language?.split('-')[0]?.toLowerCase();
-        if (browserLang && SUPPORTED_LANGUAGES.some(l => l.code === browserLang)) {
-            return browserLang;
+        try {
+            const savedLang = localStorage.getItem('preferred_lang');
+            if (savedLang && SUPPORTED_LANGUAGES.some(l => l.code === savedLang)) {
+                return savedLang;
+            }
+        } catch (e) {}
+
+        const userLangs = (typeof navigator !== 'undefined' && navigator.languages && navigator.languages.length)
+            ? navigator.languages
+            : [navigator.language || 'en'];
+
+        for (const lang of userLangs) {
+            const code = (lang || '').split('-')[0].toLowerCase();
+            if (SUPPORTED_LANGUAGES.some(l => l.code === code)) {
+                return code;
+            }
         }
         return 'en';
     }, [searchParams]);
@@ -43,6 +56,9 @@ export default function ValidationHub() {
     }, [currentLang, i18n]);
 
     const changeLanguage = (newLang) => {
+        try {
+            localStorage.setItem('preferred_lang', newLang);
+        } catch (e) {}
         setCurrentLang(newLang);
         setSearchParams({ lang: newLang });
         setLangDropdownOpen(false);

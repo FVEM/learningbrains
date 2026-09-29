@@ -25,15 +25,28 @@ export default function ValidationPortal() {
     const { campaignId } = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
 
-    // 1. Determine active language (from URL query, browser, or default to 'en')
+    // 1. Determine active language (from URL query, localStorage, browser languages, or default to 'en')
     const initialLang = useMemo(() => {
         const queryLang = searchParams.get('lang')?.toLowerCase();
         if (queryLang && SUPPORTED_LANGUAGES.some(l => l.code === queryLang)) {
             return queryLang;
         }
-        const browserLang = navigator.language?.split('-')[0]?.toLowerCase();
-        if (browserLang && SUPPORTED_LANGUAGES.some(l => l.code === browserLang)) {
-            return browserLang;
+        try {
+            const savedLang = localStorage.getItem('preferred_lang');
+            if (savedLang && SUPPORTED_LANGUAGES.some(l => l.code === savedLang)) {
+                return savedLang;
+            }
+        } catch (e) {}
+
+        const userLangs = (typeof navigator !== 'undefined' && navigator.languages && navigator.languages.length)
+            ? navigator.languages
+            : [navigator.language || 'en'];
+
+        for (const lang of userLangs) {
+            const code = (lang || '').split('-')[0].toLowerCase();
+            if (SUPPORTED_LANGUAGES.some(l => l.code === code)) {
+                return code;
+            }
         }
         return 'en';
     }, [searchParams]);
@@ -94,6 +107,9 @@ export default function ValidationPortal() {
 
     // Update URL query param when language changes
     const changeLanguage = (newLang) => {
+        try {
+            localStorage.setItem('preferred_lang', newLang);
+        } catch (e) {}
         setCurrentLang(newLang);
         setSearchParams({ lang: newLang });
         setLangDropdownOpen(false);

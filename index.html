@@ -110,10 +110,28 @@
     // This script intercepts the root path and forces a hard redirect to the language path, 
     // ensuring the user instantly receives the prerendered HTML from the server instead of waiting for React to mount.
     (function () {
-      if (window.location.pathname === '/') {
-        var browserLang = navigator.language.split('-')[0];
+      if (window.location.pathname === '/' || window.location.pathname === '') {
         var supportedLangs = ['en', 'es', 'it', 'sk', 'de', 'pt'];
-        var targetLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
+        try {
+          var savedLang = localStorage.getItem('preferred_lang');
+          if (savedLang && supportedLangs.indexOf(savedLang) !== -1) {
+            window.location.replace('/' + savedLang);
+            return;
+          }
+        } catch (e) {}
+
+        var userLangs = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || 'en'];
+
+        var targetLang = 'en';
+        for (var i = 0; i < userLangs.length; i++) {
+          var code = (userLangs[i] || '').split('-')[0].toLowerCase();
+          if (supportedLangs.indexOf(code) !== -1) {
+            targetLang = code;
+            break;
+          }
+        }
         window.location.replace('/' + targetLang);
       }
     })();

@@ -35,6 +35,9 @@ const Header = () => {
     ];
 
     const changeLanguage = (lng) => {
+        try {
+            localStorage.setItem('preferred_lang', lng);
+        } catch (e) {}
         // Replace the first path segment (language) with the new language
         const newPath = location.pathname.replace(/^\/[a-z]{2}/, `/${lng}`);
         navigate(newPath);

@@ -19,17 +19,35 @@ import ValidationHub from './pages/ValidationHub';
 
 import ScrollToTop from './components/ScrollToTop';
 
-// Redirects root "/" to users browser language or default "en"
+// Redirects root "/" to user's preferred language, browser language or default "en"
 const RootRedirect = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    const browserLang = navigator.language.split('-')[0];
     const supportedLangs = ['en', 'es', 'it', 'sk', 'de', 'pt'];
-    const targetLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
+    try {
+      const savedLang = localStorage.getItem('preferred_lang');
+      if (savedLang && supportedLangs.includes(savedLang)) {
+        navigate(`/${savedLang}`, { replace: true });
+        return;
+      }
+    } catch (e) {}
+
+    const userLangs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || 'en'];
+
+    let targetLang = 'en';
+    for (const lang of userLangs) {
+      const code = (lang || '').split('-')[0].toLowerCase();
+      if (supportedLangs.includes(code)) {
+        targetLang = code;
+        break;
+      }
+    }
     navigate(`/${targetLang}`, { replace: true });
   }, [navigate]);
   return null;
-}
+};
 
 // Redirects old "/articles/:slug" routes to the new "/news/:slug" structure
 const ArticleRedirect = () => {

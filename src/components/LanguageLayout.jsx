@@ -22,6 +22,9 @@ const LanguageLayout = () => {
         if (i18n.language !== lang) {
             i18n.changeLanguage(lang);
         }
+        try {
+            localStorage.setItem('preferred_lang', lang);
+        } catch (e) {}
     }, [lang, i18n, navigate]);
 
     if (!supportedLangs.includes(lang)) return null;
