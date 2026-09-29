@@ -12,6 +12,7 @@ import {
     CONSORTIUM_COUNTRIES,
     STAKEHOLDER_TYPES,
     ITINERARY_PROFESSIONAL_BACKGROUNDS,
+    NPC_PROFESSIONAL_PROFILES,
     EXPERIENCE_YEARS,
     AI_EXPERIENCE_LEVELS,
     VALIDATION_UI,
@@ -163,6 +164,7 @@ export default function ValidationPortal() {
     };
 
     const isItineraryCampaign = campaign?.profileType === 'itinerary' || campaignId === 'itinerario-formativo';
+    const isNpcCampaign = campaign?.profileType === 'npc' || campaignId.startsWith('npc');
 
     // Validation step check
     const isStep1Valid = Boolean(
@@ -174,7 +176,12 @@ export default function ValidationPortal() {
             ? (evaluator.professionalBackground &&
                (evaluator.professionalBackground !== 'other' || evaluator.otherBackground?.trim()) &&
                evaluator.aiExperience)
-            : evaluator.role)
+            : (isNpcCampaign
+                ? (evaluator.position?.trim() &&
+                   evaluator.professionalProfile &&
+                   (evaluator.professionalProfile !== 'other' || evaluator.otherProfileDetail?.trim()))
+                : evaluator.role)
+        )
     );
     const isStep2Valid = campaign?.likertQuestions?.every(q => ratings[q.id] !== undefined && ratings[q.id] !== '');
 
@@ -769,6 +776,78 @@ export default function ValidationPortal() {
                                                         </select>
                                                     </div>
                                                 </div>
+                                             ) : isNpcCampaign ? (
+                                                <div className="space-y-4">
+                                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                        <div>
+                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
+                                                                {ui('country')} *
+                                                            </label>
+                                                            <select
+                                                                required
+                                                                value={evaluator.country}
+                                                                onChange={(e) => setEvaluator({ ...evaluator, country: e.target.value })}
+                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
+                                                            >
+                                                                <option value="">{ui('select_option')}</option>
+                                                                {CONSORTIUM_COUNTRIES.map((c) => (
+                                                                    <option key={c.code} value={c.code}>
+                                                                        {tr(c.label)}
+                                                                    </option>
+                                                                ))}
+                                                            </select>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
+                                                                {ui('position_role')} *
+                                                            </label>
+                                                            <input
+                                                                type="text"
+                                                                required
+                                                                value={evaluator.position || ''}
+                                                                onChange={(e) => setEvaluator({ ...evaluator, position: e.target.value })}
+                                                                placeholder="e.g. Training Manager / AI Specialist"
+                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
+                                                            />
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
+                                                            {ui('professional_profile')} *
+                                                        </label>
+                                                        <select
+                                                            required
+                                                            value={evaluator.professionalProfile || ''}
+                                                            onChange={(e) => setEvaluator({ ...evaluator, professionalProfile: e.target.value })}
+                                                            className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
+                                                        >
+                                                            <option value="">{ui('select_option')}</option>
+                                                            {NPC_PROFESSIONAL_PROFILES.map((p) => (
+                                                                <option key={p.id} value={p.id}>
+                                                                    {tr(p.label)}
+                                                                </option>
+                                                            ))}
+                                                        </select>
+                                                    </div>
+
+                                                    {evaluator.professionalProfile === 'other' && (
+                                                        <div className="animate-fade-in">
+                                                            <label className="block text-[15px] sm:text-base font-bold text-slate-800 mb-2">
+                                                                {ui('other_specify')} *
+                                                            </label>
+                                                            <input
+                                                                type="text"
+                                                                required
+                                                                value={evaluator.otherProfileDetail || ''}
+                                                                onChange={(e) => setEvaluator({ ...evaluator, otherProfileDetail: e.target.value })}
+                                                                placeholder="e.g. Regional Development Agency"
+                                                                className="w-full px-4 py-3 text-base sm:text-[16px] bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all text-slate-800 shadow-2xs"
+                                                            />
+                                                        </div>
+                                                    )}
+                                                </div>
                                             ) : (
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                     <div>
@@ -955,6 +1034,21 @@ export default function ValidationPortal() {
                                                             <span className="text-slate-500">{ui('summary_ai_experience', 'AI Experience')}:</span>
                                                             <span className="font-semibold text-slate-800">
                                                                 {AI_EXPERIENCE_LEVELS.find(lvl => lvl.id === evaluator.aiExperience)?.label[currentLang] || evaluator.aiExperience || 'N/A'}
+                                                            </span>
+                                                        </div>
+                                                    </>
+                                                ) : isNpcCampaign ? (
+                                                    <>
+                                                        <div className="flex justify-between">
+                                                            <span className="text-slate-500">{ui('summary_position')}:</span>
+                                                            <span className="font-semibold text-slate-800">{evaluator.position || 'N/A'}</span>
+                                                        </div>
+                                                        <div className="flex justify-between">
+                                                            <span className="text-slate-500">{ui('summary_profile')}:</span>
+                                                            <span className="font-semibold text-slate-800 text-right">
+                                                                {evaluator.professionalProfile === 'other'
+                                                                    ? (evaluator.otherProfileDetail || 'Other')
+                                                                    : (NPC_PROFESSIONAL_PROFILES.find(p => p.id === evaluator.professionalProfile)?.label[currentLang] || evaluator.professionalProfile || 'N/A')}
                                                             </span>
                                                         </div>
                                                     </>

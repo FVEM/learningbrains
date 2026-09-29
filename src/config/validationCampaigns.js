@@ -221,11 +221,92 @@ export const AI_EXPERIENCE_LEVELS = [
     { id: 'extensive', label: { en: 'Extensive', es: 'Avanzada / Extensa', it: 'Avanzata', de: 'Umfangreich', sk: 'Rozsiahle', pt: 'Extensa' } }
 ];
 
+export const NPC_PROFESSIONAL_PROFILES = [
+    {
+        id: 'industrial_company',
+        label: {
+            en: 'Industrial company',
+            es: 'Empresa industrial',
+            it: 'Azienda industriale',
+            de: 'Industrieunternehmen',
+            sk: 'Priemyselná spoločnosť',
+            pt: 'Empresa industrial'
+        }
+    },
+    {
+        id: 'hr_training_management',
+        label: {
+            en: 'HR / training management',
+            es: 'Gestión de RRHH / formación',
+            it: 'Gestione risorse umane / formazione',
+            de: 'Personalmanagement / Ausbildungsleitung',
+            sk: 'Riadenie ľudských zdrojov a vzdelávania',
+            pt: 'Gestão de RH / formação'
+        }
+    },
+    {
+        id: 'company_trainer',
+        label: {
+            en: 'Company trainer / c-VET',
+            es: 'Formador de empresa / FP continua (c-VET)',
+            it: 'Formatore aziendale / c-VET',
+            de: 'Betrieblicher Ausbilder / Weiterbildung (c-VET)',
+            sk: 'Podnikový lektor / c-VET',
+            pt: 'Formador de empresa / c-VET'
+        }
+    },
+    {
+        id: 'ai_digital_technologies',
+        label: {
+            en: 'AI / digital technologies',
+            es: 'IA / tecnologías digitales',
+            it: 'IA / tecnologie digitali',
+            de: 'KI / digitale Technologien',
+            sk: 'Umelá inteligencia / digitálne technológie',
+            pt: 'IA / tecnologias digitais'
+        }
+    },
+    {
+        id: 'industry40_innovation',
+        label: {
+            en: 'Industry 4.0 / innovation',
+            es: 'Industria 4.0 / innovación',
+            it: 'Industria 4.0 / innovazione',
+            de: 'Industrie 4.0 / Innovation',
+            sk: 'Priemysel 4.0 / inovácie',
+            pt: 'Indústria 4.0 / inovação'
+        }
+    },
+    {
+        id: 'research_academia',
+        label: {
+            en: 'Research / academia',
+            es: 'Investigación / universidad',
+            it: 'Ricerca / università',
+            de: 'Forschung / Wissenschaft',
+            sk: 'Výskum / akademická sféra',
+            pt: 'Investigação / academia'
+        }
+    },
+    {
+        id: 'other',
+        label: {
+            en: 'Other',
+            es: 'Otro perfil profesional',
+            it: 'Altro profilo professionale',
+            de: 'Sonstiges Profil',
+            sk: 'Iný profil',
+            pt: 'Outro perfil'
+        }
+    }
+];
+
 export const VALIDATION_CAMPAIGNS = {
     'npc-1': {
         id: 'npc-1',
         slug: 'npc-1',
         status: 'active',
+        profileType: 'npc',
         documentUrl: '/documents/validation/learning-brains-npc1-good-practices-en.pdf',
         documentUrls: {
             en: '/documents/validation/learning-brains-npc1-good-practices-en.pdf'
@@ -239,165 +320,609 @@ export const VALIDATION_CAMPAIGNS = {
                 sk: 'Národný pilotný výbor',
                 pt: 'Comité Piloto Nacional'
             },
-                        title: {
-                en: 'National Pilot Committee 1: Good Practices & Key Trends Selection',
-                es: 'National Pilot Committee 1: Revisión de Buenas Prácticas y Selección de Tendencias',
-                it: 'National Pilot Committee 1: Revisione delle Buone Pratiche e Selezione delle Tendenze',
-                de: 'National Pilot Committee 1: Überprüfung von Best Practices & Auswahl von Trends',
-                sk: 'National Pilot Committee 1: Preskúmanie osvedčených postupov a výber trendov',
-                pt: 'National Pilot Committee 1: Revisão de Boas Práticas e Seleção de Tendências'
+            title: {
+                en: 'National Pilot Committee 1: R1 Mapping Report Consultation',
+                es: 'National Pilot Committee 1: Consulta del Informe de Mapeo R1',
+                it: 'National Pilot Committee 1: Consultazione Rapporto di Mappatura R1',
+                de: 'National Pilot Committee 1: Konsultation zum R1-Mapping-Bericht',
+                sk: 'National Pilot Committee 1: Konzultácia k mapovacej správe R1',
+                pt: 'National Pilot Committee 1: Consulta do Relatório de Mapeamento R1'
             },
             subtitle: {
-                en: 'Convened after the research phase to review the identified good practices and trends, contributing to selecting the most relevant ones.',
-                es: 'Convocado tras la fase de investigación para revisar las buenas prácticas y tendencias identificadas y contribuir a seleccionar las más relevantes.',
-                it: 'Convocato dopo la fase di ricerca per esaminare le buone pratiche e le tendenze individuate e contribuire a selezionare le più rilevanti.',
-                de: 'Einberufen nach der Forschungsphase, um die ermittelten Best Practices und Trends zu prüfen und die relevantesten auszuwählen.',
-                sk: 'Zvoláva sa po fáze výskumu na preskúmanie identifikovaných osvedčených postupov a trendov a výber tých najrelevantnejších.',
-                pt: 'Convocado após a fase de investigação para rever as boas práticas e tendências identificadas e contribuir para selecionar as mais relevantes.'
+                en: 'R1 – Mapping Report of AI-tools for On-the-job Training Practice: Trends and Case Studies',
+                es: 'R1 – Informe de Mapeo de Herramientas de IA para la Formación en el Puesto de Trabajo: Tendencias y Casos de Estudio',
+                it: 'R1 – Rapporto di Mappatura degli Strumenti di IA per la Formazione sul Lavoro: Tendenze e Casi Studio',
+                de: 'R1 – Mapping-Bericht über KI-Tools für die betriebliche Ausbildung: Trends und Fallstudien',
+                sk: 'R1 – Mapovacia správa o nástrojoch umelej inteligencie pre prax vzdelávania na pracovisku: Trendy a prípadové štúdie',
+                pt: 'R1 – Relatório de Mapeamento de Ferramentas de IA para a Formação no Posto de Trabalho: Tendências e Casos de Estudo'
             },
             instructions: {
-                en: 'Please review the document in the viewer on the left (or download it for offline reading) and provide your expert feedback through the form on the right. Your inputs directly shape the project deliverables submitted to the European Commission.',
-                es: 'Por favor, revisa el documento en el visor de la izquierda (o descárgalo para leerlo en local) y aporta tu valoración experta en el formulario de la derecha. Tus aportaciones influirán directamente en los entregables oficiales del proyecto Erasmus+.',
-                it: 'Si prega di esaminare il documento nel visualizzatore a sinistra (o scaricarlo) e fornire il proprio feedback esperto nel modulo a destra. I vostri contributi modelleranno direttamente i risultati ufficiali del progetto Erasmus+.',
-                de: 'Bitte prüfen Sie das Dokument im Betrachter auf der linken Seite und geben Sie Ihr Expertenfeedback im Formular ab. Ihre Beiträge fließen direkt in die offiziellen Projektergebnisse für die Europäische Kommission ein.',
-                sk: 'Preskúmajte dokument v prehliadači vľavo a poskytnite odbornú spätnú väzbu prostrednívom formulára vpravo. Vaše vstupy priamo ovplyvnia výstupy projektu Erasmus+.',
-                pt: 'Por favor, analise o documento no visualizador à esquerda e forneça o seu feedback de perito no formulário à direita. Os seus contributos moldarão diretamente os resultados oficiais do projeto Erasmus+.'
+                en: 'This questionnaire is designed for the first National Pilot Committee (NPC) consultation on R1 – Mapping Report of AI-tools for On-the-job Training Practice: Trends and Case Studies. Your independent expert feedback will support the quality, relevance and practical usefulness of the report before its finalization. Estimated completion time: 15-20 minutes.',
+                es: 'Este cuestionario está diseñado para la primera consulta del Comité Piloto Nacional (NPC) sobre el R1 – Informe de Mapeo de Herramientas de IA para la Formación en el Puesto de Trabajo: Tendencias y Casos de Estudio. Tus aportaciones expertas e independientes ayudarán a garantizar la calidad, relevancia y utilidad práctica del informe antes de su cierre. Tiempo estimado: 15-20 minutos.',
+                it: 'Questo questionario è progettato per la prima consultazione del Comitato Pilota Nazionale (NPC) su R1 – Rapporto di Mappatura degli Strumenti di IA per la Formazione sul Lavoro: Tendenze e Casi Studio. Il vostro feedback esperto indipendente sosterrà la qualità, la rilevanza e l\'utilità pratica del rapporto prima della sua finalizzazione. Tempo stimato: 15-20 minuti.',
+                de: 'Dieser Fragebogen dient der ersten Konsultation des Nationalen Pilot-Ausschusses (NPC) zu R1 – Mapping-Bericht über KI-Tools für die betriebliche Ausbildung: Trends und Fallstudien. Ihr Expertenfeedback fließt direkt in die Finalisierung des Berichts ein. Geschätzte Dauer: 15-20 Minuten.',
+                sk: 'Tento dotazník je určený pre prvú konzultáciu Národného pilotného výboru (NPC) k R1 – Mapovacia správa o nástrojoch umelej inteligencie pre prax vzdelávania na pracovisku: Trendy a prípadové štúdie. Vaša spätná väzba podporí kvalitu a praktickú využiteľnosť správy pred jej dokončením. Odhadovaný čas: 15-20 minút.',
+                pt: 'Este questionário destina-se à primeira consulta do Comité Piloto Nacional (NPC) sobre o R1 – Relatório de Mapeamento de Ferramentas de IA para a Formação no Posto de Trabalho: Tendências e Casos de Estudo. O seu feedback apoiará a qualidade, relevância e utilidade prática do relatório antes da sua conclusão. Tempo estimado: 15-20 minutos.'
             }
         },
         likertQuestions: [
+            // Section 2: R1 purpose and relevance (P1 - P6)
             {
-                id: 'relevance',
-                title: {
-                    en: 'Relevance to Industrial Needs',
-                    es: 'Pertinencia con las Necesidades Industriales',
-                    it: 'Rilevanza per i Fabbisogni Industriali',
-                    de: 'Relevanz für industrielle Bedarfe',
-                    sk: 'Význam pre potreby priemyslu',
-                    pt: 'Relevância para as Necessidades Industriais'
+                id: 'p1',
+                section: {
+                    en: '2. R1 Purpose and Relevance',
+                    es: '2. Propósito y Relevancia del R1',
+                    it: '2. Scopo e Rilevanza di R1',
+                    de: '2. Zweck und Relevanz von R1',
+                    sk: '2. Účel a význam R1',
+                    pt: '2. Propósito e Relevância do R1'
                 },
-                description: {
-                    en: 'Are the proposed objectives and competencies aligned with the real challenges of SMEs in your region?',
-                    es: '¿Los objetivos y competencias planteados responden a los desafíos reales de las PYMEs industriales en tu entorno?',
-                    it: 'Gli obiettivi e le competenze proposte rispondono alle reali sfide delle PMI industriali del vostro territorio?',
-                    de: 'Entsprechen die vorgeschlagenen Ziele und Kompetenzen den tatsächlichen Herausforderungen von KMU in Ihrer Region?',
-                    sk: 'Zodpovedajú navrhované ciele a kompetencie skutočným výzvam MSP vo vašom regióne?',
-                    pt: 'Os objetivos e competências propostos respondem aos desafios reais das PME industriais na sua região?'
+                title: {
+                    en: 'The purpose and intended use of the Mapping Report are clear.',
+                    es: 'El propósito y el uso previsto del Informe de Mapeo son claros.',
+                    it: 'Lo scopo e l\'uso previsto del Rapporto di Mappatura sono chiari.',
+                    de: 'Zweck und beabsichtigte Verwendung des Mapping-Berichts sind klar.',
+                    sk: 'Účel a zamýšľané použitie mapovacej správy sú jasné.',
+                    pt: 'O propósito e a utilização prevista do Relatório de Mapeamento são claros.'
                 }
             },
             {
-                id: 'clarity',
-                title: {
-                    en: 'Clarity & Coherence',
-                    es: 'Claridad y Coherencia',
-                    it: 'Chiarezza e Coerenza',
-                    de: 'Klarheit und Kohärenz',
-                    sk: 'Jasnosť a zrozumiteľnosť',
-                    pt: 'Clareza e Coerência'
+                id: 'p2',
+                section: {
+                    en: '2. R1 Purpose and Relevance',
+                    es: '2. Propósito y Relevancia del R1',
+                    it: '2. Scopo e Rilevanza di R1',
+                    de: '2. Zweck und Relevanz von R1',
+                    sk: '2. Účel a význam R1',
+                    pt: '2. Propósito e Relevância do R1'
                 },
-                description: {
-                    en: 'Is the document structure, methodology and scope clearly articulated and easy to understand?',
-                    es: '¿La estructura, metodología y alcance del documento están bien definidos y son fáciles de comprender?',
-                    it: 'La struttura, la metodologia e la portata del documento sono ben definite e di facile comprensione?',
-                    de: 'Sind Struktur, Methodik und Umfang des Dokuments klar gegliedert und verständlich?',
-                    sk: 'Je štruktúra, metodológia a rozsah dokumentu jasne formulovaný a zrozumiteľný?',
-                    pt: 'A estrutura, metodologia e âmbito do documento estão bem articulados e são fáceis de compreender?'
+                title: {
+                    en: 'The report addresses relevant needs related to AI-supported on-the-job training in industrial companies.',
+                    es: 'El informe responde a necesidades relevantes sobre formación en el puesto de trabajo con apoyo de IA en empresas industriales.',
+                    it: 'Il rapporto risponde a esigenze rilevanti relative alla formazione sul lavoro supportata dall\'IA nelle aziende industriali.',
+                    de: 'Der Bericht adressiert relevante Bedarfe zur KI-gestützten Arbeitsplatzschulung in Industrieunternehmen.',
+                    sk: 'Správa reaguje na relevantné potreby týkajúce sa školenia na pracovisku s podporou umelej inteligencie v priemyselných podnikoch.',
+                    pt: 'O relatório aborda necessidades relevantes relacionadas com a formação no posto de trabalho apoiada por IA em empresas industriais.'
                 }
             },
             {
-                id: 'transferability',
-                title: {
-                    en: 'Transferability & Scalability',
-                    es: 'Transferibilidad y Escalabilidad',
-                    it: 'Trasferibilità e Scalabilità',
-                    de: 'Übertragbarkeit und Skalierbarkeit',
-                    sk: 'Prenositeľnosť a škálovateľnosť',
-                    pt: 'Transferibilidade e Escalabilidade'
+                id: 'p3',
+                section: {
+                    en: '2. R1 Purpose and Relevance',
+                    es: '2. Propósito y Relevancia del R1',
+                    it: '2. Scopo e Rilevanza di R1',
+                    de: '2. Zweck und Relevanz von R1',
+                    sk: '2. Účel a význam R1',
+                    pt: '2. Propósito e Relevância do R1'
                 },
-                description: {
-                    en: 'Can this model be effectively transferred and adapted to other sectors and European regions?',
-                    es: '¿Consideras viable la transferencia y adaptación de este modelo a otros sectores y regiones europeas?',
-                    it: 'Ritenete fattibile il trasferimento e l\'adattamento di questo modello ad altri settori e regioni europee?',
-                    de: 'Halten Sie die Übertragung und Anpassung dieses Modells auf andere Sektoren und europäische Regionen für machbar?',
-                    sk: 'Považujete prenos a adaptáciu tohto modelu na iné sektory a európske regióny za realizovateľnú?',
-                    pt: 'Considera viável a transferência e adaptação deste modelo para outros setores e regiões europeias?'
+                title: {
+                    en: 'The report is relevant to HR managers, training managers, company trainers and other intended target groups.',
+                    es: 'El informe es relevante para responsables de RRHH, directores de formación, formadores de empresa y otros grupos destinatarios.',
+                    it: 'Il rapporto è rilevante per responsabili HR, responsabili della formazione, formatori aziendali e altri gruppi destinatari.',
+                    de: 'Der Bericht ist relevant für HR-Manager, Ausbildungsleiter, betriebliche Trainer und andere Zielgruppen.',
+                    sk: 'Správa je relevantná pre personálnych manažérov, manažérov vzdelávania, podnikových lektorov a ďalšie cieľové skupiny.',
+                    pt: 'O relatório é relevante para gestores de RH, responsáveis de formação, formadores de empresa e outros grupos-alvo.'
                 }
             },
             {
-                id: 'impact',
-                title: {
-                    en: 'Expected Impact on Workforce Reskilling',
-                    es: 'Impacto Esperado en el Reciclaje Laboral',
-                    it: 'Impatto Atteso sulla Riqualificazione dei Lavoratori',
-                    de: 'Erwartete Wirkung auf die Weiterqualifizierung',
-                    sk: 'Očakávaný vplyv na rekvalifikáciu pracovnej sily',
-                    pt: 'Impacto Esperado na Requalificação dos Trabalhadores'
+                id: 'p4',
+                section: {
+                    en: '2. R1 Purpose and Relevance',
+                    es: '2. Propósito y Relevancia del R1',
+                    it: '2. Scopo e Rilevanza di R1',
+                    de: '2. Zweck und Relevanz von R1',
+                    sk: '2. Účel a význam R1',
+                    pt: '2. Propósito e Relevância do R1'
                 },
-                description: {
-                    en: 'Will this initiative contribute to bridging the AI skills gap for shop-floor and management staff?',
-                    es: '¿Contribuirá esta iniciativa a reducir la brecha de competencias en IA tanto en planta como en perfiles de gestión?',
-                    it: 'Questa iniziativa contribuirà a colmare il divario di competenze sull\'IA sia a livello operativo che dirigenziale?',
-                    de: 'Wird diese Initiative dazu beitragen, die KI-Kompetenzlücke sowohl in der Produktion als auch im Management zu schließen?',
-                    sk: 'Prispeje táto iniciatíva k prekonaniu medzery v zručnostiach v oblasti umelej inteligencie?',
-                    pt: 'Esta iniciativa contribuirá para colmatar a lacuna de competências em IA tanto no chão de fábrica como na gestão?'
+                title: {
+                    en: 'The report provides a useful overview of current developments in AI applied to workplace learning and training.',
+                    es: 'El informe proporciona una visión general útil de los avances actuales de la IA aplicada al aprendizaje y la formación en el trabajo.',
+                    it: 'Il rapporto fornisce una panoramica utile degli sviluppi attuali dell\'IA applicata all\'apprendimento e alla formazione sul lavoro.',
+                    de: 'Der Bericht bietet einen nützlichen Überblick über aktuelle Entwicklungen im Bereich KI für betriebliches Lernen.',
+                    sk: 'Správa poskytuje užitočný prehľad o aktuálnom vývoji v oblasti umelej inteligencie aplikovanej na učenie sa a školenie na pracovisku.',
+                    pt: 'O relatório fornece uma visão geral útil dos desenvolvimentos atuais da IA aplicada à aprendizagem e formação no local de trabalho.'
+                }
+            },
+            {
+                id: 'p5',
+                section: {
+                    en: '2. R1 Purpose and Relevance',
+                    es: '2. Propósito y Relevancia del R1',
+                    it: '2. Scopo e Rilevanza di R1',
+                    de: '2. Zweck und Relevanz von R1',
+                    sk: '2. Účel a význam R1',
+                    pt: '2. Propósito e Relevância do R1'
+                },
+                title: {
+                    en: 'The report maintains an appropriate focus on industrial companies and SMEs.',
+                    es: 'El informe mantiene un enfoque adecuado en las empresas industriales y las PYMEs.',
+                    it: 'Il rapporto mantiene un focus adeguato sulle aziende industriali e sulle PMI.',
+                    de: 'Der Bericht behält einen angemessenen Fokus auf Industrieunternehmen und KMU bei.',
+                    sk: 'Správa si udržiava primerané zameranie na priemyselné podniky a MSP.',
+                    pt: 'O relatório mantém um foco adequado nas empresas industriais e PME.'
+                }
+            },
+            {
+                id: 'p6',
+                section: {
+                    en: '2. R1 Purpose and Relevance',
+                    es: '2. Propósito y Relevancia del R1',
+                    it: '2. Scopo e Rilevanza di R1',
+                    de: '2. Zweck und Relevanz von R1',
+                    sk: '2. Účel a význam R1',
+                    pt: '2. Propósito e Relevância do R1'
+                },
+                title: {
+                    en: 'The findings are sufficiently relevant to support the development of the Learning Brains Training Programme.',
+                    es: 'Las conclusiones son suficientemente relevantes para sustentar el desarrollo del Itinerario Formativo de Learning Brains.',
+                    it: 'I risultati sono sufficientemente rilevanti per supportare lo sviluppo del Programma Formativo di Learning Brains.',
+                    de: 'Die Ergebnisse sind hinreichend relevant, um die Entwicklung des Learning Brains-Schulungsprogramms zu unterstützen.',
+                    sk: 'Zistenia sú dostatočne relevantné na podporu vývoja tréningového programu Learning Brains.',
+                    pt: 'As conclusões são suficientemente relevantes para apoiar o desenvolvimento do Programa de Formação Learning Brains.'
+                }
+            },
+
+            // Section 3: Quality and coverage of the mapping (Q1 - Q7)
+            {
+                id: 'q1',
+                section: {
+                    en: '3. Quality and Coverage of the Mapping',
+                    es: '3. Calidad y Cobertura del Mapeo',
+                    it: '3. Qualità e Copertura della Mappatura',
+                    de: '3. Qualität und Umfang der Erhebung',
+                    sk: '3. Kvalita a rozsah mapovania',
+                    pt: '3. Qualidade e Cobertura do Mapeamento'
+                },
+                title: {
+                    en: 'The report is clearly structured and easy to navigate.',
+                    es: 'El informe está claramente estructurado y es fácil de navegar y consultar.',
+                    it: 'Il rapporto è chiaramente strutturato e facile da consultare.',
+                    de: 'Der Bericht ist klar gegliedert und leicht zu handhaben.',
+                    sk: 'Správa je jasne štruktúrovaná a ľahko sa v nej orientuje.',
+                    pt: 'O relatório está claramente estruturado e é fácil de consultar.'
+                }
+            },
+            {
+                id: 'q2',
+                section: {
+                    en: '3. Quality and Coverage of the Mapping',
+                    es: '3. Calidad y Cobertura del Mapeo',
+                    it: '3. Qualità e Copertura della Mappatura',
+                    de: '3. Qualität und Umfang der Erhebung',
+                    sk: '3. Kvalita a rozsah mapovania',
+                    pt: '3. Qualidade e Cobertura do Mapeamento'
+                },
+                title: {
+                    en: 'The main findings and trends are explained in a clear and understandable way.',
+                    es: 'Los principales hallazgos y tendencias se explican de forma clara y comprensible.',
+                    it: 'I principali risultati e le tendenze sono spiegati in modo chiaro e comprensibile.',
+                    de: 'Die wichtigsten Ergebnisse und Trends werden verständlich erklärt.',
+                    sk: 'Hlavné zistenia a trendy sú vysvetlené jasným a zrozumiteľným spôsobom.',
+                    pt: 'As principais conclusões e tendências são explicadas de forma clara e compreensível.'
+                }
+            },
+            {
+                id: 'q3',
+                section: {
+                    en: '3. Quality and Coverage of the Mapping',
+                    es: '3. Calidad y Cobertura del Mapeo',
+                    it: '3. Qualità e Copertura della Mappatura',
+                    de: '3. Qualität und Umfang der Erhebung',
+                    sk: '3. Kvalita a rozsah mapovania',
+                    pt: '3. Qualidade e Cobertura do Mapeamento'
+                },
+                title: {
+                    en: 'The range of AI tools and applications covered is appropriate for the purpose of the report.',
+                    es: 'La gama de herramientas y aplicaciones de IA abordadas es adecuada para el propósito del informe.',
+                    it: 'La gamma di strumenti e applicazioni di IA trattati è adeguata allo scopo del rapporto.',
+                    de: 'Die Bandbreite der erfassten KI-Tools und -Anwendungen ist für den Zweck des Berichts angemessen.',
+                    sk: 'Rozsah pokrytých nástrojov a aplikácií umelej inteligencie je primeraný účelu správy.',
+                    pt: 'A gama de ferramentas e aplicações de IA abordadas é adequada ao objetivo do relatório.'
+                }
+            },
+            {
+                id: 'q4',
+                section: {
+                    en: '3. Quality and Coverage of the Mapping',
+                    es: '3. Calidad y Cobertura del Mapeo',
+                    it: '3. Qualità e Copertura della Mappatura',
+                    de: '3. Qualität und Umfang der Erhebung',
+                    sk: '3. Kvalita a rozsah mapovania',
+                    pt: '3. Qualidade e Cobertura do Mapeamento'
+                },
+                title: {
+                    en: 'The report provides a balanced view of opportunities, limitations and implementation challenges.',
+                    es: 'El informe proporciona una visión equilibrada de las oportunidades, limitaciones y desafíos de implantación.',
+                    it: 'Il rapporto fornisce una visione equilibrata di opportunità, limiti e sfide di implementazione.',
+                    de: 'Der Bericht bietet eine ausgewogene Sicht auf Chancen, Grenzen und Umsetzungsherausforderungen.',
+                    sk: 'Správa poskytuje vyvážený pohľad na príležitosti, obmedzenia a výzvy pri implementácii.',
+                    pt: 'O relatório fornece uma visão equilibrada das oportunidades, limitações e desafios de implementação.'
+                }
+            },
+            {
+                id: 'q5',
+                section: {
+                    en: '3. Quality and Coverage of the Mapping',
+                    es: '3. Calidad y Cobertura del Mapeo',
+                    it: '3. Qualità e Copertura della Mappatura',
+                    de: '3. Qualität und Umfang der Erhebung',
+                    sk: '3. Kvalita a rozsah mapovania',
+                    pt: '3. Qualidade e Cobertura do Mapeamento'
+                },
+                title: {
+                    en: 'The information presented appears sufficiently current and relevant to today’s training context.',
+                    es: 'La información presentada parece suficientemente actualizada y relevante para el contexto formativo actual.',
+                    it: 'Le informazioni presentate appaiono sufficientemente attuali e rilevanti per il contesto formativo odierno.',
+                    de: 'Die dargelegten Informationen wirken aktuell und für den heutigen Weiterbildungskontext relevant.',
+                    sk: 'Prezentované informácie pôsobia dostatočne aktuálne a relevantne pre dnešný kontext vzdelávania.',
+                    pt: 'A informação apresentada parece suficientemente atual e relevante para o contexto de formação atual.'
+                }
+            },
+            {
+                id: 'q6',
+                section: {
+                    en: '3. Quality and Coverage of the Mapping',
+                    es: '3. Calidad y Cobertura del Mapeo',
+                    it: '3. Qualità e Copertura della Mappatura',
+                    de: '3. Qualität und Umfang der Erhebung',
+                    sk: '3. Kvalita a rozsah mapovania',
+                    pt: '3. Qualidade e Cobertura do Mapeamento'
+                },
+                title: {
+                    en: 'The report reflects a useful range of company, sectoral and/or national contexts.',
+                    es: 'El informe refleja una variedad útil de contextos empresariales, sectoriales y/o nacionales.',
+                    it: 'Il rapporto riflette una gamma utile di contesti aziendali, settoriali e/o nazionali.',
+                    de: 'Der Bericht spiegelt eine nützliche Bandbreite an Unternehmens-, Branchen- und/oder Länderkontexten wider.',
+                    sk: 'Správa odráža užitočnú škálu firemných, sektorových a/alebo národných kontextov.',
+                    pt: 'O relatório reflete uma variedade útil de contextos empresariais, setoriais e/ou nacionais.'
+                }
+            },
+            {
+                id: 'q7',
+                section: {
+                    en: '3. Quality and Coverage of the Mapping',
+                    es: '3. Calidad y Cobertura del Mapeo',
+                    it: '3. Qualità e Copertura della Mappatura',
+                    de: '3. Quality und Umfang der Erhebung',
+                    sk: '3. Kvalita a rozsah mapovania',
+                    pt: '3. Qualidade e Cobertura do Mapeamento'
+                },
+                title: {
+                    en: 'The conclusions are consistent with the evidence and examples presented in the report.',
+                    es: 'Las conclusiones son coherentes con las evidencias y ejemplos presentados en el informe.',
+                    it: 'Le conclusioni sono coerenti con le evidenze e gli esempi presentati nel rapporto.',
+                    de: 'Die Schlussfolgerungen stimmen mit den dargelegten Belegen und Beispielen überein.',
+                    sk: 'Závery sú v súlade s dôkazmi a príkladmi uvedenými v správe.',
+                    pt: 'As conclusões são consistentes com as evidências e exemplos apresentados no relatório.'
+                }
+            },
+
+            // Section 4: AI tools, trends and case studies (T1 - T6)
+            {
+                id: 't1',
+                section: {
+                    en: '4. AI Tools, Trends and Case Studies',
+                    es: '4. Herramientas de IA, Tendencias y Casos de Estudio',
+                    it: '4. Strumenti di IA, Tendenze e Casi Studio',
+                    de: '4. KI-Tools, Trends und Fallstudien',
+                    sk: '4. Nástroje umelej inteligencie, trendy a prípadové štúdie',
+                    pt: '4. Ferramentas de IA, Tendências e Casos de Estudo'
+                },
+                title: {
+                    en: 'The report helps readers understand the potential strengths and limitations of different AI applications.',
+                    es: 'El informe ayuda a comprender las fortalezas y limitaciones potenciales de diferentes aplicaciones de IA.',
+                    it: 'Il rapporto aiuta a comprendere i potenziali punti di forza e i limiti delle diverse applicazioni di IA.',
+                    de: 'Der Bericht hilft, Stärken und Grenzen verschiedener KI-Anwendungen zu verstehen.',
+                    sk: 'Správa pomáha čitateľom pochopiť silné stránky a obmedzenia rôznych aplikácií umelej inteligencie.',
+                    pt: 'O relatório ajuda os leitores a compreender os pontos fortes e limitações de diferentes aplicações de IA.'
+                }
+            },
+            {
+                id: 't2',
+                section: {
+                    en: '4. AI Tools, Trends and Case Studies',
+                    es: '4. Herramientas de IA, Tendencias y Casos de Estudio',
+                    it: '4. Strumenti di IA, Tendenze e Casi Studio',
+                    de: '4. KI-Tools, Trends und Fallstudien',
+                    sk: '4. Nástroje umelej inteligencie, trendy a prípadové štúdie',
+                    pt: '4. Ferramentas de IA, Tendências e Casos de Estudo'
+                },
+                title: {
+                    en: 'The case studies or practical examples are clear and useful.',
+                    es: 'Los casos de estudio o ejemplos prácticos son claros y útiles.',
+                    it: 'I casi studio o gli esempi pratici sono chiari e utili.',
+                    de: 'Die Fallstudien bzw. Praxisbeispiele sind anschaulich und nützlich.',
+                    sk: 'Prípadové štúdie alebo praktické príklady sú jasné a užitočné.',
+                    pt: 'Os casos de estudo ou exemplos práticos são claros e úteis.'
+                }
+            },
+            {
+                id: 't3',
+                section: {
+                    en: '4. AI Tools, Trends and Case Studies',
+                    es: '4. Herramientas de IA, Tendencias y Casos de Estudio',
+                    it: '4. Strumenti di IA, Tendenze e Casi Studio',
+                    de: '4. KI-Tools, Trends und Fallstudien',
+                    sk: '4. Nástroje umelej inteligencie, trendy a prípadové štúdie',
+                    pt: '4. Ferramentas de IA, Tendências e Casos de Estudo'
+                },
+                title: {
+                    en: 'The selected examples illustrate realistic applications of AI in workplace learning.',
+                    es: 'Los ejemplos seleccionados ilustran aplicaciones realistas de la IA en la formación en el trabajo.',
+                    it: 'Gli esempi selezionati illustrano applicazioni realistiche dell\'IA nell\'apprendimento sul lavoro.',
+                    de: 'Die Beispiele verdeutlichen realistische Anwendungen von KI am Arbeitsplatz.',
+                    sk: 'Vybrané príklady ilustrujú realistické aplikácie umelej inteligencie pri učení sa na pracovisku.',
+                    pt: 'Os exemplos selecionados ilustram aplicações realistas da IA na aprendizagem no local de trabalho.'
+                }
+            },
+            {
+                id: 't4',
+                section: {
+                    en: '4. AI Tools, Trends and Case Studies',
+                    es: '4. Herramientas de IA, Tendencias y Casos de Estudio',
+                    it: '4. Strumenti di IA, Tendenze e Casi Studio',
+                    de: '4. KI-Tools, Trends und Fallstudien',
+                    sk: '4. Nástroje umelej inteligencie, trendy a prípadové štúdie',
+                    pt: '4. Ferramentas de IA, Tendências e Casos de Estudo'
+                },
+                title: {
+                    en: 'The report provides enough information to understand the suitability of different approaches for different organisational contexts.',
+                    es: 'El informe aporta información suficiente para comprender la idoneidad de los enfoques según el contexto organizativo.',
+                    it: 'Il rapporto fornisce informazioni sufficienti per comprendere l\'idoneità dei vari approcci per diversi contesti organizzativi.',
+                    de: 'Der Bericht bietet genügend Informationen über die Eignung verschiedener Ansätze für unterschiedliche Kontexte.',
+                    sk: 'Správa poskytuje dostatok informácií na pochopenie vhodnosti rôznych prístupov pre rôzne organizačné kontexty.',
+                    pt: 'O relatório fornece informação suficiente para compreender a adequação das abordagens a diferentes contextos organizacionais.'
+                }
+            },
+            {
+                id: 't5',
+                section: {
+                    en: '4. AI Tools, Trends and Case Studies',
+                    es: '4. Herramientas de IA, Tendencias y Casos de Estudio',
+                    it: '4. Strumenti di IA, Tendenze e Casi Studio',
+                    de: '4. KI-Tools, Trends und Fallstudien',
+                    sk: '4. Nástroje umelej inteligencie, trendy a prípadové štúdie',
+                    pt: '4. Ferramentas de IA, Tendências e Casos de Estudo'
+                },
+                title: {
+                    en: 'The trends and practices highlighted are relevant enough to inform future training content.',
+                    es: 'Las tendencias y prácticas destacadas son lo bastante relevantes para orientar los futuros contenidos formativos.',
+                    it: 'Le tendenze e le pratiche evidenziate sono rilevanti per orientare i futuri contenuti formativi.',
+                    de: 'Die hervorgehobenen Trends sind relevant genug, um künftige Schulungsinhalte zu gestalten.',
+                    sk: 'Zvýraznené trendy a postupy sú dostatočne relevantné na to, aby boli podkladom pre budúci obsah vzdelávania.',
+                    pt: 'As tendências e práticas destacadas são suficientemente relevantes para fundamentar futuros conteúdos formativos.'
+                }
+            },
+            {
+                id: 't6',
+                section: {
+                    en: '4. AI Tools, Trends and Case Studies',
+                    es: '4. Herramientas de IA, Tendencias y Casos de Estudio',
+                    it: '4. Strumenti di IA, Tendenze e Casi Studio',
+                    de: '4. KI-Tools, Trends und Fallstudien',
+                    sk: '4. Nástroje umelej inteligencie, trendy a prípadové štúdie',
+                    pt: '4. Ferramentas de IA, Tendências e Casos de Estudo'
+                },
+                title: {
+                    en: 'The report helps distinguish promising practical uses of AI from applications with limited relevance to workplace training.',
+                    es: 'El informe ayuda a distinguir usos prácticos prometedores de la IA de aplicaciones de escasa relevancia para la formación laboral.',
+                    it: 'Il rapporto aiuta a distinguere gli usi pratici promettenti dell\'IA da applicazioni poco rilevanti per la formazione.',
+                    de: 'Der Bericht hilft, vielversprechende KI-Nutzungen von weniger praxisrelevanten Anwendungen zu unterscheiden.',
+                    sk: 'Správa pomáha odlíšiť sľubné praktické využitia umelej inteligencie od aplikácií s obmedzeným významom pre školenia.',
+                    pt: 'O relatório ajuda a distinguir utilizações práticas promissoras da IA de aplicações com relevância limitada para a formação.'
+                }
+            },
+
+            // Section 5: Practical value and transferability (V1 - V6)
+            {
+                id: 'v1',
+                section: {
+                    en: '5. Practical Value and Transferability',
+                    es: '5. Valor Práctico y Transferibilidad',
+                    it: '5. Valore Pratico e Trasferibilità',
+                    de: '5. Praktischer Nutzen und Übertragbarkeit',
+                    sk: '5. Praktická hodnota a prenositeľnosť',
+                    pt: '5. Valor Prático e Transferibilidade'
+                },
+                title: {
+                    en: 'The report can help HR and training professionals identify possible uses of AI in their own organisations.',
+                    es: 'El informe puede ayudar a los profesionales de RRHH y formación a identificar posibles usos de la IA en sus organizaciones.',
+                    it: 'Il rapporto può aiutare i professionisti di HR e formazione a individuare possibili usi dell\'IA nelle proprie organizzazioni.',
+                    de: 'Der Bericht kann Personal- und Weiterbildungsexperten helfen, Einsatzmöglichkeiten von KI im eigenen Betrieb zu erkennen.',
+                    sk: 'Správa môže pomôcť odborníkom na ľudské zdroje a vzdelávanie identifikovať možné využitie AI vo vlastných organizáciách.',
+                    pt: 'O relatório pode ajudar os profissionais de RH e formação a identificar possíveis usos da IA nas suas organizações.'
+                }
+            },
+            {
+                id: 'v2',
+                section: {
+                    en: '5. Practical Value and Transferability',
+                    es: '5. Valor Práctico y Transferibilidad',
+                    it: '5. Valore Pratico e Trasferibilità',
+                    de: '5. Praktischer Nutzen und Übertragbarkeit',
+                    sk: '5. Praktická hodnota a prenositeľnosť',
+                    pt: '5. Valor Prático e Transferibilidade'
+                },
+                title: {
+                    en: 'The findings are transferable to different industrial company contexts.',
+                    es: 'Las conclusiones son transferibles a diversos contextos de empresas industriales.',
+                    it: 'I risultati sono trasferibili a diversi contesti di aziende industriali.',
+                    de: 'Die Erkenntnisse sind auf verschiedene Industrieunternehmenskontexte übertragbar.',
+                    sk: 'Zistenia sú prenosné do rôznych kontextov priemyselných podnikov.',
+                    pt: 'As conclusões são transferíveis para diferentes contextos de empresas industriais.'
+                }
+            },
+            {
+                id: 'v3',
+                section: {
+                    en: '5. Practical Value and Transferability',
+                    es: '5. Valor Práctico y Transferibilidad',
+                    it: '5. Valore Pratico e Trasferibilità',
+                    de: '5. Praktischer Nutzen und Übertragbarkeit',
+                    sk: '5. Praktická hodnota a prenositeľnosť',
+                    pt: '5. Valor Prático e Transferibilidade'
+                },
+                title: {
+                    en: 'The report provides useful reference points for organisations with different levels of digital maturity.',
+                    es: 'El informe ofrece puntos de referencia útiles para organizaciones con distintos niveles de madurez digital.',
+                    it: 'Il rapporto fornisce utili punti di riferimento per organizzazioni con diversi livelli di maturità digitale.',
+                    de: 'Der Bericht bietet wertvolle Orientierungspunkte für Betriebe mit unterschiedlicher digitaler Reife.',
+                    sk: 'Správa poskytuje užitočné referenčné body pre organizácie s rôznou úrovňou digitálnej zrelosti.',
+                    pt: 'O relatório fornece pontos de referência úteis para organizações com diferentes níveis de maturidade digital.'
+                }
+            },
+            {
+                id: 'v4',
+                section: {
+                    en: '5. Practical Value and Transferability',
+                    es: '5. Valor Práctico y Transferibilidad',
+                    it: '5. Valore Pratico e Trasferibilità',
+                    de: '5. Praktischer Nutzen und Übertragbarkeit',
+                    sk: '5. Praktická hodnota a prenositeľnosť',
+                    pt: '5. Valor Prático e Transferibilidade'
+                },
+                title: {
+                    en: 'The report supports informed decision-making rather than presenting AI tools as solutions in themselves.',
+                    es: 'El informe respalda la toma de decisiones informada en lugar de presentar las herramientas de IA como soluciones aisladas.',
+                    it: 'Il rapporto favorisce un processo decisionale consapevole anziché presentare gli strumenti di IA come soluzioni fini a se stesse.',
+                    de: 'Der Bericht fördert fundierte Entscheidungen, statt KI-Tools als reine Selbstzweck-Lösungen darzustellen.',
+                    sk: 'Správa podporuje informované rozhodovanie namiesto prezentovania nástrojov AI ako riešení samých osebe.',
+                    pt: 'O relatório apoia a tomada de decisões informada em vez de apresentar as ferramentas de IA como soluções em si mesmas.'
+                }
+            },
+            {
+                id: 'v5',
+                section: {
+                    en: '5. Practical Value and Transferability',
+                    es: '5. Valor Práctico y Transferibilidad',
+                    it: '5. Valore Pratico e Trasferibilità',
+                    de: '5. Praktischer Nutzen und Übertragbarkeit',
+                    sk: '5. Praktická hodnota a prenositeľnosť',
+                    pt: '5. Valor Prático e Transferibilidade'
+                },
+                title: {
+                    en: 'Ethical, legal, data protection and/or inclusion considerations are given appropriate attention where relevant.',
+                    es: 'Se presta la debida atención a aspectos éticos, legales, protección de datos e inclusión cuando corresponde.',
+                    it: 'Gli aspetti etici, legali, di protezione dati e inclusione ricevono la dovuta attenzione dove rilevante.',
+                    de: 'Ethische, rechtliche, datenschutzrelevante und inklusive Aspekte werden angemessen berücksichtigt.',
+                    sk: 'Etickým, právnym otázkam, ochrane údajov a inklúzii sa venuje primeraná pozornosť tam, kde je to relevantné.',
+                    pt: 'As considerações éticas, legais, de proteção de dados e/ou inclusão recebem a devida atenção onde relevante.'
+                }
+            },
+            {
+                id: 'v6',
+                section: {
+                    en: '5. Practical Value and Transferability',
+                    es: '5. Valor Práctico y Transferibilidad',
+                    it: '5. Valore Pratico e Trasferibilità',
+                    de: '5. Praktischer Nutzen und Übertragbarkeit',
+                    sk: '5. Praktická hodnota a prenositeľnosť',
+                    pt: '5. Valor Prático e Transferibilidade'
+                },
+                title: {
+                    en: 'Overall, the report provides a solid knowledge base for the Learning Brains Training Programme and Toolkit.',
+                    es: 'En conjunto, el informe aporta una base sólida de conocimiento para el Itinerario Formativo y el Toolkit de Learning Brains.',
+                    it: 'Complessivamente, il rapporto fornisce una solida base di conoscenza per il Programma Formativo e il Toolkit di Learning Brains.',
+                    de: 'Insgesamt bietet der Bericht eine solide Wissensbasis für das Schulungsprogramm und das Toolkit von Learning Brains.',
+                    sk: 'Celkovo správa poskytuje solídnu znalostnú základňu pre tréningový program a balík nástrojov (Toolkit) Learning Brains.',
+                    pt: 'Globalmente, o relatório fornece uma base sólida de conhecimento para o Programa de Formação e Toolkit de Learning Brains.'
                 }
             }
         ],
         qualitativeQuestions: [
             {
-                id: 'strengths',
+                id: 'rec_1',
                 title: {
-                    en: 'Key Strengths',
-                    es: 'Puntos Fuertes Destacados',
-                    it: 'Punti di Forza Principali',
-                    de: 'Wesentliche Stärken',
-                    sk: 'Hlavné silné stránky',
-                    pt: 'Principais Pontos Fortes'
+                    en: '6.1 Which findings, trends, tools or case studies do you consider most relevant and worth emphasising in the final Mapping Report?',
+                    es: '6.1 ¿Qué hallazgos, tendencias, herramientas o casos de estudio consideras más relevantes y destacables en el informe final?',
+                    it: '6.1 Quali risultati, tendenze, strumenti o casi studio ritiene più rilevanti ed evidenziabili nel rapporto finale?',
+                    de: '6.1 Welche Ergebnisse, Trends, Tools oder Fallstudien halten Sie für besonders relevant und hervorhebenswert?',
+                    sk: '6.1 Ktoré zistenia, trendy, nástroje alebo prípadové štúdie považujete za najrelevantnejšie pre záverečnú správu?',
+                    pt: '6.1 Que conclusões, tendências, ferramentas ou casos de estudo considera mais relevantes destacar no relatório final?'
                 },
                 placeholder: {
-                    en: 'Highlight what you consider the most innovative or valuable elements...',
-                    es: 'Señala los aspectos más innovadores, útiles o acertados de la propuesta...',
-                    it: 'Evidenzia gli elementi più innovativi, utili o validi della proposta...',
-                    de: 'Heben Sie die innovativsten oder wertvollsten Aspekte hervor...',
-                    sk: 'Uveďte najinovatívnejšie alebo najhodnotnejšie prvky návrhu...',
-                    pt: 'Destaque os elementos mais inovadores, úteis ou acertados da proposta...'
+                    en: 'Share key insights, trends or practical examples that stood out to you...',
+                    es: 'Indica los hallazgos, tendencias o ejemplos prácticos que más valor aportan...',
+                    it: 'Indica i risultati, le tendenze o gli esempi pratici che ritiene di maggior valore...',
+                    de: 'Geben Sie die wertvollsten Ergebnisse, Trends oder Praxisbeispiele an...',
+                    sk: 'Uveďte zistenia, trendy alebo praktické príklady, ktoré prinášajú najväčšiu hodnotu...',
+                    pt: 'Indique as conclusões, tendências ou exemplos práticos que mais valor acrescentam...'
                 }
             },
             {
-                id: 'improvements',
+                id: 'rec_2',
                 title: {
-                    en: 'Recommendations & Improvement Areas',
-                    es: 'Recomendaciones y Aspectos a Mejorar',
-                    it: 'Raccomandazioni e Aspetti da Migliorare',
-                    de: 'Empfehlungen & Verbesserungsbereiche',
-                    sk: 'Odporúčania a oblasti na zlepšenie',
-                    pt: 'Recomendações e Áreas de Melhoria'
+                    en: '6.2 Is there any important trend, type of AI application, implementation challenge or perspective that is missing or underrepresented?',
+                    es: '6.2 ¿Falta o está poco representada alguna tendencia, tipo de aplicación de IA, reto de implantación o perspectiva relevante?',
+                    it: '6.2 Manca o è poco rappresentata qualche tendenza, tipo di applicazione IA, sfida di implementazione o prospettiva?',
+                    de: '6.2 Fehlt ein wichtiger Trend, eine KI-Anwendung, eine Hürde oder eine Perspektive bzw. kommt zu kurz?',
+                    sk: '6.2 Chýba alebo je nedostatočne zastúpený nejaký dôležitý trend, typ aplikácie AI, výzva alebo perspektíva?',
+                    pt: '6.2 Falta ou está sub-representada alguma tendência, tipo de aplicação de IA, desafio de implementação ou perspetiva?'
                 },
                 placeholder: {
-                    en: 'What could be refined, clarified or added to increase practical effectiveness?',
-                    es: '¿Qué aspectos deberían matizarse, simplificarse o reforzarse para aumentar su eficacia real?',
-                    it: 'Cosa si potrebbe perfezionare, chiarire o aggiungere per aumentarne l\'efficacia pratica?',
-                    de: 'Was könnte verfeinert, präzisiert oder ergänzt werden, um die praktische Wirksamkeit zu erhöhen?',
-                    sk: 'Čo by bolo potrebné spresniť alebo doplniť na zvýšenie praktickej účinnosti?',
-                    pt: 'O que poderia ser ajustado, clarificado ou acrescentado para aumentar a eficácia prática?'
+                    en: 'Mention any missing technological trends, SME barriers or perspectives...',
+                    es: 'Menciona tendencias, dificultades en PYMEs o perspectivas que convendría incorporar...',
+                    it: 'Menziona tendenze, barriere nelle PMI o prospettive che sarebbe utile integrare...',
+                    de: 'Nennen Sie Trends, Hürden für KMU oder Perspektiven, die ergänzt werden sollten...',
+                    sk: 'Uveďte trendy, prekážky pre MSP alebo perspektívy, ktoré by bolo vhodné doplniť...',
+                    pt: 'Mencione tendências, barreiras nas PME ou perspetivas que seria útil integrar...'
                 }
             },
             {
-                id: 'regional_challenges',
+                id: 'rec_3',
                 title: {
-                    en: 'National / Regional Context & Specificities',
-                    es: 'Contexto y Retos Específicos en tu País / Región',
-                    it: 'Contesto e Sfide Specifiche nel Vostro Paese / Regione',
-                    de: 'Nationaler / Regionaler Kontext & Spezifische Herausforderungen',
-                    sk: 'Národný / Regionálny kontext a špecifické výzvy',
-                    pt: 'Contexto e Desafios Específicos no seu País / Região'
+                    en: '6.3 Are there any sections or statements that should be clarified, corrected, updated or simplified?',
+                    es: '6.3 ¿Hay secciones o afirmaciones que deban aclararse, corregirse, actualizarse o simplificarse?',
+                    it: '6.3 Ci sono sezioni o affermazioni che dovrebbero essere chiarite, corrette, aggiornate o semplificate?',
+                    de: '6.3 Gibt es Abschnitte oder Aussagen, die präzisiert, korrigiert, aktualisiert oder vereinfacht werden sollten?',
+                    sk: '6.3 Sú v správe časti alebo tvrdenia, ktoré by bolo potrebné objasniť, opraviť, aktualizovať alebo zjednodušiť?',
+                    pt: '6.3 Existem secções ou afirmações que devam ser clarificadas, corrigidas, atualizadas ou simplificadas?'
                 },
                 placeholder: {
-                    en: 'Any particularities or obstacles for adoption in your industrial ecosystem?',
-                    es: '¿Qué particularidades o barreras detectas para su implantación en las empresas de tu entorno?',
-                    it: 'Quali particolarità o barriere individuate per l\'adozione nelle aziende del vostro territorio?',
-                    de: 'Welche Besonderheiten oder Hindernisse sehen Sie für die Einführung in Unternehmen Ihrer Region?',
-                    sk: 'Aké osobitosti alebo prekážky vnímate pri zavádzaní v podnikoch vášho regiónu?',
-                    pt: 'Que particularidades ou barreiras identifica para a sua implementação nas empresas do seu meio?'
+                    en: 'Note any specific sections, terms or statements requiring improvement...',
+                    es: 'Señala secciones, conceptos o afirmaciones concretas que requieran revisión...',
+                    it: 'Segnala sezioni, concetti o affermazioni specifiche che necessitano di revisione...',
+                    de: 'Weisen Sie auf konkrete Abschnitte, Begriffe oder Aussagen hin, die überarbeitet werden sollten...',
+                    sk: 'Poukážte na konkrétne časti, pojmy alebo tvrdenia, ktoré si vyžadujú revíziu...',
+                    pt: 'Aponte secções, conceitos ou afirmações específicas que necessitem de revisão...'
+                }
+            },
+            {
+                id: 'rec_4',
+                title: {
+                    en: '6.4 What is the single most important improvement you would recommend before finalising the Mapping Report?',
+                    es: '6.4 ¿Cuál es la mejora principal y más importante que recomendarías antes de cerrar el Informe de Mapeo?',
+                    it: '6.4 Qual è il miglioramento più importante che raccomanderebbe prima di finalizzare il rapporto?',
+                    de: '6.4 Was ist die wichtigste Einzelverbesserung, die Sie vor Fertigstellung des Berichts empfehlen würden?',
+                    sk: '6.4 Aké je jedno najdôležitejšie zlepšenie, ktoré by ste odporučili pred finalizáciou mapovacej správy?',
+                    pt: '6.4 Qual é a melhoria individual mais importante que recomendaria antes de finalizar o relatório?'
+                },
+                placeholder: {
+                    en: 'Describe your highest-priority recommendation...',
+                    es: 'Describe tu recomendación prioritaria...',
+                    it: 'Descrivi la tua raccomandazione prioritaria...',
+                    de: 'Beschreiben Sie Ihre wichtigste Priorität...',
+                    sk: 'Opíšte svoje prioritné odporúčanie...',
+                    pt: 'Descreva a sua recomendação prioritária...'
+                }
+            },
+            {
+                id: 'rec_5',
+                title: {
+                    en: '6.5 Optional: Is there anything else you would like to add that has not been covered by the previous questions?',
+                    es: '6.5 Opcional: ¿Deseas añadir algún otro comentario u observación que no se haya tratado en las preguntas anteriores?',
+                    it: '6.5 Facoltativo: Desidera aggiungere altro che non sia stato trattato nelle domande precedenti?',
+                    de: '6.5 Optional: Möchten Sie noch etwas hinzufügen, das bisher nicht angesprochen wurde?',
+                    sk: '6.5 Voliteľné: Chceli by ste dodať čokoľvek ďalšie, čo nebolo pokryté predchádzajúcimi otázkami?',
+                    pt: '6.5 Opcional: Gostaria de acrescentar algo mais que não tenha sido abrangido nas questões anteriores?'
+                },
+                placeholder: {
+                    en: 'Any further comments or feedback...',
+                    es: 'Cualquier otro comentario u observación adicional...',
+                    it: 'Eventuali ulteriori commenti o osservazioni...',
+                    de: 'Weitere Anmerkungen oder Feedback...',
+                    sk: 'Akékoľvek ďalšie pripomienky alebo postrehy...',
+                    pt: 'Quaisquer outros comentários ou observações adicionais...'
                 }
             }
         ]
@@ -1356,6 +1881,22 @@ export const VALIDATION_UI = {
         sk: 'Odborný profil / Pôsobenie',
         pt: 'Perfil Profissional'
     },
+    position_role: {
+        en: 'Position / Role',
+        es: 'Puesto / Cargo',
+        it: 'Posizione / Ruolo',
+        de: 'Position / Rolle',
+        sk: 'Pozícia / Rola',
+        pt: 'Posição / Cargo'
+    },
+    professional_profile: {
+        en: 'Professional Profile',
+        es: 'Perfil Profesional',
+        it: 'Profilo Professionale',
+        de: 'Berufliches Profil',
+        sk: 'Profesijný profil',
+        pt: 'Perfil Profissional'
+    },
     years_experience: {
         en: 'Years of professional experience in education, training, HR, industry or tech',
         es: 'Años de experiencia profesional en educación, formación, RRHH, industria o tecnología',
@@ -1555,6 +2096,22 @@ export const VALIDATION_UI = {
         de: 'Rolle / Profil',
         sk: 'Rola / Profil',
         pt: 'Função / Perfil'
+    },
+    summary_position: {
+        en: 'Position / Role',
+        es: 'Puesto / Cargo',
+        it: 'Posizione / Ruolo',
+        de: 'Position / Rolle',
+        sk: 'Pozícia / Rola',
+        pt: 'Posição / Cargo'
+    },
+    summary_profile: {
+        en: 'Professional Profile',
+        es: 'Perfil Profesional',
+        it: 'Profilo Professionale',
+        de: 'Berufliches Profil',
+        sk: 'Profesijný profil',
+        pt: 'Perfil Profissional'
     },
     summary_quantitative: {
         en: 'Quantitative Questions',
