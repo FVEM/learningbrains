@@ -610,6 +610,11 @@ export default function ValidationPortal() {
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
                                             {tr(campaign.meta.instructions)}
                                         </p>
+                                        {campaign.meta.workingDocumentNote && (
+                                            <p className="text-xs sm:text-sm text-slate-600 italic leading-relaxed pt-1 border-t border-teal-100/60 mt-1">
+                                                {tr(campaign.meta.workingDocumentNote)}
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
                             </div>

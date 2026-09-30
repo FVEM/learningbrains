@@ -343,6 +343,14 @@ export const VALIDATION_CAMPAIGNS = {
                 de: 'Dieser Fragebogen dient der ersten Konsultation des Nationalen Pilot-Ausschusses (NPC) zu R1 – Mapping-Bericht über KI-Tools für die betriebliche Ausbildung: Trends und Fallstudien. Ihr Expertenfeedback fließt direkt in die Finalisierung des Berichts ein. Geschätzte Dauer: 10-15 Minuten.',
                 sk: 'Tento dotazník je určený pre prvú konzultáciu Národného pilotného výboru (NPC) k R1 – Mapovacia správa o nástrojoch umelej inteligencie pre prax vzdelávania na pracovisku: Trendy a prípadové štúdie. Vaša spätná väzba podporí kvalitu a praktickú využiteľnosť správy pred jej dokončením. Odhadovaný čas: 10-15 minút.',
                 pt: 'Este questionário destina-se à primeira consulta do Comité Piloto Nacional (NPC) sobre o R1 – Relatório de Mapeamento de Ferramentas de IA para a Formação no Posto de Trabalho: Tendências e Casos de Estudo. O seu feedback apoiará a qualidade, relevância e utilidade prática do relatório antes da sua conclusão. Tempo estimado: 10-15 minutos.'
+            },
+            workingDocumentNote: {
+                en: 'Please note that this is a working document. The final report to be published on the website will be generated incorporating the consultation contributions and the considerations of the working group.',
+                es: 'Ten en cuenta que el presente es un documento de trabajo (working document). Con las aportaciones de la consulta y las consideraciones del grupo de trabajo se generará el informe definitivo visible en la web.',
+                it: 'Si prega di notare che questo è un documento di lavoro (working document). Con i contributi della consultazione e le considerazioni del gruppo di lavoro verrà generato il rapporto definitivo visibile sul sito web.',
+                de: 'Bitte beachten Sie, dass es sich hierbei um ein Arbeitsdokument (Working Document) handelt. Auf Grundlage der Konsultationsbeiträge und der Beratungen der Arbeitsgruppe wird der endgültige Bericht auf der Website veröffentlicht.',
+                sk: 'Upozorňujeme, že toto je pracovný dokument (working document). Na základe príspevkov z konzultácie a odporúčaní pracovnej skupiny bude vypracovaná konečná správa zverejnená na webe.',
+                pt: 'Tenha em atenção que este é um documento de trabalho (working document). Com os contributos da consulta e as considerações do grupo de trabalho será gerado o relatório definitivo visível no website.'
             }
         },
         likertQuestions: [
@@ -975,6 +983,14 @@ export const VALIDATION_CAMPAIGNS = {
                 de: 'Dieses Dokument definiert den curricularen Rahmen und die Kernkompetenzen für KI am Arbeitsplatz. Bitte bewerten Sie den Entwurf im Anschluss im Fragebogen (~10–15 Min.) auf Basis Ihrer Berufserfahrung.',
                 sk: 'Tento dokument definuje kurikulárny rámec a kľúčové kompetencie pre využitie AI pri vzdelávaní na pracovisku. Po jeho preštudovaní vyplňte dotazník (~10–15 min) na základe vašich odborných skúseností.',
                 pt: 'Este documento define o quadro curricular e as competências-chave para o uso da IA na formação no posto de trabalho. Após a sua leitura, responda ao questionário (~10–15 min) com base na sua experiência profissional.'
+            },
+            workingDocumentNote: {
+                en: 'Please note that this is a working document. The final version to be published on the website will be generated incorporating the validation contributions and the considerations of the working group.',
+                es: 'Ten en cuenta que el presente es un documento de trabajo (working document). Con las aportaciones de las validaciones y las consideraciones del grupo de trabajo se generará el documento definitivo visible en la web.',
+                it: 'Si prega di notare che questo è un documento di lavoro (working document). Con i contributi delle validazioni e le considerazioni del gruppo di lavoro verrà generato il documento definitivo visibile sul sito web.',
+                de: 'Bitte beachten Sie, dass es sich hierbei um ein Arbeitsdokument (Working Document) handelt. Auf Grundlage der Validierungsbeiträge und der Empfehlungen der Arbeitsgruppe wird das endgültige, auf der Website sichtbare Dokument erstellt.',
+                sk: 'Upozorňujeme, že toto je pracovný dokument (working document). Na základe podnetov z validácie a pripomienok pracovnej skupiny bude vypracovaný konečný dokument zverejnený na webe.',
+                pt: 'Tenha em atenção que este é um documento de trabalho (working document). Com os contributos das validações e as considerações do grupo de trabalho será gerado o documento definitivo visível no website.'
             }
         },
         likertQuestions: [
