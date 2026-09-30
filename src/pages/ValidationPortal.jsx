@@ -83,6 +83,12 @@ export default function ValidationPortal() {
         campaign?.documentUrls?.[currentLang] &&
         campaign?.documentUrls?.[currentLang] !== originalDocumentUrl
     );
+    const isAiTranslatedDoc = Boolean(
+        isTranslatedDoc &&
+        (campaign?.aiTranslatedLanguages
+            ? campaign.aiTranslatedLanguages.includes(currentLang)
+            : false)
+    );
 
     // Form state
     const [evaluator, setEvaluator] = useState({
@@ -513,10 +519,14 @@ export default function ValidationPortal() {
                                                             <div className="min-w-0">
                                                                 <div className="text-xs font-bold text-slate-800 group-hover:text-brand-primary flex items-center gap-1.5">
                                                                     <span>{currentLangObj.name}</span>
-                                                                    <span className="text-[10px] text-amber-700 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200 font-medium">IA</span>
+                                                                    {isAiTranslatedDoc ? (
+                                                                        <span className="text-[10px] text-amber-700 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200 font-medium">IA</span>
+                                                                    ) : (
+                                                                        <span className="text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200 font-medium">{ui('reviewed_version')}</span>
+                                                                    )}
                                                                 </div>
                                                                 <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
-                                                                    {ui('download_translated_desc')}
+                                                                    {isAiTranslatedDoc ? ui('download_translated_desc') : ui('download_reviewed_desc')}
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -556,7 +566,7 @@ export default function ValidationPortal() {
                                 </div>
 
                                 {/* AI Translation Notice Banner */}
-                                {isTranslatedDoc && (
+                                {isAiTranslatedDoc && (
                                     <div className="px-4 py-2.5 bg-amber-50/90 border-b border-amber-200/80 flex items-start gap-2.5 text-xs text-amber-900 leading-relaxed">
                                         <span className="text-base select-none shrink-0" aria-hidden="true">🤖</span>
                                         <p>

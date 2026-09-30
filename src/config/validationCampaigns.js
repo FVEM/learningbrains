@@ -942,6 +942,7 @@ export const VALIDATION_CAMPAIGNS = {
             pt: '/documents/validation/learning-brains-training-itinerary-pt.pdf',
             sk: '/documents/validation/learning-brains-training-itinerary-sk.pdf'
         },
+        aiTranslatedLanguages: ['es'],
         meta: {
             tag: {
                 en: 'Training Pathway Curriculum',
@@ -2248,6 +2249,22 @@ export const VALIDATION_UI = {
         de: 'KI-Übersetzung (im Viewer angezeigt)',
         sk: 'Preklad pomocou AI (zobrazený v prehliadači)',
         pt: 'Tradução por IA (apresentada no visualizador)'
+    },
+    reviewed_version: {
+        en: 'Reviewed Translation',
+        es: 'Traducción Revisada',
+        it: 'Traduzione Revisionata',
+        de: 'Geprüfte Übersetzung',
+        sk: 'Revidovaný preklad',
+        pt: 'Tradução Revista'
+    },
+    download_reviewed_desc: {
+        en: 'Official translation reviewed and verified by native experts',
+        es: 'Traducción oficial revisada y verificada por expertos nativos',
+        it: 'Traduzione ufficiale revisionata e verificata da esperti madrelingua',
+        de: 'Offizielle Übersetzung, von muttersprachlichen Experten geprüft',
+        sk: 'Oficiálny preklad overený odborníkmi z radov rodených hovoriacich',
+        pt: 'Tradução oficial revista e verificada por especialistas nativos'
     },
     download_original_pdf: {
         en: 'Download Original PDF (EN)',
