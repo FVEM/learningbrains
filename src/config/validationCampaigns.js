@@ -346,11 +346,11 @@ export const VALIDATION_CAMPAIGNS = {
             },
             workingDocumentNote: {
                 en: 'Please note that this is a working document. The final report to be published on the website will be generated incorporating the consultation contributions and the considerations of the working group.',
-                es: 'Ten en cuenta que el presente es un documento de trabajo (working document). Con las aportaciones de la consulta y las consideraciones del grupo de trabajo se generará el informe definitivo visible en la web.',
-                it: 'Si prega di notare che questo è un documento di lavoro (working document). Con i contributi della consultazione e le considerazioni del gruppo di lavoro verrà generato il rapporto definitivo visibile sul sito web.',
-                de: 'Bitte beachten Sie, dass es sich hierbei um ein Arbeitsdokument (Working Document) handelt. Auf Grundlage der Konsultationsbeiträge und der Beratungen der Arbeitsgruppe wird der endgültige Bericht auf der Website veröffentlicht.',
-                sk: 'Upozorňujeme, že toto je pracovný dokument (working document). Na základe príspevkov z konzultácie a odporúčaní pracovnej skupiny bude vypracovaná konečná správa zverejnená na webe.',
-                pt: 'Tenha em atenção que este é um documento de trabalho (working document). Com os contributos da consulta e as considerações do grupo de trabalho será gerado o relatório definitivo visível no website.'
+                es: 'Ten en cuenta que el presente es un documento de trabajo. Con las aportaciones de la consulta y las consideraciones del grupo de trabajo se generará el informe definitivo visible en la web.',
+                it: 'Si prega di notare che questo è un documento di lavoro. Con i contributi della consultazione e le considerazioni del gruppo di lavoro verrà generato il rapporto definitivo visibile sul sito web.',
+                de: 'Bitte beachten Sie, dass es sich hierbei um ein Arbeitsdokument handelt. Auf Grundlage der Konsultationsbeiträge und der Beratungen der Arbeitsgruppe wird der endgültige Bericht auf der Website veröffentlicht.',
+                sk: 'Upozorňujeme, že toto je pracovný dokument. Na základe príspevkov z konzultácie a odporúčaní pracovnej skupiny bude vypracovaná konečná správa zverejnená na webe.',
+                pt: 'Tenha em atenção que este é um documento de trabalho. Com os contributos da consulta e as considerações do grupo de trabalho será gerado o relatório definitivo visível no website.'
             }
         },
         likertQuestions: [
@@ -986,11 +986,11 @@ export const VALIDATION_CAMPAIGNS = {
             },
             workingDocumentNote: {
                 en: 'Please note that this is a working document. The final version to be published on the website will be generated incorporating the validation contributions and the considerations of the working group.',
-                es: 'Ten en cuenta que el presente es un documento de trabajo (working document). Con las aportaciones de las validaciones y las consideraciones del grupo de trabajo se generará el documento definitivo visible en la web.',
-                it: 'Si prega di notare che questo è un documento di lavoro (working document). Con i contributi delle validazioni e le considerazioni del gruppo di lavoro verrà generato il documento definitivo visibile sul sito web.',
-                de: 'Bitte beachten Sie, dass es sich hierbei um ein Arbeitsdokument (Working Document) handelt. Auf Grundlage der Validierungsbeiträge und der Empfehlungen der Arbeitsgruppe wird das endgültige, auf der Website sichtbare Dokument erstellt.',
-                sk: 'Upozorňujeme, že toto je pracovný dokument (working document). Na základe podnetov z validácie a pripomienok pracovnej skupiny bude vypracovaný konečný dokument zverejnený na webe.',
-                pt: 'Tenha em atenção que este é um documento de trabalho (working document). Com os contributos das validações e as considerações do grupo de trabalho será gerado o documento definitivo visível no website.'
+                es: 'Ten en cuenta que el presente es un documento de trabajo. Con las aportaciones de las validaciones y las consideraciones del grupo de trabajo se generará el documento definitivo visible en la web.',
+                it: 'Si prega di notare che questo è un documento di lavoro. Con i contributi delle validazioni e le considerazioni del gruppo di lavoro verrà generato il documento definitivo visibile sul sito web.',
+                de: 'Bitte beachten Sie, dass es sich hierbei um ein Arbeitsdokument handelt. Auf Grundlage der Validierungsbeiträge und der Empfehlungen der Arbeitsgruppe wird das endgültige, auf der Website sichtbare Dokument erstellt.',
+                sk: 'Upozorňujeme, že toto je pracovný dokument. Na základe podnetov z validácie a pripomienok pracovnej skupiny bude vypracovaný konečný dokument zverejnený na webe.',
+                pt: 'Tenha em atenção que este é um documento de trabalho. Com os contributos das validações e as considerações do grupo de trabalho será gerado o documento definitivo visível no website.'
             }
         },
         likertQuestions: [
