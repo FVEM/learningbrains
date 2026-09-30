@@ -950,7 +950,7 @@ export const VALIDATION_CAMPAIGNS = {
             pt: '/documents/validation/learning-brains-training-itinerary-pt.pdf',
             sk: '/documents/validation/learning-brains-training-itinerary-sk.pdf'
         },
-        aiTranslatedLanguages: ['es'],
+        aiTranslatedLanguages: ['es', 'sk'],
         meta: {
             tag: {
                 en: 'Training Pathway Curriculum',
