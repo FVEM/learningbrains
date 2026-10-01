@@ -1715,12 +1715,12 @@ export const VALIDATION_UI = {
         pt: 'Ações e Entregáveis Ativos para Validação'
     },
     hub_upcoming_section_title: {
-        en: 'Upcoming Validation Phases (Project Roadmap)',
-        es: 'Próximas Fases de Validación (Roadmap del Proyecto)',
-        it: 'Prossime Fasi di Validazione (Roadmap del Progetto)',
-        de: 'Kommende Validierungsphasen (Projekt-Roadmap)',
-        sk: 'Pripravované fázy validácie (Harmonogram projektu)',
-        pt: 'Próximas Fases de Validação (Roteiro do Projeto)'
+        en: 'Upcoming Validation Phases',
+        es: 'Próximas Fases de Validación',
+        it: 'Prossime Fasi di Validazione',
+        de: 'Kommende Validierungsphasen',
+        sk: 'Pripravované fázy validácie',
+        pt: 'Próximas Fases de Validação'
     },
     hub_available_count: {
         en: 'available',
