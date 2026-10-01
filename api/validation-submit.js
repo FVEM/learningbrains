@@ -62,22 +62,13 @@ export default async function handler(req, res) {
         // Send email alert via Resend if configured
         if (resend) {
             try {
-                const ratingsSummary = Object.entries(ratings)
-                    .map(([k, v]) => `<li><strong>${k}:</strong> ${v} / 5</li>`)
-                    .join('');
-
-                const feedbackSummary = Object.entries(feedback)
-                    .filter(([, v]) => v && v.trim())
-                    .map(([k, v]) => `<p><strong>${k}:</strong><br/>${v.replace(/\n/g, '<br/>')}</p>`)
-                    .join('');
-
                 await resend.emails.send({
                     from: 'Learning Brains Validation <noreply@learningbrains.eu>',
                     to: ['joseba@fvem.es'],
-                    subject: `[Learning Brains] Nueva Validación Externa: ${campaignTitle || campaignId} (${evaluator.country || 'EU'})`,
+                    subject: `[Learning Brains] Nueva Validación: ${campaignTitle || campaignId} - ${evaluator.name || 'Evaluador'} (${evaluator.country || 'EU'})`,
                     html: `
-                        <h2>Nueva Aportación de Validación Externa</h2>
-                        <p><strong>Campaña:</strong> ${campaignTitle || campaignId} (${campaignId})</p>
+                        <h2>Nueva Aportación de Validación</h2>
+                        <p><strong>Campaña:</strong> ${campaignTitle || campaignId}</p>
                         <p><strong>Fecha/Hora:</strong> ${timestamp}</p>
                         <hr/>
                         <h3>Perfil del Evaluador</h3>
@@ -91,14 +82,9 @@ export default async function handler(req, res) {
                             ${evaluator.aiExperience ? `<li><strong>Experiencia con IA:</strong> ${evaluator.aiExperience}</li>` : ''}
                             <li><strong>Idioma empleado:</strong> ${language.toUpperCase()}</li>
                         </ul>
-                        <hr/>
-                        <h3>Puntuaciones Cuantitativas</h3>
-                        <ul>
-                            ${ratingsSummary || '<li>No se registraron puntuaciones</li>'}
-                        </ul>
-                        <hr/>
-                        <h3>Comentarios Cualitativos</h3>
-                        ${feedbackSummary || '<p>Sin observaciones abiertas</p>'}
+                        <p style="color: #64748b; font-size: 13px; margin-top: 16px;">
+                            <em>Las respuestas detalladas, puntuaciones y comentarios se registran automáticamente en la hoja compartida de Google Sheets.</em>
+                        </p>
                     `
                 });
             } catch (emailError) {
