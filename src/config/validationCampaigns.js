@@ -305,7 +305,7 @@ export const VALIDATION_CAMPAIGNS = {
     'npc-1': {
         id: 'npc-1',
         slug: 'npc-1',
-        status: 'active',
+        status: 'upcoming',
         profileType: 'npc',
         documentUrl: '/documents/validation/learning-brains-npc1-good-practices-en.pdf',
         documentUrls: {
