@@ -34,8 +34,8 @@ export default async function handler(req, res) {
 
         let sheetResult = null;
         let webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbyqfyXKBvv_g6Eso97FibinK2W_BcailgefPpKoB4EwAt86xp0QfP53gbJmlaZEJfLP/exec';
-        if (campaignId === 'npc-1' && process.env.GOOGLE_SHEET_WEBHOOK_URL_NPC1) {
-            webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL_NPC1;
+        if (campaignId === 'npc-1') {
+            webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL_NPC1 || 'https://script.google.com/macros/s/AKfycbxcFb4k1yLxyCf97jjI9JxncjFRlnP9_GuKeJd350lHWsKT7YD4cA5vBLsT4Zwm5jtaDw/exec';
         }
 
         if (webhookUrl) {
