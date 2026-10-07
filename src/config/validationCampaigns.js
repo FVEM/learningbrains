@@ -309,7 +309,12 @@ export const VALIDATION_CAMPAIGNS = {
         profileType: 'npc',
         documentUrl: '/documents/validation/learning-brains-npc1-good-practices-en.pdf',
         documentUrls: {
-            en: '/documents/validation/learning-brains-npc1-good-practices-en.pdf'
+            en: '/documents/validation/learning-brains-npc1-good-practices-en.pdf',
+            es: '/documents/validation/learning-brains-npc1-good-practices-es.pdf',
+            de: '/documents/validation/learning-brains-npc1-good-practices-de.pdf',
+            it: '/documents/validation/learning-brains-npc1-good-practices-it.pdf',
+            pt: '/documents/validation/learning-brains-npc1-good-practices-pt.pdf',
+            sk: '/documents/validation/learning-brains-npc1-good-practices-sk.pdf'
         },
         meta: {
             tag: {
