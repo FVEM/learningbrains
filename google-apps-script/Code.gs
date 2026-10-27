@@ -44,21 +44,21 @@ function doPost(e) {
 
     const nextRow = sheet.getLastRow() + 1;
 
-    // Excel / Sheets formulas for current row averages
+    // Excel / Sheets formulas for current row averages (IFERROR prevents #DIV/0! when all items in a section are N/A)
     // Sec 2: P1-P5 (cols 12-16: L to P)
-    const formulaMediaP = '=AVERAGE(L' + nextRow + ':P' + nextRow + ')';
+    const formulaMediaP = '=IFERROR(AVERAGE(L' + nextRow + ':P' + nextRow + '), "")';
     // Sec 3: S1-S4 (cols 17-20: Q to T)
-    const formulaMediaS = '=AVERAGE(Q' + nextRow + ':T' + nextRow + ')';
+    const formulaMediaS = '=IFERROR(AVERAGE(Q' + nextRow + ':T' + nextRow + '), "")';
     // Sec 4: U1-U4 (cols 21-24: U to X)
-    const formulaMediaU = '=AVERAGE(U' + nextRow + ':X' + nextRow + ')';
+    const formulaMediaU = '=IFERROR(AVERAGE(U' + nextRow + ':X' + nextRow + '), "")';
     // Sec 5: C1-C4 (cols 25-28: Y to AB)
-    const formulaMediaC = '=AVERAGE(Y' + nextRow + ':AB' + nextRow + ')';
+    const formulaMediaC = '=IFERROR(AVERAGE(Y' + nextRow + ':AB' + nextRow + '), "")';
     // Sec 6: T1-T5 (cols 29-33: AC to AG)
-    const formulaMediaT = '=AVERAGE(AC' + nextRow + ':AG' + nextRow + ')';
+    const formulaMediaT = '=IFERROR(AVERAGE(AC' + nextRow + ':AG' + nextRow + '), "")';
     // Sec 7: E1-E4 (cols 34-37: AH to AK)
-    const formulaMediaE = '=AVERAGE(AH' + nextRow + ':AK' + nextRow + ')';
+    const formulaMediaE = '=IFERROR(AVERAGE(AH' + nextRow + ':AK' + nextRow + '), "")';
     // Overall Mean: P1 to E4 (cols 12-37: L to AK)
-    const formulaMediaGlobal = '=AVERAGE(L' + nextRow + ':AK' + nextRow + ')';
+    const formulaMediaGlobal = '=IFERROR(AVERAGE(L' + nextRow + ':AK' + nextRow + '), "")';
 
     // Data row: exactly 47 aligned columns
     const rowData = [

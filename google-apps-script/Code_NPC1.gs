@@ -44,17 +44,17 @@ function doPost(e) {
 
     const nextRow = sheet.getLastRow() + 1;
 
-    // Excel / Sheets formulas for current row averages (ignoring N/A)
+    // Excel / Sheets formulas for current row averages (ignoring N/A and avoiding #DIV/0! if an entire section is N/A)
     // Sec 2: P1-P6 (cols 11-16: K to P)
-    const formulaMediaSec2 = '=AVERAGE(K' + nextRow + ':P' + nextRow + ')';
+    const formulaMediaSec2 = '=IFERROR(AVERAGE(K' + nextRow + ':P' + nextRow + '), "")';
     // Sec 3: Q1-Q7 (cols 17-23: Q to W)
-    const formulaMediaSec3 = '=AVERAGE(Q' + nextRow + ':W' + nextRow + ')';
+    const formulaMediaSec3 = '=IFERROR(AVERAGE(Q' + nextRow + ':W' + nextRow + '), "")';
     // Sec 4: T1-T6 (cols 24-29: X to AC)
-    const formulaMediaSec4 = '=AVERAGE(X' + nextRow + ':AC' + nextRow + ')';
+    const formulaMediaSec4 = '=IFERROR(AVERAGE(X' + nextRow + ':AC' + nextRow + '), "")';
     // Sec 5: V1-V6 (cols 30-35: AD to AI)
-    const formulaMediaSec5 = '=AVERAGE(AD' + nextRow + ':AI' + nextRow + ')';
+    const formulaMediaSec5 = '=IFERROR(AVERAGE(AD' + nextRow + ':AI' + nextRow + '), "")';
     // Overall Mean: P1 to V6 (cols 11-35: K to AI)
-    const formulaMediaGlobal = '=AVERAGE(K' + nextRow + ':AI' + nextRow + ')';
+    const formulaMediaGlobal = '=IFERROR(AVERAGE(K' + nextRow + ':AI' + nextRow + '), "")';
 
     // Data row: exactly 45 aligned columns
     const rowData = [
