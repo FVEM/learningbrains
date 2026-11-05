@@ -84,20 +84,36 @@ function cleanContent(text, articleTitle = '') {
         break;
     }
 
-    const cleanedLines = lines.slice(startIdx).map(line => {
+    const cleanedLines = [];
+    for (const line of lines.slice(startIdx)) {
         let trimmed = line.trim();
-        if (!trimmed) return line;
-        const isBullet = /^(?:[-•*]|\d+\.)/.test(trimmed);
-        const endsWithPunctuation = /[\.\:\!\”\’\"\'\]]$/.test(trimmed);
-        const isQuestionHeader = trimmed.endsWith('?') && trimmed.length < 80;
-        const isHeader = !isBullet && (!endsWithPunctuation || isQuestionHeader) && trimmed.length >= 4 && trimmed.length < 150 && !trimmed.startsWith('## ');
-        if (isHeader) {
-            return `## ${trimmed}`;
+        if (!trimmed) {
+            cleanedLines.push('');
+            continue;
         }
-        return line;
-    });
 
-    return cleanedLines.join('\n').trim();
+        // Skip internal AI image prompt/generation notes from author
+        if (/^(?:ai\s+generated\s+image|imagen\s+generada\s+por\s+ia|generated\s+with\s+ai)/i.test(trimmed)) {
+            continue;
+        }
+
+        const isBullet = /^(?:[-•*]|\d+\.)/.test(trimmed);
+        const endsWithPunctuation = /[\.\:\!\”\’\"\'\0-9\]]$/.test(trimmed);
+        const isQuestionHeader = trimmed.endsWith('?') && trimmed.length < 80;
+        const isSource = /^(?:sources?|fuente|fonte|quelle|zdroj):/i.test(trimmed);
+        const isHeader = !isBullet && !isSource && (!endsWithPunctuation || isQuestionHeader) && trimmed.length >= 4 && trimmed.length < 150 && !trimmed.startsWith('## ');
+
+        if (isHeader) {
+            cleanedLines.push(`## ${trimmed}`);
+        } else if (isSource) {
+            const formattedSource = trimmed.replace(/([.-]?\s*)(https?:\/\/[^\s*]+)/i, " — [$2]($2)");
+            cleanedLines.push(`*${formattedSource}*`);
+        } else {
+            cleanedLines.push(line);
+        }
+    }
+
+    return cleanedLines.join('\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
 

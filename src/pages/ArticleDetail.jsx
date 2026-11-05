@@ -16,13 +16,11 @@ function renderContent(text) {
   let paragraphCount = 0;
 
   const parseMarkdown = (str) => {
-    // Regex matches either **bold** or [text](url)
-    const parts = str.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
-    return parts.map((part, idx) => {
-      if (!part) return null;
-      
+    // Regex matches bold (**...**), markdown links ([text](url)), or raw URLs (https?://...)
+    const parts = str.split(/(\bhttps?:\/\/[^\s<>"']+)|(\b[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\/[^\s<>"']*)|(\*\*.*?\*\*)|(\[.*?\]\(.*?\))/g);
+    return parts.filter(Boolean).map((part, idx) => {
       // Bold: **text**
-      if (part.startsWith('**') && part.endsWith('**')) {
+      if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
         return <strong key={idx} className="font-bold text-slate-800">{part.slice(2, -2)}</strong>;
       }
       
@@ -35,10 +33,33 @@ function renderContent(text) {
             href={linkMatch[2]} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-brand-primary font-bold hover:text-brand-secondary transition-colors underline decoration-brand-primary/30 underline-offset-4"
+            className="text-brand-primary font-bold hover:text-brand-secondary transition-colors underline decoration-brand-primary/30 underline-offset-4 break-all"
           >
             {linkMatch[1]}
           </a>
+        );
+      }
+
+      // Raw URL: https://... or http://...
+      if (/^https?:\/\//i.test(part)) {
+        let url = part;
+        let trailing = '';
+        while (/[.,;:!*?)]$/.test(url)) {
+          trailing = url.slice(-1) + trailing;
+          url = url.slice(0, -1);
+        }
+        return (
+          <span key={idx}>
+            <a 
+              href={url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-brand-primary font-semibold hover:text-brand-secondary transition-colors underline decoration-brand-primary/40 underline-offset-4 break-all"
+            >
+              {url}
+            </a>
+            {trailing}
+          </span>
         );
       }
       
@@ -50,6 +71,20 @@ function renderContent(text) {
     const line = lines[i].trim();
 
     if (!line) {
+      i++;
+      continue;
+    }
+
+    // Footnote / Source citation: *Source: ...* or *Quelle: ...*
+    if (line.startsWith('*') && line.endsWith('*') && !line.startsWith('**') && line.length > 2) {
+      const inner = line.slice(1, -1).trim();
+      elements.push(
+        <div key={i} className="mt-12 pt-6 border-t border-slate-200/80">
+          <p className="text-slate-500 text-sm md:text-[15px] italic leading-relaxed break-words">
+            {parseMarkdown(inner)}
+          </p>
+        </div>
+      );
       i++;
       continue;
     }

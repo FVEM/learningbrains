@@ -148,7 +148,7 @@ const Noticias = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in-up delay-100">
                     {Array.isArray(filteredItems) && filteredItems.length > 0 ? (
                         filteredItems.map((item, idx) => {
-                        const isArticle = item.type === 'Article' || item.slug;
+                        const isArticle = (item.type || '').toLowerCase() === 'article' || Boolean(item.slug);
 
                         if (isArticle) {
                             return (
