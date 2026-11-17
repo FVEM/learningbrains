@@ -77,6 +77,28 @@ const News = () => {
   const pageTitle = t("news.seo.title");
   const metaDescription = t("news.seo.description");
 
+  const toIsoDate = (dateStr) => {
+    if (!dateStr || typeof dateStr !== 'string') return undefined;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr.trim())) return dateStr.trim();
+    const cleaned = dateStr.toLowerCase().trim();
+    if (cleaned.includes('coming soon')) return undefined;
+    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    const yearMatch = cleaned.match(/\b(20\d{2})\b/);
+    if (yearMatch) {
+      const year = yearMatch[1];
+      let monthIdx = 0;
+      for (let i = 0; i < months.length; i++) {
+        if (cleaned.includes(months[i])) {
+          monthIdx = i;
+          break;
+        }
+      }
+      const month = String(monthIdx + 1).padStart(2, '0');
+      return `${year}-${month}-01`;
+    }
+    return undefined;
+  };
+
   // Generate Structured Data (Schema.org)
   const schema = {
     "@context": "https://schema.org",
@@ -91,7 +113,7 @@ const News = () => {
         "headline": item.title,
         "description": item.description,
         "image": item.image ? (item.image.startsWith('http') ? item.image : `https://learningbrains.eu${item.image.startsWith('/') ? '' : '/'}${item.image}`) : undefined,
-        "datePublished": item.date, // Note: Ideally should be ISO format
+        "datePublished": toIsoDate(item.date),
         "url": item.link && item.link.startsWith('http') ? item.link : `https://learningbrains.eu/${i18n.language || 'en'}/news/${item.slug || ''}`
       }
     }))

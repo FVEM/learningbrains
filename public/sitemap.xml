@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://learningbrains.eu/en</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/about</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/results</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -41,7 +41,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/partners</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/news</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/noticias</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/resources</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/impact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -106,7 +106,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/contact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/legal</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -131,8 +131,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/legal" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/en/news/first-learning-brains-newsletter</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
@@ -144,8 +157,177 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/en/news/ai-and-jobs-the-real</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/from-training-to-real-skills</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/ai-as-an-ally-in</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/the-brain-that-learns-by</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/the-changing-role-of-vocational</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/learning-brains-consortium-meets-in</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/the-role-of-managers-in</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/ai-in-the-workplace-two</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/ai-and-the-future-of</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/is-your-company-ready-to</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/start-with-the-problem-not</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/en/news/ai-skills-in-the-workplace</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/es</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -158,7 +340,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/about</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -171,7 +353,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/results</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -184,7 +366,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/partners</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -197,7 +379,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/news</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -210,7 +392,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/noticias</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -223,7 +405,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/resources</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -236,7 +418,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/impact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -249,7 +431,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/contact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -262,7 +444,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/legal</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -274,8 +456,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/legal" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/es/news/first-learning-brains-newsletter</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/es/news/ai-powered-learning-how-artificial-intelligence</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
@@ -287,8 +482,177 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/es/news/ai-and-jobs-the-real</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/kick-off-meeting-in-bilbao-launches</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/from-training-to-real-skills</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/ai-as-an-ally-in</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/the-brain-that-learns-by</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/the-changing-role-of-vocational</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/learning-brains-consortium-meets-in</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/the-role-of-managers-in</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/ai-in-the-workplace-two</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/ai-and-the-future-of</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/is-your-company-ready-to</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/start-with-the-problem-not</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/es/news/ai-skills-in-the-workplace</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/it</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -301,7 +665,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/about</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -314,7 +678,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/results</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -327,7 +691,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/partners</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -340,7 +704,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/news</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -353,7 +717,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/noticias</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -366,7 +730,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/resources</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -379,7 +743,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/impact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -392,7 +756,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/contact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -405,7 +769,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/legal</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -417,8 +781,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/legal" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/it/news/first-learning-brains-newsletter</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/it/news/ai-powered-learning-how-artificial-intelligence</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
@@ -430,8 +807,177 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/it/news/ai-and-jobs-the-real</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/kick-off-meeting-in-bilbao-launches</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/from-training-to-real-skills</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/ai-as-an-ally-in</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/the-brain-that-learns-by</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/the-changing-role-of-vocational</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/learning-brains-consortium-meets-in</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/the-role-of-managers-in</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/ai-in-the-workplace-two</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/ai-and-the-future-of</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/is-your-company-ready-to</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/start-with-the-problem-not</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/it/news/ai-skills-in-the-workplace</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/sk</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -444,7 +990,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/about</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -457,7 +1003,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/results</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -470,7 +1016,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/partners</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -483,7 +1029,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/news</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -496,7 +1042,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/noticias</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -509,7 +1055,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/resources</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -522,7 +1068,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/impact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -535,7 +1081,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/contact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -548,7 +1094,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/legal</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -560,8 +1106,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/legal" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/sk/news/first-learning-brains-newsletter</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/sk/news/ai-powered-learning-how-artificial-intelligence</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
@@ -573,8 +1132,177 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/sk/news/ai-and-jobs-the-real</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/kick-off-meeting-in-bilbao-launches</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/from-training-to-real-skills</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/ai-as-an-ally-in</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/the-brain-that-learns-by</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/the-changing-role-of-vocational</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/learning-brains-consortium-meets-in</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/the-role-of-managers-in</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/ai-in-the-workplace-two</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/ai-and-the-future-of</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/is-your-company-ready-to</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/start-with-the-problem-not</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/sk/news/ai-skills-in-the-workplace</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/de</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -587,7 +1315,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/about</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -600,7 +1328,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/results</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -613,7 +1341,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/partners</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -626,7 +1354,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/news</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -639,7 +1367,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/noticias</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -652,7 +1380,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/resources</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -665,7 +1393,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/impact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -678,7 +1406,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/contact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -691,7 +1419,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/legal</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -703,8 +1431,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/legal" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/de/news/first-learning-brains-newsletter</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/de/news/ai-powered-learning-how-artificial-intelligence</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
@@ -716,8 +1457,177 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/de/news/ai-and-jobs-the-real</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/kick-off-meeting-in-bilbao-launches</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/from-training-to-real-skills</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/ai-as-an-ally-in</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/the-brain-that-learns-by</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/the-changing-role-of-vocational</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/learning-brains-consortium-meets-in</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/the-role-of-managers-in</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/ai-in-the-workplace-two</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/ai-and-the-future-of</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/is-your-company-ready-to</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/start-with-the-problem-not</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/de/news/ai-skills-in-the-workplace</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/pt</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -730,7 +1640,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/about</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -743,7 +1653,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/results</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -756,7 +1666,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/partners</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -769,7 +1679,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/news</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -782,7 +1692,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/noticias</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -795,7 +1705,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/resources</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -808,7 +1718,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/impact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -821,7 +1731,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/contact</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -834,7 +1744,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/legal</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -846,8 +1756,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/legal" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/pt/news/first-learning-brains-newsletter</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/first-learning-brains-newsletter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/first-learning-brains-newsletter" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/pt/news/ai-powered-learning-how-artificial-intelligence</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
@@ -857,5 +1780,174 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-powered-learning-how-artificial-intelligence" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-powered-learning-how-artificial-intelligence" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-powered-learning-how-artificial-intelligence" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/ai-and-jobs-the-real</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-jobs-the-real" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-jobs-the-real" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/kick-off-meeting-in-bilbao-launches</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/kick-off-meeting-in-bilbao-launches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/kick-off-meeting-in-bilbao-launches" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/from-training-to-real-skills</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/from-training-to-real-skills" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/from-training-to-real-skills" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/ai-as-an-ally-in</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-as-an-ally-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-as-an-ally-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/the-brain-that-learns-by</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-brain-that-learns-by" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-brain-that-learns-by" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/the-changing-role-of-vocational</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-changing-role-of-vocational" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-changing-role-of-vocational" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/learning-brains-consortium-meets-in</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/learning-brains-consortium-meets-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/learning-brains-consortium-meets-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/the-role-of-managers-in</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/the-role-of-managers-in" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/the-role-of-managers-in" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/ai-in-the-workplace-two</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-in-the-workplace-two" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-in-the-workplace-two" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/ai-and-the-future-of</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-and-the-future-of" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-and-the-future-of" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/is-your-company-ready-to</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/is-your-company-ready-to" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/is-your-company-ready-to" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/start-with-the-problem-not</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/start-with-the-problem-not" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/start-with-the-problem-not" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/ai-skills-in-the-workplace</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-skills-in-the-workplace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-skills-in-the-workplace" />
   </url>
 </urlset>

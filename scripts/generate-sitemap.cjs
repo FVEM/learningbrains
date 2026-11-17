@@ -18,6 +18,28 @@ const staticRoutes = [
     '/legal'
 ];
 
+const toIsoDate = (dateStr, fallback) => {
+    if (!dateStr || typeof dateStr !== 'string') return fallback;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr.trim())) return dateStr.trim();
+    const cleaned = dateStr.toLowerCase().trim();
+    if (cleaned.includes('coming soon')) return fallback;
+    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    const yearMatch = cleaned.match(/\b(20\d{2})\b/);
+    if (yearMatch) {
+        const year = yearMatch[1];
+        let monthIdx = 0;
+        for (let i = 0; i < months.length; i++) {
+            if (cleaned.includes(months[i])) {
+                monthIdx = i;
+                break;
+            }
+        }
+        const month = String(monthIdx + 1).padStart(2, '0');
+        return `${year}-${month}-01`;
+    }
+    return fallback;
+};
+
 const generateSitemap = () => {
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
@@ -26,31 +48,37 @@ const generateSitemap = () => {
     const enDataPath = path.join(__dirname, '../src/locales/en.json');
     const enData = JSON.parse(fs.readFileSync(enDataPath, 'utf8'));
     
+    const routeLastModMap = new Map();
+    staticRoutes.forEach(r => routeLastModMap.set(r, LAST_MOD));
+
     // Extract slugs from news (Project Events)
-    const newsSlugs = (enData.news && enData.news.items_list) 
-        ? enData.news.items_list
-            .filter(item => item.type === 'Article' || item.slug) // Only articles, not external links
-            .map(item => `/news/${item.slug}`)
-            .filter(s => s && !s.includes('undefined'))
-        : [];
+    if (enData.news && Array.isArray(enData.news.items_list)) {
+        enData.news.items_list
+            .filter(item => (item.type === 'Article' || item.slug) && item.slug && !String(item.slug).includes('undefined'))
+            .forEach(item => {
+                routeLastModMap.set(`/news/${item.slug}`, toIsoDate(item.date, LAST_MOD));
+            });
+    }
         
     // Extract slugs from ai_news (AI News)
-    const aiNewsSlugs = (enData.ai_news && enData.ai_news.items_list)
-        ? enData.ai_news.items_list
-            .filter(item => item.type === 'Article' || item.slug)
-            .map(item => `/news/${item.slug}`)
-            .filter(s => s && !s.includes('undefined'))
-        : [];
+    if (enData.ai_news && Array.isArray(enData.ai_news.items_list)) {
+        enData.ai_news.items_list
+            .filter(item => (item.type === 'Article' || item.slug) && item.slug && !String(item.slug).includes('undefined'))
+            .forEach(item => {
+                routeLastModMap.set(`/news/${item.slug}`, toIsoDate(item.date, LAST_MOD));
+            });
+    }
     
-    const allRoutes = [...staticRoutes, ...newsSlugs, ...aiNewsSlugs];
+    const allRoutes = Array.from(routeLastModMap.keys());
 
     languages.forEach(lang => {
         allRoutes.forEach(route => {
             const url = `${SITE_URL}/${lang}${route}`;
+            const routeLastMod = routeLastModMap.get(route) || LAST_MOD;
 
             xml += '  <url>\n';
             xml += `    <loc>${url}</loc>\n`;
-            xml += `    <lastmod>${LAST_MOD}</lastmod>\n`;
+            xml += `    <lastmod>${routeLastMod}</lastmod>\n`;
             xml += '    <changefreq>weekly</changefreq>\n';
             
             const priority = (route === '' || route === '/') ? "1.0" : (route.includes("/news/") ? "0.7" : "0.8");

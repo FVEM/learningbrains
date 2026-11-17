@@ -5,9 +5,14 @@ const easeOutExpo = (t) => {
 };
 
 export const useCountUp = (end, duration = 2000) => {
-    const [count, setCount] = useState(0);
+    const isBotOrPrerender = typeof navigator !== 'undefined' && navigator.webdriver;
+    const [count, setCount] = useState(isBotOrPrerender ? end : 0);
 
     useEffect(() => {
+        if (isBotOrPrerender) {
+            setCount(end);
+            return;
+        }
         let startTime = null;
         let animationFrame;
 
@@ -18,7 +23,7 @@ export const useCountUp = (end, duration = 2000) => {
             // Calculate current value based on ease-out function
             const timeRatio = Math.min(progress / duration, 1);
             const easeRatio = easeOutExpo(timeRatio);
-            const currentCount = Math.floor(easeRatio * end);
+            const currentCount = Math.round(easeRatio * end);
 
             setCount(currentCount);
 
@@ -36,7 +41,7 @@ export const useCountUp = (end, duration = 2000) => {
                 cancelAnimationFrame(animationFrame);
             }
         };
-    }, [end, duration]);
+    }, [end, duration, isBotOrPrerender]);
 
     return count;
 };

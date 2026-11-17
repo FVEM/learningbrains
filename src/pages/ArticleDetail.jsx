@@ -270,6 +270,7 @@ const ArticleDetail = () => {
   if (!article) {
     return (
       <div className="py-32 text-center">
+        <SEOHead title="Article not found" path={`/news/${slug}`} noindex={true} />
         <FileText className="w-16 h-16 text-slate-200 mx-auto mb-6" />
         <h1 className="text-2xl font-bold text-slate-600 mb-4">Article not found</h1>
         <Link to={`/${currentLang}/${isAiNews ? 'noticias' : 'news'}`} className="inline-flex items-center gap-2 text-brand-secondary font-bold hover:underline">
@@ -285,6 +286,28 @@ const ArticleDetail = () => {
       ? article.image
       : `${import.meta.env.BASE_URL || '/'}${article.image.replace(/^\//, '')}`
     : null;
+
+  const toIsoDate = (dateStr) => {
+    if (!dateStr || typeof dateStr !== 'string') return undefined;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr.trim())) return dateStr.trim();
+    const cleaned = dateStr.toLowerCase().trim();
+    if (cleaned.includes('coming soon')) return undefined;
+    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    const yearMatch = cleaned.match(/\b(20\d{2})\b/);
+    if (yearMatch) {
+      const year = yearMatch[1];
+      let monthIdx = 0;
+      for (let i = 0; i < months.length; i++) {
+        if (cleaned.includes(months[i])) {
+          monthIdx = i;
+          break;
+        }
+      }
+      const month = String(monthIdx + 1).padStart(2, '0');
+      return `${year}-${month}-01`;
+    }
+    return undefined;
+  };
 
   const resolvedPdfUrl = article.pdf_url
     ? article.pdf_url.startsWith('http')
@@ -304,13 +327,15 @@ const ArticleDetail = () => {
         title={article.title}
         description={article.description}
         path={`/news/${slug}`}
+        image={imageUrl}
+        type="article"
         schema={{
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": article.title,
           "description": article.description,
-          "image": imageUrl || undefined,
-          "datePublished": article.date,
+          "image": imageUrl ? (imageUrl.startsWith('http') ? imageUrl : `https://learningbrains.eu${imageUrl}`) : undefined,
+          "datePublished": toIsoDate(article.date),
           "publisher": { "@type": "Organization", "name": "Learning Brains", "url": "https://learningbrains.eu" },
           "url": `https://learningbrains.eu/${currentLang}/news/${slug}`
         }}

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate, useParams } from 'react-router-dom';
 
 import LanguageLayout from './components/LanguageLayout';
@@ -10,12 +10,14 @@ import News from './pages/News';
 import Resources from './pages/Resources';
 import Impact from './pages/Impact';
 import Contact from './pages/Contact';
-import Analytics from './pages/Analytics';
 import Noticias from './pages/Noticias';
 import Legal from './pages/Legal';
 import ArticleDetail from './pages/ArticleDetail';
-import ValidationPortal from './pages/ValidationPortal';
-import ValidationHub from './pages/ValidationHub';
+import SEOHead from './components/SEOHead';
+
+const Analytics = lazy(() => import('./pages/Analytics'));
+const ValidationPortal = lazy(() => import('./pages/ValidationPortal'));
+const ValidationHub = lazy(() => import('./pages/ValidationHub'));
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -55,37 +57,48 @@ const ArticleRedirect = () => {
   return <Navigate to={`/${lang}/news/${slug}`} replace />;
 };
 
+const NotFoundPage = () => (
+  <div className="py-32 text-center px-6">
+    <SEOHead title="404 - Page Not Found" path="/404" noindex={true} />
+    <h1 className="text-4xl font-bold text-brand-headline mb-4">404</h1>
+    <p className="text-slate-500">Page not found</p>
+  </div>
+);
+
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<RootRedirect />} />
-        <Route path="/analytics" element={<Analytics />} />
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <Routes>
+          <Route path="/" element={<RootRedirect />} />
+          <Route path="/analytics" element={<Analytics />} />
 
-        {/* Private Validation / External Inputs Portal & Hub (Unlisted) */}
-        <Route path="/validation" element={<ValidationHub />} />
-        <Route path="/eval" element={<ValidationHub />} />
-        <Route path="/inputs-externos" element={<ValidationHub />} />
-        <Route path="/validation/:campaignId" element={<ValidationPortal />} />
-        <Route path="/eval/:campaignId" element={<ValidationPortal />} />
+          {/* Private Validation / External Inputs Portal & Hub (Unlisted) */}
+          <Route path="/validation" element={<ValidationHub />} />
+          <Route path="/eval" element={<ValidationHub />} />
+          <Route path="/inputs-externos" element={<ValidationHub />} />
+          <Route path="/validation/:campaignId" element={<ValidationPortal />} />
+          <Route path="/eval/:campaignId" element={<ValidationPortal />} />
 
-        {/* All routes wrapped with Language Parameter */}
-        <Route path="/:lang" element={<LanguageLayout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="results" element={<Results />} />
-          <Route path="partners" element={<Partners />} />
-          <Route path="news" element={<News />} />
-          <Route path="noticias" element={<Noticias />} />
-          <Route path="news/:slug" element={<ArticleDetail />} />
-          <Route path="articles/:slug" element={<ArticleRedirect />} />
-          <Route path="resources" element={<Resources />} />
-          <Route path="impact" element={<Impact />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="legal" element={<Legal />} />
-        </Route>
-      </Routes>
+          {/* All routes wrapped with Language Parameter */}
+          <Route path="/:lang" element={<LanguageLayout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="results" element={<Results />} />
+            <Route path="partners" element={<Partners />} />
+            <Route path="news" element={<News />} />
+            <Route path="noticias" element={<Noticias />} />
+            <Route path="news/:slug" element={<ArticleDetail />} />
+            <Route path="articles/:slug" element={<ArticleRedirect />} />
+            <Route path="resources" element={<Resources />} />
+            <Route path="impact" element={<Impact />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="legal" element={<Legal />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

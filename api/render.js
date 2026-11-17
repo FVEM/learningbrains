@@ -46,25 +46,30 @@ export default async function handler(req, res) {
 
     // 4. Inject metadata
     const fullUrl = `https://learningbrains.eu${urlPath}`;
-    
+    const fullTitle = meta.title.toLowerCase().includes('learning brains')
+      ? meta.title
+      : `${meta.title} | Learning Brains`;
+
+    // Update html lang attribute
+    html = html.replace(/<html\s+lang="[^"]*"/i, `<html lang="${lang}"`);
+
     // Replace title
-    html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${meta.title} | Learning Brains</title>`);
+    html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${fullTitle}</title>`);
     
     // Replace/Inject Meta Description
     if (html.includes('name="description"')) {
-      html = html.replace(/<meta\s+name="description"\s+content="[\s\S]*?"\s*\/?>/i, 
-        `<meta name="description" content="${meta.description}" />`);
+      html = html.replace(/<meta\s+name="description"\s+content="[\s\S]*?"[^>]*>/i, 
+        `<meta name="description" content="${meta.description}" data-rh="true" />`);
     } else {
-      html = html.replace(/<\/head>/i, `<meta name="description" content="${meta.description}" />\n</head>`);
+      html = html.replace(/<\/head>/i, `<meta name="description" content="${meta.description}" data-rh="true" />\n</head>`);
     }
     
-    // Inject OG Tags
-    const ogTags = `
-      <meta property="og:title" content="${meta.title}" />
-      <meta property="og:description" content="${meta.description}" />
-      <meta property="og:url" content="${fullUrl}" />
-    `;
-    html = html.replace(/<\/head>/i, `${ogTags}\n</head>`);
+    // Replace OG Tags in-place instead of duplicating
+    html = html.replace(/<meta\s+property="og:title"\s+content="[^"]*"[^>]*>/i, `<meta property="og:title" content="${fullTitle}" data-rh="true" />`);
+    html = html.replace(/<meta\s+property="og:description"\s+content="[^"]*"[^>]*>/i, `<meta property="og:description" content="${meta.description}" data-rh="true" />`);
+    html = html.replace(/<meta\s+property="og:url"\s+content="[^"]*"[^>]*>/i, `<meta property="og:url" content="${fullUrl}" data-rh="true" />`);
+    html = html.replace(/<meta\s+name="twitter:title"\s+content="[^"]*"[^>]*>/i, `<meta name="twitter:title" content="${fullTitle}" data-rh="true" />`);
+    html = html.replace(/<meta\s+name="twitter:description"\s+content="[^"]*"[^>]*>/i, `<meta name="twitter:description" content="${meta.description}" data-rh="true" />`);
 
     // 5. Send response
     res.setHeader('Content-Type', 'text/html');

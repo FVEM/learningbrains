@@ -13,6 +13,7 @@ const Footer = () => {
             links: [
                 { name: t('nav.about'), path: '/about' },
                 { name: t('nav.results'), path: '/results' },
+                { name: t('nav.impact'), path: '/impact' },
             ]
         },
         {

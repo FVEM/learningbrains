@@ -77,6 +77,7 @@ const Header = () => {
                     <div className="flex items-center gap-2 ml-4">
                         <Link
                             to="/analytics"
+                            rel="nofollow"
                             className="p-1.5 text-slate-400 hover:text-brand-primary hover:bg-teal-50 rounded-full transition-colors"
                             title="Analytics Dashboard"
                         >
@@ -114,6 +115,7 @@ const Header = () => {
                 <div className="lg:hidden flex items-center gap-3">
                     <Link
                         to="/analytics"
+                        rel="nofollow"
                         className="p-1.5 text-slate-400 hover:text-brand-primary hover:bg-teal-50 rounded-full transition-colors"
                         title="Analytics Dashboard"
                     >

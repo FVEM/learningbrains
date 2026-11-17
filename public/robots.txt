@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /analytics
+Disallow: /validation
+Disallow: /eval
+Disallow: /inputs-externos
+Disallow: /api/
 
 Sitemap: https://learningbrains.eu/sitemap.xml
