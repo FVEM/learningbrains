@@ -106,7 +106,10 @@ function cleanContent(text, articleTitle = '') {
         if (isHeader) {
             cleanedLines.push(`## ${trimmed}`);
         } else if (isSource) {
-            const formattedSource = trimmed.replace(/([.-]?\s*)(https?:\/\/[^\s*]+)/i, " — [$2]($2)");
+            const formattedSource = trimmed.replace(/([.-]?\s*)(https?:\/\/[^\s*]+)/i, (m, sep, url) => {
+                const beforeUrl = trimmed.slice(0, trimmed.indexOf(m)).trim();
+                return beforeUrl.endsWith(':') ? ` [${url}](${url})` : ` — [${url}](${url})`;
+            });
             cleanedLines.push(`*${formattedSource}*`);
         } else {
             cleanedLines.push(line);

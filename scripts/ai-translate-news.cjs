@@ -34,8 +34,9 @@ const langNames = {
  */
 const CONTENT_PROMPT = (lang) =>
     `Translate the following text to ${langNames[lang]}.
-Maintain the original paragraph structure, tone, and markdown formatting exactly.
-If there are markdown headings (e.g. ## ), preserve them exactly as they are.
+Maintain the exact line-by-line paragraph structure, tone, and markdown formatting.
+CRITICAL: Every single line break (\\n) in the input MUST correspond to a line break (\\n) in the output. Do NOT merge paragraphs together.
+If there are markdown headings (e.g. ## ), preserve them on their own line exactly as they are.
 Return ONLY the translated text, nothing else.`;
 
 /**
