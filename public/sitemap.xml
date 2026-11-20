@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://learningbrains.eu/en</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/about</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/results</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -41,7 +41,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/partners</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/news</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/noticias</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/resources</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/impact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -106,7 +106,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/contact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/legal</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -327,7 +327,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
@@ -339,8 +339,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/en/news/artificial-intelligence-is-not-just</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/es</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -353,7 +366,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/about</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -366,7 +379,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/results</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -379,7 +392,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/partners</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -392,7 +405,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/news</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -405,7 +418,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/noticias</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -418,7 +431,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/resources</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -431,7 +444,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/impact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -444,7 +457,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/contact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -457,7 +470,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/legal</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -665,7 +678,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/es/news/ai-gigafactories-20-billion-to</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
@@ -677,8 +690,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/es/news/artificial-intelligence-is-not-just</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/it</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -691,7 +717,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/about</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -704,7 +730,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/results</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -717,7 +743,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/partners</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -730,7 +756,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/news</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -743,7 +769,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/noticias</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -756,7 +782,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/resources</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -769,7 +795,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/impact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -782,7 +808,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/contact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -795,7 +821,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/legal</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -1003,7 +1029,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/it/news/ai-gigafactories-20-billion-to</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
@@ -1015,8 +1041,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/it/news/artificial-intelligence-is-not-just</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/sk</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -1029,7 +1068,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/about</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -1042,7 +1081,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/results</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -1055,7 +1094,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/partners</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -1068,7 +1107,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/news</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -1081,7 +1120,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/noticias</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -1094,7 +1133,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/resources</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -1107,7 +1146,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/impact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -1120,7 +1159,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/contact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -1133,7 +1172,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/legal</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -1341,7 +1380,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/sk/news/ai-gigafactories-20-billion-to</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
@@ -1353,8 +1392,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/sk/news/artificial-intelligence-is-not-just</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/de</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -1367,7 +1419,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/about</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -1380,7 +1432,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/results</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -1393,7 +1445,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/partners</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -1406,7 +1458,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/news</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -1419,7 +1471,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/noticias</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -1432,7 +1484,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/resources</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -1445,7 +1497,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/impact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -1458,7 +1510,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/contact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -1471,7 +1523,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/legal</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -1679,7 +1731,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/de/news/ai-gigafactories-20-billion-to</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
@@ -1691,8 +1743,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
   </url>
   <url>
+    <loc>https://learningbrains.eu/de/news/artificial-intelligence-is-not-just</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+  </url>
+  <url>
     <loc>https://learningbrains.eu/pt</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en" />
@@ -1705,7 +1770,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/about</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/about" />
@@ -1718,7 +1783,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/results</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/results" />
@@ -1731,7 +1796,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/partners</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/partners" />
@@ -1744,7 +1809,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/news</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news" />
@@ -1757,7 +1822,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/noticias</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/noticias" />
@@ -1770,7 +1835,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/resources</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/resources" />
@@ -1783,7 +1848,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/impact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/impact" />
@@ -1796,7 +1861,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/contact</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/contact" />
@@ -1809,7 +1874,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/legal</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/legal" />
@@ -2017,7 +2082,7 @@
   </url>
   <url>
     <loc>https://learningbrains.eu/pt/news/ai-gigafactories-20-billion-to</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
@@ -2027,5 +2092,18 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/ai-gigafactories-20-billion-to" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/ai-gigafactories-20-billion-to" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/ai-gigafactories-20-billion-to" />
+  </url>
+  <url>
+    <loc>https://learningbrains.eu/pt/news/artificial-intelligence-is-not-just</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://learningbrains.eu/es/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://learningbrains.eu/it/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="sk" href="https://learningbrains.eu/sk/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://learningbrains.eu/de/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://learningbrains.eu/pt/news/artificial-intelligence-is-not-just" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learningbrains.eu/en/news/artificial-intelligence-is-not-just" />
   </url>
 </urlset>
