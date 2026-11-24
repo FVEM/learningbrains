@@ -462,7 +462,7 @@ const ArticleDetail = () => {
               <div>
                 <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                    <span className="px-2.5 py-1 rounded-md bg-brand-primary/10 text-brand-primary text-[10px] font-bold tracking-wider uppercase">PDF Document</span>
-                   <span className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-500 text-[10px] font-bold tracking-wider uppercase">2.3 MB</span>
+                   <span className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-500 text-[10px] font-bold tracking-wider uppercase">{article.pdf_size || (slug?.includes('second') ? '1.2 MB' : '2.3 MB')}</span>
                 </div>
                 <h4 className="text-slate-800 font-extrabold text-xl sm:text-2xl">{t('newsletter.viewer_title', 'Official Newsletter Publication')}</h4>
               </div>
@@ -479,8 +479,8 @@ const ArticleDetail = () => {
                 {t('newsletter.open_new_tab', 'Fullscreen')}
               </a>
               <a
-                href={article.pdf_embed_url || resolvedPdfUrl}
-                download="Learning_Brains_Newsletter_1.pdf"
+                href={resolvedPdfUrl || article.pdf_embed_url}
+                download={article.pdf_filename || (slug?.includes('second') ? 'Learning_Brains_Newsletter_2.pdf' : 'Learning_Brains_Newsletter_1.pdf')}
                 className="w-full py-4 px-6 rounded-xl border-2 border-slate-100 bg-white text-slate-600 font-bold text-sm flex items-center justify-center gap-2 hover:border-slate-200 hover:bg-slate-50 transition-all active:translate-y-0"
               >
                 <Download className="w-5 h-5" />

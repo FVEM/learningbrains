@@ -349,7 +349,9 @@ const Home = () => {
                                 const displayLocation = item.location;
                                 const displayBadge = item.badge || item.category || "EVENT";
 
-                                const isDocImage = item.title?.toLowerCase().includes('document') || 
+                                const isDocImage = item.badge?.toLowerCase().includes('newsletter') ||
+                                                   item.category?.toLowerCase().includes('newsletter') ||
+                                                   item.title?.toLowerCase().includes('document') || 
                                                    item.title?.toLowerCase().includes('newsletter') || 
                                                    item.title?.toLowerCase().includes('boletín') ||
                                                    item.title?.toLowerCase().includes('smart');

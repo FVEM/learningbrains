@@ -464,7 +464,8 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             // ── Item unchanged: preserve all existing data, just refresh metadata ──
             unchangedCount++;
             const preserved = { ...existing };
-            preserved.image  = finalImage  || existing.image  || '';
+            const keepLocalImg = existing.image && existing.image.startsWith('/images/news/');
+            preserved.image  = keepLocalImg ? existing.image : (finalImage || existing.image || '');
             preserved.badge  = sheetRow.badge_text || sheetRow.badge || existing.badge || '';
             preserved.date   = sheetRow.date  || existing.date  || '';
             preserved.category = sheetRow.category || existing.category || '';
@@ -582,9 +583,17 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             newItem.doc_link = docLink;
         }
 
-        // Preserve custom PDF properties if they exist
-        if (existing?.pdf_url) newItem.pdf_url = existing.pdf_url;
+        // Preserve custom PDF properties and newsletter slug/content if they exist
+        if (existing?.pdf_url) {
+            newItem.pdf_url = existing.pdf_url;
+            newItem.link = '';
+            if (existing.slug) newItem.slug = existing.slug;
+            if (existing.content) newItem.content = existing.content;
+            if (existing.doc_link) newItem.doc_link = existing.doc_link;
+        }
         if (existing?.pdf_embed_url) newItem.pdf_embed_url = existing.pdf_embed_url;
+        if (existing?.pdf_size) newItem.pdf_size = existing.pdf_size;
+        if (existing?.pdf_filename) newItem.pdf_filename = existing.pdf_filename;
 
         result.push(newItem);
     }
