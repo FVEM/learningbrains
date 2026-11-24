@@ -408,7 +408,7 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
         const fallbackTitle = sheetRow.title_en || sheetRow.title || '';
         const fallbackDesc  = sheetRow.description_en || sheetRow.description || '';
 
-        if (!fallbackTitle.trim()) continue;
+        if (!fallbackTitle.trim() || fallbackTitle.trim() === "Upcoming Workshop: AI in VET" || (sheetRow.date || "").toLowerCase().trim() === "coming soon") continue;
 
         const isDoc = rawLink.includes('docs.google.com') || rawLink.includes('drive.google.com');
         const linkKey = !isDoc ? itemKey(rawLink, '') : '';
