@@ -13,6 +13,10 @@ const Noticias = () => {
     const translatedAiNewsItems = Array.isArray(rawAiNewsItems) ? [...rawAiNewsItems].sort((a, b) => {
         const parseCustomDate = (dateStr) => {
             if (!dateStr) return new Date(0);
+            const dmyMatch = String(dateStr).trim().match(/^(\d{1,2})\/(\d{1,2})\/(20\d{2})$/);
+            if (dmyMatch) {
+                return new Date(parseInt(dmyMatch[3], 10), parseInt(dmyMatch[2], 10) - 1, parseInt(dmyMatch[1], 10));
+            }
             const standardDate = new Date(dateStr);
             if (!isNaN(standardDate)) return standardDate;
             const cleaned = dateStr.toLowerCase().trim();

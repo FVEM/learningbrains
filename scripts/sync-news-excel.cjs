@@ -467,7 +467,8 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             const keepLocalImg = existing.image && existing.image.startsWith('/images/news/');
             preserved.image  = keepLocalImg ? existing.image : (finalImage || existing.image || '');
             preserved.badge  = sheetRow.badge_text || sheetRow.badge || existing.badge || '';
-            preserved.date   = sheetRow.date  || existing.date  || '';
+            const normDate = (sheetRow.date || '').trim().replace(/^(\d{1,2})\/(\d{1,2})\/(20\d{2})$/, (_, d, m, y) => `${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`);
+            preserved.date   = (normDate && normDate !== 'TBD') ? normDate : (existing.date || normDate || '');
             preserved.category = sheetRow.category || existing.category || '';
             preserved.partner  = sheetRow.partner || sheetRow['proposing pp'] || existing.partner  || '';
             result.push(preserved);
@@ -566,7 +567,7 @@ async function processSection(sheetItems, existingItems, lang, docContentCache) 
             // If the link is a Google Doc, don't expose it as the card's external link
             link: hasDocLink ? '' : rawLink,
             category: sheetRow.category || (existing?.category || ''),
-            date:     sheetRow.date     || (existing?.date || ''),
+            date:     ((sheetRow.date || '').trim().replace(/^(\d{1,2})\/(\d{1,2})\/(20\d{2})$/, (_, d, m, y) => `${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`)) || (existing?.date || ''),
             image:    finalImage,
             badge:    sheetRow.badge_text || sheetRow.badge || (existing?.badge || ''),
             partner:  sheetRow.partner || sheetRow['proposing pp'] || existing?.partner || '',
