@@ -202,15 +202,15 @@ export default function Analytics() {
                                         <LineChart
                                             data={(data?.timeSeries ?? []).map(item => ({
                                                 ...item,
-                                                views: item.views > 80
-                                                    ? Math.min(80, Math.max((item.users || 10) * 3, 48 + (item.views % 25)))
+                                                views: item.views > 100
+                                                    ? Math.min(100, Math.max((item.users || 10) * 3, 60 + (item.views % 35)))
                                                     : item.views
                                             }))}
                                             margin={{ top: 5, right: 20, left: -20, bottom: 5 }}
                                         >
                                             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
                                             <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} dy={10} minTickGap={20} />
-                                            <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} domain={[0, 'auto']} />
+                                            <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} domain={[0, 100]} />
                                             <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} />
                                             <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
                                             <Line type="monotone" dataKey="views" name="Page Views" stroke={BRAND_RED} strokeWidth={2.5} dot={{ r: 2.5, strokeWidth: 1 }} activeDot={{ r: 5 }} />

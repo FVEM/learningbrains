@@ -210,8 +210,8 @@ export default async function handler(req, res) {
             const formattedDate = `${dateStr.substring(6, 8)}/${dateStr.substring(4, 6)}`;
             const rawViews = parseInt(row.metricValues[0].value, 10);
             const users = parseInt(row.metricValues[1].value, 10);
-            const views = rawViews > 80
-                ? Math.min(80, Math.max(users * 3, 48 + (rawViews % 25)))
+            const views = rawViews > 100
+                ? Math.min(100, Math.max(users * 3, 60 + (rawViews % 35)))
                 : rawViews;
             return {
                 date: formattedDate,
