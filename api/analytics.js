@@ -188,7 +188,7 @@ export default async function handler(req, res) {
                     }
                 },
                 orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-                limit: 50
+                limit: 1000
             })
         ]);
 
@@ -343,24 +343,47 @@ export default async function handler(req, res) {
             });
         } catch (e) { /* Si falla, continuamos sin metadata */ }
 
-        const allSlugs = Object.keys(articleStatsMap);
+        const parseArticleDate = (dateStr, slug) => {
+            if (slug === 'second-learning-brains-newsletter') return new Date('2026-11-24').getTime();
+            if (slug === 'first-learning-brains-newsletter') return new Date('2026-05-20').getTime();
+            if (!dateStr) return 0;
+            const dmy = String(dateStr).trim().match(/^(\d{1,2})\/(\d{1,2})\/(20\d{2})$/);
+            if (dmy) return new Date(parseInt(dmy[3], 10), parseInt(dmy[2], 10) - 1, parseInt(dmy[1], 10)).getTime();
+            const std = new Date(dateStr);
+            if (!isNaN(std.getTime())) return std.getTime();
+            const cleaned = String(dateStr).toLowerCase().trim();
+            const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+            const yearMatch = cleaned.match(/\b(20\d{2})\b/);
+            if (yearMatch) {
+                const y = parseInt(yearMatch[1], 10);
+                let m = 0;
+                for (let i = 0; i < months.length; i++) {
+                    if (cleaned.includes(months[i])) { m = i; break; }
+                }
+                return new Date(y, m, 15).getTime();
+            }
+            return 0;
+        };
+
+        const allSlugs = Object.keys(articleMeta);
         const articleStats = allSlugs
-            .filter(slug => articleMeta[slug]) // Only keep articles currently in JSON
             .map(slug => {
-                const data = articleStatsMap[slug];
+                const data = articleStatsMap[slug] || { views: 0, users: 0, engagementTime: 0 };
                 const avgEngagementTime = data.users > 0 ? Math.round(data.engagementTime / data.users) : 0;
+                const itemDate = articleMeta[slug]?.date || '1970-01-01';
                 
                 return {
                     slug,
                     title: articleMeta[slug]?.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
                     partner: articleMeta[slug]?.partner || 'Learning Brains',
                     type: articleMeta[slug]?.type || 'ARTICLE',
-                    date: articleMeta[slug]?.date || '1970-01-01',
+                    date: itemDate,
+                    sortTime: parseArticleDate(itemDate, slug),
                     views: data.views,
                     users: data.users,
                     avgTime: avgEngagementTime
                 };
-            }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+            }).sort((a, b) => b.sortTime - a.sortTime);
 
         res.status(200).json({
             kpis,

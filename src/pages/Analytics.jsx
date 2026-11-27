@@ -23,7 +23,7 @@ export default function Analytics() {
     const [pinInput, setPinInput] = useState('');
     const [errorPin, setErrorPin] = useState(false);
 
-    const [timeRange, setTimeRange] = useState('seg1');
+    const [timeRange, setTimeRange] = useState('total');
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [errorData, setErrorData] = useState(null);
